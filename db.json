@@ -1,0 +1,19 @@
+{
+  "events": {},
+  "user_rules": {
+    "1": {
+      "exclude_event_ids": [],
+      "exclude_venues": [],
+      "exclude_keywords": [],
+      "exclude_categories": [],
+      "force_include_urls": [],
+      "max_travel_minutes": null
+    }
+  },
+  "system_state": {
+    "1": {
+      "last_run": null,
+      "total_active_events": 0
+    }
+  }
+}
