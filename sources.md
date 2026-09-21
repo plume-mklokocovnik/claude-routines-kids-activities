@@ -158,32 +158,24 @@ toddler-suitable.
 
 ---
 
-## Tier 3 — Annual fixtures (calendar of recurring one-offs)
+## Tier 3 — Annual fixtures
 
-Check these by month. They are predictable, high-value, and mostly free.
+Moved to **[`annual.md`](annual.md)**, which now holds the recurrence rule, typical window,
+confidence rating and booking lead time for every yearly event, plus the window-overlap check the
+routine runs against the 3-month horizon. Keeping one copy avoids the two drifting apart.
 
-| Month | Event | Place | Free | Toddler fit |
-|---|---|---|---|---|
-| Jan–Feb (2026: 21 Mar – 4 Apr ⚠️) | **Festival Bobri** — city festival of cultural and arts education, `https://bobri.si/` | Ljubljana, many venues | ✅ All events free | Good, has dedicated youngest strand |
-| Apr–May | **Dan Zemlje** conservation days | ZOO Ljubljana | With ticket | Good |
-| 26–30 May 2026 | **Igraj se z mano** — inclusive festival, 45+ workshops daily, 9:00–13:00, `https://igrajsezmano.eu/festival/ljubljana/` | Kongresni trg + Park Zvezda | ✅ Everything free | **Excellent.** Saturday 30 May is the dedicated family day |
-| June | **Poletna muzejska noč**, `https://sms-muzeji.si/` | Nationwide, ~380 events at 160+ venues | ✅ Free, 18:00–24:00 | Mixed ⚠️ evening, but workshops tagged 4+ exist |
-| Late June – early July | **Ana Desetnica** street theatre, `https://www.anamonro.si/` | Ljubljana streets | ✅ 100+ free events | Good, outdoor and drop-in |
-| Aug | **Trnfest** | AKC Metelkova | Mostly free | Mixed |
-| Aug | **Letni Kinodvor**, **Kinoteka na prostem** | Ljubljana | ✅ Free | ⚠️ Too late in the evening |
-| Late Aug | **Čarobni dan**, `https://www.arboretum.si/dogodek/carobni-dan/` | Arboretum Volčji Potok | Ticketed, one adult ticket covers the family | Good. Billed as Slovenia's largest single-day family event |
-| 25 Aug – 6 Sep 2026 | **Zmaj 'ma mlade**, `https://www.zmaj-ma-mlade.com/` | Postojna | ✅ All free | Mixed, skews teen |
-| Early Sep (2026: Sat 5 Sep) | **Ljubljanski festival športa** — 50+ free sport trials, 60+ disciplines, from 09:00 | Park Tivoli | ✅ Free | **Excellent.** This is the "dan športa v Tivoliju" | 
-| Sep | **Dnevi odprtih vrat** — clubs run free trials all month | Ljubljana | ✅ Free | Depends on club |
-| Sep | **Otroški bazar**, `https://www.otroskibazar.si/` | Gospodarsko razstavišče | Free under 14, adults ~5 € | **Excellent.** Free workshops, shows, sport corners |
-| Sep | **Pikin festival**, `https://www.pikinfestival.si/` | Velenje | Many free strands | Good, largest children's festival in Slovenia |
-| 23 Sep | **Dan slovenskega športa** + European Week of Sport to 30 Sep | Nationwide, Olympic Festival in central Ljubljana | ✅ Free | Good |
-| Oct (2026: 17 Oct) | **Lumpi tek**, NLB Ljubljanski maraton | Rimska cesta → Kongresni trg | Registration fee | **Excellent**, the preschool race |
-| ~4 Oct | **Svetovni dan živali** + keepers' day | ZOO Ljubljana | With ticket | Good |
-| Oct to 31st | **Noč čarovnic** | ZOO Ljubljana | With ticket | ⚠️ Evening |
-| December | **Veseli december** — Dedek Mraz parades daily at 17:00 from 26–30 Dec, Santa's cabin in Park Zvezda 20–30 Dec 10:00–18:00, Čarobni gozd workshops, street theatre and a real-snow play area on Krekov trg 27–29 Dec | Ljubljana centre | ✅ Largely free | **Excellent** |
-| Monthly | **Citypark free shows** — theatre first Friday of the month, fairy-tale afternoons on Thursdays, free for under-10s, `https://www.citypark.si/si/otroci/gledaliske-predstave-za-otroke/` | Citypark | ✅ Free | Good |
-| Monthly | **First-Sunday free museum admission** | Nationwide | ✅ Free | Varies |
+Corrections that came out of that research and matter here:
+
+* **Bobri moved.** It used to run mid-January to early February. The 2026 edition ran 21 March to
+  4 April. Do not search for it in January. Its free tickets are released about two weeks ahead
+  and go within hours.
+* **Trnfest is retired.** Last edition 2018. The successor is **Trnovfest**, a different
+  organiser in Trnovo (`https://www.cskfp.si/`), running daily through August at roughly 5 € a day.
+* **Otroški bazar status is unknown.** The site shows only a "returning in a new form" holding
+  message with no dates. Do not promise a September edition without checking first.
+* **Three recurrence rules are solid enough to compute instead of search:** Poletna muzejska noč
+  is the third Saturday of June, Ljubljanski festival športa is the first Saturday of September,
+  and Čarobni dan is the last Sunday of August.
 
 ---
 

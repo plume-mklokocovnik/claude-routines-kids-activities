@@ -1,8 +1,8 @@
 # Link Index
 
 Flat lookup table of every URL checked during the source research. Read this instead of
-re-discovering sources through search. `sources.md` has the reasoning, cadence and age-fit notes.
-This file is just the addresses.
+re-discovering sources through search. `sources.md` has the reasoning, cadence and age-fit notes. `annual.md` has the yearly fixtures
+and their recurrence rules. This file is just the addresses.
 
 **Verified:** 2026-09-21, every row status-checked with a real HTTP request.
 
@@ -126,6 +126,12 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Otroški bazar | `https://www.otroskibazar.si/` | Sep | ok |
 | Pikin festival (Velenje) | `https://www.pikinfestival.si/` | Sep | ok |
 | Slovenska kinoteka | `https://www.kinoteka.si/` | Aug outdoor | ok |
+| Čarobni dan (own site) | `https://www.carobnidan.si/` | Late Aug | ok |
+| Trnovfest (CSK F. Prešeren) | `https://www.cskfp.si/` | Aug | ok, replaces the retired Trnfest |
+| Miklavžev sprevod | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/` | 5 Dec | ok |
+| December v Ljubljani | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani` | Dec | ok |
+| Kurentovanje (Ptuj) | `https://kurentovanje.net/` | Moveable, tied to Easter | ok |
+| Otroški bazar | `https://www.otroskibazar.si/` | Sep | ⚠️ resolves, but shows a holding page with no dates. Status unknown |
 
 ## Shopping centre pop-ups
 
@@ -146,3 +152,4 @@ When a sweep hits a failure, classify it before editing this file.
 * **404 on a path while the site root answers** — the path moved. Find the new one, correct the row, do not blacklist the site.
 * **404 on a page that only exists in season** — leave it, note the month.
 * **Alive but the content is stale or off-topic** — move to *Do not retry* and say so. A live URL that never yields a usable event is more expensive than a dead one, because nothing signals to stop fetching it.
+* **An annual event whose site shows a holding page** — leave the row, mark the status unknown, and record the doubt in [`annual.md`](annual.md). Do not quietly keep promising the event.
