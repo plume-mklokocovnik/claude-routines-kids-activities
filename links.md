@@ -27,6 +27,7 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `https://www.napovednikdogodkov.si/` (as a kids source) | Alive, but its WordPress category feed contains only `glasbene-novice` and `uncategorized`. It is a music news site. The `/za-otroke/` path a search engine surfaced is a 404 | **Certain.** There is no children's category to sweep | `napovednik.com/za-otroke` (different site, similar name) |
 | `https://www.zoo.si/ponudba/noc-carovnic` | 404. Seasonal page, taken down out of season | *Likely seasonal.* Worth one check in October, not before | `https://www.zoo.si/novice` |
 | `festival.olympic.si` | NXDOMAIN. The 2025 Olympic Festival had its own subdomain and it has since been taken down | **Certain**, no DNS record | `https://olympic.si/` and `https://ewos.olympic.si/` |
+| `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, no 2026 data reachable via fetch. Confirmed on this sweep. Fetching it wastes a request | `https://tekaski-koledar.si/` |
 
 ### Wrong guesses, not dead sites
 
@@ -38,6 +39,11 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | `lgl.si/si/predstave`, `/si/program`, `/si/repertoar` | `lgl.si/spored-predstav` |
 | `mklj.si/napovednik-dogodkov/` | `mklj.si/dogodki/` |
 | `ljubljana.si/.../ljubljana-je-sport/ljubljanski-festival-sporta/` | `ljubljana.si/sl/ljubljana/sportna/ljubljanski-festival-sporta` |
+| `ljubljana.si/sl/aktualno/eventi/<slug>` | `ljubljana.si/sl/aktualno/dogodki/<slug>` |
+| `danslovenskegasporta.si/eventi/` | `danslovenskegasporta.si/dogodki/` |
+| `postojnska-jama.eu/sl/tickets/living-nativite-scenes/` | `postojnska-jama.eu/en/tickets/living-nativity-scenes/` (Slovenian path 404s, English path works) |
+| `www.zoo.si/dogodki`, `zoo.si/ponudba/element/carovniski-dan` | No working replacement found — `zoo.si/novice` and `zoo.si/ponudba` are the only live event pages, and neither carries a dated 2026 event as of this sweep |
+| `citypark.si/si/events/` (index) | No working index; only per-event URLs of the shape `citypark.si/si/events/<slug>/<yyyy-mm-dd>` resolve |
 
 ---
 
@@ -64,9 +70,9 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 
 | Source | URL | Status |
 |---|---|---|
-| LGL schedule | `https://www.lgl.si/spored-predstav` | ok |
-| LGL kids shows | `https://www.lgl.si/predstave-za-otroke` | ok |
-| LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | ok |
+| LGL schedule | `https://www.lgl.si/spored-predstav` | ok, but flaky: returned 503 on most attempts this sweep, loaded twice. When down, use `https://lgl.mojekarte.si/en/all.html` (ticketed schedule, JS-paginated) as a fallback |
+| LGL kids shows | `https://www.lgl.si/predstave-za-otroke` | low, 503 on every attempt this sweep (4 tries) |
+| LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | low, 503 on every attempt this sweep (2 tries) |
 | MKL events | `https://www.mklj.si/dogodki/` | ok |
 | MKL kids section | `https://www.mklj.si/otroci/` | ok |
 | Kinodvor Kinobalon | `https://www.kinodvor.org/kinobalon/` | ok |
@@ -89,8 +95,8 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Narodna galerija | `https://www.ng-slo.si/si/` | ok |
 | SEM | `https://www.etno-muzej.si/sl/dogodki` | ok |
 | MAO | `https://mao.si/` | ok |
-| Hiša eksperimentov | `https://he.si/` | ok |
-| Tehniški muzej Bistra | `https://www.tms.si/` | ok |
+| Hiša eksperimentov | `https://he.si/` | low, 503 on both attempts this sweep (root and `/dogodki/`). Retry next run |
+| Tehniški muzej Bistra | `https://www.tms.si/` | low, 200 OK but fetched content truncated before reaching the events section on every path tried (`/dogodki/`, `/en/events-all-events/`, `/en/events-tms-bistra/`) |
 | Ljubljanski grad | `https://www.ljubljanskigrad.si/` | ok |
 | ZOO news | `https://www.zoo.si/novice` | ok |
 | ZOO programmes | `https://www.zoo.si/ponudba` | ok |
@@ -100,7 +106,7 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 
 | Source | URL | Status |
 |---|---|---|
-| Argeta Junior KoloPark | `https://www.kd-rajd.si/en/argeta-junior-kolopark-pokal/` | ok, best 0-4 fit |
+| Argeta Junior KoloPark | `https://www.kd-rajd.si/en/argeta-junior-kolopark-pokal/` | ok, best 0-4 fit. As of this sweep the page only lists the completed 2025 season (ended Oct 2025); no 2026 dates published yet — retry closer to spring |
 | Pumpaj Slovenija | `https://pumptrack.si/pumpaj-slovenija/` | ok |
 | Pumpaj 2026 calendar | `https://pumptrack.si/pumpaj-slovenija/koledar-2026/` | ok |
 | Ljubljanski festival športa | `https://www.ljubljana.si/sl/ljubljana/sportna/ljubljanski-festival-sporta` | ok |
@@ -144,7 +150,7 @@ festivals, so it is the biggest single gap the cross-check closed.
 |---|---|---|---|
 | **Hiša otrok in umetnosti** | `https://www.hisaotrok.si/koledar_prireditev/list/` | Runs Zmaj kamišibaj, VNLG and Emonska promenada, plus a regular children's programme. Kamišibaj here is the best small-scale format for the youngest | ok |
 | **Pionirski dom** | `https://pionirski-dom.si/` | Otroški festival gledaliških sanj, Teden otroka open doors, carnival party | ok |
-| **Mini teater** | `https://www.mini-teater.si/si` | Mini poletje, year-round puppet programme on Križevniška and at the castle | ok |
+| **Mini teater** | `https://www.mini-teater.si/si` | Mini poletje, year-round puppet programme on Križevniška and at the castle | low, permanently redirects to `client.si` subdomain which returned empty/unusable content this sweep. Check `napovednik.com/za-otroke` for Mini teater shows instead |
 | **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok |
 | **Knjižnica pod krošnjami** | `https://www.knjiznicapodkrosnjami.si/` | Summer outdoor reading islands with scheduled storytellers | ok |
 | Rimljani v Ljubljani | `https://rimljanivljubljani.si/` | MGML Roman family festival, free, 4+ | ok |

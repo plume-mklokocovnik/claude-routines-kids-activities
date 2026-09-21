@@ -33,7 +33,7 @@ skews older than the target band, it is marked ⚠️ below.
 
 | Venue | URL | Cadence | Age fit |
 |---|---|---|---|
-| Lutkovno gledališče Ljubljana | `https://www.lgl.si/spored-predstav` and `https://www.lgl.si/predstave-za-otroke` | Weekend mornings, most weeks | 2+ / 3+, good |
+| Lutkovno gledališče Ljubljana | `https://www.lgl.si/spored-predstav` and `https://www.lgl.si/predstave-za-otroke` | Weekend mornings, most weeks | 2+ / 3+, good. ⚠️ Direct fetches returned 503 on most attempts in the 2026-09-21 sweep; fall back to `https://lgl.mojekarte.si/en/all.html` (ticketed schedule) when the main site is down |
 | LGL Lutkovni muzej | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | Occasional | 3+ |
 | MKL (city libraries) | `https://www.mklj.si/dogodki/` | *Ure pravljic* most weekday afternoons across ~20 branches | 3+ mostly, some 2+ |
 | Kinodvor / Kinobalon | `https://www.kinodvor.org/kinobalon/` | Weekend mornings, *Prvikrat v kino* is the toddler strand | 3+ at the earliest |
@@ -84,7 +84,7 @@ events rather than ordinary opening hours. Recurring annual fixtures:
 | Source | URL | Notes |
 |---|---|---|
 | Slovenski tekaški koledar | `https://tekaski-koledar.si/` | 200+ events, has an explicit family-friendly flag |
-| Tekaške prireditve | `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Categorises by **Otroški tek** and **Družinski tek** — sweep these two categories directly |
+| Tekaške prireditve | `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | ⛔ **Do not sweep**, as of the 2026-09-21 check: page returns only stale cached content from March–April 2016, no reachable 2026 data. Use `tekaski-koledar.si` instead |
 | NLB Ljubljanski maraton — Lumpi tek | `https://ljubljanskimaraton.si/lumpi-tek` | The preschool race. Non-competitive, no timing, medal and small gift for every child |
 
 **Lumpi tek 2026.** The marathon weekend is 17–18 October 2026, with children's, school and
