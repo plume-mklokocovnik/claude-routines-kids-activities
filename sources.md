@@ -2,6 +2,8 @@
 
 Research pass: 2026-09-21. Every URL below was reachability-checked (HTTP 200) on that date.
 This file is the lookup table for `routine.md` §2. Update it when a source dies or a new one appears.
+For a flat, token-cheap list of every URL with its status, see [`links.md`](links.md). Read that
+first on a normal run. Come here when you need the reasoning, cadence or age-fit behind a source.
 
 **Age note.** Most Slovenian listings advertise `3+`, `4+` or `od 4. leta`. Genuine 0–4 content is
 a minority of what these sources carry, so the routine still has to age-filter. Where a source
@@ -20,7 +22,7 @@ skews older than the target band, it is marked ⚠️ below.
 | MojaObčina Ljubljana | `https://www.mojaobcina.si/ljubljana/dogodki/` | Picks up ZOO and neighbourhood events the bigger portals miss | |
 | Kam z mulcem | `https://kamzmulcem.si/` | Editorial, not a calendar. Strong on round-up posts (free December events, pumptrack lists) | Blog format, no date-structured feed |
 | Otroško veselje | `https://otroskoveselje.si/dogaja-se-ljubljana/` | Ljubljana kids events, shows price per card | Thin metadata, no date filter |
-| Napovednik dogodkov | `https://www.napovednikdogodkov.si/` | Secondary. Event slugs live at `/events/<slug>/` | Heavy on `tečaj`/`abonma` listings, so the exclusion rules do real work here |
+| Napovednik dogodkov | `https://www.napovednikdogodkov.si/` | ⛔ **Do not sweep.** Its category feed holds only `glasbene-novice`. It is a music news site whose name misleads | Not to be confused with `napovednik.com`, which is the real source |
 | Časoris "Kam z otroki" | `https://casoris.si/kam-z-otroki-vsak-dan/` | ⛔ **Dead.** Editors posted that they can no longer keep it current | Do not sweep. Listed so nobody re-adds it |
 
 ---

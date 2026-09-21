@@ -54,9 +54,10 @@ Set `flags` on the event rather than dropping it:
 
 ## 2. Search Queries & Target Sources
 
-**The full source registry lives in [`sources.md`](sources.md)** — aggregators, venue URLs, scraping
-notes and a month-by-month table of annual fixtures. Read it at the start of every run. The
-queries below are the minimum sweep.
+**URLs live in [`links.md`](links.md)**, a flat status-checked index with a do-not-retry block.
+**Context lives in [`sources.md`](sources.md)**: cadence, age fit, scraping notes and a
+month-by-month table of annual fixtures. Read `links.md` on every run and reach for a search
+engine only when neither file covers what you need. The queries below are the minimum sweep.
 
 ### Pass 1 — Ljubljana
 ```
@@ -218,7 +219,8 @@ Generate a clean, mobile-optimized list of all unexpired active events sorted ch
 
 ## 5. Routine Execution Steps
 
-1. **Load State:** Read `db.json` and load active items and `user_rules`. Read [`sources.md`](sources.md) for the source registry and the annual-fixtures table for the current and next month.
+1. **Load State:** Read `db.json` and load active items and `user_rules`. Read [`links.md`](links.md) for the URL index, including the do-not-retry block. Read [`sources.md`](sources.md) for the annual-fixtures table covering the current and next month.
+   * Never re-discover a source through a search engine when `links.md` already holds its URL. Never fetch anything listed under *Do not retry*.
 2. **Execute Sweep:**
    * **Pass 1 — Ljubljana:** run the Pass 1 queries and sweep every Tier 0 aggregator and Tier 1 venue.
    * **Pass 2 — rest of Slovenia:** run the Pass 2 queries for the mobile categories only.
@@ -229,4 +231,4 @@ Generate a clean, mobile-optimized list of all unexpired active events sorted ch
    * Add newly discovered events to `db.json`.
 4. **Build Documents:** Produce updated strings for `db.json`, `diff.md`, and `currently_active.md`.
 5. **Output / Commit:** Return/commit the updated `db.json`, `diff.md`, and `currently_active.md`.
-6. **Maintain Sources:** When a registry URL stops resolving or a site reorganises its paths, correct or prune the entry in `sources.md` in the same run. A silently broken source is worse than a missing one.
+6. **Maintain Sources:** When a URL fails, classify it using the rules at the bottom of [`links.md`](links.md), then update `links.md` and `sources.md` in the same run. A path that moved gets corrected. A domain that stopped resolving gets moved to *Do not retry*. A silently broken source is worse than a missing one.
