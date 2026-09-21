@@ -4,7 +4,8 @@ Recurring events that come round every year. Each row carries a **recurrence rul
 routine can work out the date itself instead of searching for it, and a **confidence** rating so
 it knows how much to trust that rule.
 
-First researched 2026-09-21, expanded the same day after a 50-event cross-check. Rows marked
+First researched 2026-09-21, expanded the same day after a 50-event cross-check. This file is
+Ljubljana. Everything outside the city lives in [`regions.md`](regions.md). Rows marked
 `low` need re-verifying before they reach `db.json`. Rows under *Unverified* are not facts yet.
 
 ★ marks a strong 0–4 fit. ⚠️ marks a caveat that belongs in the event's `flags`.

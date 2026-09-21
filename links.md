@@ -1,8 +1,9 @@
 # Link Index
 
 Flat lookup table of every URL checked during the source research. Read this instead of
-re-discovering sources through search. `sources.md` has the reasoning, cadence and age-fit notes. `annual.md` has the yearly fixtures
-and their recurrence rules. This file is just the addresses.
+re-discovering sources through search. `sources.md` has the reasoning, cadence and age-fit notes. `annual.md` has Ljubljana's yearly fixtures
+and their recurrence rules, `regions.md` has the rest of Slovenia plus its own source list.
+This file is just the addresses.
 
 **Verified:** 2026-09-21, every row status-checked with a real HTTP request.
 
