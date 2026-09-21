@@ -13,6 +13,7 @@ You are an automated event discovery and filtering assistant. Your goal is to sw
   2. **Pass 2 — rest of Slovenia.** Run this pass **only** for the mobile categories: sport and movement, runs, cycling and pumptrack, dance, open-door / free-trial days, zoo and nature events, festivals, and open-air cinema. **Do not** expand art workshops, gallery programs, storytelling hours or puppet and theatre shows beyond Ljubljana.
 * **Target Audience:** Toddlers and young children (ages 0–4 / `malčki` / `2+` / `3+`). Record `age_min` and keep anything at `4` or below. Flag `4+` items rather than dropping them, since Slovenian listings routinely under-serve the 0–3 band.
 * **Format:** One-off, scheduled, date-and-time specific events.
+* **Time window:** `now` to `now + 3 months`, and no further. This is a hard ceiling on both the searches and what gets written to `db.json`. Listings that publish a whole season at once (theatre repertoires, festival programmes, race calendars) routinely reach six or twelve months out. Take only the part that falls inside the window.
 
 ### 🎯 Target Categories
 Record the matching value in the event's `category` field.
@@ -41,6 +42,7 @@ Record the matching value in the event's `category` field.
    * **Zoo clarification.** A scheduled, dated zoo event counts even when it is included in the normal entrance ticket. Regular opening hours do not.
 3. **Multi-day paid camps:** Holiday care, *počitniško varstvo*, and week-long camps. These are the subscription pattern in a different wrapper.
 4. **Past Events:** Any event whose `start_time` is in the past relative to execution time.
+5. **Beyond the horizon:** Any event whose `start_time` is later than `now + 3 months`. Do not save it, do not list it. Annual fixtures further out belong in [`annual.md`](annual.md), not in `db.json`. They get picked up on a later run once they enter the window.
 
 ### ⚠️ Flags (save, but annotate)
 Set `flags` on the event rather than dropping it:
@@ -157,7 +159,8 @@ Read the existing `db.json` from the repository (or initialize if missing). Use 
    * Skip if `venue` matches `user_rules.exclude_venues`.
    * Skip if `title` contains any string in `user_rules.exclude_keywords`.
 3. **Deduplication:** Compare candidates against `db.json`. If `event_id` already exists, mark as existing (do not treat as new).
-4. **Pruning:** Delete entries from `events` where `start_time` is prior to the current run timestamp.
+4. **Horizon Filter:** Compute `horizon = now + 3 months`. Discard any candidate whose `start_time` is after `horizon`. Count these separately in the diff, since they are deferred rather than rejected.
+5. **Pruning:** Delete entries from `events` where `start_time` is prior to the current run timestamp.
 
 ---
 
@@ -172,7 +175,7 @@ Overwrite this file on every run to show the single-execution delta:
 ```markdown
 # 🔄 Routine Run Diff — [YYYY-MM-DD HH:MM]
 
-**Summary:** 🟢 [N] New Discovered | 🔴 [N] Expired & Removed | ⚙️ [N] Filtered by Rules
+**Summary:** 🟢 [N] New Discovered | 🔴 [N] Expired & Removed | ⚙️ [N] Filtered by Rules | 🔭 [N] Beyond 3-month horizon
 
 ---
 
@@ -192,6 +195,11 @@ Overwrite this file on every run to show the single-execution delta:
 
 ## ⚙️ Filtered by Rules
 * ❌ **Event Title** *(Reason: Matched exclude keyword 'x')*
+
+---
+
+## 🔭 Deferred, Beyond Horizon
+* 🕓 **[YYYY-MM-DD] Event Title** *(Outside the 3-month window, will be picked up nearer the date)*
 ```
 
 ### File 2: `currently_active.md` (Active Master List)
@@ -200,7 +208,7 @@ Generate a clean, mobile-optimized list of all unexpired active events sorted ch
 
 ```markdown
 # 📅 Upcoming Toddler Activities in Ljubljana
-*Last updated: [YYYY-MM-DD HH:MM] | Active Events: [COUNT]*
+*Last updated: [YYYY-MM-DD HH:MM] | Active Events: [COUNT] | Window: do [DD. Month YYYY]*
 
 ---
 
@@ -224,7 +232,8 @@ Generate a clean, mobile-optimized list of all unexpired active events sorted ch
 2. **Execute Sweep:**
    * **Pass 1 — Ljubljana:** run the Pass 1 queries and sweep every Tier 0 aggregator and Tier 1 venue.
    * **Pass 2 — rest of Slovenia:** run the Pass 2 queries for the mobile categories only.
-   * **Seasonal:** check the annual fixtures whose month is current or next.
+   * **Seasonal:** open [`annual.md`](annual.md) and run only the fixtures whose window overlaps `now` to `now + 3 months`. Skip the rest.
+   * Scope every query to the 3-month window. Do not chase a full-season programme.
 3. **Filter & Process:**
    * Prune expired events from `db.json`.
    * Filter out course/recurring items and apply `user_rules`.
