@@ -13,6 +13,7 @@ You are an automated event discovery and filtering assistant. Your goal is to sw
   2. **Pass 2 — rest of Slovenia.** Run this pass **only** for the mobile categories: sport and movement, runs, cycling and pumptrack, dance, open-door / free-trial days, zoo and nature events, festivals, and open-air cinema. **Do not** expand art workshops, gallery programs, storytelling hours or puppet and theatre shows beyond Ljubljana.
 * **Target Audience:** Toddlers and young children (ages 0–4 / `malčki` / `2+` / `3+`). Record `age_min` and keep anything at `4` or below. Flag `4+` items rather than dropping them, since Slovenian listings routinely under-serve the 0–3 band.
 * **Format:** One-off, scheduled, date-and-time specific events.
+* **Time of day:** irrelevant. Never filter, flag or downgrade an event because of when it starts. Record `start_time` and let the reader judge.
 * **Time window:** `now` to `now + 3 months`, and no further. This is a hard ceiling on both the searches and what gets written to `db.json`. Listings that publish a whole season at once (theatre repertoires, festival programmes, race calendars) routinely reach six or twelve months out. Take only the part that falls inside the window.
 
 ### 🎯 Target Categories
@@ -37,16 +38,16 @@ Record the matching value in the event's `category` field.
 1. **Recurring Courses & Subscriptions:** Any multi-week course, semester enrollment, or subscription program.
    * *Keywords to exclude:* `tečaj`, `vpisi`, `vpis`, `celoletno`, `semestralno`, `abonma`, `semeštrij`.
    * **Open-door carve-out.** Keep an item despite these keywords when it has a concrete date **and** a start time **and** a free-trial marker: `dan odprtih vrat`, `dnevi odprtih vrat`, `brezplačna vadba`, `predstavitvena vadba`, `brezplačno preizkusite`, `preizkusi šport`. Clubs advertise their free sessions on the same page that pushes enrollment, so a naive keyword match would throw away the entire `odprta_vrata` category. Save the session, drop the enrollment.
-2. **Permanent / "Always On" Venues:** Standard open-hours visits without a specific scheduled event.
-   * *Keywords/Types to exclude:* General play cafes, standard indoor playground visits, regular zoo hours, permanent museum exhibitions.
-   * **Zoo clarification.** A scheduled, dated zoo event counts even when it is included in the normal entrance ticket. Regular opening hours do not.
+2. **Normal opening hours, not the venue:** Exclude the *visit*, never the *venue*. What disqualifies an item is that it is the place simply being open, with nothing scheduled: general play cafe hours, a standard indoor playground session, regular zoo hours, a permanent museum exhibition.
+   * **Any venue qualifies when it hosts a real event.** A play cafe, trampoline park, shopping centre, indoor playground or commercial attraction is in scope the moment it runs something dated and distinct from its ordinary operation. A puppet show at a play cafe, a themed night at a trampoline park, a Saturday workshop at a climbing gym. Commercial ownership is not a reason to skip it.
+   * **The test:** would this still be happening if nobody had scheduled it? If yes, it is opening hours. If no, it is an event.
+   * A scheduled event counts even when it costs nothing beyond the normal entrance ticket, which is how most zoo and museum events work.
 3. **Multi-day paid camps:** Holiday care, *počitniško varstvo*, and week-long camps. These are the subscription pattern in a different wrapper.
 4. **Past Events:** Any event whose `start_time` is in the past relative to execution time.
 5. **Beyond the horizon:** Any event whose `start_time` is later than `now + 3 months`. Do not save it, do not list it. Annual fixtures further out belong in [`annual.md`](annual.md), not in `db.json`. They get picked up on a later run once they enter the window.
 
 ### ⚠️ Flags (save, but annotate)
 Set `flags` on the event rather than dropping it:
-* `late_evening` — starts at or after 19:00. Every free open-air screening in Ljubljana starts at 21:00 or later, which is past bedtime for the target band.
 * `age_stretch` — advertised `age_min` is 5 or above but the format is plausibly drop-in.
 * `outside_ljubljana` — found in Pass 2.
 * `travel` — more than roughly 45 minutes from the city centre.

@@ -147,7 +147,7 @@ festivals, so it is the biggest single gap the cross-check closed.
 | **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok |
 | **Knjižnica pod krošnjami** | `https://www.knjiznicapodkrosnjami.si/` | Summer outdoor reading islands with scheduled storytellers | ok |
 | Rimljani v Ljubljani | `https://rimljanivljubljani.si/` | MGML Roman family festival, free, 4+ | ok |
-| Svetlobna gverila | `https://www.svetlobnagverila.net/` | Light festival, ⚠️ 21:30 start | ok |
+| Svetlobna gverila | `https://www.svetlobnagverila.net/` | Light festival, installations across the city | ok |
 | Maraton Franja | `https://franja.org/` | Kids 1,000 m cycling challenge at BTC | ok |
 | Teden otroka (ZPMS) | `https://www.zpms.si/programi/teden-otroka/` | The national organiser, first week of October | ok |
 | Slovenski knjižni sejem | `https://knjizni-sejem.si/` | Late November, moved to Gospodarsko razstavišče | ok |
@@ -157,9 +157,12 @@ festivals, so it is the biggest single gap the cross-check closed.
 | LUV fest | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/luv-fest` | 8 Feb to 12 Mar, 220+ events | ok |
 | EWoS | `https://ewos.olympic.si/` | European Week of Sport free-session registry | ok |
 
-## Shopping centre pop-ups
+## Shopping centres and commercial play venues
 
-Published as news posts roughly a week ahead, not as calendars. Sweep weekly or miss them.
+Published as news posts and social posts roughly a week ahead, not as calendars. Sweep weekly or
+miss them. Since exclusion rule 2 now turns on whether something is scheduled rather than who
+owns the venue, play cafes, trampoline parks and indoor playgrounds belong here too: skip their
+opening hours, take their dated events.
 
 | Source | URL | Status |
 |---|---|---|

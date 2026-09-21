@@ -8,6 +8,7 @@ First researched 2026-09-21, expanded the same day after a 50-event cross-check.
 `low` need re-verifying before they reach `db.json`. Rows under *Unverified* are not facts yet.
 
 ★ marks a strong 0–4 fit. ⚠️ marks a caveat that belongs in the event's `flags`.
+Start time is never a caveat. Late events are recorded like any other.
 
 ---
 
@@ -80,7 +81,7 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 | **Pikin festival** | First full week of September, Velenje | 2026-09-05 to 09-11 | **medium** |
 | **Lumpi tek / NLB Ljubljanski maraton** | Third weekend of October, children's races on the Saturday | 2025-10-19, 2026-10-17/18 | **medium**, pattern holds but no organiser states it as a rule |
 | **Olimpijski festival** | Late September, Kongresni trg + Park Zvezda, from 10:00 | 2025-09-27/28 | **medium**. Free, 50+ sports, ⚠️ advertised for ages 5–17 |
-| **Ana Plamenita** | Early to mid November, 18:00–21:00, Park Gradaščica | 2023-11-11, 2024-11-15, 2025-11-07 | **medium**. Fire installations. ⚠️ Dark, but an 18:00 start is workable |
+| **Ana Plamenita** | Early to mid November, 18:00–21:00, Park Gradaščica | 2023-11-11, 2024-11-15, 2025-11-07 | **medium**. Fire installations after dark |
 | **Noč parkeljnov, Goričane** | Friday and Saturday in the second half of November, Medvode | 2024-11-22/23, 2025-11-21/22 | **medium**. ⚠️⚠️ **Not for toddlers.** 700+ Krampus figures, chains, torches, engines. Genuinely frightening |
 | **Prižig prazničnih lučk** | Late November, 17:00, Prešernov trg | 2026-11-28 | **medium**. Free, children's choir, countdown |
 | **Slovenski knjižni sejem** | Late November | 2026-11-23 to 11-29 | **medium**. ⚠️ Moved to Gospodarsko razstavišče for 2026, no longer Cankarjev dom |
@@ -96,7 +97,7 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 | **Festival Bobri** | Historically 01-19 to 02-08. **Moved for 2026 to 03-21 to 04-04** | Ljubljana, many venues | ★ ~200 events over 15 days, all free. ⚠️ **Free digital tickets released 2026-03-07 at 10:00 on `bobri.si` and they go within hours.** Check in February, not January |
 | **Zmaj kamišibaj** | Spring, 13th edition in 2026 | Hiša otrok in umetnosti | ★ Japanese paper theatre, small scale, very good for the youngest. ⚠️ Month unconfirmed, verify |
 | **Igraj se z mano** | Late May, weekdays 09:00–13:00, family day Saturday | Kongresni trg + Park Zvezda | ★ 2026: 05-26 to 05-30. All free, 45+ workshops a day |
-| **Svetlobna gverila** | 05-26 to 06-20, daily 21:30–23:30 | Ljubljana public space | Free, 20th edition. ⚠️⚠️ 21:30 start makes it unusable for this age band |
+| **Svetlobna gverila** | 05-26 to 06-20, daily 21:30–23:30 | Ljubljana public space | Free, 20th edition. Light installations, projections and sculptures across the city |
 | **Knjižnica pod krošnjami** | 05-30 to 08-31 | 7 Ljubljana spots: Tivoli, Park Zvezda, the castle, park by the Roman wall, Trnovski pristan, Tobačna 001, Mala ulica | Free. ⚠️ The reading islands themselves are an always-on facility and fall under exclusion rule 2. Only the **scheduled storyteller sessions** are events |
 | **Otroški knjižni festival** | June, before the summer holidays | Cankarjev dom park | Performances, concerts, workshops. Distinct from the November book fair |
 | **Mini poletje** | Late June through August | Mini teater, Križevniška + Ljubljanski grad | International children's and puppet festival. Creative workshops on Sundays |
@@ -105,11 +106,11 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 | **FeKK / FeKKids** | Mid to late August | Kinodvor and partner venues | 2026: 08-17 to 08-22. ⚠️ FeKKids is curated 5+ |
 | **Trnovfest** | The whole of August, daily | CSK France Prešeren, Trnovo | ~5 € a day |
 | **Emonska promenada** | 08-22 to 08-24 | Novi trg | ★ Run by Hiša otrok in umetnosti, 19th edition, everything free. Street games, bubbles, outdoor puppetry |
-| **Letni Kinodvor** | Last week of August, 21:00 | Kongresni trg | Free. ⚠️ Far too late |
-| **Kinoteka open air** | Early to mid August | Metelkova lawn | Free. ⚠️ Same evening problem |
+| **Letni Kinodvor** | Last week of August, 21:00 | Kongresni trg | Free |
+| **Kinoteka open air** | Early to mid August | Metelkova lawn | Free |
 | **Zmaj 'ma mlade** | Late August into early September | Postojna | 2026: 08-25 to 09-06. All free, skews teen |
 | **VNLG, vikend neodvisnega lutkovnega gledališča** | Late September | Hiša otrok in umetnosti | ★ 2026: 09-24 to 09-27. All performances free, reservation required |
-| **ZOO noč čarovnic** | October, evenings, through 10-31 | ZOO Ljubljana | ⚠️ Candlelit evening tours |
+| **ZOO noč čarovnic** | October, evenings, through 10-31 | ZOO Ljubljana | Candlelit themed tours |
 | **Čarobni gozd** | Roughly 12-03 to 12-22, 16:30–19:00 | Pavilion, Park Zvezda | ★ Free daily craft workshops. One of the best December fits |
 | **Dedek Mraz** | Cabin in Park Zvezda 12-20 to 12-30, 10:00–18:00. Parades daily 17:00 from 12-26 to 12-30 | Ljubljana centre | ★ Free |
 | **Ana Mraz** | 12-21 to 12-30 | Gornji trg, Krekov trg, Špica | Street theatre and circus. Real-snow play area on Krekov trg 12-27 to 12-29 |
@@ -152,10 +153,14 @@ Real, but excluded by `routine.md` §1. Listed so nobody re-adds them.
 | Item | Rule it breaks |
 |---|---|
 | Zimske počitniške delavnice, Pionirski dom | Rule 3, multi-day paid holiday camps |
-| WOOP! winter challenge | Rule 2, permanent commercial venue |
-| Koruzni labirint Stanežiče (July to October) | Rule 2, a seasonal attraction with opening hours, not a scheduled event |
-| Odprta kuhna, Fridays at Pogačarjev trg | Rule 2, a weekly recurring market |
-| Knjižnica pod krošnjami reading islands | Rule 2 for the islands. Its scheduled storyteller sessions stay in scope |
+| Koruzni labirint Stanežiče (July to October) | Rule 2, the maze being open is its ordinary operation. A dated special event there would count |
+| Odprta kuhna, ordinary Fridays at Pogačarjev trg | Rule 2, the weekly market is its ordinary operation. Themed or special editions count |
+| Knjižnica pod krošnjami reading islands | Rule 2 for the islands themselves. Its scheduled storyteller sessions stay in scope |
+
+**WOOP! and venues like it are back in scope.** A trampoline park, play cafe or indoor
+playground is excluded only when there is nothing scheduled. When one runs a dated special
+event, it is an event like any other. Sweep their news and social pages the way you sweep
+shopping centres, roughly a week ahead.
 
 ## ⛔ Retired or misidentified
 

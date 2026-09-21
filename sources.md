@@ -68,11 +68,11 @@ museums, and many add a children's workshop on that day. Worth a standing monthl
 
 The zoo runs free conservation events and animal encounters on weekends and public holidays
 year-round. These cost nothing beyond the normal entrance ticket, so they qualify as scheduled
-one-off events rather than "always on" opening hours. Recurring annual fixtures:
+events rather than ordinary opening hours. Recurring annual fixtures:
 
 * **Dan Zemlje** — late April into the May Day holidays, conservation programme across several days
 * **Svetovni dan živali + dan oskrbnikov** — the weekend around 4 October, enrichment demos, "how to become a conservationist", night tours
-* **Noč čarovnic** — through October to the 31st, candlelit themed evening tours ⚠️ *evening timing, poor toddler fit*
+* **Noč čarovnic** — through October to the 31st, candlelit themed evening tours
 * **Poletne počitnice** and **zimske počitnice** — ⛔ **exclude**, these are paid multi-day camps for ages 5+, exactly the subscription pattern the rules forbid
 
 ---
@@ -151,10 +151,8 @@ often here.
 | Skatepark Maribor | Maribor | Occasional, Slovenian films | ✅ Free |
 | Arboretum open-air | Volčji Potok | Summer evenings, children's films | With park ticket |
 
-⚠️ **Timing caveat worth acting on.** Every free outdoor screening starts at 21:00 or later,
-which is past bedtime for the target band. Only Arboretum programmes films actually aimed at
-children. The routine should still capture these, but flag them rather than presenting them as
-toddler-suitable.
+Only Arboretum programmes films actually aimed at children. The rest are general programmes
+that happen to be free and outdoors. Record the start time and leave the judgement to the reader.
 
 ---
 
