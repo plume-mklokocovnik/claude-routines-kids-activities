@@ -25,6 +25,7 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `https://casoris.si/kam-z-otroki-vsak-dan/` | Resolves and returns 200, but the editors posted that they can no longer track children's events. The listings are frozen | **Certain.** The page is alive and the content is abandoned. Fetching it costs tokens and returns stale events | `napovednik.com/za-otroke` |
 | `https://www.napovednikdogodkov.si/` (as a kids source) | Alive, but its WordPress category feed contains only `glasbene-novice` and `uncategorized`. It is a music news site. The `/za-otroke/` path a search engine surfaced is a 404 | **Certain.** There is no children's category to sweep | `napovednik.com/za-otroke` (different site, similar name) |
 | `https://www.zoo.si/ponudba/noc-carovnic` | 404. Seasonal page, taken down out of season | *Likely seasonal.* Worth one check in October, not before | `https://www.zoo.si/novice` |
+| `festival.olympic.si` | NXDOMAIN. The 2025 Olympic Festival had its own subdomain and it has since been taken down | **Certain**, no DNS record | `https://olympic.si/` and `https://ewos.olympic.si/` |
 
 ### Wrong guesses, not dead sites
 
@@ -132,6 +133,29 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | December v Ljubljani | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani` | Dec | ok |
 | Kurentovanje (Ptuj) | `https://kurentovanje.net/` | Moveable, tied to Easter | ok |
 | Otroški bazar | `https://www.otroskibazar.si/` | Sep | ⚠️ resolves, but shows a holding page with no dates. Status unknown |
+
+## Children's arts venues found in the 50-event cross-check
+
+These were missing from the first pass. Hiša otrok in umetnosti alone runs three annual
+festivals, so it is the biggest single gap the cross-check closed.
+
+| Source | URL | Why it matters | Status |
+|---|---|---|---|
+| **Hiša otrok in umetnosti** | `https://www.hisaotrok.si/koledar_prireditev/list/` | Runs Zmaj kamišibaj, VNLG and Emonska promenada, plus a regular children's programme. Kamišibaj here is the best small-scale format for the youngest | ok |
+| **Pionirski dom** | `https://pionirski-dom.si/` | Otroški festival gledaliških sanj, Teden otroka open doors, carnival party | ok |
+| **Mini teater** | `https://www.mini-teater.si/si` | Mini poletje, year-round puppet programme on Križevniška and at the castle | ok |
+| **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok |
+| **Knjižnica pod krošnjami** | `https://www.knjiznicapodkrosnjami.si/` | Summer outdoor reading islands with scheduled storytellers | ok |
+| Rimljani v Ljubljani | `https://rimljanivljubljani.si/` | MGML Roman family festival, free, 4+ | ok |
+| Svetlobna gverila | `https://www.svetlobnagverila.net/` | Light festival, ⚠️ 21:30 start | ok |
+| Maraton Franja | `https://franja.org/` | Kids 1,000 m cycling challenge at BTC | ok |
+| Teden otroka (ZPMS) | `https://www.zpms.si/programi/teden-otroka/` | The national organiser, first week of October | ok |
+| Slovenski knjižni sejem | `https://knjizni-sejem.si/` | Late November, moved to Gospodarsko razstavišče | ok |
+| Otroški knjižni festival | `https://www.cd-cc.si/kultura/za-mlade-in-sole/otroski-knjizni-festival` | Cankarjev dom, June | ok |
+| Grajski dnevi | `https://www.ljubljanskigrad.si/sl/dogodki/grajski-dnevi/` | May medieval camp at the castle | ok |
+| Gregorčki | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/pozdrav-pomladi-z-gregorcki` | 11 March, candlelit boats on the Gradaščica | ok |
+| LUV fest | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/luv-fest` | 8 Feb to 12 Mar, 220+ events | ok |
+| EWoS | `https://ewos.olympic.si/` | European Week of Sport free-session registry | ok |
 
 ## Shopping centre pop-ups
 
