@@ -203,6 +203,12 @@ Corrections that came out of that research and matter here:
 
 ## Search queries
 
+Every query on this page is Slovenian, and that is a rule rather than a habit. `routine.md` §2
+*Language and locale* has the full version: query in Slovenian, use Slovenian month names, anchor
+with `site:.si` when results drift international, prefer `/sl/` over `/en/` on bilingual sites,
+and save titles in the language they were published in. Do not add English variants to these
+lists.
+
 ### Pass 1 — Ljubljana
 
 ```
@@ -256,20 +262,22 @@ pravljični koncert za otroke
 glasbena urica za malčke Ljubljana
 ```
 
-3B, one search per watchlist artist, then the same name scoped to the social platforms:
+3B, dated, one query per artist per month across the horizon. The month anchor is the difference
+between a tour date and a Wikipedia page:
 
 ```
 Čuki koncert <mesec> 2026
-Otroški pevski zbor RTV Slovenija koncert
-Romana Krajnčan koncert za otroke        # not "Kranjčan"
-Neca Falk koncert
-Alenka Kolman otroški koncert
-Zvoneček otroški zborček nastop          # unidentified, see artists.md
-Adi Smolar koncert
-Ribič Pepe nastop za otroke
+Otroški pevski zbor RTV Slovenija koncert <mesec> 2026
+Romana Krajnčan koncert za otroke <mesec> 2026     # not "Kranjčan"
+Neca Falk koncert <mesec> 2026
+Alenka Kolman otroški koncert <mesec> 2026         # returns Alenka Godec, add "otroški"
+Zvoneček otroški zborček nastop <mesec> 2026       # unidentified, see artists.md
+Adi Smolar koncert <mesec> 2026
+Ribič Pepe nastop za otroke <mesec> 2026
 
 site:facebook.com <ime> koncert
 site:instagram.com <ime> koncert
+site:.si <ime> koncert <mesec> 2026                # locale anchor, the tool is US-region
 ```
 
 ### Seasonal, run in the matching month

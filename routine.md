@@ -113,6 +113,33 @@ Set `flags` on the event rather than dropping it:
 month-by-month table of annual fixtures. Read `links.md` on every run and reach for a search
 engine only when neither file covers what you need. The queries below are the minimum sweep.
 
+### Language and locale
+
+Applies to every pass, not just Pass 3. These are local events organised by Slovenian
+institutions for a Slovenian audience, and the English-language web barely knows they exist.
+
+* **Query in Slovenian. Always.** Never translate a query into English, and never run an English
+  query as a fallback when a Slovenian one comes back thin. `kids events Ljubljana` returns
+  tourist copy and listicles. `dogodki za otroke Ljubljana ta vikend` returns dated listings. An
+  English query for a Slovenian local event is close to a wasted request.
+* **Use Slovenian month and time words** in dated queries: `oktober`, `november`, `ta vikend`,
+  `ta konec tedna`, `prireditve`. Not `October`, not `this weekend`.
+* **Anchor the locale when results drift international.** Add `site:.si`, or a town name, to a
+  query that comes back with foreign results. The search tool is US-region and will happily
+  return an American event for a Slovenian-looking query.
+* **Prefer the Slovenian version of a bilingual site.** `/sl/` over `/en/`, `.si` over `.com`
+  where both exist. The Slovenian page carries the full programme. The English page is usually a
+  reduced tourist subset, and sometimes a stale copy that was never updated.
+  * One known exception is already recorded in `links.md`: `postojnska-jama.eu` 404s on the
+    Slovenian path for the nativity scenes and answers on the English one. When the Slovenian
+    page is genuinely dead, take the English one and note it. The rule is a preference, not a
+    prohibition.
+* **Diacritics.** Keep `č`, `š` and `ž` in the query. If it returns nothing, retry once without
+  them, because Slovenian sites are inconsistent about stripping them from slugs and titles.
+* **Save what was published.** Titles, venue names and price text go into `db.json` in Slovenian,
+  exactly as the source wrote them. Never translate a title on the way in. This rule is about
+  queries and sources, not about the output files, whose structure is fixed in §4.
+
 ### Pass 1 — Ljubljana
 ```
 dogodki za otroke Ljubljana ta vikend
@@ -173,17 +200,36 @@ pravljični koncert za otroke
 glasbena urica za malčke Ljubljana
 ```
 
+Run each of those undated, then re-run the top four with a month anchor appended for every month
+in the horizon (`oktober 2026`, `november 2026`, `december 2026`). Undated queries skew hard
+towards evergreen pages, listicles and last year's edition.
+
 Then sweep `napovednik.com/glasba` with its `narodnozabavna`, `sansoni-kantavtorstvo` and
 `klasicna` sub-categories, and re-read the Pass 1 aggregators for anything musical. The addresses
 are in [`artists.md`](artists.md) under *Where a date is likely to be confirmable*.
 
 #### 3B — the named artists
 
-One search per name, every run, even when 3A already returned something. Read
-[`artists.md`](artists.md) before starting: it holds the verified links, the spelling traps and
-the confirmation rule.
+**Search first, pages second.** This inverts Passes 1 and 2, and it is deliberate. A puppet
+theatre has a calendar. A Čuki booking is a town square in Grosuplje, a shopping-centre stage or
+a firefighters' fundraiser, and no venue list will ever hold it, because the organiser is a
+municipality or a local society rather than a venue. For this pass the query is the discovery
+mechanism and the pages below are how you confirm what a query turns up.
 
-| Artist | Where to look |
+Run a **dated** query per artist per month across the horizon rather than one undated query per
+artist. Slovenian month names, because the listings are Slovenian:
+
+```
+<ime> koncert oktober 2026
+<ime> nastop november 2026
+<ime> koncert december 2026
+```
+
+Then open the pages below, but only for the names a query actually put on the board, to pin down
+the venue, the start time and the price. Read [`artists.md`](artists.md) first: it holds the
+verified links, the spelling traps and the confirmation rule.
+
+| Artist | Confirm at |
 |---|---|
 | Čuki | Instagram and Facebook. The website is dead, do not retry it |
 | Otroški pevski zbor RTV Slovenija | The RTV choir page |
@@ -194,8 +240,13 @@ the confirmation rule.
 | Adi Smolar | Facebook and Instagram |
 | Ribič Pepe | Own site and Facebook |
 
-Order per name: official page, then the Facebook page, then Instagram, then fan groups through a
-search engine. Then apply the confirmation rule.
+**What the search tool actually returns.** It is US-region and Slovenian local results come back
+thin and noisy. Measured on the 2026-09-22 research pass: the top "official" hit for Čuki was
+`cuki.si`, a domain with no DNS record at all. A plain *Alenka Kolman* search returned mostly
+pages about Alenka Godec, a different singer. *Zvoneček* returned nothing relevant on two
+attempts. Budget for that rate. Apply the *Language and locale* rules above, prefer a result
+carrying a date and an address over one carrying a biography, and never promote a search snippet
+to an event without opening the page behind it.
 
 **The confirmation rule.** A social post is a lead, not an event. Confirm the date against a
 non-social source before saving, put the confirming URL in `url` rather than the social one, and
