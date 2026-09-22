@@ -33,6 +33,7 @@ FLAG_LABELS = {
     "age_stretch": "starost?",
     "travel": "daljša pot",
     "not_toddler_appropriate": "ni za malčke",
+    "time_unknown": "ura ni znana",
     "outside_ljubljana": None,  # already visible in the Kje column
 }
 
@@ -79,6 +80,13 @@ def day_heading(dt):
 def maps_link(venue, city):
     query = quote(f"{venue or ''} {city or 'Ljubljana'}".strip())
     return f"https://maps.google.com/?q={query}"
+
+
+def hour_text(event, start):
+    """Never print a fictional midnight for a source that publishes no start time."""
+    if start is None or "time_unknown" in (event.get("flags") or []):
+        return "—"
+    return f"{start:%H:%M}"
 
 
 def age_text(event):
@@ -183,11 +191,9 @@ def build(db):
             out.append("| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |")
             out.append("|---|---|---|---|---|---|---|")
         out.append(
-            f"| {start:%H:%M} | {title_text(event)} | {place_text(event)} | {age_text(event)} | "
-            f"{price_text(event)} | {cell(notes_text(event))} | `{event.get('event_id', '')}` |"
-            if start else
-            f"| – | {title_text(event)} | {place_text(event)} | {age_text(event)} | "
-            f"{price_text(event)} | {cell(notes_text(event))} | `{event.get('event_id', '')}` |"
+            f"| {hour_text(event, start)} | {title_text(event)} | {place_text(event)} | "
+            f"{age_text(event)} | {price_text(event)} | {cell(notes_text(event))} | "
+            f"`{event.get('event_id', '')}` |"
         )
 
     if hidden:

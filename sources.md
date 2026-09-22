@@ -35,6 +35,7 @@ skews older than the target band, it is marked ⚠️ below.
 |---|---|---|---|
 | Lutkovno gledališče Ljubljana | `https://www.lgl.si/spored-predstav` and `https://www.lgl.si/predstave-za-otroke` | Weekend mornings, most weeks | 2+ / 3+, good. ⚠️ Direct fetches returned 503 on most attempts in the 2026-09-21 sweep; fall back to `https://lgl.mojekarte.si/en/all.html` (ticketed schedule) when the main site is down |
 | LGL Lutkovni muzej | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | Occasional | 3+ |
+| Kino Bežigrad | `https://www.kino-bezigrad.si/predstave-in-delavnice/` | Roughly weekly through the school year, Sep to Apr | 3+ where stated, most listings omit an age. ⚠️ Read the note below before sweeping |
 | MKL (city libraries) | `https://www.mklj.si/dogodki/` | *Ure pravljic* most weekday afternoons across ~20 branches | 3+ mostly, some 2+ |
 | Kinodvor / Kinobalon | `https://www.kinodvor.org/kinobalon/` | Weekend mornings, *Prvikrat v kino* is the toddler strand | 3+ at the earliest |
 | Mala ulica | `https://www.malaulica.si/sl/aktivnosti` | Daily afternoon fairy tales, workshops, *Mala ulica na ulici* pop-ups | **0–4, the single best fit** |
@@ -46,6 +47,24 @@ skews older than the target band, it is marked ⚠️ below.
 `_vrsta[]` (event type), `_serija[]` (series). Individual events resolve to
 `/dogodek/<slug>/<YYYY-MM-DD>/`, which makes deterministic IDs easy. Filtering on
 `ciljna_skupina` is far cheaper than scraping the whole calendar.
+
+**Kino Bežigrad, three things that will bite a naive sweep.**
+
+1. **Everything is filed under *abonma*.** The genre field reads *Gledališki abonma* and each
+   description says *predstava je del abonmaja*. A literal match on exclusion keyword `abonma`
+   deletes the entire venue. It should not: tickets are sold per show, 8,10 € at the last check.
+   `routine.md` §1 rule 1 now carries the single-ticket carve-out for exactly this. Take the
+   dated shows, leave the `ABONMA 2026/2027` enrollment page.
+2. **No start times anywhere the sweep can read them.** The index gives `V kinu od: DD.MM.YYYY`
+   and the detail page adds age, price and duration, but the time sits inside the booking widget
+   behind *Nakup* and `#tickets`. Set the `time_unknown` flag rather than guessing a matinee hour.
+3. **The children's menu is mostly out of scope.** `/otroski-abonma/`, `/pocitnisko-varstvo/`,
+   `/gledaliska-sola/` and `/otroska-praznovanja/` are a subscription, holiday care, a course and
+   private birthday parties. Rules 1 and 3 exclude all four. `/predstave-in-delavnice/` is the one
+   page on this site worth sweeping, and `/predstava/<slug>/` is where its detail lives.
+
+Its programme also reaches roughly seven months out, well past the 3-month horizon, so take only
+the part inside the window and let the rest come back on a later run.
 
 ### Museums and galleries
 

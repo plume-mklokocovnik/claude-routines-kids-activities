@@ -74,6 +74,8 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 |---|---|---|
 | LGL schedule | `https://www.lgl.si/spored-predstav` | ok, but flaky: returned 503 on most attempts this sweep, loaded twice. When down, use `https://lgl.mojekarte.si/en/all.html` (ticketed schedule, JS-paginated) as a fallback |
 | LGL kids shows | `https://www.lgl.si/predstave-za-otroke` | low, 503 on every attempt this sweep (4 tries) |
+| Kino Bežigrad shows | `https://www.kino-bezigrad.si/predstave-in-delavnice/` | ok, checked 2026-09-22. Dated index, 35+ puppet and theatre shows running Sep 2026 to Apr 2027. **No start times on this page** |
+| Kino Bežigrad detail | `https://www.kino-bezigrad.si/predstava/<slug>/` | ok. Carries `Starostna omejitev` (age), price and duration. Still no start time, which lives only in the booking widget behind *Nakup* / `#tickets` |
 | LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | low, 503 on every attempt this sweep (2 tries) |
 | MKL events | `https://www.mklj.si/dogodki/` | ok |
 | MKL kids section | `https://www.mklj.si/otroci/` | ok |

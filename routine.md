@@ -98,6 +98,7 @@ Record the matching value in the event's `category` field.
 ### ❌ Strict Exclusion Rules (Do Not Scrape/Save)
 1. **Recurring Courses & Subscriptions:** Any multi-week course, semester enrollment, or subscription program.
    * *Keywords to exclude:* `tečaj`, `vpisi`, `vpis`, `celoletno`, `semestralno`, `abonma`, `semeštrij`.
+   * **Single-ticket carve-out.** Keep a dated show that belongs to a subscription series when its ticket is also sold on its own. Kino Bežigrad is the worked example: every show is filed under *Gledališki abonma* and the page says *predstava je del abonmaja*, yet each one is a dated one-off with a single ticket at 8,10 €. Sell-the-series is the venue's framing, not the thing on offer. Save the show, drop the `ABONMA 2026/2027` enrollment page. The test is the same one as rule 2: is there a dated thing you can buy one seat for, or only a season you have to join?
    * **Open-door carve-out.** Keep an item despite these keywords when it has a concrete date **and** a start time **and** a free-trial marker: `dan odprtih vrat`, `dnevi odprtih vrat`, `brezplačna vadba`, `predstavitvena vadba`, `brezplačno preizkusite`, `preizkusi šport`. Clubs advertise their free sessions on the same page that pushes enrollment, so a naive keyword match would throw away the entire `odprta_vrata` category. Save the session, drop the enrollment.
 2. **Normal opening hours, not the venue:** Exclude the *visit*, never the *venue*. What disqualifies an item is that it is the place simply being open, with nothing scheduled: general play cafe hours, a standard indoor playground session, regular zoo hours, a permanent museum exhibition.
    * **Any venue qualifies when it hosts a real event.** A play cafe, trampoline park, shopping centre, indoor playground or commercial attraction is in scope the moment it runs something dated and distinct from its ordinary operation. A puppet show at a play cafe, a themed night at a trampoline park, a Saturday workshop at a climbing gym. Commercial ownership is not a reason to skip it.
@@ -113,6 +114,7 @@ Set `flags` on the event rather than dropping it:
 * `outside_ljubljana` — found in Pass 2.
 * `travel` — more than roughly 45 minutes from the city centre.
 * `not_toddler_appropriate` — billed for children, but plainly not for the 0–4 band: loud, late, frightening or physically demanding. Save it flagged rather than dropping it silently, and let the reader overrule.
+* `time_unknown` — the date is confirmed but the source publishes no start time. Store `start_time` as the date at `00:00` with the correct offset, set this flag, and the rendered list shows `—` in the Ura column instead of a fictional midnight. Never invent a plausible time. Some venues, Kino Bežigrad among them, keep the time inside a booking widget the sweep cannot read.
 
 
 ---
@@ -270,7 +272,7 @@ join a group, never post.
 
 ### Priority sources
 * **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `ljubljana.si/sl/aktualno/dogodki/`, `dogodki.kulturnik.si/?what=otroci`
-* **Ljubljana venues:** LGL, MKL, Kinodvor Kinobalon, Mala ulica, MGML, Narodna galerija, SEM, MAO, Cankarjev dom, Ljubljanski grad, ZOO Ljubljana
+* **Ljubljana venues:** LGL, MKL, Kinodvor Kinobalon, Kino Bežigrad (*Predstave in delavnice*), Mala ulica, MGML, Narodna galerija, SEM, MAO, Cankarjev dom, Ljubljanski grad, ZOO Ljubljana
 * **Sport and movement:** Argeta Junior KoloPark Pokal, Pumpaj Slovenija, Ljubljanski festival športa, MOL *Gremo na brezplačne vadbe*, Šport Ljubljana, Dan slovenskega športa
 * **Runs:** `tekaskeprireditve.si` (Otroški tek and Družinski tek categories), `tekaski-koledar.si`, Lumpi tek
 * **Pop-ups:** Citypark, ALEJA, Supernova, BTC. Published as news posts a week ahead at most, so sweep weekly
