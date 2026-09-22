@@ -1,8 +1,8 @@
-# 🔄 Routine Run Diff — 2026-09-21 16:35
+# 🔄 Routine Run Diff — 2026-09-22 10:47
 
 | 🟢 Novi | 🔴 Potekli | 🙈 Skriti | ⚙️ Filtrirani | 🔭 Odloženi | 📣 Sledi |
 |---|---|---|---|---|---|
-| 58 | 0 | 0 | 5 | 2 | 0 |
+| 27 | 2 | 0 | 6 | 1 | 2 |
 
 ---
 
@@ -10,76 +10,48 @@
 
 | Kdaj | Dogodek | Kje | Zvrst | Starost | Cena | ID |
 |---|---|---|---|---|---|---|
-| 21.09. 17:00 | [Mišek Julijan, izven](https://lgl.mojekarte.si/en/misek-julijan-izven/tickets-1235731.html) | Mali oder LGL | `lutke` | `3+` | 8 € | `lgl_20260921_1700` |
-| 21.09. 18:00 | [Plečnikova Ljubljana – arhitekturni sprehod za družine](https://mao.si/dogodek/plecnikova-ljubljana-arhitekturni-sprehod-za-druzine/) | Zbirno mesto pri MAO | `delavnica` | `5+` | `?` | `mao_20260921_1800` |
-| 22.09. 17:00 | [Ustvarjalnice z Galerijo C.C.U.: Pozdrav jeseni](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-pozdrav-jeseni-6184) | Center kulture Španski borci, Zaloška 61 | `delavnica` | `?` | 🆓 | `spanskiborci_20260922_1700` |
-| 23.09. 17:00 | [Skozi tisočere zgodbe](https://www.lgl.si/spored-predstav) | LGL (Lutkovno gledališče Ljubljana) | `pravljice` | `3+` | 🆓 | `lgl_20260923_1700` |
-| 24.09. 17:00 | [Rumena pika na nebu (VNLG)](https://www.hisaotrok.si/dogodek/rumena-pika-na-nebu-vnlg/) | Hiša otrok in umetnosti, Komenskega 9 | `lutke` | `2+` | 🆓 | `hisaotrok_20260924_1700` |
-| 24.09. 18:00 | [Zvočno potovanje za otroke – Z BESEDO](https://pionirski-dom.si/aktualno/zvocno-potovanje-za-otroke-z-besedo/) | Pionirski teater | `delavnica` | `5+` | `?` | `pionirski_20260924_1800` |
-| 25.09. 10:00 | [Kdo je naredil jezero? (VNLG)](https://www.hisaotrok.si/dogodek/kdo-je-naredil-jezero-vnlg/) | Hiša otrok in umetnosti, Komenskega 9 | `lutke` | `2+` | 🆓 | `hisaotrok_20260925_1000` |
-| 25.09. 11:00 | [Festival LUTKE 2026: Birakolore](https://lgl.mojekarte.si/en/birakolore/tickets-1214505.html) | Različne lokacije (pri Krekovem trgu 2) | `lutke` | `?` | 🆓 | `lgl_20260925_1100` |
-| 25.09. 17:00 | [Fuj, gosenica! (VNLG)](https://www.hisaotrok.si/dogodek/fuj-gosenica-vnlg/) | Hiša otrok in umetnosti, Komenskega 9 | `lutke` | `2+` | 🆓 | `hisaotrok_20260925_1700` |
-| 25.09. 20:00 | [Festival LUTKE 2026: Nasprotja / Antipody](https://lgl.mojekarte.si/en/nasprotja-antipody/tickets-1214599.html) | Pred LGL (zunaj) | `lutke` | `?` | 10 € | `lgl_20260925_2000` |
-| 26.09. 10:00 | [Bela mačica (VNLG)](https://www.hisaotrok.si/dogodek/bela-macica-vnlg/) | Hiša otrok in umetnosti, Komenskega 9 | `lutke` | `2+` | 🆓 | `hisaotrok_20260926_1000` |
-| 26.09. 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20260926_1000` |
-| 26.09. 10:00 | [Olimpijski festival (Evropski teden športa)](https://ewos.olympic.si/) | Kongresni trg in Park Zvezda (prizorišče privzeto iz izdaje 2025, stran za 2026 še ni posodobljena) | `festival` | `5+` | 🆓 | `kongresnitrg_20260926_1000` |
-| 26.09. 10:30 | [Festival LUTKE 2026: Lev in ptica / The Lion and the Bird](https://lgl.mojekarte.si/en/lev-in-ptica-the-lion-and-the-bird/tickets-1214490.html) | Veliki oder LGL, Krekov trg 2 | `lutke` | `?` | 10 € | `lgl_20260926_1030` |
-| 26.09. 11:00 | [Vodno potovanje: interaktivno vodstvo za družine (4+)](https://mgml.si/sl/mestni-muzej/eventi/2503/) | Mestni muzej Ljubljana | `delavnica` | `4+` | `?` | `mestnimuzej_20260926_1100` |
-| 26.09. 11:30 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/) | Kinodvor | `kino` | `?` | `?` | `kinodvor_20260926_1130` |
-| 26.09. 16:00 | [Brezplačna družinska delavnica: Čarobni fotogram](https://mgml.si/sl/galerija-jakopic/eventi/2521/) | Galerija Jakopič | `delavnica` | `4+` | 🆓 | `jakopic_20260926_1600` |
-| 26.09. 16:00 | [Na obisku pri Rimljanki Liviji (4+)](https://mgml.si/sl/mestni-muzej/eventi/2504/) | Mestni muzej Ljubljana | `delavnica` | `4+` | `?` | `mestnimuzej_20260926_1600` |
-| 26.09. 16:30 | [Kinobalon: Za poletje, skupaj! (premiera)](https://www.kinodvor.org/kinobalon/) | Kinodvor | `kino` | `?` | `?` | `kinodvor_20260926_1630` |
-| 27.09. 10:00 | [O vrabčku, mišku in palačinki (VNLG)](https://www.hisaotrok.si/dogodek/o-vrabcku-misku-in-palacinki-vnlg/) | Hiša otrok in umetnosti, Komenskega 9 | `lutke` | `2+` | 🆓 | `hisaotrok_20260927_1000` |
-| 27.09. 14:45 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/) | Kinodvor | `kino` | `?` | `?` | `kinodvor_20260927_1445` |
-| 02.10. 18:00 | [Plesna pravljica: Mišja šola](https://www.citypark.si/si/events/gledaliska-predstava-plesna-pravljica-misja-sola/2026-10-02) | Citypark, pritličje pri Humanic | `ples` | `?` | 🆓 | `citypark_20261002_1800` |
-| 03.10. 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20261003_1000` |
-| 03.10. 11:00 | [Interaktivno družinsko vodenje v Vili Zlatica](https://mgml.si/sl/vila-zlatica/eventi/2362/) | Vila Zlatica | `delavnica` | `4+` | `?` | `vilazlatica_20261003_1100` |
-| 04.10. 11:00 | [Javno vodstvo: Krajinske slike in ljudske pripovedke](https://www.ng-slo.si/si/eventi/javno-vodstvo-krajinske-slike-in-ljudske-pripovedke?id=6596) | Narodna galerija, Puharjeva 9 | `delavnica` | `4+` | `?` | `ng_20261004_1100` |
-| 04.10. 11:00 | [Ustvarjalna delavnica: Mucka, Putka, Slon](https://mao.si/dogodek/ustvarjalna-delavnica-mucka-putka-slon/) | MAO, Rusjanov trg 7 | `delavnica` | `6+` | `?` | `mao_20261004_1100` |
-| 10.10. 00:00 | [Pumptrack pokal Slovenije – Grosuplje](https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/) | Pumptrack Grosuplje, Grosuplje | `kolo` | `?` | Ni potrjeno (starost in | `pumptrackgrosuplje_20261010_0000` |
-| 10.10. 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20261010_1000` |
-| 10.10. 10:00 | [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708) | Narodna galerija, mezanin vhodne avle | `pravljice` | `4+` | 🆓 | `ng_20261010_1000` |
-| 10.10. 11:00 | [SiTi Teater sobotni dopoldnevi: Glasbočasnice](https://www.sititeater.si/sobotni-dopoldnevi/glasbocasnice/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261010_1100` |
-| 10.10. 15:00 | [Brezplačno vodstvo po razstavi za otroke in družine (Teden otroka)](https://mgml.si/sl/mestna-galerija/eventi/2529/) | Mestna galerija Ljubljana | `delavnica` | `4+` | 🆓 | `mestnagalerija_20261010_1500` |
-| 10.10. 16:00 | [ZIN ZA SPOMIN (družinska fotografska delavnica)](https://mgml.si/sl/mestna-galerija/eventi/2528/) | Mestna galerija Ljubljana | `delavnica` | `4+` | `?` | `mestnagalerija_20261010_1600` |
-| 14.10. 17:30 | [Lisička sestrička](https://napovednik.com/za-otroke/predstave-za-otroke/lisicka-sestricka-6035) | Hribarjeva dvorana, Ljubljanski grad | `pravljice` | `5+` | 5 € | `grad_20261014_1730` |
-| 17.10. 09:30 | [VITA Lumpi tek – Otroški tek (predšolski)](https://ljubljanskimaraton.si/lumpi-tek) | Slovenska cesta (start pri Kazini, smer Kongresni trg) | `tek` | `0+` | 🆓 | `lumpitek_20261017_0930` |
-| 17.10. 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20261017_1000` |
-| 17.10. 11:00 | [SiTi Teater sobotni dopoldnevi: Zmeda za dva medveda](https://www.sititeater.si/sobotni-dopoldnevi/zmeda-za-dva-medveda/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261017_1100` |
-| 18.10. 10:00 | [MiniMAO igralnica](https://mao.si/dogodek/minimao-igralnica/) | MAO, Rusjanov trg 7 | `delavnica` | `2+` | Ni navedeno; predvidoma | `mao_20261018_1000` |
-| 24.10. 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20261024_1000` |
-| 24.10. 11:00 | [SiTi Teater sobotni dopoldnevi: Picko in Packo](https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261024_1100` |
-| 24.10. 17:00 | [Calvinove pravljice (5+)](https://napovednik.com/za-otroke/predstave-za-otroke/calvinove-pravljice-5-5977) | Grajsko gledališče, Ljubljanski grad | `pravljice` | `5+` | 5 € | `grad_20261024_1700` |
-| 28.10. 17:00 | [Izrezovanje strahcev v Botaničnem vrtu](http://www.botanicni-vrt.si/napovednik-dogodkov/oktober-2026-v-botanicnem-vrtu) | Botanični vrt Ljubljana, tropski rastlinjak | `delavnica` | `5+` | 10 € | `botanicnivrt_20261028_1700` |
-| 31.10. 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/) | Kinodvor | `kino` | `2+` | `?` | `kinodvor_20261031_1000` |
-| 07.11. 11:00 | [SiTi Teater sobotni dopoldnevi: Pobegla nogavica Pavla](https://www.sititeater.si/sobotni-dopoldnevi/pobegla-nogavica-pavla/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261107_1100` |
-| 10.11. 16:00 | [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c) | Mestni muzej Ljubljana, Gosposka ulica 15 | `delavnica` | `?` | 🆓 | `mestnimuzej_20261110_1600` |
-| 14.11. 11:00 | [SiTi Teater sobotni dopoldnevi: Čudežni ključ (premiera)](https://www.sititeater.si/sobotni-dopoldnevi/cudezni-kljuc-premiera/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261114_1100` |
-| 14.11. 16:00 | [Jesensko vodstvo za družine po Plečnikovi hiši](https://mgml.si/sl/plecnikova-hisa/eventi/2304/) | Plečnikova hiša | `delavnica` | `4+` | `?` | `plecnikovahisa_20261114_1600` |
-| 21.11. 11:00 | [SiTi Teater sobotni dopoldnevi: Jaz počepnem, ti poskočiš](https://www.sititeater.si/sobotni-dopoldnevi/jaz-pocepnem-ti-poskocis-1/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261121_1100` |
-| 21.11. 17:00 | [Friderik, grajska podgana](https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979) | Grajsko gledališče, Ljubljanski grad | `lutke` | `3+` | 5 € | `grad_20261121_1700` |
-| 23.11. 09:00 | [Slovenski knjižni sejem 2026](https://knjizni-sejem.si/) | Gospodarsko razstavišče, Dunajska cesta 18 | `festival` | `0+` | `?` | `gr_20261123_0900` |
-| 27.11. 18:00 | [Ognjeni spektakel – Pohod parkeljnov](https://kranjska-gora.si/en/events/fire-spectacle-the-hike-of-the-parkeljni-krampus) | Podkoren, Kranjska Gora | `festival` | `5+` | Vstopnina (znesek ni nav | `podkoren_20261127_1800` |
-| 28.11. 11:00 | [SiTi Teater sobotni dopoldnevi: Peter Klepec](https://www.sititeater.si/sobotni-dopoldnevi/peter-klepec_2-1/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261128_1100` |
-| 29.11. 10:00 | [MiniMAO igralnica](https://mao.si/dogodek/minimao-igralnica/) | MAO, Rusjanov trg 7 | `delavnica` | `2+` | Ni navedeno; predvidoma | `mao_20261129_1000` |
-| 03.12. 17:00 | [Čarobni gozd (otvoritev)](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/) | Paviljon, Kongresni trg / Park Zvezda | `festival` | `0+` | 🆓 | `parkzvezda_20261203_1700` |
-| 05.12. 11:00 | [SiTi Teater sobotni dopoldnevi: Cirkus Kolibris z obiskom Miklavža](https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261205_1100` |
-| 05.12. 16:00 | [Fantazima 2026 – Praznični december v Kopru](https://visitkoper.si/prireditve/fantazima-2026/) | Mestno jedro Kopra (Carpaccio trg, Čevljarska ulica, obala), Koper | `festival` | `0+` | 🆓 | `koper_20261205_1600` |
-| 05.12. 17:00 | [Miklavžev sprevod](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/) | Krekov trg → Prešernov trg | `festival` | `0+` | 🆓 | `krekovtrg_20261205_1700` |
-| 12.12. 11:00 | [SiTi Teater sobotni dopoldnevi: Praznična delavnica](https://www.sititeater.si/sobotni-dopoldnevi/praznicna-delavnica/) | SiTi Teater BTC, Ameriška ulica 3 | `delavnica` | `3+` | `?` | `siti_20261212_1100` |
-| 19.12. 11:00 | [SiTi Teater sobotni dopoldnevi: Rudi in čarobni ljubčkomat z obiskom Božička](https://www.sititeater.si/sobotni-dopoldnevi/rudi-2/) | SiTi Teater BTC, Ameriška ulica 3 | `lutke` | `3+` | `?` | `siti_20261219_1100` |
+| 26.09. 10:00 | [ARTish](https://www.visitljubljana.com/sl/obiskovalci/prireditve/) | Gallusovo nabrežje | `pop_up` | `?` | 🆓 | `artish_20260926_1000` |
+| 26.09. 11:00 | [Festival LUTKE 2026: Birakolore](https://lgl.mojekarte.si/en/all.html) | Različne lokacije (pri Krekovem trgu 2) | `lutke` | `?` | 🆓 | `lgl_20260926_1100` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Šentvid (MKL) | `pravljice` | `?` | 🆓 | `mkl_sentvid_20261001_1700` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Prežihov Voranc (MKL) | `pravljice` | `?` | 🆓 | `mkl_prezihovvoranc_20261001_1700` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica dr. France Škerl (MKL) | `pravljice` | `?` | 🆓 | `mkl_skerl_20261001_1700` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Glinškova ploščad (MKL) | `pravljice` | `?` | 🆓 | `mkl_glinskova_20261001_1700` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Jožeta Mazovca (MKL) | `pravljice` | `?` | 🆓 | `mkl_mazovec_20261001_1700` |
+| 01.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Polje (MKL) | `pravljice` | `?` | 🆓 | `mkl_polje_20261001_1700` |
+| 03.10. 17:00 | [Friderik in zmaj](https://dogodki.kulturnik.si/?what=otroci) | Grajsko gledališče, Ljubljanski grad | `lutke` | `3+` | `?` | `grad_20261003_1700` |
+| 05.10. 09:00 | [Teden otroka 2026 (Maribor)](https://zpm-mb.si/novice-dogodki/teden-otroka-2026/) | Trg svobode, Maribor | `festival` | `?` | 🆓 | `maribor_20261005_0900` |
+| 05.10. 18:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Frana Levstika (MKL) | `pravljice` | `?` | 🆓 | `mkl_levstik_20261005_1800` |
+| 06.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Podpeč (MKL) | `pravljice` | `?` | 🆓 | `mkl_podpec_20261006_1700` |
+| 06.10. 17:00 | [Ura pravljic](https://www.mklj.si/otroci/) | Knjižnica Otona Župančiča (MKL) | `pravljice` | `?` | 🆓 | `mkl_zupancic_20261006_1700` |
+| 11.10. 10:30 | [Šola zmajeslovja: Prerokba o pogubi zmajev](https://dogodki.kulturnik.si/?what=otroci) | Ljubljanski grad | `pravljice` | `?` | `?` | `grad_20261011_1030` |
+| 24.10. 15:00 | [Praznik sira in vina](https://tdbohinj.si/prireditev/praznik-sira-in-vina/) | Dvorana Danica, Bohinjska Bistrica | `festival` | `0+` | 12 € | `bohinjskabistrica_20261024_1500` |
+| 29.10. 18:00 | [Igor Stravinski: Mavra / Maurice Ravel: Otrok in uroki](https://dogodki.kulturnik.si/?what=otroci) | Cankarjev dom, Linhartova dvorana | `koncert` | `?` | `?` | `cd_20261029_1800` |
+| 07.11. 11:00 | [Tekaški pozdrav jeseni na Krasu](https://www.tekaskipozdrav.si/program) | Kobilarna Lipica, Lipica (Sežana) | `tek` | `?` | 35 € | `lipica_20261107_1100` |
+| 07.11. 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/) | Mestni muzej Ljubljana | `delavnica` | `?` | `?` | `mestnimuzej_20261107_1500` |
+| 08.11. 10:30 | [Šola zmajeslovja: Vrhovna čarovnica](https://dogodki.kulturnik.si/?what=otroci) | Ljubljanski grad | `pravljice` | `?` | `?` | `grad_20261108_1030` |
+| 14.11. 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/) | Mestni muzej Ljubljana | `delavnica` | `?` | `?` | `mestnimuzej_20261114_1500` |
+| 21.11. 16:00 | [Delavnica izdelave sveč iz satnic](https://mgml.si/sl/dogodki/) | Mestni muzej Ljubljana | `delavnica` | `?` | `?` | `mestnimuzej_20261121_1600` |
+| 28.11. 16:00 | [Delavnica izdelave sveč iz satnic](https://mgml.si/sl/dogodki/) | Mestni muzej Ljubljana | `delavnica` | `?` | `?` | `mestnimuzej_20261128_1600` |
+| 05.12. 17:00 | [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/) | Glavni trg, Kranj | `koncert` | `?` | `?` | `kranj_20261205_1700` |
+| 12.12. 17:00 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci) | Hribarjeva dvorana, Ljubljanski grad | `lutke` | `3+` | `?` | `grad_20261212_1700` |
+| 13.12. 10:30 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci) | Hribarjeva dvorana, Ljubljanski grad | `lutke` | `3+` | `?` | `grad_20261213_1030` |
+| 19.12. 17:00 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci) | Grajsko gledališče, Ljubljanski grad | `lutke` | `3+` | `?` | `grad_20261219_1700` |
+| 20.12. 10:30 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci) | Grajsko gledališče, Ljubljanski grad | `lutke` | `3+` | `?` | `grad_20261220_1030` |
 
 ---
 
 ## 🔴 Pruned / expired
 
-_First populated run. `db.json` held zero prior events, so nothing was there to expire._
+| Kdaj | Dogodek | ID |
+|---|---|---|
+| 21.09. 17:00 | Mišek Julijan, izven | `lgl_20260921_1700` |
+| 21.09. 18:00 | Plečnikova Ljubljana – arhitekturni sprehod za družine | `mao_20260921_1800` |
 
 ---
 
 ## 🙈 Hidden by the reader
 
-_Nothing hidden. `user_rules` was empty on this run._
+_Nothing hidden. `user_rules` is still empty this run._
 
 ---
 
@@ -87,11 +59,12 @@ _Nothing hidden. `user_rules` was empty on this run._
 
 | Dogodek | Razlog |
 |---|---|
-| Festival LUTKE 2026: Odbite arktične zgodbe / Arctic Tall Tales | Predstava v angleščini s podnapisi, za starejšo publiko |
-| Dan odprtih vrat Strelskega društva Olimpija (Dan slovenskega športa) | Streljanje, starost 6+, ni za malčke |
-| Katja Dance Company: Gibalno-plesne ustvarjalne delavnice za otroke | Eksplicitno 5–10 let, fizično zahtevna delavnica z ovirami |
-| Teden otroka – osrednji dogodek / nacionalna premiera | Brez konkretnega prizorišča v Ljubljani. Posamezni ljubljanski dogodki znotraj Tedna otroka so zajeti ločeno |
-| Noč parkeljnov v Goričanah (Medvode) | Datum za 2026 ni bil objavljen na nobenem preverjenem viru, vsebina tudi ni primerna za malčke |
+| Martinovanje na Ptuju (11.11.) | Vinski turistični dogodek, brez potrjenega otroškega programa |
+| Altroke Martinovanje Koper (14.11.) | Vinski turistični dogodek, brez potrjenega otroškega programa |
+| Martinovanje Jeruzalem-Slovenija (12.–13.11.) | Vinski turistični dogodek, brez potrjenega otroškega programa |
+| Nedeljski promenadni koncerti (Novi trg/Breg) | Tedensko ponavljajoč se standing program brez razpoložljive vsebine po terminih — ni mogoče zapisati konkretnega dogodka, ne da bi si ga izmislili |
+| Koruzni labirint Stanežiče | Pravilo 2 — labirint je odprt sam po sebi (obratovanje), ne gre za razpisan dogodek; že evidentirano v `annual.md` kot izven obsega |
+| Ustvarjalna delavnica za otroke, mladino in družine (25.9., Napovednik) | Prizorišče ni navedeno, ni mogoče preveriti oz. zapisati brez ugibanja |
 
 ---
 
@@ -99,22 +72,35 @@ _Nothing hidden. `user_rules` was empty on this run._
 
 | Datum | Dogodek | Kje | Opomba |
 |---|---|---|---|
-| 2026-12-27 | MiniMAO igralnica | MAO, Rusjanov trg 7 | Zunaj 3-mesečnega okna, pobrano bliže datumu |
-| 2026-12-25 | Žive jaslice v Postojnski jami | Postojnska jama | Zunaj 3-mesečnega okna, pobrano bliže datumu |
+| 2027-02-12 | Fehtarji – otroški koncert | Križanke, Ljubljana | Zunaj 3-mesečnega okna, pobrano bliže datumu |
 
 ---
 
 ## 📣 Unconfirmed leads (Pass 3)
 
-_Pass 3 did not exist when this run executed. First concert sweep lands on the next run._
+| Artist / vir | Trditev | Vir | Kaj manjka |
+|---|---|---|---|
+| Neca Falk – "Maček Muri in Muca Maca" | Koncert v Kino Gledališču Bežigrad, datum ni razviden (early-bird cena velja do 31.10.2026, kar nakazuje kasnejši termin) | https://www.eventim.si/si/vstopnice/neca-falk-macek-muri-muca-maca-ljubljana-kino-gledalisce-bezigrad-422992/event.html | Stran je vračala 503 ob vseh treh poskusih; točen datum, ura in starost niso razvidni |
+| Neca Falk, Jerko Novak in Miro Novak – "Maček Muri" projekt | Napovedano v SNG Drama Ljubljana, datum ni objavljen na strani prizorišča | https://www.drama.si/en/event/muri-the-cat-and-macy-the-pussycat-3/ | Datum in ura; blagajna (+386 1 252 15 11) ni bila poklicana |
 
 ---
 
 ## 🛠️ Runtime notes
 
-* **Repo path conflict.** §0 names the repo at `/Users/kloki/Documents/GitHub/claude-routines-kids-activities` on branch `main`, pushed to directly. This session's actual working tree was `/home/user/claude-routines-kids-activities`, and its harness enforced committing and pushing only to the pre-assigned branch `claude/intelligent-keller-t3fygl`, a hard environment rule rather than one from `routine.md` or the task prompt. Per §0 the sweep itself followed `routine.md` exactly. Only the destination branch differed. The branch was even with `origin/main` at run start, so nothing was skipped or reordered because of it.
-* **Internal spec note.** §1's flag list defined only `age_stretch`, `outside_ljubljana` and `travel`, and §1 says time of day is never a reason to flag or downgrade an event, yet the old §4 template showed `pozen večer` as a sample flag. The stricter explicit rule won: no time-of-day flag was ever set.
-* **First run.** `db.json` started empty, so every saved event counts as new and there was nothing to prune.
-* **Sources that hit dead ends,** all reflected in `links.md` and `sources.md` in the same commit: `lgl.si` direct pages 503'd repeatedly and were worked around via `lgl.mojekarte.si`. `he.si`, `tekaskeprireditve.si` (stale 2016 cache) and several MGML, etno-muzej and TMS pages returned unusable content. `mini-teater.si` redirects to an empty `client.si` shell. `www.ljubljana.si/sl/aktualno/eventi/...` should be `/sl/aktualno/dogodki/...` and `danslovenskegasporta.si/eventi/` should be `/dogodki/`.
-* **Not saved, not confirmed:** Ana Plamenita, the November fire festival. Only a search snippet carried a date and no page could be fetched to confirm it, so per *Never invent an event* it was left out entirely, not even as a filtered or deferred row, because no candidate date exists to record.
-* **Reformatted 2026-09-22.** This file was migrated to the table layout in `routine.md` §4. The run's findings are unchanged.
+* **Repo path / branch.** Same environment constraint as the 2026-09-21 run: this session's working tree is `/home/user/claude-routines-kids-activities` and the harness pins commits to the pre-assigned branch `claude/intelligent-keller-nag7hh`, which tracked `origin/main` even with it at run start (`9b30e2a`), so nothing was skipped or reordered. §0 names `/Users/kloki/...` on `main` directly; per §0 the spec wins and this deviation is noted here rather than fought.
+* **Run method.** This sweep dispatched four parallel research passes (Pass 1 Ljubljana, Pass 2 rest of Slovenia, Pass 3 concerts, seasonal/annual fixtures), each doing its own live WebSearch/WebFetch against the sources in `links.md`/`sources.md`/`annual.md`/`regions.md`/`artists.md`, then the results were merged, deduplicated against the existing `db.json`, and filtered here by hand against §1's rules.
+* **Corrections to existing events, from this run's confirmations** (not counted as "new" above):
+  * `kongresnitrg_20260926_1000` (Olimpijski festival) — 2026 date and venue (Kongresni trg + Park Zvezda) are now directly confirmed at `https://olympic.si/dogodki/olimpijski-festival-1-dan`; the prior caveat about the 2026 page not being updated no longer applies. URL and venue text updated.
+  * `pumptrackgrosuplje_20261010_0000` (Pumptrack pokal Slovenije – Grosuplje) — confirmed start time 10:00 and that there's a free kids' program ("Grbine so fine") separate from the €20 competition entry. The `travel` flag was wrong (Grosuplje is ~25 min from Ljubljana, not >45); dropped it, kept `outside_ljubljana`.
+  * `siti_20261010_1100` (Glasbočasnice) and `siti_20261114_1100` (Čudežni ključ) — the Pass 3 concert sweep found both are actually billed as children's concerts ("koncert"/"glasbena predstava"), not puppet shows. Recategorized `lutke` → `koncert`, set `age_min: 3`, and swapped in the specific ticket-page URLs (`sititeater.mojekarte.si`) with the two-tier pricing (8 €, or 12 € with one under-4 in arms).
+* **Rimljani v Ljubljani will not run in 2026.** The organiser's own site (`rimljanivljubljani.si`) now states "Vabljeni jeseni 2027!" with the 2027 programme still in development. `annual.md` updated to reflect this instead of "month varies, verify."
+* **Ribič Pepe's own site has gone stale.** `ribicpepe.si` root now serves only 2017–2018 archived content and `/dogodki/` 404s. No 2026 appearances were found there or via Facebook/RTV search in the Sept 22–Dec 22 window (the only dated appearances found, 2026-04-04 and 2026-07-03, are both already past). `artists.md` updated to flag the site and point at Facebook/RTV instead.
+* **Regional source pages returning stale cached content:** `lipica.org`'s own event page for *Tekaški pozdrav jeseni na Krasu* served a stale 2023 cache (used `tekaskipozdrav.si` instead, which is now the correct source in `regions.md`); `parkstrunjan.si`'s *Praznik kakijev* page served 2015-era content (see below). `fatburn.si` (Celjski mali maraton) returned a bot-verification placeholder on every attempt.
+* **Not saved — Praznik kakijev v Strunjanu (mid-November).** Sources conflict on the actual date range: the park's own (stale) page header implied 11-10 to 11-12, while a search snippet independently confirming the "22nd edition" pointed to 11-14 to 11-16. Rather than guess, this was left out of `db.json` this run. Needs a fresh fetch closer to the date once the organiser's page is updated.
+* **Not saved — Celjski mali maraton free family/kids race (2026-11-08, Celje).** A free "Otroški in družinski tek" (1600 m) alongside the main marathon is real per search snippets, but the primary source (`fatburn.si`) would not load past a bot-check page on repeated attempts. Needs a working fetch next run before it can be saved with a confirming URL.
+* **December Ljubljana municipal programme not yet public.** As of today, `ljubljana.si` and Visit Ljubljana have not yet posted the 2026 "Veseli december" specifics — the lights switch-on (`Prižig prazničnih lučk`), the Dedek Mraz cabin opening, Ana Mraz, and ZOO's `Noč čarovnic` schedule all only turned up 2025 write-ups being resurfaced by search, which were checked against day-of-week and rejected as stale. `Ana Plamenita` remains unconfirmed for the same reason (a "Nov 7" claim checked out as Nov 7 **2025**, a Friday — 2026-11-07 is a Saturday). None of these were saved. Re-check in November.
+* **Teden otroka has no confirmed Ljubljana-specific sub-event this year.** The national week (Oct 5–11) is real, but its 2026 central/opening event is in Maribor (Trg svobode), not Ljubljana — saved as a Pass 2 destination event instead (`maribor_20261005_0900`). No Ljubljana venue (museum, library, Pionirski dom) published a dated Teden otroka sub-event for 2026 as of this run.
+* **A promising lead 404'd:** `https://www.ljubljana.si/sl/moja-ljubljana/prireditve/ustvarjalne-delavnice-za-otroke/` — a daily November free-workshop programme at the Kongresni trg pavilion surfaced in search, but the page itself 404'd, so nothing could be confirmed or saved. Worth another look next run.
+* **VNLG (2026-09-24 to 09-27, Hiša otrok in umetnosti)** — re-checked; the full lineup already in `db.json` from the prior run is confirmed complete, no additional shows found for this venue in the window.
+* **Slovenski knjižni sejem 2026** is confirmed to run 2026-11-23 to 11-29 (a full week, not just an opening day) — the existing `db.json` entry's start date (11-23) is still correct as the opening.
+* **All three geography passes plus the seasonal check ran this time**; nothing was skipped.
