@@ -156,8 +156,8 @@ that happen to be free and outdoors. Record the start time and leave the judgeme
 
 ### 🎤 Concerts and children's music
 
-Two sweeps, defined in `routine.md` §2 Pass 3. The per-artist addresses, the spelling traps and
-the social-media confirmation rule are in [`artists.md`](artists.md).
+Two sweeps, defined in `routine.md` §2 Pass 3. The per-artist addresses and the social-media
+confirmation rule are in [`artists.md`](artists.md).
 
 | Source | URL | Notes |
 |---|---|---|
@@ -173,7 +173,7 @@ week ahead at most and almost never reaches a ticket seller. Sweep the free-entr
 and treat the ticketed calendars as the place the named artists show up, not as the category's
 main yield.
 
-On the artist watchlist: those eight names are a standing check, not a source. Most runs will
+On the artist watchlist: those seven names are a standing check, not a source. Most runs will
 return nothing for most of them, and that is the normal result rather than a failed sweep. Čuki
 and Ribič Pepe tour the most, the two choirs follow institutional concert dates, and Adi Smolar
 plays mostly adult venues where a toddler is already a stretch.
@@ -268,10 +268,9 @@ between a tour date and a Wikipedia page:
 ```
 Čuki koncert <mesec> 2026
 Otroški pevski zbor RTV Slovenija koncert <mesec> 2026
-Romana Krajnčan koncert za otroke <mesec> 2026     # not "Kranjčan"
+Romana Krajnčan koncert za otroke <mesec> 2026
 Neca Falk koncert <mesec> 2026
 Alenka Kolman otroški koncert <mesec> 2026         # returns Alenka Godec, add "otroški"
-Zvoneček otroški zborček nastop <mesec> 2026       # unidentified, see artists.md
 Adi Smolar koncert <mesec> 2026
 Ribič Pepe nastop za otroke <mesec> 2026
 

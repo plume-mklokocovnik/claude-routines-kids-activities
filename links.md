@@ -168,7 +168,7 @@ festivals, so it is the biggest single gap the cross-check closed.
 
 ## Music and children's concerts
 
-Pass 3. The per-artist addresses, the spelling traps and the social-media confirmation rule live
+Pass 3. The per-artist addresses and the social-media confirmation rule live
 in [`artists.md`](artists.md). This is the calendar side of the same sweep.
 
 | Source | URL | Use | Status |

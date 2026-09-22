@@ -2,7 +2,7 @@
 
 The named performers the Pass 3B sweep checks one by one, after the generic free-concert sweep
 in Pass 3A has run. `routine.md` §2 defines the two sweeps. This file is the addresses and the
-traps.
+failure modes.
 
 **Verified:** 2026-09-22. Every non-social URL below was status-checked with a real HTTP request.
 Facebook and Instagram rows were **not** status-checked, for the reason in *Social media reality*
@@ -16,20 +16,11 @@ below.
 |---|---|---|---|---|---|
 | 1 | **Čuki** | ⛔ `cuki.si` is dead, see below | `facebook.com/profile.php?id=100044442189383` | `instagram.com/skupina_cuki` | Narodnozabavna pop. Huge kids following, plays town festivals and shopping centres |
 | 2 | **Otroški pevski zbor RTV Slovenija** | `https://www.rtvslo.si/opz-in-mpz/` | none found | none found | Children's choir, conductor Anka Jazbec. Concerts via RTV and Cankarjev dom |
-| 3 | **Romana Krajnčan** ⚠️ | `https://www.romanakr.com/` | `facebook.com/romana.najlepse.pesmi.za.otroke`, `facebook.com/romana.krajncan` | none found | The reference name in Slovenian children's song. Musicals and sung fairy tales |
+| 3 | **Romana Krajnčan** | `https://www.romanakr.com/` | `facebook.com/romana.najlepse.pesmi.za.otroke`, `facebook.com/romana.krajncan` | none found | The reference name in Slovenian children's song. Musicals and sung fairy tales |
 | 4 | **Neca Falk** | none found | `facebook.com/singerNecaFalk` | none found | Chanson and children's classics. Occasional album-promo concerts |
 | 5 | **Alenka Kolman** | `https://www.alenkakolman.si/` | not confirmed | not confirmed | 80+ recorded children's songs, also organises children's events |
-| 6 | **Otroški pevski zborček Zvoneček** ❓ | **unidentified** | unknown | unknown | See *Open question* below before sweeping |
-| 7 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
-| 8 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
-
-⚠️ **Spelling trap.** It is **Krajnčan**, not *Kranjčan*. The wrong spelling is common and returns
-almost nothing. Search both, save the right one.
-
-❓ **Open question — Zvoneček.** Two searches found no group under this name. Slovenia has many
-kindergarten and school choirs called *Zvonček* or *Zvoneček*, and none of them is a touring act
-with a public calendar. Do not guess one. Sweep the name as a plain search string, and if a run
-finds nothing twice in a row, ask the user which choir they meant and record the answer here.
+| 6 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
+| 7 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
 
 ## Do not retry
 

@@ -185,9 +185,9 @@ družinski festival Slovenija brezplačno
 ### Pass 3 — children's concerts
 
 Two sweeps, in this order. 3A finds the concerts the routine would otherwise miss entirely, 3B
-looks for eight named performers the household actually wants to see. Run 3A first and run it
+looks for seven named performers the household actually wants to see. Run 3A first and run it
 every time, because the generic sweep is what keeps the category honest in the many weeks when
-none of the eight has a date. Everything found in either sweep gets `category: koncert`.
+none of the seven has a date. Everything found in either sweep gets `category: koncert`.
 
 **Geography carve-out.** Pass 2's destination-value test does not apply to 3B. A watchlist artist
 is worth the trip on their own, anywhere in Slovenia, which is the entire point of naming them.
@@ -238,26 +238,24 @@ artist. Slovenian month names, because the listings are Slovenian:
 
 Then open the pages below, but only for the names a query actually put on the board, to pin down
 the venue, the start time and the price. Read [`artists.md`](artists.md) first: it holds the
-verified links, the spelling traps and the confirmation rule.
+verified links and the confirmation rule.
 
 | Artist | Confirm at |
 |---|---|
 | Čuki | Instagram and Facebook. The website is dead, do not retry it |
 | Otroški pevski zbor RTV Slovenija | The RTV choir page |
-| Romana Krajnčan | Own site and two Facebook pages. **Not** *Kranjčan* |
+| Romana Krajnčan | Own site and two Facebook pages |
 | Neca Falk | Facebook |
 | Alenka Kolman | Own site |
-| Otroški pevski zborček Zvoneček | Unidentified. See the open question in `artists.md` |
 | Adi Smolar | Facebook and Instagram |
 | Ribič Pepe | Own site and Facebook |
 
 **What the search tool actually returns.** It is US-region and Slovenian local results come back
 thin and noisy. Measured on the 2026-09-22 research pass: the top "official" hit for Čuki was
 `cuki.si`, a domain with no DNS record at all. A plain *Alenka Kolman* search returned mostly
-pages about Alenka Godec, a different singer. *Zvoneček* returned nothing relevant on two
-attempts. Budget for that rate. Apply the *Language and locale* rules above, prefer a result
-carrying a date and an address over one carrying a biography, and never promote a search snippet
-to an event without opening the page behind it.
+pages about Alenka Godec, a different singer. Budget for that rate. Apply the *Language and
+locale* rules above, prefer a result carrying a date and an address over one carrying a
+biography, and never promote a search snippet to an event without opening the page behind it.
 
 **The confirmation rule.** A social post is a lead, not an event. Confirm the date against a
 non-social source before saving, put the confirming URL in `url` rather than the social one, and
