@@ -37,7 +37,18 @@ that produced this file. Everything you need is on disk.
    | Hiding or restoring an event | `chore: Hide event <id>` |
    | A corrected or retired source | `docs: Fix <source> URL`, `docs: Retire <source>` |
    | A change to this spec or a context file | `docs: <what changed>` |
-6. If the push is rejected, `git pull --rebase` and push again. If it is rejected twice, stop and report. Never force-push.
+6. **If the push is rejected as non-fast-forward,** the remote moved while the sweep ran. `git pull --rebase` and push again. If it is rejected a second time, stop and report. Never force-push.
+7. **If pushing to `main` is not possible at all,** open a pull request instead of abandoning the run. This is a different failure from a rejected push. It is the case where the environment forbids a direct push to `main`: branch protection, a missing permission, or a harness that pins the session to a pre-assigned branch. It has happened, see the runtime notes in the 2026-09-21 `diff.md`.
+
+   1. Branch. `git switch -c routine/sweep-<YYYY-MM-DD>`. When the environment already assigned you a branch, use that one rather than fighting it.
+   2. Push the branch. `git push -u origin <branch>`.
+   3. Open the PR against `main`. `gh pr create --base main --title "<the commit subject>" --body "<one line saying what the sweep changed>"`.
+   4. Merge it. `gh pr merge --squash --delete-branch`.
+   5. Confirm `main` actually moved, then record in `diff.md` under *Runtime notes* that the run went through a PR, and why the direct push was unavailable.
+
+   If the merge itself is blocked by required reviews or failing checks, leave the PR open, put its URL in the runtime notes and report it. Never force-push, never disable a protection rule, never merge with an admin override. An open PR that someone has to click is a fine outcome. A bypassed protection rule is not.
+
+   If `gh` is not installed or not authenticated, still push the branch. Then report the branch name and the compare URL `https://github.com/<owner>/<repo>/compare/main...<branch>` in `diff.md` and in the run output. The sweep's work is on the remote either way, which is the part that matters. Opening the PR by hand is a click.
 
 ### When something breaks mid-run
 * **A source fails.** Log it, carry on, finish the sweep. One dead source never aborts a run.
