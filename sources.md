@@ -154,6 +154,30 @@ often here.
 Only Arboretum programmes films actually aimed at children. The rest are general programmes
 that happen to be free and outdoors. Record the start time and leave the judgement to the reader.
 
+### 🎤 Concerts and children's music
+
+Two sweeps, defined in `routine.md` §2 Pass 3. The per-artist addresses, the spelling traps and
+the social-media confirmation rule are in [`artists.md`](artists.md).
+
+| Source | URL | Notes |
+|---|---|---|
+| Napovednik music | `https://napovednik.com/glasba` | The one structured national concert calendar with usable dates. Sub-paths: `narodnozabavna`, `sansoni-kantavtorstvo`, `klasicna`, `etno-glasbe-sveta`, `mesana-vec-zvrsti` |
+| Napovednik kids events | `https://napovednik.com/za-otroke/prireditve-za-otroke` | Already swept in Pass 1, but it files children's concerts under a generic label. Re-read it with music in mind |
+| Mojekarte | `https://www.mojekarte.si/` | Ticketed dates, searchable by performer |
+| Visit Ljubljana | Prost vstop + Za družine filters | Free city-stage concerts, which is most of what the 0–4 band can realistically attend |
+| Eventim SI | `https://www.eventim.si/artist/<slug>/` | Per-artist tour pages. Akamai refuses automated fetches, so this is a browser-only source ⚠️ |
+
+Honest assessment: a free children's concert is nearly always a side stage at something else. A
+town celebration, a shopping centre, a library hour, a festival afternoon. It gets announced a
+week ahead at most and almost never reaches a ticket seller. Sweep the free-entry filters weekly
+and treat the ticketed calendars as the place the named artists show up, not as the category's
+main yield.
+
+On the artist watchlist: those eight names are a standing check, not a source. Most runs will
+return nothing for most of them, and that is the normal result rather than a failed sweep. Čuki
+and Ribič Pepe tour the most, the two choirs follow institutional concert dates, and Adi Smolar
+plays mostly adult venues where a toddler is already a stretch.
+
 ---
 
 ## Tier 3 — Annual fixtures
@@ -215,6 +239,37 @@ plesna prireditev za otroke Slovenija
 brezplačen letni kino Slovenija
 družinski festival Slovenija brezplačno
 živalski vrt prireditev za otroke Slovenija
+```
+
+### Pass 3 — concerts
+
+3A, generic, run every time:
+
+```
+brezplačen koncert za otroke Ljubljana
+otroški koncert Ljubljana
+glasbena predstava za otroke Ljubljana
+koncert za najmlajše prost vstop
+otroške pesmi koncert Slovenija brezplačno
+družinski koncert prost vstop
+pravljični koncert za otroke
+glasbena urica za malčke Ljubljana
+```
+
+3B, one search per watchlist artist, then the same name scoped to the social platforms:
+
+```
+Čuki koncert <mesec> 2026
+Otroški pevski zbor RTV Slovenija koncert
+Romana Krajnčan koncert za otroke        # not "Kranjčan"
+Neca Falk koncert
+Alenka Kolman otroški koncert
+Zvoneček otroški zborček nastop          # unidentified, see artists.md
+Adi Smolar koncert
+Ribič Pepe nastop za otroke
+
+site:facebook.com <ime> koncert
+site:instagram.com <ime> koncert
 ```
 
 ### Seasonal, run in the matching month

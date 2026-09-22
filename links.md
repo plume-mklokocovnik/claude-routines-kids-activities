@@ -5,7 +5,8 @@ re-discovering sources through search. `sources.md` has the reasoning, cadence a
 and their recurrence rules, `regions.md` has the rest of Slovenia plus its own source list.
 This file is just the addresses.
 
-**Verified:** 2026-09-21, every row status-checked with a real HTTP request.
+**Verified:** 2026-09-21, every row status-checked with a real HTTP request. The *Music and
+children's concerts* section was added and checked on 2026-09-22.
 
 Status values:
 * `ok` — returned 200, use it
@@ -27,7 +28,8 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `https://www.napovednikdogodkov.si/` (as a kids source) | Alive, but its WordPress category feed contains only `glasbene-novice` and `uncategorized`. It is a music news site. The `/za-otroke/` path a search engine surfaced is a 404 | **Certain.** There is no children's category to sweep | `napovednik.com/za-otroke` (different site, similar name) |
 | `https://www.zoo.si/ponudba/noc-carovnic` | 404. Seasonal page, taken down out of season | *Likely seasonal.* Worth one check in October, not before | `https://www.zoo.si/novice` |
 | `festival.olympic.si` | NXDOMAIN. The 2025 Olympic Festival had its own subdomain and it has since been taken down | **Certain**, no DNS record | `https://olympic.si/` and `https://ewos.olympic.si/` |
-| `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, no 2026 data reachable via fetch. Confirmed on this sweep. Fetching it wastes a request | `https://tekaski-koledar.si/` |
+| `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, with no 2026 data reachable via fetch | **Certain.** Confirmed on the 2026-09-21 sweep. Fetching it wastes a request and returns nothing usable | `https://tekaski-koledar.si/` |
+| `cuki.si` and `www.cuki.si` | NXDOMAIN, no DNS record. Two curl attempts plus a direct lookup on 2026-09-22 | **Certain.** A domain with no DNS record cannot answer until someone re-registers it | The Čuki rows in [`artists.md`](artists.md), and `napovednik.com/glasba/narodnozabavna` |
 
 ### Wrong guesses, not dead sites
 
@@ -163,6 +165,36 @@ festivals, so it is the biggest single gap the cross-check closed.
 | Gregorčki | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/pozdrav-pomladi-z-gregorcki` | 11 March, candlelit boats on the Gradaščica | ok |
 | LUV fest | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/luv-fest` | 8 Feb to 12 Mar, 220+ events | ok |
 | EWoS | `https://ewos.olympic.si/` | European Week of Sport free-session registry | ok |
+
+## Music and children's concerts
+
+Pass 3. The per-artist addresses, the spelling traps and the social-media confirmation rule live
+in [`artists.md`](artists.md). This is the calendar side of the same sweep.
+
+| Source | URL | Use | Status |
+|---|---|---|---|
+| Napovednik music | `https://napovednik.com/glasba` | Dated national concert calendar, the Pass 3A starting point | ok |
+| → narodnozabavna | `https://napovednik.com/glasba/narodnozabavna` | Čuki and the town-festival circuit | ok |
+| → šansoni, kantavtorstvo | `https://napovednik.com/glasba/sansoni-kantavtorstvo` | Adi Smolar, Neca Falk | ok |
+| → klasična | `https://napovednik.com/glasba/klasicna` | Choirs, the RTV ones included | ok |
+| → etno, glasbe sveta | `https://napovednik.com/glasba/etno-glasbe-sveta` | Folk and world-music family programmes | ok |
+| → mešana, več zvrsti | `https://napovednik.com/glasba/mesana-vec-zvrsti` | Mixed-bill town celebrations | ok |
+| Mojekarte | `https://www.mojekarte.si/` | Ticketed dates, searchable by performer | ok |
+| Eventim SI | `https://www.eventim.si/artist/<slug>/` | Per-artist tour pages, e.g. `/artist/adi-smolar/` | ⚠️ unverified. Behind Akamai, refused both curl and a fetch on 2026-09-22. Browser only. Do not blacklist it on that basis |
+| RTV choirs | `https://www.rtvslo.si/opz-in-mpz/` | Otroški and Mladinski pevski zbor RTV Slovenija. `zbori.rtvslo.si` redirects here | ok |
+| Ribič Pepe | `https://ribicpepe.si/` | Live appearances of the RTV character | ok |
+| Alenka Kolman | `https://www.alenkakolman.si/` | Own dates | ok |
+| Romana Krajnčan | `https://www.romanakr.com/` | Own dates. Redirects to `/nova/vstopna.asp` | ok |
+
+**Wrong guesses, all 404 on 2026-09-22:** `napovednik.com/prireditve/koncert`,
+`/prireditve/glasbena-prireditev`, `/prireditve/koncerti`, `/prireditve/glasba`,
+`/prireditve/koncert-za-otroke`, `/prireditve/otroski-koncert`, `/za-otroke/koncerti-za-otroke`,
+`/za-otroke/glasba-za-otroke`, `/za-otroke/koncert`. The music section is a top-level `/glasba`,
+not a `/prireditve/` sub-path.
+
+**Facebook and Instagram cannot be status-checked.** Facebook answers 400 on most page paths and
+Instagram answers an empty 200 behind a login wall. Neither is a dead site and neither ever earns
+a *Do not retry* row. The workaround is in [`artists.md`](artists.md).
 
 ## Shopping centres and commercial play venues
 
