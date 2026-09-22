@@ -173,6 +173,40 @@ often here.
 Only Arboretum programmes films actually aimed at children. The rest are general programmes
 that happen to be free and outdoors. Record the start time and leave the judgement to the reader.
 
+### 🏫 Kindergartens, and the attendance test
+
+Added at the reader's request: `https://www.vrtecandersen.si/sl/aktualno`. Worth having, but it
+needs a harder filter than any other source on this list, because roughly nine items in ten are
+not usable.
+
+**Keep** only what a parent and child attend together, normally outside regular hours:
+
+| Keep | Why |
+|---|---|
+| Open days, *dan odprtih enot*, *igralne urice* | Free, families come along, often open to non-enrolled children |
+| Evening family gatherings, *druženja*, *igre*, *pripovedovalski večer* | Explicitly out of hours, parent and child together |
+| Fairs and charity events, *Živ Žav*, *Andersenovi sejmi* | Weekend, public or near-public, a real destination |
+| Performances families attend | Staff or children perform, parents are the audience |
+
+**Drop** everything else, which is the bulk of the feed:
+
+| Drop | Why |
+|---|---|
+| Swimming, skating, sports days, field trips | Scheduled and dated, but the child goes during the day and the parent does not. Fails the attendance test |
+| *Zimovanje*, farm stays, seaside weeks, mountain stays | Multi-day stays without parents. Already excluded by rule 3 as camps |
+| *Poslovanje*, *organizacija*, unit consolidations, closures | Administrative notices |
+| *Vpis*, *čakalni seznam*, *krajši program* | Enrollment. Excluded by rule 1 |
+| *Šola za starše* | Parent-only evenings. No child, so nothing to do together |
+| Job ads, thematic weeks, *teden mobilnosti*, *mesec skupnega branja*, *dan Zemlje* | In-house, during hours, nothing to attend |
+
+**Two practical notes.** The listing page carries a publication date, not an event date, so a
+detail page is always required before saving anything. And even the detail pages routinely omit
+the start time, so expect to set `time_unknown` rather than guessing.
+
+Whether an item counts can also depend on enrollment. Several of these events are for enrolled
+families only. Save them anyway and let the reader judge, since this source was added precisely
+because the reader has a child there.
+
 ### 🎤 Concerts and children's music
 
 Two sweeps, defined in `routine.md` §2 Pass 3. The per-artist addresses and the social-media

@@ -68,6 +68,35 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 | Miklavžev sprevod | 12-05, 17:00 | Krekov trg → Prešernov trg | Free. St Nicholas comes down from the castle |
 | Silvestrovanje za otroke | 12-31, 16:00–17:30 | Kongresni trg | ★ The children's New Year, hours before the adult one. Fairytale characters, music, Dedek Mraz |
 
+## Vrtec Andersen, recurring family events
+
+A single kindergarten rather than a public venue, so it sits here rather than in `links.md`'s
+venue tables. Its news page reruns the same family-facing calendar every year. Dates are never
+announced more than two or three weeks ahead, so check `vrtecandersen.si/sl/aktualno` when the
+month comes round rather than trusting the month below. All inferred from the 2023 to 2026
+archive, so treat each as *likely to recur*, not as confirmed.
+
+| Fixture | Typical month | Who can come | Fit |
+|---|---|---|---|
+| Andersenove igralne urice | Jan to Mar, a few single sessions | **Toddlers not yet enrolled, with a parent** | ★ Free, `odprta_vrata`. The best fit on this site. Registration by email. 2026 ran 02-03, 02-26, 03-05 at Marjetica |
+| Dan odprtih enot | Mid Feb | Any family | ★ Free, `odprta_vrata`. All six units open to visitors |
+| Pripovedovalski večer | Feb, evening | Families, billed 4+ | Folk tales and music. First edition 2026, so a weak pattern |
+| Andersenova druženja / Andersenove igre | April, evening | Enrolled families | Movement games, an evening event |
+| Andersenova zabava | Early April | Enrolled families | Performances, part of Andersenovi dnevi |
+| Živ Žav | Late May or early June | Any family | ★ The big one. Charity fair, stage programme, stalls. 25th edition in 2025 |
+| Predstava otrok in vzgojiteljic | Mid Nov | Enrolled families | Children and staff perform |
+| Andersenovi sejmi | Early Dec | Any family | ★ Craft markets for the foundation. Raised over 4,400 € in 2025 |
+| Charity theatre for the sklad | Mid to late Dec | Enrolled families, paid entry | Staff theatre team. *Muca Copatarica* 2025, *Mojca Pokrajculja* 2024 |
+| Andersenov zborček koleduje | Mid Dec | Public, outdoors | Children's choir caroling across the units |
+
+**Andersenova Srčna pot** is not an event at all. It is a permanent self-guided trail of heart
+markers linking all six units along the Andersen tree avenue, Lastovica to Krtek, and families
+are invited to walk it whenever they like. Worth knowing about, but it has no date, so it never
+belongs in `db.json`.
+
+**Everything else on that page is out of scope,** and it is most of the page. See the filter in
+[`sources.md`](sources.md).
+
 ## Rule-based fixtures
 
 | Fixture | Rule | Recent years | Confidence |

@@ -198,6 +198,18 @@ not a `/prireditve/` sub-path.
 Instagram answers an empty 200 behind a login wall. Neither is a dead site and neither ever earns
 a *Do not retry* row. The workaround is in [`artists.md`](artists.md).
 
+## Kindergartens and preschools
+
+A different shape of source from everything above. The page is a news feed, not a calendar, and
+the overwhelming majority of what it carries is the daytime programme, which fails the attendance
+test in `routine.md` §1 rule 2. Sweep it for the handful of family events and ignore the rest.
+The recurring calendar is in [`annual.md`](annual.md), the filter is in [`sources.md`](sources.md).
+
+| Source | URL | Use | Status |
+|---|---|---|---|
+| Vrtec Andersen news | `https://www.vrtecandersen.si/sl/aktualno` | Full news archive back to 2021, newest first. No dates in the listing, only a publication date per item | ok, checked 2026-09-22 |
+| Vrtec Andersen article | `https://www.vrtecandersen.si/sl/<slug>` | Detail pages. Dates and times are often missing even here, so expect `time_unknown` | ok |
+
 ## Shopping centres and commercial play venues
 
 Published as news posts and social posts roughly a week ahead, not as calendars. Sweep weekly or
