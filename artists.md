@@ -43,6 +43,7 @@ Facebook.
 | Mojekarte | `https://www.mojekarte.si/` | ok | Ticketed dates, searchable by performer |
 | Eventim SI | `https://www.eventim.si/artist/<slug>/` | unverified | Has per-artist pages (`/artist/adi-smolar/`), but the site sits behind Akamai and refused both curl and a fetch on this check. Browser only |
 | Ribič Pepe on RTV | `https://365.rtvslo.si/oddaja/ribic-pepe/21235734` | ok | Broadcast schedule, sometimes flags live appearances |
+| ⚠️ Ribič Pepe own site | `https://ribicpepe.si/` | **stale as of 2026-09-22** | Root now serves only 2017–2018 archived content, `/dogodki/` 404s. Use Facebook (`facebook.com/ribicPepe`) or the RTV broadcast page above instead |
 | YouTube — Romana Krajnčan | `https://www.youtube.com/channel/UCPOQn2OBmYMoGV8_wlyRE9A` | ok | Announcements when the site is quiet |
 | YouTube — Ribič Pepe | `https://www.youtube.com/@ribicpepe585` | ok | Same |
 | YouTube — Alenka Kolman | `https://www.youtube.com/@AlenkaKolman-glasba` | ok | Same |

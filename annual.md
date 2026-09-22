@@ -103,7 +103,7 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 | **Otroški knjižni festival** | June, before the summer holidays | Cankarjev dom park | Performances, concerts, workshops. Distinct from the November book fair |
 | **Mini poletje** | Late June through August | Mini teater, Križevniška + Ljubljanski grad | International children's and puppet festival. Creative workshops on Sundays |
 | **Ana Desetnica** | Late June into early July | Ljubljana streets | ★ 100+ free street theatre events |
-| **Rimljani v Ljubljani** | One day, usually September | 8 locations, Arheopark Emona + MGML | Free, 4+. Legionaries, Roman crafts, stamp trail. ⚠️ Month varies, verify |
+| **Rimljani v Ljubljani** | One day, usually September | 8 locations, Arheopark Emona + MGML | Free, 4+. Legionaries, Roman crafts, stamp trail. ⛔ **Confirmed not running in 2026** — the organiser's own site now reads "Vabljeni jeseni 2027!", with the 2027 programme still in development (checked 2026-09-22) |
 | **FeKK / FeKKids** | Mid to late August | Kinodvor and partner venues | 2026: 08-17 to 08-22. ⚠️ FeKKids is curated 5+ |
 | **Trnovfest** | The whole of August, daily | CSK France Prešeren, Trnovo | ~5 € a day |
 | **Emonska promenada** | 08-22 to 08-24 | Novi trg | ★ Run by Hiša otrok in umetnosti, 19th edition, everything free. Street games, bubbles, outdoor puppetry |

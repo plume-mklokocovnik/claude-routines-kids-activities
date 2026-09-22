@@ -123,10 +123,10 @@ Praznik terana in pršuta (Dutovlje, Aug) · Praznik marelic (Vipava) · Grajski
 | Visit Tržič | `https://visit-trzic.com/sl/prireditve` |
 | Visit Koper | `https://visitkoper.si/prireditve/` |
 | Portorož and Piran | `https://www.portoroz.si/sl/dogodki` |
-| Krajinski park Strunjan | `https://parkstrunjan.si/` |
+| Krajinski park Strunjan | `https://parkstrunjan.si/` — ⚠️ its *Praznik kakijev* page served 2015-era content on 2026-09-22; cross-check dates against `https://www.zgodovinska-mesta.si/prireditve/` instead |
 | Kino Otok | `https://kinootok.org/program/` |
 | Center za kulturo Izola | `https://center-izola.si/dogodki/` |
-| Kobilarna Lipica | `https://www.lipica.org/` |
+| Kobilarna Lipica | `https://www.lipica.org/` — ⚠️ its own per-event pages served a stale 2023 cache on 2026-09-22 (e.g. *Tekaški pozdrav jeseni na Krasu*); use `https://www.tekaskipozdrav.si/` for that fixture instead |
 | Postojnska jama | `https://www.postojnska-jama.eu/sl/` |
 | Visit Kras | `https://www.visitkras.info/` |
 | Narodni dom Maribor, Art kamp | `https://nd-mb.si/` |
