@@ -38,7 +38,7 @@ Record `city` on every Pass 2 event and set the `outside_ljubljana` flag.
 | **Kino Otok – Podmornica** | Mid June. 2026: 06-10 to 06-14 | Izola | ★ Podmornica is the children's strand, ages 3–18, films plus **free** creative workshops and themed walks. Runs over the weekend |
 | **Altroke Sladka Istra** | Early September. 2026: 09-05, 09:00–18:00 | Koper, Hlavatyjev park | ★ **Free.** Dedicated children's corner: craft workshops, sensory lab, cookie decorating, face painting, street circus, wooden games |
 | **Dan Kobilarne Lipica** | September, from 09:30 | Lipica | ★ Free-entry open day. Mares and foals released to pasture, farrier demos, horse workshops, estate tours |
-| **Praznik kakijev** | Mid November. 2025: 11-14 to 11-16 | Strunjan | 22nd edition. Salt-pan tours, persimmon workshops, largest-persimmon contest, local market. ⚠️ The "Kaki ekspres" train was not confirmed |
+| **Praznik kakijev** | Mid November. **2026 confirmed: 11-10 to 11-12** (the 11-14/11-16 date seen in some listings was actually 2025's) | Strunjan | 22nd edition. Salt-pan tours, persimmon workshops, largest-persimmon contest, local market. Confirmed 2026-09-24 via `zgodovinska-mesta.si` (index + dedicated event page, independently agreeing). ⚠️ The "Kaki ekspres" train was not confirmed |
 | **Žive jaslice** | 12-25 to 12-30, several times daily from 13:30 | Postojnska jama | 35th edition. 90 minutes, 5 km underground route, 18 scenes, 100+ actors. Ticketed. ⚠️ Long and cold, dress for a cave |
 
 ## Verified: Gorenjska
@@ -53,6 +53,7 @@ Record `city` on every Pass 2 event and set the `outside_ljubljana` flag.
 | **Kekčevi dnevi** | Late June, at the start of the school holidays. 2026: 06-24 to 06-28 | Kranjska Gora | ★ Free shows on the church square, old shepherd games, creative workshops, Kekec films, Mini DJ academy |
 | **Šuštarska nedelja** | *Angelska nedelja*, the first Sunday of September | Tržič | Shoemaking heritage fair. Stalls, crafts, demonstrations across the old factory complex |
 | **Kravji bal** | Third Sunday of September, 10:00–18:00 | Ukanc, Bohinj | ★ **Under 7 free**, 7–14 costs 2 €. Decorated cows down from the high pastures, children's corner with games and workshops, folk groups, brass bands |
+| **B.O.FEjST — jesenski otroški festival** | Late October, 15:00–19:00. 2026: 10-31 | Dvorana Danica, Bohinjska Bistrica | ★ **Free.** Bohinj's biggest children's festival, running since 2008. Games, workshops, music, mascot Fejstka, free transport around Bohinj. New find, 2026-09-24 — confirmed via `mojaobcina.si`; `tdbohinj.si` and `bohinj.si`'s English event path both 404 for this one, use `mojaobcina.si/bohinj/dogodki/` instead |
 
 ## Verified: elsewhere in Slovenia
 
@@ -62,6 +63,7 @@ Record `city` on every Pass 2 event and set the `outside_ljubljana` flag.
 | **Festival idrijske čipke** | Mid June. 2026: 06-19 to 06-21 | Idrija | 44th edition. Lace workshops, children's animation, a children's theatre show, city tours. Sunday holds the national lace competition for children and adults |
 | **Jurjevanje v Beli krajini** | Late June. 2026: 06-22 to 06-28 | Črnomelj, Jurjevanjska draga | Slovenia's oldest folklore festival. **Pastirče mlado** on the Thursday at 16:00 puts ~350 young folk dancers on the main stage |
 | **Kamfest and Veronikin festival** | August. Kamfest 2026: 08-07 to 08-15, children's shows at Barutana 08-08 to 08-14, 17:00–23:00 | Kamnik | Veronikin festival is described as Kamnik's largest children's festival, in Keršmančev park. ⚠️ The medieval-fair framing at Mali grad was not confirmed |
+| **Celjski mali maraton — otroški in družinski tek** | Sunday, 11:00, alongside the main marathon. 2026: 11-08 | Kajak kanu center Špica, Celje | 15th edition, 1.600 m, non-competitive. Confirmed 2026-09-24 via `fatburn.si` (see *Regional sources* below for the access note — this page bot-blocks a plain fetch). Ticket price for this specific distance not published (only the 6.2/11/14/21 km tiers are priced) |
 
 ## Search patterns, better than listing every venue
 
@@ -126,7 +128,9 @@ Praznik terana in pršuta (Dutovlje, Aug) · Praznik marelic (Vipava) · Grajski
 | Krajinski park Strunjan | `https://parkstrunjan.si/` — ⚠️ its *Praznik kakijev* page served 2015-era content on 2026-09-22; cross-check dates against `https://www.zgodovinska-mesta.si/prireditve/` instead |
 | Kino Otok | `https://kinootok.org/program/` |
 | Center za kulturo Izola | `https://center-izola.si/dogodki/` |
-| Kobilarna Lipica | `https://www.lipica.org/` — ⚠️ its own per-event pages served a stale 2023 cache on 2026-09-22 (e.g. *Tekaški pozdrav jeseni na Krasu*); use `https://www.tekaskipozdrav.si/` for that fixture instead |
+| Kobilarna Lipica | `https://www.lipica.org/` — ⚠️ its own per-event pages returned what looked like stale 2023 content to WebFetch on 2026-09-22, but re-checked 2026-09-24: the real symptom is a JS bot-challenge (same as `fatburn.si` below), and `curl -A "<desktop UA>"` returns live, current content. Still use `https://www.tekaskipozdrav.si/` for *Tekaški pozdrav jeseni na Krasu* since that's the venue's own dedicated site, but don't write off other `lipica.org` event pages as stale without trying curl+UA first |
+| Fatburn (Celjski mali maraton) | `https://fatburn.si/celjski-mali-maraton/` — ⚠️ WebFetch always hits a "please wait, verifying…" bot-challenge here (and on `/blog/...`, `/product/...` sub-paths). `curl -A "<desktop browser User-Agent>"` bypasses it and returns full current content. Not dead, don't blacklist |
+| Visit Celje | `https://www.visitcelje.eu/` — same bot-challenge as fatburn.si, curl+UA works. Its "Tek očkov" product page (`/sl/izdelek/tek-ockov-2026/`) 404s even past the challenge — slug moved or not yet published, not a dead site |
 | Postojnska jama | `https://www.postojnska-jama.eu/sl/` |
 | Visit Kras | `https://www.visitkras.info/` |
 | Narodni dom Maribor, Art kamp | `https://nd-mb.si/` |

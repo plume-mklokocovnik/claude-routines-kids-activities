@@ -17,7 +17,7 @@ below.
 | 1 | **Čuki** | ⛔ `cuki.si` is dead, see below | `facebook.com/profile.php?id=100044442189383` | `instagram.com/skupina_cuki` | Narodnozabavna pop. Huge kids following, plays town festivals and shopping centres |
 | 2 | **Otroški pevski zbor RTV Slovenija** | `https://www.rtvslo.si/opz-in-mpz/` | none found | none found | Children's choir, conductor Anka Jazbec. Concerts via RTV and Cankarjev dom |
 | 3 | **Romana Krajnčan** | `https://www.romanakr.com/` | `facebook.com/romana.najlepse.pesmi.za.otroke`, `facebook.com/romana.krajncan` | none found | The reference name in Slovenian children's song. Musicals and sung fairy tales |
-| 4 | **Neca Falk** | none found | `facebook.com/singerNecaFalk` | none found | Chanson and children's classics. Occasional album-promo concerts |
+| 4 | **Neca Falk** | none found. ⛔ `muri-maca.com` (the "Maček Muri in Muca Maca" project's own site) is dead, NXDOMAIN — see below | `facebook.com/singerNecaFalk` | none found | Chanson and children's classics. Occasional album-promo concerts |
 | 5 | **Alenka Kolman** | `https://www.alenkakolman.si/` | not confirmed | not confirmed | 80+ recorded children's songs, also organises children's events |
 | 6 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
 | 7 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
@@ -27,6 +27,7 @@ below.
 | Dead URL | Failure | Certainty | Use instead |
 |---|---|---|---|
 | `cuki.si` / `www.cuki.si` | NXDOMAIN, no DNS record. Two curl attempts plus a direct lookup | **Certain.** A domain with no DNS record cannot answer until someone re-registers it | The Instagram and Facebook rows above, plus `napovednik.com/glasba/narodnozabavna` |
+| `muri-maca.com` | NXDOMAIN, no DNS record. Checked 2026-09-24 while trying to confirm the Neca Falk "Maček Muri in Muca Maca" lead below | **Certain** | The `eventim.si` listing (Akamai-blocked, unverified) or `drama.si` directly (checked, no date published) — both still unconfirmed as of 2026-09-24 |
 
 ## Where a date is likely to be confirmable
 

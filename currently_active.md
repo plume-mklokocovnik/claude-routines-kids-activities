@@ -2,17 +2,17 @@
 
 | Zadnja posodobitev | Aktivni dogodki | Brezplačni | Okno do | Skriti |
 |---|---|---|---|---|
-| 2026-09-22 10:47 | 83 | 30 | 22. december 2026 | 0 |
+| 2026-09-24 09:22 | 113 | 31 | 24. december 2026 | 0 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
-| `lutke` | 22 | 24.09. |
-| `delavnica` | 20 | 22.09. |
-| `pravljice` | 15 | 23.09. |
+| `lutke` | 47 | 24.09. |
+| `delavnica` | 21 | 24.09. |
+| `pravljice` | 14 | 01.10. |
+| `festival` | 10 | 26.09. |
 | `kino` | 9 | 26.09. |
-| `festival` | 8 | 26.09. |
-| `koncert` | 4 | 10.10. |
-| `tek` | 2 | 17.10. |
+| `koncert` | 6 | 03.10. |
+| `tek` | 3 | 17.10. |
 | `kolo` | 1 | 10.10. |
 | `ples` | 1 | 02.10. |
 | `pop_up` | 1 | 26.09. |
@@ -22,18 +22,6 @@
 > Dogodek skriješ z njegovim **ID**: `/hide-event <ID>` ali "skrij <ID>".
 
 ---
-
-## 📆 Torek, 22. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Ustvarjalnice z Galerijo C.C.U.: Pozdrav jeseni](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-pozdrav-jeseni-6184)<br>`delavnica` | [Center kulture Španski borci, Zaloška 61](https://maps.google.com/?q=Center%20kulture%20%C5%A0panski%20borci%2C%20Zalo%C5%A1ka%2061%20Ljubljana) | `?` | 🆓 |  | `spanskiborci_20260922_1700` |
-
-## 📆 Sreda, 23. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Skozi tisočere zgodbe](https://www.lgl.si/spored-predstav)<br>`pravljice` | [LGL (Lutkovno gledališče Ljubljana)](https://maps.google.com/?q=LGL%20%28Lutkovno%20gledali%C5%A1%C4%8De%20Ljubljana%29%20Ljubljana) | `3+` | 🆓 | razprodano | `lgl_20260923_1700` |
 
 ## 📆 Četrtek, 24. september 2026
 
@@ -55,6 +43,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovno-igrana predstava: Kako je lisica dobila zlati rep](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-kako-je-lisica-dobila-zlati-rep/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20260926_0000` |
 | 10:00 | [ARTish](https://www.visitljubljana.com/sl/obiskovalci/prireditve/)<br>`pop_up` | [Gallusovo nabrežje](https://maps.google.com/?q=Gallusovo%20nabre%C5%BEje%20Ljubljana) | `?` | 🆓 |  | `artish_20260926_1000` |
 | 10:00 | [Bela mačica (VNLG)](https://www.hisaotrok.si/dogodek/bela-macica-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260926_1000` |
 | 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20260926_1000` |
@@ -66,6 +55,7 @@
 | 16:00 | [Brezplačna družinska delavnica: Čarobni fotogram](https://mgml.si/sl/galerija-jakopic/eventi/2521/)<br>`delavnica` | [Galerija Jakopič](https://maps.google.com/?q=Galerija%20Jakopi%C4%8D%20Ljubljana) | `4+` | 🆓 |  | `jakopic_20260926_1600` |
 | 16:00 | [Na obisku pri Rimljanki Liviji (4+)](https://mgml.si/sl/mestni-muzej/eventi/2504/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `4+` | `?` | zasedeno | `mestnimuzej_20260926_1600` |
 | 16:30 | [Kinobalon: Za poletje, skupaj! (premiera)](https://www.kinodvor.org/kinobalon/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `?` | `?` |  | `kinodvor_20260926_1630` |
+| 17:00 | [Dogodivščine Zvitorepca, Trdonje in Lakotnika: Trije mušketirji](https://mladinsko.com/sl/program/232/dogodivscine-zvitorepca-trdonje-in-lakotnika-trije-musketirji/)<br>`lutke` | [Slovensko mladinsko gledališče, Zgornja dvorana](https://maps.google.com/?q=Slovensko%20mladinsko%20gledali%C5%A1%C4%8De%2C%20Zgornja%20dvorana%20Ljubljana) | `6+` | `?` | starost? | `mladinsko_20260926_1700` |
 
 ## 📆 Nedelja, 27. september 2026
 
@@ -73,6 +63,21 @@
 |---|---|---|---|---|---|---|
 | 10:00 | [O vrabčku, mišku in palačinki (VNLG)](https://www.hisaotrok.si/dogodek/o-vrabcku-misku-in-palacinki-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260927_1000` |
 | 14:45 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `?` | `?` |  | `kinodvor_20260927_1445` |
+| 16:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260927_1600` |
+| 18:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260927_1800` |
+
+## 📆 Ponedeljek, 28. september 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 10:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260928_1000` |
+| 17:30 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260928_1730` |
+
+## 📆 Torek, 29. september 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 17:00 | [Ustvarjalnice z Galerijo C.C.U.: Dežela lisic](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-dezela-lisic-6206)<br>`delavnica` | [Center kulture Španski borci, Zaloška 61](https://maps.google.com/?q=Center%20kulture%20%C5%A0panski%20borci%2C%20Zalo%C5%A1ka%2061%20Ljubljana) | `?` | 🆓 |  | `spanskiborci_20260929_1700` |
 
 ## 📆 Četrtek, 1. oktober 2026
 
@@ -95,6 +100,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Glasbena predstava: Repki 2](https://www.kino-bezigrad.si/predstava/koncert-repki-2/)<br>`koncert` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 12,90 € | ura ni znana | `kinobezigrad_20261003_0000_koncert` |
 | 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261003_1000` |
 | 11:00 | [Interaktivno družinsko vodenje v Vili Zlatica](https://mgml.si/sl/vila-zlatica/eventi/2362/)<br>`delavnica` | [Vila Zlatica](https://maps.google.com/?q=Vila%20Zlatica%20Ljubljana) | `4+` | `?` |  | `vilazlatica_20261003_1100` |
 | 17:00 | [Friderik in zmaj](https://dogodki.kulturnik.si/?what=otroci)<br>`lutke` | [Grajsko gledališče, Ljubljanski grad](https://maps.google.com/?q=Grajsko%20gledali%C5%A1%C4%8De%2C%20Ljubljanski%20grad%20Ljubljana) | `3+` | `?` |  | `grad_20261003_1700` |
@@ -124,6 +130,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Gledališka predstava: Pika Nogavička in potovanje skozi čas](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 9,90 € | ura ni znana | `kinobezigrad_20261010_0000` |
 | 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261010_1000` |
 | 10:00 | [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` | 🆓 |  | `ng_20261010_1000` |
 | 10:00 | [Pumptrack pokal Slovenije – Grosuplje](https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/)<br>`kolo` | [Pumptrack Grosuplje, Grosuplje](https://maps.google.com/?q=Pumptrack%20Grosuplje%20Grosuplje) | `?` | 20 € |  | `pumptrackgrosuplje_20261010_0000` |
@@ -135,6 +142,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovno-igrana predstava: Deklica in slon](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-deklica-in-slon/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261011_0000` |
 | 10:30 | [Šola zmajeslovja: Prerokba o pogubi zmajev](https://dogodki.kulturnik.si/?what=otroci)<br>`pravljice` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `?` | `?` |  | `grad_20261011_1030` |
 
 ## 📆 Sreda, 14. oktober 2026
@@ -147,6 +155,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovno-igrana predstava: Ves svet je marmelada](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-ves-svet-je-marmelada/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `4+` | 8,10 € | ura ni znana | `kinobezigrad_20261017_0000` |
 | 09:30 | [VITA Lumpi tek – Otroški tek (predšolski)](https://ljubljanskimaraton.si/lumpi-tek)<br>`tek` | [Slovenska cesta (start pri Kazini, smer Kongresni trg)](https://maps.google.com/?q=Slovenska%20cesta%20%28start%20pri%20Kazini%2C%20smer%20Kongresni%20trg%29%20Ljubljana) | `0+` | 🆓 |  | `lumpitek_20261017_0930` |
 | 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261017_1000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Zmeda za dva medveda](https://www.sititeater.si/sobotni-dopoldnevi/zmeda-za-dva-medveda/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261017_1100` |
@@ -161,6 +170,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovno-igrana predstava: Poklic coprnice Mice](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-poklic-coprnice-mice-2/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261024_0000` |
 | 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261024_1000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Picko in Packo](https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261024_1100` |
 | 15:00 | [Praznik sira in vina](https://tdbohinj.si/prireditev/praznik-sira-in-vina/)<br>`festival` | [Dvorana Danica, Bohinjska Bistrica](https://maps.google.com/?q=Dvorana%20Danica%20Bohinjska%20Bistrica) | `0+` | 12 € | daljša pot | `bohinjskabistrica_20261024_1500` |
@@ -182,12 +192,15 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Gledališka predstava: Tai in mala čarovnica](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-tai-in-mala-carovnica/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261031_0000` |
 | 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261031_1000` |
+| 15:00 | [B.O.FEjST – jesenski otroški festival](https://www.mojaobcina.si/bohinj/dogodki/jesenski-bofejst.html)<br>`festival` | [Dvorana Danica, Triglavska cesta 60, Bohinjska Bistrica](https://maps.google.com/?q=Dvorana%20Danica%2C%20Triglavska%20cesta%2060%20Bohinjska%20Bistrica) | `0+` | 🆓 | daljša pot | `bohinjskabistrica_20261031_1500` |
 
 ## 📆 Sobota, 7. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš](https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261107_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Pobegla nogavica Pavla](https://www.sititeater.si/sobotni-dopoldnevi/pobegla-nogavica-pavla/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261107_1100` |
 | 11:00 | [Tekaški pozdrav jeseni na Krasu](https://www.tekaskipozdrav.si/program)<br>`tek` | [Kobilarna Lipica, Lipica (Sežana)](https://maps.google.com/?q=Kobilarna%20Lipica%20Lipica%20%28Se%C5%BEana%29) | `?` | 35 € | daljša pot | `lipica_20261107_1100` |
 | 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261107_1500` |
@@ -196,26 +209,43 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovna predstava: Pedenjped](https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261108_0000` |
 | 10:30 | [Šola zmajeslovja: Vrhovna čarovnica](https://dogodki.kulturnik.si/?what=otroci)<br>`pravljice` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `?` | `?` |  | `grad_20261108_1030` |
+| 11:00 | [Celjski mali maraton – otroški in družinski tek (1.600 m)](https://fatburn.si/celjski-mali-maraton/)<br>`tek` | [Kajak kanu center Špica, Celje](https://maps.google.com/?q=Kajak%20kanu%20center%20%C5%A0pica%20Celje) | `0+` | 37 € | daljša pot | `celje_20261108_1100` |
+
+## 📆 Ponedeljek, 9. november 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| — | [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | `?` | ura ni znana | `kinobezigrad_20261109_0000` |
 
 ## 📆 Torek, 10. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| 11:00 | [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` | 🆓 | daljša pot | `strunjan_20261110_1100` |
 | 16:00 | [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` | 🆓 | prijava | `mestnimuzej_20261110_1600` |
 
 ## 📆 Sobota, 14. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovni muzikal: Peter Klepec](https://www.kino-bezigrad.si/predstava/lutkovni-muzikal-peter-klepec/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261114_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Čudežni ključ (premiera)](https://sititeater.mojekarte.si/si/cudezni-kljuc-premiera/vstopnice-1236166.html)<br>`koncert` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | 8 € |  | `siti_20261114_1100` |
 | 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261114_1500` |
 | 16:00 | [Jesensko vodstvo za družine po Plečnikovi hiši](https://mgml.si/sl/plecnikova-hisa/eventi/2304/)<br>`delavnica` | [Plečnikova hiša](https://maps.google.com/?q=Ple%C4%8Dnikova%20hi%C5%A1a%20Ljubljana) | `4+` | `?` |  | `plecnikovahisa_20261114_1600` |
+
+## 📆 Nedelja, 15. november 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 11:00 | [Ustvarjalna delavnica: Skrivnosti lesa](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-skrivnosti-lesa-5388)<br>`delavnica` | [MAO, Rusjanov trg 7](https://maps.google.com/?q=MAO%2C%20Rusjanov%20trg%207%20Ljubljana) | `6+` | 3 € | starost? | `mao_20261115_1100` |
 
 ## 📆 Sobota, 21. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Gledališka predstava: Z Igorjem po svetu: Italija](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-z-igorjem-po-svetu/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261121_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Jaz počepnem, ti poskočiš](https://www.sititeater.si/sobotni-dopoldnevi/jaz-pocepnem-ti-poskocis-1/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261121_1100` |
 | 16:00 | [Delavnica izdelave sveč iz satnic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261121_1600` |
 | 17:00 | [Friderik, grajska podgana](https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979)<br>`lutke` | [Grajsko gledališče, Ljubljanski grad](https://maps.google.com/?q=Grajsko%20gledali%C5%A1%C4%8De%2C%20Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261121_1700` |
@@ -236,6 +266,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Lutkovno-igrana predstava: Tinko Polovinko](https://www.kino-bezigrad.si/predstava/gledalisko-lutkovna-predstava-tinko-polovinko/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261128_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Peter Klepec](https://www.sititeater.si/sobotni-dopoldnevi/peter-klepec_2-1/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261128_1100` |
 | 16:00 | [Delavnica izdelave sveč iz satnic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261128_1600` |
 
@@ -255,10 +286,29 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Pika Nogavička potuje po svetu (z obiskom Miklavža)](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-potuje-po-svetu-2/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 11,10 € | ura ni znana | `kinobezigrad_20261205_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Cirkus Kolibris z obiskom Miklavža](https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261205_1100` |
 | 16:00 | [Fantazima 2026 – Praznični december v Kopru](https://visitkoper.si/prireditve/fantazima-2026/)<br>`festival` | [Mestno jedro Kopra (Carpaccio trg, Čevljarska ulica, obala), Koper](https://maps.google.com/?q=Mestno%20jedro%20Kopra%20%28Carpaccio%20trg%2C%20%C4%8Cevljarska%20ulica%2C%20obala%29%20Koper) | `0+` | 🆓 | daljša pot | `koper_20261205_1600` |
 | 17:00 | [Miklavžev sprevod](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/)<br>`festival` | [Krekov trg → Prešernov trg](https://maps.google.com/?q=Krekov%20trg%20%E2%86%92%20Pre%C5%A1ernov%20trg%20Ljubljana) | `0+` | 🆓 |  | `krekovtrg_20261205_1700` |
 | 17:00 | [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` | `?` |  | `kranj_20261205_1700` |
+
+## 📆 Nedelja, 6. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| — | [Lutkovna predstava z obiskom Miklavža: Grdi raček](https://www.kino-bezigrad.si/predstava/lutkovna-predstava-grdi-racek/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 11,10 € | ura ni znana | `kinobezigrad_20261206_0000` |
+
+## 📆 Torek, 8. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261208_1500` |
+
+## 📆 Sreda, 9. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261209_1500` |
 
 ## 📆 Sobota, 12. december 2026
 
@@ -273,6 +323,18 @@
 |---|---|---|---|---|---|---|
 | 10:30 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci)<br>`lutke` | [Hribarjeva dvorana, Ljubljanski grad](https://maps.google.com/?q=Hribarjeva%20dvorana%2C%20Ljubljanski%20grad%20Ljubljana) | `3+` | `?` |  | `grad_20261213_1030` |
 
+## 📆 Torek, 15. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261215_1500` |
+
+## 📆 Sreda, 16. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261216_1500` |
+
 ## 📆 Sobota, 19. december 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
@@ -284,4 +346,17 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
+| — | [Koncert z obiskom Božička: Božični repki](https://www.kino-bezigrad.si/predstava/koncert-z-obiskom-bozicka-bozicni-repki/)<br>`koncert` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 12,90 € | ura ni znana | `kinobezigrad_20261220_0000_koncert` |
 | 10:30 | [Friderik čaka Zimo in pozdrav dedka Mraza](https://dogodki.kulturnik.si/?what=otroci)<br>`lutke` | [Grajsko gledališče, Ljubljanski grad](https://maps.google.com/?q=Grajsko%20gledali%C5%A1%C4%8De%2C%20Ljubljanski%20grad%20Ljubljana) | `3+` | `?` |  | `grad_20261220_1030` |
+
+## 📆 Torek, 22. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261222_1500` |
+
+## 📆 Sreda, 23. december 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261223_1500` |

@@ -30,6 +30,7 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `festival.olympic.si` | NXDOMAIN. The 2025 Olympic Festival had its own subdomain and it has since been taken down | **Certain**, no DNS record | `https://olympic.si/` and `https://ewos.olympic.si/` |
 | `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, with no 2026 data reachable via fetch | **Certain.** Confirmed on the 2026-09-21 sweep. Fetching it wastes a request and returns nothing usable | `https://tekaski-koledar.si/` |
 | `cuki.si` and `www.cuki.si` | NXDOMAIN, no DNS record. Two curl attempts plus a direct lookup on 2026-09-22 | **Certain.** A domain with no DNS record cannot answer until someone re-registers it | The Čuki rows in [`artists.md`](artists.md), and `napovednik.com/glasba/narodnozabavna` |
+| `https://www.muri-maca.com/` | NXDOMAIN, no DNS record. Checked 2026-09-24 while trying to confirm a Neca Falk "Maček Muri" lead | **Certain.** Was the project's own site | `drama.si` (SNG Drama) or the `eventim.si` listing, both unconfirmed as of 2026-09-24 — see `artists.md` |
 
 ### Wrong guesses, not dead sites
 
@@ -63,6 +64,7 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | Napovednik sport events | `https://napovednik.com/prireditve/sportna-prireditev` | Sport category | ok |
 | Visit Ljubljana | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/` | Filters: Prost vstop + Za družine + date + Izven Ljubljane | ok |
 | MOL calendar | `https://www.ljubljana.si/sl/aktualno/dogodki/` | KoloPark, festivals, December | ok |
+| MOL workshop pavilion (lead, unresolved) | `https://www.ljubljana.si/sl/moja-ljubljana/prireditve/ustvarjalne-delavnice-za-otroke/` | Daily free-workshop programme at the Kongresni trg pavilion (weekday 17–18h / weekend 10–12h per search snippets) | 404, confirmed dead on both the 2026-09-22 and 2026-09-24 sweeps despite 5+ URL/search variants each time. `kgbl.si/prizorisce/kongresni-trg/paviljon/` describes an unrelated spring student-concert series, not this. Try MOL's "Oddelek za kulturo" news feed directly next run instead of guessing more slugs |
 | Kulturnik | `https://dogodki.kulturnik.si/?what=otroci` | Culture tagged otroci, `&where=` filters venue | ok |
 | MojaObčina LJ | `https://www.mojaobcina.si/ljubljana/dogodki/` | Zoo and neighbourhood pickup | ok |
 | Kam z mulcem | `https://kamzmulcem.si/` | Editorial round-ups, lead generation only | low |
@@ -74,7 +76,7 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 |---|---|---|
 | LGL schedule | `https://www.lgl.si/spored-predstav` | ok, but flaky: returned 503 on most attempts this sweep, loaded twice. When down, use `https://lgl.mojekarte.si/en/all.html` (ticketed schedule, JS-paginated) as a fallback |
 | LGL kids shows | `https://www.lgl.si/predstave-za-otroke` | low, 503 on every attempt this sweep (4 tries) |
-| Kino Bežigrad shows | `https://www.kino-bezigrad.si/predstave-in-delavnice/` | ok, checked 2026-09-22. Dated index, 35+ puppet and theatre shows running Sep 2026 to Apr 2027. **No start times on this page** |
+| Kino Bežigrad shows | `https://www.kino-bezigrad.si/predstave-in-delavnice/` | ok, checked 2026-09-22 and 2026-09-24. Dated index, 35+ puppet and theatre shows running Sep 2026 to Apr 2027. **No start times on this page**. ⚠️ Despite being marked "ok" since 2026-09-21, this venue had **zero** events in `db.json` through two runs — first swept for real on 2026-09-24, adding 16 in-window shows (14 `lutke`, 2 `koncert`). Future runs: confirm it keeps appearing in `db.json`, don't let it silently drop out again |
 | Kino Bežigrad detail | `https://www.kino-bezigrad.si/predstava/<slug>/` | ok. Carries `Starostna omejitev` (age), price and duration. Still no start time, which lives only in the booking widget behind *Nakup* / `#tickets` |
 | LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | low, 503 on every attempt this sweep (2 tries) |
 | MKL events | `https://www.mklj.si/dogodki/` | ok |
@@ -104,6 +106,7 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Ljubljanski grad | `https://www.ljubljanskigrad.si/` | ok |
 | ZOO news | `https://www.zoo.si/novice` | ok |
 | ZOO programmes | `https://www.zoo.si/ponudba` | ok |
+| ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, checked 2026-09-24 — consistent with the existing `zoo.si/ponudba/noc-carovnic` seasonal 404 below; likely goes live closer to end of October |
 | Museums of Slovenia | `https://sms-muzeji.si/` | ok, Poletna muzejska noč host |
 
 ## Sport, runs, wheels
@@ -155,7 +158,7 @@ festivals, so it is the biggest single gap the cross-check closed.
 | **Hiša otrok in umetnosti** | `https://www.hisaotrok.si/koledar_prireditev/list/` | Runs Zmaj kamišibaj, VNLG and Emonska promenada, plus a regular children's programme. Kamišibaj here is the best small-scale format for the youngest | ok |
 | **Pionirski dom** | `https://pionirski-dom.si/` | Otroški festival gledaliških sanj, Teden otroka open doors, carnival party | ok |
 | **Mini teater** | `https://www.mini-teater.si/si` | Mini poletje, year-round puppet programme on Križevniška and at the castle | low, permanently redirects to `client.si` subdomain which returned empty/unusable content this sweep. Check `napovednik.com/za-otroke` for Mini teater shows instead |
-| **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok |
+| **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok. Month sub-pages (`.../napovednik-dogodkov/november-2026-v-botanicnem-vrtu`, `/december-2026-...`) 404 until the month is imminent — seasonal, not dead, checked 2026-09-24 |
 | **Knjižnica pod krošnjami** | `https://www.knjiznicapodkrosnjami.si/` | Summer outdoor reading islands with scheduled storytellers | ok |
 | Rimljani v Ljubljani | `https://rimljanivljubljani.si/` | MGML Roman family festival, free, 4+ | ok |
 | Svetlobna gverila | `https://www.svetlobnagverila.net/` | Light festival, installations across the city | ok |
@@ -228,6 +231,7 @@ opening hours, take their dated events.
 
 When a sweep hits a failure, classify it before editing this file.
 
+* **A JS "please wait, verifying…" or captcha challenge page** — this is a bot-block, not a dead or stale site. `fatburn.si`, `lipica.org`'s per-event pages, and `visitcelje.eu` all show this to a plain WebFetch, but `curl -A "<desktop browser User-Agent>"` gets the real, current page through cleanly on all three (confirmed 2026-09-24). Never classify one of these as *Do not retry* or "stale content" on the strength of a WebFetch failure alone — retry with curl and a browser User-Agent first. (The 2026-09-22 diff.md's characterisation of `lipica.org` per-event pages as serving "stale 2023 cache" may itself have been this same bot-block misread as staleness — worth re-verifying.)
 * **NXDOMAIN or connection refused, twice** — move the row to *Do not retry* with a replacement.
 * **404 on a path while the site root answers** — the path moved. Find the new one, correct the row, do not blacklist the site.
 * **404 on a page that only exists in season** — leave it, note the month.
