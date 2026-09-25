@@ -2,13 +2,13 @@
 
 | Zadnja posodobitev | Aktivni dogodki | Brezplačni | ⭐ Zaznamovani | Okno do | Skriti |
 |---|---|---|---|---|---|
-| 2026-09-24 09:22 | 67 | 9 | 7 | 24. december 2026 | 43 |
+| 2026-09-24 09:22 | 68 | 10 | 7 | 24. december 2026 | 43 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
 | `lutke` | 31 | 10.10. |
 | `delavnica` | 13 | 10.10. |
-| `festival` | 8 | 24.10. |
+| `festival` | 9 | 06.10. |
 | `koncert` | 6 | 03.10. |
 | `pravljice` | 5 | 10.10. |
 | `tek` | 3 | 17.10. |
@@ -26,6 +26,12 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Glasbena predstava: Repki 2](https://www.kino-bezigrad.si/predstava/koncert-repki-2/)<br>`koncert` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 12,90 € | ura ni znana | `kinobezigrad_20261003_0000_koncert` |
+
+## 📆 Torek, 6. oktober 2026
+
+| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
+|---|---|---|---|---|---|---|
+| — | [Teden akcije Z igro do dediščine: brezplačen ogled stalne zbirke](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`festival` | [Narodna galerija, Puharjeva 9](https://maps.google.com/?q=Narodna%20galerija%2C%20Puharjeva%209%20Ljubljana) | `0+` | 🆓 | ura ni znana | `ng_20261006_0000` |
 
 ## 📆 Sobota, 10. oktober 2026
 
