@@ -71,7 +71,13 @@ that produced this file. Everything you need is on disk.
   1. **Pass 1 — Ljubljana** and its immediate surrounding neighborhoods. Always run this pass.
   2. **Pass 2 — rest of Slovenia.** Judge by destination value, not by category. **Take** anything worth the trip on its own: a full-day or multi-day festival, a free family day at a castle or estate, a signature local celebration with a children's programme, a race, an open-door day. **Leave** a standalone single performance that simply happens to be in another town, since a 30-minute puppet show does not repay two hours in the car. The same show inside a day-long festival does. Set `city` and the `outside_ljubljana` flag on everything from this pass. Fixtures, leads and regional sources live in [`regions.md`](regions.md).
   3. **Pass 3 — children's concerts.** A category sweep that runs on top of both, with its own geography carve-out for the named artists. Defined in [§2](#pass-3--childrens-concerts).
-* **Target Audience:** Toddlers and young children (ages 0–4 / `malčki` / `2+` / `3+`). Record `age_min` and keep anything at `4` or below. Flag `4+` items rather than dropping them, since Slovenian listings routinely under-serve the 0–3 band.
+* **Target audience: include by default.** The reader decides what is worth going to. The routine decides only what a child could plausibly attend, and it decides that generously. Record `age_min` when the source publishes one and **never use it to drop an event**. An advertised `6+` or `8+` is saved with `age_stretch`. A listing with no age at all is saved as it stands, not skipped. Slovenian listings routinely under-serve the 0–3 band, so absence of an age says nothing.
+
+  Only two things take an event out on audience grounds:
+  1. **It says it is not for children.** `18+`, *za odrasle*, *samo za odrasle*, *ni primerno za otroke*, explicit content, licensed-premises nightlife. An explicit statement, not an inference from the topic.
+  2. **Nobody would bring a child to it**, whatever age it states or omits. A council session, a professional conference, a job fair, a support group, an adult lecture series, a public consultation. The MOL calendar in particular carries all of these interleaved with real events.
+
+  Everything else goes in, flagged where the fit is doubtful. A longer list the reader skims beats a short one that already made the decision for them.
 * **Format:** One-off, scheduled, date-and-time specific events.
 * **Time of day:** irrelevant. Never filter, flag or downgrade an event because of when it starts. Record `start_time` and let the reader judge.
 * **Time window:** `now` to `now + 3 months`, and no further. This is a hard ceiling on both the searches and what gets written to `db.json`. Listings that publish a whole season at once (theatre repertoires, festival programmes, race calendars) routinely reach six or twelve months out. Take only the part that falls inside the window.
