@@ -14,7 +14,7 @@ that produced this file. Everything you need is on disk.
 * **Repo:** `/Users/kloki/Documents/GitHub/claude-routines-kids-activities`, remote `origin`, branch `main`.
 * **Spec:** this file. It wins over the task prompt that invoked you. If they disagree, follow this file and say so in `diff.md`.
 * **State:** `db.json`. **Read-only context:** `links.md`, `annual.md`, `regions.md`, `sources.md`, `artists.md`.
-* **Scripts:** `scripts/render.py` renders `currently_active.md` from `db.json`. `scripts/hide_event.py` hides an event on request. When a script owns a file, never hand-write that file.
+* **Scripts:** `scripts/render.py` renders `currently_active.md` from `db.json`. `scripts/hide_event.py` hides an event on request. `scripts/star_event.py` marks an event as interested (⭐) on request. When a script owns a file, never hand-write that file.
 * **Outputs:** `db.json`, `diff.md`, `currently_active.md`, written into the repo root.
 
 ### Start of run

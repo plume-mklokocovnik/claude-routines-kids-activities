@@ -30,7 +30,8 @@
       "url": "https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708",
       "flags": [],
       "status": "active",
-      "first_seen": "2026-09-21T14:35:28Z"
+      "first_seen": "2026-09-21T14:35:28Z",
+      "starred": true
     },
     "30": {
       "event_id": "siti_20261010_1100",
@@ -216,7 +217,8 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c",
       "flags": [],
       "status": "active",
-      "first_seen": "2026-09-21T14:35:28Z"
+      "first_seen": "2026-09-21T14:35:28Z",
+      "starred": true
     },
     "45": {
       "event_id": "siti_20261114_1100",
@@ -661,7 +663,8 @@
         "outside_ljubljana"
       ],
       "status": "active",
-      "first_seen": "2026-09-22T08:47:12Z"
+      "first_seen": "2026-09-22T08:47:12Z",
+      "starred": true
     },
     "87": {
       "event_id": "kinobezigrad_20261010_0000",
@@ -763,7 +766,8 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "starred": true
     },
     "93": {
       "event_id": "kinobezigrad_20261108_0000",
@@ -797,7 +801,8 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "starred": true
     },
     "95": {
       "event_id": "kinobezigrad_20261114_0000",
@@ -917,7 +922,8 @@
         "travel"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "starred": true
     },
     "108": {
       "event_id": "celje_20261108_1100",
@@ -935,7 +941,8 @@
         "travel"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "starred": true
     },
     "109": {
       "event_id": "bohinjskabistrica_20261031_1500",

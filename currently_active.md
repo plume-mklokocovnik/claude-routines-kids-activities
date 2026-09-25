@@ -1,8 +1,8 @@
 # 📅 Upcoming Toddler Activities in Ljubljana
 
-| Zadnja posodobitev | Aktivni dogodki | Brezplačni | Okno do | Skriti |
-|---|---|---|---|---|
-| 2026-09-24 09:22 | 67 | 9 | 24. december 2026 | 43 |
+| Zadnja posodobitev | Aktivni dogodki | Brezplačni | ⭐ Zaznamovani | Okno do | Skriti |
+|---|---|---|---|---|---|
+| 2026-09-24 09:22 | 67 | 9 | 7 | 24. december 2026 | 43 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
@@ -17,6 +17,7 @@
 **Opombe:** `starost?` starost nad 4, a verjetno primerno · `daljša pot` nad ~45 min · `razprodano` / `nepotrjeno` / `prijava` veljajo za vstopnino.
 
 > Dogodek skriješ z njegovim **ID**: `/hide-event <ID>` ali "skrij <ID>".
+> Dogodek obeležiš kot zanimiv (⭐) z njegovim **ID**: `/star-event <ID>` ali "zaznamuj <ID>".
 
 ---
 
@@ -31,7 +32,7 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Gledališka predstava: Pika Nogavička in potovanje skozi čas](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 9,90 € | ura ni znana | `kinobezigrad_20261010_0000` |
-| 10:00 | [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` | 🆓 |  | `ng_20261010_1000` |
+| 10:00 | ⭐ [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` | 🆓 |  | `ng_20261010_1000` |
 | 10:00 | [Pumptrack pokal Slovenije – Grosuplje](https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/)<br>`kolo` | [Pumptrack Grosuplje, Grosuplje](https://maps.google.com/?q=Pumptrack%20Grosuplje%20Grosuplje) | `?` | 20 € |  | `pumptrackgrosuplje_20261010_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Glasbočasnice](https://sititeater.mojekarte.si/si/glasbocasnice-otvoritev-sezone/vstopnice-1236161.html)<br>`koncert` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | 8 € |  | `siti_20261010_1100` |
 | 15:00 | [Brezplačno vodstvo po razstavi za otroke in družine (Teden otroka)](https://mgml.si/sl/mestna-galerija/eventi/2529/)<br>`delavnica` | [Mestna galerija Ljubljana](https://maps.google.com/?q=Mestna%20galerija%20Ljubljana%20Ljubljana) | `4+` | 🆓 |  | `mestnagalerija_20261010_1500` |
@@ -96,7 +97,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
-| — | [Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš](https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261107_0000` |
+| — | ⭐ [Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš](https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261107_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Pobegla nogavica Pavla](https://www.sititeater.si/sobotni-dopoldnevi/pobegla-nogavica-pavla/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261107_1100` |
 | 11:00 | [Tekaški pozdrav jeseni na Krasu](https://www.tekaskipozdrav.si/program)<br>`tek` | [Kobilarna Lipica, Lipica (Sežana)](https://maps.google.com/?q=Kobilarna%20Lipica%20Lipica%20%28Se%C5%BEana%29) | `?` | 35 € | daljša pot | `lipica_20261107_1100` |
 | 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261107_1500` |
@@ -107,20 +108,20 @@
 |---|---|---|---|---|---|---|
 | — | [Lutkovna predstava: Pedenjped](https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261108_0000` |
 | 10:30 | [Šola zmajeslovja: Vrhovna čarovnica](https://dogodki.kulturnik.si/?what=otroci)<br>`pravljice` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `?` | `?` |  | `grad_20261108_1030` |
-| 11:00 | [Celjski mali maraton – otroški in družinski tek (1.600 m)](https://fatburn.si/celjski-mali-maraton/)<br>`tek` | [Kajak kanu center Špica, Celje](https://maps.google.com/?q=Kajak%20kanu%20center%20%C5%A0pica%20Celje) | `0+` | 37 € | daljša pot | `celje_20261108_1100` |
+| 11:00 | ⭐ [Celjski mali maraton – otroški in družinski tek (1.600 m)](https://fatburn.si/celjski-mali-maraton/)<br>`tek` | [Kajak kanu center Špica, Celje](https://maps.google.com/?q=Kajak%20kanu%20center%20%C5%A0pica%20Celje) | `0+` | 37 € | daljša pot | `celje_20261108_1100` |
 
 ## 📆 Ponedeljek, 9. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
-| — | [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | `?` | ura ni znana | `kinobezigrad_20261109_0000` |
+| — | ⭐ [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | `?` | ura ni znana | `kinobezigrad_20261109_0000` |
 
 ## 📆 Torek, 10. november 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
-| 11:00 | [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` | 🆓 | daljša pot | `strunjan_20261110_1100` |
-| 16:00 | [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` | 🆓 | prijava | `mestnimuzej_20261110_1600` |
+| 11:00 | ⭐ [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` | 🆓 | daljša pot | `strunjan_20261110_1100` |
+| 16:00 | ⭐ [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` | 🆓 | prijava | `mestnimuzej_20261110_1600` |
 
 ## 📆 Sobota, 14. november 2026
 
@@ -186,7 +187,7 @@
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Cirkus Kolibris z obiskom Miklavža](https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261205_1100` |
 | 16:00 | [Fantazima 2026 – Praznični december v Kopru](https://visitkoper.si/prireditve/fantazima-2026/)<br>`festival` | [Mestno jedro Kopra (Carpaccio trg, Čevljarska ulica, obala), Koper](https://maps.google.com/?q=Mestno%20jedro%20Kopra%20%28Carpaccio%20trg%2C%20%C4%8Cevljarska%20ulica%2C%20obala%29%20Koper) | `0+` | 🆓 | daljša pot | `koper_20261205_1600` |
 | 17:00 | [Miklavžev sprevod](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/)<br>`festival` | [Krekov trg → Prešernov trg](https://maps.google.com/?q=Krekov%20trg%20%E2%86%92%20Pre%C5%A1ernov%20trg%20Ljubljana) | `0+` | 🆓 |  | `krekovtrg_20261205_1700` |
-| 17:00 | [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` | `?` |  | `kranj_20261205_1700` |
+| 17:00 | ⭐ [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` | `?` |  | `kranj_20261205_1700` |
 
 ## 📆 Nedelja, 6. december 2026
 

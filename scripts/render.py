@@ -130,7 +130,8 @@ def title_text(event):
     title = cell(event.get("title") or "?")
     url = event.get("url")
     linked = f"[{title}]({url})" if url else title
-    return f"{linked}<br>`{event.get('category', '?')}`"
+    star = "⭐ " if event.get("starred") else ""
+    return f"{star}{linked}<br>`{event.get('category', '?')}`"
 
 
 def load(db_path):
@@ -147,14 +148,16 @@ def build(db):
     local_run = last_run.astimezone(TZ)
     horizon = add_months(local_run, 3)
     free_count = sum(1 for e in events if e.get("is_free"))
+    starred_count = sum(1 for e in events if e.get("starred"))
 
     out = []
     out.append("# 📅 Upcoming Toddler Activities in Ljubljana")
     out.append("")
-    out.append("| Zadnja posodobitev | Aktivni dogodki | Brezplačni | Okno do | Skriti |")
-    out.append("|---|---|---|---|---|")
+    out.append("| Zadnja posodobitev | Aktivni dogodki | Brezplačni | ⭐ Zaznamovani | Okno do | Skriti |")
+    out.append("|---|---|---|---|---|---|")
     out.append(
-        f"| {local_run:%Y-%m-%d %H:%M} | {len(events)} | {free_count} | {si_date(horizon)} | {len(hidden)} |"
+        f"| {local_run:%Y-%m-%d %H:%M} | {len(events)} | {free_count} | {starred_count} | "
+        f"{si_date(horizon)} | {len(hidden)} |"
     )
     out.append("")
 
@@ -174,6 +177,7 @@ def build(db):
                "`razprodano` / `nepotrjeno` / `prijava` veljajo za vstopnino.")
     out.append("")
     out.append("> Dogodek skriješ z njegovim **ID**: `/hide-event <ID>` ali \"skrij <ID>\".")
+    out.append("> Dogodek obeležiš kot zanimiv (⭐) z njegovim **ID**: `/star-event <ID>` ali \"zaznamuj <ID>\".")
     out.append("")
     out.append("---")
     out.append("")
