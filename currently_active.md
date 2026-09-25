@@ -2,20 +2,18 @@
 
 | Zadnja posodobitev | Aktivni dogodki | Brezplačni | Okno do | Skriti |
 |---|---|---|---|---|
-| 2026-09-24 09:22 | 113 | 31 | 24. december 2026 | 0 |
+| 2026-09-24 09:22 | 71 | 9 | 24. december 2026 | 42 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
-| `lutke` | 47 | 24.09. |
-| `delavnica` | 21 | 24.09. |
-| `pravljice` | 14 | 01.10. |
-| `festival` | 10 | 26.09. |
-| `kino` | 9 | 26.09. |
+| `lutke` | 31 | 10.10. |
+| `delavnica` | 13 | 10.10. |
+| `festival` | 8 | 24.10. |
 | `koncert` | 6 | 03.10. |
+| `pravljice` | 5 | 10.10. |
+| `kino` | 4 | 10.10. |
 | `tek` | 3 | 17.10. |
 | `kolo` | 1 | 10.10. |
-| `ples` | 1 | 02.10. |
-| `pop_up` | 1 | 26.09. |
 
 **Opombe:** `starost?` starost nad 4, a verjetno primerno · `daljša pot` nad ~45 min · `razprodano` / `nepotrjeno` / `prijava` veljajo za vstopnino.
 
@@ -23,108 +21,11 @@
 
 ---
 
-## 📆 Četrtek, 24. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Rumena pika na nebu (VNLG)](https://www.hisaotrok.si/dogodek/rumena-pika-na-nebu-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260924_1700` |
-| 18:00 | [Zvočno potovanje za otroke – Z BESEDO](https://pionirski-dom.si/aktualno/zvocno-potovanje-za-otroke-z-besedo/)<br>`delavnica` | [Pionirski teater](https://maps.google.com/?q=Pionirski%20teater%20Ljubljana) | `5+` | `?` | starost? | `pionirski_20260924_1800` |
-
-## 📆 Petek, 25. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 10:00 | [Kdo je naredil jezero? (VNLG)](https://www.hisaotrok.si/dogodek/kdo-je-naredil-jezero-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260925_1000` |
-| 11:00 | [Festival LUTKE 2026: Birakolore](https://lgl.mojekarte.si/en/birakolore/tickets-1214505.html)<br>`lutke` | [Različne lokacije (pri Krekovem trgu 2)](https://maps.google.com/?q=Razli%C4%8Dne%20lokacije%20%28pri%20Krekovem%20trgu%202%29%20Ljubljana) | `?` | 🆓 |  | `lgl_20260925_1100` |
-| 17:00 | [Fuj, gosenica! (VNLG)](https://www.hisaotrok.si/dogodek/fuj-gosenica-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260925_1700` |
-| 20:00 | [Festival LUTKE 2026: Nasprotja / Antipody](https://lgl.mojekarte.si/en/nasprotja-antipody/tickets-1214599.html)<br>`lutke` | [Pred LGL (zunaj)](https://maps.google.com/?q=Pred%20LGL%20%28zunaj%29%20Ljubljana) | `?` | 10 € |  | `lgl_20260925_2000` |
-
-## 📆 Sobota, 26. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| — | [Lutkovno-igrana predstava: Kako je lisica dobila zlati rep](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-kako-je-lisica-dobila-zlati-rep/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20260926_0000` |
-| 10:00 | [ARTish](https://www.visitljubljana.com/sl/obiskovalci/prireditve/)<br>`pop_up` | [Gallusovo nabrežje](https://maps.google.com/?q=Gallusovo%20nabre%C5%BEje%20Ljubljana) | `?` | 🆓 |  | `artish_20260926_1000` |
-| 10:00 | [Bela mačica (VNLG)](https://www.hisaotrok.si/dogodek/bela-macica-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260926_1000` |
-| 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20260926_1000` |
-| 10:00 | [Olimpijski festival (Evropski teden športa)](https://olympic.si/dogodki/olimpijski-festival-1-dan)<br>`festival` | [Kongresni trg in Park Zvezda](https://maps.google.com/?q=Kongresni%20trg%20in%20Park%20Zvezda%20Ljubljana) | `5+` | 🆓 | starost? | `kongresnitrg_20260926_1000` |
-| 10:30 | [Festival LUTKE 2026: Lev in ptica / The Lion and the Bird](https://lgl.mojekarte.si/en/lev-in-ptica-the-lion-and-the-bird/tickets-1214490.html)<br>`lutke` | [Veliki oder LGL, Krekov trg 2](https://maps.google.com/?q=Veliki%20oder%20LGL%2C%20Krekov%20trg%202%20Ljubljana) | `?` | 10 € | razprodano | `lgl_20260926_1030` |
-| 11:00 | [Festival LUTKE 2026: Birakolore](https://lgl.mojekarte.si/en/all.html)<br>`lutke` | [Različne lokacije (pri Krekovem trgu 2)](https://maps.google.com/?q=Razli%C4%8Dne%20lokacije%20%28pri%20Krekovem%20trgu%202%29%20Ljubljana) | `?` | 🆓 |  | `lgl_20260926_1100` |
-| 11:00 | [Vodno potovanje: interaktivno vodstvo za družine (4+)](https://mgml.si/sl/mestni-muzej/eventi/2503/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `4+` | `?` |  | `mestnimuzej_20260926_1100` |
-| 11:30 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `?` | `?` |  | `kinodvor_20260926_1130` |
-| 16:00 | [Brezplačna družinska delavnica: Čarobni fotogram](https://mgml.si/sl/galerija-jakopic/eventi/2521/)<br>`delavnica` | [Galerija Jakopič](https://maps.google.com/?q=Galerija%20Jakopi%C4%8D%20Ljubljana) | `4+` | 🆓 |  | `jakopic_20260926_1600` |
-| 16:00 | [Na obisku pri Rimljanki Liviji (4+)](https://mgml.si/sl/mestni-muzej/eventi/2504/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `4+` | `?` | zasedeno | `mestnimuzej_20260926_1600` |
-| 16:30 | [Kinobalon: Za poletje, skupaj! (premiera)](https://www.kinodvor.org/kinobalon/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `?` | `?` |  | `kinodvor_20260926_1630` |
-| 17:00 | [Dogodivščine Zvitorepca, Trdonje in Lakotnika: Trije mušketirji](https://mladinsko.com/sl/program/232/dogodivscine-zvitorepca-trdonje-in-lakotnika-trije-musketirji/)<br>`lutke` | [Slovensko mladinsko gledališče, Zgornja dvorana](https://maps.google.com/?q=Slovensko%20mladinsko%20gledali%C5%A1%C4%8De%2C%20Zgornja%20dvorana%20Ljubljana) | `6+` | `?` | starost? | `mladinsko_20260926_1700` |
-
-## 📆 Nedelja, 27. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 10:00 | [O vrabčku, mišku in palačinki (VNLG)](https://www.hisaotrok.si/dogodek/o-vrabcku-misku-in-palacinki-vnlg/)<br>`lutke` | [Hiša otrok in umetnosti, Komenskega 9](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Komenskega%209%20Ljubljana) | `2+` | 🆓 | nepotrjeno | `hisaotrok_20260927_1000` |
-| 14:45 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `?` | `?` |  | `kinodvor_20260927_1445` |
-| 16:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260927_1600` |
-| 18:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260927_1800` |
-
-## 📆 Ponedeljek, 28. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 10:00 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260928_1000` |
-| 17:30 | [Festival Lutke: Gnezdo / The Nest](https://www.cd-cc.si/kultura/gledalisce-in-ples/festival-lutke-gnezdo-nest)<br>`lutke` | [Cankarjev dom, Dvorana Duše Počkaj](https://maps.google.com/?q=Cankarjev%20dom%2C%20Dvorana%20Du%C5%A1e%20Po%C4%8Dkaj%20Ljubljana) | `7+` | 10 € | starost? | `cd_20260928_1730` |
-
-## 📆 Torek, 29. september 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Ustvarjalnice z Galerijo C.C.U.: Dežela lisic](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-dezela-lisic-6206)<br>`delavnica` | [Center kulture Španski borci, Zaloška 61](https://maps.google.com/?q=Center%20kulture%20%C5%A0panski%20borci%2C%20Zalo%C5%A1ka%2061%20Ljubljana) | `?` | 🆓 |  | `spanskiborci_20260929_1700` |
-
-## 📆 Četrtek, 1. oktober 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Šentvid (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20%C5%A0entvid%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_sentvid_20261001_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Prežihov Voranc (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Pre%C5%BEihov%20Voranc%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_prezihovvoranc_20261001_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica dr. France Škerl (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20dr.%20France%20%C5%A0kerl%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_skerl_20261001_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Glinškova ploščad (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Glin%C5%A1kova%20plo%C5%A1%C4%8Dad%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_glinskova_20261001_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Jožeta Mazovca (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Jo%C5%BEeta%20Mazovca%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_mazovec_20261001_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Polje (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Polje%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_polje_20261001_1700` |
-
-## 📆 Petek, 2. oktober 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 18:00 | [Plesna pravljica: Mišja šola](https://www.citypark.si/si/events/gledaliska-predstava-plesna-pravljica-misja-sola/2026-10-02)<br>`ples` | [Citypark, pritličje pri Humanic](https://maps.google.com/?q=Citypark%2C%20pritli%C4%8Dje%20pri%20Humanic%20Ljubljana) | `?` | 🆓 |  | `citypark_20261002_1800` |
-
 ## 📆 Sobota, 3. oktober 2026
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Glasbena predstava: Repki 2](https://www.kino-bezigrad.si/predstava/koncert-repki-2/)<br>`koncert` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 12,90 € | ura ni znana | `kinobezigrad_20261003_0000_koncert` |
-| 10:00 | [Kinobalon 'Prvič v kino': Samo in Julija](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261003_1000` |
-| 11:00 | [Interaktivno družinsko vodenje v Vili Zlatica](https://mgml.si/sl/vila-zlatica/eventi/2362/)<br>`delavnica` | [Vila Zlatica](https://maps.google.com/?q=Vila%20Zlatica%20Ljubljana) | `4+` | `?` |  | `vilazlatica_20261003_1100` |
-| 17:00 | [Friderik in zmaj](https://dogodki.kulturnik.si/?what=otroci)<br>`lutke` | [Grajsko gledališče, Ljubljanski grad](https://maps.google.com/?q=Grajsko%20gledali%C5%A1%C4%8De%2C%20Ljubljanski%20grad%20Ljubljana) | `3+` | `?` |  | `grad_20261003_1700` |
-
-## 📆 Nedelja, 4. oktober 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 11:00 | [Javno vodstvo: Krajinske slike in ljudske pripovedke](https://www.ng-slo.si/si/eventi/javno-vodstvo-krajinske-slike-in-ljudske-pripovedke?id=6596)<br>`delavnica` | [Narodna galerija, Puharjeva 9](https://maps.google.com/?q=Narodna%20galerija%2C%20Puharjeva%209%20Ljubljana) | `4+` | `?` |  | `ng_20261004_1100` |
-| 11:00 | [Ustvarjalna delavnica: Mucka, Putka, Slon](https://mao.si/dogodek/ustvarjalna-delavnica-mucka-putka-slon/)<br>`delavnica` | [MAO, Rusjanov trg 7](https://maps.google.com/?q=MAO%2C%20Rusjanov%20trg%207%20Ljubljana) | `6+` | `?` | prijava, starost? | `mao_20261004_1100` |
-
-## 📆 Ponedeljek, 5. oktober 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 09:00 | [Teden otroka 2026 (Maribor)](https://zpm-mb.si/novice-dogodki/teden-otroka-2026/)<br>`festival` | [Trg svobode, Maribor](https://maps.google.com/?q=Trg%20svobode%20Maribor) | `?` | 🆓 | daljša pot | `maribor_20261005_0900` |
-| 18:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Frana Levstika (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Frana%20Levstika%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_levstik_20261005_1800` |
-
-## 📆 Torek, 6. oktober 2026
-
-| Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
-|---|---|---|---|---|---|---|
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Podpeč (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Podpe%C4%8D%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_podpec_20261006_1700` |
-| 17:00 | [Ura pravljic](https://www.mklj.si/otroci/)<br>`pravljice` | [Knjižnica Otona Župančiča (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Otona%20%C5%BDupan%C4%8Di%C4%8Da%20%28MKL%29%20Ljubljana) | `?` | 🆓 |  | `mkl_zupancic_20261006_1700` |
 
 ## 📆 Sobota, 10. oktober 2026
 
@@ -360,3 +261,54 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | 15:00 | [Vitez, zmaj in praznični direndaj](https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/)<br>`lutke` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `3+` | 5 € |  | `grad_20261223_1500` |
+
+---
+
+## 🙈 Skriti dogodki
+
+Skrito na tvojo zahtevo. Rutina jih ne pobira več. Vrneš jih z `/hide-event unhide <ID>`.
+
+| ID / vzorec | Dogodek (primer) | Obseg | Skrito | Razlog |
+|---|---|---|---|---|
+| `hisaotrok_20260924_1700` | Rumena pika na nebu (VNLG) | event | 2026-09-25 | not interested |
+| `pionirski_20260924_1800` | Zvočno potovanje za otroke – Z BESEDO | event | 2026-09-25 | not interested |
+| `hisaotrok_20260925_1000` | Kdo je naredil jezero? (VNLG) | event | 2026-09-25 | not interested |
+| `lgl_20260925_1100` | Festival LUTKE 2026: Birakolore | event | 2026-09-25 | not interested |
+| `hisaotrok_20260925_1700` | Fuj, gosenica! (VNLG) | event | 2026-09-25 | not interested |
+| `lgl_20260925_2000` | Festival LUTKE 2026: Nasprotja / Antipody | event | 2026-09-25 | not interested |
+| `kinobezigrad_20260926_0000` | Lutkovno-igrana predstava: Kako je lisica dobila zlati rep | event | 2026-09-25 | not interested |
+| `artish_20260926_1000` | ARTish | event | 2026-09-25 | not interested |
+| `hisaotrok_20260926_1000` | Bela mačica (VNLG) | event | 2026-09-25 | not interested |
+| `kinodvor_20260926_1000` | Kinobalon 'Prvič v kino': Samo in Julija | event | 2026-09-25 | not interested |
+| `kongresnitrg_20260926_1000` | Olimpijski festival (Evropski teden športa) | event | 2026-09-25 | not interested |
+| `lgl_20260926_1030` | Festival LUTKE 2026: Lev in ptica / The Lion and the Bird | event | 2026-09-25 | not interested |
+| `lgl_20260926_1100` | Festival LUTKE 2026: Birakolore | event | 2026-09-25 | not interested |
+| `mestnimuzej_20260926_1100` | Vodno potovanje: interaktivno vodstvo za družine (4+) | event | 2026-09-25 | not interested |
+| `kinodvor_20260926_1130` | Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola | event | 2026-09-25 | not interested |
+| `jakopic_20260926_1600` | Brezplačna družinska delavnica: Čarobni fotogram | event | 2026-09-25 | not interested |
+| `mestnimuzej_20260926_1600` | Na obisku pri Rimljanki Liviji (4+) | event | 2026-09-25 | not interested |
+| `kinodvor_20260926_1630` | Kinobalon: Za poletje, skupaj! (premiera) | event | 2026-09-25 | not interested |
+| `mladinsko_20260926_1700` | Dogodivščine Zvitorepca, Trdonje in Lakotnika: Trije mušketirji | event | 2026-09-25 | not interested |
+| `hisaotrok_20260927_1000` | O vrabčku, mišku in palačinki (VNLG) | event | 2026-09-25 | not interested |
+| `kinodvor_20260927_1445` | Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola | event | 2026-09-25 | not interested |
+| `cd_20260927_1600` | Festival Lutke: Gnezdo / The Nest | event | 2026-09-25 | not interested |
+| `cd_20260927_1800` | Festival Lutke: Gnezdo / The Nest | event | 2026-09-25 | not interested |
+| `cd_20260928_1000` | Festival Lutke: Gnezdo / The Nest | event | 2026-09-25 | not interested |
+| `cd_20260928_1730` | Festival Lutke: Gnezdo / The Nest | event | 2026-09-25 | not interested |
+| `spanskiborci_20260929_1700` | Ustvarjalnice z Galerijo C.C.U.: Dežela lisic | event | 2026-09-25 | not interested |
+| `mkl_sentvid_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_prezihovvoranc_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_skerl_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_glinskova_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_mazovec_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_polje_20261001_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `citypark_20261002_1800` | Plesna pravljica: Mišja šola | event | 2026-09-25 | not interested |
+| `kinodvor_20261003_1000` | Kinobalon 'Prvič v kino': Samo in Julija | event | 2026-09-25 | not interested |
+| `vilazlatica_20261003_1100` | Interaktivno družinsko vodenje v Vili Zlatica | event | 2026-09-25 | not interested |
+| `grad_20261003_1700` | Friderik in zmaj | event | 2026-09-25 | not interested |
+| `ng_20261004_1100` | Javno vodstvo: Krajinske slike in ljudske pripovedke | event | 2026-09-25 | not interested |
+| `mao_20261004_1100` | Ustvarjalna delavnica: Mucka, Putka, Slon | event | 2026-09-25 | not interested |
+| `maribor_20261005_0900` | Teden otroka 2026 (Maribor) | event | 2026-09-25 | not interested |
+| `mkl_levstik_20261005_1800` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_podpec_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `mkl_zupancic_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
