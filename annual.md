@@ -118,6 +118,7 @@ belongs in `db.json`.
 | **Dnevi odprtih vrat** | Through September | Annually | **medium** |
 | **Citypark free theatre** | First Friday monthly, plus fairy-tale Thursdays | Monthly | **medium** |
 | **Free museum admission** | First Sunday monthly, nationwide | Monthly | **medium** |
+| **Teden akcije "Z igro do dediščine"** | Early October, museums and galleries nationwide | 2026-10-06 to 10-11, Narodna galerija confirmed | **low**, single data point. Run by the museum community, free permanent-collection viewing. Check whether other Tier 1 museums/galleries run the same week before assuming it is Narodna galerija only |
 
 ## Season-window fixtures
 

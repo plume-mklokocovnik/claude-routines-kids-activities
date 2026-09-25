@@ -98,7 +98,7 @@ Record the matching value in the event's `category` field.
 | `koncert` | Children's concerts and family music events, whether found generically or through the watchlist in [`artists.md`](artists.md) |
 | `odprta_vrata` | Open-door days, free trials of otherwise-paid activities |
 | `zoo` | Zoo and nature-conservation events |
-| `festival` | Family and children's festivals, seasonal city programs |
+| `festival` | Family and children's festivals, seasonal city programs, and free-entry days/weeks at museums, galleries and memorial houses |
 | `pop_up` | Shopping-centre stages, street pop-ups, market events |
 
 ### ❌ Strict Exclusion Rules (Do Not Scrape/Save)
@@ -277,10 +277,50 @@ dead, and neither ever justifies a *Do not retry* row. Reach the content through
 `site:facebook.com` and `site:instagram.com` searches instead. Never sign in, never request to
 join a group, never post.
 
+### Pass 4 — free entry to museums, galleries and memorial houses
+
+A permanent exhibition is normally excluded under §1 rule 2 as ordinary opening hours. A
+**free-entry day or week to that same exhibition is the exception**: it is dated, it is
+distinct from the venue's normal (paid) operation, and it disappears again when the promotion
+ends, so it passes the rule 2 test the same way an open-door club session does. Save it, tagged
+`festival`, with `is_free: true` and the promotion's date range folded into `price_text` since
+the schema has no separate end-date field (see `ng_20261006_0000` for the worked example: a
+week-long free viewing of the Narodna galerija permanent collection).
+
+This covers museums, galleries, castles, and the memorial or birth houses of notable Slovenians
+(*rojstna hiša*, *spominska hiša*, *domačija*) — Prešernova hiša, Cankarjeva rojstna hiša and
+similar are typically outside Ljubljana, so apply Pass 2's geography rules: set `city`,
+`outside_ljubljana`, and `travel` when the visit is worth more than roughly 45 minutes.
+
+```
+brezplačen vstop muzej
+brezplačen vstop galerija
+ogledate brezplačno
+brez vstopnine muzej
+zastonj vstop muzej
+teden brezplačnega vstopa muzeji
+dan odprtih vrat muzej brezplačno
+rojstna hiša brezplačen vstop
+spominska hiša brezplačen vstop
+```
+
+Run each undated first, then re-run the top three with a month anchor for every month in the
+horizon, the same pattern as 3A. A one-day promotion tied to a fixed nationwide date (*Mednarodni
+dan muzejev*, 05-18; *Ta veseli dan kulture*, 12-03) is already a fixture in
+[`annual.md`](annual.md) and does not need a query once its window opens — only search for it to
+confirm the current year's programme. A multi-day or venue-specific promotion, the Narodna
+galerija week among them, is what this pass exists to catch, because nothing else in this file
+looks for it.
+
+Apply the same confirmation rule as 3B: a free-entry promotion is often announced first on a
+venue's Facebook page, so confirm the dates against the venue's own site before saving, and put
+that URL in `url`.
+
 ### Priority sources
 * **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `dogodki.kulturnik.si/?what=otroci`
 * **MOL calendar, every run, fetched with curl:** `curl -sL 'https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100'`. Never the default view, which returns 20 of 54 and paginates. Never the `cat=124` Otroci filter, which returns zero. Sweep the whole list and apply the target-audience rule in §1. Full recipe in [`links.md`](links.md).
 * **Ljubljana venues:** LGL, MKL, Kinodvor Kinobalon, Kino Bežigrad (*Predstave in delavnice*), Mala ulica, MGML, Narodna galerija, SEM, MAO, Cankarjev dom, Ljubljanski grad, ZOO Ljubljana
+* **Free entry (Pass 4):** the venues above plus `sms-muzeji.si` (Museums of Slovenia, the nationwide aggregator behind *Poletna muzejska noč*) and any *rojstna hiša* / *spominska hiša* a query turns up
 * **Sport and movement:** Argeta Junior KoloPark Pokal, Pumpaj Slovenija, Ljubljanski festival športa, MOL *Gremo na brezplačne vadbe*, Šport Ljubljana, Dan slovenskega športa
 * **Runs:** `tekaskeprireditve.si` (Otroški tek and Družinski tek categories), `tekaski-koledar.si`, Lumpi tek
 * **Pop-ups:** Citypark, ALEJA, Supernova, BTC. Published as news posts a week ahead at most, so sweep weekly
