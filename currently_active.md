@@ -2,7 +2,7 @@
 
 | Zadnja posodobitev | Aktivni dogodki | Brezplačni | Okno do | Skriti |
 |---|---|---|---|---|
-| 2026-09-24 09:22 | 71 | 9 | 24. december 2026 | 42 |
+| 2026-09-24 09:22 | 67 | 9 | 24. december 2026 | 43 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
@@ -11,7 +11,6 @@
 | `festival` | 8 | 24.10. |
 | `koncert` | 6 | 03.10. |
 | `pravljice` | 5 | 10.10. |
-| `kino` | 4 | 10.10. |
 | `tek` | 3 | 17.10. |
 | `kolo` | 1 | 10.10. |
 
@@ -32,7 +31,6 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Gledališka predstava: Pika Nogavička in potovanje skozi čas](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 9,90 € | ura ni znana | `kinobezigrad_20261010_0000` |
-| 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261010_1000` |
 | 10:00 | [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` | 🆓 |  | `ng_20261010_1000` |
 | 10:00 | [Pumptrack pokal Slovenije – Grosuplje](https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/)<br>`kolo` | [Pumptrack Grosuplje, Grosuplje](https://maps.google.com/?q=Pumptrack%20Grosuplje%20Grosuplje) | `?` | 20 € |  | `pumptrackgrosuplje_20261010_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Glasbočasnice](https://sititeater.mojekarte.si/si/glasbocasnice-otvoritev-sezone/vstopnice-1236161.html)<br>`koncert` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | 8 € |  | `siti_20261010_1100` |
@@ -58,7 +56,6 @@
 |---|---|---|---|---|---|---|
 | — | [Lutkovno-igrana predstava: Ves svet je marmelada](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-ves-svet-je-marmelada/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `4+` | 8,10 € | ura ni znana | `kinobezigrad_20261017_0000` |
 | 09:30 | [VITA Lumpi tek – Otroški tek (predšolski)](https://ljubljanskimaraton.si/lumpi-tek)<br>`tek` | [Slovenska cesta (start pri Kazini, smer Kongresni trg)](https://maps.google.com/?q=Slovenska%20cesta%20%28start%20pri%20Kazini%2C%20smer%20Kongresni%20trg%29%20Ljubljana) | `0+` | 🆓 |  | `lumpitek_20261017_0930` |
-| 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261017_1000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Zmeda za dva medveda](https://www.sititeater.si/sobotni-dopoldnevi/zmeda-za-dva-medveda/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261017_1100` |
 
 ## 📆 Nedelja, 18. oktober 2026
@@ -72,7 +69,6 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Lutkovno-igrana predstava: Poklic coprnice Mice](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-poklic-coprnice-mice-2/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261024_0000` |
-| 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261024_1000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Picko in Packo](https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261024_1100` |
 | 15:00 | [Praznik sira in vina](https://tdbohinj.si/prireditev/praznik-sira-in-vina/)<br>`festival` | [Dvorana Danica, Bohinjska Bistrica](https://maps.google.com/?q=Dvorana%20Danica%20Bohinjska%20Bistrica) | `0+` | 12 € | daljša pot | `bohinjskabistrica_20261024_1500` |
 | 17:00 | [Calvinove pravljice (5+)](https://napovednik.com/za-otroke/predstave-za-otroke/calvinove-pravljice-5-5977)<br>`pravljice` | [Grajsko gledališče, Ljubljanski grad](https://maps.google.com/?q=Grajsko%20gledali%C5%A1%C4%8De%2C%20Ljubljanski%20grad%20Ljubljana) | `5+` | 5 € | starost? | `grad_20261024_1700` |
@@ -94,7 +90,6 @@
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
 | — | [Gledališka predstava: Tai in mala čarovnica](https://www.kino-bezigrad.si/predstava/gledaliska-predstava-tai-in-mala-carovnica/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261031_0000` |
-| 10:00 | [Kinobalon 'Prvič v kino': Miška gre na goro](https://www.kinodvor.org/prvic-v-kino/)<br>`kino` | [Kinodvor](https://maps.google.com/?q=Kinodvor%20Ljubljana) | `2+` | `?` |  | `kinodvor_20261031_1000` |
 | 15:00 | [B.O.FEjST – jesenski otroški festival](https://www.mojaobcina.si/bohinj/dogodki/jesenski-bofejst.html)<br>`festival` | [Dvorana Danica, Triglavska cesta 60, Bohinjska Bistrica](https://maps.google.com/?q=Dvorana%20Danica%2C%20Triglavska%20cesta%2060%20Bohinjska%20Bistrica) | `0+` | 🆓 | daljša pot | `bohinjskabistrica_20261031_1500` |
 
 ## 📆 Sobota, 7. november 2026
@@ -312,3 +307,4 @@ Skrito na tvojo zahtevo. Rutina jih ne pobira več. Vrneš jih z `/hide-event un
 | `mkl_levstik_20261005_1800` | Ura pravljic | event | 2026-09-25 | not interested |
 | `mkl_podpec_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
 | `mkl_zupancic_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
+| `Kinobalon 'Prvič v kino': Miška gre na goro` | Kinobalon 'Prvič v kino': Miška gre na goro | series | 2026-09-25 | not interested |
