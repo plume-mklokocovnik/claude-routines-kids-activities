@@ -272,7 +272,8 @@ dead, and neither ever justifies a *Do not retry* row. Reach the content through
 join a group, never post.
 
 ### Priority sources
-* **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `ljubljana.si/sl/aktualno/dogodki/`, `dogodki.kulturnik.si/?what=otroci`
+* **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `dogodki.kulturnik.si/?what=otroci`
+* **MOL calendar, every run, fetched with curl:** `curl -sL 'https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100'`. Never the default view, which returns 20 of 54 and paginates. Never the `cat=124` Otroci filter, which returns zero. Sweep the whole list and apply the target-audience rule in §1. Full recipe in [`links.md`](links.md).
 * **Ljubljana venues:** LGL, MKL, Kinodvor Kinobalon, Kino Bežigrad (*Predstave in delavnice*), Mala ulica, MGML, Narodna galerija, SEM, MAO, Cankarjev dom, Ljubljanski grad, ZOO Ljubljana
 * **Sport and movement:** Argeta Junior KoloPark Pokal, Pumpaj Slovenija, Ljubljanski festival športa, MOL *Gremo na brezplačne vadbe*, Šport Ljubljana, Dan slovenskega športa
 * **Runs:** `tekaskeprireditve.si` (Otroški tek and Družinski tek categories), `tekaski-koledar.si`, Lumpi tek

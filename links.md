@@ -63,12 +63,36 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | Napovednik dance | `https://napovednik.com/prireditve/plesna-prireditev` | Dance category | ok |
 | Napovednik sport events | `https://napovednik.com/prireditve/sportna-prireditev` | Sport category | ok |
 | Visit Ljubljana | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/` | Filters: Prost vstop + Za družine + date + Izven Ljubljane | ok |
-| MOL calendar | `https://www.ljubljana.si/sl/aktualno/dogodki/` | KoloPark, festivals, December | ok |
+| MOL calendar | `https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100` | **Every run, via curl.** Municipal calendar. See the recipe below | ok, checked 2026-09-25 |
 | MOL workshop pavilion (lead, unresolved) | `https://www.ljubljana.si/sl/moja-ljubljana/prireditve/ustvarjalne-delavnice-za-otroke/` | Daily free-workshop programme at the Kongresni trg pavilion (weekday 17–18h / weekend 10–12h per search snippets) | 404, confirmed dead on both the 2026-09-22 and 2026-09-24 sweeps despite 5+ URL/search variants each time. `kgbl.si/prizorisce/kongresni-trg/paviljon/` describes an unrelated spring student-concert series, not this. Try MOL's "Oddelek za kulturo" news feed directly next run instead of guessing more slugs |
 | Kulturnik | `https://dogodki.kulturnik.si/?what=otroci` | Culture tagged otroci, `&where=` filters venue | ok |
 | MojaObčina LJ | `https://www.mojaobcina.si/ljubljana/dogodki/` | Zoo and neighbourhood pickup | ok |
 | Kam z mulcem | `https://kamzmulcem.si/` | Editorial round-ups, lead generation only | low |
 | Otroško veselje | `https://otroskoveselje.si/dogaja-se-ljubljana/` | Thin metadata, no date filter | low |
+
+### MOL calendar, fetch recipe
+
+Fetch this one with `curl`, not a page-summarising fetch, and always with `nrOfItems=100`.
+
+```bash
+curl -sL --max-time 40 'https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100'
+```
+
+No user agent is needed here, plain curl returns 200. Event links match
+`/sl/aktualno/dogodki/<slug>` and the detail page carries the date, venue and description.
+
+**Why curl.** The default view returns **20** events and paginates with `?start=20`, `?start=40`.
+`nrOfItems=100` returns the whole list in one request: 54 events on 2026-09-25, with no `start=100`
+link, so one fetch was the complete set. A summarising fetch of the same page returned 10 of
+those 54 and silently dropped the rest, which is the failure this recipe exists to prevent.
+
+**Do not use `cat=124` (Otroci).** The category exists in the filter and returns
+*"Za izbrano prilagoditev izpisa seznama ni rezultatov."* MOL is not tagging anything into it.
+Filtering there yields zero events while the unfiltered list carries real ones, the
+gingerbread-decorating workshop among them. Sweep unfiltered and judge by §1.
+
+Other filter params, GET, all optional: `status` (`ongoing` / `expired`), `date`, `t[]` (district
+tags), `cat`, `nrOfItems` (20 / 50 / 100).
 
 ## Ljubljana venues: stage, screen, story
 
