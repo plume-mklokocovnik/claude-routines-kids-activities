@@ -2,7 +2,7 @@
 
 | Zadnja posodobitev | Aktivni dogodki | Brezplačni | ⭐ Zaznamovani | Okno do | Skriti |
 |---|---|---|---|---|---|
-| 2026-09-24 09:22 | 68 | 10 | 7 | 24. december 2026 | 43 |
+| 2026-09-24 09:22 | 67 | 10 | 5 | 24. december 2026 | 44 |
 
 | Zvrst | Št. | Naslednji |
 |---|---|---|
@@ -11,7 +11,7 @@
 | `festival` | 9 | 06.10. |
 | `koncert` | 6 | 03.10. |
 | `pravljice` | 5 | 10.10. |
-| `tek` | 3 | 17.10. |
+| `tek` | 2 | 17.10. |
 | `kolo` | 1 | 10.10. |
 
 **Opombe:** `starost?` starost nad 4, a verjetno primerno · `daljša pot` nad ~45 min · `razprodano` / `nepotrjeno` / `prijava` veljajo za vstopnino.
@@ -103,7 +103,7 @@
 
 | Ura | Dogodek | Kje | Starost | Cena | Opombe | ID |
 |---|---|---|---|---|---|---|
-| — | ⭐ [Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš](https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261107_0000` |
+| — | [Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš](https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261107_0000` |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Pobegla nogavica Pavla](https://www.sititeater.si/sobotni-dopoldnevi/pobegla-nogavica-pavla/)<br>`lutke` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` | `?` |  | `siti_20261107_1100` |
 | 11:00 | [Tekaški pozdrav jeseni na Krasu](https://www.tekaskipozdrav.si/program)<br>`tek` | [Kobilarna Lipica, Lipica (Sežana)](https://maps.google.com/?q=Kobilarna%20Lipica%20Lipica%20%28Se%C5%BEana%29) | `?` | 35 € | daljša pot | `lipica_20261107_1100` |
 | 15:00 | [Delavnica izdelave čarobnih medenih hišic](https://mgml.si/sl/dogodki/)<br>`delavnica` | [Mestni muzej Ljubljana](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%20Ljubljana) | `?` | `?` | starost? | `mestnimuzej_20261107_1500` |
@@ -114,7 +114,6 @@
 |---|---|---|---|---|---|---|
 | — | [Lutkovna predstava: Pedenjped](https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/)<br>`lutke` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` | 8,10 € | ura ni znana | `kinobezigrad_20261108_0000` |
 | 10:30 | [Šola zmajeslovja: Vrhovna čarovnica](https://dogodki.kulturnik.si/?what=otroci)<br>`pravljice` | [Ljubljanski grad](https://maps.google.com/?q=Ljubljanski%20grad%20Ljubljana) | `?` | `?` |  | `grad_20261108_1030` |
-| 11:00 | ⭐ [Celjski mali maraton – otroški in družinski tek (1.600 m)](https://fatburn.si/celjski-mali-maraton/)<br>`tek` | [Kajak kanu center Špica, Celje](https://maps.google.com/?q=Kajak%20kanu%20center%20%C5%A0pica%20Celje) | `0+` | 37 € | daljša pot | `celje_20261108_1100` |
 
 ## 📆 Ponedeljek, 9. november 2026
 
@@ -315,3 +314,4 @@ Skrito na tvojo zahtevo. Rutina jih ne pobira več. Vrneš jih z `/hide-event un
 | `mkl_podpec_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
 | `mkl_zupancic_20261006_1700` | Ura pravljic | event | 2026-09-25 | not interested |
 | `Kinobalon 'Prvič v kino': Miška gre na goro` | Kinobalon 'Prvič v kino': Miška gre na goro | series | 2026-09-25 | not interested |
+| `celje_20261108_1100` | Celjski mali maraton – otroški in družinski tek (1.600 m) | event | 2026-09-25 | not interested |

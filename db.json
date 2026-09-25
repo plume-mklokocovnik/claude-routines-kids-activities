@@ -766,8 +766,7 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z",
-      "starred": true
+      "first_seen": "2026-09-24T07:22:48Z"
     },
     "93": {
       "event_id": "kinobezigrad_20261108_0000",
@@ -917,25 +916,6 @@
       "is_free": true,
       "price_text": "Brezplačno (sejem, ogled razstave, brezplačen prevoz vse tri dni); harmonikarsko srečanje v nedeljo 10 EUR",
       "url": "https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/",
-      "flags": [
-        "outside_ljubljana",
-        "travel"
-      ],
-      "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z",
-      "starred": true
-    },
-    "108": {
-      "event_id": "celje_20261108_1100",
-      "title": "Celjski mali maraton – otroški in družinski tek (1.600 m)",
-      "start_time": "2026-11-08T11:00:00+01:00",
-      "venue": "Kajak kanu center Špica",
-      "city": "Celje",
-      "category": "tek",
-      "age_min": 0,
-      "is_free": null,
-      "price_text": "Startnina za 1.600 m otroški in družinski tek ni izrecno navedena na uradni strani (cenik prikazuje le startnino za trase 6,2/11/14/21 km, 27-37 EUR odvisno od termina); zunanji viri (iskalni zadetki) ga opisujejo kot brezplačno novost sezone, a to ni potrjeno na strani sami",
-      "url": "https://fatburn.si/celjski-mali-maraton/",
       "flags": [
         "outside_ljubljana",
         "travel"
@@ -1148,7 +1128,8 @@
         "maribor_20261005_0900",
         "mkl_levstik_20261005_1800",
         "mkl_podpec_20261006_1700",
-        "mkl_zupancic_20261006_1700"
+        "mkl_zupancic_20261006_1700",
+        "celje_20261108_1100"
       ],
       "exclude_venues": [],
       "exclude_keywords": [
@@ -1162,7 +1143,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-09-24T07:22:48Z",
-      "total_active_events": 68
+      "total_active_events": 67
     }
   },
   "hidden_events": {
@@ -1681,6 +1662,18 @@
       "url": "https://www.kinodvor.org/prvic-v-kino/",
       "reason": "not interested",
       "hidden_at": "2026-09-25T11:17:21Z"
+    },
+    "44": {
+      "match": "celje_20261108_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "celje_20261108_1100",
+      "title": "Celjski mali maraton – otroški in družinski tek (1.600 m)",
+      "venue": "Kajak kanu center Špica",
+      "start_time": "2026-11-08T11:00:00+01:00",
+      "url": "https://fatburn.si/celjski-mali-maraton/",
+      "reason": "not interested",
+      "hidden_at": "2026-09-25T11:40:57Z"
     }
   }
 }
