@@ -128,7 +128,7 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Hiša eksperimentov | `https://he.si/` | low, 503 on both attempts this sweep (root and `/dogodki/`). Retry next run |
 | Tehniški muzej Bistra | `https://www.tms.si/` | low, 200 OK but fetched content truncated before reaching the events section on every path tried (`/dogodki/`, `/en/events-all-events/`, `/en/events-tms-bistra/`) |
 | Ljubljanski grad | `https://www.ljubljanskigrad.si/` | ok |
-| ZOO news | `https://www.zoo.si/novice` | ok |
+| ZOO news | `https://www.zoo.si/novice` | ⚠️ checked 2026-09-28 — fully client-rendered Next.js app now, both curl and WebFetch return no event content at all. Not yet moved to "do not retry" (previously "ok"); re-verify with a JS-capable fetch next run before reclassifying |
 | ZOO programmes | `https://www.zoo.si/ponudba` | ok |
 | ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, checked 2026-09-24 — consistent with the existing `zoo.si/ponudba/noc-carovnic` seasonal 404 below; likely goes live closer to end of October |
 | Museums of Slovenia | `https://sms-muzeji.si/` | ok, Poletna muzejska noč host |
@@ -169,7 +169,8 @@ Nationwide, not a Ljubljana category, so the parsed calendar and the fixture lis
 | Adria Classic Koper | `https://www.adria-classic.si/` | Runs the Koper rally and the local S.K.O.K. coffee meetups | ⚠️ answered 406 to a bare `curl -A "Mozilla/5.0"`. Add a full browser header set (`Accept: text/html`, a real Chrome UA string) and it returns 200. Do not classify as dead or bot-blocked-forever from the bare attempt alone |
 | Kranjska Gora tourist society, Radio Triglav coverage | `https://radiotriglav.si/` | Local radio site, covered *Blagoslov motorjev* here. Plain `curl` timed out twice on this run, `WebFetch` succeeded where curl did not | ⚠️ curl unreliable, prefer WebFetch for this one |
 | Mustang Club Slovenija | `https://www.mustangclubslovenia.com/` and `/event-list` | The club's own site. Confirmed *Adijo Poletje*'s exact venue, hours and free entry directly, the strongest source in this whole category so far | ok, checked 2026-09-28 via WebFetch |
-| Porsche klub Slovenija, 2026 events | `https://cms.porsche-clubs.com/PorscheClubs/pc_slovenija/pc_main.nsf/web/EC67DD3314613A67C1258D30006D4E60` | The club's full 2026 calendar. Checked specifically for a coastal or Izola date, found none. Kept as the reference to re-check next year rather than a source to sweep every run | ok, checked 2026-09-28 via WebFetch |
+| Porsche klub Slovenija, 2026 events | `https://cms.porsche-clubs.com/PorscheClubs/pc_slovenija/pc_main.nsf/web/EC67DD3314613A67C1258D30006D4E60` | The club's full 2026 calendar. Checked specifically for a coastal or Izola date, found none. Kept as the reference to re-check next year rather than a source to sweep every run | ok, checked 2026-09-28 via WebFetch. Its own Oct/Dec 2026 entries read as private club touring/social events (a regional touring weekend, a members' dinner) rather than a public meetup with visitor access, so none were saved this run |
+| Moto klub MAK, Vodice | `http://www.motoclub-mak.si/` | New find, checked 2026-09-28. Confirms a recurring first-Sunday-of-the-month vintage parts/equipment fair (08:00–12:00) at the Vodice bus station, falling back under the Gostilnica Mak roof in bad weather — the only avto-moto source found so far with an actual published start time rather than `time_unknown` | ok |
 
 ### SVAMZ calendar, fetch recipe
 
@@ -219,7 +220,7 @@ festivals, so it is the biggest single gap the cross-check closed.
 
 | Source | URL | Why it matters | Status |
 |---|---|---|---|
-| **Hiša otrok in umetnosti** | `https://www.hisaotrok.si/koledar_prireditev/list/` | Runs Zmaj kamišibaj, VNLG and Emonska promenada, plus a regular children's programme. Kamišibaj here is the best small-scale format for the youngest | ok |
+| **Hiša otrok in umetnosti** | `https://www.hisaotrok.si/koledar_prireditev/list/` | Runs Zmaj kamišibaj, VNLG and Emonska promenada, plus a regular children's programme. Kamišibaj here is the best small-scale format for the youngest | ⚠️ regression, checked 2026-09-28 — served stale cached content dated 2007–2017 this sweep despite the earlier "ok" rating. Not yet reclassified as dead (only checked once this way); re-verify next run before downgrading further |
 | **Pionirski dom** | `https://pionirski-dom.si/` | Otroški festival gledaliških sanj, Teden otroka open doors, carnival party | ok |
 | **Mini teater** | `https://www.mini-teater.si/si` | Mini poletje, year-round puppet programme on Križevniška and at the castle | low, permanently redirects to `client.si` subdomain which returned empty/unusable content this sweep. Check `napovednik.com/za-otroke` for Mini teater shows instead |
 | **Botanični vrt** | `http://www.botanicni-vrt.si/napovednik-dogodkov` | Monthly event listing, family workshops, Mali raziskovalci | ok. Month sub-pages (`.../napovednik-dogodkov/november-2026-v-botanicnem-vrtu`, `/december-2026-...`) 404 until the month is imminent — seasonal, not dead, checked 2026-09-24 |
