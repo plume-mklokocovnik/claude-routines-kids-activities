@@ -65,6 +65,13 @@ Record `city` on every Pass 2 event and set the `outside_ljubljana` flag.
 | **Kamfest and Veronikin festival** | August. Kamfest 2026: 08-07 to 08-15, children's shows at Barutana 08-08 to 08-14, 17:00–23:00 | Kamnik | Veronikin festival is described as Kamnik's largest children's festival, in Keršmančev park. ⚠️ The medieval-fair framing at Mali grad was not confirmed |
 | **Celjski mali maraton — otroški in družinski tek** | Sunday, 11:00, alongside the main marathon. 2026: 11-08 | Kajak kanu center Špica, Celje | 15th edition, 1.600 m, non-competitive. Confirmed 2026-09-24 via `fatburn.si` (see *Regional sources* below for the access note — this page bot-blocks a plain fetch). Ticket price for this specific distance not published (only the 6.2/11/14/21 km tiers are priced) |
 
+## Verified: Dolenjska
+
+| Fixture | When | Where | Notes |
+|---|---|---|---|
+| **WILD KIDS, Kavbojska dežela** | Early October, 2026: 10-02 to 10-04, starts Friday 14:00 | Kavbojska dežela, Višnja Gora | ★ Children's festival weekend on a working farm. 15 inflatables, animation, Kavboj Pepe, concerts Saturday 15:00 (Firbci) and Sunday 15:00 (Čuki). 10 € per child, parents and under-2s free. Confirmed direct from source 2026-09-28, fetch recipe in [`links.md`](links.md) |
+| **Montwest Country Festival, Kavbojska dežela** | Mid June. 2027: 06-18 to 06-20 | Kavbojska dežela, Višnja Gora | 3-day country festival, western riding, kids' inflatables, on-site camping. Ticket tiers 10 € day / 25 € weekend / 30 € family. Confirmed direct from source 2026-09-28, still well outside any horizon this far ahead |
+
 ## Search patterns, better than listing every venue
 
 Slovenia has dozens of castles and dozens of produce festivals, and they nearly all run the same
@@ -107,6 +114,15 @@ Praznik češenj (Goriška brda, Jun) · Festival lesa (Kočevje) ·
 Noč čarovnic, grad Rakičan (Murska Sobota, Oct) · Soča Outdoor family day (Tolmin, Jul) ·
 Praznik terana in pršuta (Dutovlje, Aug) · Praznik marelic (Vipava) · Grajski večeri (Ribnica)
 
+## Company-run family days, worth a yearly check
+
+Not tied to a region, since the organiser can move the venue. Kept separate from the leads list
+above because it comes with an organiser name and one confirmed past edition, not just a name.
+
+| Fixture | When | Where | Notes |
+|---|---|---|---|
+| **Hura! Družinski dan** (Baby Center) | Once a year, autumn. Only confirmed edition so far: October 2025 | 2025 edition: AMZS varna vožnja polygon, Vransko | One data point, not yet a confirmed recurrence rule. 2025: 450+ families attended despite rain, children's workshops, singing and dance performances, fairytale characters and superheroes, child-car-seat safety demos on the driving polygon, a charity collection for Zlata nit. Search `"Hura! Družinski dan" Baby Center <year>` and check `babycenter.si/blog` each September, since the venue can change year to year and the date is announced short notice |
+
 ---
 
 ## Regional sources
@@ -140,3 +156,5 @@ Praznik terana in pršuta (Dutovlje, Aug) · Praznik marelic (Vipava) · Grajski
 | Kamfest | `https://www.kamfest.org/` |
 | Zgodovinska mesta (heritage town events) | `https://www.zgodovinska-mesta.si/prireditve/` |
 | Planica | `https://www.planica.si/sl/program` |
+| Kavbojska dežela (Višnja Gora) | `https://kavbojska-dezela.si/dogodki/`. Fetch recipe and confirmed events in [`links.md`](links.md) |
+| Baby Center (Hura! Družinski dan) | `https://www.babycenter.si/blog`. No dedicated events page found, sweep the blog and search by name each autumn |

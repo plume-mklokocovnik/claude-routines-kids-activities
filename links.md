@@ -249,6 +249,55 @@ opening hours, take their dated events.
 | Citypark kids | `https://www.citypark.si/si/otroci/` | ok |
 | Citypark shows | `https://www.citypark.si/si/otroci/gledaliske-predstave-za-otroke/` | ok, free theatre first Friday monthly |
 
+## Kavbojska dežela (Višnja Gora), farm venue with its own festivals
+
+Family farm and glamping site in Dolenjska, south of Ljubljana (Leskovec 23, Višnja Gora). Belongs
+with the Dolenjska material in [`regions.md`](regions.md) rather than the Ljubljana venue tables
+above, added here because it publishes its own events through a two-tab Elementor block that a
+plain `curl` reads in full, no JS needed.
+
+| Source | URL | Status |
+|---|---|---|
+| Kavbojska dežela events index | `https://kavbojska-dezela.si/dogodki/` | ok, checked 2026-09-28 |
+
+### Kavbojska dežela, fetch recipe
+
+Test run on 2026-09-28, curl worked on the first try, no bot-block encountered anywhere on the site.
+
+```bash
+curl -sL --max-time 40 'https://kavbojska-dezela.si/dogodki/'
+```
+
+The index page carries two Elementor tabs, *Aktualni dogodki* (current) then *Pretekli dogodki*
+(past). Both are already rendered into the HTML that curl returns, so no headless browser is
+needed. Find the **current** tab by order and by `data-tab`, not by its numeric id: it is the first
+`<div id="elementor-tab-content-N">` in the document, marked `data-tab="1"`. The past-events tab is
+the second one, `data-tab="2"`. The id numbers themselves (`2501` and `2502` on this run) will drift
+if the page is ever rebuilt in Elementor, so match on position, not the literal digits.
+
+Inside the current tab, every event is an `<article class="kdez-dogodek">` whose first
+`<a href="...">` is the event's own detail page. Pull those hrefs, dedupe them, then curl each one
+directly. They are plain WordPress/Elementor posts.
+
+Two ways to read a detail page, cheapest first:
+
+* `<meta property="og:description" content="...">` gives a usable summary, but WordPress truncates
+  it with `…` partway through, so a date or price near the end of a long paragraph can be missing.
+* The full, untruncated body sits inside the widget marked `elementor-widget-theme-post-content`.
+  Strip tags from that block to get the complete text, including the "Kdaj?" and "Vstopnina" lines
+  that carry the actual date, time and price.
+
+Confirmed results from the 2026-09-28 run, all three links found in the current tab at that time:
+
+| Event | URL | When | Notes |
+|---|---|---|---|
+| WILD KIDS | `https://kavbojska-dezela.si/wild-kids-otroska-dogodivscina-v-kavbojski-dezeli/` | 2026-10-02 to 10-04, starts Friday 14:00 | Children's festival weekend. 15 inflatables, animation, Kavboj Pepe, concerts Saturday 15:00 (Firbci) and Sunday 15:00 (Čuki). 10 € per child, parents and under-2s free |
+| Country plesni večeri | `https://kavbojska-dezela.si/country-plesni-veceri-vsak-3-petek-v-mesecu/` | Every 3rd Friday of the month, 18:00 to 24:00 | Adult country-dance night with DJ Sheriff, dinner included, 15 to 20 €. Recurring, but adult-oriented, not a 0-4 fit |
+| Montwest Country Festival 2027 | `https://kavbojska-dezela.si/montwest-country-festival-2027/` | 2027-06-18 to 06-20 | 3-day country festival. Western riding, farrier demos, inflatables for kids, on-site camping. Day ticket 10 €, weekend 25 €, family ticket (2 adults + 2 children) 30 €, under-2s free |
+
+Given the drive from Ljubljana, this only pays off as a destination event, per the rule in
+[`regions.md`](regions.md). Check it monthly rather than sweeping it every run.
+
 ---
 
 ## Maintenance
