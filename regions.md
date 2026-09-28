@@ -123,6 +123,107 @@ above because it comes with an organiser name and one confirmed past edition, no
 |---|---|---|---|
 | **Hura! Družinski dan** (Baby Center) | Once a year, autumn. Only confirmed edition so far: October 2025 | 2025 edition: AMZS varna vožnja polygon, Vransko | One data point, not yet a confirmed recurrence rule. 2025: 450+ families attended despite rain, children's workshops, singing and dance performances, fairytale characters and superheroes, child-car-seat safety demos on the driving polygon, a charity collection for Zlata nit. Search `"Hura! Družinski dan" Baby Center <year>` and check `babycenter.si/blog` each September, since the venue can change year to year and the date is announced short notice |
 
+## Avto-moto: veteran car and motorbike meetups, nationwide
+
+Added 2026-09-28, a new category at the reader's request: their child is excited by cars and
+motorbikes. This is genuinely nationwide, run by a circuit of owners' clubs rather than tied to
+one town, so it sits here even on the one occasion a meeting lands in Ljubljana itself. Source and
+fetch recipe are in [`links.md`](links.md).
+
+The household attends these as **visitors**, not as participants bringing a vehicle, and checks the
+price at the venue itself. Where a source publishes a price it is normally the participant's rally
+fee, worth recording but not a reason to hold the event back.
+
+### Within the current window (checked against 2026-09-28 to 2026-12-28)
+
+| Fixture | When | Where | Notes |
+|---|---|---|---|
+| Usposabljanje motoristov, spretnostna vožnja s starodobnimi avti | 2026-10-04 | Nova Gorica, Mercator center car park (place inferred from the March entry at the same contact) | Skill-driving demonstration with vintage cars, contact `mmozetic@yahoo.com`. Start time unconfirmed |
+| Alfa Rally | 2026-11-28 | Not stated | Alfa Romeo club rally, contact `info@alfa-klub.com`. No venue published yet, too vague to save as an event until one is confirmed closer to the date |
+| Srečanje starodobnih vozil na Štefanovo, Valburga | 2026-12-26 | Šmarna gora and Zbilja area, Medvode | ★ Closest to Ljubljana of the three. St Stephen's Day drive and meet, contact `cmoc96@gmail.com` (C.M.O.C. Šentvid club). Start time unconfirmed |
+
+### The full 2026 calendar, for next year's pattern
+
+Pulled whole from the SVAMZ calendar on 2026-09-28. Most of the year has already passed by the
+time this was written, kept anyway because next year's edition of each fixture tends to land in
+the same month. Re-check the exact date every year rather than assuming it repeats on the same day.
+
+| Month | Fixture | Where |
+|---|---|---|
+| January | GO moto GO (Slovenia + Italy) | not stated |
+| January | Zimski rally za motocikle | Sežana |
+| March | I. srečanje SOLEX mopedov | Vransko |
+| March | Usposabljanje motoristov, spretnostna vožnja s starodobnimi avti | Nova Gorica, Mercator center |
+| April into May | Citroën klub, prvomajsko srečanje | not stated |
+| May | Razstava in parada starodobnih vozil | Naklo |
+| May | Srečanje mopedov do 50 ccm | Stara Gora |
+| May | Srečanje vojaških vozil | Novo mesto |
+| May | Mitteleuropean race | Gorica |
+| May | **Srečanje Tomos oldtimer** | Peskovci, Abraham Garaža |
+| May | Mednarodno srečanje s starodobnimi kolesi in oblačili iz preteklosti | Stara Gora |
+| May | **8. Youngtimer srečanje Ljubljana** (Avtonostalgija 80&90) | Ljubljana, parkirišče Leclerc |
+| May | Days of Thunder | Vista park, Velenje |
+| June | Tradicionalno mednarodno srečanje Laverda | Pri Celju |
+| June | Tradicionalno srečanje starodobnih vozil | Grosuplje |
+| June | Veliko srečanje Alfistov | not stated |
+| June | 15. mednarodno VW Bus srečanje | Vinica |
+| June | **Naj starodobnik Slovenije** | Ormož |
+| June | Poletna muzejska noč s Celjskimi knezi | Celje |
+| June | Citroën mini srečanje | not stated |
+| June | 8. mednarodno srečanje starodobnih vozil, 10. obletnica društva | Starodobniki Miklavž pri Ormožu |
+| June | Aircooled camping | Adlešiči |
+| June | XIII. Pilihov memorial | AMD-DLT Šmartno ob Paki |
+| June | Dan državnosti, potep z vojaškimi vozili | Dravograd |
+| July | 30 let kluba C.M.O.C. | Šentvid |
+| July | Hidroraid Citroën | not stated |
+| July | 18. mednarodno srečanje starodobnih vozil in tehnike | Peskovci |
+| August | Oranje s starodobnimi traktorji | Krčevina |
+| August | V.I.P. srečanje | not stated |
+| August | 9th Cruisers Rockabilly Overdrive | Rancho Village, Dragomelj |
+| August | Let's bug together #32 (VW Hrošč klub) | not stated |
+| August | Mednarodno srečanje starodobnih traktorjev in kmetijske opreme | Stara Gora |
+| August | Vožnja z dirkalnimi in starodobnimi vozili, Grand Prix | Nova Gorica |
+| September | Rally Kras, Brkini | not stated |
+| September | Citroën klub, jesensko mini srečanje | not stated |
+| October | Usposabljanje motoristov, spretnostna vožnja s starodobnimi avti | Nova Gorica |
+| November | Alfa Rally | not stated |
+| December | Srečanje starodobnih vozil na Štefanovo, Valburga | Šmarna gora, Zbilja |
+
+Two entries on that list stand out for a car-and-motorbike-loving toddler specifically:
+
+* **Srečanje Tomos oldtimer**, late May, Peskovci (Abraham Garaža). The one dedicated Tomos meet
+  on the calendar, and Tomos is a Slovenian-made brand, so the mopeds are usually local and
+  familiar-looking rather than exotic. SVAMZ's own history also carries a 2023 Guinness World
+  Record attempt built around a mass gathering of Tomos mopeds, so the club takes the brand
+  seriously (`https://svamz.com/balkan-forum-2023/`, historical, not a current fixture).
+* **8. Youngtimer srečanje Ljubljana** (Avtonostalgija 80&90), late May, parkirišče Leclerc,
+  Ljubljana. Eight editions in and inside the city itself, the best-placed entry on this whole
+  list once next May comes into the window. Worth a line in `annual.md` at that point.
+
+Also worth knowing: **Auto Motor Show Slovenija** is the country's biggest ticketed car show, held
+2026-05-16/17 at the Celjski sejem after 15 years back in Ljubljana the year before. Paid, free
+entry stops at age 7. See [`links.md`](links.md).
+
+### Town-anchored leads: Ljubljana, Portorož, Koper, Izola, Bled, Kranjska Gora
+
+Researched 2026-09-28 at the reader's request, they remember seeing car and motorbike meets in
+these six towns and want them checked every year rather than rediscovered from scratch. Confidence
+varies a lot by town, noted per row. Add the queries under each town to the Pass 5 sweep.
+
+| Town | Fixture | When | Notes |
+|---|---|---|---|
+| **Ljubljana** | 8. Youngtimer srečanje Ljubljana (Avtonostalgija 80&90) | Late May | Already listed above. `youngtimer srečanje Ljubljana <leto>` |
+| **Ljubljana** | Starodobniški klepet ob kavi (S.K.O.K.), Oldtimer klub Škofljica | 2026 edition: 14 March, in front of E.Leclerc, Trgovski center Rudnik | A casual, recurring oldtimer coffee meetup, confirmed from the Zveza SVS 2026 calendar PDF. Rudnik is inside the city. `starodobniški klepet ob kavi Ljubljana Rudnik` |
+| **Portorož / Piran** | OneLife, "Portorose to Porto" | 2026: 19 to 21 June, main public day Saturday 20 June, Tartini trg, Piran | ★★ Confirmed **free**, straight from the organiser's own event page: "Visitors will have the opportunity to admire the cars up close and meet the drivers free of charge." 60+ Ferrari, Lamborghini and Porsche cars staged before departing for Monaco. Best-confirmed find of this whole pass. `OneLife Portorož Piran <leto>` |
+| **Portorož / Piran** | Harley-Davidson European H.O.G. rally | 2026: early summer, roughly 29th edition | Large touring motorcycle rally, thousands of riders. The European edition moves host city each year, so do not assume Portorož repeats without checking. One earlier local edition was reported cancelled (`eMORJE.com`), so confirm before promising it. `Harley Davidson srečanje Portorož <leto>`, `H.O.G. European rally <leto>` |
+| **Portorož** | Ferrari club showcase, Marina Portorož | Reported June 2026, exact recurrence unconfirmed | ~30 Ferraris on display at the marina, may be the same OneLife weekend or a separate club visit, not disambiguated this pass. `Ferrari klub Portorož marina` |
+| **Koper** | 28. Adria Classic (Adria Classic Koper, 30 let društva, 10. Valterjev memorial) | 2026: Friday 15 and Saturday 16 May | ★ Confirmed from the Zveza SVS 2026 calendar PDF. 100+ classic vehicles, 1900s to late 1980s, touring the coast and Slovenian Istria interior. Route explicitly names Koper, Izola and Piran municipalities | `Adria Classic Koper <leto>` |
+| **Koper** | Starodobniški klepet ob kavi (S.K.O.K.), Adria Classic Koper | 2026 edition: 14 March, Titov trg and Verdijeva ulica | ★ Confirmed free and public from a 2023 write-up of an earlier edition: 80+ classic cars, 8:30 to 12:00, owners on hand to answer questions, a "late breakfast" laid on by the local tourism office. Read as a recurring pattern rather than a single date | `starodobniški klepet ob kavi Koper Titov trg` |
+| **Izola** | **Adijo Poletje**, Mustang Club Slovenija | 2026: 12 September, 10:00 to 23:50, San Simon Resort, Simonov zaliv (Morova ulica 6a) | ★★ Confirmed **free** from the club's own site and press coverage. 4th edition, the biggest Mustang gathering in the country, 130 Mustangs from Slovenia, Austria, Croatia and Hungary, 5,000+ visitors, live music, charity Mustang rides. ⚠️ **First time on the coast**, the first three editions were held elsewhere (location not identified this pass), so do not assume Izola repeats next year without checking. The club also runs a **spring meeting** (~100 Mustangs, 3,000+ visitors in 2026), venue not identified, worth its own search. `Adijo Poletje Mustang Izola <leto>`, `Mustang klub Slovenija spomladansko srečanje <leto>` |
+| **Izola** | Porsche club meetup | Not found | Checked the Porsche Klub Slovenija 2026 calendar directly (`porsche-klub-slovenija.si` event list): Katarina hillclimb, Dolenjska, Grobnik, Dalmacija (Croatia), Prekmurje, Villa Fabiani, Koroška. Nothing on the coast and nothing in Izola specifically. Re-check next year rather than assuming this is permanent | `Porsche klub Slovenija Izola`, `Porsche klub Slovenija obala` |
+| **Bled** | Nothing confirmed this pass | not stated | Bled's own events page (`bled.si/sl/prireditve/`) carried no car or motorbike keyword on this sweep. The reader's memory of a Bled event was not tracked down, keep searching rather than dropping it | `starodobniki srečanje Bled`, `oldtimer rally Bled avtomobili` |
+| **Kranjska Gora** | Blagoslov motorjev | Annual, May (2025 edition: 11 May) | ★ Confirmed annual tradition, organised by the local tourist society (Turistično društvo Kranjska Gora). Free, public, town square in front of the church, no registration mentioned. Priest blesses the bikes, riders socialise after | `blagoslov motorjev Kranjska Gora <leto>` |
+
 ---
 
 ## Regional sources

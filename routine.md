@@ -100,6 +100,7 @@ Record the matching value in the event's `category` field.
 | `zoo` | Zoo and nature-conservation events |
 | `festival` | Family and children's festivals, seasonal city programs, and free-entry days/weeks at museums, galleries and memorial houses |
 | `pop_up` | Shopping-centre stages, street pop-ups, market events |
+| `avto_moto` | Veteran and youngtimer car/motorbike meetups, Tomos moped gatherings, car and moto shows |
 
 ### ❌ Strict Exclusion Rules (Do Not Scrape/Save)
 1. **Recurring Courses & Subscriptions:** Any multi-week course, semester enrollment, or subscription program.
@@ -316,6 +317,34 @@ Apply the same confirmation rule as 3B: a free-entry promotion is often announce
 venue's Facebook page, so confirm the dates against the venue's own site before saving, and put
 that URL in `url`.
 
+### Pass 5 - veteran car and motorbike meetups (avto-moto)
+
+Added at the reader's request, their child is excited by cars and motorbikes. Runs Slovenia-wide
+with no destination-value filter. Pass 2's "worth the trip on its own" test does not apply here,
+the category exists specifically so a small child can go and look at old cars and motorbikes up
+close, which is the whole point regardless of distance. Still set `city`, `outside_ljubljana` and
+`travel` as usual so the reader can see what the trip costs.
+
+These are owners'-club meetings, attended here as a **visitor**, not as a participant bringing a
+vehicle. The household checks the price itself, so do not gate a save on confirming `is_free`.
+Save the event, record whatever price text the source publishes (it is usually the participant's
+rally fee, not a spectator charge), and let the reader judge.
+
+```
+srečanje starodobnikov <mesec> 2026
+starodobna vozila srečanje Slovenija
+motoristično srečanje starodobniki Slovenija
+Tomos srečanje mopedi
+youngtimer srečanje Slovenija
+oldtimer rally Slovenija <mesec> 2026
+```
+
+Read the SVAMZ full-year calendar before searching, it is the single best-structured source and it
+already spans the whole year: `https://svamz.com/koledar-dogodkov/`. Fetch recipe in
+[`links.md`](links.md), the parsed 2026 calendar and the closest-in fixtures in
+[`regions.md`](regions.md) under *Avto-moto*, including the town-anchored queries for Ljubljana,
+Portorož, Koper, Izola, Bled and Kranjska Gora.
+
 ### Priority sources
 * **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `dogodki.kulturnik.si/?what=otroci`
 * **MOL calendar, every run, fetched with curl:** `curl -sL 'https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100'`. Never the default view, which returns 20 of 54 and paginates. Never the `cat=124` Otroci filter, which returns zero. Sweep the whole list and apply the target-audience rule in §1. Full recipe in [`links.md`](links.md).
@@ -324,6 +353,7 @@ that URL in `url`.
 * **Sport and movement:** Argeta Junior KoloPark Pokal, Pumpaj Slovenija, Ljubljanski festival športa, MOL *Gremo na brezplačne vadbe*, Šport Ljubljana, Dan slovenskega športa
 * **Runs:** `tekaskeprireditve.si` (Otroški tek and Družinski tek categories), `tekaski-koledar.si`, Lumpi tek
 * **Pop-ups:** Citypark, ALEJA, Supernova, BTC. Published as news posts a week ahead at most, so sweep weekly
+* **Avto-moto:** SVAMZ full-year calendar (`svamz.com/koledar-dogodkov`), Zveza SVS news (`zveza-svs.si/obvestila`). Fixtures and the recurrence pattern in [`regions.md`](regions.md)
 
 ### Seasonal checks
 Run the matching query when the month comes round. The full table is in `sources.md`:

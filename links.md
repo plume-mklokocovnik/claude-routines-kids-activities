@@ -152,6 +152,46 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Plesna zveza Slovenije | `https://www.plesna-zveza.si/` | ok, skews school-age |
 | Parada plesa | `https://www.paradaplesa.si/` | ok, news portal not a calendar |
 
+## Avto-moto: veteran car and motorbike meetups
+
+Added 2026-09-28 at the reader's request, their child is excited by cars and motorbikes.
+Nationwide, not a Ljubljana category, so the parsed calendar and the fixture list live in
+[`regions.md`](regions.md) rather than here or in `annual.md`.
+
+| Source | URL | Use | Status |
+|---|---|---|---|
+| SVAMZ full-year calendar | `https://svamz.com/koledar-dogodkov/` | The single best source. One plain-text list of nearly every veteran car and motorbike meeting in the country, already covering the whole year | ok, checked 2026-09-28 |
+| Zveza SVS news | `https://www.zveza-svs.si/obvestila/` | A second, older association's blog. Reports *after* an event with attendance numbers rather than announcing it ahead, so read it for confirmation and colour, not as a forward calendar | ok, checked 2026-09-28 |
+| Oldtimer Club Postojna | `https://oldtimer-postojna.si/` | Runs the Postojna international meeting, late June | ok |
+| Auto Motor Show Slovenija | `https://www.automotorshow.si/` | The country's biggest ticketed motor show, moved from Ljubljana to the Celjski sejem for 2026 (16-17 May). Paid, free entry only for children up to 7 | ok, priced attraction rather than a free one |
+| Zveza SVS 2026 calendar PDF | `https://www.zveza-svs.si/wp-content/uploads/2026/01/KOLEDAR-Zveze-SVS-2026.pdf` | A second, more detailed full-year calendar, member-club table format, PDF not HTML. Confirmed the Koper and Ljubljana (Rudnik) S.K.O.K. dates and the Adria Classic Koper date. Requires `pdftotext -layout`, plain `curl` alone is not enough | ok, checked 2026-09-28 |
+| Portorož & Piran events | `https://www.portoroz.si/en/events/` | Official tourist board calendar, English-language pages carry the full programme here (an exception to the usual `/sl/` preference). Found OneLife 2026 with a confirmed free-entry line | ok, checked 2026-09-28 |
+| Adria Classic Koper | `https://www.adria-classic.si/` | Runs the Koper rally and the local S.K.O.K. coffee meetups | ⚠️ answered 406 to a bare `curl -A "Mozilla/5.0"`. Add a full browser header set (`Accept: text/html`, a real Chrome UA string) and it returns 200. Do not classify as dead or bot-blocked-forever from the bare attempt alone |
+| Kranjska Gora tourist society, Radio Triglav coverage | `https://radiotriglav.si/` | Local radio site, covered *Blagoslov motorjev* here. Plain `curl` timed out twice on this run, `WebFetch` succeeded where curl did not | ⚠️ curl unreliable, prefer WebFetch for this one |
+| Mustang Club Slovenija | `https://www.mustangclubslovenia.com/` and `/event-list` | The club's own site. Confirmed *Adijo Poletje*'s exact venue, hours and free entry directly, the strongest source in this whole category so far | ok, checked 2026-09-28 via WebFetch |
+| Porsche klub Slovenija, 2026 events | `https://cms.porsche-clubs.com/PorscheClubs/pc_slovenija/pc_main.nsf/web/EC67DD3314613A67C1258D30006D4E60` | The club's full 2026 calendar. Checked specifically for a coastal or Izola date, found none. Kept as the reference to re-check next year rather than a source to sweep every run | ok, checked 2026-09-28 via WebFetch |
+
+### SVAMZ calendar, fetch recipe
+
+Plain `curl` returns the whole page, no bot-block, no JS needed.
+
+```bash
+curl -sL --max-time 30 -A "Mozilla/5.0" 'https://svamz.com/koledar-dogodkov/'
+```
+
+The page is a single long WordPress post: a month heading (`JANUAR`, `MAREC`, and so on, some
+months are skipped entirely when nothing is on) followed by one line per event, each carrying a
+date, a name, a place and a contact email or phone number in parentheses. There is no per-event
+detail page and no structured markup. Strip tags and read it as plain text, there is nothing to
+select more precisely than that.
+
+**What it never states:** a start time, or a price for a non-participating visitor. The household
+attends these as a visitor rather than as a participant bringing a vehicle, and checks the price at
+the venue itself, so this is not a reason to hold an event back. Where a price is actually given,
+on this run it was always the **participant's rally fee** for someone bringing a vehicle to join
+the drive (Lakeness 2026: 25 € driver, 15 € passenger, 5 € for judging-only entry), which is worth
+recording as `price_text` but is not what a visitor pays.
+
 ## Festivals and seasonal
 
 | Event | URL | Month | Status |
