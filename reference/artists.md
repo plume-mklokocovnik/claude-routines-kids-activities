@@ -1,7 +1,7 @@
 # Artist Watchlist — Children's Concerts
 
 The named performers the Pass 3B sweep checks one by one, after the generic free-concert sweep
-in Pass 3A has run. `routine.md` §2 defines the two sweeps. This file is the addresses and the
+in Pass 3A has run. [discovery.md](discovery.md) §2 defines the two sweeps. This file is the addresses and the
 failure modes.
 
 **Verified:** 2026-09-22. Every non-social URL below was status-checked with a real HTTP request.

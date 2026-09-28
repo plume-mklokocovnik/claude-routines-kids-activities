@@ -3,8 +3,8 @@
 
 Starring is not hiding: the row stays in `currently_active.md`, it just gets a
 ⭐ marker in front of its title so it is easy to spot among everything else.
-There is no separate audit table for it — the flag lives on the event itself
-in `db.json`, so it naturally disappears when the event expires and is pruned.
+The flag lives on the event itself in `db.json` and is retained when the event
+expires or is hidden. Source refreshes never overwrite user selections.
 
     python3 scripts/star_event.py star <query>
     python3 scripts/star_event.py unstar <query>
@@ -15,12 +15,13 @@ ambiguous fragment lists the candidates and changes nothing.
 """
 
 import argparse
-import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render  # noqa: E402
+import state
+from state import find, load, save
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
@@ -29,30 +30,6 @@ DB_PATH = os.path.join(REPO, "db.json")
 def active_list_path(db_path):
     """Keep the rendered list next to the database it came from."""
     return os.path.join(os.path.dirname(os.path.abspath(db_path)), "currently_active.md")
-
-
-def load(path):
-    with open(path, encoding="utf-8") as handle:
-        return json.load(handle)
-
-
-def save(path, db):
-    with open(path, "w", encoding="utf-8") as handle:
-        json.dump(db, handle, ensure_ascii=False, indent=2)
-        handle.write("\n")
-
-
-def find(db, query):
-    """Match a query against event_id, title or venue of the active events."""
-    events = db.get("events", {})
-    lowered = query.lower()
-    exact = [(k, e) for k, e in events.items() if (e.get("event_id") or "").lower() == lowered]
-    if exact:
-        return exact
-    return [(k, e) for k, e in events.items()
-            if lowered in (e.get("title") or "").lower()
-            or lowered in (e.get("event_id") or "").lower()
-            or lowered in (e.get("venue") or "").lower()]
 
 
 def describe(event):
@@ -110,7 +87,7 @@ def cmd_unstar(args):
 
 def cmd_list(args):
     db = load(args.db)
-    starred = [e for e in db.get("events", {}).values() if e.get("starred")]
+    starred = [event for event in state.active_events(db) if event.get("starred")]
     if not starred:
         print("Nothing is starred.")
         return 0
@@ -138,7 +115,12 @@ def main():
     listing.set_defaults(func=cmd_list)
 
     args = parser.parse_args()
-    sys.exit(args.func(args))
+    try:
+        with state.locked(args.db):
+            result = args.func(args)
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"Error: {error}\n")
+    sys.exit(result)
 
 
 if __name__ == "__main__":

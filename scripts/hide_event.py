@@ -2,7 +2,7 @@
 """Hide an event from the active list and keep a permanent reference to it.
 
 Hiding does three things at once, so a hidden event never comes back on its own:
-drops the row from `events`, writes the matching rule into `user_rules`, and
+marks the retained row hidden, writes the matching rule into `user_rules`, and
 records why in `hidden_events`. The routine reads `user_rules` on every sweep,
 so the event is not re-discovered, not re-saved and not re-listed.
 
@@ -15,13 +15,14 @@ ambiguous fragment lists the candidates and changes nothing.
 """
 
 import argparse
-import json
 import os
 import sys
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render  # noqa: E402
+import state
+from state import find, load, next_key, save
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
@@ -38,38 +39,8 @@ def active_list_path(db_path):
     return os.path.join(os.path.dirname(os.path.abspath(db_path)), "currently_active.md")
 
 
-def load(path):
-    with open(path, encoding="utf-8") as handle:
-        return json.load(handle)
-
-
-def save(path, db):
-    db.setdefault("system_state", {}).setdefault("1", {})["total_active_events"] = len(db.get("events", {}))
-    with open(path, "w", encoding="utf-8") as handle:
-        json.dump(db, handle, ensure_ascii=False, indent=2)
-        handle.write("\n")
-
-
-def next_key(table):
-    keys = [int(k) for k in table if str(k).isdigit()]
-    return str(max(keys) + 1 if keys else 1)
-
-
 def rules(db):
     return db.setdefault("user_rules", {}).setdefault("1", {})
-
-
-def find(db, query):
-    """Match a query against event_id, title or venue of the active events."""
-    events = db.get("events", {})
-    lowered = query.lower()
-    exact = [(k, e) for k, e in events.items() if (e.get("event_id") or "").lower() == lowered]
-    if exact:
-        return exact
-    return [(k, e) for k, e in events.items()
-            if lowered in (e.get("title") or "").lower()
-            or lowered in (e.get("event_id") or "").lower()
-            or lowered in (e.get("venue") or "").lower()]
 
 
 def describe(event):
@@ -94,6 +65,12 @@ def cmd_hide(args):
         return 2
 
     seed = sorted(matches, key=lambda m: m[1].get("start_time") or "")[0][1]
+    scope_field = {"series": "title", "venue": "venue"}.get(args.scope)
+    if scope_field and len({item[scope_field].casefold() for _, item in matches}) > 1:
+        print(f"Ambiguous {args.scope}. Use one exact event_id to select the scope:", file=sys.stderr)
+        for _, item in matches:
+            print(f"  {describe(item)}", file=sys.stderr)
+        return 2
 
     if args.scope == "event":
         match_value = seed.get("event_id")
@@ -112,11 +89,13 @@ def cmd_hide(args):
     if match_value not in rule_list:
         rule_list.append(match_value)
 
-    for key, _ in removed:
-        db["events"].pop(key, None)
+    for _, event in removed:
+        if event.get("status", "active") == "active":
+            event["status"] = "hidden"
 
     hidden = db.setdefault("hidden_events", {})
-    already = [h for h in hidden.values() if h.get("match") == match_value and h.get("scope") == args.scope]
+    already = [h for h in hidden.values() if h.get("match") == match_value
+               and h.get("scope") == args.scope and h.get("active", True)]
     if not already:
         hidden[next_key(hidden)] = {
             "match": match_value,
@@ -135,7 +114,7 @@ def cmd_hide(args):
     render.main_write(args.db, active_list_path(args.db))
 
     print(f"Hidden ({args.scope}): {match_value}")
-    print(f"Removed {len(removed)} event(s) from db.json, added to user_rules.{field}.")
+    print(f"Hidden {len(removed)} event(s), retained all records, added to user_rules.{field}.")
     for _, event in sorted(removed, key=lambda m: m[1].get("start_time") or ""):
         print(f"  - {describe(event)}")
     return 0
@@ -145,9 +124,12 @@ def cmd_unhide(args):
     db = load(args.db)
     hidden = db.get("hidden_events", {})
     lowered = args.query.lower()
-    matches = [(k, h) for k, h in hidden.items()
-               if lowered in str(h.get("match", "")).lower()
-               or lowered == str(h.get("event_id", "")).lower()]
+    active = [(key, item) for key, item in hidden.items() if item.get("active", True)]
+    exact = [(key, item) for key, item in active
+             if lowered == str(item.get("match", "")).lower()
+             or lowered == str(item.get("event_id", "")).lower()]
+    matches = exact or [(key, item) for key, item in active
+                        if lowered and lowered in str(item.get("match", "")).lower()]
 
     if not matches:
         print(f"Nothing hidden matches {args.query!r}.", file=sys.stderr)
@@ -163,19 +145,26 @@ def cmd_unhide(args):
     rule_list = rules(db).setdefault(field, [])
     if item.get("match") in rule_list:
         rule_list.remove(item["match"])
-    hidden.pop(key, None)
+    item["active"] = False
+    item["restored_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    restored = 0
+    clock = state.timestamp(db["system_state"]["1"]["last_run"])
+    for event in db["events"].values():
+        if event.get("status") == "hidden" and not state.hidden_reason(db, event):
+            event["status"] = "expired" if state.expired(event, clock) else "active"
+            restored += 1
 
     save(args.db, db)
     render.main_write(args.db, active_list_path(args.db))
 
     print(f"Restored ({item.get('scope')}): {item.get('match')}")
-    print("The event is not back in db.json yet. The next sweep will re-discover it if it is still listed.")
+    print(f"Restored {restored} retained record(s). Legacy deleted rows need re-discovery in a later sweep.")
     return 0
 
 
 def cmd_list(args):
     db = load(args.db)
-    hidden = db.get("hidden_events", {})
+    hidden = {key: item for key, item in db.get("hidden_events", {}).items() if item.get("active", True)}
     if not hidden:
         print("Nothing is hidden.")
         return 0
@@ -206,7 +195,12 @@ def main():
     listing.set_defaults(func=cmd_list)
 
     args = parser.parse_args()
-    sys.exit(args.func(args))
+    try:
+        with state.locked(args.db):
+            result = args.func(args)
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"Error: {error}\n")
+    sys.exit(result)
 
 
 if __name__ == "__main__":

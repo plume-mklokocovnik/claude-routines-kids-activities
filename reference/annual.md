@@ -19,7 +19,7 @@ Run this before touching any fixture below. It is the whole point of the file.
 
 ```
 window_start = now
-window_end   = now + 3 months          # the horizon from routine.md §1
+window_end   = now + 3 calendar months
 ```
 
 For each fixture, build its concrete date for the current year from the rule in the table.
@@ -38,7 +38,8 @@ Two extra rules:
 * **Lead time.** Where the *Book* column has a value, that is when tickets or registration open.
   When `now` is inside 7 days of that date, surface the fixture even if the event itself sits
   beyond the horizon. Bobri's free tickets disappear within hours, and Lumpi tek fills up.
-  Missing the booking date makes the event itself worthless.
+  Missing the booking date makes the event itself worthless. Record these early
+  booking reminders as run leads, not active database events outside the horizon.
 * **Moveable feasts.** Rows marked `moveable` are tied to Easter and shift by weeks each year.
   Never compute these from a fixed month and day. Look them up.
 
@@ -179,7 +180,7 @@ The venue may exist while the specific annual event does not.
 
 ## Out of scope under the existing rules
 
-Real, but excluded by `routine.md` §1. Listed so nobody re-adds them.
+Real, but excluded by [discovery.md](discovery.md) §1. Listed so nobody re-adds them.
 
 | Item | Rule it breaks |
 |---|---|

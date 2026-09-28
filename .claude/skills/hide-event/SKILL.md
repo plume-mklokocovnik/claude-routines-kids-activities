@@ -14,12 +14,14 @@ Three changes, all in `db.json`, all in one command:
 
 | Where | What it does |
 |---|---|
-| `events` | The matching row is dropped, so the event leaves `currently_active.md` |
+| `events` | The complete row stays, with `status: hidden`, so it leaves the calendar |
 | `user_rules` | The matching rule stops the next sweep from re-saving it |
 | `hidden_events` | The permanent reference: what was hidden, which scope, when and why |
 
-`routine.md` §3 applies `user_rules` before anything is written, so a hidden event is never
-re-discovered, never re-saved and never re-listed. Nothing expires on its own.
+The [run workflow](../../../routine.md) applies exclusions before saving candidates.
+The original event, its star and the audit reference are retained. Rules hold
+until the user restores them. Legacy hidden occurrences also match by title,
+time and venue when a new ID would otherwise bypass the rule.
 
 ## Run it
 
@@ -30,7 +32,7 @@ by hand. The script keeps the three tables and the rendered list consistent.
 python3 scripts/hide_event.py hide <query> [--scope event|series|venue] [--reason "..."]
 ```
 
-`<query>` is an `event_id` from the **ID** column of `currently_active.md`, or a
+`<query>` is an `event_id` printed below a title in `currently_active.md`, or a
 case-insensitive fragment of the title.
 
 ## Pick the scope
@@ -54,7 +56,7 @@ rather than the one date.
 3. **Several events at once** means one call per hide. Run them in sequence and report the total.
 4. **Confirm before a `venue` hide** unless the user named the venue themselves. It can drop a
    dozen events in one go.
-5. **Report what changed** in a table: ID, title, scope, count of rows removed.
+5. **Report what changed**: ID, title, scope and count of events hidden. No rows are deleted.
 
 ## Unhide and inspect
 
@@ -63,14 +65,14 @@ python3 scripts/hide_event.py unhide <query>   # drop the rule, let it come back
 python3 scripts/hide_event.py list             # everything currently hidden
 ```
 
-An unhide removes the rule but does not restore the row, because the original listing may be
-gone. Tell the user the next sweep will pick it up again if the event is still published.
+An unhide removes the rule, marks its audit reference inactive and restores retained
+records as of the last sweep clock, unless another rule still excludes them. It keeps
+the audit history. References created by older versions may have no event row to
+restore. Those details need re-discovery, not reconstruction from guesses.
 
-## Commit
+## Verify and publish
 
-Changes to `db.json` and `currently_active.md` are committed like any other change in this repo:
-Conventional Commits, no Jira ticket, no attribution.
-
-```bash
-git add db.json currently_active.md && git commit -m "chore: Hide event <id>"
-```
+Run `python3 scripts/run.py check`. Do not modify the historical sweep report for
+a preference change. Commit or push only when explicitly authorized. Follow
+[AGENTS.md](../../../AGENTS.md) for publication. An appropriate commit subject is
+`chore: Hide event <id>`, with no Jira ticket or attribution.

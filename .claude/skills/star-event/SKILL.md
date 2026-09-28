@@ -5,14 +5,14 @@ description: Mark, or un-mark, an event in the kids-activities list as intereste
 
 # Star an event
 
-Starring is not hiding. The row stays exactly where it is in `currently_active.md`, it just
-gets a ⭐ in front of its title so it stands out among everything else on the list.
+Starring keeps the event in its chronological position and adds it to the ⭐
+shortlist at the top of `currently_active.md`.
 
 ## What a star actually writes
 
-One change, in `db.json`: the matching event in `events` gets `"starred": true`. There is no
-separate audit table like `hidden_events` has, on purpose, because a star only ever needs to
-outlive the event itself. When `routine.md` §5 prunes an expired event, its star goes with it.
+The matching event gets `"starred": true`. Source refreshes cannot overwrite it.
+Expiry and hiding keep the complete event and its star. The shortlist contains
+only active, non-excluded events. No separate preference database is needed.
 
 ## Run it
 
@@ -23,7 +23,7 @@ by hand. The script keeps `db.json` and the rendered list consistent.
 python3 scripts/star_event.py star <query>
 ```
 
-`<query>` is an `event_id` from the **ID** column of `currently_active.md`, or a
+`<query>` is an `event_id` printed below a title in `currently_active.md`, or a
 case-insensitive fragment of the title or venue.
 
 ## Working rules
@@ -43,11 +43,9 @@ python3 scripts/star_event.py unstar <query>   # drop the ⭐
 python3 scripts/star_event.py list             # everything currently starred
 ```
 
-## Commit
+## Verify and publish
 
-Changes to `db.json` and `currently_active.md` are committed like any other change in this repo:
-Conventional Commits, no Jira ticket, no attribution.
-
-```bash
-git add db.json currently_active.md && git commit -m "chore: Star event <id>"
-```
+Run `python3 scripts/run.py check`. Do not modify the historical sweep report for
+a preference change. Commit or push only when explicitly authorized. Follow
+[AGENTS.md](../../../AGENTS.md) for publication. An appropriate commit subject is
+`chore: Star event <id>`, with no Jira ticket or attribution.

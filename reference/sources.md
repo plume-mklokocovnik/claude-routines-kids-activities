@@ -1,7 +1,7 @@
 # Source Registry: Toddler Activities, Ljubljana → Slovenia
 
 Research pass: 2026-09-21. Every URL below was reachability-checked (HTTP 200) on that date.
-This file is the lookup table for `routine.md` §2. Update it when a source dies or a new one appears.
+This file is the lookup table for [discovery.md](discovery.md) §2. Update it when a source dies or a new one appears.
 For a flat, token-cheap list of every URL with its status, see [`links.md`](links.md). Read that
 first on a normal run. Come here when you need the reasoning, cadence or age-fit behind a source.
 
@@ -53,7 +53,7 @@ skews older than the target band, it is marked ⚠️ below.
 1. **Everything is filed under *abonma*.** The genre field reads *Gledališki abonma* and each
    description says *predstava je del abonmaja*. A literal match on exclusion keyword `abonma`
    deletes the entire venue. It should not: tickets are sold per show, 8,10 € at the last check.
-   `routine.md` §1 rule 1 now carries the single-ticket carve-out for exactly this. Take the
+   [discovery.md](discovery.md) §1 rule 1 now carries the single-ticket carve-out for exactly this. Take the
    dated shows, leave the `ABONMA 2026/2027` enrollment page.
 2. **No start times anywhere the sweep can read them.** The index gives `V kinu od: DD.MM.YYYY`
    and the detail page adds age, price and duration, but the time sits inside the booking widget
@@ -138,7 +138,7 @@ programme **Grbine so fine** is free animation for ages 4–12 with licensed ins
 ⚠️ **Rules conflict, needs a decision.** Open-door days are the exact thing the user asked to
 capture, but clubs advertise them on pages that also push enrollment, so the words `vpis`,
 `vpisi` and `tečaj` sit right next to the free session. A naive keyword exclusion throws away
-the whole category. The fix, now written into `routine.md` §1, is a carve-out: keep an item when
+the whole category. The fix, now written into [discovery.md](discovery.md) §1, is a carve-out: keep an item when
 it has a concrete date **and** start time **and** a free-trial marker
 (`dan odprtih vrat`, `brezplačna vadba`, `predstavitvena vadba`, `preizkusi`, `brezplačno preizkusite`),
 even when enrollment language appears elsewhere on the page. Exclude the enrollment itself.
@@ -209,7 +209,7 @@ because the reader has a child there.
 
 ### 🎤 Concerts and children's music
 
-Two sweeps, defined in `routine.md` §2 Pass 3. The per-artist addresses and the social-media
+Two sweeps, defined in [discovery.md](discovery.md) §2 Pass 3. The per-artist addresses and the social-media
 confirmation rule are in [`artists.md`](artists.md).
 
 | Source | URL | Notes |
@@ -256,7 +256,7 @@ Corrections that came out of that research and matter here:
 
 ## Search queries
 
-Every query on this page is Slovenian, and that is a rule rather than a habit. `routine.md` §2
+Every query on this page is Slovenian, and that is a rule rather than a habit. [discovery.md](discovery.md) §2
 *Language and locale* has the full version: query in Slovenian, use Slovenian month names, anchor
 with `site:.si` when results drift international, prefer `/sl/` over `/en/` on bilingual sites,
 and save titles in the language they were published in. Do not add English variants to these

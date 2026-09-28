@@ -269,7 +269,7 @@ a *Do not retry* row. The workaround is in [`artists.md`](artists.md).
 
 A different shape of source from everything above. The page is a news feed, not a calendar, and
 the overwhelming majority of what it carries is the daytime programme, which fails the attendance
-test in `routine.md` §1 rule 2. Sweep it for the handful of family events and ignore the rest.
+test in [discovery.md](discovery.md) §1 rule 2. Sweep it for the handful of family events and ignore the rest.
 The recurring calendar is in [`annual.md`](annual.md), the filter is in [`sources.md`](sources.md).
 
 | Source | URL | Use | Status |
