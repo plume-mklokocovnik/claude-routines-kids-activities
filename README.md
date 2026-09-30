@@ -3,7 +3,7 @@
 Scheduled activities for Ljubljana and family trips across Slovenia. Discovery
 uses public event sources. Python scripts own state changes and Markdown output.
 
-Open [the activity calendar](currently_active.md) or [the latest sweep report](diff.md).
+Open [the overview](overview.md) or [the latest sweep report](diff.md).
 
 ## Layout
 
@@ -12,6 +12,7 @@ Open [the activity calendar](currently_active.md) or [the latest sweep report](d
 | [AGENTS.md](AGENTS.md) | Short entry point for any agent |
 | [routine.md](routine.md) | Periodic discovery runbook |
 | [reference/](reference/README.md) | Discovery policy, URLs, fixtures and artist watchlist |
+| [overview.md](overview.md) | Current state grouped by swipe category, rendered from the database |
 | [db.json](db.json) | Canonical event records, user preferences and lifecycle state |
 | [scripts/](scripts/) | Standard-library state, preference and rendering commands |
 | [app/](app/README.md) | Browser app for swiping events into three categories |

@@ -110,7 +110,7 @@ class RunTests(unittest.TestCase):
             run.merge(database(), payload)
 
     def test_interrupted_apply_recovers_without_rewriting_record(self):
-        for failed_file in ("db.json", "currently_active.md", "diff.md"):
+        for failed_file in ("db.json", "overview.md", "diff.md"):
             with self.subTest(failed_file=failed_file), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
                 path, staged = root / "db.json", root / "input.json"

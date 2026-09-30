@@ -62,10 +62,47 @@ class RenderTests(unittest.TestCase):
         self.assertIn("### Datum ni znan", output)
         self.assertIn("| Ura | Dogodek / ID |", output)
 
+    def test_each_event_appears_in_exactly_one_category_section(self):
+        db = database()
+        db["events"]["1"]["decision"] = "interested"
+        db["events"]["2"] = event(event_id="perhaps", decision="maybe",
+                                  start_time="2026-10-11T09:00:00+02:00")
+        db["events"]["3"] = event(event_id="nope", decision="rejected",
+                                  start_time="2026-10-12T09:00:00+02:00")
+        db["events"]["4"] = event(event_id="open", start_time="2026-10-13T09:00:00+02:00")
+        output = render.build(db)
+        listing = output.split("<details>", 1)[0]
+        for identifier in ("sample_20261010_1000", "perhaps", "nope", "open"):
+            with self.subTest(identifier=identifier):
+                self.assertEqual(listing.count(f"`{identifier}`"), 1)
+
+        # Split on the section anchors in document order. Splitting on any
+        # `<a id=` would cut the undecided section at its first month anchor.
+        order = ["interested", "maybe", "rejected", "undecided"]
+        sections, rest = {}, listing
+        for index, name in enumerate(order):
+            rest = rest.split(f'<a id="{render.ANCHORS[name]}"></a>', 1)[1]
+            following = order[index + 1] if index + 1 < len(order) else None
+            sections[name] = (rest.split(f'<a id="{render.ANCHORS[following]}"></a>', 1)[0]
+                              if following else rest)
+        self.assertIn("`sample_20261010_1000`", sections["interested"])
+        self.assertIn("`perhaps`", sections["maybe"])
+        self.assertIn("`nope`", sections["rejected"])
+        self.assertIn("`open`", sections["undecided"])
+        # The counts table links to every section and reports the real sizes.
+        self.assertIn("| [👍 Zanima nas](#zanima-nas) | 1 | 10.10.2026 |", output)
+        self.assertIn("| [🃏 Neodločeno](#neodloceno) | 1 | 13.10.2026 |", output)
+
+    def test_empty_categories_say_so_without_inventing_rows(self):
+        output = render.build(database())
+        self.assertEqual(output.count("_Ni dogodkov v tej kategoriji._"), 3)
+        self.assertIn("| [👎 Zavrnjeno](#zavrnjeno) | 0 | - |", output)
+        self.assertNotIn("Vsi dogodki so razvrščeni", output)
+
     def test_same_day_rows_form_one_contiguous_table(self):
         db = database()
         db["events"]["2"] = event(event_id="second")
-        calendar = render.build(db).split("## Koledar", 1)[1].split("<details>", 1)[0]
+        calendar = render.build(db).split("Neodločeno", 1)[1].split("<details>", 1)[0]
         rows = [line for line in calendar.splitlines() if line.startswith("|")]
         self.assertEqual(len(rows), 4)
         self.assertIn("\n".join(rows), calendar)

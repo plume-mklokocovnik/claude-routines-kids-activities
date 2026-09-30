@@ -36,7 +36,7 @@ RULE_FIELD = {
 
 def active_list_path(db_path):
     """Keep the rendered list next to the database it came from."""
-    return os.path.join(os.path.dirname(os.path.abspath(db_path)), "currently_active.md")
+    return os.path.join(os.path.dirname(os.path.abspath(db_path)), "overview.md")
 
 
 def rules(db):

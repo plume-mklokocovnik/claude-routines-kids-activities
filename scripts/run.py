@@ -184,7 +184,7 @@ def render_outputs(db_path, db=None):
     import report
     db = db or state.load(db_path)
     root = Path(db_path).resolve().parent
-    outputs = {root / "currently_active.md": render.build(db)}
+    outputs = {root / "overview.md": render.build(db)}
     latest = db["system_state"]["1"].get("latest_run")
     if latest:
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", latest):
@@ -231,7 +231,7 @@ def apply(args):
         if not record_exists:
             state.atomic_write(log_path, state.json_text(record))
         state.atomic_write(args.db, content)
-        state.atomic_write(root / "currently_active.md", active_md)
+        state.atomic_write(root / "overview.md", active_md)
         state.atomic_write(root / "diff.md", diff_md)
 
 

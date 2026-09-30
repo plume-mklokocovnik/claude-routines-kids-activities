@@ -9,7 +9,9 @@ be undone at any time, including after a restart. Nothing is ever deleted: an
 undone log row keeps its audit trail and is marked `undone`.
 
 Decisions are independent of hide rules. Rejecting an event does not hide it,
-does not touch `user_rules` and does not remove it from `currently_active.md`.
+does not touch `user_rules` and does not remove it from `overview.md`. It does
+move the event into that file's Zavrnjeno section, which these commands
+re-render.
 
     python3 scripts/swipe.py set <query> interested|maybe|rejected
     python3 scripts/swipe.py clear <query>
@@ -36,19 +38,32 @@ import sys
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import render  # noqa: E402
 import state  # noqa: E402
 from state import find, load, next_key, save  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
 
-LABELS = {"interested": "Zanima nas", "maybe": "Mogoče", "rejected": "Zavrnjeno"}
+LABELS = state.DECISION_LABELS
 PATCH_CODES = {"i": "interested", "m": "maybe", "r": "rejected", "c": None}
 FAR_FUTURE = datetime.max.replace(tzinfo=timezone.utc)
 
 
 def now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def overview_path(db_path):
+    """Keep the rendered overview next to the database it came from."""
+    return os.path.join(os.path.dirname(os.path.abspath(db_path)), "overview.md")
+
+
+def commit(db_path, db):
+    """Save, then re-render: a decision moves an event between the overview's
+    sections, so leaving the file behind would make it stale."""
+    save(db_path, db)
+    render.main_write(db_path, overview_path(db_path))
 
 
 def describe(event):
@@ -227,7 +242,7 @@ def cmd_set(args):
     if not changed:
         print(f"Already {LABELS[args.category]}: {describe(event)}")
         return 0
-    save(args.db, db)
+    commit(args.db, db)
     moved = f" (was {LABELS[before]})" if before else ""
     print(f"{LABELS[args.category]}{moved}: {describe(event)}")
     return 0
@@ -242,7 +257,7 @@ def cmd_clear(args):
     if not changed:
         print(f"No decision to clear: {describe(event)}")
         return 0
-    save(args.db, db)
+    commit(args.db, db)
     print(f"Back in the deck (was {LABELS[before]}): {describe(event)}")
     return 0
 
@@ -253,7 +268,7 @@ def cmd_undo(args):
     if row is None:
         print("Nothing to undo.")
         return 0
-    save(args.db, db)
+    commit(args.db, db)
     restored = LABELS.get(row.get("before")) or "no decision"
     print(f"Undone {row.get('action')} → {restored}: {describe(event)}")
     return 0
@@ -281,7 +296,7 @@ def cmd_apply(args):
     db = load(args.db)
     changed, unchanged, skipped = apply_patch(db, entries)
     if changed:
-        save(args.db, db)
+        commit(args.db, db)
 
     print(f"Applied {len(changed)} change(s) from {args.patch}, "
           f"{len(unchanged)} already matched.")

@@ -21,6 +21,7 @@ CATEGORIES = {
     "ples", "koncert", "odprta_vrata", "zoo", "festival", "pop_up", "avto_moto",
 }
 DECISIONS = ("interested", "maybe", "rejected")
+DECISION_LABELS = {"interested": "Zanima nas", "maybe": "Mogoče", "rejected": "Zavrnjeno"}
 
 
 def timestamp(value):

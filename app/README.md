@@ -136,8 +136,9 @@ A decision is user-owned data on the event row:
 
 The app never touches `user_rules`, `hidden_events` or event status.
 Rejecting an event is not hiding it: it stays in
-[currently_active.md](../currently_active.md), which the app does not regenerate.
-To remove an event from the calendar, use the hide command in the
+[overview.md](../overview.md), though it does move between that file's
+sections, which the local app re-renders on every swipe.
+To remove an event from the overview entirely, use the hide command in the
 [root README](../README.md#preferences).
 
 All state changes go through [scripts/swipe.py](../scripts/swipe.py), so the

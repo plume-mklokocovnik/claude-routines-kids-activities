@@ -36,17 +36,17 @@ class PreferenceTests(unittest.TestCase):
         self.assertIn("restored_at", restored["hidden_events"]["1"])
         self.assertEqual(restored["unknown_table"], self.db["unknown_table"])
 
-    def calendar(self):
-        """The calendar section only. The hidden-rule audit below it keeps IDs."""
-        report = (self.path.parent / "currently_active.md").read_text(encoding="utf-8")
-        return report.split("## Koledar", 1)[1].split("<details>", 1)[0]
+    def listing(self):
+        """Everything above the audit sections, which keep IDs after a hide."""
+        report = (self.path.parent / "overview.md").read_text(encoding="utf-8")
+        return report.split("<details>", 1)[0]
 
-    def test_hiding_regenerates_the_calendar(self):
+    def test_hiding_regenerates_the_overview(self):
         self.assertEqual(hide_event.cmd_hide(self.args), 0)
-        self.assertNotIn("sample_20261010_1000", self.calendar())
-        self.assertIn("Ni aktivnih dogodkov", self.calendar())
+        self.assertNotIn("sample_20261010_1000", self.listing())
+        self.assertIn("Vsi dogodki so razvrščeni", self.listing())
         self.assertEqual(hide_event.cmd_unhide(self.args), 0)
-        self.assertIn("sample_20261010_1000", self.calendar())
+        self.assertIn("sample_20261010_1000", self.listing())
 
     def test_hiding_an_already_hidden_event_changes_nothing(self):
         self.assertEqual(hide_event.cmd_hide(self.args), 0)

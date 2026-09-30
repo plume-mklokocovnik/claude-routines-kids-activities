@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Render currently_active.md from db.json.
+"""Render overview.md from db.json.
+
+An overview of the current state, grouped the way the swipe app sorts it: one
+section per category, then everything still waiting for a decision. Every
+active event appears exactly once, with the same detail in every section.
 
 Deterministic, stdlib only. The routine calls this instead of hand-writing the
-active list, so the table format never drifts between runs.
+overview, so the table format never drifts between runs.
 
-    python3 scripts/render.py            # writes currently_active.md
+    python3 scripts/render.py            # writes overview.md
     python3 scripts/render.py --stdout   # prints instead of writing
 """
 
@@ -19,7 +23,11 @@ from state import TZ, add_months, load
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
-OUT_PATH = os.path.join(REPO, "currently_active.md")
+OUT_PATH = os.path.join(REPO, "overview.md")
+
+MARKS = {"interested": "👍", "maybe": "🤔", "rejected": "👎", "undecided": "🃏"}
+ANCHORS = {"interested": "zanima-nas", "maybe": "mogoce", "rejected": "zavrnjeno",
+           "undecided": "neodloceno"}
 
 DAYS = ["Ponedeljek", "Torek", "Sreda", "Četrtek", "Petek", "Sobota", "Nedelja"]
 MONTHS = ["januar", "februar", "marec", "april", "maj", "junij",
@@ -124,17 +132,55 @@ def code(value):
     return f"<code>{safe}</code>" if "`" in safe else f"`{safe}`"
 
 
-def event_table(events):
-    out = ["| Ura | Dogodek / ID | Kje | Starost / cena / opombe |", "|---|---|---|---|"]
+def event_table(events, dated=False):
+    """Rows for one table. `dated` carries the date in the first column, for the
+    decided sections, which are not grouped under daily headings."""
+    out = ["| Kdaj | Dogodek / ID | Kje | Starost / cena / opombe |" if dated
+           else "| Ura | Dogodek / ID | Kje | Starost / cena / opombe |",
+           "|---|---|---|---|"]
     for event in events:
         start = parse_dt(event.get("start_time"))
         when = hour_text(event, start)
+        if dated:
+            when = f"{start:%d.%m.%Y}<br>{when}" if start else "?"
         title = f"{title_text(event)}<br>{code(event.get('category'))}<br>{code(event.get('event_id'))}"
         details = f"{age_text(event)} · {price_text(event)}"
         notes = notes_text(event)
         if notes:
             details += f"<br>{cell(notes)}"
         out.append(f"| {when} | {title} | {place_text(event)} | {details} |")
+    return out
+
+
+def grouped(events):
+    """Split chronologically ordered events into the three categories, plus the
+    ones still waiting for a decision. Each group keeps the incoming order."""
+    groups = {name: [] for name in state.DECISIONS}
+    undecided = []
+    for event in events:
+        groups.get(event.get("decision"), undecided).append(event)
+    return groups, undecided
+
+
+def calendar(events):
+    """Month navigation, daily headings and one row per event."""
+    months = sorted({start.strftime("%Y-%m") for event in events
+                     if (start := parse_dt(event.get("start_time")))})
+    out = [" · ".join(f"[{MONTHS[int(month[5:]) - 1]} {month[:4]}](#mesec-{month})"
+                      for month in months), ""]
+    current_day, current_month = object(), None
+    for event in events:
+        start = parse_dt(event.get("start_time"))
+        month = start.strftime("%Y-%m") if start else None
+        day = start.date() if start else None
+        if month != current_month:
+            current_month = month
+            out += ["", f'<a id="mesec-{month}"></a>', ""]
+        if day != current_day:
+            current_day = day
+            out += ["", f"### {day_heading(start)}" if start else "### Datum ni znan", ""]
+            out += event_table([])
+        out += event_table([event])[-1:]
     return out
 
 
@@ -149,29 +195,31 @@ def build(db):
                                    event.get("title", ""), event.get("event_id", "")))
     hidden = [item for item in db.get("hidden_events", {}).values() if item.get("active", True)]
     free_count = sum(event.get("is_free") is True for event in events)
+    groups, undecided = grouped(events)
+    sections = [(ANCHORS[name], MARKS[name], state.DECISION_LABELS[name], groups[name])
+                for name in state.DECISIONS]
+
     out = ["# Dogodki za otroke", "", "Ljubljana in izleti po Sloveniji", "",
            f"Posodobljeno **{local_run:%d.%m.%Y ob %H:%M}** (Europe/Ljubljana). "
            f"Okno do **{si_date(horizon)}**.", "",
            f"**{len(events)}** dogodkov · **{free_count}** brezplačnih · "
            f"**{len(hidden)}** skritih pravil", "",
-           "## Koledar", ""]
-    months = sorted({start.strftime("%Y-%m") for event in events if (start := parse_dt(event.get("start_time")))})
-    out += [" · ".join(f"[{MONTHS[int(month[5:]) - 1]} {month[:4]}](#mesec-{month})" for month in months), ""]
-    if not events:
-        out += ["_Ni aktivnih dogodkov._", ""]
-    current_day, current_month = object(), None
-    for event in events:
-        start = parse_dt(event.get("start_time"))
-        month = start.strftime("%Y-%m") if start else None
-        day = start.date() if start else None
-        if month != current_month:
-            current_month = month
-            out += ["", f'<a id="mesec-{month}"></a>', ""]
-        if day != current_day:
-            current_day = day
-            out += ["", f"### {day_heading(start)}" if start else "### Datum ni znan", ""]
-            out += event_table([])
-        out += event_table([event])[-1:]
+           "| Kategorija | Število | Naslednji |", "|---|---|---|"]
+    for anchor, mark, label, rows in sections + [(ANCHORS["undecided"], MARKS["undecided"],
+                                                  "Neodločeno", undecided)]:
+        first = parse_dt(rows[0].get("start_time")) if rows else None
+        out.append(f"| [{mark} {label}](#{anchor}) | {len(rows)} | "
+                   f"{f'{first:%d.%m.%Y}' if first else '-'} |")
+    out += [""]
+
+    for anchor, mark, label, rows in sections:
+        out += ["", f'<a id="{anchor}"></a>', "", f"## {mark} {label} ({len(rows)})", ""]
+        out += event_table(rows, dated=True) if rows else ["_Ni dogodkov v tej kategoriji._"]
+
+    out += ["", f'<a id="{ANCHORS["undecided"]}"></a>', "",
+            f"## {MARKS['undecided']} Neodločeno ({len(undecided)})", ""]
+    out += calendar(undecided) if undecided else ["_Vsi dogodki so razvrščeni._", ""]
+
     out += ["", "<details>", "<summary>Pregled po zvrsteh</summary>", "",
             "| Zvrst | Število | Naslednji |", "|---|---|---|"]
     by_category = {}

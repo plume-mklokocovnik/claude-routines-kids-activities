@@ -6,7 +6,35 @@ Posodobljeno **28.09.2026 ob 15:10** (Europe/Ljubljana). Okno do **28. december 
 
 **106** dogodkov · **14** brezplačnih · **44** skritih pravil
 
-## Koledar
+| Kategorija | Število | Naslednji |
+|---|---|---|
+| [👍 Zanima nas](#zanima-nas) | 0 | - |
+| [🤔 Mogoče](#mogoce) | 0 | - |
+| [👎 Zavrnjeno](#zavrnjeno) | 0 | - |
+| [🃏 Neodločeno](#neodloceno) | 106 | 28.09.2026 |
+
+
+<a id="zanima-nas"></a>
+
+## 👍 Zanima nas (0)
+
+_Ni dogodkov v tej kategoriji._
+
+<a id="mogoce"></a>
+
+## 🤔 Mogoče (0)
+
+_Ni dogodkov v tej kategoriji._
+
+<a id="zavrnjeno"></a>
+
+## 👎 Zavrnjeno (0)
+
+_Ni dogodkov v tej kategoriji._
+
+<a id="neodloceno"></a>
+
+## 🃏 Neodločeno (106)
 
 [september 2026](#mesec-2026-09) · [oktober 2026](#mesec-2026-10) · [november 2026](#mesec-2026-11) · [december 2026](#mesec-2026-12)
 

@@ -1,11 +1,11 @@
 ---
 name: hide-event
-description: Hide, remove or delete an event from the kids-activities list and keep a permanent reference so the routine never shows or re-processes it again. Use when the user says hide, remove, delete, skip, drop, "don't show", "not interested in" about an event, a show, a series or a venue in this repo, or names an event ID from currently_active.md. Also handles unhide, restore, "bring it back" and "what have I hidden".
+description: Hide, remove or delete an event from the kids-activities list and keep a permanent reference so the routine never shows or re-processes it again. Use when the user says hide, remove, delete, skip, drop, "don't show", "not interested in" about an event, a show, a series or a venue in this repo, or names an event ID from overview.md. Also handles unhide, restore, "bring it back" and "what have I hidden".
 ---
 
 # Hide an event
 
-Hiding is not deleting. The row leaves `currently_active.md`, and the reference stays in
+Hiding is not deleting. The row leaves `overview.md`, and the reference stays in
 `db.json` so the next sweep skips it instead of re-discovering it.
 
 ## What a hide actually writes
@@ -14,7 +14,7 @@ Three changes, all in `db.json`, all in one command:
 
 | Where | What it does |
 |---|---|
-| `events` | The complete row stays, with `status: hidden`, so it leaves the calendar |
+| `events` | The complete row stays, with `status: hidden`, so it leaves the overview |
 | `user_rules` | The matching rule stops the next sweep from re-saving it |
 | `hidden_events` | The permanent reference: what was hidden, which scope, when and why |
 
@@ -25,14 +25,14 @@ time and venue when a new ID would otherwise bypass the rule.
 
 ## Run it
 
-Always use the script. Never hand-edit `db.json`, and never re-render `currently_active.md`
+Always use the script. Never hand-edit `db.json`, and never re-render `overview.md`
 by hand. The script keeps the three tables and the rendered list consistent.
 
 ```bash
 python3 scripts/hide_event.py hide <query> [--scope event|series|venue] [--reason "..."]
 ```
 
-`<query>` is an `event_id` printed below a title in `currently_active.md`, or a
+`<query>` is an `event_id` printed below a title in `overview.md`, or a
 case-insensitive fragment of the title.
 
 ## Pick the scope

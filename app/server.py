@@ -44,7 +44,7 @@ LOOPBACK = {"localhost", "127.0.0.1", "::1", "[::1]"}
 
 # --- presentation -----------------------------------------------------------
 # Display strings are built here from the stored sweep clock, never from the
-# wall clock, so the app shows the same dates as currently_active.md.
+# wall clock, so the app shows the same dates as overview.md.
 
 def notes(event):
     text = render.notes_text(event)
@@ -254,12 +254,16 @@ class App:
         return event
 
     def write(self, mutate):
-        """One serialized load, mutate, save. The file lock also covers the CLI."""
+        """One serialized load, mutate, save. The file lock also covers the CLI.
+
+        Saving goes through swipe.commit, which re-renders overview.md, since a
+        decision moves the event between that file's sections.
+        """
         with self.gate, state.locked(self.db_path):
             db = state.load(self.db_path)
             message = mutate(db)
             if message is not None:
-                state.save(self.db_path, db)
+                swipe.commit(self.db_path, db)
                 print(message, flush=True)
             return {"ok": True, "message": message or "", "state": payload(db)}
 
