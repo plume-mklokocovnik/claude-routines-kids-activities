@@ -17,7 +17,7 @@ const URL_BUDGET = 6000;  // a prefilled GitHub editor link has to stay openable
 const el = (id) => document.getElementById(id);
 const phone = el('phone');
 const stack = el('stack');
-const list = el('list');
+const list = el('rows');
 
 // `raw` is what the backend sent. `data` is the same without events that are already
 // past in Ljubljana, which is what everything on screen reads.
@@ -87,12 +87,12 @@ async function refresh(options) {
 function render(options) {
   if (!st.data) return;
   const counts = st.data.counts;
-  const clock = st.data.clock;
 
-  el('clock').textContent =
-    `Rutina ${clock.date} ${clock.time} · okno do ${clock.horizon}`;
   document.querySelectorAll('[data-count]').forEach((node) => {
-    node.textContent = counts[node.dataset.count];
+    const value = counts[node.dataset.count];
+    node.textContent = value;
+    // A badge at zero stays, since it says nothing has been chosen, but fades.
+    node.classList.toggle('is-zero', node.classList.contains('act-count') && !value);
   });
   el('tab-left').textContent = counts.undecided;
   el('tab-done').textContent = counts.decided;
@@ -102,7 +102,9 @@ function render(options) {
   el('progress').setAttribute('aria-valuemax', String(counts.total));
 
   document.querySelectorAll('[data-decide]').forEach((button) => {
+    const category = button.dataset.decide;
     button.disabled = counts.undecided === 0;
+    button.setAttribute('aria-label', `${labelOf(category)}, ${counts[category]}`);
   });
   const undoInfo = st.data.undo;
   const undoButton = el('undo');
@@ -114,14 +116,30 @@ function render(options) {
   el('hint-count').textContent = counts.undecided
     ? `${counts.undecided} še za odločitev`
     : 'Kup je prazen';
-  el('hint').classList.toggle('is-empty', counts.undecided === 0);
   el('done-text').textContent = counts.total
     ? `Vseh ${counts.total} dogodkov je razvrščenih.`
     : 'V bazi ni aktivnih dogodkov.';
 
+  renderStats();
   renderPending();
   renderStack(options);
   renderList();
+}
+
+function isoToSi(iso) {
+  return iso ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}.${iso.slice(0, 4)}` : '?';
+}
+
+// The facts about the data that the deck has no room for: when the last sweep
+// ran, how far it looks ahead, what today is and how much is left out.
+function renderStats() {
+  const { clock, counts, free, past, today } = st.data;
+  el('st-run').textContent = `${clock.date} ${clock.time}`;
+  el('st-window').textContent = clock.horizon;
+  el('st-today').textContent = isoToSi(today);
+  el('st-total').textContent = String(counts.total);
+  el('st-free').textContent = String(free);
+  el('st-past').textContent = String(past);
 }
 
 function pendingPhrase(count) {
@@ -166,9 +184,8 @@ function buildCard(card) {
   fill(node, 'date_long', card.date_long);
   fill(node, 'title', card.title);
   fill(node, 'place', placeText(card));
-  fill(node, 'glyph', card.category.replace(/_/g, ' '));
   fill(node, 'age', card.age);
-  fill(node, 'event_id', card.event_id);
+  node.querySelector('[data-slot="id"]').appendChild(idButton(card.event_id));
   fill(node, 'price', priceText(card)).classList.toggle('is-free', card.is_free);
 
   const status = node.querySelector('[data-f="status"]');
@@ -299,12 +316,14 @@ function attachDrag(node, card) {
   let dx = 0;
   let dy = 0;
   let startedAt = 0;
+  let tappedAt = -Infinity;
 
   node.addEventListener('pointerdown', (event) => {
     if (st.busy || pointer !== null) return;
     if (event.target.closest('a, button')) return;
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     pointer = event.pointerId;
+    tappedAt = -Infinity;
     st.dragging = true;
     startedAt = event.timeStamp;
     sx = event.clientX;
@@ -335,13 +354,22 @@ function attachDrag(node, card) {
       && event.timeStamp - startedAt < TAP_MS;
     if (tapped) {
       springBack(node);
-      openDetails(card, null);
+      tappedAt = event.timeStamp;
       return;
     }
     const reading = vector(dx, dy);
     if (reading.dir && reading.p >= 1) commit(reading.dir, node, card);
     else springBack(node);
   };
+
+  // A tap ends in a click, and that is when the dialog opens. Opening on pointerup
+  // would put the dialog under the finger before the browser sends the rest of
+  // the same tap as mouse events, and they would land on its backdrop.
+  node.addEventListener('click', (event) => {
+    if (event.timeStamp - tappedAt > 800) return;
+    tappedAt = -Infinity;
+    openDetails(card, null);
+  });
 
   node.addEventListener('pointerup', release);
   node.addEventListener('pointercancel', release);
@@ -424,7 +452,7 @@ async function move(card, target) {
 
 /* --- details dialog ------------------------------------------------------ */
 
-const dialog = { open: false, opener: null, pushed: false };
+const dialog = { open: false, opener: null, pushed: false, pressedBackdrop: false };
 const BEHIND = '.bar, .progress, .tallies, .main, .pending, .tabs';
 
 function chip(parent, className, text) {
@@ -437,16 +465,20 @@ function chip(parent, className, text) {
 
 function fact(parent, label, content, className) {
   if (content === '' || content === null || content === undefined) return;
-  const [main, note] = Array.isArray(content) ? content : [content, ''];
   const term = document.createElement('dt');
   term.textContent = label;
   const detail = document.createElement('dd');
   if (className) detail.className = className;
-  detail.textContent = main;
-  if (note) {
-    const small = document.createElement('small');
-    small.textContent = note;
-    detail.appendChild(small);
+  if (content instanceof Node) {
+    detail.appendChild(content);
+  } else {
+    const [main, note] = Array.isArray(content) ? content : [content, ''];
+    detail.textContent = main;
+    if (note) {
+      const small = document.createElement('small');
+      small.textContent = note;
+      detail.appendChild(small);
+    }
   }
   parent.append(term, detail);
 }
@@ -482,7 +514,7 @@ function fillDetails(card) {
     fact(facts, 'Odločitev', [labelOf(state), card.decided_at ? `zabeleženo ${card.decided_at}` : '']);
   }
   fact(facts, 'Prvič videno', card.first_seen);
-  fact(facts, 'ID', card.event_id, 'is-mono');
+  fact(facts, 'ID', idButton(card.event_id));
 
   const notes = el('d-notes');
   notes.textContent = '';
@@ -499,6 +531,7 @@ function openDetails(card, opener) {
   fillDetails(card);
   dialog.open = true;
   dialog.opener = opener;
+  dialog.pressedBackdrop = false;
   el('details').hidden = false;
   // Everything behind the dialog stops taking focus and taps.
   document.querySelectorAll(BEHIND).forEach((node) => { node.inert = true; });
@@ -536,12 +569,13 @@ function closeDetails() {
 
 function wireDetails() {
   const overlay = el('details');
-  let pressedBackdrop = false;
   // A drag that starts inside the dialog and ends outside it, such as selecting
   // text, would otherwise click the backdrop and close it.
-  overlay.addEventListener('pointerdown', (event) => { pressedBackdrop = event.target === overlay; });
+  overlay.addEventListener('pointerdown', (event) => { dialog.pressedBackdrop = event.target === overlay; });
   overlay.addEventListener('click', (event) => {
-    if (event.target === overlay && pressedBackdrop) closeDetails();
+    const close = event.target === overlay && dialog.pressedBackdrop;
+    dialog.pressedBackdrop = false;
+    if (close) closeDetails();
   });
   el('details-close').addEventListener('click', closeDetails);
   window.addEventListener('popstate', () => { dialog.pushed = false; hideDetails(); });
@@ -574,13 +608,41 @@ function editorUrl(patch) {
   return full.length <= URL_BUDGET ? full : `${base}${name}`;
 }
 
-async function copyPatch(patch) {
+// The clipboard API only exists on https and localhost. Opened by a LAN address
+// over plain http, it is missing, so fall back to selecting a hidden field.
+async function copyText(text) {
   try {
-    await navigator.clipboard.writeText(patch);
+    await navigator.clipboard.writeText(text);
     return true;
-  } catch (error) {
-    return false;
-  }
+  } catch (error) { /* missing or refused: try the older way */ }
+  const previous = document.activeElement;
+  const field = document.createElement('textarea');
+  field.value = text;
+  field.setAttribute('readonly', '');
+  field.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+  document.body.appendChild(field);
+  field.select();
+  let copied = false;
+  try { copied = document.execCommand('copy'); } catch (error) { copied = false; }
+  field.remove();
+  if (previous && previous.focus) previous.focus({ preventScroll: true });
+  return copied;
+}
+
+// The whole button is the target: the text and the icon copy the ID alike.
+function idButton(id) {
+  const node = el('copy-id-template').content.firstElementChild.cloneNode(true);
+  node.querySelector('.copy-id-text').textContent = id;
+  let timer = null;
+  node.addEventListener('click', async () => {
+    const copied = await copyText(id);
+    toast(copied ? `ID kopiran: ${id}` : 'Kopiranje ni uspelo.', !copied);
+    if (!copied) return;
+    node.classList.add('is-copied');
+    clearTimeout(timer);
+    timer = setTimeout(() => node.classList.remove('is-copied'), 1400);
+  });
+  return node;
 }
 
 async function save() {
@@ -589,14 +651,14 @@ async function save() {
   if (!count) return;
   const url = editorUrl(patch);
   if (!url) {
-    const copied = await copyPatch(patch);
+    const copied = await copyText(patch);
     toast(copied ? 'Odločitve so kopirane. Prilepi jih v repo.'
       : 'Repozitorij ni znan. Uporabi gumb za kopiranje.', true);
     return;
   }
   // A link without the content prefilled means the batch outgrew the URL.
   if (!url.includes('&value=')) {
-    const copied = await copyPatch(patch);
+    const copied = await copyText(patch);
     toast(copied ? 'Preveč odločitev za povezavo. Prilepi jih v urejevalnik.'
       : 'Preveč odločitev za povezavo. Uporabi gumb za kopiranje.', true);
   }
@@ -661,13 +723,6 @@ function wire() {
   document.querySelectorAll('[data-seg]').forEach((button) => {
     button.addEventListener('click', () => { st.seg = button.dataset.seg; renderList(); });
   });
-  document.querySelectorAll('[data-jump]').forEach((button) => {
-    button.addEventListener('click', () => {
-      st.seg = button.dataset.jump;
-      setView('review');
-      renderList();
-    });
-  });
   el('undo').addEventListener('click', undo);
 
   if (store.quit) {
@@ -685,7 +740,7 @@ function wire() {
   el('copy').addEventListener('click', async () => {
     const { count, patch } = store.pending ? store.pending() : { count: 0 };
     if (!count) return;
-    const copied = await copyPatch(patch);
+    const copied = await copyText(patch);
     toast(copied ? 'Odločitve so kopirane.' : 'Kopiranje ni uspelo.', !copied);
   });
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });

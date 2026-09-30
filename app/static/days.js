@@ -27,11 +27,16 @@
   }
 
   // The state without past events, with the counts worked out again from what is
-  // left. The input is not changed, so the same data can be filtered again later.
+  // left, plus how many events were left out and how many of the rest are free.
+  // The input is not changed, so the same data can be filtered again later.
   function upcoming(data, todayIso) {
     const keep = (rows) => rows.filter((card) => !isPast(card, todayIso));
     const groups = {};
-    Object.keys(data.groups).forEach((name) => { groups[name] = keep(data.groups[name]); });
+    let before = data.deck.length;
+    Object.keys(data.groups).forEach((name) => {
+      groups[name] = keep(data.groups[name]);
+      before += data.groups[name].length;
+    });
     const deck = keep(data.deck);
     const counts = {
       interested: (groups.interested || []).length,
@@ -41,7 +46,12 @@
     };
     counts.decided = counts.interested + counts.maybe + counts.rejected;
     counts.total = counts.decided + counts.undecided;
-    return Object.assign({}, data, { deck, groups, counts, today: todayIso });
+    const shown = deck.concat(...Object.values(groups));
+    return Object.assign({}, data, {
+      deck, groups, counts, today: todayIso,
+      past: before - counts.total,
+      free: shown.filter((card) => card.is_free).length,
+    });
   }
 
   const api = { ZONE, today, isPast, upcoming };

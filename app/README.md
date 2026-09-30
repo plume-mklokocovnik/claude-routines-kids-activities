@@ -122,6 +122,19 @@ visible before the card is released. A drag that stops short of the threshold
 springs back and decides nothing. The three buttons below the card do the same
 as the gestures, and the ↶ button undoes.
 
+The top card also carries a faint glow along three edges, before any drag: green
+on the right, red on the left and blue along the bottom. It is a thin, rounded
+rim, a few pixels deep and fading inward like a sunset, and it brightens as the
+card is pulled toward that edge. It tells you where each decision lives without
+adding anything to read.
+
+The swipe screen shows the current event and nothing else. There is no header,
+no status line and no list of counts above the card. Each round button carries
+its own count as a small number in its top right corner: rejected on the red ✕,
+maybe on the blue ?, and interested on the green ♥. Under the buttons sit the
+number of events still to decide and a thin progress bar. The other figures are
+on **Pregled**.
+
 The deck holds the active, not hidden events that have no decision yet, earliest
 first. A decided event leaves the deck and appears under **Pregled**, where its
 category can be changed or cleared. Clearing returns it to the deck.
@@ -158,6 +171,13 @@ Things this does not do:
 Together they are the whole current state, read from the database each time the
 app loads. There is no generated file to keep in step with it.
 
+The top of the screen holds the four lists, and below them a block of figures
+about the current state: when the last sweep ran, the date its window ends, today
+in Ljubljana, how many events there are, how many are free, and how many past
+events the app is hiding. The last-run time and the window end come from the run
+record in the database, not from the clock. On the local server the block ends
+with **Ustavi strežnik**. The published page has no server, so it has no button.
+
 Tap an event, or its title, to open a dialog with everything known about it:
 when and where, with a Maps link, the age, the full price text, the notes, the
 source and its link, when it was first seen, its decision and when it was made,
@@ -169,21 +189,30 @@ Tapping the card in the deck opens it too. A finger that lifts within half a
 second having moved under 8 pixels is a tap, and anything else is a swipe. That
 is also the way to read a title or price the card had to cut short.
 
+The event ID, on the card and in the dialog, is a copy button. A touch anywhere on
+the ID text or on the small copy icon beside it copies the ID, turns the icon into
+a check mark for a moment and shows a short confirmation. It neither opens the
+dialog nor decides anything, so the ID can be pasted into `swipe.py set`,
+`hide_event.py` or a message without selecting text by hand.
+
 ## Small screens
 
-There is no visible title, so the top of the screen is one slim status line. The
-save banner is a single line, and the tab bar keeps clear of the phone's gesture
-bar. The card's own height then decides what it can show. When it runs short it
-drops the decorative word and the ID, then the notes, then the links, in that
-order. The title, time, place, age and price are never dropped, and everything a
-card sheds is in the dialog. The hint under the buttons names a tap on a touch
-screen and the arrow keys on a computer.
+There is no visible title and no header, so the card starts near the top and the
+counts live on the buttons. The save banner is a single line, and the tab bar
+keeps clear of the phone's gesture bar. On a tall screen the card stops growing
+at 600 pixels and the card with its buttons is centred, which keeps the buttons
+within reach. Spare height inside the card is split between the gap above the
+title and the gap above the age and price, so a short event reads as three groups.
+
+The card's own height decides what it can show. When it runs short it drops the
+notes and the ID, then the links, in that order. The title, time, place, age and
+price are never dropped, and everything a card sheds is in the dialog.
 
 ## Stopping and undoing
 
 Every swipe is written to `db.json` before the next card appears, so the run can
-be abandoned at any point: close the tab, press Ctrl+C, or use the ⏻ button in
-the header, which stops the server from inside the app. Reopening continues with
+be abandoned at any point: close the tab, press Ctrl+C, or use the ⏻ Ustavi
+strežnik button at the top of Pregled, which stops the server from inside the app. Reopening continues with
 the remaining cards.
 
 Undo is not limited to the current session. Each change appends a row to the
@@ -228,7 +257,7 @@ shown unshortened.
 | `server.py` | Local HTTP server, JSON API and the card presenter |
 | `build_static.py` | Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
-| `static/app.css` | Phone frame, card stack, direction gradients |
+| `static/app.css` | Phone frame, card stack, direction gradients, edge glow |
 | `static/app.js` | Drag handling, keyboard, review lists, details dialog, the local backend |
 | `static/mode.js` | Which backend to use. The build overwrites it |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |

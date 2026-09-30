@@ -99,19 +99,6 @@ html, body {
 
 /* --- chrome ------------------------------------------------------------- */
 
-.bar {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  min-height: 30px;
-  padding: 10px 16px 4px;
-}
-
-.sub { margin: 0; font-size: 11.5px; color: var(--muted); }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -124,26 +111,12 @@ html, body {
   border: 0;
 }
 
-.icon-btn {
-  flex: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--muted);
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.icon-btn:hover { color: var(--red); border-color: var(--red); }
-
 .progress {
   position: relative;
   z-index: 2;
-  height: 3px;
-  margin: 0 16px;
-  border-radius: 3px;
+  height: 4px;
+  margin: 0 40px 10px;
+  border-radius: 4px;
   background: #212938;
   overflow: hidden;
 }
@@ -157,48 +130,20 @@ html, body {
   transition: width .25s ease;
 }
 
-.tallies {
+.main {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  padding: 8px 16px;
-}
-
-.tally {
+  flex: 1;
+  min-height: 0;
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 6px;
-  padding: 7px 4px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--text);
-  cursor: pointer;
-  font: inherit;
-  text-align: center;
+  padding-top: env(safe-area-inset-top, 0px);
 }
-
-.tally-num { font-size: 17px; font-weight: 700; line-height: 1.1; }
-.tally-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-.tally.is-interested .tally-num { color: var(--green); }
-.tally.is-maybe .tally-num { color: var(--blue); }
-.tally.is-rejected .tally-num { color: var(--red); }
-.tally:hover { border-color: #3d4759; }
-
-.main { position: relative; z-index: 2; flex: 1; min-height: 0; display: flex; }
 .view { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .view[hidden] { display: none; }
 
 /* The deck is centred rather than stretched: a sparse event should not leave a
    void in the middle of a 1040 pixel tall card. */
 #view-swipe { justify-content: center; }
-
-/* Counts live in the tally row while swiping and in the segments while
-   reviewing. Showing both at once would just repeat the same three numbers. */
-body[data-view="review"] .tallies { display: none; }
 
 /* --- card stack --------------------------------------------------------- */
 
@@ -207,8 +152,10 @@ body[data-view="review"] .tallies { display: none; }
   z-index: 2;  /* a card dragged downwards passes over the buttons, not under */
   flex: 1;
   min-height: 0;
-  max-height: 660px;
-  margin: 2px 16px 0;
+  /* A card taller than its content is mostly empty, so cap it. The group of card
+     and buttons is centred in the screen and floats with room around it. */
+  max-height: 600px;
+  margin: 12px 16px 0;
 }
 
 .card {
@@ -230,9 +177,29 @@ body[data-view="review"] .tallies { display: none; }
   container: card / size;
 }
 
-/* Nothing on a card may be squeezed. The decorative word is the one part that
-   gives way, and the queries below drop parts before anything gets clipped. */
+/* Nothing on a card may be squeezed. The queries at the end drop the least
+   important parts before anything gets clipped. */
 .card > * { flex-shrink: 0; }
+
+/* A faint glow along the three edges a card can be thrown toward, in the colour
+   of each decision: green on the right, red on the left and blue at the bottom.
+   It follows the rounded corners, shows before any dragging starts, and grows
+   with the drag, using the same variables as the glow behind the phone. */
+.card.is-top::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 23px;
+  pointer-events: none;
+  box-shadow:
+    inset -2px 0 6px -1px rgb(34 197 94 / calc(.5 + .5 * var(--in-right))),
+    inset -6px 0 14px -6px rgb(34 197 94 / calc(.22 + .4 * var(--in-right))),
+    inset 2px 0 6px -1px rgb(244 63 94 / calc(.5 + .5 * var(--in-left))),
+    inset 6px 0 14px -6px rgb(244 63 94 / calc(.22 + .4 * var(--in-left))),
+    inset 0 -2px 6px -1px rgb(59 130 246 / calc(.55 + .45 * var(--in-down))),
+    inset 0 -6px 14px -6px rgb(59 130 246 / calc(.25 + .4 * var(--in-down)));
+}
 
 .card.is-top { cursor: grab; }
 .card.is-top:active { cursor: grabbing; }
@@ -265,12 +232,15 @@ body[data-view="review"] .tallies { display: none; }
 
 .card-when { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .when-day { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-.when-time { font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -.5px; }
+.when-time { font-size: clamp(26px, 4.6cqh, 38px); font-weight: 800; line-height: 1; letter-spacing: -.5px; }
 .when-date { font-size: 12px; color: var(--muted); }
 
+/* Spare height is shared between the gap above the title and the gap above the
+   meta boxes, so a short card reads as top, middle and bottom groups instead of
+   one empty band. A crowded card has no spare height and the gaps collapse. */
 .card-title {
-  margin: 0;
-  font-size: 22px;
+  margin: auto 0 0;
+  font-size: clamp(22px, 4.6cqh, 30px);
   line-height: 1.16;
   font-weight: 750;
   letter-spacing: -.3px;
@@ -284,30 +254,13 @@ body[data-view="review"] .tallies { display: none; }
 .card-where {
   display: flex;
   gap: 7px;
-  font-size: 13.5px;
+  font-size: clamp(13.5px, 2.3cqh, 16px);
   color: #c3ccdb;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
 .pin { flex: none; opacity: .8; }
-
-/* Absorbs the slack on a sparse card and doubles as a category cue while
-   swiping. The word is the stored category, not decoration invented per card. */
-.card-glyph {
-  flex: 1 1 0;
-  min-height: 0;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  font-size: clamp(30px, 11vw, 54px);
-  font-weight: 900;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #fff;
-  opacity: .055;
-  user-select: none;
-}
 
 .card-meta { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; margin-top: auto; }
 
@@ -323,7 +276,7 @@ body[data-view="review"] .tallies { display: none; }
 }
 
 .meta-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-.meta-value { font-size: 13.5px; font-weight: 600; overflow-wrap: anywhere; }
+.meta-value { font-size: clamp(13.5px, 2.3cqh, 16px); font-weight: 600; overflow-wrap: anywhere; }
 .meta-value.is-free { color: var(--green); }
 
 .card-notes { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -356,7 +309,46 @@ body[data-view="review"] .tallies { display: none; }
 .link-btn:hover { border-color: #46546d; }
 .link-btn[hidden] { display: none; }
 
-.card-id { font-size: 10px; color: #5f6a7d; font-family: ui-monospace, monospace; overflow-wrap: anywhere; }
+.card-id { display: flex; min-width: 0; }
+
+/* The text and the icon are one button, so a tap on either copies. The padding
+   widens the target without making the row taller. */
+.copy-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  margin: -9px -8px;
+  padding: 9px 8px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: #7f8aa0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .08);
+}
+
+.copy-id-text { font-family: ui-monospace, monospace; font-size: 11px; overflow-wrap: anywhere; }
+
+.copy-id svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy-id .done-icon { display: none; }
+.copy-id:hover { color: #b9c3d3; }
+.copy-id:focus-visible { outline: 2px solid #6d8fd6; outline-offset: 1px; }
+.copy-id.is-copied { color: var(--green); }
+.copy-id.is-copied .copy-icon { display: none; }
+.copy-id.is-copied .done-icon { display: block; }
 
 /* All three stamps sit in the same band near the top of the card. Only one
    direction is ever active, and a card dragged downwards keeps its top edge on
@@ -392,7 +384,7 @@ body[data-view="review"] .tallies { display: none; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 2px 16px 0;
+  margin: 12px 16px 0;
   padding: 24px;
   border-radius: 26px;
   border: 1px dashed var(--line);
@@ -424,11 +416,12 @@ body[data-view="review"] .tallies { display: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 10px 16px 2px;
+  gap: 14px;
+  padding: 14px 16px 2px;
 }
 
 .act {
+  position: relative;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -444,7 +437,12 @@ body[data-view="review"] .tallies { display: none; }
 }
 
 .act:hover:not(:disabled) { transform: translateY(-2px); }
-.act:disabled { opacity: .35; cursor: default; }
+.act:disabled { cursor: default; }
+.act-undo:disabled { opacity: .35; }
+/* With nothing left to decide the buttons go quiet, but their counts stay
+   readable, so they fade by colour and not by opacity. */
+.act:disabled:not(.act-undo) { border-color: var(--line); color: #4c5666; }
+.act:disabled:not(.act-undo) .act-count { color: #98a3b5; border-color: #3a4456; }
 .act-undo { width: 40px; height: 40px; font-size: 17px; color: var(--muted); }
 .act-reject { border-color: rgba(244, 63, 94, .55); color: var(--red); }
 .act-maybe { border-color: rgba(59, 130, 246, .55); color: var(--blue); }
@@ -453,16 +451,30 @@ body[data-view="review"] .tallies { display: none; }
 .act-maybe:hover { box-shadow: 0 0 0 4px rgba(59, 130, 246, .16); }
 .act-interested:hover { box-shadow: 0 0 0 4px rgba(34, 197, 94, .16); }
 
-.hint { margin: 0; padding: 4px 16px 8px; text-align: center; font-size: 11px; color: #6b7687; }
-
-/* Say how to use the card in the way that applies: a tap on a phone, keys on a
-   computer. The count is always there. */
-.hint-touch { display: none; }
-@media (hover: none) {
-  .hint-touch { display: inline; }
-  .hint-keys { display: none; }
+.act-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+  background: var(--bg);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
 }
-.hint.is-empty .hint-touch { display: none; }
+
+.act-count.is-zero { opacity: .55; }
+
+/* The one line of text under the buttons: how many are left to decide. */
+.hint { margin: 0; padding: 12px 16px 8px; text-align: center; font-size: 13px; font-weight: 600; color: #9aa5b8; }
 
 /* --- review ------------------------------------------------------------- */
 
@@ -470,7 +482,7 @@ body[data-view="review"] .tallies { display: none; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 6px;
-  padding: 4px 16px 8px;
+  padding: 12px 16px 8px;
 }
 
 .seg {
@@ -590,13 +602,55 @@ body[data-view="review"] .tallies { display: none; }
 .mini-rejected.is-on { background: var(--red); }
 .mini-link[hidden] { display: none; }
 
+.rows { display: flex; flex-direction: column; gap: 8px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.stat {
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.stat-label {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.stat b { display: block; margin-top: 2px; font-size: 13px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+
+.stat-quit {
+  grid-column: 1 / -1;
+  padding: 9px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.stat-quit:hover { color: var(--red); border-color: var(--red); }
+.stat-quit[hidden] { display: none; }
+
 /* --- overlays ----------------------------------------------------------- */
 
 .toast {
   position: absolute;
   left: 50%;
   bottom: 88px;
-  z-index: 6;
+  z-index: 9;
   transform: translate(-50%, 14px);
   max-width: 82%;
   padding: 10px 16px;
@@ -784,7 +838,6 @@ body[data-view="review"] .tallies { display: none; }
 .facts dd { margin: 0; font-size: 14.5px; line-height: 1.4; overflow-wrap: anywhere; }
 .facts dd small { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
 .facts .is-free { color: var(--green); }
-.facts .is-mono { font-family: ui-monospace, monospace; font-size: 12px; color: #8d98ab; }
 
 .sheet-notes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .sheet-notes:empty { display: none; }
@@ -822,26 +875,22 @@ body[data-view="review"] .tallies { display: none; }
 /* A phone with the browser's own bars leaves well under 900 pixels. Tighten the
    chrome first, so the card keeps as much of the screen as possible. */
 @media (max-height: 780px) {
-  .bar { padding-top: 6px; }
-  .tallies { padding: 5px 16px; }
-  .actions { padding-top: 6px; }
+  .stack { margin-top: 8px; }
+  .actions { padding-top: 10px; }
   .act { width: 46px; height: 46px; }
   .act-undo { width: 36px; height: 36px; }
-  .hint { padding-bottom: 5px; }
+  .hint { padding: 8px 16px 6px; }
+  .progress { margin-bottom: 6px; }
 }
 
 /* Then the card sheds its least important parts as it runs out of height, in
-   this order: the decorative word and the ID, the notes, the links. The title,
-   the time, the place, the age and the price are never dropped, and everything
-   a card sheds is in the details dialog, one tap away. */
-@container card (max-height: 500px) {
-  .card-glyph, .card-id { display: none; }
-}
-
-@container card (max-height: 420px) {
+   this order: the notes and the ID, then the links. The title, the time, the
+   place, the age and the price are never dropped, and everything a card sheds is
+   in the details dialog, one tap away. */
+@container card (max-height: 430px) {
   .card { gap: 6px; padding: 14px; }
   .card-title { font-size: 20px; }
-  .card-notes { display: none; }
+  .card-notes, .card-id { display: none; }
 }
 
 @container card (max-height: 370px) {

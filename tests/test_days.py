@@ -31,8 +31,8 @@ BOUNDARIES = [
 ]
 
 
-def card(day):
-    return {"event_id": f"e_{day}", "day_iso": day}
+def card(day, free=False):
+    return {"event_id": f"e_{day}", "day_iso": day, "is_free": free}
 
 
 @unittest.skipUnless(NODE, "node is not installed")
@@ -63,9 +63,9 @@ class DaysTests(unittest.TestCase):
 
     def test_upcoming_drops_past_events_everywhere_and_recounts(self):
         data = {
-            "deck": [card("2026-09-29"), card("2026-09-30"), card("2026-10-02")],
-            "groups": {"interested": [card("2026-09-29"), card("2026-09-30")],
-                       "maybe": [], "rejected": [card("2026-09-28")]},
+            "deck": [card("2026-09-29", True), card("2026-09-30"), card("2026-10-02", True)],
+            "groups": {"interested": [card("2026-09-29"), card("2026-09-30", True)],
+                       "maybe": [], "rejected": [card("2026-09-28", True)]},
             "counts": {"interested": 2, "maybe": 0, "rejected": 1, "undecided": 3,
                        "decided": 3, "total": 6},
             "undo": {"available": True}, "labels": {"interested": "Zanima nas"},
@@ -77,6 +77,8 @@ class DaysTests(unittest.TestCase):
         self.assertEqual(got["counts"], {"interested": 1, "maybe": 0, "rejected": 0,
                                          "undecided": 2, "decided": 1, "total": 3})
         self.assertEqual(got["today"], "2026-09-30")
+        # Three of the six were before today. Of the three left, two are free.
+        self.assertEqual((got["past"], got["free"]), (3, 2))
         # Everything else is passed through untouched.
         self.assertEqual(got["undo"], data["undo"])
         self.assertEqual(got["labels"], data["labels"])

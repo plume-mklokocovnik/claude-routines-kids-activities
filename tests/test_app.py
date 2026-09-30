@@ -130,6 +130,43 @@ class ClientContractTests(unittest.TestCase):
                 with self.subTest(script=name, sink=sink):
                     self.assertNotIn(sink, source)
 
+    def test_counters_sit_on_the_buttons_and_nothing_else_competes_with_the_card(self):
+        for category in ("interested", "maybe", "rejected"):
+            with self.subTest(category=category):
+                button = re.search(rf'<button[^>]*data-decide="{category}".*?</button>', self.markup, re.S)
+                self.assertIsNotNone(button)
+                self.assertIn(f'class="act-count" data-count="{category}"', button.group(0))
+        # The top counters, the status line and the keys hint are gone from the deck.
+        for gone in ('class="tally', 'id="tallies"', 'data-jump', 'id="clock"', 'hint-keys', 'hint-touch'):
+            with self.subTest(gone=gone):
+                self.assertNotIn(gone, self.markup)
+                self.assertNotIn(gone, self.script)
+
+    def test_the_progress_bar_is_directly_under_the_count_of_events_left(self):
+        self.assertRegex(self.markup,
+                         r'id="hint-count">[^<]*</p>\s*<div class="progress"[^>]*id="progress">')
+        # And the bar is not also at the top of the screen.
+        self.assertEqual(self.markup.count('class="progress"'), 1)
+
+    def test_pregled_opens_with_statistics_and_the_stop_button_lives_there(self):
+        stats = re.search(r'<section class="stats".*?</section>', self.markup, re.S)
+        self.assertIsNotNone(stats)
+        for identifier in ("st-run", "st-window", "st-today", "st-total", "st-free", "st-past", "quit"):
+            with self.subTest(identifier=identifier):
+                self.assertIn(f'id="{identifier}"', stats.group(0))
+        self.assertLess(self.markup.index('id="list"'), self.markup.index('id="rows"'))
+
+    def test_the_event_id_is_one_copy_button_on_the_card_and_in_the_dialog(self):
+        template = re.search(r'<template id="copy-id-template">.*?</template>', self.markup, re.S)
+        self.assertIsNotNone(template)
+        self.assertEqual(template.group(0).count("<button"), 1)
+        for part in ('class="copy-id-text"', 'class="copy-icon"', 'class="done-icon"'):
+            with self.subTest(part=part):
+                self.assertIn(part, template.group(0))
+        self.assertIn('data-slot="id"', self.markup)
+        self.assertIn("idButton(card.event_id)", self.script)
+        self.assertEqual(self.script.count("idButton(card.event_id)"), 2)  # the card and the dialog
+
     def test_the_card_can_be_tapped_open_and_the_title_is_not_a_visible_heading(self):
         self.assertIn("openDetails(card, null)", self.script)
         self.assertIn('class="sr-only">Dogodki za otroke', self.markup)

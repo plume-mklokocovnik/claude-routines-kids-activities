@@ -17,31 +17,7 @@
       <div class="glow-layer glow-down"></div>
     </div>
 
-    <header class="bar">
-      <h1 class="sr-only">Dogodki za otroke</h1>
-      <p class="sub" id="clock">Nalagam …</p>
-      <button class="icon-btn" id="quit" type="button" title="Končaj in zapri aplikacijo"
-              aria-label="Končaj in zapri aplikacijo">⏻</button>
-    </header>
-
-    <div class="progress" role="progressbar" aria-label="Napredek" id="progress">
-      <span class="progress-fill" id="progress-fill"></span>
-    </div>
-
-    <div class="tallies" id="tallies">
-      <button class="tally is-interested" type="button" data-jump="interested">
-        <span class="tally-num" data-count="interested">0</span>
-        <span class="tally-label">Zanima nas</span>
-      </button>
-      <button class="tally is-maybe" type="button" data-jump="maybe">
-        <span class="tally-num" data-count="maybe">0</span>
-        <span class="tally-label">Mogoče</span>
-      </button>
-      <button class="tally is-rejected" type="button" data-jump="rejected">
-        <span class="tally-num" data-count="rejected">0</span>
-        <span class="tally-label">Zavrnjeno</span>
-      </button>
-    </div>
+    <h1 class="sr-only">Dogodki za otroke</h1>
 
     <main class="main">
       <section class="view" id="view-swipe">
@@ -58,13 +34,16 @@
           <button class="act act-undo" id="undo" type="button" title="Razveljavi zadnje (Z)"
                   aria-label="Razveljavi zadnje">↶</button>
           <button class="act act-reject" type="button" data-decide="rejected"
-                  title="Zavrnjeno (puščica levo)" aria-label="Zavrnjeno">✕</button>
+                  title="Zavrnjeno (puščica levo)" aria-label="Zavrnjeno">✕<span class="act-count" data-count="rejected">0</span></button>
           <button class="act act-maybe" type="button" data-decide="maybe"
-                  title="Mogoče (puščica dol)" aria-label="Mogoče">?</button>
+                  title="Mogoče (puščica dol)" aria-label="Mogoče">?<span class="act-count" data-count="maybe">0</span></button>
           <button class="act act-interested" type="button" data-decide="interested"
-                  title="Zanima nas (puščica desno)" aria-label="Zanima nas">♥</button>
+                  title="Zanima nas (puščica desno)" aria-label="Zanima nas">♥<span class="act-count" data-count="interested">0</span></button>
         </div>
-        <p class="hint" id="hint"><span id="hint-count">Nalagam …</span><span class="hint-touch"> · tapni kartico za podrobnosti</span><span class="hint-keys"> · ← ↓ → · Z razveljavi</span></p>
+        <p class="hint" id="hint-count">Nalagam …</p>
+        <div class="progress" role="progressbar" aria-label="Napredek" id="progress">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
       </section>
 
       <section class="view" id="view-review" hidden>
@@ -82,7 +61,18 @@
             Neodločeno <b data-count="undecided">0</b>
           </button>
         </div>
-        <div class="list" id="list"></div>
+        <div class="list" id="list">
+          <section class="stats" aria-label="Stanje">
+            <div class="stat"><span class="stat-label">Zadnja rutina</span><b id="st-run">?</b></div>
+            <div class="stat"><span class="stat-label">Okno do</span><b id="st-window">?</b></div>
+            <div class="stat"><span class="stat-label">Danes</span><b id="st-today">?</b></div>
+            <div class="stat"><span class="stat-label">Dogodkov</span><b id="st-total">0</b></div>
+            <div class="stat"><span class="stat-label">Brezplačnih</span><b id="st-free">0</b></div>
+            <div class="stat"><span class="stat-label">Pretekli, skriti</span><b id="st-past">0</b></div>
+            <button class="stat-quit" id="quit" type="button" title="Končaj in zapri aplikacijo">⏻ Ustavi strežnik</button>
+          </section>
+          <div class="rows" id="rows"></div>
+        </div>
       </section>
     </main>
 
@@ -160,7 +150,6 @@
       <span class="pin">📍</span>
       <span data-f="place"></span>
     </div>
-    <div class="card-glyph" aria-hidden="true" data-f="glyph"></div>
     <div class="card-meta">
       <div class="meta-box">
         <span class="meta-label">Starost</span>
@@ -176,8 +165,21 @@
       <a class="link-btn" data-f="url" target="_blank" rel="noopener noreferrer">Vir dogodka ↗</a>
       <a class="link-btn" data-f="maps" target="_blank" rel="noopener noreferrer">Zemljevid ↗</a>
     </div>
-    <div class="card-id" data-f="event_id"></div>
+    <div class="card-id" data-slot="id"></div>
   </article>
+</template>
+
+<template id="copy-id-template">
+  <button class="copy-id" type="button" title="Kopiraj ID" aria-label="Kopiraj ID">
+    <span class="copy-id-text"></span>
+    <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect x="9" y="9" width="11" height="11" rx="2.5"></rect>
+      <path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15"></path>
+    </svg>
+    <svg class="done-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 12.5l4.5 4.5L19 7.5"></path>
+    </svg>
+  </button>
 </template>
 
 <template id="row-template">
