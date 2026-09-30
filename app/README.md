@@ -64,7 +64,15 @@ patch file prefilled. Committing it runs
 [apply-decisions.yml](../.github/workflows/apply-decisions.yml), which applies
 the patch with `swipe.py apply`, deletes it and republishes the site. When the
 new snapshot lands, the browser sees the database already agrees and clears the
-banner by itself.
+banner by itself. After you tap save the page looks for the new snapshot every
+15 seconds for five minutes, and again whenever you come back to its tab, so the
+banner clears without a reload.
+
+Every fetch of `state.json` asks the server to revalidate it. Pages sends that
+file with `max-age=600`, and a plain fetch obeys that: a reload just after a
+deploy was answered from the browser's cache for up to ten minutes, so the banner
+stayed even though the workflow had finished. Revalidating costs an empty 304
+when nothing has changed.
 
 The published page is current, not live. It never reads `db.json` itself: the
 snapshot is rebuilt and redeployed whenever a change to `db.json` reaches
@@ -157,8 +165,19 @@ and its ID. Close it with the ✕, by tapping outside it, with `Esc`, or with th
 phone's back gesture, which closes the dialog instead of leaving the app. The
 dialog only reads. To change a category, use the buttons on the row.
 
-The deck's swipe cards do not open it. A tap and a drag start the same way, and
-the card already shows the essentials.
+Tapping the card in the deck opens it too. A finger that lifts within half a
+second having moved under 8 pixels is a tap, and anything else is a swipe. That
+is also the way to read a title or price the card had to cut short.
+
+## Small screens
+
+There is no visible title, so the top of the screen is one slim status line. The
+save banner is a single line, and the tab bar keeps clear of the phone's gesture
+bar. The card's own height then decides what it can show. When it runs short it
+drops the decorative word and the ID, then the notes, then the links, in that
+order. The title, time, place, age and price are never dropped, and everything a
+card sheds is in the dialog. The hint under the buttons names a tap on a touch
+screen and the arrow keys on a computer.
 
 ## Stopping and undoing
 
@@ -210,14 +229,16 @@ shown unshortened.
 | `build_static.py` | Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
 | `static/app.css` | Phone frame, card stack, direction gradients |
-| `static/app.js` | Drag handling, keyboard, review lists, details dialog, both backends |
+| `static/app.js` | Drag handling, keyboard, review lists, details dialog, the local backend |
 | `static/mode.js` | Which backend to use. The build overwrites it |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
+| `static/snapshot.js` | The published backend: the baked snapshot, staged decisions and the re-check |
 
-One page and one renderer serve both modes. `app.js` holds two backends behind
-the same small interface: the local one is a round trip per decision, the
-published one reads the baked snapshot and stages changes in the browser.
-`mode.js` picks between them, so neither the markup nor the UI is duplicated.
+One page and one renderer serve both modes. Two backends sit behind the same
+small interface: the local one, in `app.js`, is a round trip per decision, and the
+published one, in `snapshot.js`, reads the baked snapshot and stages changes in
+the browser. `mode.js` picks between them, so neither the markup nor the UI is
+duplicated.
 
 The frame is 480 x 1040 CSS pixels, the viewport of a Samsung Galaxy S25 Ultra
 (1440 x 3120 hardware pixels at a 3x device ratio). On a narrow screen the frame
@@ -243,10 +264,12 @@ python3 -m unittest discover -s tests -p test_app.py -v
 python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
 python3 -m unittest discover -s tests -p test_days.py -v
+python3 -m unittest discover -s tests -p test_snapshot.py -v
 ```
 
-All four are offline. `test_days.py` runs the real `days.js` under Node and skips
-itself when Node is missing. The API test binds an ephemeral loopback port and uses a
-temporary database. The browser behaviour of `app.js` has no automated test:
-check a change against both modes by hand, with the server and with a locally
-served bundle.
+All five are offline. `test_days.py` and `test_snapshot.py` run the real
+`days.js` and `snapshot.js` under Node and skip themselves when Node is missing.
+The API test binds an ephemeral loopback port and uses a temporary database.
+What the page draws, its layout and its gestures have no automated test: check a
+change against both modes by hand, with the server and with a locally served
+bundle, on a phone as well as a desktop window.

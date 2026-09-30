@@ -130,6 +130,7 @@ python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_app.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
 python3 -m unittest discover -s tests -p test_days.py -v
+python3 -m unittest discover -s tests -p test_snapshot.py -v
 ```
 
 The complete offline suite is `python3 -m unittest discover -s tests -v`.

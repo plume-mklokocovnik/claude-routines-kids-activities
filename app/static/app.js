@@ -8,6 +8,10 @@
 const THRESHOLD_X = 96;   // horizontal pixels before a swipe counts
 const THRESHOLD_Y = 112;  // downward pixels before "mogoče" counts
 const FLY_MS = 230;
+const TAP_SLOP = 8;       // pixels a finger may drift and still count as a tap
+const TAP_MS = 500;       // and how long it may stay down
+const POLL_MS = 15 * 1000;       // how often to look for the rebuilt snapshot after saving
+const WATCH_MS = 5 * 60 * 1000;  // and for how long
 const URL_BUDGET = 6000;  // a prefilled GitHub editor link has to stay openable
 
 const el = (id) => document.getElementById(id);
@@ -17,7 +21,12 @@ const list = el('list');
 
 // `raw` is what the backend sent. `data` is the same without events that are already
 // past in Ljubljana, which is what everything on screen reads.
-const st = { raw: null, data: null, view: 'swipe', seg: 'interested', busy: false, stopped: false };
+let watchUntil = 0;  // until when to keep looking for the rebuilt snapshot after a save
+
+const st = {
+  raw: null, data: null, view: 'swipe', seg: 'interested',
+  busy: false, dragging: false, stopped: false,
+};
 
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
 const labelOf = (name) => (st.data && st.data.labels[name]) || name;
@@ -50,153 +59,18 @@ function serverStore() {
   };
 }
 
-function staticStore() {
-  const KEY = 'kids-activities-decisions-v1';
-  const CODES = { interested: 'i', maybe: 'm', rejected: 'r' };
-  let baked = null;
-  let log = [];
-
-  const known = (value) => value === null || Object.prototype.hasOwnProperty.call(CODES, value);
-
-  function valid(entry) {
-    return entry && typeof entry.event_id === 'string' && entry.event_id
-      && (entry.action === 'set' || entry.action === 'clear')
-      && known(entry.after === undefined ? null : entry.after)
-      && known(entry.before === undefined ? null : entry.before);
-  }
-
-  function readLog() {
-    // Browser storage is a staging area, not a record: an unreadable or
-    // tampered value is dropped rather than trusted or reported as state.
-    try {
-      const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
-      return Array.isArray(parsed) ? parsed.filter(valid) : [];
-    } catch (error) {
-      return [];
-    }
-  }
-
-  function writeLog() {
-    try {
-      localStorage.setItem(KEY, JSON.stringify(log));
-    } catch (error) {
-      toast('Brskalnik ne shranjuje. Odločitve veljajo le do osvežitve.', true);
-    }
-  }
-
-  function wanted() {
-    const map = new Map();
-    log.forEach((entry) => map.set(entry.event_id, entry.after || null));
-    return map;
-  }
-
-  function reconcile() {
-    // Anything the database already agrees with, or no longer holds, stops
-    // being pending. That is what makes the save round trip self-clearing.
-    const stored = new Map(baked.cards.map((card) => [card.event_id, card.decision || null]));
-    const settled = new Set();
-    wanted().forEach((value, id) => {
-      if (!stored.has(id) || stored.get(id) === value) settled.add(id);
-    });
-    if (settled.size) {
-      log = log.filter((entry) => !settled.has(entry.event_id));
-      writeLog();
-    }
-  }
-
-  function decisionOf(id) {
-    const pending = wanted();
-    if (pending.has(id)) return pending.get(id);
-    const card = baked.cards.find((item) => item.event_id === id);
-    return card ? card.decision || null : null;
-  }
-
-  function titleOf(id) {
-    const card = baked.cards.find((item) => item.event_id === id);
-    return card ? card.title : id;
-  }
-
-  function build() {
-    const pending = wanted();
-    const groups = { interested: [], maybe: [], rejected: [] };
-    const deck = [];
-    baked.cards.forEach((card) => {
-      const staged = pending.has(card.event_id);
-      const decision = staged ? pending.get(card.event_id) : card.decision || null;
-      const shaped = Object.assign({}, card, { decision: decision, unsaved: staged });
-      if (decision) groups[decision].push(shaped);
-      else if (card.status === 'active') deck.push(shaped);
-    });
-    const counts = {
-      interested: groups.interested.length,
-      maybe: groups.maybe.length,
-      rejected: groups.rejected.length,
-      undecided: deck.length,
-    };
-    counts.decided = counts.interested + counts.maybe + counts.rejected;
-    counts.total = counts.decided + counts.undecided;
-    const last = log[log.length - 1];
-    return {
-      clock: baked.clock,
-      labels: baked.labels,
-      deck: deck,
-      groups: groups,
-      counts: counts,
-      undo: last
-        ? {
-          available: true,
-          action: last.action,
-          title: titleOf(last.event_id),
-          label: baked.labels[last.after] || 'brez kategorije',
-          restores: baked.labels[last.before] || 'brez kategorije',
-        }
-        : { available: false },
-    };
-  }
-
-  function record(id, action, before, after) {
-    log.push({ event_id: id, action: action, before: before || null, after: after || null });
-    writeLog();
-  }
-
-  return {
-    live: false,
-    load: async () => {
-      const response = await fetch('state.json', { headers: { Accept: 'application/json' } })
-        .catch(() => { throw new Error('Posnetka baze ni bilo mogoče naložiti.'); });
-      if (!response.ok) throw new Error(`Posnetek baze ni dosegljiv (${response.status}).`);
-      baked = await response.json();
-      log = readLog();
-      reconcile();
-      return build();
-    },
-    decide: async (id, category) => {
-      const current = decisionOf(id);
-      if (current !== category) record(id, 'set', current, category);
-      return build();
-    },
-    clear: async (id) => {
-      const current = decisionOf(id);
-      if (current) record(id, 'clear', current, null);
-      return build();
-    },
-    undo: async () => {
-      if (log.length) {
-        log.pop();
-        writeLog();
-      }
-      return build();
-    },
-    pending: () => {
-      const entries = [...wanted().entries()].sort((a, b) => (a[0] < b[0] ? -1 : 1));
-      const lines = ['# kids-activities decisions'];
-      entries.forEach(([id, value]) => lines.push(`${value ? CODES[value] : 'c'}:${id}`));
-      return { count: entries.length, patch: `${lines.join('\n')}\n` };
-    },
-  };
+function browserStorage() {
+  // Reading it can throw in a private window or with site data blocked.
+  try { return window.localStorage; } catch (error) { return null; }
 }
 
-const store = window.SWIPE_MODE === 'static' ? staticStore() : serverStore();
+const store = window.SWIPE_MODE === 'static'
+  ? Snapshot.createStaticStore({
+    fetch: (...args) => window.fetch(...args),
+    storage: browserStorage(),
+    notify: (text, bad) => toast(text, bad),
+  })
+  : serverStore();
 
 function setData(raw) {
   st.raw = raw;
@@ -237,9 +111,10 @@ function render(options) {
     ? `Razveljavi: ${undoInfo.title} → ${undoInfo.restores} (Z)`
     : store.live ? 'Ni česa razveljaviti' : 'Razveljavi se le še neshranjene odločitve';
 
-  el('hint').textContent = counts.undecided
-    ? `${counts.undecided} še za odločitev · povleci kartico ali ← ↓ → · Z razveljavi`
-    : 'Kup je prazen · Z razveljavi zadnjo odločitev';
+  el('hint-count').textContent = counts.undecided
+    ? `${counts.undecided} še za odločitev`
+    : 'Kup je prazen';
+  el('hint').classList.toggle('is-empty', counts.undecided === 0);
   el('done-text').textContent = counts.total
     ? `Vseh ${counts.total} dogodkov je razvrščenih.`
     : 'V bazi ni aktivnih dogodkov.';
@@ -262,7 +137,7 @@ function renderPending() {
   const { count } = store.pending();
   const banner = el('pending');
   banner.hidden = count === 0;
-  if (count) el('pending-text').textContent = `${pendingPhrase(count)} na vpis v db.json`;
+  if (count) el('pending-text').textContent = pendingPhrase(count);
 }
 
 function fill(node, name, text) {
@@ -423,12 +298,15 @@ function attachDrag(node, card) {
   let sy = 0;
   let dx = 0;
   let dy = 0;
+  let startedAt = 0;
 
   node.addEventListener('pointerdown', (event) => {
     if (st.busy || pointer !== null) return;
     if (event.target.closest('a, button')) return;
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     pointer = event.pointerId;
+    st.dragging = true;
+    startedAt = event.timeStamp;
     sx = event.clientX;
     sy = event.clientY;
     dx = 0;
@@ -451,6 +329,15 @@ function attachDrag(node, card) {
     if (event.pointerId !== pointer) return;
     try { node.releasePointerCapture(pointer); } catch (error) { /* already gone */ }
     pointer = null;
+    st.dragging = false;
+    // A finger that barely moved and lifted quickly is a tap, not a swipe.
+    const tapped = event.type === 'pointerup' && Math.hypot(dx, dy) < TAP_SLOP
+      && event.timeStamp - startedAt < TAP_MS;
+    if (tapped) {
+      springBack(node);
+      openDetails(card, null);
+      return;
+    }
     const reading = vector(dx, dy);
     if (reading.dir && reading.p >= 1) commit(reading.dir, node, card);
     else springBack(node);
@@ -715,6 +602,30 @@ async function save() {
   }
   window.open(url, '_blank', 'noopener');
   el('handoff').hidden = false;
+  watchUntil = Date.now() + WATCH_MS;
+}
+
+/* --- waiting for the rebuilt snapshot ----------------------------------- */
+
+// Look for a newer snapshot and redraw only if there is one. Never while a card
+// is being dragged or a dialog is open, since redrawing would pull them away.
+async function checkSnapshot() {
+  if (!store.poll || !st.raw || st.busy || st.dragging || dialog.open || document.hidden) return;
+  try {
+    const data = await store.poll();
+    if (data) {
+      setData(data);
+      render();
+    }
+  } catch (error) {
+    /* offline or mid-deploy: the next check tries again */
+  }
+}
+
+function watchForSnapshot() {
+  setInterval(() => {
+    if (Date.now() < watchUntil && store.pending && store.pending().count) checkSnapshot();
+  }, POLL_MS);
 }
 
 /* --- chrome ------------------------------------------------------------- */
@@ -783,9 +694,13 @@ function wire() {
 
   // Coming back to the app on a later day must not keep showing yesterday's events.
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden || !st.raw || st.busy || Days.today() === st.data.today) return;
-    setData(st.raw);
-    render();
+    if (document.hidden || !st.raw || st.busy) return;
+    // Back from the GitHub tab: the rebuilt snapshot may be ready by now.
+    if (store.pending && store.pending().count) checkSnapshot();
+    if (Days.today() !== st.data.today) {
+      setData(st.raw);
+      render();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -812,5 +727,6 @@ try {
 } catch (error) { /* history is optional */ }
 
 wire();
+watchForSnapshot();
 setView('swipe');
 refresh().catch((error) => toast(error.message, true));

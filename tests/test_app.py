@@ -87,6 +87,8 @@ class ClientContractTests(unittest.TestCase):
     def setUp(self):
         static = ROOT / "app" / "static"
         self.script = (static / "app.js").read_text(encoding="utf-8")
+        self.scripts = {name: (static / name).read_text(encoding="utf-8")
+                        for name in ("app.js", "days.js", "snapshot.js")}
         self.markup = (static / "index.html").read_text(encoding="utf-8")
 
     def test_every_element_the_script_looks_up_exists(self):
@@ -108,8 +110,14 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn('aria-labelledby="details-title"', self.markup)
         self.assertIn('id="details-close"', self.markup)
         self.assertIn('data-seg="undecided"', self.markup)
-        # The past-event rule has to load before the script that calls it.
-        self.assertLess(self.markup.index('src="days.js"'), self.markup.index('src="app.js"'))
+        # The modules app.js calls have to load before it does.
+        for module in ("days.js", "snapshot.js"):
+            with self.subTest(module=module):
+                self.assertLess(self.markup.index(f'src="{module}"'), self.markup.index('src="app.js"'))
+        for name in ("Days", "Snapshot"):
+            with self.subTest(global_name=name):
+                self.assertIn(f"{name}.", self.script)
+                self.assertIn(f"root.{name} = api", self.scripts[f"{name.lower()}.js"])
         # Escape, the backdrop, the close button and the phone's back gesture.
         for handler in ("'Escape'", "event.target === overlay", "'details-close'", "'popstate'"):
             with self.subTest(handler=handler):
@@ -117,9 +125,15 @@ class ClientContractTests(unittest.TestCase):
 
     def test_source_text_is_never_written_as_html(self):
         # Titles, venues and prices come from third-party pages. Text nodes only.
-        for sink in ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval("):
-            with self.subTest(sink=sink):
-                self.assertNotIn(sink, self.script)
+        for name, source in self.scripts.items():
+            for sink in ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval("):
+                with self.subTest(script=name, sink=sink):
+                    self.assertNotIn(sink, source)
+
+    def test_the_card_can_be_tapped_open_and_the_title_is_not_a_visible_heading(self):
+        self.assertIn("openDetails(card, null)", self.script)
+        self.assertIn('class="sr-only">Dogodki za otroke', self.markup)
+        self.assertNotIn('<h1>', self.markup)
 
 
 class ApiTests(unittest.TestCase):
@@ -177,6 +191,9 @@ class ApiTests(unittest.TestCase):
         status, days = self.call("GET", "/days.js")
         self.assertEqual(status, 200)
         self.assertIn("Europe/Ljubljana", days)
+        status, snapshot = self.call("GET", "/snapshot.js")
+        self.assertEqual(status, 200)
+        self.assertIn("createStaticStore", snapshot)
 
     def test_decide_clear_and_undo_are_written_to_the_database(self):
         status, body = self.call("POST", "/api/decide",

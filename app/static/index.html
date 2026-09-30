@@ -18,10 +18,8 @@
     </div>
 
     <header class="bar">
-      <div>
-        <h1>Dogodki za otroke</h1>
-        <p class="sub" id="clock">Nalagam …</p>
-      </div>
+      <h1 class="sr-only">Dogodki za otroke</h1>
+      <p class="sub" id="clock">Nalagam …</p>
       <button class="icon-btn" id="quit" type="button" title="Končaj in zapri aplikacijo"
               aria-label="Končaj in zapri aplikacijo">⏻</button>
     </header>
@@ -66,7 +64,7 @@
           <button class="act act-interested" type="button" data-decide="interested"
                   title="Zanima nas (puščica desno)" aria-label="Zanima nas">♥</button>
         </div>
-        <p class="hint" id="hint">Povleci kartico ali uporabi ← ↓ → · Z razveljavi</p>
+        <p class="hint" id="hint"><span id="hint-count">Nalagam …</span><span class="hint-touch"> · tapni kartico za podrobnosti</span><span class="hint-keys"> · ← ↓ → · Z razveljavi</span></p>
       </section>
 
       <section class="view" id="view-review" hidden>
@@ -206,6 +204,7 @@
 
 <script src="mode.js"></script>
 <script src="days.js"></script>
+<script src="snapshot.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

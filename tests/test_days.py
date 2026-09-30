@@ -5,27 +5,15 @@ is the only way to exercise it without a browser.
 """
 
 import json
-import os
-import shutil
-import subprocess
 import unittest
-from pathlib import Path
 
-NODE = shutil.which("node")
-DAYS = Path(__file__).resolve().parents[1] / "app" / "static" / "days.js"
+import node_runner
+from node_runner import NODE
 
 
 def evaluate(expression, timezone=None):
     """Evaluate a JavaScript expression against days.js and return its JSON."""
-    script = (f"const Days = require({json.dumps(str(DAYS))});"
-              f"console.log(JSON.stringify({expression}));")
-    env = dict(os.environ)
-    if timezone:
-        env["TZ"] = timezone
-    result = subprocess.run([NODE, "-e", script], capture_output=True, text=True, env=env)
-    if result.returncode:
-        raise AssertionError(result.stderr)
-    return json.loads(result.stdout)
+    return node_runner.run(f"{node_runner.require('days.js')} return {expression};", timezone)
 
 
 # Each pair is a UTC instant and the calendar date it is in Ljubljana.
