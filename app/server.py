@@ -35,10 +35,13 @@ import render  # noqa: E402
 import state  # noqa: E402
 import swipe  # noqa: E402
 
+mimetypes.add_type("application/manifest+json", ".webmanifest")
 STATIC_DIR = APP_DIR / "static"
 STATIC_FILES = {"/": "index.html", "/index.html": "index.html",
                 "/app.css": "app.css", "/app.js": "app.js", "/mode.js": "mode.js",
-                "/days.js": "days.js", "/snapshot.js": "snapshot.js"}
+                "/days.js": "days.js", "/snapshot.js": "snapshot.js",
+                "/manifest.webmanifest": "manifest.webmanifest",
+                "/icon-192.png": "icon-192.png", "/icon-512.png": "icon-512.png"}
 MAX_BODY = 64 * 1024
 LOOPBACK = {"localhost", "127.0.0.1", "::1", "[::1]"}
 

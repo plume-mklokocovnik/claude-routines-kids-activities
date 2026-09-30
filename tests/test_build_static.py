@@ -41,7 +41,8 @@ class BuildTests(unittest.TestCase):
 
     def test_bundle_holds_the_page_and_a_baked_snapshot(self):
         build_static.build(self.path, self.out, repo="owner/name")
-        for name in ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "mode.js", "state.json", ".nojekyll"):
+        for name in ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "mode.js", "state.json", ".nojekyll",
+                     "manifest.webmanifest", "icon-192.png", "icon-512.png"):
             with self.subTest(name=name):
                 self.assertTrue((self.out / name).is_file())
         # The copied files are the served ones, so the bundle cannot drift.
@@ -49,6 +50,18 @@ class BuildTests(unittest.TestCase):
             self.assertEqual((self.out / name).read_bytes(),
                              (build_static.STATIC_DIR / name).read_bytes())
         self.assertIn("card-template", (self.out / "index.html").read_text(encoding="utf-8"))
+
+    def test_bundle_is_installable_as_a_standalone_app(self):
+        build_static.build(self.path, self.out, repo="owner/name")
+        manifest = json.loads((self.out / "manifest.webmanifest").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["display"], "standalone")
+        self.assertEqual(manifest["start_url"], "./")
+        self.assertEqual({icon["sizes"] for icon in manifest["icons"]}, {"192x192", "512x512"})
+        for icon in manifest["icons"]:
+            with self.subTest(icon=icon["src"]):
+                self.assertTrue((self.out / icon["src"]).is_file())
+        page = (self.out / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<link rel="manifest" href="manifest.webmanifest">', page)
 
     def test_mode_script_marks_static_and_names_the_save_target(self):
         build_static.build(self.path, self.out, repo="owner/name", branch="trunk",

@@ -33,7 +33,8 @@ import state  # noqa: E402
 import swipe  # noqa: E402
 
 STATIC_DIR = APP_DIR / "static"
-COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js")
+COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js",
+          "manifest.webmanifest", "icon-192.png", "icon-512.png")
 INBOX = "inbox/decisions.txt"
 
 

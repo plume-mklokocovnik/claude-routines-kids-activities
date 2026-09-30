@@ -45,8 +45,8 @@ This opens the app to everyone on that network. There is no password, so treat
 it as a home-network convenience, not something to run on shared Wi-Fi. The
 default loopback bind is unreachable from other devices.
 
-In the phone browser, "Add to Home Screen" gives a fullscreen launcher without
-the browser bars.
+The local server is plain HTTP, so a phone browser only makes a bookmark shortcut
+of it. The installable app is the published version below.
 
 ## Published version
 
@@ -100,6 +100,22 @@ setting exists. Re-run the workflow afterwards and it publishes.
 
 Note that a Pages site is public to the internet whatever the repository's
 visibility, unless the owner is on GitHub Enterprise Cloud.
+
+### Install on Android
+
+The bundle carries a web app manifest (`display: standalone`) and two icons, so
+Chrome treats the published page as an installable app. On the phone:
+
+1. Delete any older home screen shortcut of the page. A shortcut made before the
+   manifest existed stays a browser tab for good.
+2. Open the published address in Chrome and reload it once.
+3. Menu (⋮) → **Add to Home screen** → **Install**. The entry reads *Install
+   app* when the page qualifies, and *Create shortcut* when it does not.
+
+The installed app opens without the address bar or browser menu. If it still
+shows browser bars, it is a shortcut, not an install. There is deliberately no
+service worker, so the page always loads the latest snapshot and works online
+only.
 
 Build it locally to see exactly what gets deployed:
 
