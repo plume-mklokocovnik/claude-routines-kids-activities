@@ -289,7 +289,6 @@ function buildCard(card) {
   fill(node, 'event_id', card.event_id);
   fill(node, 'price', priceText(card)).classList.toggle('is-free', card.is_free);
 
-  node.querySelector('[data-f="starred"]').hidden = !card.starred;
   const status = node.querySelector('[data-f="status"]');
   status.hidden = card.status === 'active';
   status.textContent = card.status === 'expired' ? 'poteklo' : 'skrito';
@@ -334,7 +333,7 @@ function buildRow(card) {
   const node = el('row-template').content.firstElementChild.cloneNode(true);
   fill(node, 'date', card.date_short);
   fill(node, 'time', card.time);
-  fill(node, 'title', `${card.starred ? '⭐ ' : ''}${card.title}`);
+  fill(node, 'title', card.title);
   fill(node, 'place', placeText(card));
   const extra = [card.category, `${card.age} let`, priceText(card)];
   if (card.status !== 'active') extra.push(card.status === 'expired' ? 'poteklo' : 'skrito');

@@ -51,9 +51,6 @@ the clock or expires events. `check` is read-only and fails when an output is st
 Use an exact event ID from either report, or an unambiguous title/venue fragment.
 
 ```bash
-python3 scripts/star_event.py star <event_id>
-python3 scripts/star_event.py unstar <event_id>
-python3 scripts/star_event.py list
 python3 scripts/hide_event.py hide <event_id> --reason "not interested"
 python3 scripts/hide_event.py hide <event_id> --scope series
 python3 scripts/hide_event.py hide <event_id> --scope venue
@@ -62,7 +59,7 @@ python3 scripts/hide_event.py list
 ```
 
 Each command updates the database atomically and regenerates the calendar. A
-hide retains the complete event and its star. An unhide removes the exclusion
+hide retains the complete event record. An unhide removes the exclusion
 and restores retained records as of the last sweep clock. Old hidden references
 whose event rows were deleted by earlier versions remain intact, but their
 missing details must be rediscovered. Nothing is fabricated to reconstruct them.

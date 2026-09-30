@@ -69,8 +69,6 @@ def validate_event(event):
         raise ValueError("is_free must be true, false or null")
     if not isinstance(event.get("price_text", ""), str):
         raise ValueError("price_text must be a string")
-    if "starred" in event and type(event["starred"]) is not bool:
-        raise ValueError("starred must be a boolean")
     if "decision" in event and event["decision"] not in DECISIONS:
         raise ValueError(f"decision must be one of {', '.join(DECISIONS)}")
     if "decided_at" in event and not isinstance(event["decided_at"], str):

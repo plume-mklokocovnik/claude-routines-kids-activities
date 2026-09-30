@@ -34,7 +34,6 @@ class PresentationTests(unittest.TestCase):
         self.assertTrue(card["is_free"])
         self.assertEqual(card["price"], "Brezplačno, prijava")
         self.assertEqual(card["notes"], ["prijava", "ura ni znana", "daljša pot"])
-        self.assertTrue(card["starred"])
         self.assertIsNone(card["decision"])
 
     def test_card_drops_an_unusable_source_link(self):

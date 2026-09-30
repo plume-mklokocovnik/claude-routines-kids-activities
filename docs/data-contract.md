@@ -16,9 +16,13 @@ schema to keep in sync.
 | `decision_log` | Append-only undo history for categories. Optional table. Never delete rows |
 | Other tables/fields | Preserve without interpretation |
 
-`starred: true` is user-owned on the event. Refreshes cannot set or clear it.
-Expiry/hiding retain it. New source observations update only source-owned fields.
-The previous version of an updated event is kept in its run record's `before` field.
+New source observations update only source-owned fields, so user-owned ones
+survive a refresh and are retained through expiry and hiding. The previous
+version of an updated event is kept in its run record's `before` field.
+
+An earlier `starred: true` flag was removed in favour of `decision`. Run records
+under `runs/` still mention it, and those are immutable history that stays as
+written. Nothing reads the field any more.
 
 `decision` is user-owned in the same way, with the same guarantees. It is
 `interested`, `maybe` or `rejected`, alongside a `decided_at` string, and only

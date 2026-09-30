@@ -74,7 +74,6 @@ def card(event):
         "notes": notes(event),
         "url": event.get("url") if state.valid_url(event.get("url")) else "",
         "maps": render.maps_link(event.get("venue"), event.get("city")),
-        "starred": bool(event.get("starred")),
         "status": event.get("status", "active"),
         "decision": event.get("decision"),
     }

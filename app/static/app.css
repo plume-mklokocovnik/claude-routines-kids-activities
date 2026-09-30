@@ -241,7 +241,6 @@ body[data-view="review"] .tallies { display: none; }
 }
 
 .chip-cat { background: #2b3a55; border-color: #3a4c6c; color: #bcd3ff; text-transform: uppercase; }
-.chip-star { background: #3a2f16; border-color: #6a5420; color: #ffd98a; }
 .chip-status { background: #3a2222; border-color: #6a3030; color: #ffb4b4; }
 
 .card-when { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }

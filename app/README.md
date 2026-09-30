@@ -128,13 +128,13 @@ deleted: an undone row stays as an audit trail, marked `undone`.
 
 ## What it writes, and what it leaves alone
 
-Decisions are user-owned data on the event row, exactly like a star:
+A decision is user-owned data on the event row:
 
 ```json
 { "decision": "interested", "decided_at": "2026-09-30T11:26:32Z" }
 ```
 
-The app never touches stars, `user_rules`, `hidden_events` or event status.
+The app never touches `user_rules`, `hidden_events` or event status.
 Rejecting an event is not hiding it: it stays in
 [currently_active.md](../currently_active.md), which the app does not regenerate.
 To remove an event from the calendar, use the hide command in the

@@ -65,7 +65,7 @@ Run: `20260928T131049Z_41de4e85`
 
 | When | Event / ID | Place | Age / price / notes |
 |---|---|---|---|
-| 09.11.2026 17:00 | ⭐ [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke`<br>`kinobezigrad_20261109_0000` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` / Cena ni navedena<br>flags, start\_time |
+| 09.11.2026 17:00 | [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke`<br>`kinobezigrad_20261109_0000` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` / Cena ni navedena<br>flags, start\_time |
 
 ## Expired
 

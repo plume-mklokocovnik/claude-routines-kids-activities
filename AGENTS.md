@@ -13,7 +13,7 @@
 
 - Never delete event rows, hidden references, unknown fields or database tables.
   Expiry and hiding change status. Existing event IDs stay stable.
-- Stars, categories and exclusions belong to the user. Discovery must not clear
+- Categories and exclusions belong to the user. Discovery must not clear
   or override them. A rejected category is not a hide and does not remove an event.
 - Do not edit the database or generated reports by hand. Use the state commands.
 - Never invent dates, prices, venues or source confirmations. A search snippet

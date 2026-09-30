@@ -50,12 +50,11 @@ class SwipeStateTests(unittest.TestCase):
                          ["after_dst"])
         self.assertEqual(swipe.counts(self.db)["interested"], 1)
 
-    def test_decision_is_independent_of_star_and_hide_rules(self):
+    def test_decision_is_independent_of_hide_rules(self):
         before = copy.deepcopy(self.db)
         event_row = self.db["events"]["1"]
         swipe.set_decision(self.db, event_row, "rejected")
         self.assertEqual(event_row["decision"], "rejected")
-        self.assertTrue(event_row["starred"])
         self.assertEqual(event_row["status"], "active")
         self.assertEqual(self.db["user_rules"], before["user_rules"])
         self.assertEqual(self.db["hidden_events"], before["hidden_events"])

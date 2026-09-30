@@ -33,13 +33,17 @@ def candidate(**changes):
 
 
 class RunTests(unittest.TestCase):
-    def test_refresh_preserves_star_unknown_fields_and_tables(self):
+    def test_refresh_preserves_decision_unknown_fields_and_tables(self):
         db, payload = database(), batch()
+        db["events"]["1"]["decision"] = "interested"
+        db["events"]["1"]["decided_at"] = "2026-09-27T08:00:00Z"
         payload["candidates"] = [candidate(price_text="8 EUR")]
         before = copy.deepcopy(db)
         merged, results = run.merge(db, payload)
         self.assertEqual(db, before)
-        self.assertTrue(merged["events"]["1"]["starred"])
+        self.assertEqual(merged["events"]["1"]["price_text"], "8 EUR")
+        self.assertEqual(merged["events"]["1"]["decision"], "interested")
+        self.assertEqual(merged["events"]["1"]["decided_at"], "2026-09-27T08:00:00Z")
         self.assertEqual(merged["events"]["1"]["custom_metadata"], {"keep": True})
         self.assertEqual(merged["unknown_table"], db["unknown_table"])
         self.assertEqual(results["updated"][0]["before"], db["events"]["1"])
@@ -72,7 +76,7 @@ class RunTests(unittest.TestCase):
     def test_conflicting_and_unverified_candidates_are_rejected(self):
         for candidates in ([candidate(), candidate(price_text="different")],
                            [candidate(url="https://example.org/not-fetched")],
-                           [{**candidate(), "starred": False}],
+                           [{**candidate(), "decision": "interested"}],
                            [candidate(start_time="2026-10-10T10:00:00")]):
             with self.subTest(candidates=candidates):
                 payload = batch()
@@ -155,8 +159,8 @@ class RunTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), before)
             command("run.py", "apply", str(staged))
             command("run.py", "check")
-            command("star_event.py", "unstar", "sample_20261010_1000")
-            command("run.py", "check")
+            command("swipe.py", "set", "sample_20261010_1000", "interested")
+            command("run.py", "check")  # a decision must not stale the reports
             command("hide_event.py", "hide", "sample_20261010_1000")
             command("run.py", "check")
             command("hide_event.py", "unhide", "sample_20261010_1000")
@@ -182,7 +186,7 @@ class RunTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), after)
             run.check(args)
             db = state.load(path)
-            db["events"]["1"]["starred"] = False
+            db["events"]["1"]["decision"] = "maybe"
             state.save(path, db)
             with self.assertRaisesRegex(ValueError, "Database changed"):
                 run.apply(args)

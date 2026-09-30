@@ -19,7 +19,7 @@ Three changes, all in `db.json`, all in one command:
 | `hidden_events` | The permanent reference: what was hidden, which scope, when and why |
 
 The [run workflow](../../../routine.md) applies exclusions before saving candidates.
-The original event, its star and the audit reference are retained. Rules hold
+The original event and the audit reference are retained. Rules hold
 until the user restores them. Legacy hidden occurrences also match by title,
 time and venue when a new ID would otherwise bypass the rule.
 

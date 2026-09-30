@@ -17,7 +17,7 @@ independent counts, formatting and dates that could drift from the database.
 
 | Concern | New format |
 |---|---|
-| Fast planning | Starred shortlist first, then the complete chronological calendar |
+| Fast planning | The complete chronological calendar, with month navigation above it |
 | Narrow screens | Four columns, with category and exact ID below the event title |
 | Long calendar | Month navigation and dated daily headings |
 | Prices | Full published text, with a free marker only when `is_free` is explicitly true |
@@ -27,10 +27,12 @@ independent counts, formatting and dates that could drift from the database.
 | Replay | Both reports derive only from stored state and structured run records |
 | Coverage | Every discovery pass and attempted source has an explicit outcome in the run report |
 
-Stars appear both in the shortlist and their chronological position. That is
-intentional duplication, not two database records. IDs remain unchanged and
-copyable. All active events remain visible in the calendar, with no page-size
-limit or silent truncation. Hidden and expired event records remain in the database.
+The shortlist described above was a list of starred events. Stars were later
+removed in favour of the three swipe categories, which the app owns and this
+report does not show, so the calendar is now the whole body. IDs remain
+unchanged and copyable. All active events remain visible in the calendar, with
+no page-size limit or silent truncation. Hidden and expired event records remain
+in the database.
 
 This remains GitHub-compatible Markdown, not a web app. Four columns reduce
 width, but long IDs or source text can still require horizontal scrolling on a
@@ -43,7 +45,7 @@ sections may expand in renderers that do not support interactive HTML.
 owns sweep reports. [run.py](../scripts/run.py) regenerates both from stored input.
 No agent should hand-patch a generated report to improve its layout.
 
-Tests cover stable output, exact IDs, star visibility, timezone conversion,
+Tests cover stable output, exact IDs, timezone conversion,
 unknown times, full price text, HTML/link escaping and contiguous daily tables.
 `python3 scripts/run.py check` verifies committed output equals fresh rendering.
 The legacy [diff.md](../diff.md) stays untouched until the first structured run.

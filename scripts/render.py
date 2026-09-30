@@ -116,9 +116,7 @@ def place_text(event):
 
 
 def title_text(event):
-    linked = link(event.get("title") or "?", event.get("url"))
-    star = "⭐ " if event.get("starred") else ""
-    return f"{star}{linked}"
+    return link(event.get("title") or "?", event.get("url"))
 
 
 def code(value):
@@ -126,15 +124,11 @@ def code(value):
     return f"<code>{safe}</code>" if "`" in safe else f"`{safe}`"
 
 
-def event_table(events, dated=False):
-    out = ["| Kdaj | Dogodek / ID | Kje | Starost / cena / opombe |" if dated
-           else "| Ura | Dogodek / ID | Kje | Starost / cena / opombe |",
-           "|---|---|---|---|"]
+def event_table(events):
+    out = ["| Ura | Dogodek / ID | Kje | Starost / cena / opombe |", "|---|---|---|---|"]
     for event in events:
         start = parse_dt(event.get("start_time"))
         when = hour_text(event, start)
-        if dated:
-            when = f"{start:%d.%m.%Y}<br>{when}" if start else "?"
         title = f"{title_text(event)}<br>{code(event.get('category'))}<br>{code(event.get('event_id'))}"
         details = f"{age_text(event)} · {price_text(event)}"
         notes = notes_text(event)
@@ -154,16 +148,13 @@ def build(db):
     events.sort(key=lambda event: (parse_dt(event.get("start_time")) or horizon,
                                    event.get("title", ""), event.get("event_id", "")))
     hidden = [item for item in db.get("hidden_events", {}).values() if item.get("active", True)]
-    starred = [event for event in events if event.get("starred")]
     free_count = sum(event.get("is_free") is True for event in events)
     out = ["# Dogodki za otroke", "", "Ljubljana in izleti po Sloveniji", "",
            f"Posodobljeno **{local_run:%d.%m.%Y ob %H:%M}** (Europe/Ljubljana). "
            f"Okno do **{si_date(horizon)}**.", "",
            f"**{len(events)}** dogodkov · **{free_count}** brezplačnih · "
-           f"**{len(starred)}** ⭐ zaznamovanih · **{len(hidden)}** skritih pravil", "",
-           "## ⭐ Zaznamovani", ""]
-    out += event_table(starred, dated=True) if starred else ["_Ni zaznamovanih dogodkov._"]
-    out += ["", "## Koledar", ""]
+           f"**{len(hidden)}** skritih pravil", "",
+           "## Koledar", ""]
     months = sorted({start.strftime("%Y-%m") for event in events if (start := parse_dt(event.get("start_time")))})
     out += [" · ".join(f"[{MONTHS[int(month[5:]) - 1]} {month[:4]}](#mesec-{month})" for month in months), ""]
     if not events:
@@ -179,7 +170,7 @@ def build(db):
         if day != current_day:
             current_day = day
             out += ["", f"### {day_heading(start)}" if start else "### Datum ni znan", ""]
-            out += event_table([], dated=False)
+            out += event_table([])
         out += event_table([event])[-1:]
     out += ["", "<details>", "<summary>Pregled po zvrsteh</summary>", "",
             "| Zvrst | Število | Naslednji |", "|---|---|---|"]

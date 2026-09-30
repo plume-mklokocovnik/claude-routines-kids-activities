@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Record which of three categories an event falls into, and undo the last change.
 
-A decision is user-owned, exactly like a star. It lives on the event row in
-`db.json` as `decision` (`interested`, `maybe` or `rejected`) plus `decided_at`.
+A decision is user-owned: only these commands and the app set it, and a source
+refresh never touches it. It lives on the event row in `db.json` as `decision`
+(`interested`, `maybe` or `rejected`) plus `decided_at`.
 Every change is appended to the `decision_log` table, so the most recent one can
 be undone at any time, including after a restart. Nothing is ever deleted: an
 undone log row keeps its audit trail and is marked `undone`.
 
-Decisions are independent of stars and hide rules. Rejecting an event does not
-hide it, does not touch `user_rules` and does not remove it from
-`currently_active.md`. Source refreshes never set or clear a decision.
+Decisions are independent of hide rules. Rejecting an event does not hide it,
+does not touch `user_rules` and does not remove it from `currently_active.md`.
 
     python3 scripts/swipe.py set <query> interested|maybe|rejected
     python3 scripts/swipe.py clear <query>
@@ -267,8 +267,7 @@ def cmd_list(args):
         rows = groups[name]
         print(f"{LABELS[name]} ({len(rows)}):" if rows else f"{LABELS[name]} (0)")
         for event in rows:
-            star = "⭐ " if event.get("starred") else ""
-            print(f"  {star}{describe(event)}")
+            print(f"  {describe(event)}")
     return 0
 
 

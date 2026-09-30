@@ -16,7 +16,7 @@ def event(**changes):
         "start_time": "2026-10-10T10:00:00+02:00", "venue": "Museum",
         "city": "Ljubljana", "category": "delavnica", "age_min": None,
         "is_free": None, "price_text": "", "url": "https://example.org/event",
-        "flags": [], "status": "active", "starred": True,
+        "flags": [], "status": "active",
         "first_seen": "2026-09-24T07:22:48Z", "custom_metadata": {"keep": True},
     }
     result.update(changes)

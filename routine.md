@@ -72,7 +72,7 @@ Populate the input according to [the data contract](docs/data-contract.md).
 - `leads`: unconfirmed or early-booking leads with title, URL and missing evidence.
 - `runtime_notes`: factual access issues, skipped work and execution constraints.
 
-Do not set `starred`, `status`, `first_seen` or user-rule fields in candidates.
+Do not set `decision`, `status`, `first_seen` or user-rule fields in candidates.
 The merger keeps these under their owning workflow. It applies user exclusions,
 deduplication, horizon checks and expiry. Use the policy for semantic filtering,
 including its single-ticket and open-door exceptions. Never exclude on age alone

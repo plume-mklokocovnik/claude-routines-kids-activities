@@ -27,14 +27,15 @@ class RenderTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "last_run"):
                     render.build(self.db)
 
-    def test_shortlist_ids_unknown_time_and_full_price(self):
+    def test_ids_unknown_time_and_full_price(self):
         db = database()
         db["events"]["1"] = event(flags=["time_unknown"], price_text="Free programme, participants 20 EUR")
         output = render.build(db)
-        self.assertEqual(output.count("`sample_20261010_1000`"), 2)
+        # Exactly once: the calendar is the only place an active event is listed.
+        self.assertEqual(output.count("`sample_20261010_1000`"), 1)
         self.assertIn("Free programme, participants 20 EUR", output)
         self.assertNotIn("10:00 |", output)
-        self.assertLess(output.index("## ⭐"), output.index("## Koledar"))
+        self.assertNotIn("⭐", output)
 
     def test_local_timezone_and_non_active_filtering(self):
         db = database()
@@ -63,7 +64,7 @@ class RenderTests(unittest.TestCase):
 
     def test_same_day_rows_form_one_contiguous_table(self):
         db = database()
-        db["events"]["2"] = event(event_id="second", starred=False)
+        db["events"]["2"] = event(event_id="second")
         calendar = render.build(db).split("## Koledar", 1)[1].split("<details>", 1)[0]
         rows = [line for line in calendar.splitlines() if line.startswith("|")]
         self.assertEqual(len(rows), 4)

@@ -8,7 +8,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import hide_event
-import star_event
 import state
 from test_state import database, event
 
@@ -25,7 +24,7 @@ class PreferenceTests(unittest.TestCase):
         self.output.__enter__()
         self.addCleanup(self.output.__exit__, None, None, None)
 
-    def test_hide_and_restore_preserve_event_star_and_audit(self):
+    def test_hide_and_restore_preserve_the_event_and_the_audit(self):
         self.assertEqual(hide_event.cmd_hide(self.args), 0)
         hidden = state.load(self.path)
         self.assertEqual(hidden["events"]["1"], {**self.db["events"]["1"], "status": "hidden"})
@@ -37,14 +36,24 @@ class PreferenceTests(unittest.TestCase):
         self.assertIn("restored_at", restored["hidden_events"]["1"])
         self.assertEqual(restored["unknown_table"], self.db["unknown_table"])
 
-    def test_star_unstar_and_repeat_are_safe(self):
-        self.assertEqual(star_event.cmd_unstar(self.args), 0)
-        self.assertNotIn("starred", state.load(self.path)["events"]["1"])
-        self.assertEqual(star_event.cmd_star(self.args), 0)
+    def calendar(self):
+        """The calendar section only. The hidden-rule audit below it keeps IDs."""
+        report = (self.path.parent / "currently_active.md").read_text(encoding="utf-8")
+        return report.split("## Koledar", 1)[1].split("<details>", 1)[0]
+
+    def test_hiding_regenerates_the_calendar(self):
+        self.assertEqual(hide_event.cmd_hide(self.args), 0)
+        self.assertNotIn("sample_20261010_1000", self.calendar())
+        self.assertIn("Ni aktivnih dogodkov", self.calendar())
+        self.assertEqual(hide_event.cmd_unhide(self.args), 0)
+        self.assertIn("sample_20261010_1000", self.calendar())
+
+    def test_hiding_an_already_hidden_event_changes_nothing(self):
+        self.assertEqual(hide_event.cmd_hide(self.args), 0)
         before = self.path.read_bytes()
-        self.assertEqual(star_event.cmd_star(self.args), 0)
+        with contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(hide_event.cmd_hide(self.args), 1)
         self.assertEqual(self.path.read_bytes(), before)
-        self.assertIn("sample_20261010_1000", (self.path.parent / "currently_active.md").read_text())
 
     def test_ambiguous_query_changes_nothing(self):
         self.db["events"]["2"] = event(event_id="other", title="Family concert", category="koncert")
@@ -52,7 +61,7 @@ class PreferenceTests(unittest.TestCase):
         before = self.path.read_bytes()
         self.args.query = "Family"
         with contextlib.redirect_stderr(io.StringIO()):
-            self.assertEqual(star_event.cmd_star(self.args), 2)
+            self.assertEqual(hide_event.cmd_hide(self.args), 2)
             self.args.scope = "series"
             self.assertEqual(hide_event.cmd_hide(self.args), 2)
         self.assertEqual(self.path.read_bytes(), before)

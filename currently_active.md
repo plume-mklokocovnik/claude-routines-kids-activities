@@ -4,17 +4,7 @@ Ljubljana in izleti po Sloveniji
 
 Posodobljeno **28.09.2026 ob 15:10** (Europe/Ljubljana). Okno do **28. december 2026**.
 
-**106** dogodkov · **14** brezplačnih · **5** ⭐ zaznamovanih · **44** skritih pravil
-
-## ⭐ Zaznamovani
-
-| Kdaj | Dogodek / ID | Kje | Starost / cena / opombe |
-|---|---|---|---|
-| 10.10.2026<br>10:00 | ⭐ [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice`<br>`ng_20261010_1000` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` · 🆓 Brezplačno (Teden otroka) |
-| 09.11.2026<br>17:00 | ⭐ [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke`<br>`kinobezigrad_20261109_0000` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` · Cena ni navedena |
-| 10.11.2026<br>11:00 | ⭐ [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival`<br>`strunjan_20261110_1100` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` · 🆓 Brezplačno (sejem, ogled razstave, brezplačen prevoz vse tri dni); harmonikarsko srečanje v nedeljo 10 EUR<br>daljša pot |
-| 10.11.2026<br>16:00 | ⭐ [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica`<br>`mestnimuzej_20261110_1600` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` · 🆓 Brezplačno, prijava cebela@ljubljana.si<br>prijava |
-| 05.12.2026<br>17:00 | ⭐ [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert`<br>`kranj_20261205_1700` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` · Cena ni navedena (mestna prireditev) |
+**106** dogodkov · **14** brezplačnih · **44** skritih pravil
 
 ## Koledar
 
@@ -97,7 +87,7 @@ Posodobljeno **28.09.2026 ob 15:10** (Europe/Ljubljana). Okno do **28. december 
 | 09:00 | [11. Medeni dan](https://www.ljubljana.si/sl/aktualno/dogodki/11-medeni-dan-6aa113901ec1a)<br>`festival`<br>`event_20261010_0900_f7ec09959657` | [Stritarjeva ulica](https://maps.google.com/?q=Stritarjeva%20ulica%20Ljubljana) | `?` · `?` |
 | 10:00 | [Dan odprtih vrat - PGD Zgornji Kašelj](https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-pgd-zgornji-kaselj-6aaa94dc4b0ec)<br>`odprta_vrata`<br>`event_20261010_1000_be9f934d6282` | [PGD Zgornji Kašelj, Kašeljska cesta 95](https://maps.google.com/?q=PGD%20Zgornji%20Ka%C5%A1elj%2C%20Ka%C5%A1eljska%20cesta%2095%20Ljubljana) | `?` · `?` |
 | 10:00 | [Plesno-glasbena zabava z Alenko in maskoto (abonma Cepetavček)](https://glasbenadezela.si/nastopi/)<br>`koncert`<br>`event_20261010_1000_f63573458fa5` | [Hram kulture Arnolda Tovornika, Selnica ob Dravi](https://maps.google.com/?q=Hram%20kulture%20Arnolda%20Tovornika%20Selnica%20ob%20Dravi) | `?` · `?`<br>daljša pot |
-| 10:00 | ⭐ [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice`<br>`ng_20261010_1000` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` · 🆓 Brezplačno (Teden otroka) |
+| 10:00 | [Predstava za otroke in družine: Mravljica Sanja](https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708)<br>`pravljice`<br>`ng_20261010_1000` | [Narodna galerija, mezanin vhodne avle](https://maps.google.com/?q=Narodna%20galerija%2C%20mezanin%20vhodne%20avle%20Ljubljana) | `4+` · 🆓 Brezplačno (Teden otroka) |
 | 10:00 | [Pumptrack pokal Slovenije – Grosuplje](https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/)<br>`kolo`<br>`pumptrackgrosuplje_20261010_0000` | [Pumptrack Grosuplje, Grosuplje](https://maps.google.com/?q=Pumptrack%20Grosuplje%20Grosuplje) | `?` · Brezplačen otroški program (Grbine so fine); tekma za registrirane tekmovalce 20 EUR |
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Glasbočasnice](https://sititeater.mojekarte.si/si/glasbocasnice-otvoritev-sezone/vstopnice-1236161.html)<br>`koncert`<br>`siti_20261010_1100` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` · 8 EUR (12 EUR z enim otrokom do 4. leta v naročju) |
 | 15:00 | [Brezplačno vodstvo po razstavi za otroke in družine (Teden otroka)](https://mgml.si/sl/mestna-galerija/eventi/2529/)<br>`delavnica`<br>`mestnagalerija_20261010_1500` | [Mestna galerija Ljubljana](https://maps.google.com/?q=Mestna%20galerija%20Ljubljana%20Ljubljana) | `4+` · 🆓 |
@@ -197,14 +187,14 @@ Posodobljeno **28.09.2026 ob 15:10** (Europe/Ljubljana). Okno do **28. december 
 
 | Ura | Dogodek / ID | Kje | Starost / cena / opombe |
 |---|---|---|---|
-| 17:00 | ⭐ [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke`<br>`kinobezigrad_20261109_0000` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` · Cena ni navedena |
+| 17:00 | [Nov muzikal Romane Krajnčan: Kako je mravljica postala huda](https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/)<br>`lutke`<br>`kinobezigrad_20261109_0000` | [Kino Bežigrad](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%20Ljubljana) | `3+` · Cena ni navedena |
 
 ### Torek, 10. november 2026
 
 | Ura | Dogodek / ID | Kje | Starost / cena / opombe |
 |---|---|---|---|
-| 11:00 | ⭐ [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival`<br>`strunjan_20261110_1100` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` · 🆓 Brezplačno (sejem, ogled razstave, brezplačen prevoz vse tri dni); harmonikarsko srečanje v nedeljo 10 EUR<br>daljša pot |
-| 16:00 | ⭐ [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica`<br>`mestnimuzej_20261110_1600` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` · 🆓 Brezplačno, prijava cebela@ljubljana.si<br>prijava |
+| 11:00 | [Praznik kakijev v Strunjanu](https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/)<br>`festival`<br>`strunjan_20261110_1100` | [Strunjanske soline (TD Solinar Strunjan), Strunjan (Piran)](https://maps.google.com/?q=Strunjanske%20soline%20%28TD%20Solinar%20Strunjan%29%20Strunjan%20%28Piran%29) | `0+` · 🆓 Brezplačno (sejem, ogled razstave, brezplačen prevoz vse tri dni); harmonikarsko srečanje v nedeljo 10 EUR<br>daljša pot |
+| 16:00 | [Delavnica peke in krašenja medenjakov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c)<br>`delavnica`<br>`mestnimuzej_20261110_1600` | [Mestni muzej Ljubljana, Gosposka ulica 15](https://maps.google.com/?q=Mestni%20muzej%20Ljubljana%2C%20Gosposka%20ulica%2015%20Ljubljana) | `?` · 🆓 Brezplačno, prijava cebela@ljubljana.si<br>prijava |
 
 ### Sobota, 14. november 2026
 
@@ -274,7 +264,7 @@ Posodobljeno **28.09.2026 ob 15:10** (Europe/Ljubljana). Okno do **28. december 
 | 11:00 | [SiTi Teater sobotni dopoldnevi: Cirkus Kolibris z obiskom Miklavža](https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/)<br>`lutke`<br>`siti_20261205_1100` | [SiTi Teater BTC, Ameriška ulica 3](https://maps.google.com/?q=SiTi%20Teater%20BTC%2C%20Ameri%C5%A1ka%20ulica%203%20Ljubljana) | `3+` · Vstopnina (cena ni navedena na strani) |
 | 16:00 | [Fantazima 2026 – Praznični december v Kopru](https://visitkoper.si/prireditve/fantazima-2026/)<br>`festival`<br>`koper_20261205_1600` | [Mestno jedro Kopra (Carpaccio trg, Čevljarska ulica, obala), Koper](https://maps.google.com/?q=Mestno%20jedro%20Kopra%20%28Carpaccio%20trg%2C%20%C4%8Cevljarska%20ulica%2C%20obala%29%20Koper) | `0+` · 🆓 Prižig lučk brezplačen; drsališče in nekatere atrakcije predvidoma plačljive<br>daljša pot |
 | 17:00 | [Miklavžev sprevod](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/)<br>`festival`<br>`krekovtrg_20261205_1700` | [Krekov trg → Prešernov trg](https://maps.google.com/?q=Krekov%20trg%20%E2%86%92%20Pre%C5%A1ernov%20trg%20Ljubljana) | `0+` · 🆓 |
-| 17:00 | ⭐ [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert`<br>`kranj_20261205_1700` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` · Cena ni navedena (mestna prireditev) |
+| 17:00 | [Romana Krajnčan – nastop na Miklavževem sprevodu (Prešerni december)](https://www.zgodovinska-mesta.si/prireditve/preserni-december/)<br>`koncert`<br>`kranj_20261205_1700` | [Glavni trg, Kranj](https://maps.google.com/?q=Glavni%20trg%20Kranj) | `?` · Cena ni navedena (mestna prireditev) |
 
 ### Nedelja, 6. december 2026
 
