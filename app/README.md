@@ -118,6 +118,31 @@ The deck holds the active, not hidden events that have no decision yet, earliest
 first. A decided event leaves the deck and appears under **Pregled**, where its
 category can be changed or cleared. Clearing returns it to the deck.
 
+## Past events
+
+The app does not show an event once its date, in Ljubljana, is before today. An
+event from today stays whatever time it started, and one with no date is never
+treated as past. This applies everywhere: the deck, the four lists and the
+counts, which are worked out from what is left.
+
+[days.js](static/days.js) reads the clock when the page is opened, and again when
+you return to it on a later day, so an app left open overnight does not keep
+showing yesterday. It uses Ljubljana's date whatever timezone the phone is set to,
+including across the two daylight-saving changes. This is the one place the app
+reads the clock, and it decides visibility only. Nothing is written, so a decision
+on a past event stays in `db.json` and the event keeps its status. The published
+page needs no rebuild for this, since the rule runs in the browser.
+
+Things this does not do:
+
+- **Multi-day events.** Only a start date is stored, so an event that runs for a
+  week disappears after its first day. The end date is in the price text for the
+  few that have one, such as `5.-9. 10.`
+- **The command line.** `swipe.py stats` and `list` still count events from the
+  past, because they answer about the database rather than about today.
+- **The sweep.** It still marks an event expired at its start time. An event it
+  has already marked expired stays out of the deck even when it is from today.
+
 ## Reviewing
 
 **Pregled** has one list per category, **Zanima nas**, **Mogoče** and
@@ -187,6 +212,7 @@ shown unshortened.
 | `static/app.css` | Phone frame, card stack, direction gradients |
 | `static/app.js` | Drag handling, keyboard, review lists, details dialog, both backends |
 | `static/mode.js` | Which backend to use. The build overwrites it |
+| `static/days.js` | Today's date in Ljubljana and the past-event rule |
 
 One page and one renderer serve both modes. `app.js` holds two backends behind
 the same small interface: the local one is a round trip per decision, the
@@ -216,9 +242,11 @@ authentication, so see the phone section above before exposing the port.
 python3 -m unittest discover -s tests -p test_app.py -v
 python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
+python3 -m unittest discover -s tests -p test_days.py -v
 ```
 
-All three are offline. The API test binds an ephemeral loopback port and uses a
+All four are offline. `test_days.py` runs the real `days.js` under Node and skips
+itself when Node is missing. The API test binds an ephemeral loopback port and uses a
 temporary database. The browser behaviour of `app.js` has no automated test:
 check a change against both modes by hand, with the server and with a locally
 served bundle.

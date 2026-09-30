@@ -41,7 +41,7 @@ class BuildTests(unittest.TestCase):
 
     def test_bundle_holds_the_page_and_a_baked_snapshot(self):
         build_static.build(self.path, self.out, repo="owner/name")
-        for name in ("index.html", "app.css", "app.js", "mode.js", "state.json", ".nojekyll"):
+        for name in ("index.html", "app.css", "app.js", "days.js", "mode.js", "state.json", ".nojekyll"):
             with self.subTest(name=name):
                 self.assertTrue((self.out / name).is_file())
         # The copied files are the served ones, so the bundle cannot drift.

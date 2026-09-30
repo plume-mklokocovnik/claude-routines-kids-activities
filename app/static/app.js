@@ -15,7 +15,9 @@ const phone = el('phone');
 const stack = el('stack');
 const list = el('list');
 
-const st = { data: null, view: 'swipe', seg: 'interested', busy: false, stopped: false };
+// `raw` is what the backend sent. `data` is the same without events that are already
+// past in Ljubljana, which is what everything on screen reads.
+const st = { raw: null, data: null, view: 'swipe', seg: 'interested', busy: false, stopped: false };
 
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
 const labelOf = (name) => (st.data && st.data.labels[name]) || name;
@@ -196,8 +198,13 @@ function staticStore() {
 
 const store = window.SWIPE_MODE === 'static' ? staticStore() : serverStore();
 
+function setData(raw) {
+  st.raw = raw;
+  st.data = Days.upcoming(raw, Days.today());
+}
+
 async function refresh(options) {
-  st.data = await store.load();
+  setData(await store.load());
   render(options);
 }
 
@@ -480,7 +487,7 @@ async function commit(dir, node, card) {
   flyOut(node, dir);
   try {
     const [state] = await Promise.all([store.decide(card.event_id, dir), sleep(FLY_MS)]);
-    st.data = state;
+    setData(state);
     render();
     toast(`${labelOf(dir)}: ${card.title}`);
   } catch (error) {
@@ -503,7 +510,7 @@ async function undo() {
   const previous = st.data.undo;
   st.busy = true;
   try {
-    st.data = await store.undo();
+    setData(await store.undo());
     render({ returning: true });
     toast(`Razveljavljeno: ${previous.title} → ${previous.restores}`);
   } catch (error) {
@@ -518,7 +525,7 @@ async function move(card, target) {
   if (target === card.decision) return;
   st.busy = true;
   try {
-    st.data = target ? await store.decide(card.event_id, target) : await store.clear(card.event_id);
+    setData(target ? await store.decide(card.event_id, target) : await store.clear(card.event_id));
     render();
     toast(target ? `${labelOf(target)}: ${card.title}` : `Nazaj v kup: ${card.title}`);
   } catch (error) {
@@ -773,6 +780,13 @@ function wire() {
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
 
   wireDetails();
+
+  // Coming back to the app on a later day must not keep showing yesterday's events.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden || !st.raw || st.busy || Days.today() === st.data.today) return;
+    setData(st.raw);
+    render();
+  });
 
   document.addEventListener('keydown', (event) => {
     if (dialog.open) {

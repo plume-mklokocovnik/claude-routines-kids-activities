@@ -37,7 +37,8 @@ import swipe  # noqa: E402
 
 STATIC_DIR = APP_DIR / "static"
 STATIC_FILES = {"/": "index.html", "/index.html": "index.html",
-                "/app.css": "app.css", "/app.js": "app.js", "/mode.js": "mode.js"}
+                "/app.css": "app.css", "/app.js": "app.js", "/mode.js": "mode.js",
+                "/days.js": "days.js"}
 MAX_BODY = 64 * 1024
 LOOPBACK = {"localhost", "127.0.0.1", "::1", "[::1]"}
 
@@ -77,6 +78,7 @@ def card(event):
         "day": render.DAYS[start.weekday()] if start else "",
         "date": f"{start:%d.%m.%Y}" if start else "",
         "date_short": f"{start:%d.%m.}" if start else "?",
+        "day_iso": start.strftime("%Y-%m-%d") if start else "",
         "date_long": render.si_date(start) if start else "Datum ni znan",
         "month": start.strftime("%Y-%m") if start else "",
         "month_long": (f"{render.MONTHS[start.month - 1].capitalize()} {start.year}"

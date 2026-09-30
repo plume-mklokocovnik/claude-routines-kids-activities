@@ -29,6 +29,7 @@ class PresentationTests(unittest.TestCase):
         self.assertEqual(card["time"], "?")
         self.assertEqual(card["day"], "Sobota")
         self.assertEqual(card["date_short"], "10.10.")
+        self.assertEqual(card["day_iso"], "2026-10-10")
         self.assertEqual(card["date_long"], "10. oktober 2026")
         self.assertEqual(card["month_long"], "Oktober 2026")
         self.assertEqual(card["age"], "?")
@@ -36,6 +37,11 @@ class PresentationTests(unittest.TestCase):
         self.assertEqual(card["price"], "Brezplačno, prijava")
         self.assertEqual(card["notes"], ["prijava", "ura ni znana", "daljša pot"])
         self.assertIsNone(card["decision"])
+
+    def test_day_iso_is_the_ljubljana_date_not_the_utc_one(self):
+        # 23:30 UTC on the 10th is already 01:30 on the 11th in Ljubljana.
+        self.assertEqual(server.card(event(start_time="2026-10-10T23:30:00Z"))["day_iso"], "2026-10-11")
+        self.assertEqual(server.card(event(start_time="2026-10-25T00:30:00+02:00"))["day_iso"], "2026-10-25")
 
     def test_card_drops_an_unusable_source_link(self):
         self.assertEqual(server.card(event(url="javascript:alert(1)"))["url"], "")
@@ -102,6 +108,8 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn('aria-labelledby="details-title"', self.markup)
         self.assertIn('id="details-close"', self.markup)
         self.assertIn('data-seg="undecided"', self.markup)
+        # The past-event rule has to load before the script that calls it.
+        self.assertLess(self.markup.index('src="days.js"'), self.markup.index('src="app.js"'))
         # Escape, the backdrop, the close button and the phone's back gesture.
         for handler in ("'Escape'", "event.target === overlay", "'details-close'", "'popstate'"):
             with self.subTest(handler=handler):
@@ -166,6 +174,9 @@ class ApiTests(unittest.TestCase):
         status, mode = self.call("GET", "/mode.js")
         self.assertEqual(status, 200)
         self.assertIn("window.SWIPE_MODE = 'server'", mode)
+        status, days = self.call("GET", "/days.js")
+        self.assertEqual(status, 200)
+        self.assertIn("Europe/Ljubljana", days)
 
     def test_decide_clear_and_undo_are_written_to_the_database(self):
         status, body = self.call("POST", "/api/decide",

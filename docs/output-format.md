@@ -50,8 +50,8 @@ The trade-offs are real, and were accepted:
   change reaches `main`. The local server reads the file on every request.
 
 Earlier versions of the file remain in Git history. Hidden and expired event
-records remain in the database, and decided events stay visible in the app after
-they expire.
+records remain in the database. The app stops showing an event once its date in
+Ljubljana has passed, but a decision on it stays in `db.json`.
 
 ## Ownership and Verification
 
