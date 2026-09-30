@@ -950,7 +950,9 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "decision": "rejected",
+      "decided_at": "2026-09-30T16:46:06Z"
     },
     "111": {
       "event_id": "kinobezigrad_20261220_0000_koncert",
@@ -1455,7 +1457,9 @@
       ],
       "event_id": "event_20261002_1400_275707efb0af",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "interested",
+      "decided_at": "2026-09-30T16:46:06Z"
     },
     "143": {
       "title": "Praznik kostanja",
@@ -1525,7 +1529,9 @@
       "flags": [],
       "event_id": "event_20261003_1100_fb8cdf304ec1",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-09-30T16:46:06Z"
     },
     "147": {
       "title": "Plesno-glasbena zabava z Alenko in maskoto (abonma Cepetavček)",
@@ -2344,6 +2350,30 @@
       "before_at": null,
       "after": "rejected",
       "at": "2026-09-30T14:54:33Z"
+    },
+    "4": {
+      "event_id": "event_20261002_1400_275707efb0af",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "interested",
+      "at": "2026-09-30T16:46:06Z"
+    },
+    "5": {
+      "event_id": "event_20261003_1100_fb8cdf304ec1",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-09-30T16:46:06Z"
+    },
+    "6": {
+      "event_id": "kinobezigrad_20261003_0000_koncert",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-09-30T16:46:06Z"
     }
   }
 }
