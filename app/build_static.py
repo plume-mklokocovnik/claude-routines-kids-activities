@@ -41,7 +41,7 @@ def snapshot(db):
     """One flat, chronological card list. The page derives the deck and the
     three groups from it, so a locally staged decision only moves a card.
 
-    Ordered by the same parsed key as the calendar, not by the display strings,
+    Ordered by the same parsed key as the swipe deck, not by the display strings,
     so events either side of a daylight-saving change keep their real order.
     """
     events = {}

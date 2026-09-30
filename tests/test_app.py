@@ -3,6 +3,7 @@
 import contextlib
 import io
 import json
+import re
 import sys
 import tempfile
 import threading
@@ -46,6 +47,71 @@ class PresentationTests(unittest.TestCase):
                                          "horizon": "28.12.2026"})
         self.assertEqual(data["counts"]["undecided"], 1)
         self.assertEqual(data["undo"], {"available": False})
+
+    def test_labels_cover_the_three_categories_and_the_undecided_list(self):
+        self.assertEqual(server.payload(database())["labels"],
+                         {"interested": "Zanima nas", "maybe": "Mogoče",
+                          "rejected": "Zavrnjeno", "undecided": "Neodločeno"})
+
+    def test_card_carries_everything_the_details_dialog_shows(self):
+        card = server.card(event(url="https://www.example.org/show?id=1",
+                                 decision="maybe", decided_at="2026-09-30T08:00:00Z",
+                                 first_seen="2026-09-24T07:22:48Z"))
+        # Stored instants are UTC. The dialog shows them in Ljubljana time.
+        self.assertEqual(card["first_seen"], "24.09.2026 09:22")
+        self.assertEqual(card["decided_at"], "30.09.2026 10:00")
+        self.assertEqual(card["source"], "example.org")
+        self.assertEqual(card["decision"], "maybe")
+        self.assertEqual(card["status"], "active")
+        self.assertEqual(card["event_id"], "sample_20261010_1000")
+
+    def test_missing_provenance_is_empty_rather_than_invented(self):
+        bare = event()
+        del bare["first_seen"]
+        card = server.card(bare)
+        self.assertEqual((card["first_seen"], card["decided_at"]), ("", ""))
+        self.assertEqual(server.source_host("javascript:alert(1)"), "")
+        self.assertEqual(server.source_host(None), "")
+        self.assertEqual(server.source_host("https://sub.example.org:8443/x"), "sub.example.org")
+
+
+class ClientContractTests(unittest.TestCase):
+    """The browser code has no test runner here, so pin the parts a typo breaks."""
+
+    def setUp(self):
+        static = ROOT / "app" / "static"
+        self.script = (static / "app.js").read_text(encoding="utf-8")
+        self.markup = (static / "index.html").read_text(encoding="utf-8")
+
+    def test_every_element_the_script_looks_up_exists(self):
+        wanted = set(re.findall(r"\bel\('([\w-]+)'\)", self.script))
+        present = set(re.findall(r'\bid="([\w-]+)"', self.markup))
+        self.assertTrue(wanted)
+        self.assertEqual(sorted(wanted - present), [])
+
+    def test_every_template_field_the_script_fills_exists(self):
+        used = set(re.findall(r"""fill\(node, '([\w]+)'""", self.script))
+        used |= set(re.findall(r"""data-f="([\w]+)"\]""", self.script))
+        present = set(re.findall(r'data-f="([\w]+)"', self.markup))
+        self.assertTrue(used)
+        self.assertEqual(sorted(used - present), [])
+
+    def test_the_dialog_is_labelled_modal_and_closable(self):
+        self.assertIn('role="dialog"', self.markup)
+        self.assertIn('aria-modal="true"', self.markup)
+        self.assertIn('aria-labelledby="details-title"', self.markup)
+        self.assertIn('id="details-close"', self.markup)
+        self.assertIn('data-seg="undecided"', self.markup)
+        # Escape, the backdrop, the close button and the phone's back gesture.
+        for handler in ("'Escape'", "event.target === overlay", "'details-close'", "'popstate'"):
+            with self.subTest(handler=handler):
+                self.assertIn(handler, self.script)
+
+    def test_source_text_is_never_written_as_html(self):
+        # Titles, venues and prices come from third-party pages. Text nodes only.
+        for sink in ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval("):
+            with self.subTest(sink=sink):
+                self.assertNotIn(sink, self.script)
 
 
 class ApiTests(unittest.TestCase):

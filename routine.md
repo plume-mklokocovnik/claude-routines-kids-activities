@@ -91,11 +91,11 @@ python3 scripts/run.py check
 
 Inspect the dry-run counts before applying. The command retains expired/hidden
 records and writes an immutable `runs/<run_id>.json` record, then the database and
-both reports. Report content is computed before any write. Each file is replaced
+the sweep report. Report content is computed before any write. Each file is replaced
 atomically. The set of files is not a filesystem-wide transaction.
 
 If interrupted after the database write, rerun the identical apply command. It
-recognizes the completed database hash and repairs the reports. If interrupted
+recognizes the completed database hash and repairs the report. If interrupted
 before that write, retry the same input against the unchanged base. A run ID may
 never be reused with different input. `render` also repairs stale derived output.
 
@@ -112,7 +112,7 @@ of cancellation. Do not delete or expire a future event just because it was abse
 1. Review changed paths and validation results. Update the source index only for
    evidence gathered in this run. Preserve earlier observations when adding a new one.
 2. Publish only when authorized by the scheduled task. Stage explicit paths:
-   database, both reports, this run record and any intentional reference updates.
+   database, the sweep report, this run record and any intentional reference updates.
    Do not stage `.work/`, lock files, credentials or unrelated changes.
 3. Use `chore: Routine sweep <YYYY-MM-DD>` when committing a sweep. No ticket key.
    Respect the runtime's branch and repository protection policy. If a direct push

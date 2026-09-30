@@ -9,7 +9,6 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-import render
 import state
 
 PASSES = ("ljubljana", "slovenia", "concerts_generic", "concerts_watchlist", "free_entry", "avto_moto")
@@ -184,7 +183,7 @@ def render_outputs(db_path, db=None):
     import report
     db = db or state.load(db_path)
     root = Path(db_path).resolve().parent
-    outputs = {root / "overview.md": render.build(db)}
+    outputs = {}
     latest = db["system_state"]["1"].get("latest_run")
     if latest:
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", latest):
@@ -223,7 +222,6 @@ def apply(args):
             raise ValueError("Retry would change an existing run record. Use the original script version")
         record_exists = record is not None
         record = computed
-        active_md = render.build(updated)
         diff_md = report.build(record)
         print(json.dumps({group: len(items) for group, items in results.items()}, sort_keys=True))
         if args.dry_run:
@@ -231,7 +229,6 @@ def apply(args):
         if not record_exists:
             state.atomic_write(log_path, state.json_text(record))
         state.atomic_write(args.db, content)
-        state.atomic_write(root / "overview.md", active_md)
         state.atomic_write(root / "diff.md", diff_md)
 
 
@@ -262,7 +259,7 @@ def main():
     finish.add_argument("--dry-run", action="store_true")
     finish.set_defaults(func=apply)
     commands.add_parser("check", help="validate state and check generated output").set_defaults(func=check)
-    commands.add_parser("render", help="regenerate both reports from committed state").set_defaults(func=render_all)
+    commands.add_parser("render", help="regenerate the sweep report from committed state").set_defaults(func=render_all)
     commands.add_parser("validate", help="validate only the database").set_defaults(func=lambda args: state.load(args.db))
     args = parser.parse_args()
     try:

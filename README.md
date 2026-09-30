@@ -1,9 +1,10 @@
 # Kids Activities
 
 Scheduled activities for Ljubljana and family trips across Slovenia. Discovery
-uses public event sources. Python scripts own state changes and Markdown output.
+uses public event sources. Python scripts own state changes and the sweep report.
 
-Open [the overview](overview.md) or [the latest sweep report](diff.md).
+Open [the app](https://plume-mklokocovnik.github.io/claude-routines-kids-activities/), which lists every
+event with its full details, or [the latest sweep report](diff.md).
 
 ## Layout
 
@@ -12,10 +13,9 @@ Open [the overview](overview.md) or [the latest sweep report](diff.md).
 | [AGENTS.md](AGENTS.md) | Short entry point for any agent |
 | [routine.md](routine.md) | Periodic discovery runbook |
 | [reference/](reference/README.md) | Discovery policy, URLs, fixtures and artist watchlist |
-| [overview.md](overview.md) | Current state grouped by swipe category, rendered from the database |
 | [db.json](db.json) | Canonical event records, user preferences and lifecycle state |
 | [scripts/](scripts/) | Standard-library state, preference and rendering commands |
-| [app/](app/README.md) | Browser app for swiping events into three categories |
+| [app/](app/README.md) | Browser app: the live view of every event, and swiping into three categories |
 | [inbox/](inbox/README.md) | Decision patches from the published app, applied then removed |
 | [docs/data-contract.md](docs/data-contract.md) | Database and staged-run contracts |
 | [docs/output-format.md](docs/output-format.md) | Output evaluation and rendering decisions |
@@ -41,10 +41,9 @@ location, so they also work when invoked by absolute path from another directory
 python3 scripts/run.py validate
 python3 scripts/run.py render
 python3 scripts/run.py check
-python3 scripts/render.py --stdout
 ```
 
-`render` reproduces reports from stored data. It never contacts sources, advances
+`render` reproduces the sweep report from stored data. It never contacts sources, advances
 the clock or expires events. `check` is read-only and fails when an output is stale.
 
 ## Preferences
@@ -59,8 +58,7 @@ python3 scripts/hide_event.py unhide <event_id>
 python3 scripts/hide_event.py list
 ```
 
-Each command updates the database atomically and regenerates the calendar. A
-hide retains the complete event record. An unhide removes the exclusion
+Each command updates the database atomically. A hide retains the complete event record. An unhide removes the exclusion
 and restores retained records as of the last sweep clock. Old hidden references
 whose event rows were deleted by earlier versions remain intact, but their
 missing details must be rediscovered. Nothing is fabricated to reconstruct them.
@@ -71,8 +69,8 @@ run records then stay beside that database, which makes sandbox runs convenient.
 ## Categories
 
 Each event can also be sorted into one of three user-owned categories:
-`interested`, `maybe` or `rejected`. This is independent of stars and hiding. A
-rejected event is not hidden and stays in the calendar.
+`interested`, `maybe` or `rejected`. This is independent of hiding. A rejected
+event is not hidden: it stays in the app's Zavrnjeno list, where it can be changed.
 
 ```bash
 python3 scripts/swipe.py set <event_id> interested
@@ -84,8 +82,9 @@ python3 scripts/swipe.py stats
 
 `undo` reverses the most recent change from the stored `decision_log`, so it
 also works in a later session. The same operations have a phone-sized browser
-UI, with swipe gestures for the three categories and a review screen per
-category:
+UI, with swipe gestures for the three categories and a review list per category,
+plus one for everything still undecided. Tapping any event there opens all of its
+details:
 
 ```bash
 python3 app/server.py

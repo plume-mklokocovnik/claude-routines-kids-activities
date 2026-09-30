@@ -29,10 +29,8 @@ written. Nothing reads the field any more.
 [swipe.py](../scripts/swipe.py) and the app in [app/](../app/README.md) change it.
 An absent key means undecided; clearing removes both keys rather than storing a
 null. A decision is not a preference rule: it never hides an event, never edits
-`user_rules` and never changes an event's status, so a rejected event stays in
-[overview.md](../overview.md) until it is hidden explicitly. It does move
-between that file's sections, so every command that writes a decision
-re-renders it. Every change appends a
+`user_rules` and never changes an event's status, so a rejected event stays in the
+app's Zavrnjeno list until it is hidden explicitly. Every change appends a
 `decision_log` row holding `event_id`, `action`, `before`, `before_at`, `after`
 and `at`. Undo reverses the newest row that has no `undone` flag, restores the
 recorded previous value and timestamp, and marks that row `undone` with

@@ -3,7 +3,7 @@
 ## Start Here
 
 - For a periodic sweep, follow [routine.md](routine.md).
-- For star/hide requests, use the scripts described in [README.md](README.md#preferences).
+- For hide requests, use the script described in [README.md](README.md#preferences).
 - For interested/maybe/rejected requests, use [scripts/swipe.py](scripts/swipe.py).
   Its browser UI is [app/](app/README.md).
 - For code changes, read the owning script and its matching test first.

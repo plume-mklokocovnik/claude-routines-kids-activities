@@ -44,11 +44,25 @@ LOOPBACK = {"localhost", "127.0.0.1", "::1", "[::1]"}
 
 # --- presentation -----------------------------------------------------------
 # Display strings are built here from the stored sweep clock, never from the
-# wall clock, so the app shows the same dates as overview.md.
+# wall clock, so the app shows the same dates as the sweep report.
 
 def notes(event):
     text = render.notes_text(event)
     return [part for part in text.split(", ") if part]
+
+
+def stamp(value):
+    """A stored UTC instant as local date and time, or empty when absent."""
+    moment = render.parse_dt(value)
+    return f"{moment:%d.%m.%Y %H:%M}" if moment else ""
+
+
+def source_host(url):
+    """The site a source link points at, so the modal can name where it leads."""
+    if not state.valid_url(url):
+        return ""
+    host = urlsplit(url).hostname or ""
+    return host[4:] if host.startswith("www.") else host
 
 
 def card(event):
@@ -73,9 +87,12 @@ def card(event):
         "is_free": event.get("is_free") is True,
         "notes": notes(event),
         "url": event.get("url") if state.valid_url(event.get("url")) else "",
+        "source": source_host(event.get("url")),
         "maps": render.maps_link(event.get("venue"), event.get("city")),
         "status": event.get("status", "active"),
         "decision": event.get("decision"),
+        "decided_at": stamp(event.get("decided_at")),
+        "first_seen": stamp(event.get("first_seen")),
     }
 
 
@@ -107,7 +124,7 @@ def payload(db):
         "deck": [card(event) for event in swipe.deck(db)],
         "groups": {name: [card(event) for event in rows] for name, rows in groups.items()},
         "undo": undo_preview(db),
-        "labels": swipe.LABELS,
+        "labels": {**swipe.LABELS, "undecided": "Neodločeno"},
     }
 
 
@@ -254,16 +271,12 @@ class App:
         return event
 
     def write(self, mutate):
-        """One serialized load, mutate, save. The file lock also covers the CLI.
-
-        Saving goes through swipe.commit, which re-renders overview.md, since a
-        decision moves the event between that file's sections.
-        """
+        """One serialized load, mutate, save. The file lock also covers the CLI."""
         with self.gate, state.locked(self.db_path):
             db = state.load(self.db_path)
             message = mutate(db)
             if message is not None:
-                swipe.commit(self.db_path, db)
+                state.save(self.db_path, db)
                 print(message, flush=True)
             return {"ok": True, "message": message or "", "state": payload(db)}
 

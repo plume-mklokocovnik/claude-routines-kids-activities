@@ -1,53 +1,15 @@
-import copy
+"""The formatting helpers shared by the sweep report and the swipe app."""
+
 import sys
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import render
-from test_state import database, event
+from test_state import event
 
 
-class RenderTests(unittest.TestCase):
-    def setUp(self):
-        self.db = {
-            "events": {},
-            "system_state": {"1": {"last_run": "2026-09-28T10:00:00+02:00"}},
-        }
-
-    def test_same_input_produces_same_output_without_mutation(self):
-        before = copy.deepcopy(self.db)
-        self.assertEqual(render.build(self.db), render.build(self.db))
-        self.assertEqual(self.db, before)
-
-    def test_missing_or_naive_clock_is_rejected(self):
-        for value in (None, "bad", "2026-09-28T10:00:00"):
-            with self.subTest(value=value):
-                self.db["system_state"]["1"]["last_run"] = value
-                with self.assertRaisesRegex(ValueError, "last_run"):
-                    render.build(self.db)
-
-    def test_ids_unknown_time_and_full_price(self):
-        db = database()
-        db["events"]["1"] = event(flags=["time_unknown"], price_text="Free programme, participants 20 EUR")
-        output = render.build(db)
-        # Exactly once: the calendar is the only place an active event is listed.
-        self.assertEqual(output.count("`sample_20261010_1000`"), 1)
-        self.assertIn("Free programme, participants 20 EUR", output)
-        self.assertNotIn("10:00 |", output)
-        self.assertNotIn("⭐", output)
-
-    def test_local_timezone_and_non_active_filtering(self):
-        db = database()
-        db["events"]["1"]["start_time"] = "2026-10-10T23:30:00Z"
-        db["events"]["2"] = event(event_id="expired", status="expired")
-        db["events"]["3"] = event(event_id="hidden", status="hidden")
-        output = render.build(db)
-        self.assertIn("11. oktober 2026", output)
-        self.assertIn("01:30", output)
-        self.assertNotIn("`expired`", output)
-        self.assertNotIn("`hidden`", output)
-
+class HelperTests(unittest.TestCase):
     def test_links_and_cells_escape_untrusted_source_text(self):
         item = event(title="[Title] | <script>x</script>", url="https://example.org/(show)")
         rendered = render.title_text(item)
@@ -55,57 +17,50 @@ class RenderTests(unittest.TestCase):
         self.assertIn("\\|", rendered)
         self.assertNotIn("<script>", rendered)
         self.assertNotIn("javascript:", render.link("Title", "javascript:alert(1)"))
+        self.assertEqual(render.link("Title", "not a url"), "Title")
 
-    def test_unknown_date_still_has_table_header(self):
-        self.db["events"]["1"] = event(start_time=None)
-        output = render.build(self.db)
-        self.assertIn("### Datum ni znan", output)
-        self.assertIn("| Ura | Dogodek / ID |", output)
+    def test_code_cannot_break_out_of_a_table_cell(self):
+        self.assertEqual(render.code("a|b"), "`a&#124;b`")
+        self.assertEqual(render.code("has`tick"), "<code>has`tick</code>")
+        self.assertEqual(render.code(None), "`?`")
 
-    def test_each_event_appears_in_exactly_one_category_section(self):
-        db = database()
-        db["events"]["1"]["decision"] = "interested"
-        db["events"]["2"] = event(event_id="perhaps", decision="maybe",
-                                  start_time="2026-10-11T09:00:00+02:00")
-        db["events"]["3"] = event(event_id="nope", decision="rejected",
-                                  start_time="2026-10-12T09:00:00+02:00")
-        db["events"]["4"] = event(event_id="open", start_time="2026-10-13T09:00:00+02:00")
-        output = render.build(db)
-        listing = output.split("<details>", 1)[0]
-        for identifier in ("sample_20261010_1000", "perhaps", "nope", "open"):
-            with self.subTest(identifier=identifier):
-                self.assertEqual(listing.count(f"`{identifier}`"), 1)
+    def test_unknown_time_is_a_question_mark_never_a_fictional_midnight(self):
+        start = render.parse_dt("2026-10-10T00:00:00+02:00")
+        self.assertEqual(render.hour_text(event(flags=["time_unknown"]), start), "?")
+        self.assertEqual(render.hour_text(event(), None), "?")
+        self.assertEqual(render.hour_text(event(), render.parse_dt("2026-10-10T10:05:00+02:00")), "10:05")
 
-        # Split on the section anchors in document order. Splitting on any
-        # `<a id=` would cut the undecided section at its first month anchor.
-        order = ["interested", "maybe", "rejected", "undecided"]
-        sections, rest = {}, listing
-        for index, name in enumerate(order):
-            rest = rest.split(f'<a id="{render.ANCHORS[name]}"></a>', 1)[1]
-            following = order[index + 1] if index + 1 < len(order) else None
-            sections[name] = (rest.split(f'<a id="{render.ANCHORS[following]}"></a>', 1)[0]
-                              if following else rest)
-        self.assertIn("`sample_20261010_1000`", sections["interested"])
-        self.assertIn("`perhaps`", sections["maybe"])
-        self.assertIn("`nope`", sections["rejected"])
-        self.assertIn("`open`", sections["undecided"])
-        # The counts table links to every section and reports the real sizes.
-        self.assertIn("| [👍 Zanima nas](#zanima-nas) | 1 | 10.10.2026 |", output)
-        self.assertIn("| [🃏 Neodločeno](#neodloceno) | 1 | 13.10.2026 |", output)
+    def test_timestamps_are_read_in_local_time_and_bad_ones_are_dropped(self):
+        local = render.parse_dt("2026-10-10T23:30:00Z")
+        self.assertEqual((local.day, local.hour, local.minute), (11, 1, 30))
+        self.assertEqual(render.si_date(local), "11. oktober 2026")
+        for value in (None, "", "bad", "2026-10-10T10:00:00"):
+            with self.subTest(value=value):
+                self.assertIsNone(render.parse_dt(value))
 
-    def test_empty_categories_say_so_without_inventing_rows(self):
-        output = render.build(database())
-        self.assertEqual(output.count("_Ni dogodkov v tej kategoriji._"), 3)
-        self.assertIn("| [👎 Zavrnjeno](#zavrnjeno) | 0 | - |", output)
-        self.assertNotIn("Vsi dogodki so razvrščeni", output)
+    def test_full_price_text_is_kept_and_a_free_marker_needs_is_free(self):
+        mixed = event(price_text="Free programme, participants 20 EUR")
+        self.assertEqual(render.price_text(mixed), "Free programme, participants 20 EUR")
+        self.assertEqual(render.price_text(event(is_free=True, price_text="Brezplačno")), "🆓")
+        self.assertEqual(render.price_text(event(is_free=True, price_text="Brezplačno, prijava")),
+                         "🆓 Brezplačno, prijava")
+        self.assertEqual(render.price_text(event(price_text="")), "`?`")
 
-    def test_same_day_rows_form_one_contiguous_table(self):
-        db = database()
-        db["events"]["2"] = event(event_id="second")
-        calendar = render.build(db).split("Neodločeno", 1)[1].split("<details>", 1)[0]
-        rows = [line for line in calendar.splitlines() if line.startswith("|")]
-        self.assertEqual(len(rows), 4)
-        self.assertIn("\n".join(rows), calendar)
+    def test_age_is_shown_only_when_published(self):
+        self.assertEqual(render.age_text(event(age_min=4)), "`4+`")
+        self.assertEqual(render.age_text(event(age_min=None)), "`?`")
+
+    def test_notes_come_from_price_wording_and_flags(self):
+        item = event(price_text="Razprodano, prijava obvezna",
+                     flags=["age_stretch", "outside_ljubljana", "custom_flag"])
+        self.assertEqual(render.notes_text(item), "razprodano, prijava, starost?, custom_flag")
+        self.assertEqual(render.notes_text(event()), "")
+
+    def test_place_names_the_town_only_when_it_is_not_ljubljana(self):
+        self.assertIn("[Museum]", render.place_text(event(venue="Museum", city="Ljubljana")))
+        self.assertIn("[Museum, Kranj]", render.place_text(event(venue="Museum", city="Kranj")))
+        self.assertEqual(render.maps_link("Muzej Šiška", "Kranj"),
+                         "https://maps.google.com/?q=Muzej%20%C5%A0i%C5%A1ka%20Kranj")
 
 
 if __name__ == "__main__":

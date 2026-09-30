@@ -66,6 +66,11 @@ the patch with `swipe.py apply`, deletes it and republishes the site. When the
 new snapshot lands, the browser sees the database already agrees and clears the
 banner by itself.
 
+The published page is current, not live. It never reads `db.json` itself: the
+snapshot is rebuilt and redeployed whenever a change to `db.json` reaches
+`main`, which takes about a minute. The local server reads the file on every
+request.
+
 Three things follow from that design, all deliberate:
 
 - `db.json` stays the only record. The browser holds a staging area, and a
@@ -113,6 +118,23 @@ The deck holds the active, not hidden events that have no decision yet, earliest
 first. A decided event leaves the deck and appears under **Pregled**, where its
 category can be changed or cleared. Clearing returns it to the deck.
 
+## Reviewing
+
+**Pregled** has one list per category, **Zanima nas**, **Mogoče** and
+**Zavrnjeno**, and a fourth, **Neodločeno**, with everything still in the deck.
+Together they are the whole current state, read from the database each time the
+app loads. There is no generated file to keep in step with it.
+
+Tap an event, or its title, to open a dialog with everything known about it:
+when and where, with a Maps link, the age, the full price text, the notes, the
+source and its link, when it was first seen, its decision and when it was made,
+and its ID. Close it with the ✕, by tapping outside it, with `Esc`, or with the
+phone's back gesture, which closes the dialog instead of leaving the app. The
+dialog only reads. To change a category, use the buttons on the row.
+
+The deck's swipe cards do not open it. A tap and a drag start the same way, and
+the card already shows the essentials.
+
 ## Stopping and undoing
 
 Every swipe is written to `db.json` before the next card appears, so the run can
@@ -135,11 +157,9 @@ A decision is user-owned data on the event row:
 ```
 
 The app never touches `user_rules`, `hidden_events` or event status.
-Rejecting an event is not hiding it: it stays in
-[overview.md](../overview.md), though it does move between that file's
-sections, which the local app re-renders on every swipe.
-To remove an event from the overview entirely, use the hide command in the
-[root README](../README.md#preferences).
+Rejecting an event is not hiding it: it moves to the Zavrnjeno list and can be
+changed from there. To take an event out of the app entirely, use the hide
+command in the [root README](../README.md#preferences).
 
 All state changes go through [scripts/swipe.py](../scripts/swipe.py), so the
 validation, the file lock and the atomic write are the same as on the command
@@ -153,9 +173,9 @@ python3 scripts/swipe.py undo
 ```
 
 Dates come from the sweep clock stored in the database, never from the wall
-clock, so the app shows the same day, time and horizon as the calendar. An event
-whose source publishes no start time shows `?`, and full price text is shown
-unshortened.
+clock, so the app shows the same day, time and horizon as the sweep report. An
+event whose source publishes no start time shows `?`, and full price text is
+shown unshortened.
 
 ## Layout
 
@@ -165,7 +185,7 @@ unshortened.
 | `build_static.py` | Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
 | `static/app.css` | Phone frame, card stack, direction gradients |
-| `static/app.js` | Drag handling, keyboard, review list, both backends |
+| `static/app.js` | Drag handling, keyboard, review lists, details dialog, both backends |
 | `static/mode.js` | Which backend to use. The build overwrites it |
 
 One page and one renderer serve both modes. `app.js` holds two backends behind

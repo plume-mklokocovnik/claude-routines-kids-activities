@@ -15,49 +15,52 @@ independent counts, formatting and dates that could drift from the database.
 
 ## Decisions
 
-| Concern | New format |
+These apply to the sweep report and to the app, which format events with the same
+helpers in [render.py](../scripts/render.py).
+
+| Concern | Format |
 |---|---|
-| Fast planning | One section per swipe category, decided ones first, then what is left |
-| Seeing the shape at a glance | A counts table with the next date per category, linking to each section |
-| Narrow screens | Four columns, with category and exact ID below the event title |
-| Long undecided list | Month navigation and dated daily headings inside that section |
+| Narrow screens | The report keeps four columns, with category and exact ID below the event title |
 | Prices | Full published text, with a free marker only when `is_free` is explicitly true |
 | Missing time | `?`, never a fictional midnight |
 | Maps and evidence | Source link on the title, Maps link on the venue |
-| Secondary information | Category summary and hidden-rule audit in native Markdown details sections |
-| Replay | Both reports derive only from stored state and structured run records |
+| Replay | The report derives only from stored state and structured run records |
 | Coverage | Every discovery pass and attempted source has an explicit outcome in the run report |
+| Full detail | The app opens every field it holds for an event in a dialog on a tap |
 
-The shortlist described in the findings was a list of starred events. Stars were
-replaced by the three swipe categories, and `currently_active.md` became
-[overview.md](../overview.md), organised by those categories rather than by what
-happens to be active. Each event appears in exactly one section, with identical
-detail in all four, so nothing is summarised away. The three decided sections
-carry the date in the first column, because they are not grouped under daily
-headings. Undecided keeps the month navigation and daily headings, since it is
-the section that stays long.
+## Retiring the Markdown calendar
 
-Ordering puts the decisions first and the backlog last: what has been chosen is
-what gets planned around, and the undecided pile is the work still to do in the
-app. IDs remain unchanged and copyable. There is no page-size limit or silent
-truncation. Hidden and expired event records remain in the database, and the
-overview lists neither, so an event decided long ago drops out of the file once
-it expires while keeping its decision in `db.json`.
+The current state used to be a generated Markdown file, first a chronological
+calendar, then an overview grouped by the three swipe categories. It is gone, and
+the [app](../app/README.md) is the view of the current state now: a list per
+category, one for everything undecided, and a dialog with the full detail of any
+event.
 
-This remains GitHub-compatible Markdown, not a web app. Four columns reduce
-width, but long IDs or source text can still require horizontal scrolling on a
-small phone. Full prices trade some row height for accuracy. Native details
-sections may expand in renderers that do not support interactive HTML.
+The file was retired because it could only ever describe the database, and keeping
+it in step cost more than it gave. Every command that changed a decision had to
+re-render it, a swipe session rewrote it in Git on every card, and a table row
+could not show more than it already did without growing.
+
+The trade-offs are real, and were accepted:
+
+- Events can no longer be browsed on GitHub without opening the app.
+- The hidden-rule audit table has no rendered view. `python3 scripts/hide_event.py
+  list` prints the same references.
+- The published app is current, not live: it is rebuilt from `db.json` whenever a
+  change reaches `main`. The local server reads the file on every request.
+
+Earlier versions of the file remain in Git history. Hidden and expired event
+records remain in the database, and decided events stay visible in the app after
+they expire.
 
 ## Ownership and Verification
 
-[render.py](../scripts/render.py) owns the overview. [report.py](../scripts/report.py)
-owns sweep reports. [run.py](../scripts/run.py) regenerates both from stored input.
-No agent should hand-patch a generated report to improve its layout.
+[report.py](../scripts/report.py) owns the sweep report and
+[run.py](../scripts/run.py) regenerates it from stored input. No agent should
+hand-patch a generated report to improve its layout. [render.py](../scripts/render.py)
+holds the shared formatting helpers and writes nothing.
 
 Tests cover stable output, exact IDs, timezone conversion, unknown times, full
-price text, HTML/link escaping, contiguous daily tables and the placement of
-each event in exactly one category section.
-`python3 scripts/run.py check` verifies committed output equals fresh rendering.
-The legacy [diff.md](../diff.md) stays untouched until the first structured run.
-Its historical narrative cannot be faithfully reconstructed into invented data.
+price text and HTML/link escaping in the helpers, and the card fields, the API and
+the client's element lookups in the app. `python3 scripts/run.py check` verifies
+that the committed sweep report equals fresh rendering.

@@ -80,6 +80,9 @@
           <button class="seg" type="button" data-seg="rejected">
             Zavrnjeno <b data-count="rejected">0</b>
           </button>
+          <button class="seg" type="button" data-seg="undecided">
+            Neodločeno <b data-count="undecided">0</b>
+          </button>
         </div>
         <div class="list" id="list"></div>
       </section>
@@ -99,6 +102,23 @@
     </nav>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal" id="details" hidden>
+      <div class="sheet" id="sheet" role="dialog" aria-modal="true"
+           aria-labelledby="details-title" tabindex="-1">
+        <button class="sheet-close" id="details-close" type="button" aria-label="Zapri">✕</button>
+        <div class="sheet-body">
+          <div class="sheet-chips" id="d-chips"></div>
+          <h2 class="sheet-title" id="details-title"></h2>
+          <dl class="facts" id="d-facts"></dl>
+          <div class="sheet-notes" id="d-notes"></div>
+          <div class="sheet-links">
+            <a class="link-btn" id="d-source" target="_blank" rel="noopener noreferrer">Vir dogodka ↗</a>
+            <a class="link-btn" id="d-maps" target="_blank" rel="noopener noreferrer">Zemljevid ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="curtain" id="curtain" hidden>
       <div class="curtain-box">
@@ -169,7 +189,8 @@
       <span data-f="time"></span>
     </div>
     <div class="row-body">
-      <h3 data-f="title"></h3>
+      <h3><button class="row-title" type="button" data-f="title" aria-haspopup="dialog"></button></h3>
+      <span class="row-more" aria-hidden="true">›</span>
       <p class="row-where" data-f="place"></p>
       <p class="row-meta" data-f="meta"></p>
       <div class="row-actions">

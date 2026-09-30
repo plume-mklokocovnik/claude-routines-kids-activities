@@ -217,22 +217,16 @@ class SwipeCommandTests(unittest.TestCase):
         self.assertNotIn("decision", state.load(self.path)["events"]["1"])
         self.assertEqual(swipe.cmd_undo(self.args), 0)  # nothing left, still fine
 
-    def test_records_are_preserved_and_the_overview_is_rerendered(self):
+    def test_records_are_preserved_and_only_the_database_is_written(self):
         self.assertEqual(swipe.cmd_set(self.args), 0)
         stored = state.load(self.path)
         self.assertEqual(stored["unknown_table"], self.original["unknown_table"])
         self.assertEqual(stored["hidden_events"], self.original["hidden_events"])
         self.assertEqual(stored["user_rules"], self.original["user_rules"])
         self.assertEqual(stored["system_state"]["1"]["total_active_events"], 1)
-
-        overview = (self.path.parent / "overview.md").read_text(encoding="utf-8")
-        interested = overview.split('<a id="zanima-nas"></a>', 1)[1].split("<a id=", 1)[0]
-        self.assertIn("sample_20261010_1000", interested)
-
         self.assertEqual(swipe.cmd_clear(self.args), 0)
-        overview = (self.path.parent / "overview.md").read_text(encoding="utf-8")
-        interested = overview.split('<a id="zanima-nas"></a>', 1)[1].split("<a id=", 1)[0]
-        self.assertNotIn("sample_20261010_1000", interested)
+        self.assertEqual(swipe.cmd_undo(self.args), 0)
+        self.assertEqual([entry.name for entry in self.path.parent.iterdir()], ["db.json"])
 
     def test_unknown_query_changes_nothing(self):
         before = self.path.read_bytes()

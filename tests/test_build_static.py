@@ -74,7 +74,7 @@ class BuildTests(unittest.TestCase):
                          ["decided", "sample_20261010_1000", "before_dst", "after_dst"])
         decided = sum(len(rows) for rows in swipe.decided(self.db).values())
         self.assertEqual(len(snapshot["cards"]), len(swipe.deck(self.db)) + decided)
-        self.assertEqual(snapshot["labels"], swipe.LABELS)
+        self.assertEqual(snapshot["labels"], {**swipe.LABELS, "undecided": "Neodločeno"})
 
     def test_stored_decisions_are_baked_in(self):
         build_static.build(self.path, self.out, repo="owner/name")

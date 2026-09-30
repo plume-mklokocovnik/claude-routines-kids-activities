@@ -348,7 +348,20 @@ function buildRow(card) {
   node.querySelectorAll('[data-move]').forEach((button) => {
     const target = button.dataset.move;
     button.classList.toggle('is-on', target === card.decision);
+    // Sending an undecided event "back to the deck" would change nothing.
+    if (target === '') button.hidden = !card.decision;
     button.addEventListener('click', () => move(card, target));
+  });
+
+  // The title is a real button, so keyboard and screen-reader users can open
+  // the dialog. A tap anywhere else on the row opens it too, unless it landed
+  // on a control of its own or finished a text selection.
+  const opener = node.querySelector('.row-title');
+  node.addEventListener('click', (event) => {
+    const control = event.target.closest('a, button');
+    if (control && control !== opener) return;
+    if (String(window.getSelection && window.getSelection()).length) return;
+    openDetails(card, opener);
   });
   return node;
 }
@@ -358,11 +371,13 @@ function renderList() {
     seg.classList.toggle('is-on', seg.dataset.seg === st.seg);
   });
   list.textContent = '';
-  const rows = st.data.groups[st.seg] || [];
+  const rows = st.seg === 'undecided' ? st.data.deck : (st.data.groups[st.seg] || []);
   if (!rows.length) {
     const empty = document.createElement('p');
     empty.className = 'list-empty';
-    empty.textContent = `V kategoriji "${labelOf(st.seg)}" še ni dogodkov.`;
+    empty.textContent = st.seg === 'undecided'
+      ? 'Vsi dogodki so razvrščeni.'
+      : `V kategoriji "${labelOf(st.seg)}" še ni dogodkov.`;
     list.appendChild(empty);
     return;
   }
@@ -513,6 +528,147 @@ async function move(card, target) {
   }
 }
 
+/* --- details dialog ------------------------------------------------------ */
+
+const dialog = { open: false, opener: null, pushed: false };
+const BEHIND = '.bar, .progress, .tallies, .main, .pending, .tabs';
+
+function chip(parent, className, text) {
+  const node = document.createElement('span');
+  node.className = className;
+  node.textContent = text;
+  parent.appendChild(node);
+  return node;
+}
+
+function fact(parent, label, content, className) {
+  if (content === '' || content === null || content === undefined) return;
+  const [main, note] = Array.isArray(content) ? content : [content, ''];
+  const term = document.createElement('dt');
+  term.textContent = label;
+  const detail = document.createElement('dd');
+  if (className) detail.className = className;
+  detail.textContent = main;
+  if (note) {
+    const small = document.createElement('small');
+    small.textContent = note;
+    detail.appendChild(small);
+  }
+  parent.append(term, detail);
+}
+
+function whenFacts(card) {
+  if (!card.date) return ['Datum ni znan', ''];
+  return [`${card.day}, ${card.date_long}`, card.time === '?' ? 'Ura ni znana' : `ob ${card.time}`];
+}
+
+function fillDetails(card) {
+  const state = card.decision || 'undecided';
+  el('details-title').textContent = card.title;
+
+  const chips = el('d-chips');
+  chips.textContent = '';
+  chip(chips, 'chip chip-cat', card.category.replace(/_/g, ' '));
+  chip(chips, 'chip chip-decision', labelOf(state)).dataset.decision = state;
+  if (card.status !== 'active') {
+    chip(chips, 'chip chip-status', card.status === 'expired' ? 'poteklo' : 'skrito');
+  }
+  if (card.unsaved) chip(chips, 'chip chip-unsaved', 'ni shranjeno');
+
+  const facts = el('d-facts');
+  facts.textContent = '';
+  const extra = card.price && card.price.toLowerCase() !== 'brezplačno' ? card.price : '';
+  fact(facts, 'Kdaj', whenFacts(card));
+  fact(facts, 'Kje', placeText(card));
+  fact(facts, 'Starost', card.age === '?' ? 'Ni objavljeno' : `${card.age} let`);
+  if (card.is_free) fact(facts, 'Cena', ['Brezplačno', extra], 'is-free');
+  else fact(facts, 'Cena', card.price || 'Ni objavljeno');
+  fact(facts, 'Vir', card.source || 'Brez povezave');
+  if (card.decision) {
+    fact(facts, 'Odločitev', [labelOf(state), card.decided_at ? `zabeleženo ${card.decided_at}` : '']);
+  }
+  fact(facts, 'Prvič videno', card.first_seen);
+  fact(facts, 'ID', card.event_id, 'is-mono');
+
+  const notes = el('d-notes');
+  notes.textContent = '';
+  card.notes.forEach((text) => chip(notes, '', text));
+
+  const source = el('d-source');
+  source.hidden = !card.url;
+  if (card.url) source.href = card.url;
+  el('d-maps').href = card.maps;
+}
+
+function openDetails(card, opener) {
+  if (dialog.open) return;
+  fillDetails(card);
+  dialog.open = true;
+  dialog.opener = opener;
+  el('details').hidden = false;
+  // Everything behind the dialog stops taking focus and taps.
+  document.querySelectorAll(BEHIND).forEach((node) => { node.inert = true; });
+  // One history entry, so the phone's back gesture closes the dialog rather
+  // than leaving the app.
+  try {
+    history.pushState({ details: true }, '');
+    dialog.pushed = true;
+  } catch (error) {
+    dialog.pushed = false;
+  }
+  el('details').querySelector('.sheet-body').scrollTop = 0;
+  el('sheet').focus({ preventScroll: true });
+}
+
+function hideDetails() {
+  if (!dialog.open) return;
+  dialog.open = false;
+  el('details').hidden = true;
+  document.querySelectorAll(BEHIND).forEach((node) => { node.inert = false; });
+  const opener = dialog.opener;
+  dialog.opener = null;
+  // The list may have been redrawn since, so only return to a row still there.
+  if (opener && document.contains(opener)) opener.focus({ preventScroll: true });
+}
+
+function closeDetails() {
+  if (!dialog.open) return;
+  hideDetails();
+  if (dialog.pushed && history.state && history.state.details) {
+    dialog.pushed = false;
+    history.back();
+  }
+}
+
+function wireDetails() {
+  const overlay = el('details');
+  let pressedBackdrop = false;
+  // A drag that starts inside the dialog and ends outside it, such as selecting
+  // text, would otherwise click the backdrop and close it.
+  overlay.addEventListener('pointerdown', (event) => { pressedBackdrop = event.target === overlay; });
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay && pressedBackdrop) closeDetails();
+  });
+  el('details-close').addEventListener('click', closeDetails);
+  window.addEventListener('popstate', () => { dialog.pushed = false; hideDetails(); });
+
+  overlay.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const items = [...el('sheet').querySelectorAll('button, a[href]')].filter((node) => !node.hidden);
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    const inside = el('sheet').contains(document.activeElement) && document.activeElement !== el('sheet');
+    if (event.shiftKey && (document.activeElement === first || !inside)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
 /* --- saving from the static build --------------------------------------- */
 
 function editorUrl(patch) {
@@ -616,7 +772,13 @@ function wire() {
   });
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
 
+  wireDetails();
+
   document.addEventListener('keydown', (event) => {
+    if (dialog.open) {
+      if (event.key === 'Escape') { event.preventDefault(); closeDetails(); }
+      return;
+    }
     if (st.stopped || event.altKey || event.metaKey) return;
     if (event.target.closest('input, textarea')) return;
     const key = event.key;
@@ -628,6 +790,12 @@ function wire() {
     else if (key === 'ArrowDown') { event.preventDefault(); decideTop('maybe'); }
   });
 }
+
+// A reload with the dialog open leaves its history entry behind. Drop the
+// marker, so the first back gesture is not spent on a dialog that is not there.
+try {
+  if (history.state && history.state.details) history.replaceState(null, '');
+} catch (error) { /* history is optional */ }
 
 wire();
 setView('swipe');

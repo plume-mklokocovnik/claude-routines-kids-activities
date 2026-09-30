@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hide an event from the active list and keep a permanent reference to it.
+"""Hide an event from the swipe deck and keep a permanent reference to it.
 
 Hiding does three things at once, so a hidden event never comes back on its own:
 marks the retained row hidden, writes the matching rule into `user_rules`, and
@@ -20,7 +20,6 @@ import sys
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import render  # noqa: E402
 import state
 from state import find, load, next_key, save
 
@@ -32,11 +31,6 @@ RULE_FIELD = {
     "series": "exclude_keywords",
     "venue": "exclude_venues",
 }
-
-
-def active_list_path(db_path):
-    """Keep the rendered list next to the database it came from."""
-    return os.path.join(os.path.dirname(os.path.abspath(db_path)), "overview.md")
 
 
 def rules(db):
@@ -111,7 +105,6 @@ def cmd_hide(args):
         }
 
     save(args.db, db)
-    render.main_write(args.db, active_list_path(args.db))
 
     print(f"Hidden ({args.scope}): {match_value}")
     print(f"Hidden {len(removed)} event(s), retained all records, added to user_rules.{field}.")
@@ -155,7 +148,6 @@ def cmd_unhide(args):
             restored += 1
 
     save(args.db, db)
-    render.main_write(args.db, active_list_path(args.db))
 
     print(f"Restored ({item.get('scope')}): {item.get('match')}")
     print(f"Restored {restored} retained record(s). Legacy deleted rows need re-discovery in a later sweep.")

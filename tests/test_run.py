@@ -110,7 +110,7 @@ class RunTests(unittest.TestCase):
             run.merge(database(), payload)
 
     def test_interrupted_apply_recovers_without_rewriting_record(self):
-        for failed_file in ("db.json", "overview.md", "diff.md"):
+        for failed_file in ("db.json", "diff.md"):
             with self.subTest(failed_file=failed_file), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
                 path, staged = root / "db.json", root / "input.json"
@@ -159,8 +159,11 @@ class RunTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), before)
             command("run.py", "apply", str(staged))
             command("run.py", "check")
+            self.assertEqual(sorted(entry.name for entry in root.iterdir()
+                                    if entry.is_file() and not entry.name.startswith(".")),
+                             ["db.json", "diff.md"])  # the live view is the app, not a file
             command("swipe.py", "set", "sample_20261010_1000", "interested")
-            command("run.py", "check")  # a decision must not stale the reports
+            command("run.py", "check")  # a decision must not stale the report
             command("hide_event.py", "hide", "sample_20261010_1000")
             command("run.py", "check")
             command("hide_event.py", "unhide", "sample_20261010_1000")
