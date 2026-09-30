@@ -79,10 +79,14 @@ Three things follow from that design, all deliberate:
   database. A batch too large for a link is copied to the clipboard to paste
   instead.
 
-The first Pages run enables Pages itself. If that step is refused, set
-Settings → Pages → Source to **GitHub Actions** once and re-run it. Note that a
-Pages site is public to the internet whatever the repository's visibility,
-unless the owner is on GitHub Enterprise Cloud.
+Pages has to be switched on once before the first deploy can work: in the
+repository, Settings → Pages → Source → **GitHub Actions**. A workflow token is
+not allowed to create the site, so the deploy step fails with
+`Create Pages site failed: Resource not accessible by integration` until that
+setting exists. Re-run the workflow afterwards and it publishes.
+
+Note that a Pages site is public to the internet whatever the repository's
+visibility, unless the owner is on GitHub Enterprise Cloud.
 
 Build it locally to see exactly what gets deployed:
 

@@ -42,9 +42,9 @@ jobs:
           python-version: "3.13"
       - name: Build the static bundle
         run: python3 app/build_static.py --out site
+      # Needs Pages already switched on, with Settings -> Pages -> Source set
+      # to GitHub Actions. The workflow token cannot create the site itself.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
