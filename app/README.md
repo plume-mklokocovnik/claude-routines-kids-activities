@@ -7,8 +7,9 @@ categories, and for reviewing the result afterwards.
 python3 app/server.py
 ```
 
-It serves <http://127.0.0.1:8765/> and opens a browser window. Nothing is
-installed, no package is needed and no request leaves the machine.
+Run it from the repository root. It serves <http://127.0.0.1:8765/> and opens a
+browser window. Nothing is installed, no package is needed and no request leaves
+the machine. Stop it with Ctrl+C.
 
 | Flag | Meaning |
 |---|---|
@@ -17,6 +18,35 @@ installed, no package is needed and no request leaves the machine.
 | `--host H` | Bind another address. Default `127.0.0.1`, which is this machine only |
 | `--no-browser` | Do not try to open a browser window |
 | `--verbose` | Log every request, not only the changes |
+
+## On the phone
+
+The card size is a phone viewport, but the server still runs on the computer
+that holds the database. To reach it from the phone, bind every interface:
+
+```bash
+python3 app/server.py --host 0.0.0.0
+```
+
+It then prints the address to type into the phone browser:
+
+```
+Kids activities swipe app on http://127.0.0.1:8765/
+From a phone on the same network: http://192.168.1.24:8765/
+Warning: reachable beyond this machine. Anyone who can reach this port can change your decisions.
+```
+
+Both devices have to be on the same network, and the computer's firewall has to
+allow the port. If the printed address does not answer, the computer has more
+than one network interface and the phone is on the other one: use the address of
+the interface the phone shares, from `ip addr` or `ifconfig`.
+
+This opens the app to everyone on that network. There is no password, so treat
+it as a home-network convenience, not something to run on shared Wi-Fi. The
+default loopback bind is unreachable from other devices.
+
+In the phone browser, "Add to Home Screen" gives a fullscreen launcher without
+the browser bars.
 
 ## Deciding
 
@@ -102,9 +132,8 @@ would reverse. `POST /api/decide` takes `event_id` and `category`,
 new state, so the page never has to guess what the database now holds.
 
 Writes from another site are refused, and the server binds to this machine only
-unless `--host` says otherwise. It is a single-user local tool: anyone who can
-reach the port can change the decisions, so `--host 0.0.0.0` belongs on a
-trusted network only.
+unless `--host` says otherwise. It is a single-user local tool with no
+authentication, so see the phone section above before exposing the port.
 
 ## Tests
 

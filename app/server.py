@@ -17,6 +17,7 @@ written to the database as it happens, so stopping mid-deck loses nothing.
 import argparse
 import json
 import mimetypes
+import socket
 import sys
 import threading
 import webbrowser
@@ -303,16 +304,36 @@ class App:
             threading.Thread(target=self.server.shutdown, daemon=True).start()
 
 
+def lan_address():
+    """The address another device on the same network would use to reach here.
+
+    Asks the routing table which local address a packet to an unroutable test
+    network would leave from. A connected UDP socket sends nothing, so this
+    needs no name server and reaches no host.
+    """
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as probe:
+        try:
+            probe.connect(("192.0.2.1", 9))  # TEST-NET-1, reserved and never routed
+            return probe.getsockname()[0]
+        except OSError:
+            return None
+
+
 def serve(db_path, host="127.0.0.1", port=8765, open_browser=True, verbose=False):
     state.load(db_path)  # fail before binding if the expected state is missing
     app = App(db_path, verbose=verbose)
     server = ThreadingHTTPServer((host, port), partial(Handler, app=app))
     app.server = server
-    shown = host if ":" not in host else f"[{host}]"
-    url = f"http://{shown}:{server.server_address[1]}/"
+    number = server.server_address[1]
+    # A wildcard bind is not an address to open: name this machine instead.
+    shown = "127.0.0.1" if host in {"0.0.0.0", "::", ""} else (f"[{host}]" if ":" in host else host)
+    url = f"http://{shown}:{number}/"
     print(f"Kids activities swipe app on {url}")
     print(f"Database: {db_path}")
     if host not in LOOPBACK:
+        address = lan_address()
+        if address:
+            print(f"From a phone on the same network: http://{address}:{number}/")
         print("Warning: reachable beyond this machine. Anyone who can reach this "
               "port can change your decisions.")
     if open_browser:
