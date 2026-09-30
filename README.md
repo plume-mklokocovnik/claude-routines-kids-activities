@@ -14,7 +14,8 @@ Open [the activity calendar](currently_active.md) or [the latest sweep report](d
 | [reference/](reference/README.md) | Discovery policy, URLs, fixtures and artist watchlist |
 | [db.json](db.json) | Canonical event records, user preferences and lifecycle state |
 | [scripts/](scripts/) | Standard-library state, preference and rendering commands |
-| [app/](app/README.md) | Local browser app for swiping events into three categories |
+| [app/](app/README.md) | Browser app for swiping events into three categories |
+| [inbox/](inbox/README.md) | Decision patches from the published app, applied then removed |
 | [docs/data-contract.md](docs/data-contract.md) | Database and staged-run contracts |
 | [docs/output-format.md](docs/output-format.md) | Output evaluation and rendering decisions |
 | [tests/](tests/) | Offline tests using temporary databases |
@@ -92,7 +93,13 @@ category:
 python3 app/server.py
 ```
 
-See [app/README.md](app/README.md) for gestures, keys and the local API.
+That app is also published to GitHub Pages, where it reads a baked snapshot and
+hands decisions back through the repository for `swipe.py apply` to write:
+
+<https://plume-mklokocovnik.github.io/claude-routines-kids-activities/>
+
+See [app/README.md](app/README.md) for gestures, keys, the local API, the
+published build and how saving from it works.
 
 ## Cloud Schedule
 
@@ -108,10 +115,11 @@ sweep per repository at a time. No workstation path, persistent home directory,
 local conversation memory or provider-specific SDK is required. The cloud agent
 does research. The scripts validate and apply its structured results.
 
-The included GitHub Actions workflow validates changes and report consistency.
-It does not discover events or install a cloud schedule. Scheduling and write
-credentials remain with the existing cloud runtime. Direct pushes or PRs follow
-that runtime's explicit permissions, never an automatic protection bypass.
+The included GitHub Actions workflows validate changes and report consistency,
+publish the app to Pages, and apply decision patches committed into `inbox/`.
+None of them discovers events or installs a cloud schedule. Scheduling and
+write credentials remain with the existing cloud runtime. Direct pushes or PRs
+follow that runtime's explicit permissions, never an automatic protection bypass.
 
 ## Tests
 
@@ -123,6 +131,7 @@ python3 -m unittest discover -s tests -p test_preferences.py -v
 python3 -m unittest discover -s tests -p test_render.py -v
 python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_app.py -v
+python3 -m unittest discover -s tests -p test_build_static.py -v
 ```
 
 The complete offline suite is `python3 -m unittest discover -s tests -v`.

@@ -16,10 +16,18 @@ hide it, does not touch `user_rules` and does not remove it from
     python3 scripts/swipe.py undo
     python3 scripts/swipe.py list [--category interested|maybe|rejected]
     python3 scripts/swipe.py stats
+    python3 scripts/swipe.py apply <patch-file>
 
 <query> is an `event_id` or a case-insensitive fragment of the title/venue. An
 ambiguous fragment lists the candidates and changes nothing. The swipe app in
 [app/](../app/README.md) is a browser front end over exactly these operations.
+
+`apply` folds in a batch of decisions taken elsewhere, such as the offline
+static build of the app. The patch is one `code:event_id` per line, where the
+code is `i` for interested, `m` for maybe, `r` for rejected and `c` for cleared.
+Blank lines and `#` comments are ignored. Each line names the wanted end state,
+so applying the same patch twice changes nothing the second time. An ID that is
+not in the database is reported and skipped, never invented.
 """
 
 import argparse
@@ -35,6 +43,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
 
 LABELS = {"interested": "Zanima nas", "maybe": "Mogoče", "rejected": "Zavrnjeno"}
+PATCH_CODES = {"i": "interested", "m": "maybe", "r": "rejected", "c": None}
 FAR_FUTURE = datetime.max.replace(tzinfo=timezone.utc)
 
 
@@ -163,6 +172,37 @@ def undo(db, at=None):
     return row, event
 
 
+def parse_patch(text):
+    """Read `code:event_id` lines into (event_id, category) pairs. Strict."""
+    entries = []
+    for number, raw in enumerate(text.splitlines(), start=1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        code, _, event_id = line.partition(":")
+        code, event_id = code.strip().lower(), event_id.strip()
+        if code not in PATCH_CODES or not event_id:
+            raise ValueError(f"Line {number}: expected i|m|r|c followed by :event_id, got {raw!r}")
+        entries.append((event_id, PATCH_CODES[code]))
+    return entries
+
+
+def apply_patch(db, entries, at=None):
+    """Apply wanted end states. Returns (changed, unchanged, skipped ids)."""
+    changed, unchanged, skipped = [], [], []
+    for event_id, category in entries:
+        event = by_id(db, event_id)
+        if event is None:
+            skipped.append(event_id)
+            continue
+        if category is None:
+            moved, _ = clear_decision(db, event, at=at)
+        else:
+            moved, _ = set_decision(db, event, category, at=at)
+        (changed if moved else unchanged).append(event_id)
+    return changed, unchanged, skipped
+
+
 def resolve(db, query):
     """Find exactly one event for a query, or report why not. Returns (event, code)."""
     matches = find(db, query)
@@ -232,6 +272,31 @@ def cmd_list(args):
     return 0
 
 
+def cmd_apply(args):
+    with open(args.patch, encoding="utf-8") as handle:
+        entries = parse_patch(handle.read())
+    if not entries:
+        print(f"{args.patch} holds no decisions. Nothing changed.")
+        return 0
+
+    db = load(args.db)
+    changed, unchanged, skipped = apply_patch(db, entries)
+    if changed:
+        save(args.db, db)
+
+    print(f"Applied {len(changed)} change(s) from {args.patch}, "
+          f"{len(unchanged)} already matched.")
+    for event_id in changed:
+        event = by_id(db, event_id)
+        print(f"  {LABELS.get(event.get('decision'), 'back in the deck')}: {describe(event)}")
+    if skipped:
+        print(f"Skipped {len(skipped)} unknown event ID(s). These need a sweep, "
+              f"not a guess:", file=sys.stderr)
+        for event_id in skipped:
+            print(f"  {event_id}", file=sys.stderr)
+    return 0
+
+
 def cmd_stats(args):
     db = load(args.db)
     numbers = counts(db)
@@ -272,6 +337,10 @@ def main():
 
     stats = sub.add_parser("stats", help="show progress and what undo would reverse")
     stats.set_defaults(func=cmd_stats)
+
+    applier = sub.add_parser("apply", help="fold in a batch of decisions from a patch file")
+    applier.add_argument("patch")
+    applier.set_defaults(func=cmd_apply)
 
     args = parser.parse_args()
     try:

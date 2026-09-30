@@ -138,6 +138,58 @@ class SwipeStateTests(unittest.TestCase):
             state.validate(self.db)
 
 
+class PatchTests(unittest.TestCase):
+    def setUp(self):
+        self.db = database()
+        self.db["events"]["2"] = event(event_id="second", title="Puppet show",
+                                       start_time="2026-10-09T09:00:00+02:00", category="lutke")
+
+    def test_reads_codes_and_ignores_comments_and_blanks(self):
+        text = ("# kids-activities decisions\n\n"
+                "i:alpha\n"
+                "  m:beta  \n"
+                "R:gamma\n"
+                "c:delta\n")
+        self.assertEqual(swipe.parse_patch(text),
+                         [("alpha", "interested"), ("beta", "maybe"),
+                          ("gamma", "rejected"), ("delta", None)])
+
+    def test_malformed_lines_name_the_line_and_change_nothing(self):
+        for text in ("nonsense\n", "x:alpha\n", "i:\n", "i\n", ":alpha\n"):
+            with self.subTest(text=text):
+                with self.assertRaisesRegex(ValueError, "Line 1"):
+                    swipe.parse_patch(text)
+
+    def test_apply_sets_clears_and_reports_unknown_ids(self):
+        entries = [("sample_20261010_1000", "interested"), ("second", "maybe"),
+                   ("ghost", "rejected")]
+        changed, unchanged, skipped = swipe.apply_patch(self.db, entries)
+        self.assertEqual((changed, unchanged, skipped),
+                         (["sample_20261010_1000", "second"], [], ["ghost"]))
+        self.assertEqual(self.db["events"]["1"]["decision"], "interested")
+        self.assertEqual(self.db["events"]["2"]["decision"], "maybe")
+
+        changed, unchanged, skipped = swipe.apply_patch(self.db, [("second", None)])
+        self.assertEqual((changed, unchanged, skipped), (["second"], [], []))
+        self.assertNotIn("decision", self.db["events"]["2"])
+
+    def test_applying_the_same_patch_twice_changes_nothing_the_second_time(self):
+        entries = [("sample_20261010_1000", "rejected"), ("second", None)]
+        swipe.apply_patch(self.db, entries)
+        before = copy.deepcopy(self.db)
+        changed, unchanged, _ = swipe.apply_patch(self.db, entries)
+        self.assertEqual(changed, [])
+        self.assertEqual(unchanged, ["sample_20261010_1000", "second"])
+        self.assertEqual(self.db, before)
+
+    def test_every_applied_change_is_undoable(self):
+        swipe.apply_patch(self.db, [("sample_20261010_1000", "maybe"), ("second", "rejected")])
+        self.assertEqual(len(self.db["decision_log"]), 2)
+        swipe.undo(self.db)
+        self.assertNotIn("decision", self.db["events"]["2"])
+        self.assertEqual(self.db["events"]["1"]["decision"], "maybe")
+
+
 class SwipeCommandTests(unittest.TestCase):
     def setUp(self):
         directory = tempfile.TemporaryDirectory()
@@ -191,6 +243,33 @@ class SwipeCommandTests(unittest.TestCase):
         self.args.query = "Family"
         with contextlib.redirect_stderr(io.StringIO()):
             self.assertEqual(swipe.cmd_set(self.args), 2)
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_apply_folds_in_a_patch_file(self):
+        patch = self.path.parent / "decisions.txt"
+        patch.write_text("# from the app\ni:sample_20261010_1000\n", encoding="utf-8")
+        self.assertEqual(swipe.cmd_apply(Namespace(db=str(self.path), patch=str(patch))), 0)
+        self.assertEqual(state.load(self.path)["events"]["1"]["decision"], "interested")
+
+        # Nothing to change means nothing written.
+        before = self.path.read_bytes()
+        self.assertEqual(swipe.cmd_apply(Namespace(db=str(self.path), patch=str(patch))), 0)
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_apply_of_an_empty_patch_leaves_the_database_alone(self):
+        patch = self.path.parent / "empty.txt"
+        patch.write_text("# nothing here\n\n", encoding="utf-8")
+        before = self.path.read_bytes()
+        self.assertEqual(swipe.cmd_apply(Namespace(db=str(self.path), patch=str(patch))), 0)
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_apply_of_an_unknown_id_changes_nothing(self):
+        patch = self.path.parent / "ghost.txt"
+        patch.write_text("m:not_in_the_database\n", encoding="utf-8")
+        before = self.path.read_bytes()
+        with contextlib.redirect_stderr(io.StringIO()) as captured:
+            self.assertEqual(swipe.cmd_apply(Namespace(db=str(self.path), patch=str(patch))), 0)
+        self.assertIn("not_in_the_database", captured.getvalue())
         self.assertEqual(self.path.read_bytes(), before)
 
     def test_list_and_stats_are_read_only(self):

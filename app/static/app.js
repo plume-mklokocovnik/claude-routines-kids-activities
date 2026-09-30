@@ -1,12 +1,14 @@
 'use strict';
 
-/* Swipe UI over /api. Every decision is a server round trip, so the database is
-   the only source of truth: reloading the page, or stopping the app mid-deck,
-   never loses or invents a decision. */
+/* One UI over two backends, chosen by mode.js.
+   server: every decision is a round trip, so db.json is the only state.
+   static: the deployed build ships a baked snapshot, decisions are staged in
+   this browser, and saving hands them to GitHub to be written into db.json. */
 
 const THRESHOLD_X = 96;   // horizontal pixels before a swipe counts
 const THRESHOLD_Y = 112;  // downward pixels before "mogoče" counts
 const FLY_MS = 230;
+const URL_BUDGET = 6000;  // a prefilled GitHub editor link has to stay openable
 
 const el = (id) => document.getElementById(id);
 const phone = el('phone');
@@ -18,9 +20,9 @@ const st = { data: null, view: 'swipe', seg: 'interested', busy: false, stopped:
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
 const labelOf = (name) => (st.data && st.data.labels[name]) || name;
 
-/* --- server ------------------------------------------------------------- */
+/* --- backends ----------------------------------------------------------- */
 
-async function api(path, body) {
+async function request(path, body) {
   const options = body === undefined
     ? { headers: { Accept: 'application/json' } }
     : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) };
@@ -35,9 +37,167 @@ async function api(path, body) {
   return data;
 }
 
+function serverStore() {
+  return {
+    live: true,
+    load: async () => (await request('/api/state')).state,
+    decide: async (id, category) => (await request('/api/decide', { event_id: id, category })).state,
+    clear: async (id) => (await request('/api/clear', { event_id: id })).state,
+    undo: async () => (await request('/api/undo', {})).state,
+    quit: () => request('/api/quit', {}),
+  };
+}
+
+function staticStore() {
+  const KEY = 'kids-activities-decisions-v1';
+  const CODES = { interested: 'i', maybe: 'm', rejected: 'r' };
+  let baked = null;
+  let log = [];
+
+  const known = (value) => value === null || Object.prototype.hasOwnProperty.call(CODES, value);
+
+  function valid(entry) {
+    return entry && typeof entry.event_id === 'string' && entry.event_id
+      && (entry.action === 'set' || entry.action === 'clear')
+      && known(entry.after === undefined ? null : entry.after)
+      && known(entry.before === undefined ? null : entry.before);
+  }
+
+  function readLog() {
+    // Browser storage is a staging area, not a record: an unreadable or
+    // tampered value is dropped rather than trusted or reported as state.
+    try {
+      const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
+      return Array.isArray(parsed) ? parsed.filter(valid) : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeLog() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(log));
+    } catch (error) {
+      toast('Brskalnik ne shranjuje. Odločitve veljajo le do osvežitve.', true);
+    }
+  }
+
+  function wanted() {
+    const map = new Map();
+    log.forEach((entry) => map.set(entry.event_id, entry.after || null));
+    return map;
+  }
+
+  function reconcile() {
+    // Anything the database already agrees with, or no longer holds, stops
+    // being pending. That is what makes the save round trip self-clearing.
+    const stored = new Map(baked.cards.map((card) => [card.event_id, card.decision || null]));
+    const settled = new Set();
+    wanted().forEach((value, id) => {
+      if (!stored.has(id) || stored.get(id) === value) settled.add(id);
+    });
+    if (settled.size) {
+      log = log.filter((entry) => !settled.has(entry.event_id));
+      writeLog();
+    }
+  }
+
+  function decisionOf(id) {
+    const pending = wanted();
+    if (pending.has(id)) return pending.get(id);
+    const card = baked.cards.find((item) => item.event_id === id);
+    return card ? card.decision || null : null;
+  }
+
+  function titleOf(id) {
+    const card = baked.cards.find((item) => item.event_id === id);
+    return card ? card.title : id;
+  }
+
+  function build() {
+    const pending = wanted();
+    const groups = { interested: [], maybe: [], rejected: [] };
+    const deck = [];
+    baked.cards.forEach((card) => {
+      const staged = pending.has(card.event_id);
+      const decision = staged ? pending.get(card.event_id) : card.decision || null;
+      const shaped = Object.assign({}, card, { decision: decision, unsaved: staged });
+      if (decision) groups[decision].push(shaped);
+      else if (card.status === 'active') deck.push(shaped);
+    });
+    const counts = {
+      interested: groups.interested.length,
+      maybe: groups.maybe.length,
+      rejected: groups.rejected.length,
+      undecided: deck.length,
+    };
+    counts.decided = counts.interested + counts.maybe + counts.rejected;
+    counts.total = counts.decided + counts.undecided;
+    const last = log[log.length - 1];
+    return {
+      clock: baked.clock,
+      labels: baked.labels,
+      deck: deck,
+      groups: groups,
+      counts: counts,
+      undo: last
+        ? {
+          available: true,
+          action: last.action,
+          title: titleOf(last.event_id),
+          label: baked.labels[last.after] || 'brez kategorije',
+          restores: baked.labels[last.before] || 'brez kategorije',
+        }
+        : { available: false },
+    };
+  }
+
+  function record(id, action, before, after) {
+    log.push({ event_id: id, action: action, before: before || null, after: after || null });
+    writeLog();
+  }
+
+  return {
+    live: false,
+    load: async () => {
+      const response = await fetch('state.json', { headers: { Accept: 'application/json' } })
+        .catch(() => { throw new Error('Posnetka baze ni bilo mogoče naložiti.'); });
+      if (!response.ok) throw new Error(`Posnetek baze ni dosegljiv (${response.status}).`);
+      baked = await response.json();
+      log = readLog();
+      reconcile();
+      return build();
+    },
+    decide: async (id, category) => {
+      const current = decisionOf(id);
+      if (current !== category) record(id, 'set', current, category);
+      return build();
+    },
+    clear: async (id) => {
+      const current = decisionOf(id);
+      if (current) record(id, 'clear', current, null);
+      return build();
+    },
+    undo: async () => {
+      if (log.length) {
+        log.pop();
+        writeLog();
+      }
+      return build();
+    },
+    pending: () => {
+      const entries = [...wanted().entries()].sort((a, b) => (a[0] < b[0] ? -1 : 1));
+      const lines = ['# kids-activities decisions'];
+      entries.forEach(([id, value]) => lines.push(`${value ? CODES[value] : 'c'}:${id}`));
+      return { count: entries.length, patch: `${lines.join('\n')}\n` };
+    },
+  };
+}
+
+const store = window.SWIPE_MODE === 'static' ? staticStore() : serverStore();
+
 async function refresh(options) {
-  const data = await api('/api/state');
-  st.data = data.state;
+  st.data = await store.load();
   render(options);
 }
 
@@ -68,7 +228,7 @@ function render(options) {
   undoButton.disabled = !undoInfo.available;
   undoButton.title = undoInfo.available
     ? `Razveljavi: ${undoInfo.title} → ${undoInfo.restores} (Z)`
-    : 'Ni česa razveljaviti';
+    : store.live ? 'Ni česa razveljaviti' : 'Razveljavi se le še neshranjene odločitve';
 
   el('hint').textContent = counts.undecided
     ? `${counts.undecided} še za odločitev · povleci kartico ali ← ↓ → · Z razveljavi`
@@ -77,8 +237,25 @@ function render(options) {
     ? `Vseh ${counts.total} dogodkov je razvrščenih.`
     : 'V bazi ni aktivnih dogodkov.';
 
+  renderPending();
   renderStack(options);
   renderList();
+}
+
+function pendingPhrase(count) {
+  const tail = count % 100;
+  if (tail === 1) return `${count} odločitev čaka`;
+  if (tail === 2) return `${count} odločitvi čakata`;
+  if (tail === 3 || tail === 4) return `${count} odločitve čakajo`;
+  return `${count} odločitev čaka`;
+}
+
+function renderPending() {
+  if (!store.pending) return;
+  const { count } = store.pending();
+  const banner = el('pending');
+  banner.hidden = count === 0;
+  if (count) el('pending-text').textContent = `${pendingPhrase(count)} na vpis v db.json`;
 }
 
 function fill(node, name, text) {
@@ -161,7 +338,9 @@ function buildRow(card) {
   fill(node, 'place', placeText(card));
   const extra = [card.category, `${card.age} let`, priceText(card)];
   if (card.status !== 'active') extra.push(card.status === 'expired' ? 'poteklo' : 'skrito');
+  if (card.unsaved) extra.push('ni shranjeno');
   fill(node, 'meta', extra.concat(card.notes).join(' · '));
+  node.classList.toggle('is-unsaved', Boolean(card.unsaved));
 
   const source = node.querySelector('[data-f="url"]');
   if (card.url) source.href = card.url;
@@ -286,11 +465,8 @@ async function commit(dir, node, card) {
   setGlow(dir, 1);
   flyOut(node, dir);
   try {
-    const [response] = await Promise.all([
-      api('/api/decide', { event_id: card.event_id, category: dir }),
-      sleep(FLY_MS),
-    ]);
-    st.data = response.state;
+    const [state] = await Promise.all([store.decide(card.event_id, dir), sleep(FLY_MS)]);
+    st.data = state;
     render();
     toast(`${labelOf(dir)}: ${card.title}`);
   } catch (error) {
@@ -313,8 +489,7 @@ async function undo() {
   const previous = st.data.undo;
   st.busy = true;
   try {
-    const response = await api('/api/undo', {});
-    st.data = response.state;
+    st.data = await store.undo();
     render({ returning: true });
     toast(`Razveljavljeno: ${previous.title} → ${previous.restores}`);
   } catch (error) {
@@ -329,10 +504,7 @@ async function move(card, target) {
   if (target === card.decision) return;
   st.busy = true;
   try {
-    const response = target
-      ? await api('/api/decide', { event_id: card.event_id, category: target })
-      : await api('/api/clear', { event_id: card.event_id });
-    st.data = response.state;
+    st.data = target ? await store.decide(card.event_id, target) : await store.clear(card.event_id);
     render();
     toast(target ? `${labelOf(target)}: ${card.title}` : `Nazaj v kup: ${card.title}`);
   } catch (error) {
@@ -340,6 +512,47 @@ async function move(card, target) {
   } finally {
     st.busy = false;
   }
+}
+
+/* --- saving from the static build --------------------------------------- */
+
+function editorUrl(patch) {
+  const repo = window.SWIPE_REPO;
+  if (!repo || !repo.owner || !repo.repo) return null;
+  const base = `https://github.com/${repo.owner}/${repo.repo}/new/${repo.branch || 'main'}`;
+  const name = `?filename=${encodeURIComponent(repo.inbox || 'inbox/decisions.txt')}`;
+  const full = `${base}${name}&value=${encodeURIComponent(patch)}`;
+  return full.length <= URL_BUDGET ? full : `${base}${name}`;
+}
+
+async function copyPatch(patch) {
+  try {
+    await navigator.clipboard.writeText(patch);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+async function save() {
+  if (!store.pending) return;
+  const { count, patch } = store.pending();
+  if (!count) return;
+  const url = editorUrl(patch);
+  if (!url) {
+    const copied = await copyPatch(patch);
+    toast(copied ? 'Odločitve so kopirane. Prilepi jih v repo.'
+      : 'Repozitorij ni znan. Uporabi gumb za kopiranje.', true);
+    return;
+  }
+  // A link without the content prefilled means the batch outgrew the URL.
+  if (!url.includes('&value=')) {
+    const copied = await copyPatch(patch);
+    toast(copied ? 'Preveč odločitev za povezavo. Prilepi jih v urejevalnik.'
+      : 'Preveč odločitev za povezavo. Uporabi gumb za kopiranje.', true);
+  }
+  window.open(url, '_blank', 'noopener');
+  el('handoff').hidden = false;
 }
 
 /* --- chrome ------------------------------------------------------------- */
@@ -384,12 +597,25 @@ function wire() {
   });
   el('undo').addEventListener('click', undo);
 
-  el('quit').addEventListener('click', async () => {
-    if (!window.confirm('Končam aplikacijo? Vse odločitve so že shranjene.')) return;
-    st.stopped = true;
-    try { await api('/api/quit', {}); } catch (error) { /* the socket may close first */ }
-    el('curtain').hidden = false;
+  if (store.quit) {
+    el('quit').addEventListener('click', async () => {
+      if (!window.confirm('Končam aplikacijo? Vse odločitve so že shranjene.')) return;
+      st.stopped = true;
+      try { await store.quit(); } catch (error) { /* the socket may close first */ }
+      el('curtain').hidden = false;
+    });
+  } else {
+    el('quit').hidden = true;
+  }
+
+  el('save').addEventListener('click', save);
+  el('copy').addEventListener('click', async () => {
+    const { count, patch } = store.pending ? store.pending() : { count: 0 };
+    if (!count) return;
+    const copied = await copyPatch(patch);
+    toast(copied ? 'Odločitve so kopirane.' : 'Kopiranje ni uspelo.', !copied);
   });
+  el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
 
   document.addEventListener('keydown', (event) => {
     if (st.stopped || event.altKey || event.metaKey) return;

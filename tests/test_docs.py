@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class DocumentationTests(unittest.TestCase):
     def test_local_markdown_links_resolve(self):
         paths = list(ROOT.glob("*.md"))
-        for folder in ("docs", "reference", "app", ".claude", ".agents"):
+        for folder in ("docs", "reference", "app", "inbox", ".claude", ".agents"):
             paths.extend((ROOT / folder).rglob("*.md"))
         for path in paths:
             content = re.sub(r"```.*?```", "", path.read_text(encoding="utf-8"), flags=re.S)

@@ -37,7 +37,7 @@ import swipe  # noqa: E402
 
 STATIC_DIR = APP_DIR / "static"
 STATIC_FILES = {"/": "index.html", "/index.html": "index.html",
-                "/app.css": "app.css", "/app.js": "app.js"}
+                "/app.css": "app.css", "/app.js": "app.js", "/mode.js": "mode.js"}
 MAX_BODY = 64 * 1024
 LOOPBACK = {"localhost", "127.0.0.1", "::1", "[::1]"}
 

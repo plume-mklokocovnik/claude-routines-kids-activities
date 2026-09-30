@@ -107,6 +107,23 @@ database metadata. Do not pass fabricated nulls to erase a known value. The
 current model has no separate end date. Keep published date ranges in price text
 as before. A future end-date migration needs its own reviewed contract.
 
+## Decision Patches
+
+Decisions taken where the database cannot be written, currently the published
+static build of the app, arrive as a patch file in `inbox/`. One `code:event_id`
+per line, with `i`, `m`, `r` and `c` for interested, maybe, rejected and
+cleared. Blank lines and `#` comments are ignored. A malformed line aborts the
+whole patch rather than applying part of it.
+
+Each line names the wanted end state, so a patch is idempotent and its lines
+are order independent. Applying one is exactly a sequence of the operations
+above: the same validation, the same `decision_log` rows, the same undo. An
+event ID the database does not hold is reported and skipped. It is never
+created, and a missing event is never reconstructed from a patch, which carries
+no event details to reconstruct it from. The staging copy in a browser is not a
+record and is never read back as state: a patch is applied only after someone
+with write access commits it.
+
 ## Run Records and Recovery
 
 Successful apply writes `runs/<run_id>.json` with the original input, computed

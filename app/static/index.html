@@ -85,6 +85,14 @@
       </section>
     </main>
 
+    <div class="pending" id="pending" hidden>
+      <p class="pending-text" id="pending-text"></p>
+      <div class="pending-actions">
+        <button class="pending-btn" id="save" type="button">Shrani v GitHub</button>
+        <button class="pending-ghost" id="copy" type="button" title="Kopiraj odločitve">⧉</button>
+      </div>
+    </div>
+
     <nav class="tabs">
       <button class="tab is-on" type="button" data-view="swipe">Izbiranje<b id="tab-left">0</b></button>
       <button class="tab" type="button" data-view="review">Pregled<b id="tab-done">0</b></button>
@@ -98,6 +106,18 @@
         <h2>Ustavljeno</h2>
         <p>Vse odločitve so shranjene v <code>db.json</code>.<br>
            Zaženi znova z <code>python3 app/server.py</code>.</p>
+      </div>
+    </div>
+
+    <div class="curtain" id="handoff" hidden>
+      <div class="curtain-box">
+        <div class="done-mark">📤</div>
+        <h2>Potrdi v GitHubu</h2>
+        <p>V novem zavihku se je odprl urejevalnik z datoteko odločitev.<br>
+           Klikni <b>Commit changes</b>. Delovni tok jih vpiše v <code>db.json</code>
+           in osveži to stran.</p>
+        <p>Odločitve ostanejo tukaj, dokler se ne pojavijo v bazi.</p>
+        <button class="wide-btn" id="handoff-close" type="button">Nazaj na izbiranje</button>
       </div>
     </div>
   </div>
@@ -164,6 +184,7 @@
   </article>
 </template>
 
+<script src="mode.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

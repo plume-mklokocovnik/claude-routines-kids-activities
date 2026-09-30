@@ -3,3 +3,4 @@ __pycache__/
 *.py[cod]
 .work/
 .*.lock
+site/

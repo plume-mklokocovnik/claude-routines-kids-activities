@@ -1,0 +1,77 @@
+name: Apply decisions
+
+# The published app cannot write to the repository, so it hands a patch to the
+# GitHub editor instead. Committing that file into inbox/ runs this workflow,
+# which folds the decisions into db.json with scripts/swipe.py, removes the
+# patch and republishes the site. Only someone with write access can commit,
+# which is the whole access control this path has.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - inbox/*.txt
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: apply-decisions
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The branch tip rather than the triggering commit, so a queued run
+          # applies against the database the run before it already wrote.
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Apply every patch in the inbox
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(inbox/*.txt)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "The inbox holds no patch file. Nothing to apply."
+            exit 0
+          fi
+          for file in "${files[@]}"; do
+            echo "::group::$file"
+            cat "$file"
+            python3 scripts/swipe.py apply "$file"
+            echo "::endgroup::"
+            rm "$file"
+          done
+
+      - name: Validate the database and the reports
+        run: python3 scripts/run.py check
+
+      - name: Commit the result
+        run: |
+          set -euo pipefail
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: Apply decisions from the swipe app"
+          # A rejected push means another run landed first. Applying is
+          # idempotent and the app keeps unsaved decisions until the database
+          # agrees, so failing here is safe: save again from the app.
+          git push
+
+  publish:
+    needs: apply
+    uses: ./.github/workflows/pages.yml

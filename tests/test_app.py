@@ -98,6 +98,9 @@ class ApiTests(unittest.TestCase):
         self.assertIn("card-template", page)
         self.assertEqual(self.call("GET", "/app.js")[0], 200)
         self.assertEqual(self.call("GET", "/app.css")[0], 200)
+        status, mode = self.call("GET", "/mode.js")
+        self.assertEqual(status, 200)
+        self.assertIn("window.SWIPE_MODE = 'server'", mode)
 
     def test_decide_clear_and_undo_are_written_to_the_database(self):
         status, body = self.call("POST", "/api/decide",

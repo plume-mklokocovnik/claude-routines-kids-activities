@@ -48,6 +48,49 @@ default loopback bind is unreachable from other devices.
 In the phone browser, "Add to Home Screen" gives a fullscreen launcher without
 the browser bars.
 
+## Published version
+
+[pages.yml](../.github/workflows/pages.yml) publishes the same app to GitHub
+Pages on every change to `db.json` or `app/`, so it is reachable from anywhere
+without running anything:
+
+<https://plume-mklokocovnik.github.io/claude-routines-kids-activities/>
+
+Pages serves files rather than processes, so that build has no Python and no
+write access to the repository. It carries a baked snapshot of the database in
+`state.json` and stages decisions in the browser instead. A banner counts what
+is not yet in `db.json`, and **Shrani v GitHub** opens the GitHub editor with a
+patch file prefilled. Committing it runs
+[apply-decisions.yml](../.github/workflows/apply-decisions.yml), which applies
+the patch with `swipe.py apply`, deletes it and republishes the site. When the
+new snapshot lands, the browser sees the database already agrees and clears the
+banner by itself.
+
+Three things follow from that design, all deliberate:
+
+- `db.json` stays the only record. The browser holds a staging area, and a
+  decision is not saved until the workflow has written it.
+- Undo on the published version reaches back through the decisions that are
+  still unsaved. Once they are in the database, undo lives there, so use the
+  local app or `swipe.py undo`.
+- Saving needs write access to the repository, which is the only access control
+  on this path. You are logged in as yourself in the GitHub editor, and the page
+  itself holds no credential, so nothing in the published site can change the
+  database. A batch too large for a link is copied to the clipboard to paste
+  instead.
+
+The first Pages run enables Pages itself. If that step is refused, set
+Settings → Pages → Source to **GitHub Actions** once and re-run it. Note that a
+Pages site is public to the internet whatever the repository's visibility,
+unless the owner is on GitHub Enterprise Cloud.
+
+Build it locally to see exactly what gets deployed:
+
+```bash
+python3 app/build_static.py --out site
+python3 -m http.server 8799 --directory site --bind 127.0.0.1
+```
+
 ## Deciding
 
 | Gesture | Key | Category | Background |
@@ -114,9 +157,16 @@ unshortened.
 | File | Purpose |
 |---|---|
 | `server.py` | Local HTTP server, JSON API and the card presenter |
+| `build_static.py` | Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
 | `static/app.css` | Phone frame, card stack, direction gradients |
-| `static/app.js` | Drag handling, keyboard, review list, API calls |
+| `static/app.js` | Drag handling, keyboard, review list, both backends |
+| `static/mode.js` | Which backend to use. The build overwrites it |
+
+One page and one renderer serve both modes. `app.js` holds two backends behind
+the same small interface: the local one is a round trip per decision, the
+published one reads the baked snapshot and stages changes in the browser.
+`mode.js` picks between them, so neither the markup nor the UI is duplicated.
 
 The frame is 480 x 1040 CSS pixels, the viewport of a Samsung Galaxy S25 Ultra
 (1440 x 3120 hardware pixels at a 3x device ratio). On a narrow screen the frame
@@ -140,7 +190,10 @@ authentication, so see the phone section above before exposing the port.
 ```bash
 python3 -m unittest discover -s tests -p test_app.py -v
 python3 -m unittest discover -s tests -p test_swipe.py -v
+python3 -m unittest discover -s tests -p test_build_static.py -v
 ```
 
-Both are offline. The API test binds an ephemeral loopback port and uses a
-temporary database.
+All three are offline. The API test binds an ephemeral loopback port and uses a
+temporary database. The browser behaviour of `app.js` has no automated test:
+check a change against both modes by hand, with the server and with a locally
+served bundle.

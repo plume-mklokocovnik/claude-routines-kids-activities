@@ -1,0 +1,52 @@
+name: Deploy swipe app
+
+# Publishes the offline build of app/ to GitHub Pages. The site is a snapshot
+# of db.json, so it redeploys whenever the database or the app changes.
+# Callable, because a commit pushed by a workflow does not trigger another
+# workflow: apply-decisions.yml calls this itself after writing the database.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - db.json
+      - app/**
+      - scripts/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Always build the current tip, so a call that follows an apply job
+          # publishes the database that job just committed.
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build the static bundle
+        run: python3 app/build_static.py --out site
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
