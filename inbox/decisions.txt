@@ -1,4 +1,0 @@
-# kids-activities decisions
-r:event_20260930_1700_97e81ddad9be
-m:event_20260930_1700_e8f1be44cd1a
-r:event_20261001_1600_f36247830bcb

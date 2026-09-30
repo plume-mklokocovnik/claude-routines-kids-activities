@@ -1138,7 +1138,9 @@
       "flags": [],
       "event_id": "event_20260930_1700_e8f1be44cd1a",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-09-30T14:54:33Z"
     },
     "123": {
       "title": "Izdelava kokedam",
@@ -1153,7 +1155,9 @@
       "flags": [],
       "event_id": "event_20260930_1700_97e81ddad9be",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-09-30T14:54:33Z"
     },
     "124": {
       "title": "2. Dnevi ozimnice v Ljubljani: Krompir v glavni vlogi",
@@ -1168,7 +1172,9 @@
       "flags": [],
       "event_id": "event_20261001_1600_f36247830bcb",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-09-30T14:54:33Z"
     },
     "125": {
       "title": "Pisma z roba gozda, izven",
@@ -2312,6 +2318,32 @@
       "url": "https://fatburn.si/celjski-mali-maraton/",
       "reason": "not interested",
       "hidden_at": "2026-09-25T11:40:57Z"
+    }
+  },
+  "decision_log": {
+    "1": {
+      "event_id": "event_20260930_1700_97e81ddad9be",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-09-30T14:54:33Z"
+    },
+    "2": {
+      "event_id": "event_20260930_1700_e8f1be44cd1a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-09-30T14:54:33Z"
+    },
+    "3": {
+      "event_id": "event_20261001_1600_f36247830bcb",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-09-30T14:54:33Z"
     }
   }
 }
