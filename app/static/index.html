@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0e13">
+<title>Dogodki za otroke · izbiranje</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎠</text></svg>">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="frame">
+  <div class="phone" id="phone">
+    <div class="glow" aria-hidden="true">
+      <div class="glow-layer glow-right"></div>
+      <div class="glow-layer glow-left"></div>
+      <div class="glow-layer glow-down"></div>
+    </div>
+
+    <header class="bar">
+      <div>
+        <h1>Dogodki za otroke</h1>
+        <p class="sub" id="clock">Nalagam …</p>
+      </div>
+      <button class="icon-btn" id="quit" type="button" title="Končaj in zapri aplikacijo"
+              aria-label="Končaj in zapri aplikacijo">⏻</button>
+    </header>
+
+    <div class="progress" role="progressbar" aria-label="Napredek" id="progress">
+      <span class="progress-fill" id="progress-fill"></span>
+    </div>
+
+    <div class="tallies" id="tallies">
+      <button class="tally is-interested" type="button" data-jump="interested">
+        <span class="tally-num" data-count="interested">0</span>
+        <span class="tally-label">Zanima nas</span>
+      </button>
+      <button class="tally is-maybe" type="button" data-jump="maybe">
+        <span class="tally-num" data-count="maybe">0</span>
+        <span class="tally-label">Mogoče</span>
+      </button>
+      <button class="tally is-rejected" type="button" data-jump="rejected">
+        <span class="tally-num" data-count="rejected">0</span>
+        <span class="tally-label">Zavrnjeno</span>
+      </button>
+    </div>
+
+    <main class="main">
+      <section class="view" id="view-swipe">
+        <div class="stack" id="stack"></div>
+
+        <div class="done" id="done" hidden>
+          <div class="done-mark">🎉</div>
+          <h2>Vse odločeno</h2>
+          <p id="done-text">V kupu ni več dogodkov.</p>
+          <button class="wide-btn" type="button" data-view="review">Odpri pregled</button>
+        </div>
+
+        <div class="actions">
+          <button class="act act-undo" id="undo" type="button" title="Razveljavi zadnje (Z)"
+                  aria-label="Razveljavi zadnje">↶</button>
+          <button class="act act-reject" type="button" data-decide="rejected"
+                  title="Zavrnjeno (puščica levo)" aria-label="Zavrnjeno">✕</button>
+          <button class="act act-maybe" type="button" data-decide="maybe"
+                  title="Mogoče (puščica dol)" aria-label="Mogoče">?</button>
+          <button class="act act-interested" type="button" data-decide="interested"
+                  title="Zanima nas (puščica desno)" aria-label="Zanima nas">♥</button>
+        </div>
+        <p class="hint" id="hint">Povleci kartico ali uporabi ← ↓ → · Z razveljavi</p>
+      </section>
+
+      <section class="view" id="view-review" hidden>
+        <div class="segments" id="segments">
+          <button class="seg is-on" type="button" data-seg="interested">
+            Zanima nas <b data-count="interested">0</b>
+          </button>
+          <button class="seg" type="button" data-seg="maybe">
+            Mogoče <b data-count="maybe">0</b>
+          </button>
+          <button class="seg" type="button" data-seg="rejected">
+            Zavrnjeno <b data-count="rejected">0</b>
+          </button>
+        </div>
+        <div class="list" id="list"></div>
+      </section>
+    </main>
+
+    <nav class="tabs">
+      <button class="tab is-on" type="button" data-view="swipe">Izbiranje<b id="tab-left">0</b></button>
+      <button class="tab" type="button" data-view="review">Pregled<b id="tab-done">0</b></button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="curtain" id="curtain" hidden>
+      <div class="curtain-box">
+        <div class="done-mark">💾</div>
+        <h2>Ustavljeno</h2>
+        <p>Vse odločitve so shranjene v <code>db.json</code>.<br>
+           Zaženi znova z <code>python3 app/server.py</code>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template id="card-template">
+  <article class="card">
+    <div class="stamp stamp-interested">Zanima nas</div>
+    <div class="stamp stamp-rejected">Zavrnjeno</div>
+    <div class="stamp stamp-maybe">Mogoče</div>
+    <div class="card-top">
+      <span class="chip chip-cat" data-f="category"></span>
+      <span class="chip chip-star" data-f="starred" hidden>⭐ zaznamovano</span>
+      <span class="chip chip-status" data-f="status" hidden></span>
+    </div>
+    <div class="card-when">
+      <span class="when-day" data-f="day"></span>
+      <span class="when-time" data-f="time"></span>
+      <span class="when-date" data-f="date_long"></span>
+    </div>
+    <h2 class="card-title" data-f="title"></h2>
+    <div class="card-where">
+      <span class="pin">📍</span>
+      <span data-f="place"></span>
+    </div>
+    <div class="card-glyph" aria-hidden="true" data-f="glyph"></div>
+    <div class="card-meta">
+      <div class="meta-box">
+        <span class="meta-label">Starost</span>
+        <span class="meta-value" data-f="age"></span>
+      </div>
+      <div class="meta-box">
+        <span class="meta-label">Cena</span>
+        <span class="meta-value" data-f="price"></span>
+      </div>
+    </div>
+    <div class="card-notes" data-f="notes"></div>
+    <div class="card-links">
+      <a class="link-btn" data-f="url" target="_blank" rel="noopener noreferrer">Vir dogodka ↗</a>
+      <a class="link-btn" data-f="maps" target="_blank" rel="noopener noreferrer">Zemljevid ↗</a>
+    </div>
+    <div class="card-id" data-f="event_id"></div>
+  </article>
+</template>
+
+<template id="row-template">
+  <article class="row">
+    <div class="row-date">
+      <b data-f="date"></b>
+      <span data-f="time"></span>
+    </div>
+    <div class="row-body">
+      <h3 data-f="title"></h3>
+      <p class="row-where" data-f="place"></p>
+      <p class="row-meta" data-f="meta"></p>
+      <div class="row-actions">
+        <button class="mini mini-interested" type="button" data-move="interested">Zanima</button>
+        <button class="mini mini-maybe" type="button" data-move="maybe">Mogoče</button>
+        <button class="mini mini-rejected" type="button" data-move="rejected">Zavrni</button>
+        <button class="mini mini-clear" type="button" data-move="">V kup</button>
+        <a class="mini mini-link" data-f="url" target="_blank" rel="noopener noreferrer">Vir ↗</a>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>

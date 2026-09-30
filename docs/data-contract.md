@@ -13,11 +13,25 @@ schema to keep in sync.
 | `user_rules` | User exclusions. Only preference commands change them |
 | `hidden_events` | Permanent hide audit. Old rows default to active. Restore adds `active: false` and `restored_at` |
 | `system_state` | Row `1` stores the sweep clock, active count and optional `latest_run` ID |
+| `decision_log` | Append-only undo history for categories. Optional table. Never delete rows |
 | Other tables/fields | Preserve without interpretation |
 
 `starred: true` is user-owned on the event. Refreshes cannot set or clear it.
 Expiry/hiding retain it. New source observations update only source-owned fields.
 The previous version of an updated event is kept in its run record's `before` field.
+
+`decision` is user-owned in the same way, with the same guarantees. It is
+`interested`, `maybe` or `rejected`, alongside a `decided_at` string, and only
+[swipe.py](../scripts/swipe.py) and the app in [app/](../app/README.md) change it.
+An absent key means undecided; clearing removes both keys rather than storing a
+null. A decision is not a preference rule: it never hides an event, never edits
+`user_rules` and never changes status or rendering, so a rejected event stays in
+the calendar until it is hidden explicitly. Every change appends a
+`decision_log` row holding `event_id`, `action`, `before`, `before_at`, `after`
+and `at`. Undo reverses the newest row that has no `undone` flag, restores the
+recorded previous value and timestamp, and marks that row `undone` with
+`undone_at` instead of deleting it. Undo therefore survives a restart, and the
+log is a history rather than a stack that can be popped away.
 
 Exclusions from all user-rule rows are applied case-insensitively. ID, venue and
 category exclusions use equality. Keyword exclusions match substrings of titles.

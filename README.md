@@ -14,6 +14,7 @@ Open [the activity calendar](currently_active.md) or [the latest sweep report](d
 | [reference/](reference/README.md) | Discovery policy, URLs, fixtures and artist watchlist |
 | [db.json](db.json) | Canonical event records, user preferences and lifecycle state |
 | [scripts/](scripts/) | Standard-library state, preference and rendering commands |
+| [app/](app/README.md) | Local browser app for swiping events into three categories |
 | [docs/data-contract.md](docs/data-contract.md) | Database and staged-run contracts |
 | [docs/output-format.md](docs/output-format.md) | Output evaluation and rendering decisions |
 | [tests/](tests/) | Offline tests using temporary databases |
@@ -68,6 +69,31 @@ missing details must be rediscovered. Nothing is fabricated to reconstruct them.
 All commands accept `--db /path/to/db.json` before the subcommand. Reports and
 run records then stay beside that database, which makes sandbox runs convenient.
 
+## Categories
+
+Each event can also be sorted into one of three user-owned categories:
+`interested`, `maybe` or `rejected`. This is independent of stars and hiding. A
+rejected event is not hidden and stays in the calendar.
+
+```bash
+python3 scripts/swipe.py set <event_id> interested
+python3 scripts/swipe.py clear <event_id>
+python3 scripts/swipe.py undo
+python3 scripts/swipe.py list [--category maybe]
+python3 scripts/swipe.py stats
+```
+
+`undo` reverses the most recent change from the stored `decision_log`, so it
+also works in a later session. The same operations have a phone-sized browser
+UI, with swipe gestures for the three categories and a review screen per
+category:
+
+```bash
+python3 app/server.py
+```
+
+See [app/README.md](app/README.md) for gestures, keys and the local API.
+
 ## Cloud Schedule
 
 The cloud already has repository access. Configure its periodic agent task with:
@@ -95,7 +121,10 @@ Focused examples:
 python3 -m unittest discover -s tests -p test_run.py -v
 python3 -m unittest discover -s tests -p test_preferences.py -v
 python3 -m unittest discover -s tests -p test_render.py -v
+python3 -m unittest discover -s tests -p test_swipe.py -v
+python3 -m unittest discover -s tests -p test_app.py -v
 ```
 
 The complete offline suite is `python3 -m unittest discover -s tests -v`.
-Tests never mutate the repository database or contact event sources.
+Tests never mutate the repository database or contact event sources. The app
+test binds an ephemeral loopback port against a temporary database.

@@ -4,6 +4,8 @@
 
 - For a periodic sweep, follow [routine.md](routine.md).
 - For star/hide requests, use the scripts described in [README.md](README.md#preferences).
+- For interested/maybe/rejected requests, use [scripts/swipe.py](scripts/swipe.py).
+  Its browser UI is [app/](app/README.md).
 - For code changes, read the owning script and its matching test first.
 - Load [reference files](reference/README.md) only for the current discovery pass.
 
@@ -11,7 +13,8 @@
 
 - Never delete event rows, hidden references, unknown fields or database tables.
   Expiry and hiding change status. Existing event IDs stay stable.
-- Stars and exclusions belong to the user. Discovery must not clear or override them.
+- Stars, categories and exclusions belong to the user. Discovery must not clear
+  or override them. A rejected category is not a hide and does not remove an event.
 - Do not edit the database or generated reports by hand. Use the state commands.
 - Never invent dates, prices, venues or source confirmations. A search snippet
   or annual fixture is a lead, not evidence.

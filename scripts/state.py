@@ -20,6 +20,7 @@ CATEGORIES = {
     "lutke", "pravljice", "kino", "delavnica", "sport", "tek", "kolo",
     "ples", "koncert", "odprta_vrata", "zoo", "festival", "pop_up", "avto_moto",
 }
+DECISIONS = ("interested", "maybe", "rejected")
 
 
 def timestamp(value):
@@ -70,6 +71,10 @@ def validate_event(event):
         raise ValueError("price_text must be a string")
     if "starred" in event and type(event["starred"]) is not bool:
         raise ValueError("starred must be a boolean")
+    if "decision" in event and event["decision"] not in DECISIONS:
+        raise ValueError(f"decision must be one of {', '.join(DECISIONS)}")
+    if "decided_at" in event and not isinstance(event["decided_at"], str):
+        raise ValueError("decided_at must be a string")
     if event.get("status", "active") not in {"active", "expired", "hidden"}:
         raise ValueError("Unknown event status")
 
@@ -96,6 +101,13 @@ def validate(db):
                 raise ValueError(f"{field} must be a list of strings")
     if any(not isinstance(item, dict) for item in db["hidden_events"].values()):
         raise ValueError("Hidden event rows must be objects")
+    log = db.get("decision_log", {})
+    if not isinstance(log, dict) or any(not isinstance(row, dict) for row in log.values()):
+        raise ValueError("decision_log rows must be objects")
+    for row in log.values():
+        for field in ("before", "after"):
+            if row.get(field) is not None and row[field] not in DECISIONS:
+                raise ValueError(f"decision_log {field} must be null or a known decision")
 
 
 def load(path=DB_PATH):
