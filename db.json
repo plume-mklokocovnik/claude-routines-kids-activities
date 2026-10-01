@@ -67,8 +67,8 @@
       "flags": [],
       "status": "active",
       "first_seen": "2026-09-21T14:35:28Z",
-      "decision": "rejected",
-      "decided_at": "2026-09-30T18:28:43Z"
+      "decision": "maybe",
+      "decided_at": "2026-10-01T12:20:34Z"
     },
     "32": {
       "event_id": "mestnagalerija_20261010_1600",
@@ -711,8 +711,8 @@
       ],
       "status": "active",
       "first_seen": "2026-09-24T07:22:48Z",
-      "decision": "interested",
-      "decided_at": "2026-09-30T18:28:43Z"
+      "decision": "maybe",
+      "decided_at": "2026-10-01T12:20:34Z"
     },
     "88": {
       "event_id": "kinobezigrad_20261011_0000",
@@ -1582,7 +1582,9 @@
       ],
       "event_id": "event_20261225_1330_070ca7d886da",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-10-01T12:20:34Z"
     },
     "145": {
       "title": "WILD KIDS – nastop skupine Čuki",
@@ -1832,7 +1834,9 @@
       ],
       "event_id": "event_20261226_0000_90ae390c2a13",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-10-01T12:20:34Z"
     },
     "158": {
       "title": "SiTi Teater sobotni dopoldnevi: Škratovske priprave na praznike z obiskom Dedka Mraza",
@@ -4073,6 +4077,38 @@
       "before_at": null,
       "after": "rejected",
       "at": "2026-10-01T08:32:53Z"
+    },
+    "102": {
+      "event_id": "event_20261225_1330_070ca7d886da",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-01T12:20:34Z"
+    },
+    "103": {
+      "event_id": "event_20261226_0000_90ae390c2a13",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-01T12:20:34Z"
+    },
+    "104": {
+      "event_id": "kinobezigrad_20261010_0000",
+      "action": "set",
+      "before": "interested",
+      "before_at": "2026-09-30T18:28:43Z",
+      "after": "maybe",
+      "at": "2026-10-01T12:20:34Z"
+    },
+    "105": {
+      "event_id": "mestnagalerija_20261010_1500",
+      "action": "set",
+      "before": "rejected",
+      "before_at": "2026-09-30T18:28:43Z",
+      "after": "maybe",
+      "at": "2026-10-01T12:20:34Z"
     }
   }
 }
