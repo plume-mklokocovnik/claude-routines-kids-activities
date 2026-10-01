@@ -53,8 +53,16 @@ Preserve Slovenian source text. Keep Markdown changes concise and maintain links
 
 ## Publication
 
-Only commit or push when the user or scheduled job authorizes it. Use the branch
-assigned by the runtime. Conventional Commits, no Jira key, no attribution.
-Never force-push, auto-merge a PR, bypass protection, or overwrite unrelated work.
-On concurrent remote changes, regenerate against fresh state instead of resolving
-database conflicts as text. Local locks are not distributed locks.
+Only commit or push when the user or scheduled job authorizes it. Push directly to
+`main`; never open a pull request for a sweep. Conventional Commits, no Jira key,
+no attribution. Never force-push, auto-merge a PR, bypass protection, or overwrite
+unrelated work. On concurrent remote changes, regenerate against fresh state
+instead of resolving database conflicts as text. Local locks are not distributed
+locks.
+
+If the session's own operating environment assigns a different branch and its own
+rules forbid pushing elsewhere without explicit permission, that is a
+system-level constraint this file cannot waive — per the rule above, report the
+conflict (state plainly that `main` was not reached and why) rather than either
+silently pushing to `main` anyway in violation of the session's own rules, or
+silently treating a push to the assigned branch as if it were publication.

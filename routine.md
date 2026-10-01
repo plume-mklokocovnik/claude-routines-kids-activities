@@ -115,16 +115,28 @@ of cancellation. Do not delete or expire a future event just because it was abse
    database, the sweep report, this run record and any intentional reference updates.
    Do not stage `.work/`, lock files, credentials or unrelated changes.
 3. Use `chore: Routine sweep <YYYY-MM-DD>` when committing a sweep. No ticket key.
-   Respect the runtime's branch and repository protection policy. If a direct push
-   is disallowed, publish a branch/PR and leave it for the normal review process.
-4. A rejected push means the remote may contain newer preferences. Do not rebase
-   generated database edits blindly. Start from the latest state in a clean
-   checkout and re-run the staged merge. Never force-push or auto-merge a fallback PR.
+   Commit and push directly to `main`. Never open a pull request for a sweep and
+   never leave a sweep's work sitting only on a side branch. If the session's own
+   operating environment assigns a different branch and its own rules forbid
+   pushing elsewhere without explicit permission, that is a session-level
+   constraint this file cannot waive by itself: push the sweep there as a fallback,
+   but state plainly in the report and in `diff.md`'s runtime_notes that `main` was
+   not reached and why, rather than treating the branch push as equivalent to
+   publishing. This is the kind of runtime/repo-instruction conflict AGENTS.md
+   already says to report rather than silently resolve either way.
+4. A rejected push to `main` first means the remote has moved. Fetch `main`; if
+   the sweep's commit still applies cleanly on top (a fast-forward), push again.
+   If `main` now carries newer preference/database changes, do not rebase or merge
+   the generated database edits as text. Start from the latest `main` in a clean
+   checkout, re-run the staged merge against it, and push the result. Never
+   force-push, and never substitute a pull request for a push that was simply
+   rejected on a stale ref.
 5. Report run ID, new/updated/expired counts, incomplete passes, validation outcome
-   and publication status or PR URL. A local success is not a successful remote
-   publication. Report blocked publication without claiming that the run shipped.
+   and publication status (the commit now on `main`, or exactly what blocked it).
+   A local success is not a successful remote publication. Report blocked
+   publication without claiming that the run shipped.
 
 Use scheduler-level serialization for publishing. The script lock covers only
 processes sharing one checkout. Checksum protection covers changes to that local
 database, not remote writers. Run evidence is immutable. Publication results go
-in the cloud job output or PR, not a post-commit edit of the run record.
+in the cloud job output, not a post-commit edit of the run record.
