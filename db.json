@@ -170,7 +170,9 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/",
       "flags": [],
       "status": "active",
-      "first_seen": "2026-09-21T14:35:28Z"
+      "first_seen": "2026-09-21T14:35:28Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "40": {
       "event_id": "grad_20261024_1700",
@@ -187,7 +189,9 @@
         "age_stretch"
       ],
       "status": "active",
-      "first_seen": "2026-09-21T14:35:28Z"
+      "first_seen": "2026-09-21T14:35:28Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "41": {
       "event_id": "botanicnivrt_20261028_1700",
@@ -204,7 +208,9 @@
         "age_stretch"
       ],
       "status": "active",
-      "first_seen": "2026-09-21T14:35:28Z"
+      "first_seen": "2026-09-21T14:35:28Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "43": {
       "event_id": "siti_20261107_1100",
@@ -560,7 +566,9 @@
         "not_toddler_appropriate"
       ],
       "status": "active",
-      "first_seen": "2026-09-22T08:47:12Z"
+      "first_seen": "2026-09-22T08:47:12Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "68": {
       "event_id": "mestnimuzej_20261107_1500",
@@ -646,7 +654,9 @@
         "travel"
       ],
       "status": "active",
-      "first_seen": "2026-09-22T08:47:12Z"
+      "first_seen": "2026-09-22T08:47:12Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "83": {
       "event_id": "lipica_20261107_1100",
@@ -757,7 +767,9 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "91": {
       "event_id": "kinobezigrad_20261031_0000",
@@ -774,7 +786,9 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "92": {
       "event_id": "kinobezigrad_20261107_0000",
@@ -791,7 +805,9 @@
         "time_unknown"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "decision": "maybe",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "93": {
       "event_id": "kinobezigrad_20261108_0000",
@@ -964,7 +980,9 @@
         "travel"
       ],
       "status": "active",
-      "first_seen": "2026-09-24T07:22:48Z"
+      "first_seen": "2026-09-24T07:22:48Z",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "110": {
       "event_id": "kinobezigrad_20261003_0000_koncert",
@@ -1451,7 +1469,9 @@
       "flags": [],
       "event_id": "event_20261024_1000_31b8acdbf3f9",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "139": {
       "title": "Kinobalon: Skrivnost izginulih nogavic (Strašna sobota, sledi delavnica)",
@@ -1466,7 +1486,9 @@
       "flags": [],
       "event_id": "event_20261024_1610_b399c7b1990d",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "140": {
       "title": "Kinobalon: Miška gre na goro",
@@ -1481,7 +1503,9 @@
       "flags": [],
       "event_id": "event_20261031_0900_7e5b25dffbad",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "141": {
       "title": "Gledališka predstava z obiskom Dedka Mraza: Škratek prijateljček",
@@ -1689,7 +1713,9 @@
       ],
       "event_id": "event_20261101_0800_633819f67d1e",
       "status": "active",
-      "first_seen": "2026-09-28T15:10:49+02:00"
+      "first_seen": "2026-09-28T15:10:49+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "152": {
       "title": "Sejem rezervnih delov in motoristične opreme",
@@ -1836,7 +1862,9 @@
       "flags": [],
       "event_id": "event_20261011_1100_3db2b6fe1c75",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "160": {
       "title": "SiTi Teater nedeljski popoldnevi: Repki 2",
@@ -1851,7 +1879,9 @@
       "flags": [],
       "event_id": "event_20261011_1700_357e4e92e629",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "161": {
       "title": "Z odra v muzej – Štirje muzikanti (predstava in vodeni ogled)",
@@ -1866,7 +1896,9 @@
       "flags": [],
       "event_id": "event_20261010_1100_b8ad33f756ac",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "162": {
       "title": "Štirje muzikanti",
@@ -1881,7 +1913,9 @@
       "flags": [],
       "event_id": "event_20261006_1700_78b1394a39c0",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "163": {
       "title": "Štirje muzikanti",
@@ -1896,7 +1930,9 @@
       "flags": [],
       "event_id": "event_20261008_1700_9085bff91540",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "164": {
       "title": "Štirje muzikanti",
@@ -1911,7 +1947,9 @@
       "flags": [],
       "event_id": "event_20261010_1700_f5f518db768b",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "165": {
       "title": "Zverjasec",
@@ -1926,7 +1964,9 @@
       "flags": [],
       "event_id": "event_20261014_1700_654129318ed4",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "166": {
       "title": "Zverjasec",
@@ -1941,7 +1981,9 @@
       "flags": [],
       "event_id": "event_20261015_1700_9b962251c05a",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "167": {
       "title": "Bikec Ferdinand (premiera)",
@@ -1956,7 +1998,9 @@
       "flags": [],
       "event_id": "event_20261015_1800_cb1cb57d569e",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "168": {
       "title": "Sončnice (delavnica)",
@@ -1971,7 +2015,9 @@
       "flags": [],
       "event_id": "event_20261001_1700_b402f73a56d0",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "169": {
       "title": "Beremo z nasmehom s psičko Luno",
@@ -1986,7 +2032,9 @@
       "flags": [],
       "event_id": "event_20261002_1700_476cbd334f02",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "170": {
       "title": "Primer št. 4 cm – Lutke Pika Poka",
@@ -2001,7 +2049,9 @@
       "flags": [],
       "event_id": "event_20261005_1730_41ed01f662df",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "171": {
       "title": "Ura pravljic",
@@ -2016,7 +2066,9 @@
       "flags": [],
       "event_id": "event_20261006_1700_8b326ba6a252",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "172": {
       "title": "Ura pravljic",
@@ -2031,7 +2083,9 @@
       "flags": [],
       "event_id": "event_20261006_1700_f5c25b7c7bcc",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "173": {
       "title": "Ura pravljic",
@@ -2046,7 +2100,9 @@
       "flags": [],
       "event_id": "event_20261006_1700_bdcb08d7fa2a",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "174": {
       "title": "Dežela zmajev",
@@ -2061,7 +2117,9 @@
       "flags": [],
       "event_id": "event_20261006_1700_4a59b5a902dc",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "175": {
       "title": "Ura pravljic",
@@ -2076,7 +2134,9 @@
       "flags": [],
       "event_id": "event_20261006_1730_3c2bc2c9f3a5",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "176": {
       "title": "Ura pravljic v angleškem jeziku",
@@ -2091,7 +2151,9 @@
       "flags": [],
       "event_id": "event_20261006_1730_e8b322d8e908",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "177": {
       "title": "Ura pravljic",
@@ -2106,7 +2168,9 @@
       "flags": [],
       "event_id": "event_20261006_1800_86f5a6b1deab",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "178": {
       "title": "Ura pravljic",
@@ -2121,7 +2185,9 @@
       "flags": [],
       "event_id": "event_20261006_1800_eaf8408533f4",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "179": {
       "title": "Ura pravljic v nemškem jeziku",
@@ -2136,7 +2202,9 @@
       "flags": [],
       "event_id": "event_20261007_1600_4fcdbf1dfc0f",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "180": {
       "title": "Ura pravljic: Čevljar – mojster, ki je obul svet",
@@ -2151,7 +2219,9 @@
       "flags": [],
       "event_id": "event_20261007_1700_d5017a4f15a5",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "181": {
       "title": "Ura pravljic z igranjem 2+",
@@ -2166,7 +2236,9 @@
       "flags": [],
       "event_id": "event_20261013_0930_8dc460030f49",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "182": {
       "title": "Otroški knjižni klub (za otroke, ki ne obiskujejo vrtca)",
@@ -2181,7 +2253,9 @@
       "flags": [],
       "event_id": "event_20261014_0930_93797fb32172",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "183": {
       "title": "Ura pravljic v angleškem jeziku",
@@ -2196,7 +2270,9 @@
       "flags": [],
       "event_id": "event_20261021_1600_1025c93fee2a",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "184": {
       "title": "Ura pravljic",
@@ -2211,7 +2287,9 @@
       "flags": [],
       "event_id": "event_20261021_1700_34260efed061",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "maybe",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "185": {
       "title": "Ura pravljic",
@@ -2226,7 +2304,9 @@
       "flags": [],
       "event_id": "event_20261022_1700_56334331b4ad",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "186": {
       "title": "Ura pravljic",
@@ -2241,7 +2321,9 @@
       "flags": [],
       "event_id": "event_20261022_1700_c87d90965055",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "187": {
       "title": "MINT: Misija Računalnik od abakusa do računalnika",
@@ -2258,7 +2340,9 @@
       ],
       "event_id": "event_20261026_0900_370c07817cba",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "188": {
       "title": "Ura pravljic z igranjem 2+",
@@ -2273,7 +2357,9 @@
       "flags": [],
       "event_id": "event_20261027_0830_5b48f3e04255",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "189": {
       "title": "MINT: Camera obscura",
@@ -2290,7 +2376,9 @@
       ],
       "event_id": "event_20261027_0900_94b214fc7950",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "190": {
       "title": "MINT: Camera obscura",
@@ -2307,7 +2395,9 @@
       ],
       "event_id": "event_20261028_0900_7ff16e37a744",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "191": {
       "title": "MINT: Kako je bilo, ko še ni bilo šivalnih strojev",
@@ -2324,7 +2414,9 @@
       ],
       "event_id": "event_20261028_0900_e08a35103c91",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "192": {
       "title": "MINT: Misija Se slišimo? Radioamaterstvo in komunikacija nekoč",
@@ -2341,7 +2433,9 @@
       ],
       "event_id": "event_20261029_0900_98d0c218647a",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "193": {
       "title": "MINT: Kako je bilo, ko še ni bilo šivalnih strojev",
@@ -2358,7 +2452,9 @@
       ],
       "event_id": "event_20261029_0900_5eb6b1f7685c",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "194": {
       "title": "Medgeneracijsko srečališče: delavnica izdelovanja značk",
@@ -2373,7 +2469,9 @@
       "flags": [],
       "event_id": "event_20261008_1700_261236e76ec0",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "195": {
       "title": "Z igro do dediščine 2026: brezplačno vodstvo za družine po Plečnikovi hiši",
@@ -2388,7 +2486,9 @@
       "flags": [],
       "event_id": "event_20261010_1600_9c1e44b08598",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "196": {
       "title": "Festival Hokus Pokus s Klemnom Janežičem",
@@ -2403,7 +2503,9 @@
       "flags": [],
       "event_id": "event_20261016_1700_e18279d14954",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "197": {
       "title": "Katalena: Enci benci Katalenci",
@@ -2435,7 +2537,9 @@
       "flags": [],
       "event_id": "event_20261002_1700_69f9e50597f9",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "199": {
       "title": "Madžarsko-slovenska glasbena ura za otroke",
@@ -2450,7 +2554,9 @@
       "flags": [],
       "event_id": "event_20261016_1700_2244a3b3ba70",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "200": {
       "title": "Zaključni koncert tridnevne delavnice za 100 najmlajših violončelistov iz vse Slovenije (Cellofest)",
@@ -2465,7 +2571,9 @@
       "flags": [],
       "event_id": "event_20261018_1100_2581648f27d5",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "201": {
       "title": "Alenka Kolman – nastop za otroke",
@@ -2483,7 +2591,9 @@
       ],
       "event_id": "event_20261023_1600_0fad17a23b00",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "202": {
       "title": "Z igro do dediščine 2026: brezplačen vstop v Narodni muzej Slovenije",
@@ -2500,7 +2610,9 @@
       ],
       "event_id": "event_20261005_0000_f05d766f3b85",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "interested",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "203": {
       "title": "En dan. Trije muzeji. Ena ploščad. – jesensko muzejsko popoldne (prost vstop)",
@@ -2515,7 +2627,9 @@
       "flags": [],
       "event_id": "event_20261010_1500_4352040c3e5a",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-01T08:32:53Z"
     },
     "204": {
       "title": "Novomeški polmaraton – otroški tek (predšolski in šolski)",
@@ -2553,7 +2667,9 @@
       ],
       "event_id": "event_20261003_0000_7a92e795ce3b",
       "status": "active",
-      "first_seen": "2026-10-01T09:05:53+02:00"
+      "first_seen": "2026-10-01T09:05:53+02:00",
+      "decision": "interested",
+      "decided_at": "2026-10-01T08:32:53Z"
     }
   },
   "user_rules": {
@@ -3493,6 +3609,470 @@
       "before_at": null,
       "after": "rejected",
       "at": "2026-09-30T18:28:43Z"
+    },
+    "44": {
+      "event_id": "bohinjskabistrica_20261024_1500",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "45": {
+      "event_id": "bohinjskabistrica_20261031_1500",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "46": {
+      "event_id": "botanicnivrt_20261028_1700",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "47": {
+      "event_id": "cd_20261029_1800",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "48": {
+      "event_id": "event_20261001_1700_b402f73a56d0",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "49": {
+      "event_id": "event_20261002_1700_476cbd334f02",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "50": {
+      "event_id": "event_20261002_1700_69f9e50597f9",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "51": {
+      "event_id": "event_20261003_0000_7a92e795ce3b",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "interested",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "52": {
+      "event_id": "event_20261005_0000_f05d766f3b85",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "interested",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "53": {
+      "event_id": "event_20261005_1730_41ed01f662df",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "54": {
+      "event_id": "event_20261006_1700_4a59b5a902dc",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "55": {
+      "event_id": "event_20261006_1700_78b1394a39c0",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "56": {
+      "event_id": "event_20261006_1700_8b326ba6a252",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "57": {
+      "event_id": "event_20261006_1700_bdcb08d7fa2a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "58": {
+      "event_id": "event_20261006_1700_f5c25b7c7bcc",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "59": {
+      "event_id": "event_20261006_1730_3c2bc2c9f3a5",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "60": {
+      "event_id": "event_20261006_1730_e8b322d8e908",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "61": {
+      "event_id": "event_20261006_1800_86f5a6b1deab",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "62": {
+      "event_id": "event_20261006_1800_eaf8408533f4",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "63": {
+      "event_id": "event_20261007_1600_4fcdbf1dfc0f",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "64": {
+      "event_id": "event_20261007_1700_d5017a4f15a5",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "65": {
+      "event_id": "event_20261008_1700_261236e76ec0",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "66": {
+      "event_id": "event_20261008_1700_9085bff91540",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "67": {
+      "event_id": "event_20261010_1100_b8ad33f756ac",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "68": {
+      "event_id": "event_20261010_1500_4352040c3e5a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "69": {
+      "event_id": "event_20261010_1600_9c1e44b08598",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "70": {
+      "event_id": "event_20261010_1700_f5f518db768b",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "71": {
+      "event_id": "event_20261011_1100_3db2b6fe1c75",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "72": {
+      "event_id": "event_20261011_1700_357e4e92e629",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "73": {
+      "event_id": "event_20261013_0930_8dc460030f49",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "74": {
+      "event_id": "event_20261014_0930_93797fb32172",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "75": {
+      "event_id": "event_20261014_1700_654129318ed4",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "76": {
+      "event_id": "event_20261015_1700_9b962251c05a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "77": {
+      "event_id": "event_20261015_1800_cb1cb57d569e",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "78": {
+      "event_id": "event_20261016_1700_2244a3b3ba70",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "79": {
+      "event_id": "event_20261016_1700_e18279d14954",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "80": {
+      "event_id": "event_20261018_1100_2581648f27d5",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "81": {
+      "event_id": "event_20261021_1600_1025c93fee2a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "82": {
+      "event_id": "event_20261021_1700_34260efed061",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "83": {
+      "event_id": "event_20261022_1700_56334331b4ad",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "84": {
+      "event_id": "event_20261022_1700_c87d90965055",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "85": {
+      "event_id": "event_20261023_1600_0fad17a23b00",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "86": {
+      "event_id": "event_20261024_1000_31b8acdbf3f9",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "87": {
+      "event_id": "event_20261024_1610_b399c7b1990d",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "88": {
+      "event_id": "event_20261026_0900_370c07817cba",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "89": {
+      "event_id": "event_20261027_0830_5b48f3e04255",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "90": {
+      "event_id": "event_20261027_0900_94b214fc7950",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "91": {
+      "event_id": "event_20261028_0900_7ff16e37a744",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "92": {
+      "event_id": "event_20261028_0900_e08a35103c91",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "93": {
+      "event_id": "event_20261029_0900_5eb6b1f7685c",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "94": {
+      "event_id": "event_20261029_0900_98d0c218647a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "95": {
+      "event_id": "event_20261031_0900_7e5b25dffbad",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "96": {
+      "event_id": "event_20261101_0800_633819f67d1e",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "97": {
+      "event_id": "grad_20261024_1700",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "98": {
+      "event_id": "kinobezigrad_20261024_0000",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "99": {
+      "event_id": "kinobezigrad_20261031_0000",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "100": {
+      "event_id": "kinobezigrad_20261107_0000",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-01T08:32:53Z"
+    },
+    "101": {
+      "event_id": "siti_20261024_1100",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-01T08:32:53Z"
     }
   }
 }
