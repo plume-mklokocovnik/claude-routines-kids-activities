@@ -55,19 +55,32 @@ class AskAiTests(unittest.TestCase):
         self.assertIn("Price: free", prompt(card, ""))
         self.assertNotIn("Brezplačno", prompt(card, ""))
 
-    def test_intent_url_shares_the_text_to_one_app_and_falls_back_to_the_web(self):
+    def test_intent_url_views_the_web_address_in_one_app_and_falls_back_to_the_web(self):
         text = "a=b; c%d\nline two"
         url = evaluate(f"AskAi.intentUrl('claude', {json.dumps(text)})")
-        self.assertTrue(url.startswith("intent:#Intent;action=android.intent.action.SEND;type=text/plain;"))
+        # Chrome adds BROWSABLE, which share targets lack, so it must not be a SEND.
+        self.assertNotIn("action=android.intent.action.SEND", url)
+        self.assertTrue(url.startswith("intent://claude.ai/new?q="))
         self.assertTrue(url.endswith(";end"))
+        head, tail = url.split("#Intent;", 1)
         # A `;` or `=` left inside a value would break the link apart.
-        parts = url[len("intent:#Intent;"):-len(";end")].split(";")
-        fields = dict(part.split("=", 1) for part in parts)
+        fields = dict(part.split("=", 1) for part in tail[:-len(";end")].split(";"))
+        self.assertEqual(fields["scheme"], "https")
         self.assertEqual(fields["package"], "com.anthropic.claude")
-        self.assertEqual(unquote(fields["S.android.intent.extra.TEXT"]), text)
+        self.assertEqual(parse_qs(urlsplit("https://" + head[len("intent://"):]).query)["q"], [text])
         fallback = unquote(fields["S.browser_fallback_url"])
         self.assertTrue(fallback.startswith("https://claude.ai/new?q="))
         self.assertEqual(parse_qs(urlsplit(fallback).query)["q"], [text])
+
+    def test_intent_url_without_a_prefill_still_names_the_app(self):
+        url = evaluate("AskAi.intentUrl('gemini', 'hi')")
+        self.assertTrue(url.startswith("intent://gemini.google.com/app#Intent;scheme=https;"))
+        self.assertIn("package=com.google.android.apps.bard;", url)
+
+    def test_sharing_needs_the_share_function(self):
+        self.assertTrue(evaluate("AskAi.canShare({ share() {} })"))
+        self.assertFalse(evaluate("AskAi.canShare({})"))
+        self.assertFalse(evaluate("AskAi.canShare(undefined)"))
 
     def test_each_assistant_has_its_own_package_and_web_page(self):
         found = evaluate("Object.fromEntries(Object.entries(AskAi.TARGETS)"

@@ -1,11 +1,15 @@
 /* Hand one event to an AI assistant, ready to be researched.
 
    There is no standard for this, so each assistant gets the route that works best.
-   On Android, Chrome turns an `intent:` link into a text share aimed at one
-   installed app, which opens that app on a new chat with the text in it. Elsewhere,
-   and when the app is not installed, the link falls back to the assistant's web
-   page. Only the event's own stored fields go into the prompt. The assistant does
-   the web search, so nothing here claims to be fresher than the database. */
+   On Android, Chrome turns an `intent:` link into a VIEW of the assistant's own web
+   address, pinned to its installed app, which opens the app on a new chat. It has
+   to be a VIEW: Chrome adds the BROWSABLE category to every intent a page launches,
+   and the share-target screens of these apps do not declare it, so a SEND intent
+   never resolves and Chrome drops to the web page, which an installed web app shows
+   in its in-app browser. Elsewhere, and when the app is not installed, the link
+   falls back to the assistant's web page. Only the event's own stored fields go
+   into the prompt. The assistant does the web search, so nothing here claims to be
+   fresher than the database. */
 (function (root) {
   'use strict';
 
@@ -62,21 +66,29 @@
     return TARGETS[name].web(text);
   }
 
-  // Chrome on Android reads this as: share the text to this package, and if that
-  // cannot be done, go to the fallback address instead.
+  // Chrome on Android reads this as: open this address in this package, and if
+  // that cannot be done, go to the fallback address instead. The address is the
+  // one the web route uses, so an app that claims it as an app link gets the same
+  // text. An app that opens without the text still has it on the clipboard.
   function intentUrl(name, text) {
     const target = TARGETS[name];
-    return 'intent:#Intent;action=android.intent.action.SEND;type=text/plain;'
+    const web = new URL(target.web(text));
+    return `intent://${web.host}${web.pathname}${web.search}#Intent;scheme=${web.protocol.slice(0, -1)};`
       + `package=${target.pkg};`
-      + `S.android.intent.extra.TEXT=${encodeURIComponent(text)};`
-      + `S.browser_fallback_url=${encodeURIComponent(target.web(text))};end`;
+      + `S.browser_fallback_url=${encodeURIComponent(web.href)};end`;
+  }
+
+  // The system share sheet lists every installed app that takes text, so it
+  // reaches an assistant whatever its app does with links.
+  function canShare(nav) {
+    return Boolean(nav) && typeof nav.share === 'function';
   }
 
   function isAndroid(userAgent) {
     return /\bAndroid\b/i.test(userAgent || '');
   }
 
-  const api = { TARGETS, prompt, webUrl, intentUrl, isAndroid };
+  const api = { TARGETS, prompt, webUrl, intentUrl, canShare, isAndroid };
   root.AskAi = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 }(typeof window !== 'undefined' ? window : globalThis));

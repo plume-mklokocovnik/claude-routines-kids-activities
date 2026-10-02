@@ -199,22 +199,29 @@ dialog nor decides anything, so the ID can be pasted into `swipe.py set`,
 
 ## Asking an AI about an event
 
-The dialog ends with **Vprašaj AI za več o dogodku** and one button each for
-ChatGPT, Claude and Gemini. A tap sends the event to that assistant, which is
-asked to search the web and confirm the date, price and venue. The text is
-English and built by [askai.js](static/askai.js) from the stored fields only.
-Anything unknown is left out rather than guessed.
+The dialog ends with **Vprašaj AI za več o dogodku**, one button each for
+ChatGPT, Claude and Gemini, and **Deli …**. A tap sends the event to that
+assistant, which is asked to search the web and confirm the date, price and venue.
+The text is English and built by [askai.js](static/askai.js) from the stored fields
+only. Anything unknown is left out rather than guessed.
 
 There is no cross-vendor standard, so the route depends on the device:
 
-- **Android.** An `intent:` link shares the text to the installed app and opens a
-  new chat with it. If the app is missing, the link falls back to the web page.
+- **Android.** An `intent:` link views the assistant's own web address in its
+  installed app. If the app is missing, the link falls back to the web page. It is
+  a VIEW and not a share (`SEND`) on purpose: Chrome adds the `BROWSABLE` category
+  to every intent a page launches, the share screens of these apps do not declare
+  it, so a share never resolved and the installed web app showed the fallback page
+  in its in-app browser instead.
+- **Deli …** opens the system share sheet with the same text, so any installed app
+  can be picked. It shows only where the browser has `navigator.share`.
 - **Elsewhere.** The assistant's web page opens in a new tab. ChatGPT and Claude
   take the text in the address. Gemini has no prefill, so its page opens empty.
 
-The text is always copied too, which is what makes Gemini a paste. The
-`com.*` package names in `askai.js` are the part most likely to need a fix if an
-app does not open.
+The text is always copied too, which is what makes Gemini a paste. The `com.*`
+package names in `askai.js` are the part most likely to need a fix if an app does
+not open, and an app that does not claim its web address as an app link falls back
+to the web page. **Deli …** is then the way in.
 
 ## Small screens
 
