@@ -47,9 +47,27 @@ class BuildTests(unittest.TestCase):
                 self.assertTrue((self.out / name).is_file())
         # The copied files are the source ones, so the bundle cannot drift.
         for name in build_static.COPIED:
+            if name == "index.html":
+                continue
             self.assertEqual((self.out / name).read_bytes(),
                              (build_static.STATIC_DIR / name).read_bytes())
         self.assertIn("card-template", (self.out / "index.html").read_text(encoding="utf-8"))
+
+    def test_page_loads_scripts_by_a_version_that_follows_their_content(self):
+        import re
+        build_static.build(self.path, self.out, repo="owner/name")
+        page = (self.out / "index.html").read_text(encoding="utf-8")
+        tags = set(re.findall(r'(?:src|href)="(?:app\.css|mode|days|snapshot|app)[.a-z]*\?v=([0-9a-f]{10})"', page))
+        self.assertEqual(len(tags), 1)
+        for name in build_static.VERSIONED:
+            self.assertRegex(page, rf'"{re.escape(name)}\?v=[0-9a-f]{{10}}"')
+        # The page without the suffixes is the source page, so nothing else changed.
+        plain = re.sub(r"\?v=[0-9a-f]{10}", "", page)
+        self.assertEqual(plain, (build_static.STATIC_DIR / "index.html").read_text(encoding="utf-8"))
+        # A different repository changes mode.js, so the version moves with it.
+        other = self.work / "other"
+        build_static.build(self.path, other, repo="someone/else")
+        self.assertNotIn(next(iter(tags)), (other / "index.html").read_text(encoding="utf-8"))
 
     def test_bundle_is_installable_as_a_standalone_app(self):
         build_static.build(self.path, self.out, repo="owner/name")

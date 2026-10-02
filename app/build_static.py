@@ -17,6 +17,7 @@ the page can only copy a patch to the clipboard.
 """
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -154,6 +155,27 @@ def mode_script(repo, branch, inbox, hide_inbox=HIDE_INBOX):
             f"window.SWIPE_REPO = {json.dumps(target, ensure_ascii=False)};\n")
 
 
+VERSIONED = ("app.css", "mode.js", "days.js", "snapshot.js", "app.js")
+
+
+def version_assets(html, out):
+    """Tie each script and the stylesheet to its content with a `?v=` suffix.
+
+    Pages sends everything with `max-age=600`, so a browser can pair a fresh page
+    with an older script, which then reaches for elements that no longer exist.
+    A changed file gets a new URL, so the page can only ever load the scripts it
+    was built with.
+    """
+    digest = hashlib.sha256()
+    for name in VERSIONED:
+        digest.update((out / name).read_bytes())
+    tag = digest.hexdigest()[:10]
+    for name in VERSIONED:
+        html = html.replace(f'href="{name}"', f'href="{name}?v={tag}"')
+        html = html.replace(f'src="{name}"', f'src="{name}?v={tag}"')
+    return html
+
+
 def build(db_path, out_dir, repo=None, branch="main", inbox=INBOX, hide_inbox=HIDE_INBOX):
     db = state.load(db_path)  # refuses to build a bundle from missing state
     out = Path(out_dir)
@@ -169,6 +191,9 @@ def build(db_path, out_dir, repo=None, branch="main", inbox=INBOX, hide_inbox=HI
     for name, content in generated.items():
         state.atomic_write(out / name, content)
         os.chmod(out / name, 0o644)  # atomic_write keeps a private temp mode
+    page = out / "index.html"
+    state.atomic_write(page, version_assets(page.read_text(encoding="utf-8"), out))
+    os.chmod(page, 0o644)
     return out
 
 

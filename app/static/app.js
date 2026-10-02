@@ -109,7 +109,8 @@ function renderStats() {
   el('st-window').textContent = clock.horizon;
   el('st-today').textContent = isoToSi(today);
   el('st-total').textContent = String(counts.total);
-  el('st-free').textContent = String(free);}
+  el('st-free').textContent = String(free);
+}
 
 function pendingPhrase(count) {
   const tail = count % 100;

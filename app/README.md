@@ -37,6 +37,11 @@ deploy was answered from the browser's cache for up to ten minutes, so the banne
 stayed even though the workflow had finished. Revalidating costs an empty 304
 when nothing has changed.
 
+The same ten minutes could pair a fresh page with an older script, which then
+reached for an element that no longer exists. The build therefore adds a `?v=`
+suffix, taken from the content of the scripts and stylesheet, to each of their
+URLs in `index.html`. A changed file gets a new URL.
+
 The published page is current, not live. It never reads `db.json` itself: the
 snapshot is rebuilt and redeployed whenever a change to `db.json` reaches
 `main`, which takes about a minute.
