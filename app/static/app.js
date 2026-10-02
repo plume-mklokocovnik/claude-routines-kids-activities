@@ -1,9 +1,7 @@
 'use strict';
 
-/* One UI over two backends, chosen by mode.js.
-   server: every decision is a round trip, so db.json is the only state.
-   static: the deployed build ships a baked snapshot, decisions are staged in
-   this browser, and saving hands them to GitHub to be written into db.json. */
+/* The deployed build ships a baked snapshot. Decisions are staged in this
+   browser, and saving hands them to GitHub to be written into db.json. */
 
 const THRESHOLD_X = 96;   // horizontal pixels before a swipe counts
 const THRESHOLD_Y = 112;  // downward pixels before "mogoče" counts
@@ -25,7 +23,7 @@ let watchUntil = 0;  // until when to keep looking for the rebuilt snapshot afte
 
 const st = {
   raw: null, data: null, view: 'swipe', seg: 'interested',
-  busy: false, dragging: false, stopped: false,
+  busy: false, dragging: false,
   hiding: [],  // events handed to GitHub to be hidden, until the snapshot drops them
 };
 
@@ -34,44 +32,16 @@ const labelOf = (name) => (st.data && st.data.labels[name]) || name;
 
 /* --- backends ----------------------------------------------------------- */
 
-async function request(path, body) {
-  const options = body === undefined
-    ? { headers: { Accept: 'application/json' } }
-    : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) };
-  let response;
-  try {
-    response = await fetch(path, options);
-  } catch (error) {
-    throw new Error('Strežnik se ne odziva. Je aplikacija še zagnana?');
-  }
-  const data = await response.json().catch(() => ({ ok: false, error: 'Neveljaven odgovor strežnika' }));
-  if (!response.ok || !data.ok) throw new Error(data.error || `Napaka ${response.status}`);
-  return data;
-}
-
-function serverStore() {
-  return {
-    live: true,
-    load: async () => (await request('/api/state')).state,
-    decide: async (id, category) => (await request('/api/decide', { event_id: id, category })).state,
-    clear: async (id) => (await request('/api/clear', { event_id: id })).state,
-    undo: async () => (await request('/api/undo', {})).state,
-    quit: () => request('/api/quit', {}),
-  };
-}
-
 function browserStorage() {
   // Reading it can throw in a private window or with site data blocked.
   try { return window.localStorage; } catch (error) { return null; }
 }
 
-const store = window.SWIPE_MODE === 'static'
-  ? Snapshot.createStaticStore({
-    fetch: (...args) => window.fetch(...args),
-    storage: browserStorage(),
-    notify: (text, bad) => toast(text, bad),
-  })
-  : serverStore();
+const store = Snapshot.createStaticStore({
+  fetch: (...args) => window.fetch(...args),
+  storage: browserStorage(),
+  notify: (text, bad) => toast(text, bad),
+});
 
 function setData(raw) {
   st.raw = raw;
@@ -112,7 +82,7 @@ function render(options) {
   undoButton.disabled = !undoInfo.available;
   undoButton.title = undoInfo.available
     ? `Razveljavi: ${undoInfo.title} → ${undoInfo.restores} (Z)`
-    : store.live ? 'Ni česa razveljaviti' : 'Razveljavi se le še neshranjene odločitve';
+    : 'Razveljavi se le še neshranjene odločitve';
 
   el('hint-count').textContent = counts.undecided
     ? `${counts.undecided} še za odločitev`
@@ -267,9 +237,9 @@ function buildRow(card) {
 }
 
 // The button hides every event in the Zavrnjeno list. Writing needs the
-// repository, so it only exists in the published build, on that list.
+// repository, so it only shows on that list.
 function renderFab() {
-  const shown = !store.live && st.view === 'review' && st.seg === 'rejected'
+  const shown = st.view === 'review' && st.seg === 'rejected'
     && Boolean(st.data) && st.data.groups.rejected.length > 0;
   el('hide-fab').hidden = !shown;
   el('list').classList.toggle('has-fab', shown);
@@ -619,8 +589,8 @@ function editorUrl(patch, file) {
   return full.length <= URL_BUDGET ? full : `${base}${name}`;
 }
 
-// The clipboard API only exists on https and localhost. Opened by a LAN address
-// over plain http, it is missing, so fall back to selecting a hidden field.
+// The clipboard API only exists on https and localhost. Over plain http on
+// another address it is missing, so fall back to selecting a hidden field.
 async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -697,7 +667,7 @@ function rejectedIds() {
 }
 
 function openConfirm() {
-  if (confirmation.open || dialog.open || store.live || st.busy) return;
+  if (confirmation.open || dialog.open || st.busy) return;
   const rows = st.data.groups.rejected;
   if (!rows.length) return;
   const unsaved = rows.filter((card) => card.unsaved).length;
@@ -852,17 +822,6 @@ function wire() {
   });
   el('undo').addEventListener('click', undo);
 
-  if (store.quit) {
-    el('quit').addEventListener('click', async () => {
-      if (!window.confirm('Končam aplikacijo? Vse odločitve so že shranjene.')) return;
-      st.stopped = true;
-      try { await store.quit(); } catch (error) { /* the socket may close first */ }
-      el('curtain').hidden = false;
-    });
-  } else {
-    el('quit').hidden = true;
-  }
-
   el('save').addEventListener('click', save);
   el('copy').addEventListener('click', async () => {
     const { count, patch } = store.pending ? store.pending() : { count: 0 };
@@ -895,7 +854,7 @@ function wire() {
       if (event.key === 'Escape') { event.preventDefault(); closeDetails(); }
       return;
     }
-    if (st.stopped || event.altKey || event.metaKey) return;
+    if (event.altKey || event.metaKey) return;
     if (event.target.closest('input, textarea')) return;
     const key = event.key;
     if (key === 'z' || key === 'Z') { event.preventDefault(); undo(); return; }

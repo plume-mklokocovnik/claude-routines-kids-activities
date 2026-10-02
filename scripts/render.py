@@ -2,7 +2,7 @@
 
 Slovenian labels and dates, Markdown-safe cells and links, and the wording for
 price, age and notes. [report.py](report.py) builds diff.md from these and
-[app/server.py](../app/server.py) builds the app's cards from them, so an event
+[app/build_static.py](../app/build_static.py) builds the app's cards from them, so an event
 reads the same in both. Nothing here reads the database or the wall clock, and
 there is no report of its own: the live view of the current state is the app.
 """

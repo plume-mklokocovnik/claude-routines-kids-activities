@@ -141,7 +141,6 @@
     }
 
     return {
-      live: false,
       load: async () => {
         await fetchSnapshot();
         log = readLog();

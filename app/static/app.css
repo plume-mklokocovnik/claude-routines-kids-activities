@@ -629,21 +629,6 @@ html, body {
 
 .stat b { display: block; margin-top: 2px; font-size: 13px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 
-.stat-quit {
-  grid-column: 1 / -1;
-  padding: 9px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.stat-quit:hover { color: var(--red); border-color: var(--red); }
-.stat-quit[hidden] { display: none; }
-
 /* --- overlays ----------------------------------------------------------- */
 
 .toast {

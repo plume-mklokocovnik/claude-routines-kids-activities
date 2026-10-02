@@ -47,7 +47,7 @@ The trade-offs are real, and were accepted:
 - The hidden-rule audit table has no rendered view. `python3 scripts/hide_event.py
   list` prints the same references.
 - The published app is current, not live: it is rebuilt from `db.json` whenever a
-  change reaches `main`. The local server reads the file on every request.
+  change reaches `main`.
 
 Earlier versions of the file remain in Git history. Hidden and expired event
 records remain in the database. The app stops showing an event once its date in

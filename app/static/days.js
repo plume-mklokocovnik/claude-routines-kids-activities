@@ -2,8 +2,8 @@
 
    This is the one place the app reads the clock. It decides visibility only:
    nothing here changes stored data, expiry or a generated report. It runs in
-   the browser for both modes, because the published page carries a snapshot
-   that can be days old, so "today" has to be read when the page is opened.
+   the browser, because the published page carries a snapshot that can be days
+   old, so "today" has to be read when the page is opened.
 
    An event is past once its Ljubljana calendar date is before today. Events from
    today stay, whatever time they started. A card with no date is never past. */

@@ -3,10 +3,10 @@
 
 GitHub Pages serves files, not processes, so there is no Python and no way to
 write to the repository. The build therefore bakes the card payload into
-`state.json` and marks the bundle static. The page then stages decisions in the
-browser and hands a patch back through GitHub, which
-[scripts/swipe.py](../scripts/swipe.py) applies. `db.json` stays the only
-record: the browser holds a staging area, never a second source of truth.
+`state.json`. The page stages decisions in the browser and hands a patch back
+through GitHub, which [scripts/swipe.py](../scripts/swipe.py) applies.
+`db.json` stays the only record: the browser holds a staging area, never a
+second source of truth.
 
     python3 app/build_static.py                     # writes ./site
     python3 app/build_static.py --out /tmp/site --repo owner/name
@@ -22,13 +22,13 @@ import os
 import shutil
 import sys
 from pathlib import Path
+from urllib.parse import urlsplit
 
 APP_DIR = Path(__file__).resolve().parent
 REPO = APP_DIR.parent
 sys.path.insert(0, str(REPO / "scripts"))
-sys.path.insert(0, str(APP_DIR))
 
-import server  # noqa: E402
+import render  # noqa: E402
 import state  # noqa: E402
 import swipe  # noqa: E402
 
@@ -38,6 +38,95 @@ COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js",
 INBOX = "inbox/decisions.txt"
 HIDE_INBOX = "inbox/hide"
 
+
+# --- presentation -----------------------------------------------------------
+# Display strings are built here from the stored sweep clock, never from the
+# wall clock, so the app shows the same dates as the sweep report.
+
+def notes(event):
+    text = render.notes_text(event)
+    return [part for part in text.split(", ") if part]
+
+
+def stamp(value):
+    """A stored UTC instant as local date and time, or empty when absent."""
+    moment = render.parse_dt(value)
+    return f"{moment:%d.%m.%Y %H:%M}" if moment else ""
+
+
+def source_host(url):
+    """The site a source link points at, so the modal can name where it leads."""
+    if not state.valid_url(url):
+        return ""
+    host = urlsplit(url).hostname or ""
+    return host[4:] if host.startswith("www.") else host
+
+
+def card(event):
+    start = render.parse_dt(event.get("start_time"))
+    age = event.get("age_min")
+    return {
+        "event_id": event.get("event_id"),
+        "title": event.get("title") or "?",
+        "venue": event.get("venue") or "?",
+        "city": event.get("city") or "",
+        "category": event.get("category") or "?",
+        "day": render.DAYS[start.weekday()] if start else "",
+        "date": f"{start:%d.%m.%Y}" if start else "",
+        "date_short": f"{start:%d.%m.}" if start else "?",
+        "day_iso": start.strftime("%Y-%m-%d") if start else "",
+        "date_long": render.si_date(start) if start else "Datum ni znan",
+        "month": start.strftime("%Y-%m") if start else "",
+        "month_long": (f"{render.MONTHS[start.month - 1].capitalize()} {start.year}"
+                       if start else "Brez datuma"),
+        "time": render.hour_text(event, start),
+        "age": f"{age}+" if isinstance(age, int) else "?",
+        "price": (event.get("price_text") or "").strip(),
+        "is_free": event.get("is_free") is True,
+        "notes": notes(event),
+        "url": event.get("url") if state.valid_url(event.get("url")) else "",
+        "source": source_host(event.get("url")),
+        "maps": render.maps_link(event.get("venue"), event.get("city")),
+        "status": event.get("status", "active"),
+        "decision": event.get("decision"),
+        "decided_at": stamp(event.get("decided_at")),
+        "first_seen": stamp(event.get("first_seen")),
+    }
+
+
+def undo_preview(db):
+    _, row = swipe.last_change(db)
+    if row is None:
+        return {"available": False}
+    event = swipe.by_id(db, row.get("event_id"))
+    target = row.get("after")
+    return {
+        "available": True,
+        "action": row.get("action"),
+        "title": (event or {}).get("title") or row.get("event_id"),
+        "label": swipe.LABELS.get(target, "brez kategorije"),
+        "restores": swipe.LABELS.get(row.get("before"), "brez kategorije"),
+    }
+
+
+def payload(db):
+    clock = state.timestamp(db["system_state"]["1"]["last_run"])
+    groups = swipe.decided(db)
+    return {
+        "clock": {
+            "date": f"{clock:%d.%m.%Y}",
+            "time": f"{clock:%H:%M}",
+            "horizon": f"{state.add_months(clock, 3):%d.%m.%Y}",
+        },
+        "counts": swipe.counts(db),
+        "deck": [card(event) for event in swipe.deck(db)],
+        "groups": {name: [card(event) for event in rows] for name, rows in groups.items()},
+        "undo": undo_preview(db),
+        "labels": {**swipe.LABELS, "undecided": "Neodločeno"},
+    }
+
+
+# --- bundle -----------------------------------------------------------------
 
 def snapshot(db):
     """One flat, chronological card list. The page derives the deck and the
@@ -52,8 +141,8 @@ def snapshot(db):
     for rows in swipe.decided(db).values():
         for event in rows:
             events.setdefault(event["event_id"], event)
-    cards = [server.card(event) for event in sorted(events.values(), key=swipe.sort_key)]
-    base = server.payload(db)
+    cards = [card(event) for event in sorted(events.values(), key=swipe.sort_key)]
+    base = payload(db)
     return {"clock": base["clock"], "labels": base["labels"], "cards": cards}
 
 
@@ -62,7 +151,6 @@ def mode_script(repo, branch, inbox, hide_inbox=HIDE_INBOX):
     target = {"owner": owner, "repo": name, "branch": branch, "inbox": inbox,
               "hide_inbox": hide_inbox}
     return ("/* Generated by app/build_static.py. Do not edit. */\n"
-            "window.SWIPE_MODE = 'static';\n"
             f"window.SWIPE_REPO = {json.dumps(target, ensure_ascii=False)};\n")
 
 

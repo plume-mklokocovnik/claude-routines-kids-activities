@@ -45,7 +45,7 @@ class BuildTests(unittest.TestCase):
                      "manifest.webmanifest", "icon-192.png", "icon-512.png"):
             with self.subTest(name=name):
                 self.assertTrue((self.out / name).is_file())
-        # The copied files are the served ones, so the bundle cannot drift.
+        # The copied files are the source ones, so the bundle cannot drift.
         for name in build_static.COPIED:
             self.assertEqual((self.out / name).read_bytes(),
                              (build_static.STATIC_DIR / name).read_bytes())
@@ -63,11 +63,10 @@ class BuildTests(unittest.TestCase):
         page = (self.out / "index.html").read_text(encoding="utf-8")
         self.assertIn('<link rel="manifest" href="manifest.webmanifest">', page)
 
-    def test_mode_script_marks_static_and_names_the_save_target(self):
+    def test_mode_script_names_the_save_target(self):
         build_static.build(self.path, self.out, repo="owner/name", branch="trunk",
                            inbox="inbox/patch.txt")
         text = (self.out / "mode.js").read_text(encoding="utf-8")
-        self.assertIn("window.SWIPE_MODE = 'static';", text)
         target = json.loads(text.split("window.SWIPE_REPO = ", 1)[1].rstrip(";\n"))
         self.assertEqual(target, {"owner": "owner", "repo": "name", "branch": "trunk",
                                   "inbox": "inbox/patch.txt", "hide_inbox": "inbox/hide"})
@@ -75,7 +74,6 @@ class BuildTests(unittest.TestCase):
     def test_missing_repository_still_builds_a_usable_bundle(self):
         build_static.build(self.path, self.out)
         text = (self.out / "mode.js").read_text(encoding="utf-8")
-        self.assertIn("'static'", text)
         self.assertIn('"owner": ""', text)
         self.assertTrue(self.snapshot()["cards"])
 

@@ -3,60 +3,23 @@
 A phone-sized browser app for sorting the discovered events into three
 categories, and for reviewing the result afterwards.
 
-```bash
-python3 app/server.py
-```
-
-Run it from the repository root. It serves <http://127.0.0.1:8765/> and opens a
-browser window. Nothing is installed, no package is needed and no request leaves
-the machine. Stop it with Ctrl+C.
-
-| Flag | Meaning |
-|---|---|
-| `--db PATH` | Use another database. Reports and run records stay beside it |
-| `--port N` | Listen on another port. Default `8765` |
-| `--host H` | Bind another address. Default `127.0.0.1`, which is this machine only |
-| `--no-browser` | Do not try to open a browser window |
-| `--verbose` | Log every request, not only the changes |
-
-## On the phone
-
-The card size is a phone viewport, but the server still runs on the computer
-that holds the database. To reach it from the phone, bind every interface:
+The app runs only as the published GitHub Pages site. There is no application
+server. To try a change before it is deployed, build the bundle and serve the
+files with Python's static file server:
 
 ```bash
-python3 app/server.py --host 0.0.0.0
+python3 app/build_static.py --out site && python3 -m http.server 8799 --directory site --bind 127.0.0.1
 ```
-
-It then prints the address to type into the phone browser:
-
-```
-Kids activities swipe app on http://127.0.0.1:8765/
-From a phone on the same network: http://192.168.1.24:8765/
-Warning: reachable beyond this machine. Anyone who can reach this port can change your decisions.
-```
-
-Both devices have to be on the same network, and the computer's firewall has to
-allow the port. If the printed address does not answer, the computer has more
-than one network interface and the phone is on the other one: use the address of
-the interface the phone shares, from `ip addr` or `ifconfig`.
-
-This opens the app to everyone on that network. There is no password, so treat
-it as a home-network convenience, not something to run on shared Wi-Fi. The
-default loopback bind is unreachable from other devices.
-
-The local server is plain HTTP, so a phone browser only makes a bookmark shortcut
-of it. The installable app is the published version below.
 
 ## Published version
 
-[pages.yml](../.github/workflows/pages.yml) publishes the same app to GitHub
-Pages on every change to `db.json` or `app/`, so it is reachable from anywhere
-without running anything:
+[pages.yml](../.github/workflows/pages.yml) publishes the app to GitHub Pages on
+every change to `db.json` or `app/`, so it is reachable from anywhere without
+running anything:
 
 <https://plume-mklokocovnik.github.io/claude-routines-kids-activities/>
 
-Pages serves files rather than processes, so that build has no Python and no
+Pages serves files rather than processes, so the build has no Python and no
 write access to the repository. It carries a baked snapshot of the database in
 `state.json` and stages decisions in the browser instead. A banner counts what
 is not yet in `db.json`, and **Shrani v GitHub** opens the GitHub editor with a
@@ -76,16 +39,15 @@ when nothing has changed.
 
 The published page is current, not live. It never reads `db.json` itself: the
 snapshot is rebuilt and redeployed whenever a change to `db.json` reaches
-`main`, which takes about a minute. The local server reads the file on every
-request.
+`main`, which takes about a minute.
 
 Three things follow from that design, all deliberate:
 
 - `db.json` stays the only record. The browser holds a staging area, and a
   decision is not saved until the workflow has written it.
 - Undo on the published version reaches back through the decisions that are
-  still unsaved. Once they are in the database, undo lives there, so use the
-  local app or `swipe.py undo`.
+  still unsaved. Once they are in the database, undo lives there, so use
+  `swipe.py undo`.
 - Saving needs write access to the repository, which is the only access control
   on this path. You are logged in as yourself in the GitHub editor, and the page
   itself holds no credential, so nothing in the published site can change the
@@ -116,13 +78,6 @@ The installed app opens without the address bar or browser menu. If it still
 shows browser bars, it is a shortcut, not an install. There is deliberately no
 service worker, so the page always loads the latest snapshot and works online
 only.
-
-Build it locally to see exactly what gets deployed:
-
-```bash
-python3 app/build_static.py --out site
-python3 -m http.server 8799 --directory site --bind 127.0.0.1
-```
 
 ## Deciding
 
@@ -157,10 +112,9 @@ category can be changed or cleared. Clearing returns it to the deck.
 
 ## Hiding every rejected event
 
-On the published page only, the **Zavrnjeno** list carries a round floating
-button with a crossed-out eye, at the bottom right. It is absent from the other
-lists, from an empty Zavrnjeno list and on the local server, which has no way to
-write to the repository.
+The **Zavrnjeno** list carries a round floating button with a crossed-out eye,
+at the bottom right. It is absent from the other
+lists and from an empty Zavrnjeno list.
 
 Tapping it opens a confirmation in Slovenian, **Skrijem vse zavrnjene?**, with the
 number of events in the list. It also counts any that are still unsaved, because
@@ -220,8 +174,7 @@ The top of the screen holds the four lists, and below them a block of figures
 about the current state: when the last sweep ran, the date its window ends, today
 in Ljubljana, how many events there are, how many are free, and how many past
 events the app is hiding. The last-run time and the window end come from the run
-record in the database, not from the clock. On the local server the block ends
-with **Ustavi strežnik**. The published page has no server, so it has no button.
+record in the database, not from the clock.
 
 Tap an event, or its title, to open a dialog with everything known about it:
 when and where, with a Maps link, the age, the full price text, the notes, the
@@ -253,17 +206,15 @@ The card's own height decides what it can show. When it runs short it drops the
 notes and the ID, then the links, in that order. The title, time, place, age and
 price are never dropped, and everything a card sheds is in the dialog.
 
-## Stopping and undoing
+## Undoing
 
-Every swipe is written to `db.json` before the next card appears, so the run can
-be abandoned at any point: close the tab, press Ctrl+C, or use the ⏻ Ustavi
-strežnik button at the top of Pregled, which stops the server from inside the app. Reopening continues with
-the remaining cards.
+A swipe is staged in the browser until it is saved, so the page can be closed at
+any point. Reopening continues with the remaining cards. The ↶ button and `Z`
+undo staged decisions only.
 
-Undo is not limited to the current session. Each change appends a row to the
-`decision_log` table, and undo reverses the newest row that has not been undone
-yet, restoring the previous category and its timestamp. Walking back through
-several wrong swipes therefore works after a restart as well. Nothing is
+Once a decision is in `db.json`, `swipe.py undo` reverses it. Each change appends
+a row to the `decision_log` table, and undo reverses the newest row that has not
+been undone yet, restoring the previous category and its timestamp. Nothing is
 deleted: an undone row stays as an audit trail, marked `undone`.
 
 ## What it writes, and what it leaves alone
@@ -280,9 +231,9 @@ changed from there. To take an event out of the app entirely, use the hide
 command in the [root README](../README.md#preferences), or the hide-all button
 described above.
 
-All state changes go through [scripts/swipe.py](../scripts/swipe.py), so the
-validation, the file lock and the atomic write are the same as on the command
-line. The two can be used interchangeably:
+Saved decisions reach `db.json` through [scripts/swipe.py](../scripts/swipe.py)
+`apply`, so the validation, the file lock and the atomic write are the same as on
+the command line. The two can be used interchangeably:
 
 ```bash
 python3 scripts/swipe.py stats
@@ -300,37 +251,20 @@ shown unshortened.
 
 | File | Purpose |
 |---|---|
-| `server.py` | Local HTTP server, JSON API and the card presenter |
-| `build_static.py` | Bakes `db.json` into the Pages bundle |
+| `build_static.py` | Card presenter. Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
 | `static/app.css` | Phone frame, card stack, direction gradients, edge glow |
-| `static/app.js` | Drag handling, keyboard, review lists, details dialog, the local backend |
-| `static/mode.js` | Which backend to use. The build overwrites it |
+| `static/app.js` | Drag handling, keyboard, review lists, details dialog, saving |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
-| `static/snapshot.js` | The published backend: the baked snapshot, staged decisions, the re-check and the hide list |
+| `static/snapshot.js` | The baked snapshot, staged decisions, the re-check and the hide list |
 
-One page and one renderer serve both modes. Two backends sit behind the same
-small interface: the local one, in `app.js`, is a round trip per decision, and the
-published one, in `snapshot.js`, reads the baked snapshot and stages changes in
-the browser. `mode.js` picks between them, so neither the markup nor the UI is
-duplicated.
+The build also writes `mode.js` (the repository the save link points at) and
+`state.json` into the bundle. Neither is kept in `static/`.
 
 The frame is 480 x 1040 CSS pixels, the viewport of a Samsung Galaxy S25 Ultra
 (1440 x 3120 hardware pixels at a 3x device ratio). On a narrow screen the frame
 drops away and the app fills the window, so the same page works when opened on
 the phone itself.
-
-## API
-
-`GET /api/state` returns the deck, the three groups, the counts and what undo
-would reverse. `POST /api/decide` takes `event_id` and `category`,
-`POST /api/clear` takes `event_id`, `POST /api/undo` takes no arguments and
-`POST /api/quit` stops the server. Every successful change answers with the full
-new state, so the page never has to guess what the database now holds.
-
-Writes from another site are refused, and the server binds to this machine only
-unless `--host` says otherwise. It is a single-user local tool with no
-authentication, so see the phone section above before exposing the port.
 
 ## Tests
 
@@ -344,7 +278,6 @@ python3 -m unittest discover -s tests -p test_snapshot.py -v
 
 All five are offline. `test_days.py` and `test_snapshot.py` run the real
 `days.js` and `snapshot.js` under Node and skip themselves when Node is missing.
-The API test binds an ephemeral loopback port and uses a temporary database.
 What the page draws, its layout and its gestures have no automated test: check a
-change against both modes by hand, with the server and with a locally served
-bundle, on a phone as well as a desktop window.
+change by hand in the locally served bundle, on a phone as well as a desktop
+window.

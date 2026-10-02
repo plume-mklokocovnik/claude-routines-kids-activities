@@ -90,19 +90,13 @@ python3 scripts/swipe.py stats
 also works in a later session. The same operations have a phone-sized browser
 UI, with swipe gestures for the three categories and a review list per category,
 plus one for everything still undecided. Tapping any event there opens all of its
-details:
-
-```bash
-python3 app/server.py
-```
-
-That app is also published to GitHub Pages, where it reads a baked snapshot and
+details. It is published to GitHub Pages, where it reads a baked snapshot and
 hands decisions back through the repository for `swipe.py apply` to write:
 
 <https://plume-mklokocovnik.github.io/claude-routines-kids-activities/>
 
-See [app/README.md](app/README.md) for gestures, keys, the local API, the
-published build and how saving from it works.
+See [app/README.md](app/README.md) for gestures, keys, the published build, how
+saving from it works and how to preview a change locally.
 
 ## Cloud Schedule
 
@@ -141,5 +135,4 @@ python3 -m unittest discover -s tests -p test_snapshot.py -v
 ```
 
 The complete offline suite is `python3 -m unittest discover -s tests -v`.
-Tests never mutate the repository database or contact event sources. The app
-test binds an ephemeral loopback port against a temporary database.
+Tests never mutate the repository database or contact event sources.
