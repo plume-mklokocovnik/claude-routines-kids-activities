@@ -550,7 +550,7 @@ function closeDetails() {
 }
 
 // One tap: the event goes to the chosen assistant. The text is also copied, so
-// an app that opens without it (Gemini has no prefill) only needs a paste.
+// an app that opens without it only needs a paste.
 // The navigation has to happen in the tap itself, before anything is awaited.
 function askAi(name, card) {
   const target = AskAi.TARGETS[name];
@@ -567,20 +567,8 @@ function askAi(name, card) {
   });
 }
 
-// The share sheet is the way into an app that ignores the links above. Sharing
-// needs the tap too, and the text is copied first for the app that drops it.
-function shareAi(card) {
-  const text = AskAi.prompt(card, placeText(card));
-  const copied = copyText(text);
-  navigator.share({ title: card.title, text }).catch((error) => {
-    if (error && error.name === 'AbortError') return;
-    copied.then((ok) => toast(ok ? 'Deljenje ni uspelo. Besedilo je kopirano.' : 'Deljenje ni uspelo.', true));
-  });
-}
-
 function wireDetails() {
   const overlay = el('details');
-  el('ai-share').hidden = !AskAi.canShare(navigator);
   // A drag that starts inside the dialog and ends outside it, such as selecting
   // text, would otherwise click the backdrop and close it.
   overlay.addEventListener('pointerdown', (event) => { dialog.pressedBackdrop = event.target === overlay; });
@@ -593,7 +581,6 @@ function wireDetails() {
   el('sheet').addEventListener('click', (event) => {
     const button = event.target.closest('[data-ai]');
     if (button && dialog.card) askAi(button.dataset.ai, dialog.card);
-    if (event.target.closest('[data-share]') && dialog.card) shareAi(dialog.card);
   });
   window.addEventListener('popstate', () => { dialog.pushed = false; hideDetails(); });
 

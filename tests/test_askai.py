@@ -72,22 +72,12 @@ class AskAiTests(unittest.TestCase):
         self.assertTrue(fallback.startswith("https://claude.ai/new?q="))
         self.assertEqual(parse_qs(urlsplit(fallback).query)["q"], [text])
 
-    def test_intent_url_without_a_prefill_still_names_the_app(self):
-        url = evaluate("AskAi.intentUrl('gemini', 'hi')")
-        self.assertTrue(url.startswith("intent://gemini.google.com/app#Intent;scheme=https;"))
-        self.assertIn("package=com.google.android.apps.bard;", url)
-
-    def test_sharing_needs_the_share_function(self):
-        self.assertTrue(evaluate("AskAi.canShare({ share() {} })"))
-        self.assertFalse(evaluate("AskAi.canShare({})"))
-        self.assertFalse(evaluate("AskAi.canShare(undefined)"))
-
     def test_each_assistant_has_its_own_package_and_web_page(self):
         found = evaluate("Object.fromEntries(Object.entries(AskAi.TARGETS)"
                          ".map(([k, t]) => [k, [t.pkg, t.web('hi there')]]))")
         self.assertEqual(found["chatgpt"], ["com.openai.chatgpt", "https://chatgpt.com/?hints=search&q=hi%20there"])
         self.assertEqual(found["claude"], ["com.anthropic.claude", "https://claude.ai/new?q=hi%20there"])
-        self.assertEqual(found["gemini"], ["com.google.android.apps.bard", "https://gemini.google.com/app"])
+        self.assertEqual(sorted(found), ["chatgpt", "claude"])
 
     def test_android_is_told_from_the_user_agent(self):
         self.assertTrue(evaluate("AskAi.isAndroid('Mozilla/5.0 (Linux; Android 16; SM-S938B) Chrome/140')"))

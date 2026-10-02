@@ -24,13 +24,6 @@
       pkg: 'com.anthropic.claude',
       web: (text) => `https://claude.ai/new?q=${encodeURIComponent(text)}`,
     },
-    gemini: {
-      label: 'Gemini',
-      pkg: 'com.google.android.apps.bard',
-      // Gemini has no documented way to prefill a prompt, so the web page opens
-      // empty and the copied text is pasted in.
-      web: () => 'https://gemini.google.com/app',
-    },
   };
 
   const INTRO = [
@@ -78,17 +71,11 @@
       + `S.browser_fallback_url=${encodeURIComponent(web.href)};end`;
   }
 
-  // The system share sheet lists every installed app that takes text, so it
-  // reaches an assistant whatever its app does with links.
-  function canShare(nav) {
-    return Boolean(nav) && typeof nav.share === 'function';
-  }
-
   function isAndroid(userAgent) {
     return /\bAndroid\b/i.test(userAgent || '');
   }
 
-  const api = { TARGETS, prompt, webUrl, intentUrl, canShare, isAndroid };
+  const api = { TARGETS, prompt, webUrl, intentUrl, isAndroid };
   root.AskAi = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 }(typeof window !== 'undefined' ? window : globalThis));
