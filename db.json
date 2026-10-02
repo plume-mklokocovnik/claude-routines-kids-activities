@@ -1436,7 +1436,7 @@
       "url": "https://www.kinodvor.org/film/miska-gre-na-goro/",
       "flags": [],
       "event_id": "event_20261017_1000_584874fd18da",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1470,7 +1470,7 @@
       "url": "https://www.kinodvor.org/film/miska-gre-na-goro/",
       "flags": [],
       "event_id": "event_20261024_1000_31b8acdbf3f9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1504,7 +1504,7 @@
       "url": "https://www.kinodvor.org/film/miska-gre-na-goro/",
       "flags": [],
       "event_id": "event_20261031_0900_7e5b25dffbad",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2727,7 +2727,8 @@
       ],
       "exclude_venues": [],
       "exclude_keywords": [
-        "Kinobalon 'Prvič v kino': Miška gre na goro"
+        "Kinobalon 'Prvič v kino': Miška gre na goro",
+        "Kinobalon: Miška gre na goro"
       ],
       "exclude_categories": [],
       "force_include_urls": [],
@@ -2737,7 +2738,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-10-01T09:05:53+02:00",
-      "total_active_events": 149,
+      "total_active_events": 146,
       "latest_run": "20261001T070553Z_56e70032"
     }
   },
@@ -3269,6 +3270,18 @@
       "url": "https://fatburn.si/celjski-mali-maraton/",
       "reason": "not interested",
       "hidden_at": "2026-09-25T11:40:57Z"
+    },
+    "45": {
+      "match": "Kinobalon: Miška gre na goro",
+      "scope": "series",
+      "rule_field": "exclude_keywords",
+      "event_id": "event_20261017_1000_584874fd18da",
+      "title": "Kinobalon: Miška gre na goro",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-17T10:00:00+02:00",
+      "url": "https://www.kinodvor.org/film/miska-gre-na-goro/",
+      "reason": "Kinobalon: Miška gre na goro hidden on request",
+      "hidden_at": "2026-10-02T11:40:05Z"
     }
   },
   "decision_log": {
