@@ -7,6 +7,7 @@
 - For interested/maybe/rejected requests, use [scripts/swipe.py](scripts/swipe.py).
   Its browser UI is [app/](app/README.md).
 - For code changes, read the owning script and its matching test first.
+- Skills live in `.agents/skills/`. `.claude/skills` is a symlink to it for Claude Code.
 - Load [reference files](reference/README.md) only for the current discovery pass.
 
 ## Invariants

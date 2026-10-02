@@ -22,14 +22,18 @@ class DocumentationTests(unittest.TestCase):
                     self.assertTrue((path.parent / unquote(parsed.path)).exists())
 
     def test_skills_have_discoverable_frontmatter(self):
-        for folder in (".claude", ".agents"):
-            for path in (ROOT / folder).rglob("SKILL.md"):
-                content = path.read_text(encoding="utf-8")
-                with self.subTest(path=path):
-                    self.assertTrue(content.startswith("---\n"))
-                    header = content.split("---", 2)[1]
-                    self.assertIn(f"name: {path.parent.name}\n", header)
-                    self.assertRegex(header, r"\ndescription: .+")
+        for path in (ROOT / ".agents" / "skills").rglob("SKILL.md"):
+            content = path.read_text(encoding="utf-8")
+            with self.subTest(path=path):
+                self.assertTrue(content.startswith("---\n"))
+                header = content.split("---", 2)[1]
+                self.assertIn(f"name: {path.parent.name}\n", header)
+                self.assertRegex(header, r"\ndescription: .+")
+
+    def test_claude_skills_point_at_agents_skills(self):
+        link = ROOT / ".claude" / "skills"
+        self.assertTrue(link.is_symlink())
+        self.assertEqual(link.resolve(), (ROOT / ".agents" / "skills").resolve())
 
 
 if __name__ == "__main__":
