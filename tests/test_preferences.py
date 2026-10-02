@@ -158,5 +158,66 @@ class HideFromAppTests(unittest.TestCase):
         self.assertEqual(self.path.read_bytes(), before)
 
 
+class HideExpiredTests(unittest.TestCase):
+    """`hide_event.py expired`: the nightly sweep of events a run already expired."""
+
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        self.path = Path(self.directory.name) / "db.json"
+        self.db = database()
+        self.db["events"]["2"] = event(event_id="gone", title="Old show", status="expired",
+                                       decision="maybe", decided_at="2026-09-30T08:00:00Z",
+                                       start_time="2026-09-01T10:00:00+02:00")
+        self.db["events"]["3"] = event(event_id="gone_too", title="Older show", status="expired",
+                                       start_time="2026-08-01T10:00:00+02:00")
+        state.save(self.path, self.db)
+        output = contextlib.redirect_stdout(io.StringIO())
+        output.__enter__()
+        self.addCleanup(output.__exit__, None, None, None)
+
+    def run_expired(self):
+        return hide_event.cmd_expired(Namespace(db=str(self.path), reason=hide_event.EXPIRED_REASON))
+
+    def test_every_expired_event_is_hidden_by_id_with_the_reason_expired(self):
+        self.assertEqual(self.run_expired(), 0)
+        stored = state.load(self.path)
+        self.assertEqual(stored["user_rules"]["1"]["exclude_event_ids"], ["gone", "gone_too"])
+        self.assertNotIn("exclude_keywords", stored["user_rules"]["1"])
+        self.assertNotIn("exclude_venues", stored["user_rules"]["1"])
+        references = list(stored["hidden_events"].values())
+        self.assertEqual({(item["scope"], item["event_id"], item["reason"]) for item in references},
+                         {("event", "gone", "expired"), ("event", "gone_too", "expired")})
+
+    def test_active_events_are_left_alone_and_expired_rows_are_kept_whole(self):
+        self.run_expired()
+        stored = state.load(self.path)
+        self.assertEqual(stored["events"]["1"], self.db["events"]["1"])
+        self.assertEqual(stored["events"]["2"], self.db["events"]["2"])
+        self.assertEqual(stored["events"]["2"]["decision"], "maybe")
+
+    def test_running_it_again_changes_nothing(self):
+        self.run_expired()
+        before = self.path.read_bytes()
+        self.run_expired()
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_with_nothing_expired_the_database_is_untouched(self):
+        for key in ("2", "3"):
+            del self.db["events"][key]
+        state.save(self.path, self.db)
+        before = self.path.read_bytes()
+        self.assertEqual(self.run_expired(), 0)
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_an_expired_event_already_hidden_is_not_hidden_twice(self):
+        hide_event.hide_ids(self.db, ["gone"], "earlier")
+        state.save(self.path, self.db)
+        self.run_expired()
+        stored = state.load(self.path)
+        self.assertEqual([item["event_id"] for item in stored["hidden_events"].values()
+                          if item["reason"] == "expired"], ["gone_too"])
+
+
 if __name__ == "__main__":
     unittest.main()

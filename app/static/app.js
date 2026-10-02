@@ -104,14 +104,12 @@ function isoToSi(iso) {
 // The facts about the data that the deck has no room for: when the last sweep
 // ran, how far it looks ahead, what today is and how much is left out.
 function renderStats() {
-  const { clock, counts, free, past, today } = st.data;
+  const { clock, counts, free, today } = st.data;
   el('st-run').textContent = `${clock.date} ${clock.time}`;
   el('st-window').textContent = clock.horizon;
   el('st-today').textContent = isoToSi(today);
   el('st-total').textContent = String(counts.total);
-  el('st-free').textContent = String(free);
-  el('st-past').textContent = String(past);
-}
+  el('st-free').textContent = String(free);}
 
 function pendingPhrase(count) {
   const tail = count % 100;

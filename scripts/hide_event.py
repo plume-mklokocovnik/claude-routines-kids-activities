@@ -10,6 +10,7 @@ so the event is not re-discovered, not re-saved and not re-listed.
     python3 scripts/hide_event.py unhide <query>
     python3 scripts/hide_event.py list
     python3 scripts/hide_event.py apply <patch-file> [--reason "..."]
+    python3 scripts/hide_event.py expired [--reason "..."]
 
 <query> is an `event_id` or a case-insensitive fragment of the title. An
 ambiguous fragment lists the candidates and changes nothing.
@@ -19,6 +20,11 @@ is one exact `event_id` per line, and `#` comments and blank lines are ignored.
 Each ID is hidden with the `event` scope only, so no series or venue rule is
 written. The default reason is "hidden from the app". An ID already hidden is
 left alone, and an ID that is not in the database is reported and skipped.
+
+`expired` hides every event whose stored status is `expired`, the same way and
+with the reason "expired". It reads the status a sweep wrote and never the wall
+clock, so an event the sweep has not yet expired is left alone. The scheduled
+workflow runs it nightly.
 """
 
 import argparse
@@ -34,6 +40,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
 
 APP_REASON = "hidden from the app"
+EXPIRED_REASON = "expired"
 
 RULE_FIELD = {
     "event": "exclude_event_ids",
@@ -133,6 +140,27 @@ def cmd_apply(args):
               f"not a guess:", file=sys.stderr)
         for event_id in unknown:
             print(f"  {event_id}", file=sys.stderr)
+    return 0
+
+
+def expired_ids(db):
+    """IDs of events a sweep has marked expired and that nothing hides yet."""
+    return sorted(event["event_id"] for event in db.get("events", {}).values()
+                  if event.get("status") == "expired" and not state.hidden_reason(db, event))
+
+
+def cmd_expired(args):
+    db = load(args.db)
+    ids = expired_ids(db)
+    if not ids:
+        print("No expired event is left to hide. Nothing changed.")
+        return 0
+    hidden, _, _ = hide_ids(db, ids, args.reason)
+    if hidden:
+        save(args.db, db)
+    print(f"Hidden {len(hidden)} expired event(s).")
+    for event_id in hidden:
+        print(f"  - {event_id}")
     return 0
 
 
@@ -261,6 +289,10 @@ def main():
     applier.add_argument("patch")
     applier.add_argument("--reason", default=APP_REASON)
     applier.set_defaults(func=cmd_apply)
+
+    expire = sub.add_parser("expired", help="hide every event whose stored status is expired")
+    expire.add_argument("--reason", default=EXPIRED_REASON)
+    expire.set_defaults(func=cmd_expired)
 
     args = parser.parse_args()
     try:

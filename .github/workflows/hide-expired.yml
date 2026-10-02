@@ -1,0 +1,88 @@
+name: Hide expired events
+
+# Every night at midnight in Ljubljana this hides each event that a sweep has
+# already marked expired, by its exact ID and with the reason "expired", using
+# scripts/hide_event.py. It reads the stored status and never the wall clock, so
+# an event the sweep has not yet expired is left for a later night. Rows, their
+# decisions and their categories are kept. Then it republishes the site.
+#
+# Cron runs in UTC and Ljubljana is UTC+1 or UTC+2, so two schedules are listed
+# and the first step lets only the one that lands in the midnight hour continue.
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hide-events
+  cancel-in-progress: false
+
+jobs:
+  hide:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.hide.outputs.changed }}
+    steps:
+      - name: Continue only at midnight in Ljubljana
+        id: gate
+        run: |
+          hour=$(TZ=Europe/Ljubljana date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$hour" != "00" ]; then
+            echo "It is hour $hour in Ljubljana, not midnight. Skipping."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.go == 'true'
+        with:
+          ref: main
+      - uses: actions/setup-python@v7
+        if: steps.gate.outputs.go == 'true'
+        with:
+          python-version: "3.13"
+
+      - name: Hide every expired event
+        id: hide
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          set -euo pipefail
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            python3 scripts/hide_event.py expired
+            python3 scripts/run.py check
+            git add -A
+            if git diff --cached --quiet; then
+              echo "Nothing changed."
+              exit 0
+            fi
+            git commit -m "chore: Hide expired events"
+            if git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            # A rejected push means another run landed first. A database
+            # conflict is never merged as text. Start again from the fresh tip.
+            echo "Push rejected on attempt $attempt. Hiding again from the fresh database."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "::error::Could not push after 3 attempts."
+          exit 1
+
+  publish:
+    needs: hide
+    if: needs.hide.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml

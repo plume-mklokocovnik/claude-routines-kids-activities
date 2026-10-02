@@ -78,7 +78,8 @@ class DaysTests(unittest.TestCase):
                                          "undecided": 2, "decided": 1, "total": 3})
         self.assertEqual(got["today"], "2026-09-30")
         # Three of the six were before today. Of the three left, two are free.
-        self.assertEqual((got["past"], got["free"]), (3, 2))
+        self.assertEqual(got["free"], 2)
+        self.assertNotIn("past", got)
         # Everything else is passed through untouched.
         self.assertEqual(got["undo"], data["undo"])
         self.assertEqual(got["labels"], data["labels"])

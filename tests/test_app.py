@@ -142,7 +142,7 @@ class ClientContractTests(unittest.TestCase):
     def test_pregled_opens_with_statistics_and_there_is_no_stop_button(self):
         stats = re.search(r'<section class="stats".*?</section>', self.markup, re.S)
         self.assertIsNotNone(stats)
-        for identifier in ("st-run", "st-window", "st-today", "st-total", "st-free", "st-past"):
+        for identifier in ("st-run", "st-window", "st-today", "st-total", "st-free"):
             with self.subTest(identifier=identifier):
                 self.assertIn(f'id="{identifier}"', stats.group(0))
         self.assertLess(self.markup.index('id="list"'), self.markup.index('id="rows"'))

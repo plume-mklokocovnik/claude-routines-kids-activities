@@ -172,9 +172,8 @@ app loads. There is no generated file to keep in step with it.
 
 The top of the screen holds the four lists, and below them a block of figures
 about the current state: when the last sweep ran, the date its window ends, today
-in Ljubljana, how many events there are, how many are free, and how many past
-events the app is hiding. The last-run time and the window end come from the run
-record in the database, not from the clock.
+in Ljubljana, how many events there are and how many are free. The last-run time
+and the window end come from the run record in the database, not from the clock.
 
 Tap an event, or its title, to open a dialog with everything known about it:
 when and where, with a Maps link, the age, the full price text, the notes, the
