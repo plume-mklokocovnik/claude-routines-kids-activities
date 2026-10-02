@@ -26,6 +26,7 @@ let watchUntil = 0;  // until when to keep looking for the rebuilt snapshot afte
 const st = {
   raw: null, data: null, view: 'swipe', seg: 'interested',
   busy: false, dragging: false, stopped: false,
+  hiding: [],  // events handed to GitHub to be hidden, until the snapshot drops them
 };
 
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
@@ -265,10 +266,20 @@ function buildRow(card) {
   return node;
 }
 
+// The button hides every event in the Zavrnjeno list. Writing needs the
+// repository, so it only exists in the published build, on that list.
+function renderFab() {
+  const shown = !store.live && st.view === 'review' && st.seg === 'rejected'
+    && Boolean(st.data) && st.data.groups.rejected.length > 0;
+  el('hide-fab').hidden = !shown;
+  el('list').classList.toggle('has-fab', shown);
+}
+
 function renderList() {
   document.querySelectorAll('.seg').forEach((seg) => {
     seg.classList.toggle('is-on', seg.dataset.seg === st.seg);
   });
+  renderFab();
   list.textContent = '';
   const rows = st.seg === 'undecided' ? st.data.deck : (st.data.groups[st.seg] || []);
   if (!rows.length) {
@@ -599,11 +610,11 @@ function wireDetails() {
 
 /* --- saving from the static build --------------------------------------- */
 
-function editorUrl(patch) {
+function editorUrl(patch, file) {
   const repo = window.SWIPE_REPO;
   if (!repo || !repo.owner || !repo.repo) return null;
   const base = `https://github.com/${repo.owner}/${repo.repo}/new/${repo.branch || 'main'}`;
-  const name = `?filename=${encodeURIComponent(repo.inbox || 'inbox/decisions.txt')}`;
+  const name = `?filename=${encodeURIComponent(file || repo.inbox || 'inbox/decisions.txt')}`;
   const full = `${base}${name}&value=${encodeURIComponent(patch)}`;
   return full.length <= URL_BUDGET ? full : `${base}${name}`;
 }
@@ -645,26 +656,133 @@ function idButton(id) {
   return node;
 }
 
-async function save() {
-  if (!store.pending) return;
-  const { count, patch } = store.pending();
-  if (!count) return;
-  const url = editorUrl(patch);
+// Open the GitHub editor with the patch prefilled, then show the screen that
+// says what to click. False when the repository is unknown and the patch was
+// only copied.
+async function handOff(patch, file, screen, words) {
+  const url = editorUrl(patch, file);
   if (!url) {
     const copied = await copyText(patch);
-    toast(copied ? 'Odločitve so kopirane. Prilepi jih v repo.'
+    toast(copied ? `${words.copied} Prilepi jih v repo.`
       : 'Repozitorij ni znan. Uporabi gumb za kopiranje.', true);
-    return;
+    return false;
   }
   // A link without the content prefilled means the batch outgrew the URL.
   if (!url.includes('&value=')) {
     const copied = await copyText(patch);
-    toast(copied ? 'Preveč odločitev za povezavo. Prilepi jih v urejevalnik.'
-      : 'Preveč odločitev za povezavo. Uporabi gumb za kopiranje.', true);
+    toast(copied ? `${words.tooMany} Prilepi jih v urejevalnik.`
+      : `${words.tooMany} Uporabi gumb za kopiranje.`, true);
   }
   window.open(url, '_blank', 'noopener');
-  el('handoff').hidden = false;
+  el(screen).hidden = false;
   watchUntil = Date.now() + WATCH_MS;
+  return true;
+}
+
+async function save() {
+  if (!store.pending) return;
+  const { count, patch } = store.pending();
+  if (!count) return;
+  await handOff(patch, null, 'handoff', {
+    copied: 'Odločitve so kopirane.', tooMany: 'Preveč odločitev za povezavo.',
+  });
+}
+
+/* --- hiding every rejected event (static build only) --------------------- */
+
+const confirmation = { open: false, pushed: false, pressedBackdrop: false };
+
+function rejectedIds() {
+  return st.data ? st.data.groups.rejected.map((card) => card.event_id) : [];
+}
+
+function openConfirm() {
+  if (confirmation.open || dialog.open || store.live || st.busy) return;
+  const rows = st.data.groups.rejected;
+  if (!rows.length) return;
+  const unsaved = rows.filter((card) => card.unsaved).length;
+  el('hide-count').textContent = String(rows.length);
+  const note = el('hide-unsaved');
+  note.hidden = unsaved === 0;
+  note.textContent = unsaved ? `Od tega neshranjenih: ${unsaved}. Skrijejo se vseeno.` : '';
+  confirmation.open = true;
+  confirmation.pressedBackdrop = false;
+  el('hide-confirm').hidden = false;
+  document.querySelectorAll(BEHIND).forEach((node) => { node.inert = true; });
+  try {
+    history.pushState({ confirm: true }, '');
+    confirmation.pushed = true;
+  } catch (error) {
+    confirmation.pushed = false;
+  }
+  el('hide-cancel').focus({ preventScroll: true });
+}
+
+function hideConfirm() {
+  if (!confirmation.open) return;
+  confirmation.open = false;
+  el('hide-confirm').hidden = true;
+  document.querySelectorAll(BEHIND).forEach((node) => { node.inert = false; });
+  if (!el('hide-fab').hidden) el('hide-fab').focus({ preventScroll: true });
+}
+
+function closeConfirm() {
+  if (!confirmation.open) return;
+  hideConfirm();
+  if (confirmation.pushed && history.state && history.state.confirm) {
+    confirmation.pushed = false;
+    history.back();
+  }
+}
+
+async function confirmHide() {
+  const ids = rejectedIds();
+  closeConfirm();
+  if (!ids.length) return;
+  const { patch, name } = Snapshot.hidePatch(ids);
+  const repo = window.SWIPE_REPO || {};
+  const folder = (repo.hide_inbox || 'inbox/hide').replace(/\/+$/, '');
+  const opened = await handOff(patch, `${folder}/${name}`, 'hide-handoff', {
+    copied: 'ID-ji so kopirani.', tooMany: 'Preveč dogodkov za povezavo.',
+  });
+  if (opened) st.hiding = ids;
+}
+
+function wireConfirm() {
+  const overlay = el('hide-confirm');
+  el('hide-fab').addEventListener('click', openConfirm);
+  el('hide-cancel').addEventListener('click', closeConfirm);
+  el('hide-ok').addEventListener('click', confirmHide);
+  el('hide-handoff-close').addEventListener('click', () => { el('hide-handoff').hidden = true; });
+  overlay.addEventListener('pointerdown', (event) => { confirmation.pressedBackdrop = event.target === overlay; });
+  overlay.addEventListener('click', (event) => {
+    const close = event.target === overlay && confirmation.pressedBackdrop;
+    confirmation.pressedBackdrop = false;
+    if (close) closeConfirm();
+  });
+  window.addEventListener('popstate', () => { confirmation.pushed = false; hideConfirm(); });
+
+  overlay.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const items = [...el('hide-sheet').querySelectorAll('button')];
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
+// Which of the events handed over are still in the snapshot. Once none is, the
+// database has hidden them and there is nothing left to wait for.
+function stillListed(ids) {
+  const shown = new Set(st.raw.deck.map((card) => card.event_id));
+  Object.values(st.raw.groups).forEach((rows) => rows.forEach((card) => shown.add(card.event_id)));
+  return ids.filter((id) => shown.has(id));
 }
 
 /* --- waiting for the rebuilt snapshot ----------------------------------- */
@@ -672,11 +790,13 @@ async function save() {
 // Look for a newer snapshot and redraw only if there is one. Never while a card
 // is being dragged or a dialog is open, since redrawing would pull them away.
 async function checkSnapshot() {
-  if (!store.poll || !st.raw || st.busy || st.dragging || dialog.open || document.hidden) return;
+  if (!store.poll || !st.raw || st.busy || st.dragging || dialog.open || confirmation.open
+    || document.hidden) return;
   try {
     const data = await store.poll();
     if (data) {
       setData(data);
+      if (st.hiding.length) st.hiding = stillListed(st.hiding);
       render();
     }
   } catch (error) {
@@ -684,9 +804,15 @@ async function checkSnapshot() {
   }
 }
 
+// Something is still on its way into the database: a staged decision, or events
+// handed to GitHub to be hidden.
+function awaitingGithub() {
+  return Boolean(st.hiding.length || (store.pending && store.pending().count));
+}
+
 function watchForSnapshot() {
   setInterval(() => {
-    if (Date.now() < watchUntil && store.pending && store.pending().count) checkSnapshot();
+    if (Date.now() < watchUntil && awaitingGithub()) checkSnapshot();
   }, POLL_MS);
 }
 
@@ -711,6 +837,7 @@ function setView(name) {
   document.querySelectorAll('.tab').forEach((tab) => {
     tab.classList.toggle('is-on', tab.dataset.view === name);
   });
+  renderFab();
 }
 
 function wire() {
@@ -746,12 +873,13 @@ function wire() {
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
 
   wireDetails();
+  wireConfirm();
 
   // Coming back to the app on a later day must not keep showing yesterday's events.
   document.addEventListener('visibilitychange', () => {
     if (document.hidden || !st.raw || st.busy) return;
     // Back from the GitHub tab: the rebuilt snapshot may be ready by now.
-    if (store.pending && store.pending().count) checkSnapshot();
+    if (awaitingGithub()) checkSnapshot();
     if (Days.today() !== st.data.today) {
       setData(st.raw);
       render();
@@ -759,6 +887,10 @@ function wire() {
   });
 
   document.addEventListener('keydown', (event) => {
+    if (confirmation.open) {
+      if (event.key === 'Escape') { event.preventDefault(); closeConfirm(); }
+      return;
+    }
     if (dialog.open) {
       if (event.key === 'Escape') { event.preventDefault(); closeDetails(); }
       return;
@@ -778,7 +910,7 @@ function wire() {
 // A reload with the dialog open leaves its history entry behind. Drop the
 // marker, so the first back gesture is not spent on a dialog that is not there.
 try {
-  if (history.state && history.state.details) history.replaceState(null, '');
+  if (history.state && (history.state.details || history.state.confirm)) history.replaceState(null, '');
 } catch (error) { /* history is optional */ }
 
 wire();

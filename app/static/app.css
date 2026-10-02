@@ -856,6 +856,81 @@ html, body {
 @keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes sheet-rise { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
 
+/* --- hide all rejected (static build only) ------------------------------ */
+
+.fab {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  z-index: 4;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid #7a2a3a;
+  background: #3a1820;
+  color: #ffa6b6;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .55), 0 0 0 4px rgba(11, 14, 19, .6);
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.fab[hidden] { display: none; }
+.fab:hover { background: #4a1f29; }
+.fab:active { transform: scale(.94); }
+.fab:focus-visible, .confirm-btn:focus-visible { outline: 2px solid #6d8fd6; outline-offset: 2px; }
+
+.fab svg, .confirm-mark svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Keeps the last row's buttons clear of the floating button. */
+.list.has-fab { padding-bottom: 88px; }
+
+.sheet.confirm { max-width: 380px; }
+.confirm-body { padding: 26px 22px 20px; text-align: center; }
+
+.confirm-mark {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #7a2a3a;
+  background: #3a1820;
+  color: #ffa6b6;
+}
+
+.confirm-title { margin: 0 0 10px; font-size: 21px; font-weight: 750; letter-spacing: -.2px; }
+.confirm-body p { margin: 0 0 8px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.confirm-body p b { color: var(--text); }
+.confirm-body .confirm-note { color: #f0d79a; font-size: 12.5px; }
+.confirm-body .confirm-note[hidden] { display: none; }
+.confirm-actions { display: flex; gap: 10px; margin-top: 18px; }
+
+.confirm-btn {
+  flex: 1;
+  padding: 12px 10px;
+  border-radius: 14px;
+  border: 1px solid #3a4a68;
+  background: #1d2a41;
+  color: #cfe0ff;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.confirm-danger { border-color: #7a2a3a; background: #5a1f2c; color: #ffd3dc; }
+
 .curtain {
   position: absolute;
   inset: 0;
@@ -902,4 +977,5 @@ html, body {
   .card, .glow-layer, .progress-fill, .toast { transition: none; }
   .card.is-returning { animation: none; }
   .modal, .sheet { animation: none; }
+  .fab { transition: none; }
 }

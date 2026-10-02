@@ -56,7 +56,13 @@ python3 scripts/hide_event.py hide <event_id> --scope series
 python3 scripts/hide_event.py hide <event_id> --scope venue
 python3 scripts/hide_event.py unhide <event_id>
 python3 scripts/hide_event.py list
+python3 scripts/hide_event.py apply <patch-file>
 ```
+
+`apply` hides every event ID listed in a file, one per line, each as a single
+event with the reason `hidden from the app`. The published app uses it for its
+hide-all-Zavrnjeno button, through [inbox/](inbox/README.md). A hidden event
+leaves every list and count in the app, and its category is kept.
 
 Each command updates the database atomically. A hide retains the complete event record. An unhide removes the exclusion
 and restores retained records as of the last sweep clock. Old hidden references
@@ -113,7 +119,8 @@ local conversation memory or provider-specific SDK is required. The cloud agent
 does research. The scripts validate and apply its structured results.
 
 The included GitHub Actions workflows validate changes and report consistency,
-publish the app to Pages, and apply decision patches committed into `inbox/`.
+publish the app to Pages, apply decision patches committed into `inbox/` and
+hide the event lists committed into `inbox/hide/`.
 None of them discovers events or installs a cloud schedule. Scheduling and
 write credentials remain with the existing cloud runtime. Direct pushes or PRs
 follow that runtime's explicit permissions, never an automatic protection bypass.

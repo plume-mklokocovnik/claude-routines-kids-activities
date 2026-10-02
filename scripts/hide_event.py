@@ -9,9 +9,16 @@ so the event is not re-discovered, not re-saved and not re-listed.
     python3 scripts/hide_event.py hide <query> [--scope event|series|venue] [--reason "..."]
     python3 scripts/hide_event.py unhide <query>
     python3 scripts/hide_event.py list
+    python3 scripts/hide_event.py apply <patch-file> [--reason "..."]
 
 <query> is an `event_id` or a case-insensitive fragment of the title. An
 ambiguous fragment lists the candidates and changes nothing.
+
+`apply` hides a batch chosen in the app, such as every Zavrnjeno event. The patch
+is one exact `event_id` per line, and `#` comments and blank lines are ignored.
+Each ID is hidden with the `event` scope only, so no series or venue rule is
+written. The default reason is "hidden from the app". An ID already hidden is
+left alone, and an ID that is not in the database is reported and skipped.
 """
 
 import argparse
@@ -25,6 +32,8 @@ from state import find, load, next_key, save
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "db.json")
+
+APP_REASON = "hidden from the app"
 
 RULE_FIELD = {
     "event": "exclude_event_ids",
@@ -40,6 +49,91 @@ def rules(db):
 def describe(event):
     return (f"{event.get('event_id')}  {event.get('start_time', '?')[:16]}  "
             f"{event.get('title')} @ {event.get('venue')}")
+
+
+def record_hide(db, seed, removed, scope, match_value, reason):
+    """Write the three-table hide: the rule, the hidden status and the reference."""
+    field = RULE_FIELD[scope]
+    rule_list = rules(db).setdefault(field, [])
+    if match_value not in rule_list:
+        rule_list.append(match_value)
+
+    for _, event in removed:
+        if event.get("status", "active") == "active":
+            event["status"] = "hidden"
+
+    hidden = db.setdefault("hidden_events", {})
+    already = [h for h in hidden.values() if h.get("match") == match_value
+               and h.get("scope") == scope and h.get("active", True)]
+    if not already:
+        hidden[next_key(hidden)] = {
+            "match": match_value,
+            "scope": scope,
+            "rule_field": field,
+            "event_id": seed.get("event_id"),
+            "title": seed.get("title"),
+            "venue": seed.get("venue"),
+            "start_time": seed.get("start_time"),
+            "url": seed.get("url"),
+            "reason": reason,
+            "hidden_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }
+
+
+def parse_ids(text):
+    """Read a patch of event IDs, one per line. Blank lines and `#` comments are
+    ignored. A line holding anything but one ID is refused, never guessed at."""
+    ids = []
+    for number, raw in enumerate(text.splitlines(), start=1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if any(char.isspace() for char in line) or ":" in line:
+            raise ValueError(f"Line {number}: expected one event_id, got {raw!r}")
+        if line not in ids:
+            ids.append(line)
+    return ids
+
+
+def hide_ids(db, ids, reason):
+    """Hide each event by its exact ID and the event scope only, never a series or
+    a venue. Returns (hidden, already_hidden, unknown) lists of IDs."""
+    hidden, already, unknown = [], [], []
+    for event_id in ids:
+        event = next((item for item in db.get("events", {}).values()
+                      if item.get("event_id") == event_id), None)
+        if event is None:
+            unknown.append(event_id)
+        elif event.get("status") == "hidden" or state.hidden_reason(db, event):
+            already.append(event_id)
+        else:
+            record_hide(db, event, [(None, event)], "event", event_id, reason)
+            hidden.append(event_id)
+    return hidden, already, unknown
+
+
+def cmd_apply(args):
+    with open(args.patch, encoding="utf-8") as handle:
+        ids = parse_ids(handle.read())
+    if not ids:
+        print(f"{args.patch} lists no events. Nothing changed.")
+        return 0
+
+    db = load(args.db)
+    hidden, already, unknown = hide_ids(db, ids, args.reason)
+    if hidden:
+        save(args.db, db)
+
+    print(f"Hidden {len(hidden)} event(s) from {args.patch}, "
+          f"{len(already)} were already hidden.")
+    for event_id in hidden:
+        print(f"  - {event_id}")
+    if unknown:
+        print(f"Skipped {len(unknown)} unknown event ID(s). These need a sweep, "
+              f"not a guess:", file=sys.stderr)
+        for event_id in unknown:
+            print(f"  {event_id}", file=sys.stderr)
+    return 0
 
 
 def cmd_hide(args):
@@ -79,30 +173,7 @@ def cmd_hide(args):
                    if (e.get("venue") or "") == match_value]
 
     field = RULE_FIELD[args.scope]
-    rule_list = rules(db).setdefault(field, [])
-    if match_value not in rule_list:
-        rule_list.append(match_value)
-
-    for _, event in removed:
-        if event.get("status", "active") == "active":
-            event["status"] = "hidden"
-
-    hidden = db.setdefault("hidden_events", {})
-    already = [h for h in hidden.values() if h.get("match") == match_value
-               and h.get("scope") == args.scope and h.get("active", True)]
-    if not already:
-        hidden[next_key(hidden)] = {
-            "match": match_value,
-            "scope": args.scope,
-            "rule_field": field,
-            "event_id": seed.get("event_id"),
-            "title": seed.get("title"),
-            "venue": seed.get("venue"),
-            "start_time": seed.get("start_time"),
-            "url": seed.get("url"),
-            "reason": args.reason or "hidden on request",
-            "hidden_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        }
+    record_hide(db, seed, removed, args.scope, match_value, args.reason or "hidden on request")
 
     save(args.db, db)
 
@@ -185,6 +256,11 @@ def main():
 
     listing = sub.add_parser("list", help="show everything currently hidden")
     listing.set_defaults(func=cmd_list)
+
+    applier = sub.add_parser("apply", help="hide every event ID listed in a patch file")
+    applier.add_argument("patch")
+    applier.add_argument("--reason", default=APP_REASON)
+    applier.set_defaults(func=cmd_apply)
 
     args = parser.parse_args()
     try:

@@ -219,5 +219,33 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(got["maybe"], 1)
 
 
+@unittest.skipUnless(NODE, "node is not installed")
+class HidePatchTests(unittest.TestCase):
+    def test_one_exact_id_per_line_sorted_and_deduplicated(self):
+        got = evaluate("return Snapshot.hidePatch(['b', 'a', 'b', 'c']);")
+        self.assertEqual(got["patch"], "# kids-activities hide\na\nb\nc\n")
+        self.assertEqual(got["count"], 3)
+
+    def test_the_file_name_follows_the_content_not_the_clock(self):
+        got = evaluate("""
+          const first = Snapshot.hidePatch(['b', 'a']);
+          const again = Snapshot.hidePatch(['a', 'b', 'a']);
+          const other = Snapshot.hidePatch(['a', 'c']);
+          return { same: first.name === again.name, differs: first.name !== other.name,
+                   name: first.name };""")
+        self.assertTrue(got["same"])
+        self.assertTrue(got["differs"])
+        self.assertRegex(got["name"], r"^hide-[0-9a-f]{8}\.txt$")
+
+    def test_the_patch_is_readable_by_the_apply_command(self):
+        import sys
+        from pathlib import Path
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+        import hide_event
+        got = evaluate("return Snapshot.hidePatch(['event_20260928_1700_4d79d389347a', 'grad_20261014_1730']);")
+        self.assertEqual(hide_event.parse_ids(got["patch"]),
+                         ["event_20260928_1700_4d79d389347a", "grad_20261014_1730"])
+
+
 if __name__ == "__main__":
     unittest.main()

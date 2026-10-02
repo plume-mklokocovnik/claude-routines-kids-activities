@@ -50,6 +50,18 @@ class SwipeStateTests(unittest.TestCase):
                          ["after_dst"])
         self.assertEqual(swipe.counts(self.db)["interested"], 1)
 
+    def test_hidden_events_leave_every_list_and_count_but_keep_their_decision(self):
+        for key, value in (("1", "rejected"), ("2", "rejected"), ("3", "interested")):
+            swipe.set_decision(self.db, self.db["events"][key], value)
+        self.db["events"]["1"]["status"] = "hidden"
+        self.db["user_rules"]["1"]["exclude_event_ids"] = ["after_dst"]
+        groups = swipe.decided(self.db)
+        self.assertEqual([item["event_id"] for item in groups["rejected"]], ["second"])
+        self.assertEqual(groups["interested"], [])
+        self.assertEqual(swipe.counts(self.db)["decided"], 1)
+        self.assertEqual(self.db["events"]["1"]["decision"], "rejected")
+        self.assertEqual(self.db["events"]["3"]["decision"], "interested")
+
     def test_decision_is_independent_of_hide_rules(self):
         before = copy.deepcopy(self.db)
         event_row = self.db["events"]["1"]

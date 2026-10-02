@@ -9,7 +9,8 @@ undone log row keeps its audit trail and is marked `undone`.
 
 Decisions are independent of hide rules. Rejecting an event does not hide it and
 does not touch `user_rules`. It moves the event into the app's Zavrnjeno list,
-where it can still be reviewed, changed or sent back to the deck.
+where it can still be reviewed, changed or sent back to the deck. Hiding an event
+afterwards takes it out of every list and count, and keeps its decision.
 
     python3 scripts/swipe.py set <query> interested|maybe|rejected
     python3 scripts/swipe.py clear <query>
@@ -80,9 +81,13 @@ def deck(db):
 
 
 def decided(db):
-    """Every decided event grouped by category, whatever its status became later."""
+    """Every decided event grouped by category, whatever its status became later,
+    except a hidden one. Hiding takes an event out of the app, but its decision
+    stays on the row, so unhiding puts it back in the same category."""
     groups = {name: [] for name in state.DECISIONS}
     for event in db.get("events", {}).values():
+        if event.get("status") == "hidden" or state.hidden_reason(db, event):
+            continue
         if event.get("decision") in groups:
             groups[event["decision"]].append(event)
     return {name: sorted(rows, key=sort_key) for name, rows in groups.items()}

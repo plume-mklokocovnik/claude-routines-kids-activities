@@ -1,0 +1,81 @@
+name: Hide events
+
+# The published app cannot write to the repository, so its "hide all Zavrnjeno"
+# button hands a list of event IDs to the GitHub editor instead. Committing that
+# file into inbox/hide/ runs this workflow, which hides each event by its exact
+# ID with scripts/hide_event.py, removes the list and republishes the site. Only
+# someone with write access can commit, which is the whole access control here.
+# Each ID is hidden on its own, never as a series or a venue.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - inbox/hide/*.txt
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hide-events
+  cancel-in-progress: false
+
+jobs:
+  hide:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # The branch tip rather than the triggering commit, so a queued run
+          # hides against the database the run before it already wrote.
+          ref: main
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Hide every event listed in the inbox
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            files=(inbox/hide/*.txt)
+            if [ ${#files[@]} -eq 0 ]; then
+              echo "The hide inbox holds no list. Nothing to hide."
+              exit 0
+            fi
+            for file in "${files[@]}"; do
+              echo "::group::$file"
+              cat "$file"
+              python3 scripts/hide_event.py apply "$file" --reason "hidden from the app"
+              echo "::endgroup::"
+              rm "$file"
+            done
+            python3 scripts/run.py check
+            git add -A
+            if git diff --cached --quiet; then
+              echo "Nothing changed."
+              exit 0
+            fi
+            git commit -m "chore: Hide events from the app"
+            if git push; then
+              exit 0
+            fi
+            # A rejected push means another run landed first. A database
+            # conflict is never merged as text. Start again from the fresh
+            # tip, where the lists are still in the inbox, and hide again.
+            echo "Push rejected on attempt $attempt. Hiding again from the fresh database."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "::error::Could not push after 3 attempts. The lists stay in the inbox."
+          exit 1
+
+  publish:
+    needs: hide
+    uses: ./.github/workflows/pages.yml

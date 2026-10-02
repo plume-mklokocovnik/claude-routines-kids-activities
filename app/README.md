@@ -155,6 +155,35 @@ The deck holds the active, not hidden events that have no decision yet, earliest
 first. A decided event leaves the deck and appears under **Pregled**, where its
 category can be changed or cleared. Clearing returns it to the deck.
 
+## Hiding every rejected event
+
+On the published page only, the **Zavrnjeno** list carries a round floating
+button with a crossed-out eye, at the bottom right. It is absent from the other
+lists, from an empty Zavrnjeno list and on the local server, which has no way to
+write to the repository.
+
+Tapping it opens a confirmation in Slovenian, **Skrijem vse zavrnjene?**, with the
+number of events in the list. It also counts any that are still unsaved, because
+they are hidden too. **Prekliči** closes it. **Skrij vse** opens the GitHub editor
+with a file named `inbox/hide/hide-<hash>.txt` prefilled with the ID of every
+event in the list. The file name is a hash of its content, so the same list always
+gets the same name and the page never reads the clock. A screen explains the one
+click left, **Commit changes**, and the page then looks for the rebuilt snapshot
+like it does after a save.
+
+Committing the file runs [hide-events.yml](../.github/workflows/hide-events.yml).
+It calls `hide_event.py apply`, which hides each event by its exact ID, as a single
+event and never as a series or a show, with the reason `hidden from the app`.
+Then it deletes the file, checks the database and republishes. If the push loses a
+race with another run, it starts again from the fresh database instead of merging
+text. See [inbox/](../inbox/README.md#hide-lists) for the file format.
+
+A hidden event leaves every list and count, in all three categories, because
+hiding takes an event out of the app. Its decision stays on the row and
+`hide_event.py unhide <event_id>` returns it to the same category. If an
+unsaved rejection is hidden before it is saved, the hide wins and the decision is
+dropped, so an unhide later returns that event to the deck.
+
 ## Past events
 
 The app does not show an event once its date, in Ljubljana, is before today. An
@@ -245,10 +274,11 @@ A decision is user-owned data on the event row:
 { "decision": "interested", "decided_at": "2026-09-30T11:26:32Z" }
 ```
 
-The app never touches `user_rules`, `hidden_events` or event status.
+Swiping never touches `user_rules`, `hidden_events` or event status.
 Rejecting an event is not hiding it: it moves to the Zavrnjeno list and can be
 changed from there. To take an event out of the app entirely, use the hide
-command in the [root README](../README.md#preferences).
+command in the [root README](../README.md#preferences), or the hide-all button
+described above.
 
 All state changes go through [scripts/swipe.py](../scripts/swipe.py), so the
 validation, the file lock and the atomic write are the same as on the command
@@ -277,7 +307,7 @@ shown unshortened.
 | `static/app.js` | Drag handling, keyboard, review lists, details dialog, the local backend |
 | `static/mode.js` | Which backend to use. The build overwrites it |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
-| `static/snapshot.js` | The published backend: the baked snapshot, staged decisions and the re-check |
+| `static/snapshot.js` | The published backend: the baked snapshot, staged decisions, the re-check and the hide list |
 
 One page and one renderer serve both modes. Two backends sit behind the same
 small interface: the local one, in `app.js`, is a round trip per decision, and the

@@ -76,6 +76,14 @@
           <div class="rows" id="rows"></div>
         </div>
       </section>
+
+      <button class="fab" id="hide-fab" type="button" hidden
+              title="Skrij vse zavrnjene" aria-label="Skrij vse zavrnjene" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+          <line x1="1" y1="1" x2="23" y2="23"></line>
+        </svg>
+      </button>
     </main>
 
     <div class="pending" id="pending" hidden>
@@ -107,6 +115,43 @@
             <a class="link-btn" id="d-maps" target="_blank" rel="noopener noreferrer">Zemljevid ↗</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="modal" id="hide-confirm" hidden>
+      <div class="sheet confirm" id="hide-sheet" role="alertdialog" aria-modal="true"
+           aria-labelledby="hide-title" aria-describedby="hide-text" tabindex="-1">
+        <div class="confirm-body">
+          <div class="confirm-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </div>
+          <h2 class="confirm-title" id="hide-title">Skrijem vse zavrnjene?</h2>
+          <div id="hide-text">
+            <p>Dogodkov v seznamu Zavrnjeno: <b id="hide-count">0</b></p>
+            <p>Vsak dogodek se skrije posebej po ID, ne cela serija ali predstava.
+               Iz aplikacije bodo izginili.</p>
+            <p class="confirm-note" id="hide-unsaved" hidden></p>
+          </div>
+          <div class="confirm-actions">
+            <button class="confirm-btn" id="hide-cancel" type="button">Prekliči</button>
+            <button class="confirm-btn confirm-danger" id="hide-ok" type="button">Skrij vse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="curtain" id="hide-handoff" hidden>
+      <div class="curtain-box">
+        <div class="done-mark">📤</div>
+        <h2>Potrdi skrivanje v GitHubu</h2>
+        <p>V novem zavihku se je odprl urejevalnik s seznamom ID-jev.<br>
+           Klikni <b>Commit changes</b>. Delovni tok jih skrije v <code>db.json</code>
+           in osveži to stran.</p>
+        <p>Dogodki ostanejo tukaj, dokler jih baza ne skrije.</p>
+        <button class="wide-btn" id="hide-handoff-close" type="button">Nazaj na pregled</button>
       </div>
     </div>
 

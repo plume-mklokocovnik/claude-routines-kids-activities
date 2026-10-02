@@ -182,7 +182,22 @@
     };
   }
 
-  const api = { KEY, createStaticStore };
+  // The list of events to hide, one exact ID per line, sorted so the same set
+  // always gives the same text. The name is a hash of that text rather than a
+  // timestamp: committing the same list twice names the same file, and nothing
+  // here reads the clock.
+  function hidePatch(ids) {
+    const unique = [...new Set(ids)].sort();
+    const text = `${['# kids-activities hide', ...unique].join('\n')}\n`;
+    let hash = 0x811c9dc5;
+    for (let index = 0; index < text.length; index += 1) {
+      hash ^= text.charCodeAt(index);
+      hash = Math.imul(hash, 0x01000193) >>> 0;
+    }
+    return { count: unique.length, patch: text, name: `hide-${hash.toString(16).padStart(8, '0')}.txt` };
+  }
+
+  const api = { KEY, createStaticStore, hidePatch };
   root.Snapshot = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 }(typeof window !== 'undefined' ? window : globalThis));

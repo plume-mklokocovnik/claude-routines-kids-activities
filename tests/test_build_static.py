@@ -69,8 +69,8 @@ class BuildTests(unittest.TestCase):
         text = (self.out / "mode.js").read_text(encoding="utf-8")
         self.assertIn("window.SWIPE_MODE = 'static';", text)
         target = json.loads(text.split("window.SWIPE_REPO = ", 1)[1].rstrip(";\n"))
-        self.assertEqual(target, {"owner": "owner", "repo": "name",
-                                  "branch": "trunk", "inbox": "inbox/patch.txt"})
+        self.assertEqual(target, {"owner": "owner", "repo": "name", "branch": "trunk",
+                                  "inbox": "inbox/patch.txt", "hide_inbox": "inbox/hide"})
 
     def test_missing_repository_still_builds_a_usable_bundle(self):
         build_static.build(self.path, self.out)
