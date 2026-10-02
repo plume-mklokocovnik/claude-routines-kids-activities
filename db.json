@@ -258,7 +258,7 @@
       "price_text": "8 EUR (12 EUR z enim otrokom do 4. leta v naročju)",
       "url": "https://sititeater.mojekarte.si/si/cudezni-kljuc-premiera/vstopnice-1236166.html",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -309,7 +309,7 @@
       "price_text": "5 EUR",
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -326,7 +326,7 @@
       "price_text": "Cena vstopnice ni navedena; otroški program 'Oder mladih'",
       "url": "https://knjizni-sejem.si/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -364,7 +364,7 @@
       "price_text": "Vstopnina (cena ni navedena na strani)",
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/peter-klepec_2-1/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -381,7 +381,7 @@
       "price_text": "Ni navedeno; predvidoma vključeno v vstopnico",
       "url": "https://mao.si/dogodek/minimao-igralnica/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -415,7 +415,7 @@
       "price_text": "Vstopnina (cena ni navedena na strani)",
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -486,7 +486,7 @@
       "price_text": "Vstopnina (cena ni navedena na strani)",
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/rudi-2/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -520,7 +520,7 @@
       "price_text": "Cena ni navedena",
       "url": "https://dogodki.kulturnik.si/?what=otroci",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -571,7 +571,7 @@
       "price_text": "Cena ni navedena",
       "url": "https://dogodki.kulturnik.si/?what=otroci",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -588,7 +588,7 @@
       "price_text": "Cena ni navedena",
       "url": "https://dogodki.kulturnik.si/?what=otroci",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -664,7 +664,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -683,7 +683,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -875,7 +875,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -913,7 +913,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -932,7 +932,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -951,7 +951,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1008,7 +1008,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1087,7 +1087,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1104,7 +1104,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1121,7 +1121,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1138,7 +1138,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1155,7 +1155,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1172,7 +1172,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1189,7 +1189,7 @@
       "price_text": "5 EUR",
       "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1605,7 +1605,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261227_0000_ea3ab4329407",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1764,7 +1764,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261203_0000_7bad577e86a5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1821,7 +1821,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261206_0800_a168773882ed",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -1940,7 +1940,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261226_1100_2df3ca6c0137",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -2617,7 +2617,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261213_1800_336663f50811",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -2745,7 +2745,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261114_1440_35c838879cf0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -2895,7 +2895,37 @@
         "pumptrackgrosuplje_20261010_0000",
         "siti_20261010_1100",
         "siti_20261017_1100",
-        "siti_20261024_1100"
+        "siti_20261024_1100",
+        "event_20261114_1440_35c838879cf0",
+        "event_20261203_0000_7bad577e86a5",
+        "event_20261206_0800_a168773882ed",
+        "event_20261213_1800_336663f50811",
+        "event_20261226_1100_2df3ca6c0137",
+        "event_20261227_0000_ea3ab4329407",
+        "gr_20261123_0900",
+        "grad_20261108_1030",
+        "grad_20261121_1700",
+        "grad_20261208_1500",
+        "grad_20261209_1500",
+        "grad_20261215_1500",
+        "grad_20261216_1500",
+        "grad_20261219_1700",
+        "grad_20261220_1030",
+        "grad_20261222_1500",
+        "grad_20261223_1500",
+        "kinobezigrad_20261108_0000",
+        "kinobezigrad_20261114_0000",
+        "kinobezigrad_20261121_0000",
+        "kinobezigrad_20261128_0000",
+        "kinobezigrad_20261220_0000_koncert",
+        "mao_20261115_1100",
+        "mao_20261129_1000",
+        "mestnimuzej_20261121_1600",
+        "mestnimuzej_20261128_1600",
+        "siti_20261114_1100",
+        "siti_20261128_1100",
+        "siti_20261205_1100",
+        "siti_20261219_1100"
       ],
       "exclude_venues": [],
       "exclude_keywords": [
@@ -2910,7 +2940,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-10-01T09:05:53+02:00",
-      "total_active_events": 68,
+      "total_active_events": 38,
       "latest_run": "20261001T070553Z_56e70032"
     }
   },
@@ -4390,6 +4420,366 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/",
       "reason": "hidden from the app",
       "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "124": {
+      "match": "event_20261114_1440_35c838879cf0",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261114_1440_35c838879cf0",
+      "title": "Novomeški polmaraton – otroški tek (predšolski in šolski)",
+      "venue": "Seidlova cesta 1, Novo mesto",
+      "start_time": "2026-11-14T14:40:00+01:00",
+      "url": "https://www.finishers.com/pl/e/polmaraton-w-novo-mesto",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "125": {
+      "match": "event_20261203_0000_7bad577e86a5",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261203_0000_7bad577e86a5",
+      "title": "Ta veseli dan kulture – brezplačen vstop",
+      "venue": "Spominska hiša Otona Župančiča, Vinica",
+      "start_time": "2026-12-03T00:00:00+01:00",
+      "url": "https://www.belakrajina.si/sl/obiscite/odprta-vrata/spominska-hisa-otona-zupancica-vinica/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "126": {
+      "match": "event_20261206_0800_a168773882ed",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261206_0800_a168773882ed",
+      "title": "Sejem rezervnih delov in motoristične opreme",
+      "venue": "Avtobusna postaja, Polje pri Vodicah (v slabem vremenu pod nadstreškom Gostilnice Mak)",
+      "start_time": "2026-12-06T08:00:00+01:00",
+      "url": "http://www.motoclub-mak.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "127": {
+      "match": "event_20261213_1800_336663f50811",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261213_1800_336663f50811",
+      "title": "Katalena: Enci benci Katalenci",
+      "venue": "Linhartova dvorana, Cankarjev dom",
+      "start_time": "2026-12-13T18:00:00+01:00",
+      "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/katalena-enci-benci-katalenci-0",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "128": {
+      "match": "event_20261226_1100_2df3ca6c0137",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261226_1100_2df3ca6c0137",
+      "title": "SiTi Teater sobotni dopoldnevi: Škratovske priprave na praznike z obiskom Dedka Mraza",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-12-26T11:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "129": {
+      "match": "event_20261227_0000_ea3ab4329407",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261227_0000_ea3ab4329407",
+      "title": "Gledališka predstava z obiskom Dedka Mraza: Škratek prijateljček",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-12-27T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-skratek-prijateljcek/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "130": {
+      "match": "gr_20261123_0900",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "gr_20261123_0900",
+      "title": "Slovenski knjižni sejem 2026",
+      "venue": "Gospodarsko razstavišče, Dunajska cesta 18",
+      "start_time": "2026-11-23T09:00:00+01:00",
+      "url": "https://knjizni-sejem.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "131": {
+      "match": "grad_20261108_1030",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261108_1030",
+      "title": "Šola zmajeslovja: Vrhovna čarovnica",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-11-08T10:30:00+01:00",
+      "url": "https://dogodki.kulturnik.si/?what=otroci",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "132": {
+      "match": "grad_20261121_1700",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261121_1700",
+      "title": "Friderik, grajska podgana",
+      "venue": "Grajsko gledališče, Ljubljanski grad",
+      "start_time": "2026-11-21T17:00:00+01:00",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "133": {
+      "match": "grad_20261208_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261208_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-08T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "134": {
+      "match": "grad_20261209_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261209_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-09T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "135": {
+      "match": "grad_20261215_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261215_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-15T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "136": {
+      "match": "grad_20261216_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261216_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-16T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "137": {
+      "match": "grad_20261219_1700",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261219_1700",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Grajsko gledališče, Ljubljanski grad",
+      "start_time": "2026-12-19T17:00:00+01:00",
+      "url": "https://dogodki.kulturnik.si/?what=otroci",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "138": {
+      "match": "grad_20261220_1030",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261220_1030",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Grajsko gledališče, Ljubljanski grad",
+      "start_time": "2026-12-20T10:30:00+01:00",
+      "url": "https://dogodki.kulturnik.si/?what=otroci",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "139": {
+      "match": "grad_20261222_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261222_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-22T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "140": {
+      "match": "grad_20261223_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261223_1500",
+      "title": "Vitez, zmaj in praznični direndaj",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-12-23T15:00:00+01:00",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/vitez-zmaj-in-praznicni-direndaj-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "141": {
+      "match": "kinobezigrad_20261108_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261108_0000",
+      "title": "Lutkovna predstava: Pedenjped",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-11-08T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "142": {
+      "match": "kinobezigrad_20261114_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261114_0000",
+      "title": "Lutkovni muzikal: Peter Klepec",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-11-14T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovni-muzikal-peter-klepec/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "143": {
+      "match": "kinobezigrad_20261121_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261121_0000",
+      "title": "Gledališka predstava: Z Igorjem po svetu: Italija",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-11-21T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-z-igorjem-po-svetu/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "144": {
+      "match": "kinobezigrad_20261128_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261128_0000",
+      "title": "Lutkovno-igrana predstava: Tinko Polovinko",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-11-28T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledalisko-lutkovna-predstava-tinko-polovinko/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "145": {
+      "match": "kinobezigrad_20261220_0000_koncert",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261220_0000_koncert",
+      "title": "Koncert z obiskom Božička: Božični repki",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-12-20T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/koncert-z-obiskom-bozicka-bozicni-repki/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "146": {
+      "match": "mao_20261115_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mao_20261115_1100",
+      "title": "Ustvarjalna delavnica: Skrivnosti lesa",
+      "venue": "MAO, Rusjanov trg 7",
+      "start_time": "2026-11-15T11:00:00+01:00",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-skrivnosti-lesa-5388",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "147": {
+      "match": "mao_20261129_1000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mao_20261129_1000",
+      "title": "MiniMAO igralnica",
+      "venue": "MAO, Rusjanov trg 7",
+      "start_time": "2026-11-29T10:00:00+01:00",
+      "url": "https://mao.si/dogodek/minimao-igralnica/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "148": {
+      "match": "mestnimuzej_20261121_1600",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mestnimuzej_20261121_1600",
+      "title": "Delavnica izdelave sveč iz satnic",
+      "venue": "Mestni muzej Ljubljana",
+      "start_time": "2026-11-21T16:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "149": {
+      "match": "mestnimuzej_20261128_1600",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mestnimuzej_20261128_1600",
+      "title": "Delavnica izdelave sveč iz satnic",
+      "venue": "Mestni muzej Ljubljana",
+      "start_time": "2026-11-28T16:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "150": {
+      "match": "siti_20261114_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261114_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Čudežni ključ (premiera)",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-11-14T11:00:00+01:00",
+      "url": "https://sititeater.mojekarte.si/si/cudezni-kljuc-premiera/vstopnice-1236166.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "151": {
+      "match": "siti_20261128_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261128_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Peter Klepec",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-11-28T11:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/peter-klepec_2-1/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "152": {
+      "match": "siti_20261205_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261205_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Cirkus Kolibris z obiskom Miklavža",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-12-05T11:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/cirkus-kolibris-z-obiskom-miklavza/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
+    },
+    "153": {
+      "match": "siti_20261219_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261219_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Rudi in čarobni ljubčkomat z obiskom Božička",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-12-19T11:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/rudi-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:26:12Z"
     }
   },
   "decision_log": {
