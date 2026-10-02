@@ -14,7 +14,7 @@
       "flags": [
         "outside_ljubljana"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -48,7 +48,7 @@
       "price_text": "8 EUR (12 EUR z enim otrokom do 4. leta v naročju)",
       "url": "https://sititeater.mojekarte.si/si/glasbocasnice-otvoritev-sezone/vstopnice-1236161.html",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -82,7 +82,7 @@
       "price_text": "Cena ni navedena",
       "url": "https://mgml.si/sl/mestna-galerija/eventi/2528/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -101,7 +101,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -135,7 +135,7 @@
       "price_text": "Vstopnina (cena ni navedena na strani)",
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/zmeda-za-dva-medveda/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -152,7 +152,7 @@
       "price_text": "Ni navedeno; predvidoma vključeno v vstopnico",
       "url": "https://mao.si/dogodek/minimao-igralnica/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -169,7 +169,7 @@
       "price_text": "Vstopnina (cena ni navedena na strani)",
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -188,7 +188,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -207,7 +207,7 @@
       "flags": [
         "age_stretch"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -473,7 +473,7 @@
       "price_text": "Cena ni navedena",
       "url": "https://dogodki.kulturnik.si/?what=otroci",
       "flags": [],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -567,7 +567,7 @@
       "flags": [
         "not_toddler_appropriate"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -655,7 +655,7 @@
         "outside_ljubljana",
         "travel"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -675,7 +675,7 @@
         "outside_ljubljana",
         "travel"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -749,7 +749,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -768,7 +768,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -787,7 +787,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -981,7 +981,7 @@
         "outside_ljubljana",
         "travel"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1000,7 +1000,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-09-30T16:46:06Z"
@@ -1243,7 +1243,7 @@
       "url": "https://www.lgl.si/pisma-z-roba-gozda",
       "flags": [],
       "event_id": "event_20261003_1100_74777bfd291e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1260,7 +1260,7 @@
       "url": "https://www.kinodvor.org/film/bacek-jon-3-skrivnost-sotnega-dola/",
       "flags": [],
       "event_id": "event_20261003_1550_1384e0185d85",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1279,7 +1279,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261004_1100_62b085e32f2c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1298,7 +1298,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261004_1700_053ca8010dbf",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1315,7 +1315,7 @@
       "url": "https://www.kinodvor.org/film/bacek-jon-3-skrivnost-sotnega-dola/",
       "flags": [],
       "event_id": "event_20261004_1510_5e4dc145586d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1332,7 +1332,7 @@
       "url": "https://www.kinodvor.org/film/za-poletje-skupaj/",
       "flags": [],
       "event_id": "event_20261004_1700_620f79abc4ce",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1349,7 +1349,7 @@
       "url": "https://www.cd-cc.si/",
       "flags": [],
       "event_id": "event_20261004_1000_80e6e6d20737",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1385,7 +1385,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/11-medeni-dan-6aa113901ec1a",
       "flags": [],
       "event_id": "event_20261010_0900_f7ec09959657",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1402,7 +1402,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-pgd-zgornji-kaselj-6aaa94dc4b0ec",
       "flags": [],
       "event_id": "event_20261010_1000_be9f934d6282",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1419,7 +1419,7 @@
       "url": "https://www.kinodvor.org/film/za-poletje-skupaj/",
       "flags": [],
       "event_id": "event_20261010_1700_69e6442fb306",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1453,7 +1453,7 @@
       "url": "https://www.kinodvor.org/film/kako-je-mambo-postal-velikan/",
       "flags": [],
       "event_id": "event_20261018_1415_28d8ddf5150a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1487,7 +1487,7 @@
       "url": "https://www.kinodvor.org/film/skrivnost-izginulih-nogavic/",
       "flags": [],
       "event_id": "event_20261024_1610_b399c7b1990d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1562,7 +1562,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261018_0000_c03cea11f0a4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1639,7 +1639,7 @@
         "travel"
       ],
       "event_id": "event_20261010_1000_f63573458fa5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1659,7 +1659,7 @@
         "travel"
       ],
       "event_id": "event_20261017_1600_f6be83a15de3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1697,7 +1697,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261004_0800_1bb9c066dec0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1716,7 +1716,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261101_0800_633819f67d1e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1754,7 +1754,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261004_0000_10a49615c004",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1775,7 +1775,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261004_0000_0bcc26b5f076",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1815,7 +1815,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261018_0000_faab409b3532",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "rejected",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1867,7 +1867,7 @@
       "url": "https://www.sititeater.si/nedeljski-popoldnevi/repki-1/",
       "flags": [],
       "event_id": "event_20261011_1100_3db2b6fe1c75",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1884,7 +1884,7 @@
       "url": "https://www.sititeater.si/nedeljski-popoldnevi/repki-2/",
       "flags": [],
       "event_id": "event_20261011_1700_357e4e92e629",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1901,7 +1901,7 @@
       "url": "https://www.ljubljanskigrad.si/",
       "flags": [],
       "event_id": "event_20261010_1100_b8ad33f756ac",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1918,7 +1918,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261006_1700_78b1394a39c0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1935,7 +1935,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261008_1700_9085bff91540",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1952,7 +1952,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261010_1700_f5f518db768b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1969,7 +1969,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261014_1700_654129318ed4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -1986,7 +1986,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261015_1700_9b962251c05a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2003,7 +2003,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261015_1800_cb1cb57d569e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2037,7 +2037,7 @@
       "url": "https://www.mklj.si/dogodek/beremo-z-nasmehom-s-psicko-luno-6/",
       "flags": [],
       "event_id": "event_20261002_1700_476cbd334f02",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2054,7 +2054,7 @@
       "url": "https://www.mklj.si/dogodek/tetka-jesen-lutke-pika-poka-2/",
       "flags": [],
       "event_id": "event_20261005_1730_41ed01f662df",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2071,7 +2071,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1700_8b326ba6a252",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2088,7 +2088,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1700_f5c25b7c7bcc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2105,7 +2105,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1700_bdcb08d7fa2a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2122,7 +2122,7 @@
       "url": "https://www.mklj.si/dogodek/dezela-zmajev-4/",
       "flags": [],
       "event_id": "event_20261006_1700_4a59b5a902dc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2139,7 +2139,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1730_3c2bc2c9f3a5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2156,7 +2156,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-15/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1730_e8b322d8e908",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2173,7 +2173,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1800_86f5a6b1deab",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2190,7 +2190,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-10-06/",
       "flags": [],
       "event_id": "event_20261006_1800_eaf8408533f4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2207,7 +2207,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-nemskem-jeziku-5/2026-10-07/",
       "flags": [],
       "event_id": "event_20261007_1600_4fcdbf1dfc0f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2241,7 +2241,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-10-13/",
       "flags": [],
       "event_id": "event_20261013_0930_8dc460030f49",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2258,7 +2258,7 @@
       "url": "https://www.mklj.si/dogodek/otroski-knjizni-klub-pravljicna-urica-za-otroke-ki-ne-obiskujejo-vrtca/",
       "flags": [],
       "event_id": "event_20261014_0930_93797fb32172",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2275,7 +2275,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-14/2026-10-21/",
       "flags": [],
       "event_id": "event_20261021_1600_1025c93fee2a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2309,7 +2309,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-22/",
       "flags": [],
       "event_id": "event_20261022_1700_56334331b4ad",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2326,7 +2326,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-10-22/",
       "flags": [],
       "event_id": "event_20261022_1700_c87d90965055",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2345,7 +2345,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261026_0900_370c07817cba",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2362,7 +2362,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-10-27/",
       "flags": [],
       "event_id": "event_20261027_0830_5b48f3e04255",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2381,7 +2381,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261027_0900_94b214fc7950",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2400,7 +2400,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261028_0900_7ff16e37a744",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2419,7 +2419,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261028_0900_e08a35103c91",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2438,7 +2438,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261029_0900_98d0c218647a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2457,7 +2457,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261029_0900_5eb6b1f7685c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2474,7 +2474,7 @@
       "url": "https://mao.si/dogodek/medgeneracijsko-srecalisce-delavnica-izdelovanja-znack/",
       "flags": [],
       "event_id": "event_20261008_1700_261236e76ec0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2491,7 +2491,7 @@
       "url": "https://mgml.si/sl/plecnikova-hisa/dogodki/2534/2026-10-10/16-00/z-igro-do-dediscine-2026-brezplacno-vodstvo-za-druzine-po-plecnikovi-hisi/",
       "flags": [],
       "event_id": "event_20261010_1600_9c1e44b08598",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2508,7 +2508,7 @@
       "url": "https://pionirski-dom.si/aktualno/festival-hokus-pokus-s-klemnom-janezicem/",
       "flags": [],
       "event_id": "event_20261016_1700_e18279d14954",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2542,7 +2542,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6261",
       "flags": [],
       "event_id": "event_20261002_1700_69f9e50597f9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2559,7 +2559,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6262",
       "flags": [],
       "event_id": "event_20261016_1700_2244a3b3ba70",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2576,7 +2576,7 @@
       "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/zakljucni-koncert-tridnevne-delavnice-za-100-najmlajsih-violoncelistov-iz-vse-slovenije",
       "flags": [],
       "event_id": "event_20261018_1100_2581648f27d5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2596,7 +2596,7 @@
         "travel"
       ],
       "event_id": "event_20261023_1600_0fad17a23b00",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2632,7 +2632,7 @@
       "url": "https://www.nms.si/si/dogodki/2026/10/12403-En-dan-Trije-muzeji-Ena-ploscad",
       "flags": [],
       "event_id": "event_20261010_1500_4352040c3e5a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-01T09:05:53+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-01T08:32:53Z"
@@ -2723,7 +2723,85 @@
         "mkl_levstik_20261005_1800",
         "mkl_podpec_20261006_1700",
         "mkl_zupancic_20261006_1700",
-        "celje_20261108_1100"
+        "celje_20261108_1100",
+        "bohinjskabistrica_20261024_1500",
+        "bohinjskabistrica_20261031_1500",
+        "botanicnivrt_20261028_1700",
+        "cd_20261029_1800",
+        "event_20261002_1700_476cbd334f02",
+        "event_20261002_1700_69f9e50597f9",
+        "event_20261003_1100_74777bfd291e",
+        "event_20261003_1550_1384e0185d85",
+        "event_20261004_0000_0bcc26b5f076",
+        "event_20261004_0000_10a49615c004",
+        "event_20261004_0800_1bb9c066dec0",
+        "event_20261004_1000_80e6e6d20737",
+        "event_20261004_1100_62b085e32f2c",
+        "event_20261004_1510_5e4dc145586d",
+        "event_20261004_1700_053ca8010dbf",
+        "event_20261004_1700_620f79abc4ce",
+        "event_20261005_1730_41ed01f662df",
+        "event_20261006_1700_4a59b5a902dc",
+        "event_20261006_1700_78b1394a39c0",
+        "event_20261006_1700_8b326ba6a252",
+        "event_20261006_1700_bdcb08d7fa2a",
+        "event_20261006_1700_f5c25b7c7bcc",
+        "event_20261006_1730_3c2bc2c9f3a5",
+        "event_20261006_1730_e8b322d8e908",
+        "event_20261006_1800_86f5a6b1deab",
+        "event_20261006_1800_eaf8408533f4",
+        "event_20261007_1600_4fcdbf1dfc0f",
+        "event_20261008_1700_261236e76ec0",
+        "event_20261008_1700_9085bff91540",
+        "event_20261010_0900_f7ec09959657",
+        "event_20261010_1000_be9f934d6282",
+        "event_20261010_1000_f63573458fa5",
+        "event_20261010_1100_b8ad33f756ac",
+        "event_20261010_1500_4352040c3e5a",
+        "event_20261010_1600_9c1e44b08598",
+        "event_20261010_1700_69e6442fb306",
+        "event_20261010_1700_f5f518db768b",
+        "event_20261011_1100_3db2b6fe1c75",
+        "event_20261011_1700_357e4e92e629",
+        "event_20261013_0930_8dc460030f49",
+        "event_20261014_0930_93797fb32172",
+        "event_20261014_1700_654129318ed4",
+        "event_20261015_1700_9b962251c05a",
+        "event_20261015_1800_cb1cb57d569e",
+        "event_20261016_1700_2244a3b3ba70",
+        "event_20261016_1700_e18279d14954",
+        "event_20261017_1600_f6be83a15de3",
+        "event_20261018_0000_c03cea11f0a4",
+        "event_20261018_0000_faab409b3532",
+        "event_20261018_1100_2581648f27d5",
+        "event_20261018_1415_28d8ddf5150a",
+        "event_20261021_1600_1025c93fee2a",
+        "event_20261022_1700_56334331b4ad",
+        "event_20261022_1700_c87d90965055",
+        "event_20261023_1600_0fad17a23b00",
+        "event_20261024_1610_b399c7b1990d",
+        "event_20261026_0900_370c07817cba",
+        "event_20261027_0830_5b48f3e04255",
+        "event_20261027_0900_94b214fc7950",
+        "event_20261028_0900_7ff16e37a744",
+        "event_20261028_0900_e08a35103c91",
+        "event_20261029_0900_5eb6b1f7685c",
+        "event_20261029_0900_98d0c218647a",
+        "event_20261101_0800_633819f67d1e",
+        "grad_20261011_1030",
+        "grad_20261014_1730",
+        "grad_20261024_1700",
+        "kinobezigrad_20261003_0000_koncert",
+        "kinobezigrad_20261017_0000",
+        "kinobezigrad_20261024_0000",
+        "kinobezigrad_20261031_0000",
+        "lipica_20261107_1100",
+        "mao_20261018_1000",
+        "mestnagalerija_20261010_1600",
+        "pumptrackgrosuplje_20261010_0000",
+        "siti_20261010_1100",
+        "siti_20261017_1100",
+        "siti_20261024_1100"
       ],
       "exclude_venues": [],
       "exclude_keywords": [
@@ -2738,7 +2816,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-10-01T09:05:53+02:00",
-      "total_active_events": 146,
+      "total_active_events": 68,
       "latest_run": "20261001T070553Z_56e70032"
     }
   },
@@ -3282,6 +3360,942 @@
       "url": "https://www.kinodvor.org/film/miska-gre-na-goro/",
       "reason": "Kinobalon: Miška gre na goro hidden on request",
       "hidden_at": "2026-10-02T11:40:05Z"
+    },
+    "46": {
+      "match": "bohinjskabistrica_20261024_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "bohinjskabistrica_20261024_1500",
+      "title": "Praznik sira in vina",
+      "venue": "Dvorana Danica",
+      "start_time": "2026-10-24T15:00:00+02:00",
+      "url": "https://tdbohinj.si/prireditev/praznik-sira-in-vina/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "47": {
+      "match": "bohinjskabistrica_20261031_1500",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "bohinjskabistrica_20261031_1500",
+      "title": "B.O.FEjST – jesenski otroški festival",
+      "venue": "Dvorana Danica, Triglavska cesta 60",
+      "start_time": "2026-10-31T15:00:00+01:00",
+      "url": "https://www.mojaobcina.si/bohinj/dogodki/jesenski-bofejst.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "48": {
+      "match": "botanicnivrt_20261028_1700",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "botanicnivrt_20261028_1700",
+      "title": "Izrezovanje strahcev v Botaničnem vrtu",
+      "venue": "Botanični vrt Ljubljana, tropski rastlinjak",
+      "start_time": "2026-10-28T17:00:00+01:00",
+      "url": "http://www.botanicni-vrt.si/napovednik-dogodkov/oktober-2026-v-botanicnem-vrtu",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "49": {
+      "match": "cd_20261029_1800",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "cd_20261029_1800",
+      "title": "Igor Stravinski: Mavra / Maurice Ravel: Otrok in uroki",
+      "venue": "Cankarjev dom, Linhartova dvorana",
+      "start_time": "2026-10-29T18:00:00+02:00",
+      "url": "https://dogodki.kulturnik.si/?what=otroci",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "50": {
+      "match": "event_20261002_1700_476cbd334f02",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261002_1700_476cbd334f02",
+      "title": "Beremo z nasmehom s psičko Luno",
+      "venue": "Knjižnica Jožeta Mazovca (MKL)",
+      "start_time": "2026-10-02T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/beremo-z-nasmehom-s-psicko-luno-6/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "51": {
+      "match": "event_20261002_1700_69f9e50597f9",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261002_1700_69f9e50597f9",
+      "title": "Madžarsko-slovenska glasbena ura za otroke",
+      "venue": "Lisztov inštitut Ljubljana, Barvarska steza 8",
+      "start_time": "2026-10-02T17:00:00+02:00",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6261",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "52": {
+      "match": "event_20261003_1100_74777bfd291e",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261003_1100_74777bfd291e",
+      "title": "Pisma z roba gozda, izven",
+      "venue": "Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-03T11:00:00+02:00",
+      "url": "https://www.lgl.si/pisma-z-roba-gozda",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "53": {
+      "match": "event_20261003_1550_1384e0185d85",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261003_1550_1384e0185d85",
+      "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-03T15:50:00+02:00",
+      "url": "https://www.kinodvor.org/film/bacek-jon-3-skrivnost-sotnega-dola/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "54": {
+      "match": "event_20261004_0000_0bcc26b5f076",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_0000_0bcc26b5f076",
+      "title": "Usposabljanje motoristov – spretnostna vožnja s starodobnimi avti",
+      "venue": "Nova Gorica (točna lokacija ni objavljena za ta termin)",
+      "start_time": "2026-10-04T00:00:00+02:00",
+      "url": "https://svamz.com/koledar-dogodkov/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "55": {
+      "match": "event_20261004_0000_10a49615c004",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_0000_10a49615c004",
+      "title": "Sejem, rastava, srečanje v Beltincih (trgovina Spar)",
+      "venue": "Pred trgovino Spar, Beltinci",
+      "start_time": "2026-10-04T00:00:00+02:00",
+      "url": "https://www.zveza-svs.si/wp-content/uploads/2026/01/KOLEDAR-Zveze-SVS-2026.pdf",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "56": {
+      "match": "event_20261004_0800_1bb9c066dec0",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_0800_1bb9c066dec0",
+      "title": "Sejem rezervnih delov in motoristične opreme",
+      "venue": "Avtobusna postaja, Polje pri Vodicah (v slabem vremenu pod nadstreškom Gostilnice Mak)",
+      "start_time": "2026-10-04T08:00:00+02:00",
+      "url": "http://www.motoclub-mak.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "57": {
+      "match": "event_20261004_1000_80e6e6d20737",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_1000_80e6e6d20737",
+      "title": "Delavnica \"Peekaboo\" – Bojana Robinson",
+      "venue": "Cankarjev dom",
+      "start_time": "2026-10-04T10:00:00+02:00",
+      "url": "https://www.cd-cc.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "58": {
+      "match": "event_20261004_1100_62b085e32f2c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_1100_62b085e32f2c",
+      "title": "Mali nauki o čudenju, izven",
+      "venue": "Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-04T11:00:00+02:00",
+      "url": "https://www.lgl.si/mali-nauki-o-cudenju",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "59": {
+      "match": "event_20261004_1510_5e4dc145586d",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_1510_5e4dc145586d",
+      "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-04T15:10:00+02:00",
+      "url": "https://www.kinodvor.org/film/bacek-jon-3-skrivnost-sotnega-dola/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "60": {
+      "match": "event_20261004_1700_053ca8010dbf",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_1700_053ca8010dbf",
+      "title": "Mali nauki o čudenju, izven",
+      "venue": "Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-04T17:00:00+02:00",
+      "url": "https://www.lgl.si/mali-nauki-o-cudenju",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "61": {
+      "match": "event_20261004_1700_620f79abc4ce",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261004_1700_620f79abc4ce",
+      "title": "Kinobalon: Za poletje, skupaj! (živa pripoved)",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-04T17:00:00+02:00",
+      "url": "https://www.kinodvor.org/film/za-poletje-skupaj/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "62": {
+      "match": "event_20261005_1730_41ed01f662df",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261005_1730_41ed01f662df",
+      "title": "Primer št. 4 cm – Lutke Pika Poka",
+      "venue": "Knjižnica Jurij Vega (MKL)",
+      "start_time": "2026-10-05T17:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/tetka-jesen-lutke-pika-poka-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "63": {
+      "match": "event_20261006_1700_4a59b5a902dc",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1700_4a59b5a902dc",
+      "title": "Dežela zmajev",
+      "venue": "Knjižnica Grba (MKL)",
+      "start_time": "2026-10-06T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/dezela-zmajev-4/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "64": {
+      "match": "event_20261006_1700_78b1394a39c0",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1700_78b1394a39c0",
+      "title": "Štirje muzikanti",
+      "venue": "Veliki oder, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-06T17:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "65": {
+      "match": "event_20261006_1700_8b326ba6a252",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1700_8b326ba6a252",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Savsko naselje (MKL)",
+      "start_time": "2026-10-06T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "66": {
+      "match": "event_20261006_1700_bdcb08d7fa2a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1700_bdcb08d7fa2a",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Jarše (MKL)",
+      "start_time": "2026-10-06T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "67": {
+      "match": "event_20261006_1700_f5c25b7c7bcc",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1700_f5c25b7c7bcc",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Fužine (MKL)",
+      "start_time": "2026-10-06T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "68": {
+      "match": "event_20261006_1730_3c2bc2c9f3a5",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1730_3c2bc2c9f3a5",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Dobrova (MKL)",
+      "start_time": "2026-10-06T17:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "69": {
+      "match": "event_20261006_1730_e8b322d8e908",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1730_e8b322d8e908",
+      "title": "Ura pravljic v angleškem jeziku",
+      "venue": "Knjižnica Škofljica (MKL)",
+      "start_time": "2026-10-06T17:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-15/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "70": {
+      "match": "event_20261006_1800_86f5a6b1deab",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1800_86f5a6b1deab",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Gameljne (MKL)",
+      "start_time": "2026-10-06T18:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "71": {
+      "match": "event_20261006_1800_eaf8408533f4",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261006_1800_eaf8408533f4",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Horjul (MKL)",
+      "start_time": "2026-10-06T18:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-10-06/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "72": {
+      "match": "event_20261007_1600_4fcdbf1dfc0f",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261007_1600_4fcdbf1dfc0f",
+      "title": "Ura pravljic v nemškem jeziku",
+      "venue": "Knjižnica Polje (MKL)",
+      "start_time": "2026-10-07T16:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-v-nemskem-jeziku-5/2026-10-07/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "73": {
+      "match": "event_20261008_1700_261236e76ec0",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261008_1700_261236e76ec0",
+      "title": "Medgeneracijsko srečališče: delavnica izdelovanja značk",
+      "venue": "MAO, Rusjanov trg 7",
+      "start_time": "2026-10-08T17:00:00+02:00",
+      "url": "https://mao.si/dogodek/medgeneracijsko-srecalisce-delavnica-izdelovanja-znack/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "74": {
+      "match": "event_20261008_1700_9085bff91540",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261008_1700_9085bff91540",
+      "title": "Štirje muzikanti",
+      "venue": "Veliki oder, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-08T17:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "75": {
+      "match": "event_20261010_0900_f7ec09959657",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_0900_f7ec09959657",
+      "title": "11. Medeni dan",
+      "venue": "Stritarjeva ulica",
+      "start_time": "2026-10-10T09:00:00+02:00",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/11-medeni-dan-6aa113901ec1a",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "76": {
+      "match": "event_20261010_1000_be9f934d6282",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1000_be9f934d6282",
+      "title": "Dan odprtih vrat - PGD Zgornji Kašelj",
+      "venue": "PGD Zgornji Kašelj, Kašeljska cesta 95",
+      "start_time": "2026-10-10T10:00:00+02:00",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-pgd-zgornji-kaselj-6aaa94dc4b0ec",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "77": {
+      "match": "event_20261010_1000_f63573458fa5",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1000_f63573458fa5",
+      "title": "Plesno-glasbena zabava z Alenko in maskoto (abonma Cepetavček)",
+      "venue": "Hram kulture Arnolda Tovornika",
+      "start_time": "2026-10-10T10:00:00+02:00",
+      "url": "https://glasbenadezela.si/nastopi/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "78": {
+      "match": "event_20261010_1100_b8ad33f756ac",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1100_b8ad33f756ac",
+      "title": "Z odra v muzej – Štirje muzikanti (predstava in vodeni ogled)",
+      "venue": "Lutkovni muzej, Ljubljanski grad",
+      "start_time": "2026-10-10T11:00:00+02:00",
+      "url": "https://www.ljubljanskigrad.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "79": {
+      "match": "event_20261010_1500_4352040c3e5a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1500_4352040c3e5a",
+      "title": "En dan. Trije muzeji. Ena ploščad. – jesensko muzejsko popoldne (prost vstop)",
+      "venue": "Muzejska ploščad Metelkova (NMS, SEM, MSUM)",
+      "start_time": "2026-10-10T15:00:00+02:00",
+      "url": "https://www.nms.si/si/dogodki/2026/10/12403-En-dan-Trije-muzeji-Ena-ploscad",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "80": {
+      "match": "event_20261010_1600_9c1e44b08598",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1600_9c1e44b08598",
+      "title": "Z igro do dediščine 2026: brezplačno vodstvo za družine po Plečnikovi hiši",
+      "venue": "Plečnikova hiša, Karunova ulica 4",
+      "start_time": "2026-10-10T16:00:00+02:00",
+      "url": "https://mgml.si/sl/plecnikova-hisa/dogodki/2534/2026-10-10/16-00/z-igro-do-dediscine-2026-brezplacno-vodstvo-za-druzine-po-plecnikovi-hisi/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "81": {
+      "match": "event_20261010_1700_69e6442fb306",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1700_69e6442fb306",
+      "title": "Kinobalon: Za poletje, skupaj!",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-10T17:00:00+02:00",
+      "url": "https://www.kinodvor.org/film/za-poletje-skupaj/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "82": {
+      "match": "event_20261010_1700_f5f518db768b",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261010_1700_f5f518db768b",
+      "title": "Štirje muzikanti",
+      "venue": "Veliki oder, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-10T17:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "83": {
+      "match": "event_20261011_1100_3db2b6fe1c75",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261011_1100_3db2b6fe1c75",
+      "title": "SiTi Teater nedeljski popoldnevi: Repki 1",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-10-11T11:00:00+02:00",
+      "url": "https://www.sititeater.si/nedeljski-popoldnevi/repki-1/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "84": {
+      "match": "event_20261011_1700_357e4e92e629",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261011_1700_357e4e92e629",
+      "title": "SiTi Teater nedeljski popoldnevi: Repki 2",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-10-11T17:00:00+02:00",
+      "url": "https://www.sititeater.si/nedeljski-popoldnevi/repki-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "85": {
+      "match": "event_20261013_0930_8dc460030f49",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261013_0930_8dc460030f49",
+      "title": "Ura pravljic z igranjem 2+",
+      "venue": "Knjižnica Bežigrad (MKL)",
+      "start_time": "2026-10-13T09:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-10-13/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "86": {
+      "match": "event_20261014_0930_93797fb32172",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261014_0930_93797fb32172",
+      "title": "Otroški knjižni klub (za otroke, ki ne obiskujejo vrtca)",
+      "venue": "Knjižnica Šiška (MKL)",
+      "start_time": "2026-10-14T09:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/otroski-knjizni-klub-pravljicna-urica-za-otroke-ki-ne-obiskujejo-vrtca/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "87": {
+      "match": "event_20261014_1700_654129318ed4",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261014_1700_654129318ed4",
+      "title": "Zverjasec",
+      "venue": "Veliki oder, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-14T17:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "88": {
+      "match": "event_20261015_1700_9b962251c05a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261015_1700_9b962251c05a",
+      "title": "Zverjasec",
+      "venue": "Veliki oder, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "89": {
+      "match": "event_20261015_1800_cb1cb57d569e",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261015_1800_cb1cb57d569e",
+      "title": "Bikec Ferdinand (premiera)",
+      "venue": "Oder pod zvezdami, Lutkovno gledališče Ljubljana (LGL)",
+      "start_time": "2026-10-15T18:00:00+02:00",
+      "url": "https://lgl.mojekarte.si/en/all.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "90": {
+      "match": "event_20261016_1700_2244a3b3ba70",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261016_1700_2244a3b3ba70",
+      "title": "Madžarsko-slovenska glasbena ura za otroke",
+      "venue": "Lisztov inštitut Ljubljana, Barvarska steza 8",
+      "start_time": "2026-10-16T17:00:00+02:00",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6262",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "91": {
+      "match": "event_20261016_1700_e18279d14954",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261016_1700_e18279d14954",
+      "title": "Festival Hokus Pokus s Klemnom Janežičem",
+      "venue": "Pionirski dom",
+      "start_time": "2026-10-16T17:00:00+02:00",
+      "url": "https://pionirski-dom.si/aktualno/festival-hokus-pokus-s-klemnom-janezicem/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "92": {
+      "match": "event_20261017_1600_f6be83a15de3",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261017_1600_f6be83a15de3",
+      "title": "Plesno-glasbena zabava z Alenko in maskoto Dino",
+      "venue": "MAXIMUS Murska Sobota",
+      "start_time": "2026-10-17T16:00:00+02:00",
+      "url": "https://glasbenadezela.si/nastopi/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "93": {
+      "match": "event_20261018_0000_c03cea11f0a4",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261018_0000_c03cea11f0a4",
+      "title": "Praznik kostanja",
+      "venue": "Športno igrišče Vitovlje (prireditveni prostor, pod šotorom)",
+      "start_time": "2026-10-18T00:00:00+02:00",
+      "url": "https://www.vitovlje.com/dogodki/praznik-kostanja/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "94": {
+      "match": "event_20261018_0000_faab409b3532",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261018_0000_faab409b3532",
+      "title": "XXI. sejem rabljenih rezervnih delov in opreme za starodobnike",
+      "venue": "Motoklub Veterani Murska Sobota, Obrtna ulica 28, Murska Sobota",
+      "start_time": "2026-10-18T00:00:00+02:00",
+      "url": "https://www.zveza-svs.si/wp-content/uploads/2026/01/KOLEDAR-Zveze-SVS-2026.pdf",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "95": {
+      "match": "event_20261018_1100_2581648f27d5",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261018_1100_2581648f27d5",
+      "title": "Zaključni koncert tridnevne delavnice za 100 najmlajših violončelistov iz vse Slovenije (Cellofest)",
+      "venue": "Konservatorij za glasbo in balet Ljubljana (Dvorana L. M. Škerjanca), Ižanska cesta 12",
+      "start_time": "2026-10-18T11:00:00+02:00",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/zakljucni-koncert-tridnevne-delavnice-za-100-najmlajsih-violoncelistov-iz-vse-slovenije",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "96": {
+      "match": "event_20261018_1415_28d8ddf5150a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261018_1415_28d8ddf5150a",
+      "title": "Kinobalon / Premiera: Kako je Mambo postal velikan",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-18T14:15:00+02:00",
+      "url": "https://www.kinodvor.org/film/kako-je-mambo-postal-velikan/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "97": {
+      "match": "event_20261021_1600_1025c93fee2a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261021_1600_1025c93fee2a",
+      "title": "Ura pravljic v angleškem jeziku",
+      "venue": "Knjižnica Polje (MKL)",
+      "start_time": "2026-10-21T16:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-14/2026-10-21/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "98": {
+      "match": "event_20261022_1700_56334331b4ad",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261022_1700_56334331b4ad",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Prežihov Voranc (MKL)",
+      "start_time": "2026-10-22T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-22/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "99": {
+      "match": "event_20261022_1700_c87d90965055",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261022_1700_c87d90965055",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica Glinškova ploščad (MKL)",
+      "start_time": "2026-10-22T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-10-22/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "100": {
+      "match": "event_20261023_1600_0fad17a23b00",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261023_1600_0fad17a23b00",
+      "title": "Alenka Kolman – nastop za otroke",
+      "venue": "Novo mesto (natančno prizorišče ni objavljeno)",
+      "start_time": "2026-10-23T16:00:00+02:00",
+      "url": "https://glasbenadezela.si/nastopi/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "101": {
+      "match": "event_20261024_1610_b399c7b1990d",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261024_1610_b399c7b1990d",
+      "title": "Kinobalon: Skrivnost izginulih nogavic (Strašna sobota, sledi delavnica)",
+      "venue": "Kinodvor, Dvorana",
+      "start_time": "2026-10-24T16:10:00+02:00",
+      "url": "https://www.kinodvor.org/film/skrivnost-izginulih-nogavic/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "102": {
+      "match": "event_20261026_0900_370c07817cba",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261026_0900_370c07817cba",
+      "title": "MINT: Misija Računalnik od abakusa do računalnika",
+      "venue": "Knjižnica Šiška (MKL)",
+      "start_time": "2026-10-26T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-misija-racunalnik-od-abakusa-do-racunalnika-rudi-majerle/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "103": {
+      "match": "event_20261027_0830_5b48f3e04255",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261027_0830_5b48f3e04255",
+      "title": "Ura pravljic z igranjem 2+",
+      "venue": "Knjižnica Bežigrad (MKL)",
+      "start_time": "2026-10-27T09:30:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-10-27/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "104": {
+      "match": "event_20261027_0900_94b214fc7950",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261027_0900_94b214fc7950",
+      "title": "MINT: Camera obscura",
+      "venue": "Knjižnica Polje (MKL)",
+      "start_time": "2026-10-27T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-camera-obscura-matevz-paternoster-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "105": {
+      "match": "event_20261028_0900_7ff16e37a744",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261028_0900_7ff16e37a744",
+      "title": "MINT: Camera obscura",
+      "venue": "Knjižnica Prežihov Voranc (MKL)",
+      "start_time": "2026-10-28T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-camera-obscura-matevz-paternoster/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "106": {
+      "match": "event_20261028_0900_e08a35103c91",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261028_0900_e08a35103c91",
+      "title": "MINT: Kako je bilo, ko še ni bilo šivalnih strojev",
+      "venue": "Knjižnica Rudnik (MKL)",
+      "start_time": "2026-10-28T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-kako-je-bilo-ko-se-ni-bilo-sivalnih-strojev/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "107": {
+      "match": "event_20261029_0900_5eb6b1f7685c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261029_0900_5eb6b1f7685c",
+      "title": "MINT: Kako je bilo, ko še ni bilo šivalnih strojev",
+      "venue": "Knjižnica Jožeta Mazovca (MKL)",
+      "start_time": "2026-10-29T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-kako-je-bilo-ko-se-ni-bilo-sivalnih-strojev-nina-ambroz-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "108": {
+      "match": "event_20261029_0900_98d0c218647a",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261029_0900_98d0c218647a",
+      "title": "MINT: Misija Se slišimo? Radioamaterstvo in komunikacija nekoč",
+      "venue": "Knjižnica Prežihov Voranc (MKL)",
+      "start_time": "2026-10-29T10:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/mint-misija-se-slisimo-radioamaterstvo-in-komunikacija-nekoc/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "109": {
+      "match": "event_20261101_0800_633819f67d1e",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261101_0800_633819f67d1e",
+      "title": "Sejem rezervnih delov in motoristične opreme",
+      "venue": "Avtobusna postaja, Polje pri Vodicah (v slabem vremenu pod nadstreškom Gostilnice Mak)",
+      "start_time": "2026-11-01T08:00:00+01:00",
+      "url": "http://www.motoclub-mak.si/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "110": {
+      "match": "grad_20261011_1030",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261011_1030",
+      "title": "Šola zmajeslovja: Prerokba o pogubi zmajev",
+      "venue": "Ljubljanski grad",
+      "start_time": "2026-10-11T10:30:00+02:00",
+      "url": "https://dogodki.kulturnik.si/?what=otroci",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "111": {
+      "match": "grad_20261014_1730",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261014_1730",
+      "title": "Lisička sestrička",
+      "venue": "Hribarjeva dvorana, Ljubljanski grad",
+      "start_time": "2026-10-14T17:30:00+02:00",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/lisicka-sestricka-6035",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "112": {
+      "match": "grad_20261024_1700",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "grad_20261024_1700",
+      "title": "Calvinove pravljice (5+)",
+      "venue": "Grajsko gledališče, Ljubljanski grad",
+      "start_time": "2026-10-24T17:00:00+02:00",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/calvinove-pravljice-5-5977",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "113": {
+      "match": "kinobezigrad_20261003_0000_koncert",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261003_0000_koncert",
+      "title": "Glasbena predstava: Repki 2",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-10-03T00:00:00+02:00",
+      "url": "https://www.kino-bezigrad.si/predstava/koncert-repki-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "114": {
+      "match": "kinobezigrad_20261017_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261017_0000",
+      "title": "Lutkovno-igrana predstava: Ves svet je marmelada",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-10-17T00:00:00+02:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-ves-svet-je-marmelada/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "115": {
+      "match": "kinobezigrad_20261024_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261024_0000",
+      "title": "Lutkovno-igrana predstava: Poklic coprnice Mice",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-10-24T00:00:00+02:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-poklic-coprnice-mice-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "116": {
+      "match": "kinobezigrad_20261031_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261031_0000",
+      "title": "Gledališka predstava: Tai in mala čarovnica",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-10-31T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-tai-in-mala-carovnica/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "117": {
+      "match": "lipica_20261107_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "lipica_20261107_1100",
+      "title": "Tekaški pozdrav jeseni na Krasu",
+      "venue": "Kobilarna Lipica",
+      "start_time": "2026-11-07T11:00:00+01:00",
+      "url": "https://www.tekaskipozdrav.si/program",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "118": {
+      "match": "mao_20261018_1000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mao_20261018_1000",
+      "title": "MiniMAO igralnica",
+      "venue": "MAO, Rusjanov trg 7",
+      "start_time": "2026-10-18T10:00:00+02:00",
+      "url": "https://mao.si/dogodek/minimao-igralnica/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "119": {
+      "match": "mestnagalerija_20261010_1600",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "mestnagalerija_20261010_1600",
+      "title": "ZIN ZA SPOMIN (družinska fotografska delavnica)",
+      "venue": "Mestna galerija Ljubljana",
+      "start_time": "2026-10-10T16:00:00+02:00",
+      "url": "https://mgml.si/sl/mestna-galerija/eventi/2528/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "120": {
+      "match": "pumptrackgrosuplje_20261010_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "pumptrackgrosuplje_20261010_0000",
+      "title": "Pumptrack pokal Slovenije – Grosuplje",
+      "venue": "Pumptrack Grosuplje",
+      "start_time": "2026-10-10T10:00:00+02:00",
+      "url": "https://pumptrack.si/pumpaj-slovenija/koledar-2026/pumptrack-grosuplje/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "121": {
+      "match": "siti_20261010_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261010_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Glasbočasnice",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-10-10T11:00:00+02:00",
+      "url": "https://sititeater.mojekarte.si/si/glasbocasnice-otvoritev-sezone/vstopnice-1236161.html",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "122": {
+      "match": "siti_20261017_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261017_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Zmeda za dva medveda",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-10-17T11:00:00+02:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/zmeda-za-dva-medveda/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
+    },
+    "123": {
+      "match": "siti_20261024_1100",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "siti_20261024_1100",
+      "title": "SiTi Teater sobotni dopoldnevi: Picko in Packo",
+      "venue": "SiTi Teater BTC, Ameriška ulica 3",
+      "start_time": "2026-10-24T11:00:00+02:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/picko-in-packo-2/",
+      "reason": "hidden from the app",
+      "hidden_at": "2026-10-02T12:12:38Z"
     }
   },
   "decision_log": {
