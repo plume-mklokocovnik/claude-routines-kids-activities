@@ -432,7 +432,7 @@ async function move(card, target) {
 
 /* --- details dialog ------------------------------------------------------ */
 
-const dialog = { open: false, opener: null, pushed: false, pressedBackdrop: false };
+const dialog = { open: false, opener: null, pushed: false, pressedBackdrop: false, card: null };
 const BEHIND = '.bar, .progress, .tallies, .main, .pending, .tabs';
 
 function chip(parent, className, text) {
@@ -509,6 +509,7 @@ function fillDetails(card) {
 function openDetails(card, opener) {
   if (dialog.open) return;
   fillDetails(card);
+  dialog.card = card;
   dialog.open = true;
   dialog.opener = opener;
   dialog.pressedBackdrop = false;
@@ -530,6 +531,7 @@ function openDetails(card, opener) {
 function hideDetails() {
   if (!dialog.open) return;
   dialog.open = false;
+  dialog.card = null;
   el('details').hidden = true;
   document.querySelectorAll(BEHIND).forEach((node) => { node.inert = false; });
   const opener = dialog.opener;
@@ -547,6 +549,24 @@ function closeDetails() {
   }
 }
 
+// One tap: the event goes to the chosen assistant. The text is also copied, so
+// an app that opens without it (Gemini has no prefill) only needs a paste.
+// The navigation has to happen in the tap itself, before anything is awaited.
+function askAi(name, card) {
+  const target = AskAi.TARGETS[name];
+  if (!target) return;
+  const text = AskAi.prompt(card, placeText(card));
+  const copied = copyText(text);
+  if (AskAi.isAndroid(navigator.userAgent)) {
+    window.location.href = AskAi.intentUrl(name, text);
+  } else {
+    window.open(AskAi.webUrl(name, text), '_blank', 'noopener,noreferrer');
+  }
+  copied.then((ok) => {
+    toast(ok ? `Besedilo kopirano. Odpiram ${target.label} …` : `Odpiram ${target.label} …`);
+  });
+}
+
 function wireDetails() {
   const overlay = el('details');
   // A drag that starts inside the dialog and ends outside it, such as selecting
@@ -558,6 +578,10 @@ function wireDetails() {
     if (close) closeDetails();
   });
   el('details-close').addEventListener('click', closeDetails);
+  el('sheet').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-ai]');
+    if (button && dialog.card) askAi(button.dataset.ai, dialog.card);
+  });
   window.addEventListener('popstate', () => { dialog.pushed = false; hideDetails(); });
 
   overlay.addEventListener('keydown', (event) => {

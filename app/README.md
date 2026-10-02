@@ -197,6 +197,25 @@ a check mark for a moment and shows a short confirmation. It neither opens the
 dialog nor decides anything, so the ID can be pasted into `swipe.py set`,
 `hide_event.py` or a message without selecting text by hand.
 
+## Asking an AI about an event
+
+The dialog ends with **Vprašaj AI za več o dogodku** and one button each for
+ChatGPT, Claude and Gemini. A tap sends the event to that assistant, which is
+asked to search the web and confirm the date, price and venue. The text is
+English and built by [askai.js](static/askai.js) from the stored fields only.
+Anything unknown is left out rather than guessed.
+
+There is no cross-vendor standard, so the route depends on the device:
+
+- **Android.** An `intent:` link shares the text to the installed app and opens a
+  new chat with it. If the app is missing, the link falls back to the web page.
+- **Elsewhere.** The assistant's web page opens in a new tab. ChatGPT and Claude
+  take the text in the address. Gemini has no prefill, so its page opens empty.
+
+The text is always copied too, which is what makes Gemini a paste. The
+`com.*` package names in `askai.js` are the part most likely to need a fix if an
+app does not open.
+
 ## Small screens
 
 There is no visible title and no header, so the card starts near the top and the
@@ -261,6 +280,7 @@ shown unshortened.
 | `static/app.js` | Drag handling, keyboard, review lists, details dialog, saving |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
 | `static/snapshot.js` | The baked snapshot, staged decisions, the re-check and the hide list |
+| `static/askai.js` | The prompt and the links that hand an event to an AI assistant |
 
 The build also writes `mode.js` (the repository the save link points at) and
 `state.json` into the bundle. Neither is kept in `static/`.
@@ -278,10 +298,11 @@ python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
 python3 -m unittest discover -s tests -p test_days.py -v
 python3 -m unittest discover -s tests -p test_snapshot.py -v
+python3 -m unittest discover -s tests -p test_askai.py -v
 ```
 
-All five are offline. `test_days.py` and `test_snapshot.py` run the real
-`days.js` and `snapshot.js` under Node and skip themselves when Node is missing.
+All six are offline. `test_days.py`, `test_snapshot.py` and `test_askai.py` run the
+real `days.js`, `snapshot.js` and `askai.js` under Node and skip themselves when Node is missing.
 What the page draws, its layout and its gestures have no automated test: check a
 change by hand in the locally served bundle, on a phone as well as a desktop
 window.

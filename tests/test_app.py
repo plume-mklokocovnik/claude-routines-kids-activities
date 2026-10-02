@@ -79,7 +79,7 @@ class ClientContractTests(unittest.TestCase):
         static = ROOT / "app" / "static"
         self.script = (static / "app.js").read_text(encoding="utf-8")
         self.scripts = {name: (static / name).read_text(encoding="utf-8")
-                        for name in ("app.js", "days.js", "snapshot.js")}
+                        for name in ("app.js", "days.js", "snapshot.js", "askai.js")}
         self.markup = (static / "index.html").read_text(encoding="utf-8")
 
     def test_every_element_the_script_looks_up_exists(self):
@@ -102,10 +102,10 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn('id="details-close"', self.markup)
         self.assertIn('data-seg="undecided"', self.markup)
         # The modules app.js calls have to load before it does.
-        for module in ("days.js", "snapshot.js"):
+        for module in ("days.js", "snapshot.js", "askai.js"):
             with self.subTest(module=module):
                 self.assertLess(self.markup.index(f'src="{module}"'), self.markup.index('src="app.js"'))
-        for name in ("Days", "Snapshot"):
+        for name in ("Days", "Snapshot", "AskAi"):
             with self.subTest(global_name=name):
                 self.assertIn(f"{name}.", self.script)
                 self.assertIn(f"root.{name} = api", self.scripts[f"{name.lower()}.js"])

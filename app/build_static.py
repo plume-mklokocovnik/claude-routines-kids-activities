@@ -34,7 +34,7 @@ import state  # noqa: E402
 import swipe  # noqa: E402
 
 STATIC_DIR = APP_DIR / "static"
-COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js",
+COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "askai.js",
           "manifest.webmanifest", "icon-192.png", "icon-512.png")
 INBOX = "inbox/decisions.txt"
 HIDE_INBOX = "inbox/hide"
@@ -155,7 +155,7 @@ def mode_script(repo, branch, inbox, hide_inbox=HIDE_INBOX):
             f"window.SWIPE_REPO = {json.dumps(target, ensure_ascii=False)};\n")
 
 
-VERSIONED = ("app.css", "mode.js", "days.js", "snapshot.js", "app.js")
+VERSIONED = ("app.css", "mode.js", "days.js", "snapshot.js", "askai.js", "app.js")
 
 
 def version_assets(html, out):
