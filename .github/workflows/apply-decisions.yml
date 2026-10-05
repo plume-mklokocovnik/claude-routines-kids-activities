@@ -1,16 +1,30 @@
 name: Apply decisions
 
-# The published app cannot write to the repository, so it hands a patch to the
-# GitHub editor instead. Committing that file into inbox/ runs this workflow,
-# which folds the decisions into db.json with scripts/swipe.py, removes the
-# patch and republishes the site. Only someone with write access can commit,
-# which is the whole access control this path has.
+# The published app cannot write to the repository, so it hands its decisions to
+# GitHub in one of two ways. With a token stored on the device it starts this
+# workflow through the API and passes the patch as the `patch` input. Without a
+# token it opens the GitHub editor on a file in inbox/, and committing that file
+# starts this workflow through the push trigger. Either way the decisions are
+# folded into db.json with scripts/swipe.py and the site is republished.
+#
+# The dispatch route is guarded by the token. Each device holds its own
+# fine-grained token with only the Actions permission, which can start workflows
+# and can neither read nor write the code, so revoking one on GitHub cuts that
+# device off and leaves the rest. The input is untrusted text. It is read from
+# the environment, never pasted into a script, and scripts/dispatch_input.py
+# keeps only lines in the exact format.
 
 on:
   push:
     branches: [main]
     paths:
       - inbox/*.txt
+  workflow_dispatch:
+    inputs:
+      patch:
+        description: "Decisions, one code:event_id line each"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -36,41 +50,58 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Apply every patch in the inbox
+      - name: Check the dispatched patch
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PATCH: ${{ inputs.patch }}
+        # Written outside the checkout, so a reset to the fresh tip keeps it.
+        run: python3 scripts/dispatch_input.py decisions --out "$RUNNER_TEMP/dispatch-decisions.txt"
+
+      - name: Apply the decisions
         run: |
           set -euo pipefail
           shopt -s nullglob
-          files=(inbox/*.txt)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "The inbox holds no patch file. Nothing to apply."
-            exit 0
-          fi
-          for file in "${files[@]}"; do
-            echo "::group::$file"
-            cat "$file"
-            python3 scripts/swipe.py apply "$file"
-            echo "::endgroup::"
-            rm "$file"
-          done
-
-      - name: Validate the database and the reports
-        run: python3 scripts/run.py check
-
-      - name: Commit the result
-        run: |
-          set -euo pipefail
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Nothing changed."
-            exit 0
-          fi
+          staged="$RUNNER_TEMP/dispatch-decisions.txt"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: Apply decisions from the swipe app"
-          # A rejected push means another run landed first. Applying is
-          # idempotent and the app keeps unsaved decisions until the database
-          # agrees, so failing here is safe: save again from the app.
-          git push
+          for attempt in 1 2 3; do
+            files=(inbox/*.txt)
+            if [ -f "$staged" ]; then
+              files+=("$staged")
+            fi
+            if [ ${#files[@]} -eq 0 ]; then
+              echo "There is no patch to apply."
+              exit 0
+            fi
+            for file in "${files[@]}"; do
+              echo "::group::$file"
+              cat "$file"
+              python3 scripts/swipe.py apply "$file"
+              echo "::endgroup::"
+              if [ "$file" != "$staged" ]; then
+                rm "$file"
+              fi
+            done
+            python3 scripts/run.py check
+            git add -A
+            if git diff --cached --quiet; then
+              echo "Nothing changed."
+              exit 0
+            fi
+            git commit -m "chore: Apply decisions from the swipe app"
+            if git push; then
+              exit 0
+            fi
+            # A rejected push means another run landed first. A database
+            # conflict is never merged as text. Start again from the fresh
+            # tip, where the inbox files are still waiting, and apply again.
+            # Every line names an end state, so applying twice is harmless.
+            echo "Push rejected on attempt $attempt. Applying again from the fresh database."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "::error::Could not push after 3 attempts. Save again from the app."
+          exit 1
 
   publish:
     needs: apply

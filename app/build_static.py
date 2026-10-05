@@ -4,7 +4,8 @@
 GitHub Pages serves files, not processes, so there is no Python and no way to
 write to the repository. The build therefore bakes the card payload into
 `state.json`. The page stages decisions in the browser and hands a patch back
-through GitHub, which [scripts/swipe.py](../scripts/swipe.py) applies.
+through GitHub, either by starting a workflow with a device token or through the
+GitHub editor. [scripts/swipe.py](../scripts/swipe.py) applies it.
 `db.json` stays the only record: the browser holds a staging area, never a
 second source of truth.
 
@@ -34,8 +35,8 @@ import state  # noqa: E402
 import swipe  # noqa: E402
 
 STATIC_DIR = APP_DIR / "static"
-COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "askai.js",
-          "manifest.webmanifest", "icon-192.png", "icon-512.png")
+COPIED = ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "dispatch.js",
+          "askai.js", "manifest.webmanifest", "icon-192.png", "icon-512.png")
 INBOX = "inbox/decisions.txt"
 HIDE_INBOX = "inbox/hide"
 
@@ -155,7 +156,7 @@ def mode_script(repo, branch, inbox, hide_inbox=HIDE_INBOX):
             f"window.SWIPE_REPO = {json.dumps(target, ensure_ascii=False)};\n")
 
 
-VERSIONED = ("app.css", "mode.js", "days.js", "snapshot.js", "askai.js", "app.js")
+VERSIONED = ("app.css", "mode.js", "days.js", "snapshot.js", "dispatch.js", "askai.js", "app.js")
 
 
 def version_assets(html, out):

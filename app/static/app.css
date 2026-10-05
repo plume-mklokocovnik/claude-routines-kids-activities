@@ -629,6 +629,58 @@ html, body {
 
 .stat b { display: block; margin-top: 2px; font-size: 13px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 
+/* --- this device's token (static build only) ------------------------------ */
+
+.quick {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.quick[hidden] { display: none; }
+.quick-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.quick-head b { font-size: 13px; }
+.quick-state { font-size: 11px; color: var(--muted); }
+.quick-state[data-mode="on"] { color: var(--green); }
+.quick-state[data-mode="rejected"] { color: var(--red); }
+.quick-text { margin: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.quick-form { display: flex; gap: 6px; }
+
+.quick-input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #0f141b;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+
+.quick-input[hidden], .quick-btn[hidden], .quick-link[hidden] { display: none; }
+.quick-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+
+.quick-btn {
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #3a4a68;
+  background: #1d2a41;
+  color: #cfe0ff;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 650;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.quick-btn:disabled { opacity: .6; cursor: default; }
+.quick-link { color: #9db8e8; font-size: 12.5px; }
+
+.pending-btn:disabled { opacity: .6; cursor: default; }
+
 /* --- overlays ----------------------------------------------------------- */
 
 .toast {

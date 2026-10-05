@@ -22,14 +22,16 @@ running anything:
 Pages serves files rather than processes, so the build has no Python and no
 write access to the repository. It carries a baked snapshot of the database in
 `state.json` and stages decisions in the browser instead. A banner counts what
-is not yet in `db.json`, and **Shrani v GitHub** opens the GitHub editor with a
-patch file prefilled. Committing it runs
-[apply-decisions.yml](../.github/workflows/apply-decisions.yml), which applies
-the patch with `swipe.py apply`, deletes it and republishes the site. When the
-new snapshot lands, the browser sees the database already agrees and clears the
-banner by itself. After you tap save the page looks for the new snapshot every
-15 seconds for five minutes, and again whenever you come back to its tab, so the
-banner clears without a reload.
+is not yet in `db.json`, and **Shrani v GitHub** hands them to GitHub. On a
+device with a [token](#one-tap-saving) that is one tap: the page starts
+[apply-decisions.yml](../.github/workflows/apply-decisions.yml) through the API
+and passes the patch as its input. On a device without one it opens the GitHub
+editor with a patch file prefilled, and committing that file starts the same
+workflow. The workflow applies the patch with `swipe.py apply`, republishes the
+site, and when the new snapshot lands the browser sees the database already
+agrees and clears the banner by itself. After you tap save the page looks for the
+new snapshot every 15 seconds for five minutes, and again whenever you come back
+to its tab, so the banner clears without a reload.
 
 Every fetch of `state.json` asks the server to revalidate it. Pages sends that
 file with `max-age=600`, and a plain fetch obeys that: a reload just after a
@@ -53,11 +55,65 @@ Three things follow from that design, all deliberate:
 - Undo on the published version reaches back through the decisions that are
   still unsaved. Once they are in the database, undo lives there, so use
   `swipe.py undo`.
-- Saving needs write access to the repository, which is the only access control
-  on this path. You are logged in as yourself in the GitHub editor, and the page
-  itself holds no credential, so nothing in the published site can change the
-  database. A batch too large for a link is copied to the clipboard to paste
-  instead.
+- Saving needs either write access to the repository or a device token. In the
+  GitHub editor you are logged in as yourself. With a token, the token is the
+  access control, and the page holds nothing until you paste one in. Either way
+  the page cannot change the database itself, only ask a workflow to. A batch too
+  large for an editor link is copied to the clipboard to paste instead.
+
+### One-tap saving
+
+A device that holds a token saves without leaving the app. **Shrani v GitHub**
+sends the patch to GitHub's Actions API, which starts the workflow. The button
+turns into **Poslano** until the snapshot catches up. If GitHub turns the call
+down, because the token is gone or the network is, the page says why and opens the
+editor instead, so a save is never lost to a bad token.
+
+Every device has its own token. Several can be in use at once, and each is revoked
+on its own:
+
+1. In the app, open **Pregled** and scroll to **Hitro shranjevanje**. **Ustvari
+   žeton** opens GitHub's token form with the name, the lifetime and the
+   permission filled in. Rename the token after the device, such as `phone`, so the
+   list on GitHub stays readable.
+2. On that form choose **Only select repositories** and pick this repository.
+   Check that the only repository permission is **Actions: Read and write**. GitHub
+   adds read-only metadata by itself. The token cannot read or change the code.
+3. Generate it, paste it into the field in the app and tap **Vklopi**. The page
+   checks it with one read and keeps it only in that browser's storage.
+
+To cut a device off, revoke its token at
+<https://github.com/settings/personal-access-tokens>. The other devices carry on.
+That device shows **Ne deluje** on its next save and uses the editor until you
+paste a new token. **Odstrani z te naprave** only forgets the local copy. The
+token stays valid on GitHub until you revoke it there. An expired token behaves
+the same way, so a token with a one-year lifetime means one repaste a year.
+
+What the token allows, and what stands in the way of misuse:
+
+- It can start workflows and manage workflow runs, and nothing else. It cannot
+  read or write files, change workflows or reach any other repository. A leaked
+  one can send crafted decisions, which the `decision_log` makes reversible with
+  `swipe.py undo`, or cancel and disable runs. Revoke it when a device is lost.
+- Both workflows treat the patch as untrusted text. It arrives as an environment
+  variable, never inside a shell command. [dispatch_input.py](../scripts/dispatch_input.py)
+  keeps only lines in the exact `code:event_id` or single event ID format and
+  refuses the whole run on anything else, before the database is touched.
+- A content security policy in `index.html` lets the page load scripts only from
+  itself and talk only to itself and `api.github.com`, so a stray script has
+  nowhere to send a token. The page uses no inline script and writes no HTML from
+  data.
+- Browser storage is shared by every Pages site under the same account, because
+  they share one address. A token pasted here is readable by any other site there
+  that runs script, so keep that account's other sites to your own code.
+
+Two behaviours come from GitHub, not from the page. Runs of one workflow queue
+one at a time, and GitHub keeps only one waiting run. If two devices save while a
+run is going, the older waiting run is dropped. Its decisions are still staged on
+the device that sent them, the banner stays, and **Shrani v GitHub** returns after
+the five minute window, so a dropped save is a second tap and not a loss. A push
+that loses a race with a sweep is retried from the fresh database up to three
+times.
 
 Pages has to be switched on once before the first deploy can work: in the
 repository, Settings → Pages → Source → **GitHub Actions**. A workflow token is
@@ -123,14 +179,16 @@ lists and from an empty Zavrnjeno list.
 
 Tapping it opens a confirmation in Slovenian, **Skrijem vse zavrnjene?**, with the
 number of events in the list. It also counts any that are still unsaved, because
-they are hidden too. **Prekliči** closes it. **Skrij vse** opens the GitHub editor
-with a file named `inbox/hide/hide-<hash>.txt` prefilled with the ID of every
-event in the list. The file name is a hash of its content, so the same list always
-gets the same name and the page never reads the clock. A screen explains the one
-click left, **Commit changes**, and the page then looks for the rebuilt snapshot
-like it does after a save.
+they are hidden too. **Prekliči** closes it. **Skrij vse** hands the ID of every
+event in the list to GitHub, the same two ways as a save. A device with a token
+starts [hide-events.yml](../.github/workflows/hide-events.yml) directly. Otherwise
+the GitHub editor opens with a file named `inbox/hide/hide-<hash>.txt` prefilled.
+The file name is a hash of its content, so the same list always gets the same name
+and the page never reads the clock. A screen explains the one click left,
+**Commit changes**, and the page then looks for the rebuilt snapshot like it does
+after a save.
 
-Committing the file runs [hide-events.yml](../.github/workflows/hide-events.yml).
+Either route runs the same workflow.
 It calls `hide_event.py apply`, which hides each event by its exact ID, as a single
 event and never as a series or a show, with the reason `hidden from the app`.
 Then it deletes the file, checks the database and republishes. If the push loses a
@@ -287,6 +345,7 @@ shown unshortened.
 | `static/app.js` | Drag handling, keyboard, review lists, details dialog, saving |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
 | `static/snapshot.js` | The baked snapshot, staged decisions, the re-check and the hide list |
+| `static/dispatch.js` | This device's token and the call that starts a save workflow |
 | `static/askai.js` | The prompt and the links that hand an event to an AI assistant |
 
 The build also writes `mode.js` (the repository the save link points at) and
@@ -305,11 +364,14 @@ python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
 python3 -m unittest discover -s tests -p test_days.py -v
 python3 -m unittest discover -s tests -p test_snapshot.py -v
+python3 -m unittest discover -s tests -p test_dispatch.py -v
+python3 -m unittest discover -s tests -p test_dispatch_input.py -v
 python3 -m unittest discover -s tests -p test_askai.py -v
 ```
 
-All six are offline. `test_days.py`, `test_snapshot.py` and `test_askai.py` run the
-real `days.js`, `snapshot.js` and `askai.js` under Node and skip themselves when Node is missing.
+All eight are offline. `test_days.py`, `test_snapshot.py`, `test_dispatch.py` and
+`test_askai.py` run the real `days.js`, `snapshot.js`, `dispatch.js` and `askai.js`
+under Node and skip themselves when Node is missing.
 What the page draws, its layout and its gestures have no automated test: check a
 change by hand in the locally served bundle, on a phone as well as a desktop
 window.

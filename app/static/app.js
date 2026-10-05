@@ -1,7 +1,8 @@
 'use strict';
 
 /* The deployed build ships a baked snapshot. Decisions are staged in this
-   browser, and saving hands them to GitHub to be written into db.json. */
+   browser, and saving hands them to GitHub to be written into db.json. A device
+   with a token starts the workflow itself. One without opens the GitHub editor. */
 
 const THRESHOLD_X = 96;   // horizontal pixels before a swipe counts
 const THRESHOLD_Y = 112;  // downward pixels before "mogoče" counts
@@ -25,6 +26,8 @@ const st = {
   raw: null, data: null, view: 'swipe', seg: 'interested',
   busy: false, dragging: false,
   hiding: [],  // events handed to GitHub to be hidden, until the snapshot drops them
+  sending: false,  // a workflow is being started right now
+  sent: '',        // the patch the last successful send carried
 };
 
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
@@ -41,6 +44,12 @@ const store = Snapshot.createStaticStore({
   fetch: (...args) => window.fetch(...args),
   storage: browserStorage(),
   notify: (text, bad) => toast(text, bad),
+});
+
+const dispatcher = Dispatch.createClient({
+  fetch: (...args) => window.fetch(...args),
+  storage: browserStorage(),
+  repo: window.SWIPE_REPO,
 });
 
 function setData(raw) {
@@ -93,6 +102,7 @@ function render(options) {
 
   renderStats();
   renderPending();
+  renderQuick();
   renderStack(options);
   renderList();
 }
@@ -122,10 +132,46 @@ function pendingPhrase(count) {
 
 function renderPending() {
   if (!store.pending) return;
-  const { count } = store.pending();
+  const { count, patch } = store.pending();
   const banner = el('pending');
   banner.hidden = count === 0;
   if (count) el('pending-text').textContent = pendingPhrase(count);
+  if (!count) st.sent = '';
+  // Sent and still unsaved: the same patch would only start the workflow again.
+  // After the watch window the button returns, in case the run never happened.
+  const waiting = count > 0 && st.sent === patch && Date.now() < watchUntil;
+  const button = el('save');
+  button.disabled = st.sending || waiting;
+  button.textContent = st.sending ? 'Pošiljam …' : waiting ? 'Poslano' : 'Shrani v GitHub';
+}
+
+const QUICK_TEXT = {
+  off: 'Z žetonom ta naprava shrani z enim dotikom, brez urejevalnika GitHub. '
+    + 'Vsaka naprava ima svoj žeton, ki ga na GitHubu prekličeš posebej.',
+  on: 'Ta naprava shranjuje z enim dotikom. Žeton je le na njej. '
+    + 'Prekličeš ga v nastavitvah GitHub, drugim napravam to ne škodi.',
+  rejected: 'GitHub žetona ne sprejme. Je pretekel ali preklican? Odstrani ga in vnesi novega. '
+    + 'Do takrat shranjuješ prek urejevalnika.',
+};
+
+// The token settings sit at the bottom of the review list. Nothing about the
+// token leaves this function: the field is emptied once it is stored.
+function renderQuick() {
+  const section = el('quick');
+  section.hidden = !dispatcher.available();
+  if (section.hidden) return;
+  const on = dispatcher.enabled();
+  const bad = on && dispatcher.rejected();
+  const mode = bad ? 'rejected' : on ? 'on' : 'off';
+  el('quick-state').textContent = { off: 'Izklopljeno', on: 'Vklopljeno', rejected: 'Ne deluje' }[mode];
+  el('quick-state').dataset.mode = mode;
+  el('quick-text').textContent = QUICK_TEXT[mode];
+  el('quick-token').hidden = mode === 'on';
+  el('quick-on').hidden = mode === 'on';
+  el('quick-off').hidden = !on;
+  const link = el('quick-new');
+  link.hidden = mode === 'on';
+  if (!link.hidden) link.href = dispatcher.templateUrl();
 }
 
 function fill(node, name, text) {
@@ -672,12 +718,80 @@ async function handOff(patch, file, screen, words) {
   return true;
 }
 
+// Start the workflow with this device's token. False when there is no token or
+// GitHub turned the call down, and the caller then uses the editor instead.
+async function sendPatch(kind, patch) {
+  if (!dispatcher.enabled()) return false;
+  st.sending = true;
+  renderPending();
+  let result;
+  try {
+    result = await dispatcher.send(kind, patch);
+  } finally {
+    st.sending = false;
+  }
+  if (result.ok) {
+    watchUntil = Date.now() + WATCH_MS;
+    return true;
+  }
+  toast(`${result.message} Odpiram urejevalnik.`, true);
+  renderQuick();
+  return false;
+}
+
 async function save() {
-  if (!store.pending) return;
+  if (!store.pending || st.sending) return;
   const { count, patch } = store.pending();
   if (!count) return;
+  if (await sendPatch('decisions', patch)) {
+    st.sent = patch;
+    renderPending();
+    toast('Poslano. Baza se osveži v približno minuti.');
+    return;
+  }
+  renderPending();
   await handOff(patch, null, 'handoff', {
     copied: 'Odločitve so kopirane.', tooMany: 'Preveč odločitev za povezavo.',
+  });
+}
+
+/* --- this device's token -------------------------------------------------- */
+
+async function rememberToken() {
+  const field = el('quick-token');
+  const button = el('quick-on');
+  if (!field.value.trim() || button.disabled) return;
+  button.disabled = true;
+  button.textContent = 'Preverjam …';
+  try {
+    const result = await dispatcher.remember(field.value);
+    if (!result.ok) {
+      toast(result.message, true);
+      return;
+    }
+    field.value = '';
+    toast('Hitro shranjevanje je vklopljeno.');
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Vklopi';
+    renderQuick();
+    renderPending();
+  }
+}
+
+function forgetToken() {
+  const done = dispatcher.forget();
+  toast(done ? 'Žeton je odstranjen s te naprave. Na GitHubu ga lahko še prekličeš.'
+    : 'Žetona ni bilo mogoče odstraniti.', !done);
+  renderQuick();
+  renderPending();
+}
+
+function wireQuick() {
+  el('quick-on').addEventListener('click', rememberToken);
+  el('quick-off').addEventListener('click', forgetToken);
+  el('quick-token').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { event.preventDefault(); rememberToken(); }
   });
 }
 
@@ -733,6 +847,11 @@ async function confirmHide() {
   closeConfirm();
   if (!ids.length) return;
   const { patch, name } = Snapshot.hidePatch(ids);
+  if (await sendPatch('hide', patch)) {
+    st.hiding = ids;
+    toast('Poslano. Dogodki se skrijejo v približno minuti.');
+    return;
+  }
   const repo = window.SWIPE_REPO || {};
   const folder = (repo.hide_inbox || 'inbox/hide').replace(/\/+$/, '');
   const opened = await handOff(patch, `${folder}/${name}`, 'hide-handoff', {
@@ -806,6 +925,8 @@ function awaitingGithub() {
 function watchForSnapshot() {
   setInterval(() => {
     if (Date.now() < watchUntil && awaitingGithub()) checkSnapshot();
+    // Brings the save button back once the watch window has run out.
+    renderPending();
   }, POLL_MS);
 }
 
@@ -853,6 +974,7 @@ function wire() {
     toast(copied ? 'Odločitve so kopirane.' : 'Kopiranje ni uspelo.', !copied);
   });
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
+  wireQuick();
 
   wireDetails();
   wireConfirm();

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0e13">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Dogodki za otroke · izbiranje</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icon-192.png">
@@ -71,6 +72,23 @@
             <div class="stat"><span class="stat-label">Dogodkov</span><b id="st-total">0</b></div>
             <div class="stat"><span class="stat-label">Brezplačnih</span><b id="st-free">0</b></div>          </section>
           <div class="rows" id="rows"></div>
+          <section class="quick" id="quick" aria-labelledby="quick-title">
+            <div class="quick-head">
+              <b id="quick-title">Hitro shranjevanje</b>
+              <span class="quick-state" id="quick-state">Izklopljeno</span>
+            </div>
+            <p class="quick-text" id="quick-text"></p>
+            <div class="quick-form" id="quick-form">
+              <input class="quick-input" id="quick-token" type="password" autocomplete="off"
+                     autocapitalize="off" spellcheck="false" placeholder="github_pat_…"
+                     aria-label="Žeton GitHub za to napravo">
+              <button class="quick-btn" id="quick-on" type="button">Vklopi</button>
+            </div>
+            <div class="quick-actions">
+              <button class="quick-btn" id="quick-off" type="button" hidden>Odstrani z te naprave</button>
+              <a class="quick-link" id="quick-new" target="_blank" rel="noopener noreferrer">Ustvari žeton ↗</a>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -167,6 +185,7 @@
            Klikni <b>Commit changes</b>. Delovni tok jih vpiše v <code>db.json</code>
            in osveži to stran.</p>
         <p>Odločitve ostanejo tukaj, dokler se ne pojavijo v bazi.</p>
+        <p>Brez urejevalnika gre z žetonom: <b>Pregled</b>, na dnu <b>Hitro shranjevanje</b>.</p>
         <button class="wide-btn" id="handoff-close" type="button">Nazaj na izbiranje</button>
       </div>
     </div>
@@ -249,6 +268,7 @@
 <script src="mode.js"></script>
 <script src="days.js"></script>
 <script src="snapshot.js"></script>
+<script src="dispatch.js"></script>
 <script src="askai.js"></script>
 <script src="app.js"></script>
 </body>

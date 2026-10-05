@@ -1,17 +1,30 @@
 name: Hide events
 
 # The published app cannot write to the repository, so its "hide all Zavrnjeno"
-# button hands a list of event IDs to the GitHub editor instead. Committing that
-# file into inbox/hide/ runs this workflow, which hides each event by its exact
-# ID with scripts/hide_event.py, removes the list and republishes the site. Only
-# someone with write access can commit, which is the whole access control here.
-# Each ID is hidden on its own, never as a series or a venue.
+# button hands a list of event IDs to GitHub in one of two ways. With a token
+# stored on the device it starts this workflow through the API and passes the
+# list as the `ids` input. Without a token it opens the GitHub editor on a file
+# in inbox/hide/, and committing that file starts this workflow through the push
+# trigger. Either way each event is hidden by its exact ID with
+# scripts/hide_event.py and the site is republished. Each ID is hidden on its own,
+# never as a series or a venue.
+#
+# The dispatch route is guarded by the device's token, which can start workflows
+# and nothing else. The input is untrusted text. It is read from the
+# environment, never pasted into a script, and scripts/dispatch_input.py keeps
+# only lines that are a single ID.
 
 on:
   push:
     branches: [main]
     paths:
       - inbox/hide/*.txt
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Event IDs to hide, one per line"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -37,16 +50,27 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Hide every event listed in the inbox
+      - name: Check the dispatched list
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PATCH: ${{ inputs.ids }}
+        # Written outside the checkout, so a reset to the fresh tip keeps it.
+        run: python3 scripts/dispatch_input.py hide --out "$RUNNER_TEMP/dispatch-hide.txt"
+
+      - name: Hide every listed event
         run: |
           set -euo pipefail
           shopt -s nullglob
+          staged="$RUNNER_TEMP/dispatch-hide.txt"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3; do
             files=(inbox/hide/*.txt)
+            if [ -f "$staged" ]; then
+              files+=("$staged")
+            fi
             if [ ${#files[@]} -eq 0 ]; then
-              echo "The hide inbox holds no list. Nothing to hide."
+              echo "There is no list to hide."
               exit 0
             fi
             for file in "${files[@]}"; do
@@ -54,7 +78,9 @@ jobs:
               cat "$file"
               python3 scripts/hide_event.py apply "$file" --reason "hidden from the app"
               echo "::endgroup::"
-              rm "$file"
+              if [ "$file" != "$staged" ]; then
+                rm "$file"
+              fi
             done
             python3 scripts/run.py check
             git add -A

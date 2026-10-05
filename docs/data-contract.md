@@ -114,7 +114,8 @@ as before. A future end-date migration needs its own reviewed contract.
 ## Decision Patches
 
 Decisions taken where the database cannot be written, currently the published
-static build of the app, arrive as a patch file in `inbox/`. One `code:event_id`
+static build of the app, arrive as a patch file in `inbox/`, or as the `patch`
+input of a workflow run that a device token started. One `code:event_id`
 per line, with `i`, `m`, `r` and `c` for interested, maybe, rejected and
 cleared. Blank lines and `#` comments are ignored. A malformed line aborts the
 whole patch rather than applying part of it.
@@ -126,7 +127,9 @@ event ID the database does not hold is reported and skipped. It is never
 created, and a missing event is never reconstructed from a patch, which carries
 no event details to reconstruct it from. The staging copy in a browser is not a
 record and is never read back as state: a patch is applied only after someone
-with write access commits it.
+with write access commits it or a device token starts the workflow. The dispatch
+input is untrusted text. It keeps only lines in this exact format, so a malformed
+line aborts the run.
 
 ## Run Records and Recovery
 

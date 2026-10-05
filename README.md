@@ -97,7 +97,8 @@ also works in a later session. The same operations have a phone-sized browser
 UI, with swipe gestures for the three categories and a review list per category,
 plus one for everything still undecided. Tapping any event there opens all of its
 details. It is published to GitHub Pages, where it reads a baked snapshot and
-hands decisions back through the repository for `swipe.py apply` to write:
+hands decisions back to GitHub for `swipe.py apply` to write, with one tap on a
+device that holds a token and through the GitHub editor otherwise:
 
 <https://plume-mklokocovnik.github.io/claude-routines-kids-activities/>
 
@@ -119,9 +120,9 @@ local conversation memory or provider-specific SDK is required. The cloud agent
 does research. The scripts validate and apply its structured results.
 
 The included GitHub Actions workflows validate changes and report consistency,
-publish the app to Pages, apply decision patches committed into `inbox/` and
-hide the event lists committed into `inbox/hide/`. One also hides expired events
-nightly.
+publish the app to Pages, apply decision patches committed into `inbox/` or sent
+by the app and hide the event lists committed into `inbox/hide/` or sent by the
+app. One also hides expired events nightly.
 None of them discovers events or installs a cloud schedule for sweeps. Scheduling and
 write credentials remain with the existing cloud runtime. Direct pushes or PRs
 follow that runtime's explicit permissions, never an automatic protection bypass.

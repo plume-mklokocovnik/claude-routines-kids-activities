@@ -24,6 +24,12 @@ Each line names the wanted end state, not a change, so applying the same patch
 twice does nothing the second time. An event ID that is not in the database is
 reported and skipped. Nothing is invented to match it.
 
+A device with a token never writes this file. The app starts the same workflow
+through the API and passes the lines as its `patch` input, and the workflow checks
+them with [scripts/dispatch_input.py](../scripts/dispatch_input.py) before applying.
+See [one-tap saving](../app/README.md#one-tap-saving). The inbox is the fallback for
+a device without a token.
+
 The same file can be applied by hand:
 
 ```bash
@@ -46,6 +52,9 @@ One exact event ID per line. Blank lines and `#` comments are ignored:
 grad_20261014_1730
 pumptrackgrosuplje_20261010_0000
 ```
+
+A device with a token sends the same lines as the `ids` input of the workflow
+instead of writing a file.
 
 Every ID is hidden as a single event, never as a series or a venue, with the
 reason `hidden from the app`. An ID already hidden is left alone and one that is

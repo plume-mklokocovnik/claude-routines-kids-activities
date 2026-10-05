@@ -79,7 +79,7 @@ class ClientContractTests(unittest.TestCase):
         static = ROOT / "app" / "static"
         self.script = (static / "app.js").read_text(encoding="utf-8")
         self.scripts = {name: (static / name).read_text(encoding="utf-8")
-                        for name in ("app.js", "days.js", "snapshot.js", "askai.js")}
+                        for name in ("app.js", "days.js", "snapshot.js", "dispatch.js", "askai.js")}
         self.markup = (static / "index.html").read_text(encoding="utf-8")
 
     def test_every_element_the_script_looks_up_exists(self):
@@ -102,10 +102,10 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn('id="details-close"', self.markup)
         self.assertIn('data-seg="undecided"', self.markup)
         # The modules app.js calls have to load before it does.
-        for module in ("days.js", "snapshot.js", "askai.js"):
+        for module in ("days.js", "snapshot.js", "dispatch.js", "askai.js"):
             with self.subTest(module=module):
                 self.assertLess(self.markup.index(f'src="{module}"'), self.markup.index('src="app.js"'))
-        for name in ("Days", "Snapshot", "AskAi"):
+        for name in ("Days", "Snapshot", "Dispatch", "AskAi"):
             with self.subTest(global_name=name):
                 self.assertIn(f"{name}.", self.script)
                 self.assertIn(f"root.{name} = api", self.scripts[f"{name.lower()}.js"])
@@ -120,6 +120,35 @@ class ClientContractTests(unittest.TestCase):
             for sink in ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval("):
                 with self.subTest(script=name, sink=sink):
                     self.assertNotIn(sink, source)
+
+    def test_the_page_can_only_talk_to_itself_and_the_github_api(self):
+        # A device token sits in this browser's storage. A policy that allows no
+        # other script and no other destination is what keeps a stray script from
+        # sending it anywhere.
+        policy = re.search(r'http-equiv="Content-Security-Policy" content="([^"]+)"', self.markup)
+        self.assertIsNotNone(policy)
+        rules = dict(rule.strip().split(" ", 1) for rule in policy.group(1).split(";"))
+        self.assertEqual(rules["script-src"] if "script-src" in rules else rules["default-src"], "'self'")
+        self.assertEqual(rules["connect-src"], "'self' https://api.github.com")
+        self.assertEqual(rules["object-src"], "'none'")
+        self.assertEqual(rules["base-uri"], "'none'")
+        # Nothing inline for the policy to trip over, and nothing loaded from afar.
+        self.assertNotRegex(self.markup, r"<script(?![^>]*\bsrc=)")
+        self.assertNotRegex(self.markup, r"\son[a-z]+=")
+        self.assertNotRegex(self.markup, r'<(?:script|link|img)[^>]+(?:src|href)="https?://')
+
+    def test_the_token_stays_out_of_urls_logs_and_the_page(self):
+        client = self.scripts["dispatch.js"]
+        self.assertNotIn("console.", client)
+        self.assertNotIn("location", client)
+        # It only travels in a header, and the field that takes it is a password field.
+        self.assertIn("Authorization: `Bearer ${token}`", client)
+        self.assertRegex(self.markup, r'<input[^>]*id="quick-token"[^>]*type="password"|'
+                                      r'<input[^>]*type="password"[^>]*id="quick-token"')
+        for name, source in self.scripts.items():
+            if name != "dispatch.js":
+                with self.subTest(script=name):
+                    self.assertNotIn("Bearer", source)
 
     def test_counters_sit_on_the_buttons_and_nothing_else_competes_with_the_card(self):
         for category in ("interested", "maybe", "rejected"):
