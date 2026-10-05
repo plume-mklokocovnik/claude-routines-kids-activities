@@ -226,10 +226,13 @@ week ahead at most and almost never reaches a ticket seller. Sweep the free-entr
 and treat the ticketed calendars as the place the named artists show up, not as the category's
 main yield.
 
-On the artist watchlist: those seven names are a standing check, not a source. Most runs will
+On the artist watchlist: those nine names are a standing check, not a source. Most runs will
 return nothing for most of them, and that is the normal result rather than a failed sweep. Čuki
 and Ribič Pepe tour the most, the two choirs follow institutional concert dates, and Adi Smolar
-plays mostly adult venues where a toddler is already a stretch.
+plays mostly adult venues where a toddler is already a stretch. Dejan Dogaja and Vila Eksena are
+booked by municipalities and libraries, so their appearances show up on the organiser's page and
+never on their own sites. Free and paid ones are both saved. See the Dejan Dogaja and Vila Eksena
+section in [`artists.md`](artists.md).
 
 ---
 

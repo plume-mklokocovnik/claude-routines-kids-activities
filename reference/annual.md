@@ -61,7 +61,8 @@ Window is 2026-09-21 to 2026-12-21. These fire:
 |---|---|---|---|
 | Gregorčki, pozdrav pomladi | 03-11, 15:00–20:00 | Eipprova ulica, Gradaščica, Trnovo | ★ Free. Children float candlelit wooden boats downstream. Workshops and music. Moves to SEM if it rains |
 | Dan Zemlje, ZOO | 04-22, running into the May Day holidays | ZOO Ljubljana | Included in the ticket |
-| Mednarodni dan muzejev | 05-18 | Nationwide | Free admission and family programmes at most museums |
+| **Za družine brezplačno**, Teden družin | 05-15 to 05-22 | Nationwide, 46 to 47 museums and galleries in 2026 | ★ Free admission, often with family workshops and guided tours. Run by ZPMS since 2000 (27th year in 2026), starting on the International Day of Families. Each institution picks one day or the whole week. ⚠️ The institution list is published only days ahead (2026-05-12 for a 05-15 start), so expect a run lead first. No registration. In Ljubljana: Mestni muzej, Arheopark Emona, Plečnikova hiša, Bežigrajska galerija and Muzej Banke Slovenije took part in 2026 |
+| Mednarodni dan muzejev | 05-18, inside Teden družin | Nationwide | Free admission and family programmes at most museums. One check covers it together with the row above, so a museum is saved once |
 | Dan slovenskega športa | 09-23 | Nationwide | National holiday, free sessions |
 | Evropski teden športa | 09-23 to 09-30 | Nationwide | Clubs register free trials by age band |
 | Svetovni dan živali + dan oskrbnikov | Weekend nearest 10-04 | ZOO Ljubljana | Keeper talks, enrichment demos |
@@ -103,7 +104,7 @@ belongs in `db.json`.
 | Fixture | Rule | Recent years | Confidence |
 |---|---|---|---|
 | **Teden otroka** | Starts the first Monday of October, runs the week | 2026-10-05 to 10-11 | **high**, the rule has held since 1954. ★ Free workshops at museums, libraries and Pionirski dom |
-| **Poletna muzejska noč** | Third Saturday of June, 18:00–24:00 | 2026-06-20 | **high**, rule holds since 2002 |
+| **Poletna muzejska noč** (also called Muzejska noč, the *Noč muzejev* of this country) | Third Saturday of June, 18:00 to 24:00 | 2026-06-20, 24th edition: 85 institutions, 59 towns, 364 events | **high**, rule holds since 2002. ★ Free entry everywhere and many family programmes. Searching *Noč muzejev* alone returns the French *Nuit des musées* of 23 May, so add `Slovenija` |
 | **Ljubljanski festival športa** | First Saturday of September, from 09:00, Park Tivoli | 2024-09-07, 2025-09-06, 2026-09-05 | **high**, three years confirmed |
 | **Čarobni dan** | Last Sunday of August, 10:00–18:00, Arboretum | 2022-08-28, 2025-08-31, 2026-08-30 | **high** |
 | **Grajski dnevi** | May, marking the castle's purchase on 1905-05-16 | Annually, 15th edition | **medium**. ★ Medieval camp, knights, falconry, archery, face painting, free castle tours |
@@ -218,7 +219,8 @@ shopping centres, roughly a week ahead.
 | Igraj se z mano | `https://igrajsezmano.eu/festival/ljubljana/` |
 | Svetlobna gverila | `https://www.svetlobnagverila.net/` |
 | Knjižnica pod krošnjami | `https://www.knjiznicapodkrosnjami.si/` |
-| Poletna muzejska noč | `https://sms-muzeji.si/` |
+| Poletna muzejska noč, Mednarodni dan muzejev | `https://sms-muzeji.si/` |
+| Za družine brezplačno | `https://www.zpms.si/` (news post each May, example `https://www.zpms.si/2026/05/12/szj-akcija-za-druzine-brezplacno-ob-15-maju-mednarodnem-dnevu-druzin/`). The institution list is a PDF linked from the post and its address changes every year |
 | Maraton Franja | `https://franja.org/` |
 | Ana Desetnica, Ana Plamenita, Ana Mraz | `https://www.anamonro.si/festivali/festivalski-program/` |
 | Trnovfest | `https://www.cskfp.si/` |

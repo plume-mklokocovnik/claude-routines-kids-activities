@@ -142,9 +142,9 @@ družinski festival Slovenija brezplačno
 ### Pass 3 — children's concerts
 
 Two sweeps, in this order. 3A finds the concerts the routine would otherwise miss entirely, 3B
-looks for seven named performers the household actually wants to see. Run 3A first and run it
+looks for nine named performers the household actually wants to see. Run 3A first and run it
 every time, because the generic sweep is what keeps the category honest in the many weeks when
-none of the seven has a date. Everything found in either sweep gets `category: koncert`.
+none of the nine has a date. Everything found in either sweep gets `category: koncert`.
 
 **Geography carve-out.** Pass 2's destination-value test does not apply to 3B. A watchlist artist
 is worth the trip on their own, anywhere in Slovenia, which is the entire point of naming them.
@@ -205,6 +205,24 @@ verified links and the confirmation rule.
 | Alenka Kolman | Own site |
 | Adi Smolar | Facebook and Instagram |
 | Ribič Pepe | Own site and Facebook |
+| Dejan Dogaja | The organiser's event page. His own site lists no dates, Facebook and Instagram are leads only |
+| Vila Eksena | The organiser's event page. Her own site is a booking brochure with no calendar, Facebook is a lead only |
+
+**Price never gates a 3B save.** For all nine artists, save every confirmed appearance, free
+and paid alike, ticketed halls included. The reader decides whether to go, so record the price
+text exactly as the source states it and set `is_free` only when entry is free for everyone.
+Free is a label on the event, not a condition for saving it.
+
+**Dejan Dogaja and Vila Eksena.** Both are hired by municipalities, libraries and festivals, so
+their appearances are listed by the organiser and never on their own sites. The free ones are
+municipal stages and library summer programmes, the paid ones are ticketed festivals and
+children's carnivals. Query each name every month with `<ime> vstop prost <mesec> <leto>` as
+well as the two templates above, so the free stages are not buried under ticket sellers, then
+confirm on the organiser's own page. An entry that is free only for small children (the *Poli
+žur* pattern, under 4 free and capped at three children) is a paid event, so keep `is_free`
+false and put the rule in `price_text`. Dejan Dogaja's band also plays adult functions
+(weddings, *gasilske veselice*, late-night parties). Save only a listing that names a
+children's or family programme, and skip the rest under §1.
 
 **What the search tool actually returns.** It is US-region and Slovenian local results come back
 thin and noisy. Measured on the 2026-09-22 research pass: the top "official" hit for Čuki was
@@ -252,12 +270,41 @@ spominska hiša brezplačen vstop
 ```
 
 Run each undated first, then re-run the top three with a month anchor for every month in the
-horizon, the same pattern as 3A. A one-day promotion tied to a fixed nationwide date (*Mednarodni
-dan muzejev*, 05-18; *Ta veseli dan kulture*, 12-03) is already a fixture in
-[`annual.md`](annual.md) and does not need a query once its window opens — only search for it to
-confirm the current year's programme. A multi-day or venue-specific promotion, the Narodna
-galerija week among them, is what this pass exists to catch, because nothing else in this file
-looks for it.
+horizon, the same pattern as 3A. A one-day promotion tied to a fixed nationwide date (*Ta veseli
+dan kulture*, 12-03) is already a fixture in [`annual.md`](annual.md) and does not need a query
+once its window opens. Only search for it to confirm the current year's programme. A multi-day
+or venue-specific promotion, the Narodna galerija week among them, is what this pass exists to
+catch, because nothing else in this file looks for it.
+
+#### Named campaigns checked every run
+
+Three nationwide campaigns are checked by name on every run while their window is inside the
+horizon, because each one turns dozens of museums free at once. The fixture rows are in
+[`annual.md`](annual.md). This table is the check.
+
+| Campaign | Window | Where it is announced | What to save |
+|---|---|---|---|
+| **Za družine brezplačno** (Teden družin) | 05-15 to 05-22 every year. Run by Zveza prijateljev mladine Slovenije (ZPMS), 27th year in 2026 | `zpms.si` news post plus a PDF list of 46 to 47 museums and galleries, with each one's free day or week | One event per institution, with its free days folded into `price_text` |
+| **Mednarodni dan muzejev** | 05-18, which always falls inside Teden družin | The participating museums' own sites, `sms-muzeji.si` | Only a museum that is not already saved for Teden družin, otherwise extend that event's `price_text` |
+| **Poletna muzejska noč** | Third Saturday of June, 18:00 to 24:00. 24th edition 2026-06-20 | `sms-muzeji.si`, then each museum's own page | One event per museum or programme the household could attend |
+
+* **Noč muzejev is this campaign.** In Slovenia the nationwide museum night is *Poletna muzejska
+  noč*, and press sometimes calls it *Muzejska noč*. A search for *Noč muzejev* returns the French
+  *Nuit des musées* (23 May 2026) first, so add `Slovenija` or `Skupnost muzejev Slovenije` to the
+  query and ignore Île-de-France results. Checked 2026-10-05, no separate nationwide Slovenian
+  event under that exact name was found. A single museum that advertises its own *Noč muzejev* is
+  an ordinary Pass 4 candidate.
+* **Not published yet is not a miss.** The 2026 Teden družin list appeared on 2026-05-12, three
+  days before it started. While the window is inside the horizon but the list is missing, record
+  a lead (title, `zpms.si`, "list of institutions not yet published") and check again next run.
+  Never build event rows from last year's list. Institutions change every year.
+* **Free means free for the family.** Teden družin and the museum night open admission to
+  everyone, so `is_free: true`. An institution that discounts or only offers a free guided hour
+  is not free entry, so keep the exact wording in `price_text`.
+* **Queries.** `Za družine brezplačno <leto>`, `Teden družin <leto> brezplačen vstop muzej`,
+  `Mednarodni dan muzejev <leto> brezplačen vstop`, `Poletna muzejska noč <leto> program`.
+  Add the city or region for a Ljubljana or regional sweep. Ljubljana's MGML locations
+  (Mestni muzej, Arheopark Emona, Plečnikova hiša) join both campaigns every year.
 
 Apply the same confirmation rule as 3B: a free-entry promotion is often announced first on a
 venue's Facebook page, so confirm the dates against the venue's own site before saving, and put
@@ -295,7 +342,7 @@ Portorož, Koper, Izola, Bled and Kranjska Gora.
 * **Aggregators:** `napovednik.com/za-otroke`, Visit Ljubljana events (filter *Prost vstop* + *Za družine*), `dogodki.kulturnik.si/?what=otroci`
 * **MOL calendar, every run, fetched with curl:** `curl -sL 'https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100'`. Never the default view, which returns 20 of 54 and paginates. Never the `cat=124` Otroci filter, which returns zero. Sweep the whole list and apply the target-audience rule in §1. Full recipe in [`links.md`](links.md).
 * **Ljubljana venues:** LGL, MKL, Kinodvor Kinobalon, Kino Bežigrad (*Predstave in delavnice*), Mala ulica, MGML, Narodna galerija, SEM, MAO, Cankarjev dom, Ljubljanski grad, ZOO Ljubljana
-* **Free entry (Pass 4):** the venues above plus `sms-muzeji.si` (Museums of Slovenia, the nationwide aggregator behind *Poletna muzejska noč*) and any *rojstna hiša* / *spominska hiša* a query turns up
+* **Free entry (Pass 4):** the venues above plus `sms-muzeji.si` (Museums of Slovenia, the nationwide aggregator behind *Poletna muzejska noč*), `zpms.si` (the *Za družine brezplačno* list) and any *rojstna hiša* / *spominska hiša* a query turns up
 * **Sport and movement:** Argeta Junior KoloPark Pokal, Pumpaj Slovenija, Ljubljanski festival športa, MOL *Gremo na brezplačne vadbe*, Šport Ljubljana, Dan slovenskega športa
 * **Runs:** `tekaskeprireditve.si` (Otroški tek and Družinski tek categories), `tekaski-koledar.si`, Lumpi tek
 * **Pop-ups:** Citypark, ALEJA, Supernova, BTC. Published as news posts a week ahead at most, so sweep weekly
@@ -303,7 +350,7 @@ Portorož, Koper, Izola, Bled and Kranjska Gora.
 
 ### Seasonal checks
 Run the matching query when the month comes round. The full table is in `sources.md`:
-Bobri (Jan–Apr) · Igraj se z mano (May) · Poletna muzejska noč (June) · Ana Desetnica (late June) ·
+Bobri (Jan–Apr) · Za družine brezplačno and Mednarodni dan muzejev (15 to 22 May) · Igraj se z mano (May) · Poletna muzejska noč (June) · Ana Desetnica (late June) ·
 Trnfest and free open-air cinema (Aug) · Čarobni dan (late Aug) · Ljubljanski festival športa,
 Otroški bazar, Pikin festival, Dan slovenskega športa (Sep) · Lumpi tek and ZOO Noč čarovnic (Oct) ·
 Veseli december (Dec)

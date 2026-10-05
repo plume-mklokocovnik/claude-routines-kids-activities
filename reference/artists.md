@@ -21,6 +21,38 @@ below.
 | 5 | **Alenka Kolman** | `https://www.alenkakolman.si/` | not confirmed | not confirmed | 80+ recorded children's songs, also organises children's events |
 | 6 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
 | 7 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
+| 8 | **Dejan Dogaja** (Dogaja Band) | `https://dejandogaja.si/`, booking only, no event list | `facebook.com/dejan.krajnc` | `instagram.com/dejan_krajnc` | Dejan Krajnc, ex-frontman of Poskočni muzikanti. A party band with a children's animation programme. Plays pust, summer town festivals and New Year's farewells for children. Also plays adult functions that do not qualify. Booking `info@dejandogaja.si` |
+| 9 | **Vila Eksena** | `https://vila-eksena.si/`, booking brochure, no event list | `facebook.com/VilaEksena` (from a search result, not opened) | none found | Singing fairy with superhero characters, songs and dancing, billed for children of all ages. Booked by libraries, municipalities and festivals. Booking `info@vila-eksena.si` |
+
+## Dejan Dogaja and Vila Eksena: where their appearances turn up
+
+**Price never gates a save, for any artist on the list.** Free and paid appearances are both
+recorded and the reader decides. Free is only a label (`is_free`).
+
+**Verified:** 2026-10-05, with web searches and fetches of both official sites. Neither site
+publishes a calendar, so every date comes from the organiser who booked them. The rows below
+are evidence of where their appearances turn up, free and paid, not dates to reuse.
+
+| Appearance seen | Organiser's page | Entry | Pattern to search for |
+|---|---|---|---|
+| Vila Eksena, *zaključni pravljični koncert*, Park Sonce, Lucija, 2026-08-26 20:00 | `piran.si/dogodek/` and `pir.sik.si/napovednik/` (Mestna knjižnica Piran, project *Lučke v parku Sonce*) | **Free** (*Vstop prost*) | Library and municipal summer programmes, July and August |
+| Dejan Dogaja, *Goriško poletje*, Ploščad Silvana Furlana, Nova Gorica, 2026-08-05 19:00 | `dogodki.turizem-novagorica-vipavskadolina.si` | **Free** (*Vstop prost*), cancelled in rain | Municipal summer festivals |
+| Dejan Dogaja, *Otroško slovo od starega leta*, Laško courtyard, 2024-12-28 17:00 | `lasko.info/dogodek/` | Price not stated on the page | Late December children's farewells to the year |
+| Dejan Dogaja and Vila Eksena, *Poli žur*, Arena Campus Sava Ptuj, 2026-02-12 17:00 | `ptujinfo.com`, `vstopnice.campus.si` | **Paid**, 12 €. Children under 4 free, three per ticket | Pust, early February |
+| Both and Čuki, *Veveričkin otroški festival*, ŠRC Polena, Lenart, 2026-06-12 to 06-14 | `ovtar24.si` | **Paid**. Children 1 to 13 need a ticket, accompanying adults enter free | June |
+| Dejan Dogaja, *Odisejino otroško pustovanje* (venue and year not recorded) | `ljubljanainfo.com/dogodek/` | **Paid**, 15 € per child. Under 2 free | Pust, February |
+
+* **Where to look.** Municipal and library calendars, regional tourist boards (`piran.si`,
+  `obalaplus.si`, `turizem-novagorica-vipavskadolina.si`, `ptujinfo.com`, `lasko.info`,
+  `  ljubljanainfo.com`) and the Pass 1 and Pass 2 aggregators. A dated query with `vstop prost`
+  surfaces the free ones, the plain name queries surface the ticketed ones. Facebook event
+  pages are leads only.
+* **Free test.** Entry free for everyone sets `is_free: true`. Free for small children only, or a
+  free adult with a paid child, is a paid event. Put the rule in `price_text`.
+* **Children's programme only.** Dejan Dogaja's band mostly plays adult functions. Save a listing
+  only when it names a children's or family programme.
+* **Both are 3B names.** The geography carve-out in [discovery.md](discovery.md) §2 applies. Set
+  `city`, `outside_ljubljana` and `travel` so the reader sees the cost of the trip.
 
 ## Do not retry
 

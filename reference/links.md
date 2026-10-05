@@ -132,6 +132,7 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | ZOO programmes | `https://www.zoo.si/ponudba` | ok |
 | ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, checked 2026-09-24 — consistent with the existing `zoo.si/ponudba/noc-carovnic` seasonal 404 below; likely goes live closer to end of October |
 | Museums of Slovenia | `https://sms-muzeji.si/` | ok, Poletna muzejska noč host |
+| ZPMS, Za družine brezplačno | `https://www.zpms.si/` | unverified root. The 2026 post was read through search on 2026-10-05. The 15 to 22 May campaign is a news post each May with a PDF list of institutions, posted only days ahead |
 
 ## Sport, runs, wheels
 
@@ -255,6 +256,10 @@ in [`artists.md`](artists.md). This is the calendar side of the same sweep.
 | Ribič Pepe | `https://ribicpepe.si/` | Live appearances of the RTV character | ok |
 | Alenka Kolman | `https://www.alenkakolman.si/` | Own dates | ok |
 | Romana Krajnčan | `https://www.romanakr.com/` | Own dates. Redirects to `/nova/vstopna.asp` | ok |
+| Dejan Dogaja | `https://dejandogaja.si/` | Biography and booking contact only, no event list. Dates come from organisers | ok, checked 2026-10-05, no calendar |
+| Vila Eksena | `https://vila-eksena.si/` | Booking brochure with prices, no event list. A leftover `/hello-world/` WordPress post is not news | ok, checked 2026-10-05, no calendar |
+| Piran events | `https://www.piran.si/dogodek/` and `https://www.pir.sik.si/napovednik/` | Municipal and library calendar where Vila Eksena's free 2026-08-26 show was listed | unverified roots, the event pages were read on 2026-10-05 |
+| Nova Gorica and Vipava valley events | `https://dogodki.turizem-novagorica-vipavskadolina.si/sl/koledar-dogodkov/` | Goriško poletje, where Dejan Dogaja's free 2026-08-05 programme was listed | unverified root, the event page was read on 2026-10-05 |
 
 **Wrong guesses, all 404 on 2026-09-22:** `napovednik.com/prireditve/koncert`,
 `/prireditve/glasbena-prireditev`, `/prireditve/koncerti`, `/prireditve/glasba`,

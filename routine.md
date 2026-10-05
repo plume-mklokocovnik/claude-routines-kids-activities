@@ -47,6 +47,26 @@ text. Derive month names and years from the current horizon, including year roll
 | `free_entry` | Dated free museum, gallery and memorial-house entry | Discovery policy Pass 4 |
 | `avto_moto` | Veteran cars, motorbikes and visitor meetups, Slovenia-wide | Regional calendar and SVAMZ recipe |
 
+Named checks. Settle each of these explicitly every run, even when the pass around it
+finds nothing. A campaign whose window is outside the horizon is not due, so skip it
+silently. One that is inside the horizon but not published yet is a lead, never a
+candidate, and is checked again on the next run.
+
+| Check | Pass | Window and where to look |
+|---|---|---|
+| Za družine brezplačno (Teden družin) | `free_entry` | 15 to 22 May. ZPMS announces it only days ahead, so expect a lead first |
+| Mednarodni dan muzejev | `free_entry` | 18 May, inside Teden družin. Participating museum sites |
+| Poletna muzejska noč (Noč muzejev) | `free_entry` | Third Saturday of June. `sms-muzeji.si` |
+| Dejan Dogaja, free and paid appearances | `concerts_watchlist` | Any month. Organiser calendars, since he publishes none |
+| Vila Eksena, free and paid appearances | `concerts_watchlist` | Any month. Organiser calendars, since she publishes none |
+
+Price never gates a save for any watchlist artist. Save free and paid appearances alike and
+let the reader decide.
+
+Queries, lead times and the free-entry test are in
+[Pass 4](reference/discovery.md#pass-4--free-entry-to-museums-galleries-and-memorial-houses)
+and [artists.md](reference/artists.md).
+
 Run generic concerts before the watchlist. Check [annual fixtures](reference/annual.md)
 only when their event or booking window is relevant. Record early booking leads
 outside the event horizon as leads, not active candidates.
