@@ -143,6 +143,50 @@ function renderPending() {
   const button = el('save');
   button.disabled = st.sending || waiting;
   button.textContent = st.sending ? 'Pošiljam …' : waiting ? 'Poslano' : 'Shrani v GitHub';
+  // Once sent, the workflow will write them whatever this page does, so there is
+  // nothing left to cancel here.
+  const cancel = el('discard');
+  if (!count || st.sending || waiting) disarmDiscard();
+  cancel.disabled = st.sending || waiting;
+  cancel.classList.toggle('is-armed', discarding.armed);
+  cancel.textContent = discarding.armed ? 'Zavrži?' : '✕';
+  cancel.title = waiting ? 'Že poslano, odločitev ni več mogoče preklicati'
+    : discarding.armed ? 'Še en dotik zavrže vse neshranjene odločitve'
+      : 'Zavrži neshranjene odločitve';
+}
+
+// Dropping decisions cannot be undone, so the first tap only asks and the second,
+// within a few seconds, does it.
+const discarding = { armed: false, timer: null };
+
+function disarmDiscard() {
+  clearTimeout(discarding.timer);
+  discarding.armed = false;
+}
+
+async function discardPending() {
+  if (!store.discard || st.busy || st.sending) return;
+  const { count } = store.pending();
+  if (!count) return;
+  if (!discarding.armed) {
+    discarding.armed = true;
+    clearTimeout(discarding.timer);
+    discarding.timer = setTimeout(() => { disarmDiscard(); renderPending(); }, 3500);
+    renderPending();
+    return;
+  }
+  disarmDiscard();
+  st.busy = true;
+  try {
+    setData(await store.discard());
+    st.sent = '';
+    render({ returning: true });
+    toast(`Zavrženo: ${count}`);
+  } catch (error) {
+    toast(error.message, true);
+  } finally {
+    st.busy = false;
+  }
 }
 
 const QUICK_TEXT = {
@@ -967,6 +1011,7 @@ function wire() {
   el('undo').addEventListener('click', undo);
 
   el('save').addEventListener('click', save);
+  el('discard').addEventListener('click', discardPending);
   el('copy').addEventListener('click', async () => {
     const { count, patch } = store.pending ? store.pending() : { count: 0 };
     if (!count) return;

@@ -155,6 +155,42 @@ class SnapshotTests(unittest.TestCase):
         head = "# kids-activities decisions\n"
         self.assertEqual(got, [head, head + "c:a\n", head + "c:a\nm:b\n", head + "c:a\n", 0, 0])
 
+    def test_discarding_drops_every_unsaved_decision_and_only_those(self):
+        got = evaluate("""
+          const storage = memory();
+          const server = pages(snapshot([card('a', 'interested'), card('b'), card('c', 'maybe')]));
+          let store = make(storage, server);
+          await store.load();
+          await store.decide('b', 'rejected');       // staged on a card in the deck
+          await store.decide('c', 'rejected');       // staged over a saved decision
+          await store.clear('a');                    // staged clearing of a saved decision
+          const before = store.pending().count;
+          const state = await store.discard();
+          store = make(storage, server);             // a reload must not bring them back
+          const reloaded = await store.load();
+          return { before, pending: store.pending(), stored: stored(storage),
+                   deck: ids(state.deck), interested: ids(state.groups.interested),
+                   maybe: ids(state.groups.maybe), rejected: ids(state.groups.rejected),
+                   unsaved: [].concat(...Object.values(state.groups)).some((row) => row.unsaved),
+                   reloadedDeck: ids(reloaded.deck), undo: state.undo.available };""")
+        self.assertEqual(got["before"], 3)
+        self.assertEqual(got["pending"], {"count": 0, "patch": "# kids-activities decisions\n"})
+        self.assertEqual(got["stored"], [])
+        self.assertEqual((got["interested"], got["maybe"], got["rejected"]), (["a"], ["c"], []))
+        self.assertEqual((got["deck"], got["reloadedDeck"]), (["b"], ["b"]))
+        self.assertFalse(got["unsaved"])
+        self.assertFalse(got["undo"])
+
+    def test_discarding_with_nothing_staged_changes_nothing(self):
+        got = evaluate("""
+          const store = make(memory(), pages(snapshot([card('a'), card('b', 'maybe')])));
+          await store.load();
+          const state = await store.discard();
+          return { counts: state.counts, pending: store.pending().count };""")
+        self.assertEqual(got["pending"], 0)
+        self.assertEqual(got["counts"], {"interested": 0, "maybe": 1, "rejected": 0,
+                                         "undecided": 1, "decided": 1, "total": 2})
+
     def test_tampered_or_broken_storage_is_ignored(self):
         got = evaluate("""
           const cases = ['{not json', '"text"', '{}',

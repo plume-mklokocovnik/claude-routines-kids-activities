@@ -300,6 +300,13 @@ A swipe is staged in the browser until it is saved, so the page can be closed at
 any point. Reopening continues with the remaining cards. The ↶ button and `Z`
 undo staged decisions only.
 
+To drop all of them at once, use the **✕** at the right of the unsaved banner.
+The first tap turns it into **Zavrži?** and the second, within a few seconds,
+discards every unsaved decision and returns the cards to where the last snapshot
+has them. Nothing already in `db.json` is touched. Once a save has been sent, the
+button is disabled until the five minute window ends, because the workflow will
+write those decisions whatever the page does.
+
 Once a decision is in `db.json`, `swipe.py undo` reverses it. Each change appends
 a row to the `decision_log` table, and undo reverses the newest row that has not
 been undone yet, restoring the previous category and its timestamp. Nothing is

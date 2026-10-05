@@ -172,6 +172,13 @@
         }
         return build();
       },
+      // Drop every decision that is not in the database yet. The cards go back to
+      // where the snapshot has them. Nothing already saved is touched.
+      discard: async () => {
+        log = [];
+        writeLog();
+        return build();
+      },
       pending: () => {
         const entries = [...wanted().entries()].sort((a, b) => (a[0] < b[0] ? -1 : 1));
         const lines = ['# kids-activities decisions'];
