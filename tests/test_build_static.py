@@ -41,7 +41,7 @@ class BuildTests(unittest.TestCase):
 
     def test_bundle_holds_the_page_and_a_baked_snapshot(self):
         build_static.build(self.path, self.out, repo="owner/name")
-        for name in ("index.html", "app.css", "app.js", "days.js", "snapshot.js", "dispatch.js", "askai.js",
+        for name in ("index.html", "app.css", "app.js", "days.js", "filters.js", "snapshot.js", "dispatch.js", "askai.js",
                      "mode.js", "state.json",
                      ".nojekyll",
                      "manifest.webmanifest", "icon-192.png", "icon-512.png"):
@@ -59,7 +59,7 @@ class BuildTests(unittest.TestCase):
         import re
         build_static.build(self.path, self.out, repo="owner/name")
         page = (self.out / "index.html").read_text(encoding="utf-8")
-        tags = set(re.findall(r'(?:src|href)="(?:app\.css|mode|days|snapshot|dispatch|askai|app)[.a-z]*\?v=([0-9a-f]{10})"', page))
+        tags = set(re.findall(r'(?:src|href)="(?:app\.css|mode|days|filters|snapshot|dispatch|askai|app)[.a-z]*\?v=([0-9a-f]{10})"', page))
         self.assertEqual(len(tags), 1)
         for name in build_static.VERSIONED:
             self.assertRegex(page, rf'"{re.escape(name)}\?v=[0-9a-f]{{10}}"')

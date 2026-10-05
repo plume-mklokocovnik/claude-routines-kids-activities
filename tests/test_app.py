@@ -79,7 +79,7 @@ class ClientContractTests(unittest.TestCase):
         static = ROOT / "app" / "static"
         self.script = (static / "app.js").read_text(encoding="utf-8")
         self.scripts = {name: (static / name).read_text(encoding="utf-8")
-                        for name in ("app.js", "days.js", "snapshot.js", "dispatch.js", "askai.js")}
+                        for name in ("app.js", "days.js", "filters.js", "snapshot.js", "dispatch.js", "askai.js")}
         self.markup = (static / "index.html").read_text(encoding="utf-8")
         self.styles = (static / "app.css").read_text(encoding="utf-8")
 
@@ -103,10 +103,10 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn('id="details-close"', self.markup)
         self.assertIn('data-seg="undecided"', self.markup)
         # The modules app.js calls have to load before it does.
-        for module in ("days.js", "snapshot.js", "dispatch.js", "askai.js"):
+        for module in ("days.js", "filters.js", "snapshot.js", "dispatch.js", "askai.js"):
             with self.subTest(module=module):
                 self.assertLess(self.markup.index(f'src="{module}"'), self.markup.index('src="app.js"'))
-        for name in ("Days", "Snapshot", "Dispatch", "AskAi"):
+        for name in ("Days", "Filters", "Snapshot", "Dispatch", "AskAi"):
             with self.subTest(global_name=name):
                 self.assertIn(f"{name}.", self.script)
                 self.assertIn(f"root.{name} = api", self.scripts[f"{name.lower()}.js"])
@@ -229,6 +229,102 @@ class ClientContractTests(unittest.TestCase):
         self.assertIn("openDetails(card, null)", self.script)
         self.assertIn('class="sr-only">Dogodki za otroke', self.markup)
         self.assertNotIn('<h1>', self.markup)
+
+    def test_rows_are_display_only_and_the_dialog_holds_the_decision_buttons(self):
+        row = re.search(r'<template id="row-template">.*?</template>', self.markup, re.S).group(0)
+        self.assertNotIn("data-move", row)
+        self.assertNotIn("row-actions", row)
+        self.assertNotIn("mini", row)
+        self.assertEqual(row.count("<button"), 1)  # the title that opens the dialog
+        self.assertIn('class="row-more"', row)
+        for gone in ("row-actions", ".mini", "data-move"):
+            with self.subTest(gone=gone):
+                self.assertNotIn(gone, self.styles)
+                self.assertNotIn(gone, self.script)
+        group = re.search(r'<div class="sheet-decide" id="d-decide".*?</div>\s*</div>', self.markup, re.S).group(0)
+        self.assertEqual(re.findall(r'data-pick="(\w*)"', group), ["interested", "maybe", "rejected", ""])
+        self.assertIn("Odločitev", group)
+        sheet = self.markup[self.markup.index('id="sheet"'):]
+        order = [sheet.index(part) for part in ('id="d-notes"', 'id="d-decide"', 'id="d-source"', 'id="d-maps"')]
+        self.assertEqual(order, sorted(order))
+        # Only a row of Pregled offers the group. The deck card opens the dialog without it.
+        self.assertIn("openDetails(card, opener, { decide: true })", self.script)
+        self.assertIn("openDetails(card, null)", self.script)
+        self.assertIn("move(card, target)", self.script)
+
+    def test_the_filter_bar_and_selection_bar_sit_between_the_tabs_and_the_list(self):
+        review = re.search(r'<section class="view" id="view-review".*?<section class="view" id="view-info"',
+                           self.markup, re.S).group(0)
+        parts = ('id="segments"', 'id="filterbar"', 'id="list"', 'id="selbar"')
+        positions = [review.index(part) for part in parts]
+        self.assertEqual(positions, sorted(positions))
+        for identifier in ("filter-search", "filter-search-clear", "filters-toggle", "filters-badge",
+                           "select-toggle", "filter-panel", "filter-from", "filter-to", "filter-cats",
+                           "filter-free", "filter-chips", "filter-result", "filter-clear",
+                           "sel-count", "sel-all", "sel-done", "sel-actions"):
+            with self.subTest(identifier=identifier):
+                self.assertEqual(review.count(f'id="{identifier}"'), 1)
+        toggle = re.search(r'<button[^>]*id="filters-toggle"[^>]*>', review).group(0)
+        self.assertIn('aria-expanded="false"', toggle)
+        self.assertIn('aria-controls="filter-panel"', toggle)
+        search = re.search(r'<input[^>]*id="filter-search"[^>]*>', review).group(0)
+        self.assertIn('type="search"', search)
+        self.assertIn('placeholder="Išči dogodke"', search)
+        self.assertEqual(len(re.findall(r'type="date"', review)), 2)
+        self.assertIn('id="filter-result" aria-live="polite"', review)
+        self.assertIn('role="switch"', review)
+
+    def test_segment_counters_have_their_own_attribute_and_the_true_totals_stay(self):
+        segments = re.search(r'<div class="segments".*?</div>', self.markup, re.S).group(0)
+        self.assertNotIn("data-count=", segments)
+        self.assertEqual(len(re.findall(r'data-seg-count="\w+"', segments)), 4)
+        self.assertIn("[data-seg-count]", self.script)
+        # The badges on the swipe buttons keep reading the unfiltered counts.
+        self.assertIn("document.querySelectorAll('[data-count]')", self.script)
+
+    def test_selection_and_filters_are_reset_and_guarded_where_the_spec_says(self):
+        self.assertIn("filters: Filters.empty()", self.script)
+        self.assertNotIn("localStorage", self.script[self.script.index("/* --- filters"):
+                                                      self.script.index("/* --- swipe mechanics")])
+        # The round hide-all button is off while selecting or filtering.
+        fab = self.script[self.script.index("function renderFab"):self.script.index("function segmentRows")]
+        self.assertIn("!st.selecting", fab)
+        self.assertIn("Filters.isActive(st.filters)", fab)
+        # Leaving Pregled and Escape both end the selection.
+        self.assertIn("if (name !== 'review') setSelecting(false);", self.script)
+        self.assertIn("event.key === 'Escape' && st.selecting", self.script)
+        self.assertIn("decideMany", self.script)
+        self.assertIn("Premaknjeno: ${ids.length}", self.script)
+        self.assertIn("Ni zadetkov za izbrane filtre.", self.script)
+        # Rows are rows of real checkboxes with an accessible name.
+        self.assertIn('<input class="row-check" type="checkbox">', self.markup)
+        self.assertIn("aria-label", self.script[self.script.index("function buildRow"):
+                                                self.script.index("function renderFab")])
+
+    def test_every_wire_function_is_called(self):
+        defined = set(re.findall(r"^function (wire\w*)\(", self.script, re.M))
+        called = set(re.findall(r"^\s+(wire\w*)\(\);", self.script, re.M)) | {"wire"}
+        self.assertIn("wireFilters", defined)
+        self.assertIn("wireSelection", defined)
+        self.assertEqual(sorted(defined - called), [])
+
+    def test_filter_code_never_reads_the_wall_clock_or_the_device_calendar(self):
+        region = self.script[self.script.index("/* --- filters"):self.script.index("/* --- swipe mechanics")]
+        for name, source in (("app.js filters", region), ("filters.js", self.scripts["filters.js"])):
+            for local in ("Date.now", "new Date()", ".getDay(", ".getDate(", ".getMonth(", ".getFullYear(",
+                          ".getHours(", "getTimezoneOffset", "toLocale", "Days.today"):
+                with self.subTest(source=name, local=local):
+                    self.assertNotIn(local, source)
+
+    def test_the_interactive_controls_are_touch_sized_and_show_focus(self):
+        for selector in (".search-input", ".bar-btn", ".dec", ".sel-link", ".switch"):
+            block = re.search(r"(?m)^" + re.escape(selector) + r"(?:, [.\w-]+)* \{[^}]*\}", self.styles)
+            with self.subTest(selector=selector):
+                self.assertIsNotNone(block)
+                self.assertRegex(block.group(0), r"(?:min-)?height: 44px")
+        self.assertIn(".dec:focus-visible", self.styles)
+        self.assertIn(".row-check:focus-visible + .row-box", self.styles)
+        self.assertIn(".dec[hidden]", self.styles)
 
 
 if __name__ == "__main__":

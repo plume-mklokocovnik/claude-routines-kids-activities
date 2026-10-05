@@ -135,8 +135,12 @@
       };
     }
 
-    function record(id, action, before, after) {
+    function stage(id, action, before, after) {
       log.push({ event_id: id, action: action, before: before || null, after: after || null });
+    }
+
+    function record(id, action, before, after) {
+      stage(id, action, before, after);
       writeLog();
     }
 
@@ -163,6 +167,18 @@
       clear: async (id) => {
         const current = decisionOf(id);
         if (current) record(id, 'clear', current, null);
+        return build();
+      },
+      // Move many events to one category, or back to the deck when it is empty.
+      // Each event gets its own log row, so undo still steps back one event at a
+      // time, but storage is written and the state rebuilt once.
+      decideMany: async (ids, category) => {
+        const target = category || null;
+        [...new Set(ids)].forEach((id) => {
+          const current = decisionOf(id);
+          if (current !== target) stage(id, target ? 'set' : 'clear', current, target);
+        });
+        writeLog();
         return build();
       },
       undo: async () => {

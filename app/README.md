@@ -237,8 +237,17 @@ Tap an event, or its title, to open a dialog with everything known about it:
 when and where, with a Maps link, the age, the full price text, the notes, the
 source and its link, when it was first seen, its decision and when it was made,
 and its ID. Close it with the ✕, by tapping outside it, with `Esc`, or with the
-phone's back gesture, which closes the dialog instead of leaving the app. The
-dialog only reads. To change a category, use the buttons on the row.
+phone's back gesture, which closes the dialog instead of leaving the app.
+
+Rows are display-only. A tap anywhere on a row opens the dialog, and the title
+is a real button for keyboard use. When the dialog was opened from a row it holds
+an **Odločitev** group after the facts and notes: **Zanima**, **Mogoče**, **Zavrni**
+and **V kup**, with the current category highlighted. **V kup** is absent for an
+event that is still undecided. A tap moves the event, closes the dialog, shows a
+toast such as *Premaknjeno v Mogoče* and puts focus on the row that took its
+place. The dialog opened from a deck card has no such group, since the deck has
+its own buttons and gestures. The old **Vir** button on the row is the dialog's
+**Vir dogodka** link.
 
 Tapping the card in the deck opens it too. A finger that lifts within half a
 second having moved under 8 pixels is a tap, and anything else is a swipe. That
@@ -249,6 +258,37 @@ the ID text or on the small copy icon beside it copies the ID, turns the icon in
 a check mark for a moment and shows a short confirmation. It neither opens the
 dialog nor decides anything, so the ID can be pasted into `swipe.py set`,
 `hide_event.py` or a message without selecting text by hand.
+
+### Filtering and bulk edit
+
+Under the four tabs sits one row with a search field, **Filtri** and **Izberi**.
+Matching is done by [filters.js](static/filters.js), which Node can test.
+
+- **Search** looks in the title, venue, city, notes and event category. It ignores
+  case and diacritics, so `cebelica` finds `čebelica`. `Esc` in the field clears it.
+- **Filtri** opens a panel with **Datum od** and **Datum do**, the presets
+  **Danes**, **Ta vikend** and **Naslednjih 7 dni**, a chip for each event category
+  in the data and **Samo brezplačni**. The badge counts the active filters of the
+  panel. The range is inclusive on the stored day, and an event with no date does
+  not match while a date limit is set. An inverted range is swapped and says so.
+  The presets use Ljubljana's today from `Days.today()` and ISO strings, never the
+  device calendar.
+- Active filters show as removable chips with a **Počisti filtre** button, and a
+  live line such as *Prikazano 6 od 25* gives the numbers for the tab. When
+  nothing matches, the list says so and offers the same button.
+- Filters live in memory only, so a reload clears them. They survive switching
+  tabs and views. The tab counters show matches while a filter is on, and the
+  badges on the swipe buttons and the tab bar keep the true totals.
+- **Izberi** puts a checkbox on every row, and a tap on a row toggles it. The bar
+  at the bottom shows **Izbrano N**, **Izberi vse** (the rows shown after filters)
+  or **Počisti izbiro**, the category buttons and **Končaj**. One tap stages all the
+  decisions through the same store, with one write and one redraw, and shows
+  *Premaknjeno: N*. The button for the tab's own category is left out, and **V kup**
+  is left out on **Neodločeno**.
+- Selection belongs to the tab. Changing tab clears it, a filter change drops rows
+  that are no longer shown, and leaving Pregled or pressing `Esc` ends the mode.
+- The hide-all button is hidden while selecting or filtering, because it hides
+  every rejected event and not only the ones shown.
 
 ## Info and settings
 
@@ -372,8 +412,9 @@ shown unshortened.
 | `build_static.py` | Card presenter. Bakes `db.json` into the Pages bundle |
 | `static/index.html` | Markup and the card/row templates |
 | `static/app.css` | Phone frame, card stack, direction gradients, edge glow |
-| `static/app.js` | Drag handling, keyboard, review lists, details dialog, saving |
+| `static/app.js` | Drag handling, keyboard, review lists, filter bar, selection, details dialog, saving |
 | `static/days.js` | Today's date in Ljubljana and the past-event rule |
+| `static/filters.js` | Search, date range, categories and presets for the review lists |
 | `static/snapshot.js` | The baked snapshot, staged decisions, the re-check and the hide list |
 | `static/dispatch.js` | This device's token and the call that starts a save workflow |
 | `static/askai.js` | The prompt and the links that hand an event to an AI assistant |
@@ -393,15 +434,16 @@ python3 -m unittest discover -s tests -p test_app.py -v
 python3 -m unittest discover -s tests -p test_swipe.py -v
 python3 -m unittest discover -s tests -p test_build_static.py -v
 python3 -m unittest discover -s tests -p test_days.py -v
+python3 -m unittest discover -s tests -p test_filters.py -v
 python3 -m unittest discover -s tests -p test_snapshot.py -v
 python3 -m unittest discover -s tests -p test_dispatch.py -v
 python3 -m unittest discover -s tests -p test_dispatch_input.py -v
 python3 -m unittest discover -s tests -p test_askai.py -v
 ```
 
-All eight are offline. `test_days.py`, `test_snapshot.py`, `test_dispatch.py` and
-`test_askai.py` run the real `days.js`, `snapshot.js`, `dispatch.js` and `askai.js`
-under Node and skip themselves when Node is missing.
+All nine are offline. `test_days.py`, `test_filters.py`, `test_snapshot.py`,
+`test_dispatch.py` and `test_askai.py` run the real `days.js`, `filters.js`,
+`snapshot.js`, `dispatch.js` and `askai.js` under Node and skip themselves when Node is missing.
 What the page draws, its layout and its gestures have no automated test: check a
 change by hand in the locally served bundle, on a phone as well as a desktop
 window.

@@ -75,6 +75,38 @@ class SnapshotTests(unittest.TestCase):
                                          "undecided": 1, "decided": 2, "total": 3})
         self.assertEqual(got["pending"], {"count": 2, "patch": "# kids-activities decisions\ni:a\nm:b\n"})
 
+    def test_decide_many_stages_each_event_and_writes_storage_once(self):
+        got = evaluate("""
+          const storage = memory();
+          let writes = 0;
+          const counting = { getItem: storage.getItem, setItem: (k, v) => { writes += 1; storage.setItem(k, v); } };
+          const store = make(counting, pages(snapshot([card('a'), card('b', 'rejected'), card('c'), card('d')])));
+          await store.load();
+          const before = writes;
+          const state = await store.decideMany(['a', 'b', 'c', 'a'], 'maybe');
+          const written = writes - before;
+          const undone = await store.undo();
+          const cleared = await store.decideMany(['a', 'b'], '');
+          return { maybe: ids(state.groups.maybe), deck: ids(state.deck), written,
+                   pending: store.pending(), afterUndo: ids(undone.groups.maybe),
+                   deckAfterClear: ids(cleared.deck) };""")
+        self.assertEqual(got["maybe"], ["a", "b", "c"])
+        self.assertEqual(got["deck"], ["d"])
+        self.assertEqual(got["written"], 1)
+        # One row per event, so undo steps back one event at a time.
+        self.assertEqual(got["afterUndo"], ["a", "b"])
+        # Cleared events return to the deck, including one the database had rejected.
+        self.assertEqual(got["deckAfterClear"], ["a", "b", "c", "d"])
+        self.assertEqual(got["pending"]["count"], 2)
+
+    def test_decide_many_skips_events_already_in_the_target(self):
+        got = evaluate("""
+          const store = make(memory(), pages(snapshot([card('a', 'maybe'), card('b')])));
+          await store.load();
+          await store.decideMany(['a'], 'maybe');
+          return store.pending();""")
+        self.assertEqual(got["count"], 0)
+
     def test_saving_and_reloading_clears_the_banner(self):
         # The reported case: three decisions, committed, workflow ran, page reloaded.
         got = evaluate("""

@@ -28,6 +28,11 @@ const st = {
   hiding: [],  // events handed to GitHub to be hidden, until the snapshot drops them
   sending: false,  // a workflow is being started right now
   sent: '',        // the patch the last successful send carried
+  filters: Filters.empty(),  // memory only, so a reload starts unfiltered
+  rangeFixed: false,   // the last change put the dates in order
+  panelOpen: false,    // the filter panel is expanded
+  selecting: false,    // rows are being ticked for a bulk change
+  selected: new Set(), // ids ticked in the tab that is showing
 };
 
 const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
@@ -448,58 +453,94 @@ function buildRow(card) {
   fill(node, 'meta', extra.concat(card.notes).join(' · '));
   node.classList.toggle('is-unsaved', Boolean(card.unsaved));
 
-  const source = node.querySelector('[data-f="url"]');
-  if (card.url) source.href = card.url;
-  else source.hidden = true;
-
-  node.querySelectorAll('[data-move]').forEach((button) => {
-    const target = button.dataset.move;
-    button.classList.toggle('is-on', target === card.decision);
-    // Sending an undecided event "back to the deck" would change nothing.
-    if (target === '') button.hidden = !card.decision;
-    button.addEventListener('click', () => move(card, target));
-  });
+  const check = node.querySelector('.row-check');
+  const opener = node.querySelector('.row-title');
+  const picked = st.selected.has(card.event_id);
+  node.classList.toggle('is-selected', picked);
+  check.checked = picked;
+  check.setAttribute('aria-label', `Izberi: ${card.title}`);
+  check.addEventListener('change', () => setPicked(card, check.checked));
+  if (st.selecting) {
+    // The checkbox is the control now. The title only passes the tap on.
+    opener.tabIndex = -1;
+    opener.removeAttribute('aria-haspopup');
+  }
 
   // The title is a real button, so keyboard and screen-reader users can open
-  // the dialog. A tap anywhere else on the row opens it too, unless it landed
-  // on a control of its own or finished a text selection.
-  const opener = node.querySelector('.row-title');
+  // the dialog. A tap anywhere else on the row opens it too, unless it finished
+  // a text selection. While rows are being ticked, a tap toggles the row instead.
   node.addEventListener('click', (event) => {
-    const control = event.target.closest('a, button');
-    if (control && control !== opener) return;
     if (String(window.getSelection && window.getSelection()).length) return;
-    openDetails(card, opener);
+    if (!st.selecting) {
+      openDetails(card, opener, { decide: true });
+    } else if (event.target !== check) {
+      check.checked = !check.checked;
+      setPicked(card, check.checked);
+    }
   });
+  rowNodes.set(card.event_id, node);
   return node;
 }
 
 // The button hides every event in the Zavrnjeno list. Writing needs the
-// repository, so it only shows on that list.
+// repository, so it only shows on that list, and not while a filter or the
+// selection narrows what the list shows, since the button hides all of them.
 function renderFab() {
-  const shown = st.view === 'review' && st.seg === 'rejected'
-    && Boolean(st.data) && st.data.groups.rejected.length > 0;
-  el('hide-fab').hidden = !shown;
-  el('list').classList.toggle('has-fab', shown);
+  const visible = st.view === 'review' && st.seg === 'rejected'
+    && Boolean(st.data) && st.data.groups.rejected.length > 0
+    && !st.selecting && !Filters.isActive(st.filters);
+  el('hide-fab').hidden = !visible;
+  el('list').classList.toggle('has-fab', visible);
+}
+
+function segmentRows(name) {
+  return name === 'undecided' ? st.data.deck : (st.data.groups[name] || []);
+}
+
+function emptyState(hasRows) {
+  const box = document.createElement('div');
+  box.className = 'list-empty';
+  const text = document.createElement('p');
+  box.appendChild(text);
+  if (hasRows) {
+    text.textContent = 'Ni zadetkov za izbrane filtre.';
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'wide-btn';
+    button.textContent = 'Počisti filtre';
+    button.addEventListener('click', clearFilters);
+    box.appendChild(button);
+  } else {
+    text.textContent = st.seg === 'undecided'
+      ? 'Vsi dogodki so razvrščeni.'
+      : `V kategoriji "${labelOf(st.seg)}" še ni dogodkov.`;
+  }
+  return box;
 }
 
 function renderList() {
+  if (!st.data) return;
   document.querySelectorAll('.seg').forEach((seg) => {
     seg.classList.toggle('is-on', seg.dataset.seg === st.seg);
   });
+  pruneCategories();
+  renderSegmentCounts();
+  const base = segmentRows(st.seg);
+  shown = Filters.apply(base, st.filters);
+  pruneSelection();
   renderFab();
+  renderFilters(base.length);
+  renderSelection();
+
   list.textContent = '';
-  const rows = st.seg === 'undecided' ? st.data.deck : (st.data.groups[st.seg] || []);
-  if (!rows.length) {
-    const empty = document.createElement('p');
-    empty.className = 'list-empty';
-    empty.textContent = st.seg === 'undecided'
-      ? 'Vsi dogodki so razvrščeni.'
-      : `V kategoriji "${labelOf(st.seg)}" še ni dogodkov.`;
-    list.appendChild(empty);
+  rowNodes.clear();
+  list.classList.toggle('is-selecting', st.selecting);
+  if (!shown.length) {
+    list.appendChild(emptyState(base.length > 0));
     return;
   }
   let month = null;
-  rows.forEach((card) => {
+  shown.forEach((card) => {
     if (card.month_long !== month) {
       month = card.month_long;
       const heading = document.createElement('p');
@@ -508,6 +549,269 @@ function renderList() {
       list.appendChild(heading);
     }
     list.appendChild(buildRow(card));
+  });
+}
+
+/* --- filters ------------------------------------------------------------ */
+
+let shown = [];  // the rows of the current tab that pass the filters
+const rowNodes = new Map();
+
+// The tab counters show what passes the filters while any is set. They have an
+// attribute of their own, so the badges and the tab bar keep the true totals.
+function renderSegmentCounts() {
+  const keep = Filters.predicate(st.filters);
+  document.querySelectorAll('[data-seg-count]').forEach((node) => {
+    const rows = segmentRows(node.dataset.segCount);
+    node.textContent = String(Filters.isActive(st.filters) ? rows.filter(keep).length : rows.length);
+  });
+}
+
+// A category that left the data, after a newer snapshot, cannot stay selected.
+function pruneCategories() {
+  const keys = Filters.categories(allCards());
+  const kept = st.filters.categories.filter((key) => keys.includes(key));
+  if (kept.length !== st.filters.categories.length) {
+    st.filters = Object.assign({}, st.filters, { categories: kept });
+  }
+}
+
+function syncCategoryChips() {
+  const box = el('filter-cats');
+  const keys = Filters.categories(allCards());
+  // The chips are rebuilt only when the set of categories changes, so a chip
+  // that has just been tapped keeps the focus.
+  if (box.dataset.keys !== keys.join('|')) {
+    box.dataset.keys = keys.join('|');
+    box.textContent = '';
+    keys.forEach((key) => {
+      const chipButton = document.createElement('button');
+      chipButton.type = 'button';
+      chipButton.className = 'fchip';
+      chipButton.dataset.category = key;
+      chipButton.textContent = key.replace(/_/g, ' ');
+      chipButton.addEventListener('click', () => changeFilters(Filters.toggleCategory(st.filters, key)));
+      box.appendChild(chipButton);
+    });
+  }
+  box.querySelectorAll('.fchip').forEach((button) => {
+    button.setAttribute('aria-pressed', String(st.filters.categories.includes(button.dataset.category)));
+  });
+  el('filter-cat-group').hidden = keys.length === 0;
+}
+
+function renderActiveChips() {
+  const box = el('filter-chips');
+  box.textContent = '';
+  Filters.describe(st.filters, st.data.today).forEach((item) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'fchip fchip-active';
+    button.dataset.filter = item.id;
+    button.setAttribute('aria-label', `Odstrani filter: ${item.label}`);
+    const text = document.createElement('span');
+    text.className = 'fchip-text';
+    text.textContent = item.label;
+    const cross = document.createElement('span');
+    cross.setAttribute('aria-hidden', 'true');
+    cross.textContent = '✕';
+    button.append(text, cross);
+    box.appendChild(button);
+  });
+  box.hidden = box.children.length === 0;
+}
+
+function renderFilters(baseCount) {
+  const filters = st.filters;
+  const active = Filters.isActive(filters);
+  const search = el('filter-search');
+  if (search.value !== filters.text) search.value = filters.text;
+  el('filter-search-clear').hidden = !filters.text;
+
+  const panelCount = Filters.describe(filters).filter((item) => item.id !== 'text').length;
+  const toggle = el('filters-toggle');
+  toggle.setAttribute('aria-expanded', String(st.panelOpen));
+  toggle.setAttribute('aria-label', panelCount ? `Filtri, aktivnih: ${panelCount}` : 'Filtri');
+  el('filters-badge').hidden = panelCount === 0;
+  el('filters-badge').textContent = String(panelCount);
+  el('filter-panel').hidden = !st.panelOpen;
+
+  if (el('filter-from').value !== filters.from) el('filter-from').value = filters.from;
+  if (el('filter-to').value !== filters.to) el('filter-to').value = filters.to;
+  el('filter-hint').hidden = !st.rangeFixed;
+  const presets = Filters.presets(st.data.today);
+  document.querySelectorAll('[data-preset]').forEach((button) => {
+    const range = presets[button.dataset.preset];
+    button.setAttribute('aria-pressed', String(filters.from === range.from && filters.to === range.to));
+  });
+  el('filter-free').setAttribute('aria-checked', String(filters.free));
+  syncCategoryChips();
+  renderActiveChips();
+
+  el('filter-result').textContent = active ? `Prikazano ${shown.length} od ${baseCount}` : '';
+  el('filter-clear').hidden = !active;
+  el('filter-foot').classList.toggle('is-on', active);
+}
+
+function changeFilters(next) {
+  const fixed = Filters.ordered(next);
+  st.filters = fixed.filters;
+  st.rangeFixed = fixed.swapped;
+  el('list').scrollTop = 0;
+  renderList();
+}
+
+function clearFilters() {
+  st.filters = Filters.empty();
+  st.rangeFixed = false;
+  renderList();
+  document.querySelector('.seg.is-on').focus({ preventScroll: true });
+}
+
+function removeFilter(button) {
+  const chips = [...el('filter-chips').children];
+  const at = chips.indexOf(button);
+  changeFilters(Filters.remove(st.filters, button.dataset.filter));
+  const left = el('filter-chips').children;
+  (left[Math.min(at, left.length - 1)] || el('filters-toggle')).focus({ preventScroll: true });
+}
+
+function applyPreset(name) {
+  const range = Filters.presets(st.data.today)[name];
+  const on = st.filters.from === range.from && st.filters.to === range.to;
+  changeFilters(Object.assign({}, st.filters, on ? { from: '', to: '' } : range));
+}
+
+function wireFilters() {
+  const search = el('filter-search');
+  search.addEventListener('input', () => changeFilters(Object.assign({}, st.filters, { text: search.value })));
+  search.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !search.value) return;
+    event.preventDefault();
+    event.stopPropagation();
+    changeFilters(Object.assign({}, st.filters, { text: '' }));
+  });
+  el('filter-search-clear').addEventListener('click', () => {
+    changeFilters(Object.assign({}, st.filters, { text: '' }));
+    search.focus({ preventScroll: true });
+  });
+  el('filters-toggle').addEventListener('click', () => {
+    st.panelOpen = !st.panelOpen;
+    renderFilters(segmentRows(st.seg).length);
+  });
+  el('filter-from').addEventListener('change', (event) => {
+    changeFilters(Object.assign({}, st.filters, { from: event.target.value }));
+  });
+  el('filter-to').addEventListener('change', (event) => {
+    changeFilters(Object.assign({}, st.filters, { to: event.target.value }));
+  });
+  document.querySelectorAll('[data-preset]').forEach((button) => {
+    button.addEventListener('click', () => applyPreset(button.dataset.preset));
+  });
+  el('filter-free').addEventListener('click', () => {
+    changeFilters(Object.assign({}, st.filters, { free: !st.filters.free }));
+  });
+  el('filter-chips').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-filter]');
+    if (button) removeFilter(button);
+  });
+  el('filter-clear').addEventListener('click', clearFilters);
+}
+
+/* --- selecting rows for a bulk change ------------------------------------- */
+
+function pruneSelection() {
+  if (!st.selected.size) return;
+  const ids = new Set(shown.map((card) => card.event_id));
+  st.selected.forEach((id) => { if (!ids.has(id)) st.selected.delete(id); });
+}
+
+function syncRow(id) {
+  const node = rowNodes.get(id);
+  if (!node) return;
+  const on = st.selected.has(id);
+  node.classList.toggle('is-selected', on);
+  node.querySelector('.row-check').checked = on;
+}
+
+function renderSelection() {
+  const toggle = el('select-toggle');
+  toggle.setAttribute('aria-pressed', String(st.selecting));
+  el('selbar').hidden = !st.selecting;
+  if (!st.selecting) return;
+  const count = st.selected.size;
+  el('sel-count').textContent = `Izbrano ${count}`;
+  const all = shown.length > 0 && count === shown.length;
+  el('sel-all').textContent = all ? 'Počisti izbiro' : 'Izberi vse';
+  el('sel-all').disabled = shown.length === 0;
+  document.querySelectorAll('[data-bulk]').forEach((button) => {
+    const target = button.dataset.bulk;
+    // The tab already is that category, and the deck cannot go back to the deck.
+    button.hidden = target === st.seg || (target === '' && st.seg === 'undecided');
+    button.disabled = count === 0;
+  });
+}
+
+function setPicked(card, on) {
+  if (on) st.selected.add(card.event_id);
+  else st.selected.delete(card.event_id);
+  syncRow(card.event_id);
+  renderSelection();
+}
+
+function toggleAll() {
+  const all = shown.length > 0 && st.selected.size === shown.length;
+  st.selected.clear();
+  if (!all) shown.forEach((card) => st.selected.add(card.event_id));
+  shown.forEach((card) => syncRow(card.event_id));
+  renderSelection();
+}
+
+// Selection never reaches across tabs, but the mode stays on.
+function pickSegment(name) {
+  if (st.seg !== name) st.selected.clear();
+  st.seg = name;
+  renderList();
+}
+
+function setSelecting(on) {
+  if (st.selecting === on) return;
+  st.selecting = on;
+  st.selected.clear();
+  if (st.data) renderList();
+}
+
+function endSelecting() {
+  setSelecting(false);
+  el('select-toggle').focus({ preventScroll: true });
+}
+
+async function bulkMove(target) {
+  if (st.busy || !st.selecting) return;
+  const ids = shown.filter((card) => st.selected.has(card.event_id)).map((card) => card.event_id);
+  if (!ids.length) return;
+  st.busy = true;
+  try {
+    setData(await store.decideMany(ids, target));
+    st.selected.clear();
+    st.selecting = false;
+    render();
+    el('select-toggle').focus({ preventScroll: true });
+    toast(`Premaknjeno: ${ids.length}`);
+  } catch (error) {
+    toast(error.message, true);
+  } finally {
+    st.busy = false;
+  }
+}
+
+function wireSelection() {
+  el('select-toggle').addEventListener('click', () => setSelecting(!st.selecting));
+  el('sel-done').addEventListener('click', endSelecting);
+  el('sel-all').addEventListener('click', toggleAll);
+  el('sel-actions').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-bulk]');
+    if (button) bulkMove(button.dataset.bulk);
   });
 }
 
@@ -653,24 +957,50 @@ async function undo() {
   }
 }
 
+// True when the event was moved. An empty target sends it back to the deck.
 async function move(card, target) {
-  if (st.busy) return;
-  if (target === card.decision) return;
+  if (st.busy || target === (card.decision || '')) return false;
   st.busy = true;
   try {
     setData(target ? await store.decide(card.event_id, target) : await store.clear(card.event_id));
     render();
-    toast(target ? `${labelOf(target)}: ${card.title}` : `Nazaj v kup: ${card.title}`);
+    toast(`Premaknjeno v ${labelOf(target || 'undecided')}`);
+    return true;
   } catch (error) {
     toast(error.message, true);
+    return false;
   } finally {
     st.busy = false;
   }
 }
 
+// The row that was opened is gone once it moved, so focus goes to the row that
+// took its place, or to the tab when the list is empty.
+function focusRowAt(index) {
+  const titles = list.querySelectorAll('.row-title');
+  const next = titles[Math.max(0, Math.min(index, titles.length - 1))];
+  (next || document.querySelector('.seg.is-on')).focus({ preventScroll: true });
+}
+
+async function pickFromDialog(target) {
+  const card = dialog.card;
+  if (!card || st.busy) return;
+  if (target === (card.decision || '')) {
+    closeDetails();
+    return;
+  }
+  const at = shown.findIndex((item) => item.event_id === card.event_id);
+  if (!(await move(card, target))) return;
+  closeDetails();
+  focusRowAt(at);
+}
+
 /* --- details dialog ------------------------------------------------------ */
 
-const dialog = { open: false, opener: null, pushed: false, pressedBackdrop: false, card: null };
+const dialog = {
+  open: false, opener: null, pushed: false, pressedBackdrop: false, card: null,
+  decide: false,  // opened from a row of Pregled, so it offers the decision buttons
+};
 const BEHIND = '.bar, .progress, .tallies, .main, .pending, .tabs';
 
 function chip(parent, className, text) {
@@ -704,6 +1034,18 @@ function fact(parent, label, content, className) {
 function whenFacts(card) {
   if (!card.date) return ['Datum ni znan', ''];
   return [`${card.day}, ${card.date_long}`, card.time === '?' ? 'Ura ni znana' : `ob ${card.time}`];
+}
+
+function fillDecision(card) {
+  el('d-decide').hidden = !dialog.decide;
+  const current = card.decision || '';
+  el('d-decide').querySelectorAll('[data-pick]').forEach((button) => {
+    const target = button.dataset.pick;
+    button.classList.toggle('is-on', target === current);
+    if (target) button.setAttribute('aria-pressed', String(target === current));
+    // Sending an undecided event back to the deck would change nothing.
+    else button.hidden = !card.decision;
+  });
 }
 
 function fillDetails(card) {
@@ -742,10 +1084,12 @@ function fillDetails(card) {
   source.hidden = !card.url;
   if (card.url) source.href = card.url;
   el('d-maps').href = card.maps;
+  fillDecision(card);
 }
 
-function openDetails(card, opener) {
+function openDetails(card, opener, options) {
   if (dialog.open) return;
+  dialog.decide = Boolean(options && options.decide);
   fillDetails(card);
   dialog.card = card;
   dialog.open = true;
@@ -817,14 +1161,17 @@ function wireDetails() {
   });
   el('details-close').addEventListener('click', closeDetails);
   el('sheet').addEventListener('click', (event) => {
-    const button = event.target.closest('[data-ai]');
-    if (button && dialog.card) askAi(button.dataset.ai, dialog.card);
+    const ai = event.target.closest('[data-ai]');
+    if (ai && dialog.card) askAi(ai.dataset.ai, dialog.card);
+    const pick = event.target.closest('[data-pick]');
+    if (pick) pickFromDialog(pick.dataset.pick);
   });
   window.addEventListener('popstate', () => { dialog.pushed = false; hideDetails(); });
 
   overlay.addEventListener('keydown', (event) => {
     if (event.key !== 'Tab') return;
-    const items = [...el('sheet').querySelectorAll('button, a[href]')].filter((node) => !node.hidden);
+    const items = [...el('sheet').querySelectorAll('button, a[href]')]
+      .filter((node) => !node.closest('[hidden]'));
     if (!items.length) return;
     const first = items[0];
     const last = items[items.length - 1];
@@ -1136,6 +1483,7 @@ function toast(text, bad) {
 }
 
 function setView(name) {
+  if (name !== 'review') setSelecting(false);
   st.view = name;
   document.body.dataset.view = name;
   el('view-swipe').hidden = name !== 'swipe';
@@ -1155,7 +1503,7 @@ function wire() {
     button.addEventListener('click', () => setView(button.dataset.view));
   });
   document.querySelectorAll('[data-seg]').forEach((button) => {
-    button.addEventListener('click', () => { st.seg = button.dataset.seg; renderList(); });
+    button.addEventListener('click', () => pickSegment(button.dataset.seg));
   });
   el('undo').addEventListener('click', undo);
 
@@ -1169,6 +1517,8 @@ function wire() {
   });
   el('handoff-close').addEventListener('click', () => { el('handoff').hidden = true; });
   wireQuick();
+  wireFilters();
+  wireSelection();
 
   wireDetails();
   wireConfirm();
@@ -1191,6 +1541,11 @@ function wire() {
     }
     if (dialog.open) {
       if (event.key === 'Escape') { event.preventDefault(); closeDetails(); }
+      return;
+    }
+    if (event.key === 'Escape' && st.selecting && st.view === 'review') {
+      event.preventDefault();
+      endSelecting();
       return;
     }
     if (event.altKey || event.metaKey) return;

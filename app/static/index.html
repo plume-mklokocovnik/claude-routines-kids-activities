@@ -52,20 +52,87 @@
       <section class="view" id="view-review" hidden>
         <div class="segments" id="segments">
           <button class="seg is-on" type="button" data-seg="interested">
-            Zanima nas <b data-count="interested">0</b>
+            Zanima nas <b data-seg-count="interested">0</b>
           </button>
           <button class="seg" type="button" data-seg="maybe">
-            Mogoče <b data-count="maybe">0</b>
+            Mogoče <b data-seg-count="maybe">0</b>
           </button>
           <button class="seg" type="button" data-seg="rejected">
-            Zavrnjeno <b data-count="rejected">0</b>
+            Zavrnjeno <b data-seg-count="rejected">0</b>
           </button>
           <button class="seg" type="button" data-seg="undecided">
-            Neodločeno <b data-count="undecided">0</b>
+            Neodločeno <b data-seg-count="undecided">0</b>
           </button>
         </div>
+
+        <div class="filterbar" id="filterbar">
+          <div class="filter-row">
+            <div class="search">
+              <input class="search-input" id="filter-search" type="search" placeholder="Išči dogodke"
+                     aria-label="Išči dogodke" autocomplete="off" autocapitalize="off"
+                     spellcheck="false" enterkeyhint="search">
+              <button class="search-clear" id="filter-search-clear" type="button" hidden
+                      aria-label="Počisti iskanje">✕</button>
+            </div>
+            <button class="bar-btn" id="filters-toggle" type="button"
+                    aria-expanded="false" aria-controls="filter-panel">
+              Filtri <b class="badge" id="filters-badge" hidden>0</b>
+            </button>
+            <button class="bar-btn" id="select-toggle" type="button" aria-pressed="false">Izberi</button>
+          </div>
+
+          <div class="filter-panel" id="filter-panel" role="group" aria-label="Filtri" hidden>
+            <div class="filter-dates">
+              <label class="field">
+                <span>Datum od</span>
+                <input class="field-input" id="filter-from" type="date">
+              </label>
+              <label class="field">
+                <span>Datum do</span>
+                <input class="field-input" id="filter-to" type="date">
+              </label>
+            </div>
+            <p class="filter-hint" id="filter-hint" role="status" hidden>
+              Datuma sta zamenjana, ker je bil začetek za koncem.
+            </p>
+            <div class="chip-row" role="group" aria-label="Hitri izbor datuma">
+              <button class="fchip" type="button" data-preset="today" aria-pressed="false">Danes</button>
+              <button class="fchip" type="button" data-preset="weekend" aria-pressed="false">Ta vikend</button>
+              <button class="fchip" type="button" data-preset="week" aria-pressed="false">Naslednjih 7 dni</button>
+            </div>
+            <div class="field" id="filter-cat-group" hidden>
+              <span id="filter-cats-label">Kategorija</span>
+              <div class="chip-row" id="filter-cats" role="group" aria-labelledby="filter-cats-label"></div>
+            </div>
+            <button class="switch" id="filter-free" type="button" role="switch" aria-checked="false">
+              <span class="switch-track" aria-hidden="true"><span class="switch-knob"></span></span>
+              Samo brezplačni
+            </button>
+          </div>
+
+          <div class="filter-chips" id="filter-chips" hidden></div>
+          <div class="filter-foot" id="filter-foot">
+            <p class="filter-result" id="filter-result" aria-live="polite"></p>
+            <button class="filter-clear" id="filter-clear" type="button" hidden>Počisti filtre</button>
+          </div>
+        </div>
+
         <div class="list" id="list">
           <div class="rows" id="rows"></div>
+        </div>
+
+        <div class="selbar" id="selbar" role="region" aria-label="Skupno urejanje" hidden>
+          <div class="sel-top">
+            <span class="sel-count" id="sel-count" role="status">Izbrano 0</span>
+            <button class="sel-link" id="sel-all" type="button">Izberi vse</button>
+            <button class="sel-link" id="sel-done" type="button">Končaj</button>
+          </div>
+          <div class="sel-actions" id="sel-actions">
+            <button class="dec dec-interested" type="button" data-bulk="interested" disabled>Zanima</button>
+            <button class="dec dec-maybe" type="button" data-bulk="maybe" disabled>Mogoče</button>
+            <button class="dec dec-rejected" type="button" data-bulk="rejected" disabled>Zavrni</button>
+            <button class="dec dec-clear" type="button" data-bulk="" disabled>V kup</button>
+          </div>
         </div>
       </section>
 
@@ -184,6 +251,15 @@
           <h2 class="sheet-title" id="details-title"></h2>
           <dl class="facts" id="d-facts"></dl>
           <div class="sheet-notes" id="d-notes"></div>
+          <div class="sheet-decide" id="d-decide" role="group" aria-labelledby="decide-label" hidden>
+            <span class="ask-label" id="decide-label">Odločitev</span>
+            <div class="decide-grid">
+              <button class="dec dec-interested" type="button" data-pick="interested" aria-pressed="false">Zanima</button>
+              <button class="dec dec-maybe" type="button" data-pick="maybe" aria-pressed="false">Mogoče</button>
+              <button class="dec dec-rejected" type="button" data-pick="rejected" aria-pressed="false">Zavrni</button>
+              <button class="dec dec-clear" type="button" data-pick="">V kup</button>
+            </div>
+          </div>
           <div class="sheet-links">
             <a class="link-btn" id="d-source" target="_blank" rel="noopener noreferrer">Vir dogodka ↗</a>
             <a class="link-btn" id="d-maps" target="_blank" rel="noopener noreferrer">Zemljevid ↗</a>
@@ -304,6 +380,10 @@
 
 <template id="row-template">
   <article class="row">
+    <span class="row-pick">
+      <input class="row-check" type="checkbox">
+      <span class="row-box" aria-hidden="true"></span>
+    </span>
     <div class="row-date">
       <b data-f="date"></b>
       <span data-f="time"></span>
@@ -313,19 +393,13 @@
       <span class="row-more" aria-hidden="true">›</span>
       <p class="row-where" data-f="place"></p>
       <p class="row-meta" data-f="meta"></p>
-      <div class="row-actions">
-        <button class="mini mini-interested" type="button" data-move="interested">Zanima</button>
-        <button class="mini mini-maybe" type="button" data-move="maybe">Mogoče</button>
-        <button class="mini mini-rejected" type="button" data-move="rejected">Zavrni</button>
-        <button class="mini mini-clear" type="button" data-move="">V kup</button>
-        <a class="mini mini-link" data-f="url" target="_blank" rel="noopener noreferrer">Vir ↗</a>
-      </div>
     </div>
   </article>
 </template>
 
 <script src="mode.js"></script>
 <script src="days.js"></script>
+<script src="filters.js"></script>
 <script src="snapshot.js"></script>
 <script src="dispatch.js"></script>
 <script src="askai.js"></script>
