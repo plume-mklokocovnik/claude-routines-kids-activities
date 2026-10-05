@@ -81,6 +81,7 @@ class ClientContractTests(unittest.TestCase):
         self.scripts = {name: (static / name).read_text(encoding="utf-8")
                         for name in ("app.js", "days.js", "snapshot.js", "dispatch.js", "askai.js")}
         self.markup = (static / "index.html").read_text(encoding="utf-8")
+        self.styles = (static / "app.css").read_text(encoding="utf-8")
 
     def test_every_element_the_script_looks_up_exists(self):
         wanted = set(re.findall(r"\bel\('([\w-]+)'\)", self.script))
@@ -168,15 +169,50 @@ class ClientContractTests(unittest.TestCase):
         # And the bar is not also at the top of the screen.
         self.assertEqual(self.markup.count('class="progress"'), 1)
 
-    def test_pregled_opens_with_statistics_and_there_is_no_stop_button(self):
-        stats = re.search(r'<section class="stats".*?</section>', self.markup, re.S)
-        self.assertIsNotNone(stats)
-        for identifier in ("st-run", "st-window", "st-today", "st-total", "st-free"):
+    def test_the_figures_and_token_settings_live_on_the_info_page_not_in_pregled(self):
+        info = re.search(r'<section class="view" id="view-info".*?</main>', self.markup, re.S)
+        review = re.search(r'<section class="view" id="view-review".*?<section class="view" id="view-info"',
+                           self.markup, re.S)
+        self.assertIsNotNone(info)
+        self.assertIsNotNone(review)
+        identifiers = ("ver-app", "ver-data", "st-run", "st-age", "st-window", "st-today", "st-unsaved", "st-total", "st-free",
+                       "st-week", "st-weekend", "st-decided", "st-next", "bars-months",
+                       "bars-categories", "bars-sources", "quick", "quick-token", "quick-none")
+        for identifier in identifiers:
             with self.subTest(identifier=identifier):
-                self.assertIn(f'id="{identifier}"', stats.group(0))
+                self.assertEqual(info.group(0).count(f'id="{identifier}"'), 1)
+                self.assertNotIn(f'id="{identifier}"', review.group(0))
+        self.assertNotIn('class="stats"', review.group(0))
+        self.assertNotIn('class="quick', review.group(0))
+        # The token settings come after the figures.
+        self.assertLess(info.group(0).index('id="st-run"'), info.group(0).index('id="quick-token"'))
+        self.assertRegex(info.group(0), r'<input[^>]*id="quick-token"[^>]*type="password"')
         self.assertLess(self.markup.index('id="list"'), self.markup.index('id="rows"'))
         self.assertNotIn('id="quit"', self.markup)
         self.assertNotIn("/api/", self.script)
+
+    def test_the_tab_bar_has_two_lists_and_one_gear_for_info_and_settings(self):
+        nav = re.search(r'<nav class="tabs">.*?</nav>', self.markup, re.S)
+        self.assertIsNotNone(nav)
+        self.assertEqual(re.findall(r'data-view="(\w+)"', nav.group(0)), ["swipe", "review", "info"])
+        gear = re.search(r'<button[^>]*data-view="info".*?</button>', nav.group(0), re.S)
+        self.assertIsNotNone(gear)
+        self.assertIn("tab-icon", gear.group(0))
+        self.assertIn('aria-label="Info in nastavitve"', gear.group(0))
+        self.assertIn("<svg", gear.group(0))
+        self.assertNotIn("tab-done", gear.group(0))
+        self.assertIn("el('view-info').hidden = name !== 'info'", self.script)
+        self.assertIn("grid-template-columns: 1fr 1fr auto", self.styles)
+
+    def test_the_charts_are_drawn_from_text_nodes_and_handle_an_empty_list(self):
+        for part in ("function renderBars", "renderCharts();", "Ni podatkov", "Date.UTC"):
+            with self.subTest(part=part):
+                self.assertIn(part, self.script)
+        # Weekdays and day offsets come from ISO strings, never from the device clock.
+        figures = self.script[self.script.index("function isoDay"):self.script.index("function renderCharts")]
+        for local in ("Date.now", "new Date()", ".getDay(", ".getDate(", "getTimezoneOffset"):
+            with self.subTest(local=local):
+                self.assertNotIn(local, figures)
 
     def test_the_event_id_is_one_copy_button_on_the_card_and_in_the_dialog(self):
         template = re.search(r'<template id="copy-id-template">.*?</template>', self.markup, re.S)

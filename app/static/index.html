@@ -65,16 +65,63 @@
           </button>
         </div>
         <div class="list" id="list">
-          <section class="stats" aria-label="Stanje">
-            <div class="stat"><span class="stat-label">Zadnja rutina</span><b id="st-run">?</b></div>
-            <div class="stat"><span class="stat-label">Okno do</span><b id="st-window">?</b></div>
-            <div class="stat"><span class="stat-label">Danes</span><b id="st-today">?</b></div>
-            <div class="stat"><span class="stat-label">Dogodkov</span><b id="st-total">0</b></div>
-            <div class="stat"><span class="stat-label">Brezplačnih</span><b id="st-free">0</b></div>          </section>
           <div class="rows" id="rows"></div>
-          <section class="quick" id="quick" aria-labelledby="quick-title">
+        </div>
+      </section>
+
+      <section class="view" id="view-info" hidden>
+        <div class="page" id="info">
+          <h2 class="page-title">Info in nastavitve</h2>
+
+          <section class="panel" aria-labelledby="p-version">
+            <h3 class="panel-title" id="p-version">Različica</h3>
+            <dl class="kv">
+              <div><dt>Aplikacija</dt><dd><a class="kv-link" id="ver-app" target="_blank" rel="noopener noreferrer">?</a></dd></div>
+              <div><dt>Podatki (db.json)</dt><dd><a class="kv-link" id="ver-data" target="_blank" rel="noopener noreferrer">?</a></dd></div>
+            </dl>
+          </section>
+
+          <section class="panel" aria-labelledby="p-state">
+            <h3 class="panel-title" id="p-state">Stanje podatkov</h3>
+            <dl class="kv">
+              <div><dt>Zadnja rutina</dt><dd id="st-run">?</dd></div>
+              <div><dt>Starost podatkov</dt><dd id="st-age">?</dd></div>
+              <div><dt>Okno do</dt><dd id="st-window">?</dd></div>
+              <div><dt>Danes</dt><dd id="st-today">?</dd></div>
+              <div><dt>Neshranjene odločitve</dt><dd id="st-unsaved">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="panel" aria-labelledby="p-events">
+            <h3 class="panel-title" id="p-events">Dogodki</h3>
+            <div class="stats">
+              <div class="stat"><span class="stat-label">Vseh</span><b id="st-total">0</b></div>
+              <div class="stat"><span class="stat-label">Brezplačnih</span><b id="st-free">0</b></div>
+              <div class="stat"><span class="stat-label">Naslednjih 7 dni</span><b id="st-week">0</b></div>
+              <div class="stat"><span class="stat-label">Ta vikend</span><b id="st-weekend">0</b></div>
+              <div class="stat"><span class="stat-label">Odločenih</span><b id="st-decided">0 %</b></div>
+              <div class="stat"><span class="stat-label">Prvi dogodek</span><b id="st-next">?</b></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="p-months">
+            <h3 class="panel-title" id="p-months">Po mesecih</h3>
+            <div class="bars" id="bars-months"></div>
+          </section>
+
+          <section class="panel" aria-labelledby="p-cats">
+            <h3 class="panel-title" id="p-cats">Po kategorijah</h3>
+            <div class="bars" id="bars-categories"></div>
+          </section>
+
+          <section class="panel" aria-labelledby="p-sources">
+            <h3 class="panel-title" id="p-sources">Najpogostejši viri</h3>
+            <div class="bars" id="bars-sources"></div>
+          </section>
+
+          <section class="panel quick" id="quick" aria-labelledby="quick-title">
             <div class="quick-head">
-              <b id="quick-title">Hitro shranjevanje</b>
+              <h3 class="panel-title" id="quick-title">Hitro shranjevanje</h3>
               <span class="quick-state" id="quick-state">Izklopljeno</span>
             </div>
             <p class="quick-text" id="quick-text"></p>
@@ -89,6 +136,9 @@
               <a class="quick-link" id="quick-new" target="_blank" rel="noopener noreferrer">Ustvari žeton ↗</a>
             </div>
           </section>
+          <p class="panel-note" id="quick-none" hidden>
+            Shranjevanje z žetonom ni na voljo, ker ta različica ne pozna repozitorija.
+          </p>
         </div>
       </section>
 
@@ -114,6 +164,13 @@
     <nav class="tabs">
       <button class="tab is-on" type="button" data-view="swipe">Izbiranje<b id="tab-left">0</b></button>
       <button class="tab" type="button" data-view="review">Pregled<b id="tab-done">0</b></button>
+      <button class="tab tab-icon" type="button" data-view="info"
+              title="Info in nastavitve" aria-label="Info in nastavitve">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
     </nav>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -187,7 +244,7 @@
            Klikni <b>Commit changes</b>. Delovni tok jih vpiše v <code>db.json</code>
            in osveži to stran.</p>
         <p>Odločitve ostanejo tukaj, dokler se ne pojavijo v bazi.</p>
-        <p>Brez urejevalnika gre z žetonom: <b>Pregled</b>, na dnu <b>Hitro shranjevanje</b>.</p>
+        <p>Brez urejevalnika gre z žetonom: zobnik spodaj, razdelek <b>Hitro shranjevanje</b>.</p>
         <button class="wide-btn" id="handoff-close" type="button">Nazaj na izbiranje</button>
       </div>
     </div>

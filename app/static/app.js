@@ -101,6 +101,7 @@ function render(options) {
     : 'V bazi ni aktivnih dogodkov.';
 
   renderStats();
+  renderCharts();
   renderPending();
   renderQuick();
   renderStack(options);
@@ -111,15 +112,161 @@ function isoToSi(iso) {
   return iso ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}.${iso.slice(0, 4)}` : '?';
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+const TOP_CATEGORIES = 6;
+const TOP_SOURCES = 5;
+
+// Days are counted from ISO strings through UTC, so the device timezone never
+// enters. The value is days since 1970-01-01, and NaN for a missing date.
+function isoDay(iso) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+  if (!match) return NaN;
+  return Math.round(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])) / DAY_MS);
+}
+
+function weekdayOf(day) {
+  return new Date(day * DAY_MS).getUTCDay();
+}
+
+function siToIso(text) {
+  const match = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(text || '');
+  return match ? `${match[3]}-${match[2]}-${match[1]}` : '';
+}
+
+function allCards() {
+  return st.data.deck.concat(...Object.values(st.data.groups));
+}
+
+function agePhrase(days) {
+  if (!Number.isFinite(days) || days < 0) return '?';
+  if (days === 0) return 'danes';
+  if (days === 1) return 'včeraj';
+  const tail = days % 100;
+  if (tail === 2) return `${days} dneva nazaj`;
+  if (tail === 3 || tail === 4) return `${days} dnevi nazaj`;
+  return `${days} dni nazaj`;
+}
+
+function countBetween(cards, from, to) {
+  return cards.filter((card) => {
+    const day = isoDay(card.day_iso);
+    return day >= from && day <= to;
+  }).length;
+}
+
 // The facts about the data that the deck has no room for: when the last sweep
-// ran, how far it looks ahead, what today is and how much is left out.
+// ran, how old that is, what today is and how the events are spread.
+// The commit this page was built from, shown as its short hash and date and linked
+// to the commit on GitHub. Empty when the build could not read the history.
+function renderVersion(id, commit) {
+  const link = el(id);
+  const sha = (commit && commit.sha) || '';
+  if (!sha) {
+    link.textContent = '?';
+    link.removeAttribute('href');
+    return;
+  }
+  const repo = window.SWIPE_REPO || {};
+  const date = commit.date ? ` · ${isoToSi(commit.date)}` : '';
+  link.textContent = `${sha.slice(0, 7)}${date}`;
+  if (repo.owner && repo.repo) {
+    link.href = `https://github.com/${repo.owner}/${repo.repo}/commit/${sha}`;
+  } else {
+    link.removeAttribute('href');
+  }
+}
+
 function renderStats() {
   const { clock, counts, free, today } = st.data;
+  const build = window.SWIPE_BUILD || {};
+  renderVersion('ver-app', build.app);
+  renderVersion('ver-data', build.data);
+  const cards = allCards();
+  const todayDay = isoDay(today);
   el('st-run').textContent = `${clock.date} ${clock.time}`;
+  el('st-age').textContent = agePhrase(todayDay - isoDay(siToIso(clock.date)));
   el('st-window').textContent = clock.horizon;
   el('st-today').textContent = isoToSi(today);
+  el('st-unsaved').textContent = String(store.pending ? store.pending().count : 0);
+
   el('st-total').textContent = String(counts.total);
   el('st-free').textContent = String(free);
+  el('st-week').textContent = String(countBetween(cards, todayDay, todayDay + 6));
+  // Saturday and Sunday of this week. On a Sunday only today is left of it.
+  const weekday = weekdayOf(todayDay);
+  const from = weekday === 0 ? todayDay : todayDay + 6 - weekday;
+  const to = weekday === 0 ? todayDay : from + 1;
+  el('st-weekend').textContent = String(countBetween(cards, from, to));
+  el('st-decided').textContent = `${counts.total ? Math.round((counts.decided / counts.total) * 100) : 0} %`;
+  const first = cards.filter((card) => card.day_iso)
+    .reduce((best, card) => (!best || card.day_iso < best.day_iso ? card : best), null);
+  el('st-next').textContent = first ? `${first.day} ${first.date}` : '?';
+}
+
+function tally(cards, keyOf, nameOf) {
+  const groups = new Map();
+  cards.forEach((card) => {
+    const key = keyOf(card);
+    if (!key) return;
+    const entry = groups.get(key) || { key, label: nameOf(card), count: 0 };
+    entry.count += 1;
+    groups.set(key, entry);
+  });
+  return [...groups.values()];
+}
+
+const byCountThenLabel = (a, b) => b.count - a.count || a.label.localeCompare(b.label, 'sl');
+
+function topWithRest(entries, limit) {
+  const sorted = entries.sort(byCountThenLabel);
+  if (sorted.length <= limit + 1) return sorted;
+  const rest = sorted.slice(limit).reduce((sum, entry) => sum + entry.count, 0);
+  return sorted.slice(0, limit).concat({ label: 'Ostalo', count: rest });
+}
+
+function renderBars(containerId, entries) {
+  const box = el(containerId);
+  box.textContent = '';
+  if (!entries.length) {
+    const none = document.createElement('p');
+    none.className = 'panel-note';
+    none.textContent = 'Ni podatkov';
+    box.appendChild(none);
+    return;
+  }
+  const most = Math.max(...entries.map((entry) => entry.count));
+  entries.forEach((entry) => {
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    const label = document.createElement('span');
+    label.className = 'bar-label';
+    label.textContent = entry.label;
+    const count = document.createElement('span');
+    count.className = 'bar-count';
+    count.textContent = String(entry.count);
+    const track = document.createElement('div');
+    track.className = 'bar-track';
+    const fill = document.createElement('div');
+    fill.className = 'bar-fill';
+    fill.style.width = `${Math.max(2, Math.round((entry.count / most) * 100))}%`;
+    track.appendChild(fill);
+    row.append(label, count, track);
+    box.appendChild(row);
+  });
+}
+
+function renderCharts() {
+  const cards = allCards();
+  // Month keys sort in time order, and events without a date come last.
+  const months = tally(cards, (card) => card.month || 'z', (card) => card.month_long)
+    .sort((a, b) => (a.key < b.key ? -1 : 1));
+  renderBars('bars-months', months);
+  renderBars('bars-categories', topWithRest(
+    tally(cards, (card) => card.category, (card) => card.category.replace(/_/g, ' ')),
+    TOP_CATEGORIES,
+  ));
+  renderBars('bars-sources', tally(cards, (card) => card.source, (card) => card.source)
+    .sort(byCountThenLabel).slice(0, TOP_SOURCES));
 }
 
 function pendingPhrase(count) {
@@ -198,11 +345,12 @@ const QUICK_TEXT = {
     + 'Do takrat shranjuješ prek urejevalnika.',
 };
 
-// The token settings sit at the bottom of the review list. Nothing about the
+// The token settings are the last section of the info page. Nothing about the
 // token leaves this function: the field is emptied once it is stored.
 function renderQuick() {
   const section = el('quick');
   section.hidden = !dispatcher.available();
+  el('quick-none').hidden = !section.hidden;
   if (section.hidden) return;
   const on = dispatcher.enabled();
   const bad = on && dispatcher.rejected();
@@ -992,6 +1140,7 @@ function setView(name) {
   document.body.dataset.view = name;
   el('view-swipe').hidden = name !== 'swipe';
   el('view-review').hidden = name !== 'review';
+  el('view-info').hidden = name !== 'info';
   document.querySelectorAll('.tab').forEach((tab) => {
     tab.classList.toggle('is-on', tab.dataset.view === name);
   });

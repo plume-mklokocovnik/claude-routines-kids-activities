@@ -91,6 +91,31 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(target, {"owner": "owner", "repo": "name", "branch": "trunk",
                                   "inbox": "inbox/patch.txt", "hide_inbox": "inbox/hide"})
 
+    def test_mode_script_carries_the_commits_the_bundle_was_built_from(self):
+        info = {"app": {"sha": "a" * 40, "date": "2026-10-05"},
+                "data": {"sha": "b" * 40, "date": "2026-10-03"}}
+        build_static.build(self.path, self.out, repo="owner/name", info=info)
+        text = (self.out / "mode.js").read_text(encoding="utf-8")
+        line = next(row for row in text.splitlines() if row.startswith("window.SWIPE_BUILD = "))
+        self.assertEqual(json.loads(line.split(" = ", 1)[1].rstrip(";")), info)
+        # SWIPE_REPO is still the last assignment, the one the other test parses.
+        self.assertLess(text.index("SWIPE_BUILD"), text.index("SWIPE_REPO"))
+
+    def test_unreadable_history_leaves_the_commits_empty(self):
+        from unittest import mock
+        with mock.patch.object(build_static.subprocess, "run", side_effect=OSError("no git")), \
+                mock.patch.dict(build_static.os.environ, {}, clear=True):
+            info = build_static.build_info()
+        empty = {"sha": "", "date": ""}
+        self.assertEqual(info, {"app": empty, "data": empty})
+
+    def test_commit_falls_back_to_the_workflow_sha(self):
+        from unittest import mock
+        with mock.patch.object(build_static.subprocess, "run", side_effect=OSError("no git")), \
+                mock.patch.dict(build_static.os.environ, {"GITHUB_SHA": "c" * 40}, clear=True):
+            info = build_static.build_info()
+        self.assertEqual(info["app"], {"sha": "c" * 40, "date": ""})
+
     def test_missing_repository_still_builds_a_usable_bundle(self):
         build_static.build(self.path, self.out)
         text = (self.out / "mode.js").read_text(encoding="utf-8")

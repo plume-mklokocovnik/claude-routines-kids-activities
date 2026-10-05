@@ -72,7 +72,7 @@ editor instead, so a save is never lost to a bad token.
 Every device has its own token. Several can be in use at once, and each is revoked
 on its own:
 
-1. In the app, open **Pregled** and scroll to **Hitro shranjevanje**. **Ustvari
+1. In the app, open the gear tab and scroll to **Hitro shranjevanje**. **Ustvari
    žeton** opens GitHub's token form with the name, the lifetime and the
    permission filled in. Rename the token after the device, such as `phone`, so the
    list on GitHub stays readable.
@@ -165,7 +165,7 @@ no status line and no list of counts above the card. Each round button carries
 its own count as a small number in its top right corner: rejected on the red ✕,
 maybe on the blue ?, and interested on the green ♥. Under the buttons sit the
 number of events still to decide and a thin progress bar. The other figures are
-on **Pregled**.
+on the gear tab, **Info in nastavitve**.
 
 The deck holds the active, not hidden events that have no decision yet, earliest
 first. A decided event leaves the deck and appears under **Pregled**, where its
@@ -233,11 +233,6 @@ Things this does not do:
 Together they are the whole current state, read from the database each time the
 app loads. There is no generated file to keep in step with it.
 
-The top of the screen holds the four lists, and below them a block of figures
-about the current state: when the last sweep ran, the date its window ends, today
-in Ljubljana, how many events there are and how many are free. The last-run time
-and the window end come from the run record in the database, not from the clock.
-
 Tap an event, or its title, to open a dialog with everything known about it:
 when and where, with a Maps link, the age, the full price text, the notes, the
 source and its link, when it was first seen, its decision and when it was made,
@@ -254,6 +249,34 @@ the ID text or on the small copy icon beside it copies the ID, turns the icon in
 a check mark for a moment and shows a short confirmation. It neither opens the
 dialog nor decides anything, so the ID can be pasted into `swipe.py set`,
 `hide_event.py` or a message without selecting text by hand.
+
+## Info and settings
+
+The gear tab, the small one at the right of the tab bar, opens one scrolling page
+with these sections:
+
+- **Različica.** The short hash and date of the commit the page was built from,
+  and of the newest commit that changed `db.json`. Each links to that commit on
+  GitHub, so the commit list shows which version of the app and of the data this
+  device is looking at. The build reads them from git history, so the Pages
+  workflow checks out the full history. If the history is missing, the build still
+  works and the page shows `?`.
+- **Stanje podatkov.** When the last sweep ran, how old that is, the date its
+  window ends, today in Ljubljana and how many decisions are not saved yet. The
+  last-run time and the window end come from the run record in the database, not
+  from the clock.
+- **Dogodki.** How many events there are, how many are free, how many fall in the
+  next seven days and on this weekend, the share already decided and the first
+  dated event.
+- **Po mesecih**, **Po kategorijah** and **Najpogostejši viri.** Bars of how the
+  events are spread. Categories show the six largest and group the rest as
+  **Ostalo**. Sources show the five most common hosts.
+- **Hitro shranjevanje.** This device's [token](#one-tap-saving). Where the build
+  does not know the repository, a note says so instead.
+
+Every figure is worked out in the browser from the events already loaded, so it
+follows the same past-event rule as the lists. Weekdays and day counts are read
+from the stored dates and never from the device's timezone.
 
 ## Asking an AI about an event
 
@@ -355,8 +378,8 @@ shown unshortened.
 | `static/dispatch.js` | This device's token and the call that starts a save workflow |
 | `static/askai.js` | The prompt and the links that hand an event to an AI assistant |
 
-The build also writes `mode.js` (the repository the save link points at) and
-`state.json` into the bundle. Neither is kept in `static/`.
+The build also writes `mode.js` (the repository the save link points at and the
+commits the bundle was built from) and `state.json` into the bundle. Neither is kept in `static/`.
 
 The frame is 480 x 1040 CSS pixels, the viewport of a Samsung Galaxy S25 Ultra
 (1440 x 3120 hardware pixels at a 3x device ratio). On a narrow screen the frame

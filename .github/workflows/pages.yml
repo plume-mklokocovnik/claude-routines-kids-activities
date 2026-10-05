@@ -37,6 +37,8 @@ jobs:
           # Always build the current tip, so a call that follows an apply job
           # publishes the database that job just committed.
           ref: main
+          # The page names the commit of the app and of db.json, which needs history.
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
