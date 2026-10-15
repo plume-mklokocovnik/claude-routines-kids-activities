@@ -31,7 +31,7 @@
       "price_text": "Brezplačno (Teden otroka)",
       "url": "https://www.ng-slo.si/si/dogodki/predstava-za-otroke-in-druzine-mravljica-sanja?id=6708",
       "flags": [],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "maybe",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -65,7 +65,7 @@
       "price_text": "Brezplačno",
       "url": "https://mgml.si/sl/mestna-galerija/eventi/2529/",
       "flags": [],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "maybe",
       "decided_at": "2026-10-01T12:20:34Z"
@@ -761,7 +761,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "maybe",
       "decided_at": "2026-10-01T12:20:34Z"
@@ -780,7 +780,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "interested",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -1881,7 +1881,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261011_0000_6f17d5aff49d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-28T15:10:49+02:00",
       "decision": "maybe",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -2782,7 +2782,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/11-medeni-dan-6aa113901ec1a",
       "flags": [],
       "event_id": "event_20261010_0900_ff621fd3021e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2799,7 +2799,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-pgd-dravlje-6abf770fb33c9",
       "flags": [],
       "event_id": "event_20261009_0900_f4908adb393e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2816,7 +2816,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-pgd-zgornji-kaselj-6aaa94dc4b0ec",
       "flags": [],
       "event_id": "event_20261011_1000_1ee4075e3c34",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -2852,7 +2852,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261012_1645_25808e45ce99",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -2869,7 +2869,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-soncnice-6281",
       "flags": [],
       "event_id": "event_20261008_1700_5778c10470fe",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2886,7 +2886,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097",
       "flags": [],
       "event_id": "event_20261009_1700_1af1c746a4b6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2903,7 +2903,7 @@
       "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/planet-kock-najvecje-lego-dozivetje-v-sloveniji-6300",
       "flags": [],
       "event_id": "event_20261010_0900_a593ea809b70",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2920,7 +2920,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/miska-gre-na-goro-4-animirani-junaki-vabijo-najmlajse-na-prvi-obisk-kina-6314",
       "flags": [],
       "event_id": "event_20261010_1000_fd3f1cce9dc2",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2937,7 +2937,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/z-odra-v-muzej-stirje-muzikanti-6293",
       "flags": [],
       "event_id": "event_20261010_1100_e10159798ecc",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -2954,7 +2954,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/sola-zmajeslovja-prerokba-o-pogubi-zmajev-razprodano-5976",
       "flags": [],
       "event_id": "event_20261011_1030_9e4b1169c4a0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -2971,7 +2971,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080",
       "flags": [],
       "event_id": "event_20261013_1700_8268f38e2ec3",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -2988,7 +2988,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-unikatne-stampiljke-6302",
       "flags": [],
       "event_id": "event_20261013_1700_2498b447ca6f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3005,7 +3005,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/lisicka-sestricka-razprodano-6035",
       "flags": [],
       "event_id": "event_20261014_1730_9463a524e38d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3264,7 +3264,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261010_0000_38445440b682",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3283,7 +3283,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261010_0000_8767a3e1d874",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3302,7 +3302,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261011_0000_a402bf15dab3",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3547,7 +3547,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261008_1700_b15534a6e637",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3564,7 +3564,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261010_1700_72a16e39cc7a",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3581,7 +3581,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261013_1700_eebb77e6a88d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3598,7 +3598,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261014_1700_81a68b6df287",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3768,7 +3768,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261010_1500_562fc78474b7",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3785,7 +3785,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261010_1600_8467f87231f9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3802,7 +3802,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261010_1600_4dde377849eb",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3921,7 +3921,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261010_1100_330e4ca65977",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -3938,7 +3938,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261011_1100_c307001fe1e9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3955,7 +3955,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261011_1700_cabab13ed796",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4194,7 +4194,7 @@
       "url": "https://www.hisaotrok.si/koledar_prireditev/list/",
       "flags": [],
       "event_id": "event_20261009_1700_7d2adf8b4a0f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -4211,7 +4211,7 @@
       "url": "https://www.hisaotrok.si/koledar_prireditev/list/",
       "flags": [],
       "event_id": "event_20261010_1700_bc5974043601",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -4264,7 +4264,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261008_1700_7768d6a2e4de",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -4281,7 +4281,7 @@
       "url": "https://www.mklj.si/dogodki/",
       "flags": [],
       "event_id": "event_20261008_1700_e931bf0823a9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-08T12:29:44Z"
@@ -4298,7 +4298,7 @@
       "url": "https://www.mklj.si/dogodki/",
       "flags": [],
       "event_id": "event_20261013_0930_b61a4cee6abf",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4315,7 +4315,7 @@
       "url": "https://www.mklj.si/dogodki/",
       "flags": [],
       "event_id": "event_20261014_0930_5df7cf00d7da",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4878,7 +4878,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261011_0000_209c86b5f622",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4960,6 +4960,419 @@
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
+    },
+    "328": {
+      "title": "Bikec Ferdinand",
+      "start_time": "2026-10-22T17:00:00+02:00",
+      "venue": "LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano (8 EUR)",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261022_1700_e87ae9e91301",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "329": {
+      "title": "Sapramiška",
+      "start_time": "2026-10-24T11:00:00+02:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261024_1100_a0d45db2a472",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "330": {
+      "title": "Sapramiška",
+      "start_time": "2026-10-24T17:00:00+02:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "8 EUR (zadnje vstopnice)",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261024_1700_d26174ed9095",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "331": {
+      "title": "Palčica",
+      "start_time": "2026-10-25T11:00:00+01:00",
+      "venue": "LGL, Mali oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "8 EUR (zadnje vstopnice)",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261025_1100_95f844983c84",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "332": {
+      "title": "Moja prva lutka, ustvarjalna delavnica",
+      "start_time": "2026-10-24T11:45:00+02:00",
+      "venue": "LGL, Preddverje Velikega odra, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "5 EUR, vstopnica le za otroka, obvezna prisotnost starša",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261024_1145_e6bf452a22ed",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "333": {
+      "title": "Skozi tisočere zgodbe, branje igralk in igralcev LGL (Knjigarna LGL, vstop prost)",
+      "start_time": "2026-10-21T17:00:00+02:00",
+      "venue": "LGL, Knjigarna, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 3,
+      "is_free": true,
+      "price_text": "Prost vstop",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261021_1700_d3637273db0e",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "334": {
+      "title": "Zvezdica Zaspanka (gostuje Lutkovno gledališče Maribor)",
+      "start_time": "2026-10-27T11:00:00+01:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261027_1100_28546834005f",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "335": {
+      "title": "Zvezdica Zaspanka (gostuje Lutkovno gledališče Maribor)",
+      "start_time": "2026-10-27T17:00:00+01:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261027_1700_4bcaef62385d",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "336": {
+      "title": "Zvezdica Zaspanka (gostuje Lutkovno gledališče Maribor)",
+      "start_time": "2026-10-28T11:00:00+01:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261028_1100_7bea99643b2b",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "337": {
+      "title": "Zvezdica Zaspanka (gostuje Lutkovno gledališče Maribor)",
+      "start_time": "2026-10-28T17:00:00+01:00",
+      "venue": "LGL, Veliki oder, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261028_1700_825bfbcac254",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "338": {
+      "title": "Peter Pan",
+      "start_time": "2026-10-30T11:00:00+01:00",
+      "venue": "LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://www.lgl.si/spored-predstav",
+      "flags": [],
+      "event_id": "event_20261030_1100_557eda30f17f",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "339": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica Šentvid (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_6547737d40e2",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "340": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica Prežihov Voranc (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_4ca0b85f97b0",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "341": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica dr. France Škerl (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_cb9e040b980b",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "342": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica Glinškova ploščad (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_2f21f73c1128",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "343": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica Jožeta Mazovca (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_75acd5cf9050",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "344": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-15T17:00:00+02:00",
+      "venue": "Knjižnica Polje (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-10-15/",
+      "flags": [],
+      "event_id": "event_20261015_1700_7400ccbc3fee",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "345": {
+      "title": "Ura pravljic",
+      "start_time": "2026-10-22T17:00:00+02:00",
+      "venue": "Knjižnica dr. France Škerl (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-22/",
+      "flags": [],
+      "event_id": "event_20261022_1700_13c6deb890bc",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "346": {
+      "title": "Kinobalon: Moja mačeha je čarovnica",
+      "start_time": "2026-10-17T11:30:00+02:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [
+        "not_toddler_appropriate"
+      ],
+      "event_id": "event_20261017_1130_54481d79b2c4",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "347": {
+      "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
+      "start_time": "2026-10-26T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261026_1000_b99bffd25a6e",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "348": {
+      "title": "Kinobalon: Gajin svet 3 (s prilagoditvami za gluhe in naglušne ter slepe in slabovidne)",
+      "start_time": "2026-10-29T15:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261029_1500_ded712a30158",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "349": {
+      "title": "Kinobalon: Kako je Mambo postal velikan",
+      "start_time": "2026-11-08T14:15:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261108_1415_c616fe983649",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "350": {
+      "title": "Gledališka predstava: Pika Nogavička in časovni stroj",
+      "start_time": "2026-11-15T00:00:00+01:00",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "9,90 € (samostojna vstopnica)",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/",
+      "flags": [
+        "time_unknown"
+      ],
+      "event_id": "event_20261115_0000_ab38f7a28a6b",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "351": {
+      "title": "Glasbena predstava: Repki 2",
+      "start_time": "2026-11-29T00:00:00+01:00",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kino-bezigrad.si/predstava/koncert-repki-2/",
+      "flags": [
+        "time_unknown"
+      ],
+      "event_id": "event_20261129_0000_ae7a72ad4f77",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "352": {
+      "title": "Gledališka predstava: Zmeda za dva medveda",
+      "start_time": "2027-01-09T00:00:00+01:00",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": false,
+      "price_text": "8,10 € (samostojna vstopnica)",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-zmeda-za-dva-medveda/",
+      "flags": [
+        "time_unknown"
+      ],
+      "event_id": "event_20270109_0000_68178b5e2975",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "353": {
+      "title": "LENA IN LENART: Koncert s forami",
+      "start_time": "2026-10-18T18:00:00+02:00",
+      "venue": "Pionirski teater, Pionirski dom, Vilharjeva cesta 11, Ljubljana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://pionirski-dom.si/aktualno/lena-in-lenart-koncert-s-forami-2/",
+      "flags": [],
+      "event_id": "event_20261018_1800_3dcc67ca3a3a",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
+    },
+    "354": {
+      "title": "Ta veseli dan kulture 2026: Plečnikova hiša, brezplačen ogled",
+      "start_time": "2026-12-03T10:00:00+01:00",
+      "venue": "Plečnikova hiša, Ljubljana",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačen ogled 3. 12. 2026 (Ta veseli dan kulture)",
+      "url": "https://mgml.si/sl/plecnikova-hisa/dogodki/2542/2026-12-03/10-00/ta-veseli-dan-kulture-2026-od-plecnikovega-domovanja-do-prislekov-med-rastlinami/",
+      "flags": [],
+      "event_id": "event_20261203_1000_d7294385e993",
+      "status": "active",
+      "first_seen": "2026-10-15T09:05:20+02:00"
     }
   },
   "user_rules": {
@@ -5129,9 +5542,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-10-08T09:06:20+02:00",
-      "total_active_events": 150,
-      "latest_run": "20261008T070620Z_31afba9f"
+      "last_run": "2026-10-15T09:05:20+02:00",
+      "total_active_events": 139,
+      "latest_run": "20261015T070520Z_bcf56904"
     }
   },
   "hidden_events": {
