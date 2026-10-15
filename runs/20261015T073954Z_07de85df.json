@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261015T073954Z_07de85df",
+    "started_at": "2026-10-15T09:39:54+02:00",
+    "base_sha256": "07de85df71e38b9cd6e64ea147daa60709aa8752459d24804c21a6675258f06c",
+    "candidates": [
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-16T15:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-17T11:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-23T15:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-24T11:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-30T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Pravljični vikend, ustvarjalna delavnica",
+        "start_time": "2026-11-07T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
+        "start_time": "2026-11-13T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
+        "start_time": "2026-11-14T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
+        "start_time": "2026-11-20T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
+        "start_time": "2026-11-21T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
+        "start_time": "2026-11-27T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
+        "start_time": "2026-11-28T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": []
+      },
+      {
+        "title": "Galerijske urice za najmlajše: En kovač konja kuje",
+        "start_time": "2026-10-20T16:30:00+02:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": false,
+        "price_text": "3 EUR na udeleženca (odrasli in otroci nad 3 leta). Vodeni ogled in ustvarjalna delavnica, spremstvo staršev do 4. leta obvezno",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": []
+      },
+      {
+        "title": "Galerijske urice za najmlajše: Galerijska čajanka",
+        "start_time": "2026-11-17T00:00:00+01:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "Termin napovedan na strani Galerijske urice za najmlajše (3. leto dalje), ura in cena še ne objavljeni",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": [
+          "time_unknown"
+        ]
+      },
+      {
+        "title": "Galerijske urice za najmlajše: Pravljična urica",
+        "start_time": "2026-12-15T00:00:00+01:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "Termin napovedan na strani Galerijske urice za najmlajše (3. leto dalje), ura in cena še ne objavljeni",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": [
+          "time_unknown"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.etno-muzej.si/sl/dogodki",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://mao.si/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.citypark.si/si/otroci/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.citypark.si/si/otroci/gledaliske-predstave-za-otroke/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "http://www.botanicni-vrt.si/napovednik-dogodkov",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.ng-slo.si/si/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.mojaobcina.si/ljubljana/dogodki/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://dogodki.kulturnik.si/?what=otroci",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.rtvslo.si/opz-in-mpz/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://ribicpepe.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.romanakr.com/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-10-15T10:15:00+02:00"
+      },
+      {
+        "url": "https://www.zoo.si/novice",
+        "pass": "ljubljana",
+        "status": "failed",
+        "checked_at": "2026-10-15T10:15:00+02:00",
+        "reason": "Client-rendered Next.js app, no event text via curl (same as previous runs)"
+      },
+      {
+        "url": "https://he.si/",
+        "pass": "ljubljana",
+        "status": "failed",
+        "checked_at": "2026-10-15T10:15:00+02:00",
+        "reason": "Connection failed (no response)"
+      },
+      {
+        "url": "https://www.alenkakolman.si/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-10-15T10:15:00+02:00",
+        "reason": "Connection failed (no response)"
+      },
+      {
+        "url": "https://kavbojska-dezela.si/dogodki/",
+        "pass": "slovenia",
+        "status": "failed",
+        "checked_at": "2026-10-15T10:15:00+02:00",
+        "reason": "HTTP 403 to plain curl with browser UA"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "partial",
+        "reason": "Citypark, Narodna galerija, Kulturnik, MAO, SEM, MojaObčina, Botanični vrt reviewed. ZOO unreachable (client-rendered), Hiša eksperimentov unreachable, Cankarjev dom and Visit Ljubljana pages gave no dated child events via curl."
+      },
+      "slovenia": {
+        "status": "skipped",
+        "reason": "Not repeated in this follow-up; Kavbojska dežela returned 403"
+      },
+      "concerts_generic": {
+        "status": "partial",
+        "reason": "napovednik.com/glasba first page only; no generic children concert found beyond those saved in the earlier run today."
+      },
+      "concerts_watchlist": {
+        "status": "partial",
+        "reason": "Dated web searches for Ribič Pepe, Adi Smolar, Romana Krajnčan, Neca Falk, Alenka Kolman and the RTV children choir found no confirmable dated appearance. Own sites of Ribič Pepe, Romana Krajnčan and the RTV choir page fetched without dates; alenkakolman.si unreachable. Čuki, Dejan Dogaja and Vila Eksena were searched in the earlier run today."
+      },
+      "free_entry": {
+        "status": "skipped",
+        "reason": "Not repeated in this follow-up; covered in the earlier run today"
+      },
+      "avto_moto": {
+        "status": "skipped",
+        "reason": "Not repeated in this follow-up; covered in the earlier run today"
+      }
+    },
+    "filtered": [
+      {
+        "title": "Jesensko počitniško varstvo za otroke (Narodna galerija)",
+        "url": "https://www.ng-slo.si/si/",
+        "reason": "Holiday care for ages 5 to 11, multi-day care pattern"
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi (Ljubljanski grad, 16 Jan 2027)",
+        "url": "https://dogodki.kulturnik.si/?what=otroci",
+        "reason": "Starts after the three-month horizon (2027-01-15)"
+      }
+    ],
+    "leads": [
+      {
+        "title": "Dobrodelni Miklavžev koncert (RTV, otroški in mladinski zbor)",
+        "url": "https://www.rtvslo.si/opz-in-mpz/",
+        "reason": "No 2026 date or venue published yet; held early December in previous years"
+      },
+      {
+        "title": "Ribič Pepe, Romana Krajnčan: December children appearances",
+        "url": "https://ribicpepe.si/",
+        "reason": "Own-site listings are old (2017); no 2026 dates found"
+      }
+    ],
+    "runtime_notes": [
+      "Follow-up to the earlier same-day run, which skipped these venues without a technical reason. No time limit applied to either run.",
+      "Citypark programme \"Doživljajska jesen\" runs every Friday 15:00-20:00 and Saturday 11:00-20:00 to 2026-11-28; one entry per themed day was saved with the Halloween theme dated 15-30 Oct on the source page.",
+      "ZOO Ljubljana (client-rendered), Hiša eksperimentov, alenkakolman.si (connection failures) and Kavbojska dežela (403) were not readable this run.",
+      "Publication: the session assigns branch claude/dazzling-goldberg-48o2jo, so the sweep is pushed there. main was NOT reached because the session forbids pushing elsewhere without permission."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-16T15:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261016_1500_48aebcd1b079",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-17T11:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261017_1100_67d348ad7312",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-23T15:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261023_1500_91750ca978e0",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-24T11:00:00:00+02:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261024_1100_a0a94f40a940",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
+        "start_time": "2026-10-30T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261030_1500_939c7e262cd5",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Pravljični vikend, ustvarjalna delavnica",
+        "start_time": "2026-11-07T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261107_1100_8090d81441df",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
+        "start_time": "2026-11-13T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261113_1500_d5f10acb9888",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
+        "start_time": "2026-11-14T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261114_1100_64d846f442fe",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
+        "start_time": "2026-11-20T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261120_1500_3748fd11770c",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
+        "start_time": "2026-11-21T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261121_1100_86762d1dc3ab",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
+        "start_time": "2026-11-27T15:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261127_1500_7c79387b0b53",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
+        "start_time": "2026-11-28T11:00:00:00+01:00",
+        "venue": "Citypark, pri trgovini Humanic",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00",
+        "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
+        "flags": [],
+        "event_id": "event_20261128_1100_0008f475afa7",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Galerijske urice za najmlajše: En kovač konja kuje",
+        "start_time": "2026-10-20T16:30:00+02:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": false,
+        "price_text": "3 EUR na udeleženca (odrasli in otroci nad 3 leta). Vodeni ogled in ustvarjalna delavnica, spremstvo staršev do 4. leta obvezno",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": [],
+        "event_id": "event_20261020_1630_9a5e12125fc0",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Galerijske urice za najmlajše: Galerijska čajanka",
+        "start_time": "2026-11-17T00:00:00+01:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "Termin napovedan na strani Galerijske urice za najmlajše (3. leto dalje), ura in cena še ne objavljeni",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": [
+          "time_unknown"
+        ],
+        "event_id": "event_20261117_0000_235a1503762f",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      },
+      {
+        "title": "Galerijske urice za najmlajše: Pravljična urica",
+        "start_time": "2026-12-15T00:00:00+01:00",
+        "venue": "Narodna galerija, Puharjeva 9, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "Termin napovedan na strani Galerijske urice za najmlajše (3. leto dalje), ura in cena še ne objavljeni",
+        "url": "https://www.ng-slo.si/si/dogodki/galerijske-urice-za-najmlajse-en-kovac-konja-kuje?id=6719",
+        "flags": [
+          "time_unknown"
+        ],
+        "event_id": "event_20261215_0000_1e9dec3ad9d7",
+        "status": "active",
+        "first_seen": "2026-10-15T09:39:54+02:00"
+      }
+    ],
+    "updated": [],
+    "expired": [],
+    "hidden": [],
+    "filtered": [
+      {
+        "title": "Jesensko počitniško varstvo za otroke (Narodna galerija)",
+        "url": "https://www.ng-slo.si/si/",
+        "reason": "Holiday care for ages 5 to 11, multi-day care pattern"
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi (Ljubljanski grad, 16 Jan 2027)",
+        "url": "https://dogodki.kulturnik.si/?what=otroci",
+        "reason": "Starts after the three-month horizon (2027-01-15)"
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "654f8dc147aa8b01210d2003ef5d92cb6a919c27a031a44a886994162a0fbba8"
+}
