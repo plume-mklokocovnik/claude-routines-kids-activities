@@ -22,6 +22,13 @@ name: Auto fast-forward sweep branches to main
 #      it is allowed anywhere near main.
 # If branch protection on main requires review, the final push simply fails with
 # a normal error - this workflow never attempts to work around that.
+#
+# Publishing is handed off rather than done here. This run belongs to the
+# claude/* branch that triggered it, and the github-pages environment only lets
+# runs on main deploy. Calling pages.yml with `uses:` would keep this run's
+# branch and be rejected. Starting pages.yml through workflow_dispatch on main
+# gives the deploy its own run on main, which the environment accepts.
+# workflow_dispatch is one of the two events the workflow token may trigger.
 
 on:
   push:
@@ -31,8 +38,7 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
+  actions: write
 
 concurrency:
   group: sweep-auto-merge
@@ -119,4 +125,11 @@ jobs:
   publish:
     needs: merge
     if: needs.merge.outputs.merged == 'true'
-    uses: ./.github/workflows/pages.yml
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Start the Pages deploy on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"

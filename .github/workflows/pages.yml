@@ -4,6 +4,9 @@ name: Deploy swipe app
 # of db.json, so it redeploys whenever the database or the app changes.
 # Callable, because a commit pushed by a workflow does not trigger another
 # workflow: apply-decisions.yml calls this itself after writing the database.
+# sweep-auto-merge.yml instead starts it through workflow_dispatch on main,
+# because a call would keep that run's claude/* branch, which the github-pages
+# environment does not allow to deploy.
 
 on:
   push:
