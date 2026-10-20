@@ -59,6 +59,7 @@ candidate, and is checked again on the next run.
 | Poletna muzejska noč (Noč muzejev) | `free_entry` | Third Saturday of June. `sms-muzeji.si` |
 | Dejan Dogaja, free and paid appearances | `concerts_watchlist` | Any month. Organiser calendars, since he publishes none |
 | Vila Eksena, free and paid appearances | `concerts_watchlist` | Any month. Organiser calendars, since she publishes none |
+| ZOO Ljubljana activities and events | `ljubljana` | Every run. Follow the [ZOO check](reference/sources.md#zoo-ljubljana): news, the daily programme, the shop API and one press search. Record the outcome even when the zoo publishes nothing dated |
 
 Price never gates a save for any watchlist artist. Save free and paid appearances alike and
 let the reader decide.

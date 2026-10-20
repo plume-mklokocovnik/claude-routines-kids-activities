@@ -92,7 +92,41 @@ events rather than ordinary opening hours. Recurring annual fixtures:
 * **Dan Zemlje** — late April into the May Day holidays, conservation programme across several days
 * **Svetovni dan živali + dan oskrbnikov** — the weekend around 4 October, enrichment demos, "how to become a conservationist", night tours
 * **Noč čarovnic** — through October to the 31st, candlelit themed evening tours
-* **Poletne počitnice** and **zimske počitnice** — ⛔ **exclude**, these are paid multi-day camps for ages 5+, exactly the subscription pattern the rules forbid
+* **Čarovniške dogodivščine.** The autumn school holiday week (krompirjeve počitnice), daily afternoon stalls inside the zoo, free with the ticket. Reported by Delo on 2026-10-02 for 24 to 31 October 2026, 14:00 to 17:00. Confirm on the zoo's own pages before saving
+* **Poletne počitnice**, **jesenske počitnice** and **zimske počitnice.** ⛔ **exclude**, these are paid multi-day camps for ages 5+, exactly the subscription pattern the rules forbid
+
+**Named check, every run.** The zoo has no event calendar page and no RSS feed. It announces
+dated events in four places, so check all four and record each URL in `sources`. Verified 2026-10-20.
+
+1. **News, `https://www.zoo.si/novice`.** A Next.js app, but the HTML is server-rendered. The
+   article list is inside the `self.__next_f.push([1,"..."])` script chunks as
+   `{"title":...,"date":"5. October 2026","tag":{"id":"novice"|"obvestila"|"mladici"}}` objects.
+   Join the chunks, unescape the JSON string, then read the objects. Plain `curl -A "Mozilla/5.0"`
+   is enough. A text-only fetch that strips scripts sees nothing, which is what the 2026-09-28
+   "no content" note was. Event announcements sit under `novice` and `obvestila`. Open the
+   article at `/novice/<slug>` for the date and time.
+2. **Daily programme, `https://www.zoo.si/aktivnosti`.** "Trenutno v ZOO". The same payload
+   carries an `activities` array for today and tomorrow with `time`, `title`, `subtitle` and
+   `paid`. On an ordinary day it lists only feedings (`"subtitle":"Hranjenje"`). Those are
+   normal opening hours, do not save them. During holiday weeks and fixture weekends the special
+   stalls and talks appear here with their hour, which is the evidence the news post lacks.
+   The `/api/activities/sl` route behind the date picker does not answer outside the app.
+3. **Shop, `https://trgovina.zoo.si/`.** WordPress, server-rendered, and it has a public REST
+   list: `https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50`. Programmes are the
+   products in category `zoo-dozivetja` (id 19) and the dated ones carry a `Termini:` line in
+   `content.rendered`. Seasonal products such as `artikel/noc-carovnic/` appear a week or two
+   before the event and 404 the rest of the year. Everything here is paid on top of the ticket.
+   Save a single-date public tour such as *Nočno vodenje*, skip *Srečaj NAJ žival*, birthday
+   parties, *Oskrbnik za en dan* and the holiday camps.
+4. **Press and portals.** One search per run for `ZOO Ljubljana <month> <year>` and the
+   season's fixture name. Delo (2026-10-02) and `mojaobcina.si/ljubljana` (Noč čarovnic 2024)
+   have carried the zoo's programme before the zoo's own site did. `visitljubljana.com` lists the odd zoo event under
+   *Za družine*. A press quote from the zoo's education office is a lead. The event still needs
+   a zoo page or the daily programme before it becomes a candidate.
+
+The conservation-events page `https://www.zoo.si/ponudba/naravovarstvene-prireditve-in-dogodivscine`
+describes the free weekend format and the yearly *Postani naravovarstvenik* series, but it has
+no dates. Read it once for context, not every run.
 
 ---
 

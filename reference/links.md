@@ -45,7 +45,7 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | `ljubljana.si/sl/aktualno/eventi/<slug>` | `ljubljana.si/sl/aktualno/dogodki/<slug>` |
 | `danslovenskegasporta.si/eventi/` | `danslovenskegasporta.si/dogodki/` |
 | `postojnska-jama.eu/sl/tickets/living-nativite-scenes/` | `postojnska-jama.eu/en/tickets/living-nativity-scenes/` (Slovenian path 404s, English path works) |
-| `www.zoo.si/dogodki`, `zoo.si/ponudba/element/carovniski-dan` | No working replacement found — `zoo.si/novice` and `zoo.si/ponudba` are the only live event pages, and neither carries a dated 2026 event as of this sweep |
+| `www.zoo.si/dogodki`, `zoo.si/koledar`, `zoo.si/ponudba/element/carovniski-dan`, `zoo.si/feed` | No event calendar or feed exists. Use `zoo.si/novice`, `zoo.si/aktivnosti` and the shop API per the [ZOO check](sources.md#zoo-ljubljana) |
 | `citypark.si/si/events/` (index) | No working index; only per-event URLs of the shape `citypark.si/si/events/<slug>/<yyyy-mm-dd>` resolve |
 
 ---
@@ -128,9 +128,14 @@ Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
 | Hiša eksperimentov | `https://he.si/` | low, 503 on both attempts this sweep (root and `/dogodki/`). Retry next run |
 | Tehniški muzej Bistra | `https://www.tms.si/` | low, 200 OK but fetched content truncated before reaching the events section on every path tried (`/dogodki/`, `/en/events-all-events/`, `/en/events-tms-bistra/`) |
 | Ljubljanski grad | `https://www.ljubljanskigrad.si/` | ok |
-| ZOO news | `https://www.zoo.si/novice` | ⚠️ checked 2026-09-28 — fully client-rendered Next.js app now, both curl and WebFetch return no event content at all. Not yet moved to "do not retry" (previously "ok"); re-verify with a JS-capable fetch next run before reclassifying |
+| ZOO news | `https://www.zoo.si/novice` | ok, re-verified 2026-10-20 with plain curl. The article list is in the `self.__next_f` script payload, not in visible text, so a script-stripping fetch sees nothing. Recipe in [`sources.md`](sources.md#zoo-ljubljana) |
+| ZOO daily programme | `https://www.zoo.si/aktivnosti` | ok, checked 2026-10-20. Today and tomorrow only. Feedings are opening hours, special stalls and talks are events |
 | ZOO programmes | `https://www.zoo.si/ponudba` | ok |
-| ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, checked 2026-09-24 — consistent with the existing `zoo.si/ponudba/noc-carovnic` seasonal 404 below; likely goes live closer to end of October |
+| ZOO conservation events page | `https://www.zoo.si/ponudba/naravovarstvene-prireditve-in-dogodivscine` | ok, undated format description only |
+| ZOO shop product API | `https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50` | ok, checked 2026-10-20. JSON, filter on `product_cat` 19 (`zoo-dozivetja`). Dated paid programmes carry `Termini:` |
+| ZOO shop programmes | `https://trgovina.zoo.si/kategorija/zoo-dozivetja/` | ok, same products as the API, rendered |
+| ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, still 404 on 2026-10-20. Consistent with the `zoo.si/ponudba/noc-carovnic` seasonal 404 below. Check the shop API first, the product shows up there when it goes live |
+| ZOO activities API | `https://www.zoo.si/api/activities/sl` | avoid, returns the app error shell outside the page. Read `/aktivnosti` instead |
 | Museums of Slovenia | `https://sms-muzeji.si/` | ok, Poletna muzejska noč host |
 | ZPMS, Za družine brezplačno | `https://www.zpms.si/` | unverified root. The 2026 post was read through search on 2026-10-05. The 15 to 22 May campaign is a news post each May with a PDF list of institutions, posted only days ahead |
 

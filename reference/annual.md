@@ -235,7 +235,7 @@ shopping centres, roughly a week ahead.
 | Lumpi tek | `https://ljubljanskimaraton.si/lumpi-tek` |
 | Slovenski knjižni sejem | `https://knjizni-sejem.si/` |
 | Otroški knjižni festival | `https://www.cd-cc.si/kultura/za-mlade-in-sole/otroski-knjizni-festival` |
-| ZOO events | `https://www.zoo.si/novice` |
+| ZOO events | `https://www.zoo.si/novice`, `https://www.zoo.si/aktivnosti` and the shop API, see the [ZOO check](sources.md#zoo-ljubljana) |
 | Miklavžev sprevod | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/` |
 | December v Ljubljani, Silvestrovanje za otroke | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani` |
 | Kurentovanje | `https://kurentovanje.net/` |
