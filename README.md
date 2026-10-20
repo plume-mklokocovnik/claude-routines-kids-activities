@@ -67,8 +67,8 @@ leaves every list and count in the app, and its category is kept.
 
 `expired` hides every event whose stored status is `expired`, each by its ID with the
 reason `expired`. It reads the status a sweep wrote, never the clock.
-[hide-expired.yml](.github/workflows/hide-expired.yml) runs it every midnight in
-Ljubljana and republishes the site.
+[hide-expired.yml](.github/workflows/hide-expired.yml) runs it every night at
+01:00 UTC, around 3 am in Ljubljana, and republishes the site.
 
 Each command updates the database atomically. A hide retains the complete event record. An unhide removes the exclusion
 and restores retained records as of the last sweep clock. Old hidden references
