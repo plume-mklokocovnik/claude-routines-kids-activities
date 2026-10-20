@@ -55,6 +55,18 @@ class RunTests(unittest.TestCase):
         self.assertEqual(merged["events"]["1"], {**db["events"]["1"], "status": "expired"})
         self.assertEqual(len(results["expired"]), 1)
 
+    def test_id_correction_updates_a_past_event_and_keeps_it_expired(self):
+        db, payload = database(), batch()
+        db["events"]["1"]["start_time"] = "2026-09-27T10:00:00+02:00"
+        payload["candidates"] = [candidate(start_time="2026-09-27T11:00:00+02:00"),
+                                 candidate(event_id="unknown", start_time="2026-09-27T09:00:00+02:00")]
+        merged, results = run.merge(db, payload)
+        self.assertEqual(len(merged["events"]), 1)
+        self.assertEqual(merged["events"]["1"]["start_time"], "2026-09-27T11:00:00+02:00")
+        self.assertEqual(merged["events"]["1"]["status"], "expired")
+        self.assertEqual(results["updated"][0]["before"], db["events"]["1"])
+        self.assertEqual([item["reason"] for item in results["filtered"]], ["Already past at the run clock"])
+
     def test_hidden_candidates_cannot_return_and_future_is_deferred(self):
         db, payload = database(), batch()
         db["user_rules"]["1"]["exclude_event_ids"] = ["sample_20261010_1000"]

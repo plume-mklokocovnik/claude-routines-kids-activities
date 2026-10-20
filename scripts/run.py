@@ -105,6 +105,7 @@ def merge(db, batch):
         identity_key = by_identity.get(fingerprint(item))
         if existing_key is not None and identity_key is not None and existing_key != identity_key:
             raise ValueError("Candidate ID and title/time/venue identify different records")
+        correction = existing_key is not None
         existing_key = existing_key or identity_key
         previous = events.get(existing_key)
         item["event_id"] = previous["event_id"] if previous else item.get("event_id") or event_id(item)
@@ -118,7 +119,7 @@ def merge(db, batch):
         if reason:
             results["hidden"].append({**item, "reason": reason})
             continue
-        if state.expired(item, clock):
+        if state.expired(item, clock) and not correction:
             results["filtered"].append({**item, "reason": "Already past at the run clock"})
             continue
         if state.timestamp(item["start_time"]) > state.add_months(clock):

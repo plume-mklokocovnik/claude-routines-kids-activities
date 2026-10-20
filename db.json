@@ -118,7 +118,7 @@
       "price_text": "Brezplačno",
       "url": "https://ljubljanskimaraton.si/lumpi-tek",
       "flags": [],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "interested",
       "decided_at": "2026-09-30T18:28:43Z"
@@ -3022,7 +3022,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6262",
       "flags": [],
       "event_id": "event_20261016_1700_1b3a6547f5fa",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3039,7 +3039,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/minimao-igralnica-5654",
       "flags": [],
       "event_id": "event_20261018_1000_7c2d5dc4e719",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3321,7 +3321,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261017_0000_f166bd23703a",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3615,7 +3615,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261015_1700_b7d558e878b1",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3632,7 +3632,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261015_1800_08b60670553c",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3649,7 +3649,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261017_1100_47265a415422",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3666,7 +3666,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261017_1700_f14d0c191fab",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3683,7 +3683,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261018_1100_4106b031d1c7",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3700,7 +3700,7 @@
       "url": "https://lgl.mojekarte.si/en/all.html",
       "flags": [],
       "event_id": "event_20261018_1700_77afe3e1c075",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3904,7 +3904,7 @@
       "url": "https://pionirski-dom.si/",
       "flags": [],
       "event_id": "event_20261016_1700_42021c24ff26",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3972,7 +3972,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261016_1000_0c5c863bfaa9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3989,7 +3989,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261017_1100_c4ce220292f7",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4006,7 +4006,7 @@
       "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
       "flags": [],
       "event_id": "event_20261019_1030_4c7d35b57989",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4228,7 +4228,7 @@
       "url": "https://www.hisaotrok.si/koledar_prireditev/list/",
       "flags": [],
       "event_id": "event_20261017_1700_22d7c24d1db6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4630,7 +4630,7 @@
       "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/zakljucni-koncert-tridnevne-delavnice-za-100-najmlajsih-violoncelistov-iz-vse-slovenije",
       "flags": [],
       "event_id": "event_20261018_1100_5e4d7f87fbc6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4899,7 +4899,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261018_0000_4501d9bd1305",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -5138,7 +5138,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_6547737d40e2",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "340": {
@@ -5153,7 +5153,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_4ca0b85f97b0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "341": {
@@ -5168,7 +5168,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_cb9e040b980b",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "342": {
@@ -5183,7 +5183,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_2f21f73c1128",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "343": {
@@ -5198,7 +5198,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_75acd5cf9050",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "344": {
@@ -5213,7 +5213,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-10-15/",
       "flags": [],
       "event_id": "event_20261015_1700_7400ccbc3fee",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "345": {
@@ -5245,7 +5245,7 @@
         "not_toddler_appropriate"
       ],
       "event_id": "event_20261017_1130_54481d79b2c4",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "347": {
@@ -5356,7 +5356,7 @@
       "url": "https://pionirski-dom.si/aktualno/lena-in-lenart-koncert-s-forami-2/",
       "flags": [],
       "event_id": "event_20261018_1800_3dcc67ca3a3a",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "354": {
@@ -5376,7 +5376,7 @@
     },
     "355": {
       "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
-      "start_time": "2026-10-16T15:00:00:00+02:00",
+      "start_time": "2026-10-16T15:00:00+02:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5386,12 +5386,12 @@
       "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
       "flags": [],
       "event_id": "event_20261016_1500_48aebcd1b079",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00"
     },
     "356": {
       "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
-      "start_time": "2026-10-17T11:00:00:00+02:00",
+      "start_time": "2026-10-17T11:00:00+02:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5401,12 +5401,12 @@
       "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
       "flags": [],
       "event_id": "event_20261017_1100_67d348ad7312",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00"
     },
     "357": {
       "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
-      "start_time": "2026-10-23T15:00:00:00+02:00",
+      "start_time": "2026-10-23T15:00:00+02:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5421,7 +5421,7 @@
     },
     "358": {
       "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
-      "start_time": "2026-10-24T11:00:00:00+02:00",
+      "start_time": "2026-10-24T11:00:00+02:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5436,7 +5436,7 @@
     },
     "359": {
       "title": "Doživljajska jesen za otroke v Cityparku: Halloween",
-      "start_time": "2026-10-30T15:00:00:00+01:00",
+      "start_time": "2026-10-30T15:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5451,7 +5451,7 @@
     },
     "360": {
       "title": "Doživljajska jesen za otroke v Cityparku: Pravljični vikend, ustvarjalna delavnica",
-      "start_time": "2026-11-07T11:00:00:00+01:00",
+      "start_time": "2026-11-07T11:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5466,7 +5466,7 @@
     },
     "361": {
       "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
-      "start_time": "2026-11-13T15:00:00:00+01:00",
+      "start_time": "2026-11-13T15:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5481,7 +5481,7 @@
     },
     "362": {
       "title": "Doživljajska jesen za otroke v Cityparku: Velike igre",
-      "start_time": "2026-11-14T11:00:00:00+01:00",
+      "start_time": "2026-11-14T11:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5496,7 +5496,7 @@
     },
     "363": {
       "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
-      "start_time": "2026-11-20T15:00:00:00+01:00",
+      "start_time": "2026-11-20T15:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5511,7 +5511,7 @@
     },
     "364": {
       "title": "Doživljajska jesen za otroke v Cityparku: Mali arhitekti",
-      "start_time": "2026-11-21T11:00:00:00+01:00",
+      "start_time": "2026-11-21T11:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5526,7 +5526,7 @@
     },
     "365": {
       "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
-      "start_time": "2026-11-27T15:00:00:00+01:00",
+      "start_time": "2026-11-27T15:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5541,7 +5541,7 @@
     },
     "366": {
       "title": "Doživljajska jesen za otroke v Cityparku: Mala olimpijada",
-      "start_time": "2026-11-28T11:00:00:00+01:00",
+      "start_time": "2026-11-28T11:00:00+01:00",
       "venue": "Citypark, pri trgovini Humanic",
       "city": "Ljubljana",
       "category": "pop_up",
@@ -5771,9 +5771,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-10-15T09:39:54+02:00",
-      "total_active_events": 154,
-      "latest_run": "20261015T073954Z_07de85df"
+      "last_run": "2026-10-20T13:12:17+02:00",
+      "total_active_events": 127,
+      "latest_run": "20261020T111217Z_654f8dc1"
     }
   },
   "hidden_events": {
