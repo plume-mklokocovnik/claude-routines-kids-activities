@@ -4,6 +4,7 @@ import calendar
 import hashlib
 import json
 import os
+import re
 import tempfile
 from contextlib import contextmanager
 from datetime import datetime
@@ -23,13 +24,17 @@ CATEGORIES = {
 DECISIONS = ("interested", "maybe", "rejected")
 
 
+ISO_TIMESTAMP = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,6})?(Z|[+-]\d{2}:\d{2})")
+
+
 def timestamp(value):
-    try:
-        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-        if parsed.utcoffset() is not None:
-            return parsed.astimezone(TZ)
-    except (AttributeError, TypeError, ValueError):
-        pass
+    # fromisoformat is lenient on Python 3.11 to 3.13 and accepted strings such as
+    # "2026-10-16T15:00:00:00+02:00", which 3.14 rejects. Pin the shape instead.
+    if isinstance(value, str) and ISO_TIMESTAMP.fullmatch(value):
+        try:
+            return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(TZ)
+        except ValueError:
+            pass
     raise ValueError(f"Expected an ISO timestamp with timezone, got {value!r}")
 
 

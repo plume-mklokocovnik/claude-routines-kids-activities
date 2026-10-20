@@ -54,6 +54,14 @@ class StateTests(unittest.TestCase):
         self.assertFalse(state.expired(item, state.timestamp("2026-09-28T23:00:00+02:00")))
         self.assertTrue(state.expired(item, state.timestamp("2026-09-29T00:00:00+02:00")))
 
+    def test_timestamp_shape_is_pinned_across_python_versions(self):
+        for value in ("2026-10-16T15:00:00+02:00", "2026-09-24T07:22:48Z", "2026-10-16T15:00:00.5+02:00"):
+            self.assertIsNotNone(state.timestamp(value).utcoffset())
+        for value in ("2026-10-16T15:00:00:00+02:00", "2026-10-16T15:00:00", "2026-10-16 15:00:00+02:00",
+                      "2026-10-16T15:00+02:00", "20261016T150000+0200", None, 20261016):
+            with self.assertRaises(ValueError):
+                state.timestamp(value)
+
     def test_calendar_horizon_accounts_for_dst_and_month_end(self):
         self.assertEqual(state.add_months(state.timestamp("2026-08-31T10:00:00+02:00")).isoformat(),
                          "2026-11-30T10:00:00+01:00")
