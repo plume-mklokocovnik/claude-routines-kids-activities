@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261020T112126Z_fbae18c7",
+    "started_at": "2026-10-20T13:21:26+02:00",
+    "base_sha256": "fbae18c7434fea137f438347431aa9ce4bfe309fe42bd71c920597011b96c87f",
+    "candidates": [
+      {
+        "title": "Ustvarjalnice z Galerijo C.C.U.: Moje čarobno mesto",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Center kulture Španski borci, Zaloška 61, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstop prost. Prijave obvezne (tel. 031307383)",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359",
+        "flags": []
+      },
+      {
+        "title": "Ustvarjalna delavnica za otroke, mladino in družine",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080",
+        "flags": []
+      },
+      {
+        "title": "Ustvarjalna delavnica za otroke, mladino in družine",
+        "start_time": "2026-10-23T17:00:00+02:00",
+        "venue": "Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097",
+        "flags": []
+      },
+      {
+        "title": "Škratolovski dogodek: Pot močvirskih škratov na Mali plac - nočni pohod",
+        "start_time": "2026-10-24T17:00:00+02:00",
+        "venue": "Športni park Bevke, Bevke 92a, Log pri Brezovici",
+        "city": "Log pri Brezovici",
+        "category": "festival",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "12 € otrok, 5 € odrasli. Prijava ali nakup na strani",
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      },
+      {
+        "title": "Škratolovski dogodek: Velikani Istre - velikanski dan za vso družino!",
+        "start_time": "2026-10-25T11:00:00+01:00",
+        "venue": "Kmetija Jakomin, Kubed 57a, Gračišče",
+        "city": "Gračišče",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Brezplačen razen nakupa beležke za pohod (7 €)",
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ]
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Otona Župančiča (MKL), 2. nadstropje",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Savsko naselje (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Jarše (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Grba (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Škofljica (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Dobrova (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T18:00:00+02:00",
+        "venue": "Knjižnica Gameljne (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/",
+        "flags": []
+      },
+      {
+        "title": "Branje z labradorko Keri",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 2,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/branje-z-labradorko-keri/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
+        "start_time": "2026-10-24T14:20:00+02:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-25T15:10:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Za poletje, skupaj!",
+        "start_time": "2026-10-27T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-28T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Pošastka Mia",
+        "start_time": "2026-10-29T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-30T15:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Moja mačeha je čarovnica",
+        "start_time": "2026-10-31T16:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Wildwood: Skrivnost prepovedanega gozda",
+        "start_time": "2026-11-01T16:15:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/branje-z-labradorko-keri/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodki/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.zoo.si/aktivnosti",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://www.zoo.si/novice",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      },
+      {
+        "url": "https://svamz.com/koledar-dogodkov/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-10-20T13:40:00+02:00"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "ok"
+      },
+      "slovenia": {
+        "status": "partial",
+        "reason": "Only the regional items surfaced by napovednik.com were read. regions.md sources were not swept this run"
+      },
+      "concerts_generic": {
+        "status": "skipped",
+        "reason": "Only web searches ran and no page was fetched, so no source qualifies. One standard web search only. napovednik.com/glasba sub-categories and the dated query set were not run"
+      },
+      "concerts_watchlist": {
+        "status": "skipped",
+        "reason": "Only web searches ran and no page was fetched, so no source qualifies. One undated-by-artist search each for Romana Krajnčan, Dejan Dogaja and Vila Eksena for November 2026, no dated appearance found. The other six artists and the December and January months were not searched"
+      },
+      "free_entry": {
+        "status": "skipped",
+        "reason": "Only web searches ran and no page was fetched, so no source qualifies. One search for free museum entry in November 2026 returned nothing usable. No named campaign window (Teden družin, 18 May, Poletna muzejska noč) is inside the horizon"
+      },
+      "avto_moto": {
+        "status": "ok"
+      }
+    },
+    "filtered": [
+      {
+        "title": "Delavnica oblikovanja trajnostnih venčkov",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-oblikovanja-trajnostnih-venckov-6acf4207af571",
+        "reason": "Adult grave-wreath workshop, nobody would bring a child"
+      },
+      {
+        "title": "Začetna delavnica kvačkanja",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/zacetna-delavnica-kvackanja-6ad70ade6d6ec",
+        "reason": "Adult crochet beginners workshop, nobody would bring a child"
+      },
+      {
+        "title": "Jesenske počitnice",
+        "url": "https://napovednik.com/za-otroke/pocitnisko-varstvo/jesenske-pocitnice-6365",
+        "reason": "Holiday care programme, excluded by rule 3"
+      },
+      {
+        "title": "Sijaj, sijaj, sončece",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/sijaj-sijaj-soncece-6220",
+        "reason": "Standalone single performance in Nova Gorica, not worth the trip on its own"
+      }
+    ],
+    "leads": [
+      {
+        "title": "Alfa Rally",
+        "url": "https://svamz.com/koledar-dogodkov/",
+        "reason": "SVAMZ lists 28.11.2026 only, no venue or organiser page opened"
+      },
+      {
+        "title": "ZOO Ljubljana Nočno vodenje",
+        "url": "https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/",
+        "reason": "Paid night tour, the product text names no dated slots, dates sit in the booking widget"
+      }
+    ],
+    "runtime_notes": [
+      "ZOO check 2026-10-20: zoo.si/aktivnosti showed only routine feedings, the shop API holds no dated Termini product (Halloween product still absent), the news list has no dated event, and no zoo press search was run.",
+      "Kinobalon page lists screenings only to 2026-11-08 and shows no ages or prices. Kinobalon rows carry no price.",
+      "Pass coverage was shallow: aggregators, the MOL calendar, MKL, Kinodvor, ZOO and SVAMZ were read. LGL, Kino Bežigrad, SiTi, Cankarjev dom, MGML, Visit Ljubljana and kulturnik were not re-read this run.",
+      "Web search is US-region and returned no dated Slovenian results for the watchlist or free-entry queries.",
+      "Run executed in a cloud session on assigned branch claude/dazzling-goldberg-resa3e. main may not be reachable for push, see publication note."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Ustvarjalnice z Galerijo C.C.U.: Moje čarobno mesto",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Center kulture Španski borci, Zaloška 61, Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstop prost. Prijave obvezne (tel. 031307383)",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359",
+        "flags": [],
+        "event_id": "event_20261020_1700_569b4a54047e",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ustvarjalna delavnica za otroke, mladino in družine",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080",
+        "flags": [],
+        "event_id": "event_20261020_1700_d3801a84395e",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ustvarjalna delavnica za otroke, mladino in družine",
+        "start_time": "2026-10-23T17:00:00+02:00",
+        "venue": "Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097",
+        "flags": [],
+        "event_id": "event_20261023_1700_835d80869a93",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Škratolovski dogodek: Pot močvirskih škratov na Mali plac - nočni pohod",
+        "start_time": "2026-10-24T17:00:00+02:00",
+        "venue": "Športni park Bevke, Bevke 92a, Log pri Brezovici",
+        "city": "Log pri Brezovici",
+        "category": "festival",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "12 € otrok, 5 € odrasli. Prijava ali nakup na strani",
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261024_1700_cbad0f01fd60",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Škratolovski dogodek: Velikani Istre - velikanski dan za vso družino!",
+        "start_time": "2026-10-25T11:00:00+01:00",
+        "venue": "Kmetija Jakomin, Kubed 57a, Gračišče",
+        "city": "Gračišče",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Brezplačen razen nakupa beležke za pohod (7 €)",
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ],
+        "event_id": "event_20261025_1100_401d13af164e",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Otona Župančiča (MKL), 2. nadstropje",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1700_480f8b3f7706",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Savsko naselje (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1700_71eb5f8e1ec5",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1700_2b3e3baa7215",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Jarše (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1700_c34ee13746c6",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Grba (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1730_b3ed8ba13689",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Škofljica (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1730_7fd112171aa5",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T17:30:00+02:00",
+        "venue": "Knjižnica Dobrova (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 3,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1730_981037416adb",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Ura pravljic",
+        "start_time": "2026-10-20T18:00:00+02:00",
+        "venue": "Knjižnica Gameljne (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/",
+        "flags": [],
+        "event_id": "event_20261020_1800_3d5164d6c7a4",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Branje z labradorko Keri",
+        "start_time": "2026-10-20T17:00:00+02:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 2,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/branje-z-labradorko-keri/",
+        "flags": [],
+        "event_id": "event_20261020_1700_c603aaea7012",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
+        "start_time": "2026-10-24T14:20:00+02:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261024_1420_d738476aaba9",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-25T15:10:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261025_1510_7105701edc36",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Za poletje, skupaj!",
+        "start_time": "2026-10-27T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261027_1000_90111bd94eed",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-28T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261028_1000_c449d6a919a1",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Pošastka Mia",
+        "start_time": "2026-10-29T10:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261029_1000_6b1df216884e",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Kako je Mambo postal velikan",
+        "start_time": "2026-10-30T15:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261030_1500_83863ec95b6d",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Moja mačeha je čarovnica",
+        "start_time": "2026-10-31T16:00:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261031_1600_543553f34afd",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      },
+      {
+        "title": "Kinobalon: Wildwood: Skrivnost prepovedanega gozda",
+        "start_time": "2026-11-01T16:15:00+01:00",
+        "venue": "Kinodvor, Dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261101_1615_8afc27f33c65",
+        "status": "active",
+        "first_seen": "2026-10-20T13:21:26+02:00"
+      }
+    ],
+    "updated": [],
+    "expired": [],
+    "hidden": [],
+    "filtered": [
+      {
+        "title": "Delavnica oblikovanja trajnostnih venčkov",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-oblikovanja-trajnostnih-venckov-6acf4207af571",
+        "reason": "Adult grave-wreath workshop, nobody would bring a child"
+      },
+      {
+        "title": "Začetna delavnica kvačkanja",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/zacetna-delavnica-kvackanja-6ad70ade6d6ec",
+        "reason": "Adult crochet beginners workshop, nobody would bring a child"
+      },
+      {
+        "title": "Jesenske počitnice",
+        "url": "https://napovednik.com/za-otroke/pocitnisko-varstvo/jesenske-pocitnice-6365",
+        "reason": "Holiday care programme, excluded by rule 3"
+      },
+      {
+        "title": "Sijaj, sijaj, sončece",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/sijaj-sijaj-soncece-6220",
+        "reason": "Standalone single performance in Nova Gorica, not worth the trip on its own"
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "40c4685996d1e0c7fc8f792ac12c294504eb7409364d035f3683fc962a3c2bef"
+}

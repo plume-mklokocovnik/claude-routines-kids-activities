@@ -1,74 +1,56 @@
-# Routine Run: 2026-10-20T13:12:17+02:00
+# Routine Run: 2026-10-20T13:21:26+02:00
 
-Run: `20261020T111217Z_654f8dc1`
+Run: `20261020T112126Z_fbae18c7`
 
 | New | Updated | Expired | Hidden | Filtered | Deferred | Unchanged |
 |---|---|---|---|---|---|---|
-| 0 | 12 | 27 | 0 | 0 | 0 | 0 |
+| 22 | 0 | 0 | 0 | 4 | 0 | 0 |
 
 ## Discovery Coverage
 
 | Pass | Status | Notes |
 |---|---|---|
-| avto\_moto | skipped | Correction run for twelve Citypark start\_time values stored as HH:MM:SS:00 by the 2026-10-15 follow-up sweep. No discovery performed |
-| concerts\_generic | skipped | Correction run for twelve Citypark start\_time values stored as HH:MM:SS:00 by the 2026-10-15 follow-up sweep. No discovery performed |
-| concerts\_watchlist | skipped | Correction run for twelve Citypark start\_time values stored as HH:MM:SS:00 by the 2026-10-15 follow-up sweep. No discovery performed |
-| free\_entry | skipped | Correction run for twelve Citypark start\_time values stored as HH:MM:SS:00 by the 2026-10-15 follow-up sweep. No discovery performed |
+| avto\_moto | ok |  |
+| concerts\_generic | skipped | Only web searches ran and no page was fetched, so no source qualifies. One standard web search only. napovednik.com/glasba sub-categories and the dated query set were not run |
+| concerts\_watchlist | skipped | Only web searches ran and no page was fetched, so no source qualifies. One undated-by-artist search each for Romana Krajnčan, Dejan Dogaja and Vila Eksena for November 2026, no dated appearance found. The other six artists and the December and January months were not searched |
+| free\_entry | skipped | Only web searches ran and no page was fetched, so no source qualifies. One search for free museum entry in November 2026 returned nothing usable. No named campaign window (Teden družin, 18 May, Poletna muzejska noč) is inside the horizon |
 | ljubljana | ok |  |
-| slovenia | skipped | Correction run for twelve Citypark start\_time values stored as HH:MM:SS:00 by the 2026-10-15 follow-up sweep. No discovery performed |
+| slovenia | partial | Only the regional items surfaced by napovednik.com were read. regions.md sources were not swept this run |
 
 ## New
 
-_No new events found in this run._
+| When | Event / ID | Place | Age / price / notes |
+|---|---|---|---|
+| 20.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/)<br>`pravljice`<br>`event_20261020_1700_2b3e3baa7215` | [Knjižnica Fužine (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Fu%C5%BEine%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/)<br>`pravljice`<br>`event_20261020_1700_480f8b3f7706` | [Knjižnica Otona Župančiča (MKL), 2. nadstropje](https://maps.google.com/?q=Knji%C5%BEnica%20Otona%20%C5%BDupan%C4%8Di%C4%8Da%20%28MKL%29%2C%202.%20nadstropje%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 17:00 | [Ustvarjalnice z Galerijo C.C.U.: Moje čarobno mesto](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359)<br>`delavnica`<br>`event_20261020_1700_569b4a54047e` | [Center kulture Španski borci, Zaloška 61, Ljubljana](https://maps.google.com/?q=Center%20kulture%20%C5%A0panski%20borci%2C%20Zalo%C5%A1ka%2061%2C%20Ljubljana%20Ljubljana) | `?` / 🆓 Vstop prost. Prijave obvezne (tel. 031307383)<br> |
+| 20.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/)<br>`pravljice`<br>`event_20261020_1700_71eb5f8e1ec5` | [Knjižnica Savsko naselje (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Savsko%20naselje%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/)<br>`pravljice`<br>`event_20261020_1700_c34ee13746c6` | [Knjižnica Jarše (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Jar%C5%A1e%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 17:00 | [Branje z labradorko Keri](https://www.mklj.si/dogodek/branje-z-labradorko-keri/)<br>`pravljice`<br>`event_20261020_1700_c603aaea7012` | [Knjižnica Fužine (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Fu%C5%BEine%20%28MKL%29%20Ljubljana) | `2+` / `?`<br> |
+| 20.10.2026 17:00 | [Ustvarjalna delavnica za otroke, mladino in družine](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080)<br>`delavnica`<br>`event_20261020_1700_d3801a84395e` | [Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana](https://maps.google.com/?q=Lon%C4%8Darski%20atelje%20SEM%2C%20Metelkova%20ulica%202%20%28vhod%20skozi%20Kavarno%20SEM%29%2C%20Ljubljana%20Ljubljana) | `?` / 15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna<br><br>prijava |
+| 20.10.2026 17:30 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/)<br>`pravljice`<br>`event_20261020_1730_7fd112171aa5` | [Knjižnica Škofljica (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20%C5%A0kofljica%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 17:30 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/)<br>`pravljice`<br>`event_20261020_1730_981037416adb` | [Knjižnica Dobrova (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Dobrova%20%28MKL%29%20Ljubljana) | `3+` / `?`<br> |
+| 20.10.2026 17:30 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/)<br>`pravljice`<br>`event_20261020_1730_b3ed8ba13689` | [Knjižnica Grba (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Grba%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 20.10.2026 18:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/)<br>`pravljice`<br>`event_20261020_1800_3d5164d6c7a4` | [Knjižnica Gameljne (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Gameljne%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
+| 23.10.2026 17:00 | [Ustvarjalna delavnica za otroke, mladino in družine](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097)<br>`delavnica`<br>`event_20261023_1700_835d80869a93` | [Lončarski atelje SEM, Metelkova ulica 2 (vhod skozi Kavarno SEM), Ljubljana](https://maps.google.com/?q=Lon%C4%8Darski%20atelje%20SEM%2C%20Metelkova%20ulica%202%20%28vhod%20skozi%20Kavarno%20SEM%29%2C%20Ljubljana%20Ljubljana) | `?` / 15 € na osebo, žganje 5 €, glazura 5 € (neobvezno), samo gotovina. Prijava ni potrebna<br><br>prijava |
+| 24.10.2026 14:20 | [Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261024_1420_d738476aaba9` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 24.10.2026 17:00 | [Škratolovski dogodek: Pot močvirskih škratov na Mali plac - nočni pohod](https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370)<br>`festival`<br>`event_20261024_1700_cbad0f01fd60` | [Športni park Bevke, Bevke 92a, Log pri Brezovici, Log pri Brezovici](https://maps.google.com/?q=%C5%A0portni%20park%20Bevke%2C%20Bevke%2092a%2C%20Log%20pri%20Brezovici%20Log%20pri%20Brezovici) | `?` / 12 € otrok, 5 € odrasli. Prijava ali nakup na strani<br><br>prijava |
+| 25.10.2026 11:00 | [Škratolovski dogodek: Velikani Istre - velikanski dan za vso družino!](https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371)<br>`festival`<br>`event_20261025_1100_401d13af164e` | [Kmetija Jakomin, Kubed 57a, Gračišče, Gračišče](https://maps.google.com/?q=Kmetija%20Jakomin%2C%20Kubed%2057a%2C%20Gra%C4%8Di%C5%A1%C4%8De%20Gra%C4%8Di%C5%A1%C4%8De) | `?` / Brezplačen razen nakupa beležke za pohod (7 €)<br><br>daljša pot |
+| 25.10.2026 15:10 | [Kinobalon: Kako je Mambo postal velikan](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261025_1510_7105701edc36` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 27.10.2026 10:00 | [Kinobalon: Za poletje, skupaj!](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261027_1000_90111bd94eed` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 28.10.2026 10:00 | [Kinobalon: Kako je Mambo postal velikan](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261028_1000_c449d6a919a1` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 29.10.2026 10:00 | [Kinobalon: Pošastka Mia](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261029_1000_6b1df216884e` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 30.10.2026 15:00 | [Kinobalon: Kako je Mambo postal velikan](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261030_1500_83863ec95b6d` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 31.10.2026 16:00 | [Kinobalon: Moja mačeha je čarovnica](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261031_1600_543553f34afd` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
+| 01.11.2026 16:15 | [Kinobalon: Wildwood: Skrivnost prepovedanega gozda](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261101_1615_8afc27f33c65` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br> |
 
 ## Updated
 
-| When | Event / ID | Place | Age / price / notes |
-|---|---|---|---|
-| 16.10.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261016_1500_48aebcd1b079` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 17.10.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261017_1100_67d348ad7312` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 23.10.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261023_1500_91750ca978e0` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 24.10.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261024_1100_a0a94f40a940` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 30.10.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261030_1500_939c7e262cd5` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 07.11.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Pravljični vikend, ustvarjalna delavnica](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261107_1100_8090d81441df` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 13.11.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Velike igre](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261113_1500_d5f10acb9888` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 14.11.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Velike igre](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261114_1100_64d846f442fe` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 20.11.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Mali arhitekti](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261120_1500_3748fd11770c` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 21.11.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Mali arhitekti](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261121_1100_86762d1dc3ab` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 27.11.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Mala olimpijada](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261127_1500_7c79387b0b53` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
-| 28.11.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Mala olimpijada](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261128_1100_0008f475afa7` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br>start\_time |
+_None._
 
 ## Expired
 
-| When | Event / ID | Place | Age / price / notes |
-|---|---|---|---|
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-278/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_2f21f73c1128` | [Knjižnica Glinškova ploščad (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Glin%C5%A1kova%20plo%C5%A1%C4%8Dad%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_4ca0b85f97b0` | [Knjižnica Prežihov Voranc (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Pre%C5%BEihov%20Voranc%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-252/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_6547737d40e2` | [Knjižnica Šentvid (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20%C5%A0entvid%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-283/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_7400ccbc3fee` | [Knjižnica Polje (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Polje%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-281/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_75acd5cf9050` | [Knjižnica Jožeta Mazovca (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20Jo%C5%BEeta%20Mazovca%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 17:00 | [Zverjasec (RAZPRODANO)](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261015_1700_b7d558e878b1` | [LGL, Veliki oder, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Veliki%20oder%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / Razprodano<br><br>razprodano |
-| 15.10.2026 17:00 | [Ura pravljic](https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-15/)<br>`pravljice`<br>`event_20261015_1700_cb9e040b980b` | [Knjižnica dr. France Škerl (MKL)](https://maps.google.com/?q=Knji%C5%BEnica%20dr.%20France%20%C5%A0kerl%20%28MKL%29%20Ljubljana) | `4+` / `?`<br> |
-| 15.10.2026 18:00 | [Bikec Ferdinand, premiera](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261015_1800_08b60670553c` | [LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Oder%20pod%20zvezdami%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 16.10.2026 10:00 | [Muca Copatarica](https://www.sititeater.si/sobotni-dopoldnevi/)<br>`lutke`<br>`event_20261016_1000_0c5c863bfaa9` | [SiTi Teater, Ljubljana](https://maps.google.com/?q=SiTi%20Teater%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 16.10.2026 15:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261016_1500_48aebcd1b079` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br> |
-| 16.10.2026 17:00 | [Madžarsko-slovenska glasbena ura za otroke](https://napovednik.com/za-otroke/aktivnosti-za-otroke/madzarsko-slovenska-glasbena-ura-za-otroke-6262)<br>`delavnica`<br>`event_20261016_1700_1b3a6547f5fa` | [Lisztov inštitut Ljubljana, Barvarska steza 8, Ljubljana](https://maps.google.com/?q=Lisztov%20in%C5%A1titut%20Ljubljana%2C%20Barvarska%20steza%208%2C%20Ljubljana%20Ljubljana) | `3+` / 🆓 Brezplačno, obvezna prijava (info@lisztovinstitut.si); starši dobrodošli<br><br>prijava |
-| 16.10.2026 17:00 | [Festival Hokus Pokus s Klemnom Janežičem](https://pionirski-dom.si/)<br>`delavnica`<br>`event_20261016_1700_42021c24ff26` | [Pionirski dom, Ljubljana](https://maps.google.com/?q=Pionirski%20dom%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 17.10.2026 ? | [Lutkovno-igrana predstava: Ves svet je marmelada](https://www.kino-bezigrad.si/predstava/lutkovno-igrana-predstava-ves-svet-je-marmelada/)<br>`lutke`<br>`event_20261017_0000_f166bd23703a` | [Kino Bežigrad, Ljubljana](https://maps.google.com/?q=Kino%20Be%C5%BEigrad%2C%20Ljubljana%20Ljubljana) | `4+` / 8,10 €<br><br>ura ni znana |
-| 17.10.2026 09:30 | [VITA Lumpi tek – Otroški tek (predšolski)](https://ljubljanskimaraton.si/lumpi-tek)<br>`tek`<br>`lumpitek_20261017_0930` | [Slovenska cesta (start pri Kazini, smer Kongresni trg)](https://maps.google.com/?q=Slovenska%20cesta%20%28start%20pri%20Kazini%2C%20smer%20Kongresni%20trg%29%20Ljubljana) | `0+` / 🆓<br> |
-| 17.10.2026 11:00 | [Bikec Ferdinand (večinoma RAZPRODANO)](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261017_1100_47265a415422` | [LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Oder%20pod%20zvezdami%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / Večinoma razprodano<br><br>razprodano |
-| 17.10.2026 11:00 | [Doživljajska jesen za otroke v Cityparku: Halloween](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28)<br>`pop_up`<br>`event_20261017_1100_67d348ad7312` | [Citypark, pri trgovini Humanic](https://maps.google.com/?q=Citypark%2C%20pri%20trgovini%20Humanic%20Ljubljana) | `?` / 🆓 Brezplačno. Petek 15:00 do 20:00, sobota 11:00 do 20:00<br> |
-| 17.10.2026 11:00 | [Zmeda za dva medveda](https://www.sititeater.si/sobotni-dopoldnevi/)<br>`lutke`<br>`event_20261017_1100_c4ce220292f7` | [SiTi Teater, Ljubljana](https://maps.google.com/?q=SiTi%20Teater%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 17.10.2026 11:30 | [Kinobalon: Moja mačeha je čarovnica](https://www.kinodvor.org/kinobalon/)<br>`kino`<br>`event_20261017_1130_54481d79b2c4` | [Kinodvor, Dvorana](https://maps.google.com/?q=Kinodvor%2C%20Dvorana%20Ljubljana) | `?` / `?`<br><br>ni za malčke |
-| 17.10.2026 17:00 | [Opičja uganka ali Mamica, kje si?](https://www.hisaotrok.si/koledar_prireditev/list/)<br>`lutke`<br>`event_20261017_1700_22d7c24d1db6` | [Hiša otrok in umetnosti, Ljubljana](https://maps.google.com/?q=Hi%C5%A1a%20otrok%20in%20umetnosti%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 17.10.2026 17:00 | [Bikec Ferdinand (večinoma RAZPRODANO)](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261017_1700_f14d0c191fab` | [LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Oder%20pod%20zvezdami%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / Večinoma razprodano<br><br>razprodano |
-| 18.10.2026 ? | [XXI. sejem rabljenih rezervnih delov in opreme za starodobnike](https://www.zveza-svs.si/wp-content/uploads/2026/01/KOLEDAR-Zveze-SVS-2026.pdf)<br>`avto_moto`<br>`event_20261018_0000_4501d9bd1305` | [Obrtna ulica 28, 9000 Murska Sobota (pred sedežem kluba / parkirišče Murska Transport), Murska Sobota](https://maps.google.com/?q=Obrtna%20ulica%2028%2C%209000%20Murska%20Sobota%20%28pred%20sede%C5%BEem%20kluba%20/%20parkiri%C5%A1%C4%8De%20Murska%20Transport%29%20Murska%20Sobota) | `?` / Za 2026 cena ni objavljena. Lanska (19., okt. 2025) vabila so navajala brezplačna prodajna mesta za prodajalce; cena za obiskovalce ni bila nikjer navedena.<br><br>daljša pot, ura ni znana |
-| 18.10.2026 10:00 | [MiniMAO igralnica](https://napovednik.com/za-otroke/aktivnosti-za-otroke/minimao-igralnica-5654)<br>`delavnica`<br>`event_20261018_1000_7c2d5dc4e719` | [Muzej za arhitekturo in oblikovanje (MAO), Rusjanov trg 7, Ljubljana](https://maps.google.com/?q=Muzej%20za%20arhitekturo%20in%20oblikovanje%20%28MAO%29%2C%20Rusjanov%20trg%207%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 18.10.2026 11:00 | [Bikec Ferdinand (večinoma RAZPRODANO)](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261018_1100_4106b031d1c7` | [LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Oder%20pod%20zvezdami%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / Večinoma razprodano<br><br>razprodano |
-| 18.10.2026 11:00 | [Zaključni koncert tridnevne delavnice za 100 najmlajših violončelistov iz vse Slovenije (Cellofest Ljubljana 2026)](https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/zakljucni-koncert-tridnevne-delavnice-za-100-najmlajsih-violoncelistov-iz-vse-slovenije)<br>`koncert`<br>`event_20261018_1100_5e4d7f87fbc6` | [Konservatorij za glasbo in balet Ljubljana (Dvorana L. M. Škerjanca), Ižanska cesta 12](https://maps.google.com/?q=Konservatorij%20za%20glasbo%20in%20balet%20Ljubljana%20%28Dvorana%20L.%20M.%20%C5%A0kerjanca%29%2C%20I%C5%BEanska%20cesta%2012%20Ljubljana) | `?` / 🆓 Vstopnine ni<br> |
-| 18.10.2026 17:00 | [Bikec Ferdinand (večinoma RAZPRODANO)](https://lgl.mojekarte.si/en/all.html)<br>`lutke`<br>`event_20261018_1700_77afe3e1c075` | [LGL, Oder pod zvezdami, Krekov trg 2, Ljubljana](https://maps.google.com/?q=LGL%2C%20Oder%20pod%20zvezdami%2C%20Krekov%20trg%202%2C%20Ljubljana%20Ljubljana) | `?` / Večinoma razprodano<br><br>razprodano |
-| 18.10.2026 18:00 | [LENA IN LENART: Koncert s forami](https://pionirski-dom.si/aktualno/lena-in-lenart-koncert-s-forami-2/)<br>`koncert`<br>`event_20261018_1800_3dcc67ca3a3a` | [Pionirski teater, Pionirski dom, Vilharjeva cesta 11, Ljubljana](https://maps.google.com/?q=Pionirski%20teater%2C%20Pionirski%20dom%2C%20Vilharjeva%20cesta%2011%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
-| 19.10.2026 10:30 | [Pojte, pojte drobne ptice](https://www.sititeater.si/sobotni-dopoldnevi/)<br>`koncert`<br>`event_20261019_1030_4c7d35b57989` | [SiTi Teater, Ljubljana](https://maps.google.com/?q=SiTi%20Teater%2C%20Ljubljana%20Ljubljana) | `?` / `?`<br> |
+_None._
 
 ## Hidden
 
@@ -76,7 +58,12 @@ _None._
 
 ## Filtered
 
-_None._
+| When | Event / ID | Place | Age / price / notes |
+|---|---|---|---|
+| ? | [Delavnica oblikovanja trajnostnih venčkov](https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-oblikovanja-trajnostnih-venckov-6acf4207af571) | ? | Adult grave-wreath workshop, nobody would bring a child |
+| ? | [Jesenske počitnice](https://napovednik.com/za-otroke/pocitnisko-varstvo/jesenske-pocitnice-6365) | ? | Holiday care programme, excluded by rule 3 |
+| ? | [Sijaj, sijaj, sončece](https://napovednik.com/za-otroke/predstave-za-otroke/sijaj-sijaj-soncece-6220) | ? | Standalone single performance in Nova Gorica, not worth the trip on its own |
+| ? | [Začetna delavnica kvačkanja](https://www.ljubljana.si/sl/aktualno/dogodki/zacetna-delavnica-kvackanja-6ad70ade6d6ec) | ? | Adult crochet beginners workshop, nobody would bring a child |
 
 ## Deferred
 
@@ -88,16 +75,42 @@ _None._
 
 ## Unconfirmed Leads
 
-_None._
+| Lead | Source | Missing |
+|---|---|---|
+| Alfa Rally | [source](https://svamz.com/koledar-dogodkov/) | SVAMZ lists 28.11.2026 only, no venue or organiser page opened |
+| ZOO Ljubljana Nočno vodenje | [source](https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/) | Paid night tour, the product text names no dated slots, dates sit in the booking widget |
 
 ## Sources
 
 | Source | Pass | Status | Checked | Notes |
 |---|---|---|---|---|
-| [https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28](https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28) | ljubljana | ok | 2026-10-20T13:12:17+02:00 |  |
+| [https://svamz.com/koledar-dogodkov/](https://svamz.com/koledar-dogodkov/) | avto\_moto | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke](https://napovednik.com/za-otroke) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4097) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359](https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-moje-carobno-mesto-6359) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://trgovina.zoo.si/wp-json/wp/v2/product?per\_page=50](https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.kinodvor.org/kinobalon/](https://www.kinodvor.org/kinobalon/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100](https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/branje-z-labradorko-keri/](https://www.mklj.si/dogodek/branje-z-labradorko-keri/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-249/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-263/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-270/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-280/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-282/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/](https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-20/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.mklj.si/dogodki/](https://www.mklj.si/dogodki/) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.zoo.si/aktivnosti](https://www.zoo.si/aktivnosti) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://www.zoo.si/novice](https://www.zoo.si/novice) | ljubljana | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370](https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-pot-mocvirskih-skratov-na-mali-plac-nocni-pohod-6370) | slovenia | ok | 2026-10-20T13:40:00+02:00 |  |
+| [https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371](https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-velikani-istre-velikanski-dan-za-vso-druzino-6371) | slovenia | ok | 2026-10-20T13:40:00+02:00 |  |
 
 ## Runtime Notes
 
-- Correction run, not a discovery sweep. The 2026-10-15 follow-up stored twelve Doživljajska jesen occurrences with start\_time of the form 2026-10-16T15:00:00:00+02:00. Python 3.11 to 3.13 fromisoformat accepted the extra component, Python 3.14 rejects it, so the database failed to load locally.
-- The Citypark page was re-read on 2026-10-20 and confirms Fridays 15:00 to 20:00 and Saturdays 11:00 to 20:00 at the Humanic store. Each corrected value is the stored value with the trailing :00 removed. No other field changed.
-- The two past occurrences, 16 and 17 October, are corrected through their existing IDs and stay expired.
+- ZOO check 2026-10-20: zoo.si/aktivnosti showed only routine feedings, the shop API holds no dated Termini product (Halloween product still absent), the news list has no dated event, and no zoo press search was run.
+- Kinobalon page lists screenings only to 2026-11-08 and shows no ages or prices. Kinobalon rows carry no price.
+- Pass coverage was shallow: aggregators, the MOL calendar, MKL, Kinodvor, ZOO and SVAMZ were read. LGL, Kino Bežigrad, SiTi, Cankarjev dom, MGML, Visit Ljubljana and kulturnik were not re-read this run.
+- Web search is US-region and returned no dated Slovenian results for the watchlist or free-entry queries.
+- Run executed in a cloud session on assigned branch claude/dazzling-goldberg-resa3e. main may not be reachable for push, see publication note.
