@@ -134,7 +134,11 @@ of cancellation. Do not delete or expire a future event just because it was abse
    evidence gathered in this run. Preserve earlier observations when adding a new one.
 2. Publish only when authorized by the scheduled task. Stage explicit paths:
    database, the sweep report, this run record and any intentional reference updates.
-   Do not stage `.work/`, lock files, credentials or unrelated changes.
+   Do not stage `.work/`, lock files, credentials or unrelated changes. The
+   auto-merge workflow lands a `claude/*` branch on `main` only when every commit
+   has the sweep subject below and the diff touches nothing outside `db.json`,
+   `diff.md`, `runs/*.json` and `reference/*.md`. Anything else fails that run
+   and leaves the branch for a human.
 3. Use `chore: Routine sweep <YYYY-MM-DD>` when committing a sweep. No ticket key.
    Commit and push directly to `main`. Never open a pull request for a sweep and
    never leave a sweep's work sitting only on a side branch. If the session's own

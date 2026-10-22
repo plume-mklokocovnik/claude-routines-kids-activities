@@ -13,13 +13,19 @@ name: Auto fast-forward sweep branches to main
 #   1. main must be a strict ancestor of the branch tip (fast-forward only).
 #   2. Every commit ahead of main must have the exact commit message
 #      "chore: Routine sweep YYYY-MM-DD" that AGENTS.md mandates for a sweep.
-#   3. The full diff from main may only touch db.json, diff.md and runs/*.json,
-#      the exact files a sweep is allowed to write. Any other changed file (code,
-#      reference docs, scripts, workflows, anything else) blocks the merge. This
-#      is what stops the workflow from ever auto-landing an unrelated Claude
+#   3. The full diff from main may only touch db.json, diff.md, runs/*.json and
+#      reference/*.md, the files routine.md section 5 lets a sweep stage: the
+#      database, the sweep report, the run record and the source index with
+#      evidence gathered in that run. Any other changed file (code, scripts,
+#      workflows, AGENTS.md, routine.md, anything else) blocks the merge. This is
+#      what stops the workflow from ever auto-landing an unrelated Claude
 #      session's work just because its branch happens to match claude/*.
 #   4. scripts/run.py check must pass against the branch's own database before
 #      it is allowed anywhere near main.
+# A branch that fails a guardrail fails this run, so the skipped merge shows up
+# as a red run with an error annotation naming the reason, never as a green run
+# that quietly left the sweep on its branch. The one benign case is a branch
+# already level with main, which has nothing to merge and ends green.
 # If branch protection on main requires review, the final push simply fails with
 # a normal error - this workflow never attempts to work around that.
 #
@@ -74,38 +80,34 @@ jobs:
           fi
 
           if ! git merge-base --is-ancestor origin/main HEAD; then
-            echo "::warning::main has diverged from this branch - not a fast-forward. Skipping auto-merge; a human needs to reconcile this by hand."
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "::error::main has diverged from this branch - not a fast-forward. Auto-merge refused; a human needs to reconcile this by hand."
+            exit 1
           fi
 
+          # Every problem is reported before the run fails, so one red run
+          # names everything a human has to look at.
           bad=0
           for sha in $(git rev-list origin/main..HEAD); do
             msg="$(git log -1 --format=%s "$sha")"
             if ! echo "$msg" | grep -Eq '^chore: Routine sweep [0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
-              echo "::warning::Commit $sha is not a sweep commit (\"$msg\"). Skipping auto-merge; a human needs to review and merge this branch by hand."
+              echo "::error::Commit $sha is not a sweep commit (\"$msg\"). Auto-merge refused; a human needs to review and merge this branch by hand."
               bad=1
             fi
           done
-          if [ "$bad" = "1" ]; then
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
 
-          bad=0
           while IFS= read -r f; do
             [ -z "$f" ] && continue
             case "$f" in
-              db.json|diff.md|runs/*.json) ;;
+              db.json|diff.md|runs/*.json|reference/*.md) ;;
               *)
-                echo "::warning::Disallowed file changed outside the sweep's own output: $f. Skipping auto-merge; a human needs to review and merge this branch by hand."
+                echo "::error::Disallowed file changed outside the sweep's own output: $f. Auto-merge refused; a human needs to review and merge this branch by hand."
                 bad=1
                 ;;
             esac
           done < <(git diff --name-only origin/main..HEAD)
+
           if [ "$bad" = "1" ]; then
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            exit 1
           fi
 
           echo "ok=true" >> "$GITHUB_OUTPUT"

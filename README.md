@@ -122,7 +122,10 @@ does research. The scripts validate and apply its structured results.
 The included GitHub Actions workflows validate changes and report consistency,
 publish the app to Pages, apply decision patches committed into `inbox/` or sent
 by the app and hide the event lists committed into `inbox/hide/` or sent by the
-app. One also hides expired events nightly.
+app. One also hides expired events nightly. Another fast-forwards `main` onto a
+`claude/*` branch when the push is provably sweep output, meaning sweep commits
+that touch only `db.json`, `diff.md`, `runs/*.json` and `reference/*.md`, and
+fails its run otherwise so a blocked sweep is never a green run.
 None of them discovers events or installs a cloud schedule for sweeps. Scheduling and
 write credentials remain with the existing cloud runtime. Direct pushes or PRs
 follow that runtime's explicit permissions, never an automatic protection bypass.
