@@ -104,6 +104,8 @@ tags), `cat`, `nrOfItems` (20 / 50 / 100).
 | Kino Bežigrad detail | `https://www.kino-bezigrad.si/predstava/<slug>/` | ok. Carries `Starostna omejitev` (age), price and duration. Still no start time, which lives only in the booking widget behind *Nakup* / `#tickets` |
 | LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | low, 503 on every attempt this sweep (2 tries) |
 | MKL events | `https://www.mklj.si/dogodki/` | ok |
+| MKL events API | `https://www.mklj.si/wp-json/tribe/events/v1/events?per_page=50&start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>` | ok, checked 2026-10-22. Full horizon in one paged JSON (482 events), the HTML list shows only the first page. Event pages 503/time out under 16 parallel requests, use 4 |
+| LGL schedule pagination | `https://www.lgl.si/spored-predstav?page=2` and `?page=3` | ok, checked 2026-10-22 with a browser User-Agent. Pages 1 to 3 reached 28 Nov, page 4 onwards empty |
 | MKL kids section | `https://www.mklj.si/otroci/` | ok |
 | Kinodvor Kinobalon | `https://www.kinodvor.org/kinobalon/` | ok |
 | Kinodvor outdoor summer | `https://www.kinodvor.org/kinodvorovo-poletje-s-filmi-na-prostem/` | ok |
