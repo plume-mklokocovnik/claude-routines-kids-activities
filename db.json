@@ -5370,7 +5370,9 @@
       ],
       "event_id": "event_20270109_0000_68178b5e2975",
       "status": "active",
-      "first_seen": "2026-10-15T09:05:20+02:00"
+      "first_seen": "2026-10-15T09:05:20+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-26T14:52:37Z"
     },
     "353": {
       "title": "LENA IN LENART: Koncert s forami",
@@ -10714,7 +10716,9 @@
       "flags": [],
       "event_id": "event_20270114_1700_1c161cc2f0b6",
       "status": "active",
-      "first_seen": "2026-10-22T09:05:28+02:00"
+      "first_seen": "2026-10-22T09:05:28+02:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-26T14:52:37Z"
     },
     "676": {
       "title": "Ura pravljic",
@@ -19462,6 +19466,22 @@
       "before_at": null,
       "after": "rejected",
       "at": "2026-10-26T14:41:35Z"
+    },
+    "557": {
+      "event_id": "event_20270109_0000_68178b5e2975",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-26T14:52:37Z"
+    },
+    "558": {
+      "event_id": "event_20270114_1700_1c161cc2f0b6",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-26T14:52:37Z"
     }
   }
 }
