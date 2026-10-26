@@ -4349,7 +4349,7 @@
       "url": "https://www.mklj.si/dogodki/",
       "flags": [],
       "event_id": "event_20261027_0930_533e432e2de4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4442,7 +4442,7 @@
       "url": "https://www.mklj.si/dogodki/?tribe-bar-date=2026-11-01",
       "flags": [],
       "event_id": "event_20261102_1730_a91c31d145e0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4459,7 +4459,7 @@
       "url": "https://www.mklj.si/dogodki/?tribe-bar-date=2026-11-01",
       "flags": [],
       "event_id": "event_20261102_1800_07265f0175d8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -5246,7 +5246,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-22/",
       "flags": [],
       "event_id": "event_20261022_1700_13c6deb890bc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-15T09:05:20+02:00"
     },
     "346": {
@@ -6026,7 +6026,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-10-22/",
       "flags": [],
       "event_id": "event_20261022_1700_8eaa33631335",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "393": {
@@ -6128,7 +6128,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-10-27/",
       "flags": [],
       "event_id": "event_20261027_1700_dccb225d6371",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6145,7 +6145,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-10-27/",
       "flags": [],
       "event_id": "event_20261027_1700_c3e014fb6b31",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6162,7 +6162,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-10-27/",
       "flags": [],
       "event_id": "event_20261027_1730_2e2c69851311",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6198,7 +6198,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-10-28/",
       "flags": [],
       "event_id": "event_20261028_1700_84972129a334",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6215,7 +6215,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-10-28/",
       "flags": [],
       "event_id": "event_20261028_1700_807794e34ea6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6232,7 +6232,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2026-10-28/",
       "flags": [],
       "event_id": "event_20261028_1700_3c9eb47f90b2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6268,7 +6268,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-10-28/",
       "flags": [],
       "event_id": "event_20261028_1730_6e9f8336a338",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6304,7 +6304,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-10-29/",
       "flags": [],
       "event_id": "event_20261029_1700_65f261d5818e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6321,7 +6321,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-10-29/",
       "flags": [],
       "event_id": "event_20261029_1700_ebc286851a54",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6355,7 +6355,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-254/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1700_641c5f6b3315",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6372,7 +6372,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1700_e91f0e720ea2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6389,7 +6389,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1700_07506bc85af0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6406,7 +6406,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1700_955b03e70847",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6423,7 +6423,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1700_ca698f290620",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6440,7 +6440,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-15/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1730_2acb83b50223",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6457,7 +6457,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1800_7275343d4d1a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6474,7 +6474,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-11-03/",
       "flags": [],
       "event_id": "event_20261103_1800_f434c661ec1d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6510,7 +6510,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-nemskem-jeziku-5/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1600_beeef6784d26",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6527,7 +6527,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_cd0871677b1c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6544,7 +6544,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_c62499609dc4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6561,7 +6561,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_f5c0ea533277",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6578,7 +6578,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_ecd8bb35cf88",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6595,7 +6595,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_02e9e0df9946",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6612,7 +6612,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-285/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1700_620901cdc0b2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6629,7 +6629,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1730_50a3cd0bfefa",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6646,7 +6646,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-255/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1730_b334fa838f71",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6663,7 +6663,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-11-04/",
       "flags": [],
       "event_id": "event_20261104_1800_24b7e9e9853b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6680,7 +6680,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_6e19af501e1d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6697,7 +6697,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_8addbe12c2c9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6714,7 +6714,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_efe4cfde0e00",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6731,7 +6731,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_98e7712f17a3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6748,7 +6748,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_ee3ef1db4036",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6765,7 +6765,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-11-05/",
       "flags": [],
       "event_id": "event_20261105_1700_175eb9d5b672",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6801,7 +6801,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-18-2/",
       "flags": [],
       "event_id": "event_20261105_1730_d9d24ddd95b9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6818,7 +6818,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-11-09/",
       "flags": [],
       "event_id": "event_20261109_1730_bf4d2fbc1cf3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6835,7 +6835,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_0930_82c9533bf982",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6852,7 +6852,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1630_5718d14132a8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6869,7 +6869,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1700_c7f4778159e5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6886,7 +6886,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1700_3b4954a1abba",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6903,7 +6903,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1700_aaa39b810b73",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6920,7 +6920,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-16/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1700_8c8bcadd13f0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6937,7 +6937,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1700_18018fb0eb3c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6973,7 +6973,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1730_82998d5fb0a1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6990,7 +6990,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-11-10/",
       "flags": [],
       "event_id": "event_20261110_1800_478ab6452cf4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7007,7 +7007,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_dbfa4c544533",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7024,7 +7024,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_5caef24323b7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7041,7 +7041,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_ac9044d433b8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7058,7 +7058,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_0513ffc6932f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7075,7 +7075,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_56e3d7083514",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7092,7 +7092,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1700_7ce6d500e631",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7109,7 +7109,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1730_3f960293bec5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7126,7 +7126,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-17/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1730_6608f4f5cfc7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7143,7 +7143,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-11-11/",
       "flags": [],
       "event_id": "event_20261111_1800_ab1e3caf3a8f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7160,7 +7160,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_bf0021f3d7fd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7177,7 +7177,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_f5b465070b65",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7194,7 +7194,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_43ae9168a285",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7211,7 +7211,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_f14049a6c55f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7228,7 +7228,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_c7f9c1f0de2b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7245,7 +7245,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1700_15c6ee79e2d6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7262,7 +7262,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-260/2026-11-12/",
       "flags": [],
       "event_id": "event_20261112_1730_1aaf43b26cc8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7279,7 +7279,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271-3/",
       "flags": [],
       "event_id": "event_20261112_1730_11739758d75e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7296,7 +7296,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-11-16/",
       "flags": [],
       "event_id": "event_20261116_1730_b0930496b2bc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7313,7 +7313,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-267/2026-11-16/",
       "flags": [],
       "event_id": "event_20261116_1800_8185ebf13b76",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7330,7 +7330,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1700_3e9a4af936db",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7347,7 +7347,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1700_b5b4a4330d16",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7364,7 +7364,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1700_a2c248046eca",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7381,7 +7381,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1700_de37a8ec5a83",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7398,7 +7398,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1730_f12e66d3bcbd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7415,7 +7415,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-263/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1730_f67da01220ad",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7432,7 +7432,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1730_0638df5fadd6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7449,7 +7449,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1800_d8eb9fa597a8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7466,7 +7466,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-11-17/",
       "flags": [],
       "event_id": "event_20261117_1800_d1c5c8d9d8f4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7483,7 +7483,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-14/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1600_61e06b371a9d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7500,7 +7500,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1700_78e15e247fa1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7517,7 +7517,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1700_3dae4698ba58",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7534,7 +7534,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1700_fc774e5553ab",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7551,7 +7551,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1700_f5820d4d9dd8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7568,7 +7568,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1700_c2eac1e39320",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7585,7 +7585,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1730_86f100709d8b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7602,7 +7602,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-255/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1730_e480fd1ca433",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7619,7 +7619,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-11-18/",
       "flags": [],
       "event_id": "event_20261118_1800_06c2a56e5438",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7636,7 +7636,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-11-19/",
       "flags": [],
       "event_id": "event_20261119_1700_ebaaf4563e4e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7653,7 +7653,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-11-19/",
       "flags": [],
       "event_id": "event_20261119_1700_c1d69c71a858",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7670,7 +7670,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-11-19/",
       "flags": [],
       "event_id": "event_20261119_1700_d236240f894f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7687,7 +7687,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-11-19/",
       "flags": [],
       "event_id": "event_20261119_1700_0f28c6882dbf",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7704,7 +7704,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-11-19/",
       "flags": [],
       "event_id": "event_20261119_1700_1a4373d75d5a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -7738,7 +7738,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271-2/",
       "flags": [],
       "event_id": "event_20261119_1730_5253128b1c76",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7772,7 +7772,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_0930_0858da1f5520",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7789,7 +7789,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1630_72b550d3825a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7806,7 +7806,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1700_e0db7971c156",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7823,7 +7823,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1700_b431238ac4e4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7840,7 +7840,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1700_08491361fce1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7857,7 +7857,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1700_839ffd21158e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7874,7 +7874,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-11-24/",
       "flags": [],
       "event_id": "event_20261124_1730_f212111642e3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7891,7 +7891,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_fcba4947fe60",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7908,7 +7908,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_08fcb5530e9b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7925,7 +7925,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_76b333174771",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7942,7 +7942,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_05099a1f174f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7959,7 +7959,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_65d5ee7417fb",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -7976,7 +7976,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1700_a05718aa5705",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8010,7 +8010,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1730_079f35a9dbd3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8027,7 +8027,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-11-25/",
       "flags": [],
       "event_id": "event_20261125_1800_c8e93d09d494",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8044,7 +8044,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_044f59ed3598",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8061,7 +8061,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_4b1938c68e13",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8078,7 +8078,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_5ce758c53c48",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8095,7 +8095,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_184b437e88ee",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8112,7 +8112,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_7c0de694cb4d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8129,7 +8129,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-11-26/",
       "flags": [],
       "event_id": "event_20261126_1700_eef1089c1437",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8146,7 +8146,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271-4/",
       "flags": [],
       "event_id": "event_20261126_1730_f493d9f6fc07",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8180,7 +8180,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-11-30/",
       "flags": [],
       "event_id": "event_20261130_1730_ac09cec68f12",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8197,7 +8197,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-254/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1700_776062688a56",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8214,7 +8214,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1700_db92f03f3970",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8231,7 +8231,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1700_0f66b07dabdd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8248,7 +8248,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1700_50d142f49f95",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8265,7 +8265,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1700_eb4fae8b8245",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8282,7 +8282,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-15/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1730_139df03c852e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8299,7 +8299,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1800_b669322352cd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8316,7 +8316,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-12-01/",
       "flags": [],
       "event_id": "event_20261201_1800_1317fc1d0ba5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8333,7 +8333,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-nemskem-jeziku-5/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1600_0b63f6f71a24",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8367,7 +8367,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1700_d019b8754be7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8384,7 +8384,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1700_fcf40eb6d5f2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8401,7 +8401,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1700_0420e9d494b1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8418,7 +8418,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1700_df8b57b3d6e2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8435,7 +8435,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-285/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1700_bffab3bf0bd8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8469,7 +8469,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1730_70731ef3d0f4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8486,7 +8486,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-255/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1730_91aa4889baa3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8503,7 +8503,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-12-02/",
       "flags": [],
       "event_id": "event_20261202_1800_7186278039bc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8537,7 +8537,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1700_d162e24087b7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8554,7 +8554,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1700_7edc1893f09a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8571,7 +8571,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1700_c2c672c2f0bd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8588,7 +8588,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1700_b3127937112a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8605,7 +8605,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1700_75f782ad1233",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8622,7 +8622,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-18/2026-12-03/",
       "flags": [],
       "event_id": "event_20261203_1730_ebde5f4ce2f3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8639,7 +8639,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-12-07/",
       "flags": [],
       "event_id": "event_20261207_1730_55cb9dd24c06",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8656,7 +8656,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-268/2026-12-07/",
       "flags": [],
       "event_id": "event_20261207_1800_08905a03b0ed",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8673,7 +8673,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_0930_c68184b5f069",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8690,7 +8690,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1630_5a02e6bc86f1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8707,7 +8707,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1700_17177c62b68e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8724,7 +8724,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1700_ca39bee22524",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8741,7 +8741,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1700_80ec53b1f017",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8758,7 +8758,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-16/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1700_1a7ebf6b49c6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8775,7 +8775,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1700_2a6d49d4a125",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8792,7 +8792,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1730_25bb612f7ec3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8826,7 +8826,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-12-08/",
       "flags": [],
       "event_id": "event_20261208_1800_4b105fd47276",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8843,7 +8843,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_1ef21b15e4d1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8860,7 +8860,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_4b0756ecf05a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8877,7 +8877,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_1c18f2ec5e2a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8894,7 +8894,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_804c35f7e05b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8911,7 +8911,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_ec82c7afc6d8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8928,7 +8928,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1700_fb3aae5c4c63",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8945,7 +8945,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1730_8ae16d995bc1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8962,7 +8962,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-17/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1730_34e1cf8c86b8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8979,7 +8979,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-12-09/",
       "flags": [],
       "event_id": "event_20261209_1800_f950f6418164",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -8996,7 +8996,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1700_18ad9cd59376",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9013,7 +9013,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1700_3a01a4ac13c9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9030,7 +9030,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1700_9792b7fe4d55",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9047,7 +9047,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1700_4558cc2b4f15",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9064,7 +9064,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1700_3315be364568",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9098,7 +9098,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-260/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1730_a09f736417a5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9115,7 +9115,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271/2026-12-10/",
       "flags": [],
       "event_id": "event_20261210_1730_006964a69bd8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9132,7 +9132,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-12-14/",
       "flags": [],
       "event_id": "event_20261214_1730_bd1f80bdb69b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9149,7 +9149,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1700_0285a0788de7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9166,7 +9166,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1700_51229799f6a5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9183,7 +9183,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1700_c92aa9826a0a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9200,7 +9200,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1700_cda15d63546e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9217,7 +9217,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1730_88d941932630",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9234,7 +9234,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-263/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1730_8964de2d8ad8",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9251,7 +9251,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1730_609683ad8707",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9268,7 +9268,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1800_42f271323fb3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9285,7 +9285,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-258/2026-12-15/",
       "flags": [],
       "event_id": "event_20261215_1800_998fb6d141e2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9302,7 +9302,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-14/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1600_a88cb957b58a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9319,7 +9319,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1700_d39abd6d24c4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9336,7 +9336,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1700_4a6b33d85d1c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9353,7 +9353,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1700_ca8c0cb8eeda",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9370,7 +9370,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1700_0b688a29be56",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9387,7 +9387,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1700_f2a140282435",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9404,7 +9404,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1730_e8df0fe9f395",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9421,7 +9421,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-255/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1730_6a687190d961",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9438,7 +9438,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-12-16/",
       "flags": [],
       "event_id": "event_20261216_1800_eae17234af16",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9455,7 +9455,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_e7af04bc33c7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9472,7 +9472,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_7a6b65063f5b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9489,7 +9489,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_8faa4a431a7b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9506,7 +9506,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_11ed94154bb2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9523,7 +9523,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_2a08e072988c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9540,7 +9540,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1700_b36c8ec908cc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9557,7 +9557,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271/2026-12-17/",
       "flags": [],
       "event_id": "event_20261217_1730_23f7f9132b75",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9574,7 +9574,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2026-12-21/",
       "flags": [],
       "event_id": "event_20261221_1730_3c3e1be22cfc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9591,7 +9591,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_0930_1cd0f7ce1feb",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9608,7 +9608,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1630_b06a9769d741",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9625,7 +9625,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1700_469619fe7466",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9642,7 +9642,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1700_b2d93d3d6261",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9659,7 +9659,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1700_9f5a07c0af40",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9676,7 +9676,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1700_60292790e58e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-26T14:41:35Z"
@@ -9693,7 +9693,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1730_0b5ffbd77f37",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "608": {
@@ -9708,7 +9708,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2026-12-22/",
       "flags": [],
       "event_id": "event_20261222_1800_8bae12c84241",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "609": {
@@ -9723,7 +9723,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_9a2844f246af",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "610": {
@@ -9738,7 +9738,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_978de5662cd3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "611": {
@@ -9753,7 +9753,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_332c1869bdc5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "612": {
@@ -9768,7 +9768,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_43eb3036f7aa",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "613": {
@@ -9783,7 +9783,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_9a0d91d49879",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "614": {
@@ -9798,7 +9798,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1700_3bfc9ec934c2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "615": {
@@ -9813,7 +9813,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1730_466341abbcbd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "616": {
@@ -9828,7 +9828,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2026-12-23/",
       "flags": [],
       "event_id": "event_20261223_1800_c32138706840",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "617": {
@@ -9843,7 +9843,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2026-12-24/",
       "flags": [],
       "event_id": "event_20261224_1700_447e02f08888",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "618": {
@@ -9858,7 +9858,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-12-24/",
       "flags": [],
       "event_id": "event_20261224_1700_2abd3b7a67ec",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "619": {
@@ -9873,7 +9873,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2026-12-29/",
       "flags": [],
       "event_id": "event_20261229_1700_2a2fa35c7648",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "620": {
@@ -9888,7 +9888,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2026-12-29/",
       "flags": [],
       "event_id": "event_20261229_1700_d1781b3e3a12",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "621": {
@@ -9903,7 +9903,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2026-12-29/",
       "flags": [],
       "event_id": "event_20261229_1700_288fa44393b5",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "622": {
@@ -9918,7 +9918,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2026-12-30/",
       "flags": [],
       "event_id": "event_20261230_1700_c1646551bfc6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "623": {
@@ -9933,7 +9933,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2026-12-30/",
       "flags": [],
       "event_id": "event_20261230_1700_7b89ff872e92",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "624": {
@@ -9948,7 +9948,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2026-12-31/",
       "flags": [],
       "event_id": "event_20261231_1700_b101b4efb9f1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "625": {
@@ -9963,7 +9963,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2027-01-04/",
       "flags": [],
       "event_id": "event_20270104_1730_d6f34a87d484",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "626": {
@@ -9978,7 +9978,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-268/2027-01-04/",
       "flags": [],
       "event_id": "event_20270104_1800_de9d84de0956",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "627": {
@@ -9993,7 +9993,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_0930_4c3c7513e0ef",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "628": {
@@ -10008,7 +10008,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1630_663cf1176883",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "629": {
@@ -10023,7 +10023,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-254/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1700_44ffde5cc452",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "630": {
@@ -10038,7 +10038,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1700_08a77bff541d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "631": {
@@ -10053,7 +10053,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1700_6f38d1ac5253",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "632": {
@@ -10068,7 +10068,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1700_bf30700098c0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "633": {
@@ -10083,7 +10083,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1700_898109944acf",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "634": {
@@ -10098,7 +10098,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-15/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1730_e3e62fe03447",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "635": {
@@ -10113,7 +10113,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1800_1bc7da0ed16f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "636": {
@@ -10128,7 +10128,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-259/2027-01-05/",
       "flags": [],
       "event_id": "event_20270105_1800_65e8130d8256",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "637": {
@@ -10143,7 +10143,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_1e7c49ba686e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "638": {
@@ -10158,7 +10158,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_2a06ba827caf",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "639": {
@@ -10173,7 +10173,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_07f5beabed39",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "640": {
@@ -10188,7 +10188,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_4da95f45b902",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "641": {
@@ -10203,7 +10203,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_af29b7b9f609",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "642": {
@@ -10218,7 +10218,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1700_e4d2dd7c6789",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "643": {
@@ -10233,7 +10233,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1730_d7d33094c16a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "644": {
@@ -10248,7 +10248,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-256/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1730_9f75bf1832e0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "645": {
@@ -10263,7 +10263,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2027-01-06/",
       "flags": [],
       "event_id": "event_20270106_1800_a273992cc2f4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "646": {
@@ -10278,7 +10278,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_93740058b93b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "647": {
@@ -10293,7 +10293,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_3ed216678c8f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "648": {
@@ -10308,7 +10308,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_a09dda2587b4",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "649": {
@@ -10323,7 +10323,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_ca679e7cc0cd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "650": {
@@ -10338,7 +10338,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_62494d3bb6e0",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "651": {
@@ -10353,7 +10353,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1700_591f8072227c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "652": {
@@ -10368,7 +10368,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-18/2027-01-07/",
       "flags": [],
       "event_id": "event_20270107_1730_4ab39382ef81",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "653": {
@@ -10383,7 +10383,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1700_87eb1861faa2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "654": {
@@ -10398,7 +10398,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1700_8049160e7849",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "655": {
@@ -10413,7 +10413,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1700_da50dab774c9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "656": {
@@ -10428,7 +10428,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-16/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1700_a42d7236d405",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "657": {
@@ -10443,7 +10443,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1700_79c3428db91d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "658": {
@@ -10458,7 +10458,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1730_0ee32620ca18",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "659": {
@@ -10473,7 +10473,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2027-01-12/",
       "flags": [],
       "event_id": "event_20270112_1800_892b1c6118a7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "660": {
@@ -10488,7 +10488,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-nemskem-jeziku-5/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1600_10edf93b7796",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "661": {
@@ -10503,7 +10503,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_a6cdadeac9c9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "662": {
@@ -10518,7 +10518,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_ed7252af2623",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "663": {
@@ -10533,7 +10533,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_7d9671d0cb0b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "664": {
@@ -10548,7 +10548,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_257bc32ba9fd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "665": {
@@ -10563,7 +10563,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_3e55a57227cf",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "666": {
@@ -10578,7 +10578,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-285/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1700_fa4c0b087280",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "667": {
@@ -10593,7 +10593,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1730_02dd0e35a5d9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "668": {
@@ -10608,7 +10608,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-17/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1730_ad9be87177bc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "669": {
@@ -10623,7 +10623,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2027-01-13/",
       "flags": [],
       "event_id": "event_20270113_1800_9715e6124c7e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "670": {
@@ -10638,7 +10638,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1700_d4c4229b49dc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "671": {
@@ -10653,7 +10653,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1700_05283c837fa7",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "672": {
@@ -10668,7 +10668,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1700_bd8eccf7fce9",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "673": {
@@ -10683,7 +10683,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1700_d1dac2c43851",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "674": {
@@ -10698,7 +10698,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1700_06b151136c92",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "675": {
@@ -10728,7 +10728,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-261/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1730_e40319e815ee",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "677": {
@@ -10743,7 +10743,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271/2027-01-14/",
       "flags": [],
       "event_id": "event_20270114_1730_26626e841784",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "678": {
@@ -10758,7 +10758,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-279/2027-01-18/",
       "flags": [],
       "event_id": "event_20270118_1730_86bdf7bb9c81",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "679": {
@@ -10773,7 +10773,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-268/2027-01-18/",
       "flags": [],
       "event_id": "event_20270118_1800_9a27319381dc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "680": {
@@ -10788,7 +10788,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-6/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_0930_06e015ed3f10",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "681": {
@@ -10803,7 +10803,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-z-igranjem-2-7/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1630_8ba2166cfcf3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "682": {
@@ -10818,7 +10818,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-275/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1700_06523227d288",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "683": {
@@ -10833,7 +10833,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-280/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1700_83bf18daac48",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "684": {
@@ -10848,7 +10848,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-282/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1700_2453936a33fd",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "685": {
@@ -10863,7 +10863,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-286/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1700_06639f2edd10",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "686": {
@@ -10878,7 +10878,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-245-2/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1730_6341c5f66a11",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "687": {
@@ -10893,7 +10893,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-270/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1730_dfd0281ae873",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "688": {
@@ -10908,7 +10908,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-249/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1800_641188e7f68a",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "689": {
@@ -10923,7 +10923,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-259/2027-01-19/",
       "flags": [],
       "event_id": "event_20270119_1800_ec8565495b4e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "690": {
@@ -10938,7 +10938,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-250/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_fb252caae70c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "691": {
@@ -10953,7 +10953,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-274/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_5057cae9f4db",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "692": {
@@ -10968,7 +10968,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-276/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_3fae5862791e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "693": {
@@ -10983,7 +10983,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277-2/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_e6bfe48a8049",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "694": {
@@ -10998,7 +10998,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-284/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_96f18c8f7579",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "695": {
@@ -11013,7 +11013,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-v-angleskem-jeziku-19/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1700_2240c5640792",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "696": {
@@ -11028,7 +11028,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-253/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1730_ce7eb404fb36",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "697": {
@@ -11043,7 +11043,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-256/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1730_82ead7d5d441",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "698": {
@@ -11058,7 +11058,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-251/2027-01-20/",
       "flags": [],
       "event_id": "event_20270120_1800_0e03d14725cc",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "699": {
@@ -11073,7 +11073,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-252/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_cb5e5210d649",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "700": {
@@ -11088,7 +11088,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-273/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_00c73c93540b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "701": {
@@ -11103,7 +11103,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_c3c1e3f2da92",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "702": {
@@ -11118,7 +11118,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-278/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_98d31d4ee546",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "703": {
@@ -11133,7 +11133,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-281/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_e91b46eee410",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "704": {
@@ -11148,7 +11148,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-283/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1700_892b5b16c25f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "705": {
@@ -11163,7 +11163,7 @@
       "url": "https://www.mklj.si/dogodek/ura-pravljic-271/2027-01-21/",
       "flags": [],
       "event_id": "event_20270121_1730_c745076a44ef",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-22T09:05:28+02:00"
     },
     "706": {
@@ -11973,7 +11973,8 @@
       "exclude_venues": [],
       "exclude_keywords": [
         "Kinobalon 'Prvič v kino': Miška gre na goro",
-        "Kinobalon: Miška gre na goro"
+        "Kinobalon: Miška gre na goro",
+        "Ura pravljic"
       ],
       "exclude_categories": [],
       "force_include_urls": [],
@@ -11983,7 +11984,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-10-22T09:05:28+02:00",
-      "total_active_events": 475,
+      "total_active_events": 179,
       "latest_run": "20261022T070528Z_982a5847"
     }
   },
@@ -14999,6 +15000,18 @@
       "url": "https://www.lgl.si/spored-predstav",
       "reason": "expired",
       "hidden_at": "2026-10-23T05:50:15Z"
+    },
+    "252": {
+      "match": "Ura pravljic",
+      "scope": "series",
+      "rule_field": "exclude_keywords",
+      "event_id": "event_20261022_1700_13c6deb890bc",
+      "title": "Ura pravljic",
+      "venue": "Knjižnica dr. France Škerl (MKL)",
+      "start_time": "2026-10-22T17:00:00+02:00",
+      "url": "https://www.mklj.si/dogodek/ura-pravljic-277/2026-10-22/",
+      "reason": "hidden on request",
+      "hidden_at": "2026-10-26T14:44:24Z"
     }
   },
   "decision_log": {
