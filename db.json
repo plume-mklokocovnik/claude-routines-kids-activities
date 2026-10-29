@@ -11735,7 +11735,9 @@
       ],
       "event_id": "event_20261029_1200_eae4228c1ed9",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "737": {
       "title": "Delavnice z Veroniko: Ptički",
@@ -11750,7 +11752,9 @@
       "flags": [],
       "event_id": "event_20261104_1700_cdd5ec585441",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "738": {
       "title": "Dežela zmajev",
@@ -11765,7 +11769,9 @@
       "flags": [],
       "event_id": "event_20261111_1700_0a3d4755ea2a",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "739": {
       "title": "Izdelava pisane keramične krogle – Majda Oblak",
@@ -11782,7 +11788,9 @@
       ],
       "event_id": "event_20261112_1700_4f681740848f",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "740": {
       "title": "Otroški knjižni klub: Pravljična urica za otroke, ki ne obiskujejo vrtca – Bruna Korent",
@@ -11797,7 +11805,9 @@
       "flags": [],
       "event_id": "event_20261125_0930_df3b0a250695",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "741": {
       "title": "English Storytime: Angleščina skozi zgodbe in igro – Darja Bertoncelj",
@@ -11812,7 +11822,9 @@
       "flags": [],
       "event_id": "event_20261126_1700_0c69d0a2a024",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "742": {
       "title": "Glasbena pravljica – Papirnat čolniček",
@@ -11827,7 +11839,9 @@
       "flags": [],
       "event_id": "event_20261126_1730_7e2cf05e00a1",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "743": {
       "title": "Lutkovna predstava: Super Čarovnica Mici",
@@ -11842,7 +11856,9 @@
       "flags": [],
       "event_id": "event_20261031_1030_25c0324cda70",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "744": {
       "title": "Noč mask: Ko obraz spregovori",
@@ -11859,7 +11875,9 @@
       ],
       "event_id": "event_20261029_1730_a9e115326e21",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "745": {
       "title": "Friderik, grajska podgana",
@@ -11874,7 +11892,9 @@
       "flags": [],
       "event_id": "event_20261121_1700_ce3967793150",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "746": {
       "title": "Naj se predpraznični čas začne na Draveljskem bazarju",
@@ -11889,7 +11909,9 @@
       "flags": [],
       "event_id": "event_20261106_1600_22d5b75144dd",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "maybe",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "747": {
       "title": "Kinobalon: Bacek Jon 3: Skrivnost Šotnega Dola",
@@ -11904,7 +11926,9 @@
       "flags": [],
       "event_id": "event_20261031_1130_cca3f59290b2",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "748": {
       "title": "Kinobalon: Skrivnostni paket",
@@ -11919,7 +11943,9 @@
       "flags": [],
       "event_id": "event_20261114_1000_578acaa695b6",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "749": {
       "title": "Kinobalon: Bučko",
@@ -11934,7 +11960,9 @@
       "flags": [],
       "event_id": "event_20261114_1600_5dfe1d714ad4",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "750": {
       "title": "Kinobalon: Atlas vesolja",
@@ -11949,7 +11977,9 @@
       "flags": [],
       "event_id": "event_20261115_1415_ad92211ceb02",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "751": {
       "title": "Kinobalon: Počitnice v džungli",
@@ -11964,7 +11994,9 @@
       "flags": [],
       "event_id": "event_20261121_1000_b07ba52acdc9",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "752": {
       "title": "Kinobalon: Rojstni dan",
@@ -11979,7 +12011,9 @@
       "flags": [],
       "event_id": "event_20261121_1715_bfd6eff21373",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "753": {
       "title": "Kinobalon: Moj prijatelj Barry",
@@ -11994,7 +12028,9 @@
       "flags": [],
       "event_id": "event_20261122_1450_ee024fe57c27",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "754": {
       "title": "Kinobalon: Kako je Mambo postal velikan",
@@ -12009,7 +12045,9 @@
       "flags": [],
       "event_id": "event_20261101_1130_ed1aa467767d",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "755": {
       "title": "Lutkovna predstava: Korenčkov palček",
@@ -12026,7 +12064,9 @@
       ],
       "event_id": "event_20270116_0000_0e92ff13debb",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "756": {
       "title": "Gledališka predstava: Srakica in sova",
@@ -12043,7 +12083,9 @@
       ],
       "event_id": "event_20270123_0000_5219ab6aa138",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     },
     "757": {
       "title": "Lutkovna predstava: Rdeča kapica",
@@ -12060,7 +12102,9 @@
       ],
       "event_id": "event_20270124_0000_6fc7728a9ed9",
       "status": "active",
-      "first_seen": "2026-10-29T08:07:15+01:00"
+      "first_seen": "2026-10-29T08:07:15+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-10-29T07:35:35Z"
     }
   },
   "user_rules": {
@@ -19824,6 +19868,182 @@
       "before_at": null,
       "after": "rejected",
       "at": "2026-10-26T14:52:37Z"
+    },
+    "559": {
+      "event_id": "event_20261029_1200_eae4228c1ed9",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "560": {
+      "event_id": "event_20261029_1730_a9e115326e21",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "561": {
+      "event_id": "event_20261031_1030_25c0324cda70",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "562": {
+      "event_id": "event_20261031_1130_cca3f59290b2",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "563": {
+      "event_id": "event_20261101_1130_ed1aa467767d",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "564": {
+      "event_id": "event_20261104_1700_cdd5ec585441",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "565": {
+      "event_id": "event_20261106_1600_22d5b75144dd",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "566": {
+      "event_id": "event_20261111_1700_0a3d4755ea2a",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "567": {
+      "event_id": "event_20261112_1700_4f681740848f",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "568": {
+      "event_id": "event_20261114_1000_578acaa695b6",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "569": {
+      "event_id": "event_20261114_1600_5dfe1d714ad4",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "570": {
+      "event_id": "event_20261115_1415_ad92211ceb02",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "571": {
+      "event_id": "event_20261121_1000_b07ba52acdc9",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "572": {
+      "event_id": "event_20261121_1700_ce3967793150",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "573": {
+      "event_id": "event_20261121_1715_bfd6eff21373",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "574": {
+      "event_id": "event_20261122_1450_ee024fe57c27",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "575": {
+      "event_id": "event_20261125_0930_df3b0a250695",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "576": {
+      "event_id": "event_20261126_1700_0c69d0a2a024",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "577": {
+      "event_id": "event_20261126_1730_7e2cf05e00a1",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "578": {
+      "event_id": "event_20270116_0000_0e92ff13debb",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "579": {
+      "event_id": "event_20270123_0000_5219ab6aa138",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
+    },
+    "580": {
+      "event_id": "event_20270124_0000_6fc7728a9ed9",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-10-29T07:35:35Z"
     }
   }
 }
