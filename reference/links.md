@@ -169,6 +169,7 @@ Nationwide, not a Ljubljana category, so the parsed calendar and the fixture lis
 | Source | URL | Use | Status |
 |---|---|---|---|
 | SVAMZ full-year calendar | `https://svamz.com/koledar-dogodkov/` | The single best source. One plain-text list of nearly every veteran car and motorbike meeting in the country, already covering the whole year | ok, checked 2026-09-28 |
+| SVAMZ calendar, 2026-10-29 update | `https://svamz.com/koledar-dogodkov/` | The page is now a JS shell ("Nalagam koledar"), plain curl no longer returns events. Render with a headless browser, click the month buttons (`nov`, `dec`), detail at `svamz.com/event.html?id=<date>-<slug>`. Detail pages give date and contact only, often no venue | checked 2026-10-29 |
 | Zveza SVS news | `https://www.zveza-svs.si/obvestila/` | A second, older association's blog. Reports *after* an event with attendance numbers rather than announcing it ahead, so read it for confirmation and colour, not as a forward calendar | ok, checked 2026-09-28 |
 | Oldtimer Club Postojna | `https://oldtimer-postojna.si/` | Runs the Postojna international meeting, late June | ok |
 | Auto Motor Show Slovenija | `https://www.automotorshow.si/` | The country's biggest ticketed motor show, moved from Ljubljana to the Celjski sejem for 2026 (16-17 May). Paid, free entry only for children up to 7 | ok, priced attraction rather than a free one |
