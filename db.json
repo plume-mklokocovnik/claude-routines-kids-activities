@@ -970,7 +970,7 @@
       "flags": [
         "time_unknown"
       ],
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "maybe",
       "decided_at": "2026-10-02T12:25:01Z"
@@ -2833,7 +2833,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c",
       "flags": [],
       "event_id": "event_20261110_1600_d3e06b61a342",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3075,7 +3075,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/sola-zmajeslovja-vrhovna-carovnica-razprodano-6037",
       "flags": [],
       "event_id": "event_20261108_1030_6ee19d112d9c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3109,7 +3109,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979",
       "flags": [],
       "event_id": "event_20261121_1700_5c35d23f8aa1",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3194,7 +3194,7 @@
       "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214528.html",
       "flags": [],
       "event_id": "event_20261212_1700_8242b1c964c3",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3211,7 +3211,7 @@
       "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214529.html",
       "flags": [],
       "event_id": "event_20261213_1030_3e54a8afbcd2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3228,7 +3228,7 @@
       "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214530.html",
       "flags": [],
       "event_id": "event_20261219_1700_78b50795f34e",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3245,7 +3245,7 @@
       "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214532.html",
       "flags": [],
       "event_id": "event_20261220_1030_c9c484b2bd4c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3378,7 +3378,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261107_0000_efa516870702",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3397,7 +3397,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261108_0000_50f9fda21511",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3416,7 +3416,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261114_0000_24d67d6deed2",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3435,7 +3435,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261121_0000_0ea618df8190",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3454,7 +3454,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261128_0000_87df2b8d084f",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3492,7 +3492,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261206_0000_70ae3fe002ff",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3511,7 +3511,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261220_0000_97e40dbc0c80",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3530,7 +3530,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261227_0000_b8f21d4036ed",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3819,7 +3819,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261114_1600_d56cfc947953",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3836,7 +3836,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261107_1500_4c1026015697",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3853,7 +3853,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261114_1500_c5908f1a7106",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3870,7 +3870,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261121_1600_b2d4396f0c97",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3887,7 +3887,7 @@
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
       "event_id": "event_20261128_1600_38d775f05f7c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4044,7 +4044,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261107_0000_c13377becb03",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4063,7 +4063,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261114_0000_fec9d0b82a9d",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4082,7 +4082,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261121_0000_1fdd9f75b384",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4101,7 +4101,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261128_0000_e3bdeb05bce6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4120,7 +4120,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261205_0000_ffaf30258c26",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4139,7 +4139,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261212_0000_648ea846d32c",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4158,7 +4158,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261219_0000_0ea1cf0293c6",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4177,7 +4177,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261226_0000_7546e75d7fec",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4531,7 +4531,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261123_0900_600ff8f3c306",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4592,7 +4592,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261205_0000_c2ffee4df85b",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4937,7 +4937,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261206_0800_a12d48638b83",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -11891,7 +11891,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-6038",
       "flags": [],
       "event_id": "event_20261121_1700_ce3967793150",
-      "status": "active",
+      "status": "hidden",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -12672,7 +12672,40 @@
         "event_20261103_1800_4d01a5f80a18",
         "event_20261104_1700_051908a7adcd",
         "event_20261104_1700_cdd5ec585441",
-        "event_20261104_1700_de72c1aaef6b"
+        "event_20261104_1700_de72c1aaef6b",
+        "event_20261110_1600_d3e06b61a342",
+        "event_20261108_1030_6ee19d112d9c",
+        "event_20261121_1700_5c35d23f8aa1",
+        "event_20261212_1700_8242b1c964c3",
+        "event_20261213_1030_3e54a8afbcd2",
+        "event_20261219_1700_78b50795f34e",
+        "event_20261220_1030_c9c484b2bd4c",
+        "event_20261107_0000_efa516870702",
+        "event_20261108_0000_50f9fda21511",
+        "event_20261114_0000_24d67d6deed2",
+        "event_20261121_0000_0ea618df8190",
+        "event_20261128_0000_87df2b8d084f",
+        "kinobezigrad_20261205_0000",
+        "event_20261206_0000_70ae3fe002ff",
+        "event_20261220_0000_97e40dbc0c80",
+        "event_20261227_0000_b8f21d4036ed",
+        "event_20261114_1600_d56cfc947953",
+        "event_20261107_1500_4c1026015697",
+        "event_20261114_1500_c5908f1a7106",
+        "event_20261121_1600_b2d4396f0c97",
+        "event_20261128_1600_38d775f05f7c",
+        "event_20261107_0000_c13377becb03",
+        "event_20261114_0000_fec9d0b82a9d",
+        "event_20261121_0000_1fdd9f75b384",
+        "event_20261128_0000_e3bdeb05bce6",
+        "event_20261205_0000_ffaf30258c26",
+        "event_20261212_0000_648ea846d32c",
+        "event_20261219_0000_0ea1cf0293c6",
+        "event_20261226_0000_7546e75d7fec",
+        "event_20261123_0900_600ff8f3c306",
+        "event_20261205_0000_c2ffee4df85b",
+        "event_20261206_0800_a12d48638b83",
+        "event_20261121_1700_ce3967793150"
       ],
       "exclude_venues": [],
       "exclude_keywords": [
@@ -12688,7 +12721,7 @@
   "system_state": {
     "1": {
       "last_run": "2026-11-05T08:07:42+01:00",
-      "total_active_events": 150,
+      "total_active_events": 117,
       "latest_run": "20261105T070742Z_f4fb8800"
     }
   },
@@ -16520,6 +16553,402 @@
       "url": "https://www.lgl.si/spored-predstav",
       "reason": "expired",
       "hidden_at": "2026-11-05T07:47:40Z"
+    },
+    "320": {
+      "match": "event_20261110_1600_d3e06b61a342",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261110_1600_d3e06b61a342",
+      "title": "Delavnica peke in krašenja medenjakov",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15, Ljubljana",
+      "start_time": "2026-11-10T16:00:00+01:00",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c",
+      "reason": "duplicate of mestnimuzej_20261110_1600",
+      "hidden_at": "2026-11-05T11:29:03Z"
+    },
+    "321": {
+      "match": "event_20261108_1030_6ee19d112d9c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261108_1030_6ee19d112d9c",
+      "title": "Šola zmajeslovja: Vrhovna čarovnica (RAZPRODANO)",
+      "venue": "Ljubljanski grad, most pred glavnim vhodom, Grajska planota 1, Ljubljana",
+      "start_time": "2026-11-08T10:30:00+01:00",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/sola-zmajeslovja-vrhovna-carovnica-razprodano-6037",
+      "reason": "duplicate of grad_20261108_1030",
+      "hidden_at": "2026-11-05T11:29:04Z"
+    },
+    "322": {
+      "match": "event_20261121_1700_5c35d23f8aa1",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261121_1700_5c35d23f8aa1",
+      "title": "Friderik, grajska podgana",
+      "venue": "Grajsko gledališče, Ljubljanski grad, Grajska planota 1, Ljubljana",
+      "start_time": "2026-11-21T17:00:00+01:00",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979",
+      "reason": "duplicate of grad_20261121_1700",
+      "hidden_at": "2026-11-05T11:29:04Z"
+    },
+    "323": {
+      "match": "event_20261212_1700_8242b1c964c3",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261212_1700_8242b1c964c3",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Hribarjeva dvorana, Ljubljanski grad, Grajska planota 1, Ljubljana",
+      "start_time": "2026-12-12T17:00:00+01:00",
+      "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214528.html",
+      "reason": "duplicate of grad_20261212_1700",
+      "hidden_at": "2026-11-05T11:29:05Z"
+    },
+    "324": {
+      "match": "event_20261213_1030_3e54a8afbcd2",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261213_1030_3e54a8afbcd2",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Hribarjeva dvorana, Ljubljanski grad, Grajska planota 1, Ljubljana",
+      "start_time": "2026-12-13T10:30:00+01:00",
+      "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214529.html",
+      "reason": "duplicate of grad_20261213_1030",
+      "hidden_at": "2026-11-05T11:29:05Z"
+    },
+    "325": {
+      "match": "event_20261219_1700_78b50795f34e",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261219_1700_78b50795f34e",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Grajsko gledališče, Ljubljanski grad, Grajska planota 1, Ljubljana",
+      "start_time": "2026-12-19T17:00:00+01:00",
+      "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214530.html",
+      "reason": "duplicate of grad_20261219_1700",
+      "hidden_at": "2026-11-05T11:29:06Z"
+    },
+    "326": {
+      "match": "event_20261220_1030_c9c484b2bd4c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261220_1030_c9c484b2bd4c",
+      "title": "Friderik čaka Zimo in pozdrav dedka Mraza",
+      "venue": "Grajsko gledališče, Ljubljanski grad, Grajska planota 1, Ljubljana",
+      "start_time": "2026-12-20T10:30:00+01:00",
+      "url": "https://www.mojekarte.si/si/friderik-caka-zimo-in-pozdrav-dedka-mraza/vstopnice-1214532.html",
+      "reason": "duplicate of grad_20261220_1030",
+      "hidden_at": "2026-11-05T11:29:06Z"
+    },
+    "327": {
+      "match": "event_20261107_0000_efa516870702",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261107_0000_efa516870702",
+      "title": "Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-11-07T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/",
+      "reason": "duplicate of kinobezigrad_20261107_0000",
+      "hidden_at": "2026-11-05T11:29:07Z"
+    },
+    "328": {
+      "match": "event_20261108_0000_50f9fda21511",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261108_0000_50f9fda21511",
+      "title": "Lutkovna predstava: Pedenjped",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-11-08T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/",
+      "reason": "duplicate of kinobezigrad_20261108_0000",
+      "hidden_at": "2026-11-05T11:29:07Z"
+    },
+    "329": {
+      "match": "event_20261114_0000_24d67d6deed2",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261114_0000_24d67d6deed2",
+      "title": "Lutkovni muzikal: Peter Klepec",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-11-14T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovni-muzikal-peter-klepec/",
+      "reason": "duplicate of kinobezigrad_20261114_0000",
+      "hidden_at": "2026-11-05T11:29:08Z"
+    },
+    "330": {
+      "match": "event_20261121_0000_0ea618df8190",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261121_0000_0ea618df8190",
+      "title": "Gledališka predstava: Z Igorjem po svetu: Italija",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-11-21T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-z-igorjem-po-svetu/",
+      "reason": "duplicate of kinobezigrad_20261121_0000",
+      "hidden_at": "2026-11-05T11:29:09Z"
+    },
+    "331": {
+      "match": "event_20261128_0000_87df2b8d084f",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261128_0000_87df2b8d084f",
+      "title": "Lutkovno-igrana predstava: Tinko Polovinko",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-11-28T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledalisko-lutkovna-predstava-tinko-polovinko/",
+      "reason": "duplicate of kinobezigrad_20261128_0000",
+      "hidden_at": "2026-11-05T11:29:09Z"
+    },
+    "332": {
+      "match": "kinobezigrad_20261205_0000",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "kinobezigrad_20261205_0000",
+      "title": "Pika Nogavička potuje po svetu (z obiskom Miklavža)",
+      "venue": "Kino Bežigrad",
+      "start_time": "2026-12-05T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-potuje-po-svetu-2/",
+      "reason": "duplicate of event_20261205_0000_e1c9864b461c",
+      "hidden_at": "2026-11-05T11:29:10Z"
+    },
+    "333": {
+      "match": "event_20261206_0000_70ae3fe002ff",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261206_0000_70ae3fe002ff",
+      "title": "Lutkovna predstava z obiskom Miklavža: Grdi raček",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-12-06T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-grdi-racek/",
+      "reason": "duplicate of kinobezigrad_20261206_0000",
+      "hidden_at": "2026-11-05T11:29:10Z"
+    },
+    "334": {
+      "match": "event_20261220_0000_97e40dbc0c80",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261220_0000_97e40dbc0c80",
+      "title": "Koncert z obiskom Božička: Božični repki",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-12-20T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/koncert-z-obiskom-bozicka-bozicni-repki/",
+      "reason": "duplicate of kinobezigrad_20261220_0000_koncert",
+      "hidden_at": "2026-11-05T11:29:11Z"
+    },
+    "335": {
+      "match": "event_20261227_0000_b8f21d4036ed",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261227_0000_b8f21d4036ed",
+      "title": "Gledališka predstava z obiskom Dedka Mraza: Škratek prijateljček",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "start_time": "2026-12-27T00:00:00+01:00",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-skratek-prijateljcek/",
+      "reason": "duplicate of event_20261227_0000_ea3ab4329407",
+      "hidden_at": "2026-11-05T11:29:11Z"
+    },
+    "336": {
+      "match": "event_20261114_1600_d56cfc947953",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261114_1600_d56cfc947953",
+      "title": "Jesensko vodstvo za družine po Plečnikovi hiši",
+      "venue": "Plečnikova hiša, Ljubljana",
+      "start_time": "2026-11-14T16:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "duplicate of plecnikovahisa_20261114_1600",
+      "hidden_at": "2026-11-05T11:29:12Z"
+    },
+    "337": {
+      "match": "event_20261107_1500_4c1026015697",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261107_1500_4c1026015697",
+      "title": "Delavnica izdelovanja čarobne medene hišice",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15, Ljubljana",
+      "start_time": "2026-11-07T15:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "duplicate of mestnimuzej_20261107_1500",
+      "hidden_at": "2026-11-05T11:29:12Z"
+    },
+    "338": {
+      "match": "event_20261114_1500_c5908f1a7106",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261114_1500_c5908f1a7106",
+      "title": "Delavnica izdelovanja čarobne medene hišice",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15, Ljubljana",
+      "start_time": "2026-11-14T15:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "duplicate of mestnimuzej_20261114_1500",
+      "hidden_at": "2026-11-05T11:29:13Z"
+    },
+    "339": {
+      "match": "event_20261121_1600_b2d4396f0c97",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261121_1600_b2d4396f0c97",
+      "title": "Delavnica izdelovanja sveč iz čebeljega voska",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15, Ljubljana",
+      "start_time": "2026-11-21T16:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "duplicate of mestnimuzej_20261121_1600",
+      "hidden_at": "2026-11-05T11:29:13Z"
+    },
+    "340": {
+      "match": "event_20261128_1600_38d775f05f7c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261128_1600_38d775f05f7c",
+      "title": "Delavnica izdelovanja sveč iz čebeljega voska",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15, Ljubljana",
+      "start_time": "2026-11-28T16:00:00+01:00",
+      "url": "https://mgml.si/sl/dogodki/",
+      "reason": "duplicate of mestnimuzej_20261128_1600",
+      "hidden_at": "2026-11-05T11:29:14Z"
+    },
+    "341": {
+      "match": "event_20261107_0000_c13377becb03",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261107_0000_c13377becb03",
+      "title": "Pobegla nogavica Pavla",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-11-07T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261107_1100",
+      "hidden_at": "2026-11-05T11:29:14Z"
+    },
+    "342": {
+      "match": "event_20261114_0000_fec9d0b82a9d",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261114_0000_fec9d0b82a9d",
+      "title": "Čudežni ključ - premiera",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-11-14T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261114_1100",
+      "hidden_at": "2026-11-05T11:29:15Z"
+    },
+    "343": {
+      "match": "event_20261121_0000_1fdd9f75b384",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261121_0000_1fdd9f75b384",
+      "title": "Jaz počepnem, ti poskočiš",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-11-21T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261121_1100",
+      "hidden_at": "2026-11-05T11:29:15Z"
+    },
+    "344": {
+      "match": "event_20261128_0000_e3bdeb05bce6",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261128_0000_e3bdeb05bce6",
+      "title": "Peter Klepec",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-11-28T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261128_1100",
+      "hidden_at": "2026-11-05T11:29:16Z"
+    },
+    "345": {
+      "match": "event_20261205_0000_ffaf30258c26",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261205_0000_ffaf30258c26",
+      "title": "Cirkus Kolibris z obiskom Miklavža",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-12-05T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261205_1100",
+      "hidden_at": "2026-11-05T11:29:16Z"
+    },
+    "346": {
+      "match": "event_20261212_0000_648ea846d32c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261212_0000_648ea846d32c",
+      "title": "Praznična delavnica",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-12-12T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261212_1100",
+      "hidden_at": "2026-11-05T11:29:17Z"
+    },
+    "347": {
+      "match": "event_20261219_0000_0ea1cf0293c6",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261219_0000_0ea1cf0293c6",
+      "title": "Rudi in čarobni ljubčkomat z obiskom Božička",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-12-19T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of siti_20261219_1100",
+      "hidden_at": "2026-11-05T11:29:17Z"
+    },
+    "348": {
+      "match": "event_20261226_0000_7546e75d7fec",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261226_0000_7546e75d7fec",
+      "title": "Škratovske priprave na praznike z obiskom Dedka mraza",
+      "venue": "SiTi Teater, Ljubljana",
+      "start_time": "2026-12-26T00:00:00+01:00",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+      "reason": "duplicate of event_20261226_1100_2df3ca6c0137",
+      "hidden_at": "2026-11-05T11:29:18Z"
+    },
+    "349": {
+      "match": "event_20261123_0900_600ff8f3c306",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261123_0900_600ff8f3c306",
+      "title": "Slovenski knjižni sejem 2026 (z Odrom mladih za otroke)",
+      "venue": "Gospodarsko razstavišče, Dunajska cesta 18, Ljubljana",
+      "start_time": "2026-11-23T09:00:00+01:00",
+      "url": "https://knjizni-sejem.si/",
+      "reason": "duplicate of gr_20261123_0900",
+      "hidden_at": "2026-11-05T11:29:18Z"
+    },
+    "350": {
+      "match": "event_20261205_0000_c2ffee4df85b",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261205_0000_c2ffee4df85b",
+      "title": "Fantazima",
+      "venue": "Mestno jedro Kopra (specific venue not stated)",
+      "start_time": "2026-12-05T00:00:00+01:00",
+      "url": "https://www.slovenia.info/en/things-to-do/events/24496-fantazima-2026",
+      "reason": "duplicate of koper_20261205_1600",
+      "hidden_at": "2026-11-05T11:29:19Z"
+    },
+    "351": {
+      "match": "event_20261206_0800_a12d48638b83",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261206_0800_a12d48638b83",
+      "title": "Sejem rezervnih delov in motoristične opreme (Moto club MAK)",
+      "venue": "Avtobusna postaja, Polje pri Vodicah, 1217 Vodice (ob slabem vremenu pod nadstreškom Gostilnice Mak)",
+      "start_time": "2026-12-06T08:00:00+01:00",
+      "url": "http://www.motoclub-mak.si/",
+      "reason": "duplicate of event_20261206_0800_a168773882ed",
+      "hidden_at": "2026-11-05T11:29:19Z"
+    },
+    "352": {
+      "match": "event_20261121_1700_ce3967793150",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261121_1700_ce3967793150",
+      "title": "Friderik, grajska podgana",
+      "venue": "Ljubljanski grad, Grajsko gledališče, Grajska planota 1",
+      "start_time": "2026-11-21T17:00:00+01:00",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-6038",
+      "reason": "duplicate of grad_20261121_1700",
+      "hidden_at": "2026-11-05T11:29:20Z"
     }
   },
   "decision_log": {
