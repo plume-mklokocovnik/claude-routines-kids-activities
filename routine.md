@@ -211,7 +211,8 @@ of cancellation. Do not delete or expire a future event just because it was abse
    auto-merge workflow lands a `claude/*` branch on `main` only when every commit
    has the sweep subject below and the diff touches nothing outside `db.json`,
    `diff.md`, `runs/*.json` and `reference/*.md`. Anything else fails that run
-   and leaves the branch for a human.
+   and leaves the branch for a human. When `main` moved during the sweep without
+   touching `db.json`, `diff.md` or `runs/`, it replays the sweep on top first.
 3. Use `chore: Routine sweep <YYYY-MM-DD>` when committing a sweep. No ticket key.
    Commit and push directly to `main`. Never open a pull request for a sweep and
    never leave a sweep's work sitting only on a side branch. If the session's own

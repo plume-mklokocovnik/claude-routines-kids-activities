@@ -35,12 +35,21 @@ class SweepAutoMergeWorkflowTests(unittest.TestCase):
         # Every refusal is an error annotation followed by a failing exit. The
         # old warning-and-exit-0 shape left a skipped sweep as a green run.
         self.assertNotIn("::warning::", guard)
-        self.assertEqual(guard.count("::error::"), 3)
-        # One exit for the diverged case, one shared by the collected problems.
-        self.assertEqual(guard.count("exit 1"), 2)
+        self.assertEqual(guard.count("::error::"), 4)
+        # Changed sweep output on main, a failed replay, and the collected problems.
+        self.assertEqual(guard.count("exit 1"), 3)
         # The benign case, a branch already level with main, stays green.
         self.assertIn("Branch is already level with main", guard)
         self.assertEqual(guard.count("exit 0"), 1)
+
+    def test_replay_only_when_main_left_sweep_output_alone(self):
+        guard = self.text[self.text.index("- name: Guardrails"):self.text.index("- name: Re-validate")]
+        replay = guard[guard.index("--is-ancestor"):guard.index("Every problem is reported")]
+        self.assertIn(r"'^(db\.json|diff\.md|runs/)'", replay)
+        self.assertLess(replay.index("owned="), replay.index("git cherry-pick $commits"))
+        self.assertIn("git cherry-pick --abort", replay)
+        # The commit and path guardrails still run on the replayed commits.
+        self.assertLess(guard.index("git cherry-pick $commits"), guard.index("git rev-list origin/main..HEAD"))
 
     def test_never_force_pushes_or_merges(self):
         self.assertNotRegex(self.text, re.compile(r"git push\s+--force|git push -f"))

@@ -11,6 +11,11 @@ name: Auto fast-forward sweep branches to main
 #
 # Guardrails (all must pass, or nothing is pushed):
 #   1. main must be a strict ancestor of the branch tip (fast-forward only).
+#      When main moved on during the sweep without touching db.json, diff.md
+#      or runs/, the sweep commits are cherry-picked onto main first. The
+#      database is then the same one the sweep started from, so the result is
+#      what a fast-forward would have given. Changed sweep output on main, or
+#      a replay that conflicts, still refuses the merge.
 #   2. Every commit ahead of main must have the exact commit message
 #      "chore: Routine sweep YYYY-MM-DD" that AGENTS.md mandates for a sweep.
 #   3. The full diff from main may only touch db.json, diff.md, runs/*.json and
@@ -80,8 +85,22 @@ jobs:
           fi
 
           if ! git merge-base --is-ancestor origin/main HEAD; then
-            echo "::error::main has diverged from this branch - not a fast-forward. Auto-merge refused; a human needs to reconcile this by hand."
-            exit 1
+            base="$(git merge-base origin/main HEAD)"
+            owned="$(git diff --name-only "$base" origin/main | grep -E '^(db\.json|diff\.md|runs/)' || true)"
+            if [ -n "$owned" ]; then
+              echo "::error::main changed sweep output since this sweep began ($(echo $owned)). Auto-merge refused; re-run the sweep against the latest main."
+              exit 1
+            fi
+            commits="$(git rev-list --reverse "$base..HEAD")"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git checkout --quiet --detach origin/main
+            if ! git cherry-pick $commits; then
+              git cherry-pick --abort || true
+              echo "::error::The sweep does not replay cleanly on top of main. Auto-merge refused; a human needs to reconcile this by hand."
+              exit 1
+            fi
+            echo "main moved on without touching sweep output, so the sweep was replayed on top of it."
           fi
 
           # Every problem is reported before the run fails, so one red run
