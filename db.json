@@ -14213,7 +14213,9 @@
       "flags": [],
       "event_id": "event_20261203_0900_55d6d781c6f3",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "maybe",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "879": {
       "title": "Iskanje zmajevega zaklada (Ta veseli dan kulture na Ljubljanskem gradu)",
@@ -14230,7 +14232,9 @@
       ],
       "event_id": "event_20261203_1400_324267797772",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "880": {
       "title": "Potep med pravljicami (Ta veseli dan kulture na Ljubljanskem gradu)",
@@ -14247,7 +14251,9 @@
       ],
       "event_id": "event_20261203_1600_50bb4848d842",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "881": {
       "title": "MALI KORAKI | Avantgarda: igrivi sprehod po umetnosti za najmlajše",
@@ -14262,7 +14268,9 @@
       "flags": [],
       "event_id": "event_20261203_1600_5d8970a44a93",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "882": {
       "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
@@ -14277,7 +14285,9 @@
       "flags": [],
       "event_id": "event_20261204_1700_fe73549419b6",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "maybe",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "883": {
       "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
@@ -14292,7 +14302,9 @@
       "flags": [],
       "event_id": "event_20261205_1700_135085cdc1eb",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-11-05T21:11:53Z"
     },
     "884": {
       "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
@@ -14307,7 +14319,9 @@
       "flags": [],
       "event_id": "event_20261206_1700_fee817532371",
       "status": "active",
-      "first_seen": "2026-11-05T22:06:44+01:00"
+      "first_seen": "2026-11-05T22:06:44+01:00",
+      "decision": "rejected",
+      "decided_at": "2026-11-05T21:11:53Z"
     }
   },
   "user_rules": {
@@ -24588,6 +24602,62 @@
       "before_at": "2026-10-02T12:25:01Z",
       "after": "rejected",
       "at": "2026-11-05T20:44:16Z"
+    },
+    "690": {
+      "event_id": "event_20261203_0900_55d6d781c6f3",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "691": {
+      "event_id": "event_20261203_1400_324267797772",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "692": {
+      "event_id": "event_20261203_1600_50bb4848d842",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "693": {
+      "event_id": "event_20261203_1600_5d8970a44a93",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "694": {
+      "event_id": "event_20261204_1700_fe73549419b6",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "maybe",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "695": {
+      "event_id": "event_20261205_1700_135085cdc1eb",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-11-05T21:11:53Z"
+    },
+    "696": {
+      "event_id": "event_20261206_1700_fee817532371",
+      "action": "set",
+      "before": null,
+      "before_at": null,
+      "after": "rejected",
+      "at": "2026-11-05T21:11:53Z"
     }
   }
 }
