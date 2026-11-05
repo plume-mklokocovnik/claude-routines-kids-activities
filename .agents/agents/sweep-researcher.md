@@ -28,7 +28,8 @@ minimum sources from [routine.md](../../routine.md). You return evidence, never 
 1. Read your files in `.work/<run_id>/fetch/`, one row per line. Rows were already
    limited to the run window, and rows the user hid were dropped. A row with `stored`
    matches a known event. Resubmit it with that `event_id` only when a source field
-   changed, for example a real start time replacing `time_unknown`.
+   changed, for example a real start time replacing `time_unknown`. A file header with
+   `notes` names a coverage gap. Copy each note into `runtime_notes`.
    A row with `cancelled: true` may announce a cancellation. Open the page. When it
    confirms one for a stored event, resubmit that `event_id` with the source's title
    and the `cancelled` flag added. Never drop or hide it yourself.

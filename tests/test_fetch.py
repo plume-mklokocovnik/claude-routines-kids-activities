@@ -1,3 +1,6 @@
+import email.message
+import html
+import io
 import json
 import subprocess
 import sys
@@ -21,6 +24,44 @@ def stub(pages):
         key = f"{url}?{data}" if data else url
         return (200, pages[key], "") if key in pages else (404, "", "HTTP 404")
     return get
+
+
+VSI = "https://vsi-eventi.com"
+VSI_LISTING = f"{VSI}/?city=2698&categories%5B0%5D=5&start_date=2026-09-28&end_date=2026-12-28"
+NEXT = "<button wire:click=\"nextPage('page')\">"
+
+
+def vsi_card(slug, title, date, venue="", when="", about=""):
+    """One vsi-eventi card in the shape the Livewire call returns with details shown."""
+    small = '<p class="text-xs md:text-sm line-clamp-2">{}</p>'
+    return (f'<div class="max-w-sm bg-white border"><a href="{VSI}/event/{slug}" wire:navigate></a>'
+            '<p class="items-center rounded-md bg-purple-50 px-1.5">Za otroke</p>'
+            f'<a href="{VSI}/event/{slug}"><h5 class="text-sm"> {title}</h5></a>'
+            + (f'<p class="text-xs md:text-base font-normal text-gray-700 line-clamp-2"> {about}</p>' if about else "")
+            + f'<a href="{VSI}?city=2698" class="text-sm text-black"> Ljubljana </a><!--[if ENDBLOCK]><![endif]-->'
+            + (small.format(venue) if venue else "")
+            + f'<p class="text-sm sm:text-base text-black"> {date} </p>'
+            + (small.format(when) if when else "") + "</div>")
+
+
+def vsi_listing(cards, pager=False):
+    snapshot = html.escape(json.dumps({"memo": {"name": "events-overview"}, "data": {"hideDetails": True}}))
+    return (f'<meta name="csrf-token" content="tok"><div wire:snapshot="{snapshot}">'
+            + "".join(cards) + (NEXT if pager else "") + "</div>")
+
+
+def livewire(listing, replies):
+    """GET answers the listing. Each POST answers the next reply and is kept for inspection."""
+    posts = []
+
+    def get(url, data=None):
+        if data is None:
+            return (200, listing, "") if url == VSI_LISTING else (404, "", "HTTP 404")
+        posts.append(json.loads(data))
+        reply = replies[len(posts) - 1]
+        return reply if isinstance(reply, tuple) else (200, json.dumps({"components": [
+            {"snapshot": f"s{len(posts)}", "effects": {"html": reply}}]}), "")
+    return get, posts
 
 
 class FetchTests(unittest.TestCase):
@@ -118,6 +159,81 @@ class FetchTests(unittest.TestCase):
                 patch("fetch.subprocess.run", return_value=answer) as curl:
             self.assertEqual(fetch.http("https://www.sititeater.si/"), (200, "<h1>SiTi</h1>", ""))
         self.assertIn("https://www.sititeater.si/", curl.call_args.args[0])
+
+    def test_http_keeps_cookies_and_sends_json_bodies_as_json(self):
+        seen = []
+
+        class Reply(io.BytesIO):
+            status = 200
+
+            def info(self):
+                message = email.message.Message()
+                message["Set-Cookie"] = "session_test=1; Path=/"
+                return message
+
+        def answer(request, timeout):
+            seen.append(request)
+            return Reply(b"ok")
+        try:
+            with patch("fetch.urllib.request.urlopen", side_effect=answer):
+                fetch.http("https://cookies.example.org/")
+                fetch.http("https://cookies.example.org/update", '{"a": 1}')
+                fetch.http("https://cookies.example.org/form", "a=1")
+        finally:
+            fetch.COOKIES.clear("cookies.example.org")
+        self.assertIsNone(seen[0].get_header("Cookie"))
+        self.assertIn("session_test=1", seen[1].get_header("Cookie"))
+        self.assertEqual([request.get_header("Content-type") for request in seen[1:]],
+                         ["application/json", "application/x-www-form-urlencoded"])
+
+    def test_vsi_eventi_reads_details_through_the_livewire_call_page_by_page(self):
+        first = [vsi_card("a-2026-10-03-ljubljana", "Afriško sonce", "Sobota, 3.10.2026", "SiTi Teater BTC",
+                          "Dogodek se začne 03. 10. 2026 ob 10:30.", "V afriški savani ..."),
+                 vsi_card("b-2026-10-08-ljubljana", "Vrzi žogo", "Četrtek, 8.10.2026", "Supernova Ljubljana Šiška",
+                          "Vsak četrtek med 15. oktobrom in 26. novembrom 2026, ob 16:30")]
+        second = [vsi_card("c-2026-10-10-ljubljana", "DadaDisko", "Sobota, 10.10.2026", "Katedrala, Kino Šiška",
+                           "dogodek poteka od 10.00 do 13.00"),
+                  vsi_card("d-2026-12-05-ljubljana", "Miklavžev sprevod", "Sobota, 5.12.2026", when="Od 5.12.2026 do 6.12.2026"),
+                  first[0]]
+        get, posts = livewire(vsi_listing(first[:1], pager=True), ["".join(first) + NEXT, "".join(second)])
+        fetcher = fetch.Fetcher(get)
+        rows = fetch.vsieventi(fetcher, self.context())
+        self.assertEqual([(item["title"], item["start_time"], item["flags"], item["venue"]) for item in rows], [
+            ("Afriško sonce", "2026-10-03T10:30:00+02:00", [], "SiTi Teater BTC"),
+            ("Vrzi žogo", "2026-10-08T16:30:00+02:00", [], "Supernova Ljubljana Šiška"),
+            ("DadaDisko", "2026-10-10T10:00:00+02:00", [], "Katedrala, Kino Šiška"),
+            ("Miklavžev sprevod", "2026-12-05T00:00:00+01:00", ["time_unknown"], "")])
+        self.assertEqual((rows[0]["notes"], rows[0]["tags"], rows[0]["city"], rows[0]["verified"], rows[0]["url"]),
+                         ("V afriški savani ...", ["Za otroke"], "Ljubljana", False, f"{VSI}/event/a-2026-10-03-ljubljana"))
+        self.assertEqual([(post["_token"], post["components"][0]["updates"], post["components"][0]["calls"])
+                          for post in posts], [
+            ("tok", {"hideDetails": False}, []),
+            ("tok", {}, [{"path": "", "method": "nextPage", "params": ["page"]}])])
+        self.assertEqual(posts[1]["components"][0]["snapshot"], "s1")
+        self.assertEqual([source["status"] for source in fetcher.sources], ["ok"] * 3)
+        self.assertEqual(fetcher.notes, [])
+
+    def test_vsi_eventi_falls_back_to_the_plain_listing_and_says_so(self):
+        listing = vsi_listing([vsi_card("a-2026-10-03-ljubljana", "Afriško sonce", "Sobota, 3.10.2026")], pager=True)
+        get, _ = livewire(listing, [(419, "", "HTTP 419")])
+        with tempfile.TemporaryDirectory() as directory:
+            summary = fetch.pull(batch(), database(), ["vsieventi"], Path(directory), get)
+            written = json.loads((Path(directory) / "vsieventi.json").read_text())
+        self.assertEqual([(item["title"], item["flags"], item["venue"]) for item in written["rows"]],
+                         [("Afriško sonce", ["time_unknown"], "")])
+        self.assertEqual([(source["status"], source.get("reason")) for source in written["sources"]],
+                         [("ok", None), ("failed", "HTTP 419")])
+        self.assertEqual(written["notes"], summary["vsieventi"]["notes"])
+        self.assertIn("Only its first page was read", written["notes"][0])
+
+    def test_vsi_eventi_notes_when_the_listing_reaches_the_page_cap(self):
+        def page(number):
+            return "".join(vsi_card(f"e{number}-{index}-2026-10-03-ljubljana", f"E {number} {index}", "Sobota, 3.10.2026")
+                           for index in range(36)) + (NEXT if number < 5 else "")
+        get, posts = livewire(vsi_listing([]), [page(number) for number in range(1, 6)])
+        fetcher = fetch.Fetcher(get)
+        self.assertEqual((len(fetch.vsieventi(fetcher, self.context())), len(posts)), (180, 5))
+        self.assertIn("cap of 5 pages", fetcher.notes[0])
 
     def test_record_stamps_the_current_time(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -412,6 +412,8 @@ Veseli december Ljubljana <leto> dedek mraz program  # Dec
   worth checking, not as parseable calendars.
 * Shopping-centre programmes (Citypark, Aleja, Supernova, BTC) are published as news posts rather
   than calendars and tend to appear only a week ahead. Sweep them weekly or you will miss them.
+  `vsi-eventi.com` lists Supernova's programmes with dates and start times. Its recipe is in
+  [links.md](links.md).
 * Several sites have moved or died since the original spec was written. `ljubljanajesport.si`
   no longer resolves, `casoris.si` stopped updating, and `lgl.si` reorganised its paths. Re-check
   reachability periodically and prune this file rather than letting the routine fail quietly.

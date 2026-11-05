@@ -31,6 +31,7 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, with no 2026 data reachable via fetch | **Certain.** Confirmed on the 2026-09-21 sweep. Fetching it wastes a request and returns nothing usable | `https://tekaski-koledar.si/` |
 | `cuki.si` and `www.cuki.si` | NXDOMAIN, no DNS record. Two curl attempts plus a direct lookup on 2026-09-22 | **Certain.** A domain with no DNS record cannot answer until someone re-registers it | The Čuki rows in [`artists.md`](artists.md), and `napovednik.com/glasba/narodnozabavna` |
 | `https://www.muri-maca.com/` | NXDOMAIN, no DNS record. Checked 2026-09-24 while trying to confirm a Neca Falk "Maček Muri" lead | **Certain.** Was the project's own site | `drama.si` (SNG Drama) or the `eventim.si` listing, both unconfirmed as of 2026-09-24 — see `artists.md` |
+| `ljubljanainfo.com` event pages | HTTP 403 with the Cloudflare challenge page *Trenutek...*, to curl and to headless Chromium on 2026-11-05 | **Certain while the challenge is on.** Getting past it would mean evading bot protection | The vsi-eventi event page that mirrors it, see the vsi-eventi recipe |
 
 ### Wrong guesses, not dead sites
 
@@ -70,6 +71,7 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | Napovednik holiday care | `https://napovednik.com/za-otroke/pocitnisko-varstvo` | Camps, mostly excluded by rules | low |
 | Napovednik dance | `https://napovednik.com/prireditve/plesna-prireditev` | Dance category | ok |
 | Napovednik sport events | `https://napovednik.com/prireditve/sportna-prireditev` | Sport category | ok |
+| vsi-eventi | `https://vsi-eventi.com/?city=2698&categories[0]=5` | **Every run, via `fetch.py pull`.** Ljubljana's children's category with venue and start time. Mirrors `ljubljanainfo.com` and lists the Supernova programmes that shopping centres only post as news. See the recipe below | ok, checked 2026-11-05 |
 | Visit Ljubljana | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/` | Filters: Prost vstop + Za družine + date + Izven Ljubljane | ok |
 | MOL calendar | `https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100` | **Every run, via curl.** Municipal calendar. See the recipe below | ok, checked 2026-09-25 |
 | MOL workshop pavilion (lead, unresolved) | `https://www.ljubljana.si/sl/moja-ljubljana/prireditve/ustvarjalne-delavnice-za-otroke/` | Daily free-workshop programme at the Kongresni trg pavilion (weekday 17–18h / weekend 10–12h per search snippets) | 404, confirmed dead on both the 2026-09-22 and 2026-09-24 sweeps despite 5+ URL/search variants each time. `kgbl.si/prizorisce/kongresni-trg/paviljon/` describes an unrelated spring student-concert series, not this. Try MOL's "Oddelek za kulturo" news feed directly next run instead of guessing more slugs |
@@ -96,6 +98,28 @@ narrows the list. The detail call adds the venue name, `eventStart`, `eventEnd`,
 the organiser and the Slovenian description. Use the human page as the candidate `url`. Its address is
 `https://napovednik.com/za-otroke/<podkategorija>/<slug>-<idDataEvent>`, linked from the HTML
 of `napovednik.com/za-otroke` and answering 200 to curl.
+
+### vsi-eventi, fetch recipe
+
+A Laravel and Livewire site, rendered on the server. Cloudflare sits in front without a
+challenge, and plain curl gets 200. Checked 2026-11-05:
+
+* The listing `/?city=2698&categories[0]=5&start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>` gives
+  title, categories, date and city per card. City 2698 is Ljubljana and category 5 is *Za otroke*.
+  Use `curl -g` for the brackets.
+* Venue, the start-time sentence and a description of about 160 characters sit behind the
+  Livewire property `hideDetails`, which has no control and no URL parameter. `fetch.py` posts
+  the page's own snapshot to `/livewire/update` with `hideDetails: false` and gets every card
+  with details. The POST needs the session cookie the GET set, or it answers 419.
+* 36 cards per page and at most 5 pages. A query with more than 180 events silently loses the
+  rest, so `fetch.py` adds a note when the cap is reached. Ljubljana's children's listing for the
+  three-month horizon held 36 events.
+* `x-ratelimit-limit: 30` per minute. Verify at most 25 vsi-eventi event pages per minute.
+* An event page shows the same fields and `verify` reads venue, date and time early in its text.
+  Its schema.org JSON-LD always gives `startDate` at midnight, so take the time from the sentence.
+* No public API, feed or ICS. `/api`, `/api/events`, `/feed`, `/rss` and `events.json` return 404.
+  `sitemap.xml` lists every event URL with `lastmod`, but no category.
+* Descriptions end in `...` on the site itself. Recurring programmes appear as one card per date.
 
 ### MOL calendar, fetch recipe
 

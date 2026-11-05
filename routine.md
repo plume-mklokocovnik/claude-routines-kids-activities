@@ -50,7 +50,7 @@ when its whole minimum set was read, and `partial` when part of it was. Recipes 
 
 | Pass | Minimum sources, read every run |
 |---|---|
-| `ljubljana` | MOL calendar (`nrOfItems=100`), MKL events API, Napovednik API `For-children`, Kinodvor Kinobalon, Kino Bežigrad index with start times, LGL schedule pages 1 to 3, SiTi Teater, MGML events, Ljubljanski grad, the Cankarjev dom feed, Citypark, the ZOO check |
+| `ljubljana` | MOL calendar (`nrOfItems=100`), MKL events API, Napovednik API `For-children`, Kinodvor Kinobalon, Kino Bežigrad index with start times, LGL schedule pages 1 to 3, SiTi Teater, MGML events, Ljubljanski grad, the Cankarjev dom feed, the vsi-eventi children's listing, Citypark, the ZOO check |
 | `slovenia` | Napovednik API rows outside Ljubljana (`For-children`, `Events`), Zgodovinska mesta, and the regional source for every [regions.md](reference/regions.md) fixture inside the horizon |
 | `concerts_generic` | Napovednik API `Music`, the musical rows of `For-children` and of the Cankarjev dom feed, then the Pass 3A queries |
 | `concerts_watchlist` | The dated query set for every artist and every month in the horizon, then each artist's confirm-at page from [artists.md](reference/artists.md) |
@@ -128,7 +128,7 @@ support, one session works the same groups in sequence with the same files.
 
    | Research file | Passes | Fetch files |
    |---|---|---|
-   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `cankarjevdom`, `zoo`, Ljubljana rows of `napovednik`. Also the rest of the ZOO check |
+   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `cankarjevdom`, `zoo`, `vsieventi`, Ljubljana rows of `napovednik`. Also the rest of the ZOO check |
    | `ljubljana-venues` | `ljubljana` | None. Kinodvor, LGL, SiTi, MGML, Ljubljanski grad, Citypark and the December check |
    | `slovenia` | `slovenia` | `napovednik` rows with `pass_hint: slovenia` |
    | `concerts-generic` | `concerts_generic` | `napovednik` `Music` rows, the musical `For-children` rows and the concert rows of `cankarjevdom` |

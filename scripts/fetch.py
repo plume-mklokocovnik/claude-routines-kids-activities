@@ -14,7 +14,8 @@ Every file carries `sources` records in the staged-input shape, which
 Nothing here decides scope. Rows outside the run window or hidden by the user are
 dropped, and a row that matches a stored event names it in `stored`. A row with
 `verified: false` needs `verify` on its URL before it can become a candidate. A row
-whose title or text announces a cancellation carries `cancelled: true`.
+whose title or text announces a cancellation carries `cancelled: true`. A file header
+with `notes` names a coverage gap the researcher copies into `runtime_notes`.
 """
 
 import argparse
@@ -32,6 +33,7 @@ import urllib.request
 import xml.etree.ElementTree as ElementTree
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
+from http.cookiejar import CookieJar
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -42,18 +44,26 @@ USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.3
               "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
 WORKERS = 4
 TEXT_LIMIT = 400
+# Kept for the whole process. vsi-eventi accepts its Livewire POST only with the session
+# cookie its listing set, because the form token on that page belongs to that session.
+COOKIES = CookieJar()
 
 
 def http(url, data=None, timeout=40):
-    """Return (status, body, reason). Status 0 means the request never got an answer."""
+    """Return (status, body, reason). Status 0 means the request never got an answer.
+    A body that starts with `{` is sent as JSON, any other body as a form."""
     body = data.encode() if data is not None else None
     headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/json,*/*",
                "Accept-Language": "sl,en;q=0.5"}
+    kind = "application/json" if data is not None and data.lstrip().startswith("{") \
+        else "application/x-www-form-urlencoded"
     if body is not None:
-        headers["Content-Type"] = "application/x-www-form-urlencoded"
+        headers["Content-Type"] = kind
     request = urllib.request.Request(url, data=body, headers=headers)
+    COOKIES.add_cookie_header(request)
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
+            COOKIES.extract_cookies(response, request)
             return response.status, response.read().decode("utf-8", "replace"), ""
     except urllib.error.HTTPError as error:
         return error.code, "", f"HTTP {error.code}"
@@ -63,7 +73,8 @@ def http(url, data=None, timeout=40):
     if not shutil.which("curl"):
         return 0, "", reason
     command = ["curl", "-sL", "--max-time", str(timeout), "-A", USER_AGENT, "-H", "Accept-Language: sl,en;q=0.5",
-               "-w", "\n%{http_code}", *(["--data", data] if data is not None else []), url]
+               "-w", "\n%{http_code}", *(["-H", f"Content-Type: {kind}", "--data", data] if data is not None else []),
+               url]
     try:
         result = subprocess.run(command, capture_output=True, timeout=timeout + 10)
     except subprocess.TimeoutExpired:
@@ -77,6 +88,7 @@ class Fetcher:
     def __init__(self, get=http):
         self.get = get
         self.sources = []
+        self.notes = []
         self.lock = threading.Lock()
 
     def fetch(self, url, pass_name, data=None, record=None):
@@ -343,8 +355,75 @@ def cankarjevdom(f, ctx):
             for (item, start, flags), body in zip(picked, bodies)]
 
 
+VSIEVENTI = "https://vsi-eventi.com"
+VSIEVENTI_CARDS, VSIEVENTI_PAGES = 36, 5  # cards per page, and the most pages the site lists
+VSIEVENTI_CARD = '<div class="max-w-sm bg-white'
+
+
+def vsieventi(f, ctx):
+    """Ljubljana's children's category on vsi-eventi.com. The listing hides each card's
+    description, venue and start time behind a Livewire property that has no control on the
+    page. The page's own Livewire call turns it off: one GET, then one POST per page of cards."""
+    listing = (f"{VSIEVENTI}/?city=2698&categories%5B0%5D=5"
+               f"&start_date={ctx.clock:%Y-%m-%d}&end_date={ctx.horizon:%Y-%m-%d}")
+    markup = f.fetch(listing, "ljubljana") or ""
+    token = re.search(r'<meta name="csrf-token" content="([^"]+)"', markup)
+    snapshot = next((value for value in map(html.unescape, re.findall(r'wire:snapshot="([^"]*)"', markup))
+                     if '"events-overview"' in value), None)
+    fragments, updates, calls = [], {"hideDetails": False}, []
+    for number in range(1, VSIEVENTI_PAGES + 1):
+        if not token or not snapshot:
+            break
+        body = json.dumps({"_token": token.group(1), "components": [
+            {"snapshot": snapshot, "updates": updates, "calls": calls}]})
+        reply = f.fetch(f"{VSIEVENTI}/livewire/update", "ljubljana", body,
+                        f"{VSIEVENTI}/livewire/update?hideDetails=false&page={number}")
+        try:
+            component = json.loads(reply)["components"][0]
+            snapshot, fragment = component["snapshot"], component["effects"]["html"]
+        except (TypeError, ValueError, KeyError, IndexError):
+            break
+        fragments.append(fragment)
+        if "nextPage('page')" not in fragment:
+            break
+        updates, calls = {}, [{"path": "", "method": "nextPage", "params": ["page"]}]
+    if markup and not fragments:
+        f.notes.append("vsi-eventi: the Livewire details call failed, so rows come from the plain listing "
+                       "without venue or start time" + (". Only its first page was read" if "nextPage('page')" in markup else ""))
+        fragments = [markup]
+    if len(fragments) == VSIEVENTI_PAGES and fragments[-1].count(VSIEVENTI_CARD) >= VSIEVENTI_CARDS:
+        f.notes.append(f"vsi-eventi: the listing reached the site's cap of {VSIEVENTI_PAGES} pages, "
+                       "so later events in the horizon may be missing")
+    rows = {}
+    for fragment in fragments:
+        for card in fragment.split(VSIEVENTI_CARD)[1:]:
+            link = re.search(r'href="(https://vsi-eventi\.com/event/[^"]+)"', card)
+            title = re.search(r"<h5\b[^>]*>(.*?)</h5>", card, re.S)
+            date = re.search(r'<p class="text-sm sm:text-base text-black">[^<]*?(\d{1,2})\.(\d{1,2})\.(\d{4})', card)
+            if not link or not title or not date or link.group(1) in rows:
+                continue
+            # The venue line sits above the date and the start-time sentence below it.
+            small = [(found.start(), plain(found.group(1), 300))
+                     for found in re.finditer(r'<p class="text-xs md:text-sm line-clamp-2">(.*?)</p>', card, re.S)]
+            venue = next((text for at, text in small if at < date.start()), "")
+            when = next((text for at, text in small if at > date.start()), "")
+            # "ob 16:30", "od 10.00 do 13.00". A date such as "od 15.10.2026" is not a time.
+            clock = re.search(r"(?i)\b(?:ob|od)\s+(\d{1,2})[:.](\d{2})\b(?!\.\d)", when) or \
+                re.search(r"\b(\d{1,2}):(\d{2})\b", when)
+            hour, minute = clock.groups() if clock and int(clock.group(1)) < 24 else (None, 0)
+            city = re.search(r'href="https://vsi-eventi\.com\?city=\d+"[^>]*>(.*?)</a>', card, re.S)
+            about = re.search(r'<p class="text-xs md:text-base font-normal text-gray-700[^"]*">(.*?)</p>', card, re.S)
+            tags = re.findall(r'<p class="items-center rounded-md bg-purple-50[^"]*">(.*?)</p>', card, re.S)
+            day, month, year = date.groups()
+            rows[link.group(1)] = row(plain(title.group(1), 200), *local(year, month, day, hour, minute), venue,
+                                      link.group(1), False, city=plain(city.group(1), 80) if city else "Ljubljana",
+                                      tags=[plain(tag, 60) for tag in tags], time_text=when,
+                                      notes=plain(about.group(1)) if about else None)
+    return list(rows.values())
+
+
 SOURCES = {"mol": mol, "mkl": mkl, "napovednik": napovednik, "kinobezigrad": kinobezigrad,
-           "cankarjevdom": cankarjevdom, "svamz": svamz, "zoo": zoo}
+           "cankarjevdom": cankarjevdom, "svamz": svamz, "zoo": zoo, "vsieventi": vsieventi}
 CANCELLED = re.compile(r"(?i)\bodpovedan[oa]?\b|\bodpade\b|\bprestavljen[oa]?\b")
 
 
@@ -401,11 +480,12 @@ def pull(batch, db, names, folder, get=http):
         fetcher = Fetcher(get)
         started = time.monotonic()
         rows, dropped = ctx.annotate(SOURCES[name](fetcher, ctx))
-        write(folder / f"{name}.json", {"source": name, "dropped": dropped}, fetcher.sources, rows)
+        notes = {"notes": fetcher.notes} if fetcher.notes else {}
+        write(folder / f"{name}.json", {"source": name, "dropped": dropped, **notes}, fetcher.sources, rows)
         failed = sum(source["status"] != "ok" for source in fetcher.sources)
         summary[name] = {"rows": len(rows), "stored": sum("stored" in item for item in rows),
                          "requests": len(fetcher.sources), "failed": failed, **dropped,
-                         "seconds": round(time.monotonic() - started)}
+                         "seconds": round(time.monotonic() - started), **notes}
     return summary
 
 
