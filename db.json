@@ -845,7 +845,7 @@
     "92": {
       "event_id": "kinobezigrad_20261107_0000",
       "title": "Gibalno-lutkovna predstava: Jaz počepnem, ti poskočiš",
-      "start_time": "2026-11-07T00:00:00+01:00",
+      "start_time": "2026-11-07T11:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -853,9 +853,7 @@
       "is_free": false,
       "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "status": "active",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "maybe",
@@ -883,7 +881,7 @@
     "94": {
       "event_id": "kinobezigrad_20261109_0000",
       "title": "Nov muzikal Romane Krajnčan: Kako je mravljica postala huda",
-      "start_time": "2026-11-09T00:00:00+01:00",
+      "start_time": "2026-11-09T17:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -891,9 +889,7 @@
       "is_free": false,
       "price_text": "Cena ni navedena",
       "url": "https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "status": "active",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "maybe",
@@ -978,7 +974,7 @@
     "99": {
       "event_id": "kinobezigrad_20261206_0000",
       "title": "Lutkovna predstava z obiskom Miklavža: Grdi raček",
-      "start_time": "2026-12-06T00:00:00+01:00",
+      "start_time": "2026-12-06T11:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -986,9 +982,7 @@
       "is_free": false,
       "price_text": "11,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-grdi-racek/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "status": "active",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "maybe",
@@ -5319,17 +5313,15 @@
     },
     "350": {
       "title": "Gledališka predstava: Pika Nogavička in časovni stroj",
-      "start_time": "2026-11-15T00:00:00+01:00",
+      "start_time": "2026-11-15T11:00:00+01:00",
       "venue": "Kino Bežigrad, Ljubljana",
       "city": "Ljubljana",
       "category": "lutke",
       "age_min": 3,
       "is_free": false,
-      "price_text": "9,90 € (samostojna vstopnica)",
+      "price_text": "9,90 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20261115_0000_ab38f7a28a6b",
       "status": "active",
       "first_seen": "2026-10-15T09:05:20+02:00",
@@ -5338,17 +5330,15 @@
     },
     "351": {
       "title": "Glasbena predstava: Repki 2",
-      "start_time": "2026-11-29T00:00:00+01:00",
+      "start_time": "2026-11-29T11:00:00+01:00",
       "venue": "Kino Bežigrad, Ljubljana",
       "city": "Ljubljana",
       "category": "koncert",
       "age_min": 3,
-      "is_free": null,
-      "price_text": "",
+      "is_free": false,
+      "price_text": "12,90 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/koncert-repki-2/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20261129_0000_ae7a72ad4f77",
       "status": "active",
       "first_seen": "2026-10-15T09:05:20+02:00",
@@ -5357,17 +5347,15 @@
     },
     "352": {
       "title": "Gledališka predstava: Zmeda za dva medveda",
-      "start_time": "2027-01-09T00:00:00+01:00",
+      "start_time": "2027-01-09T11:00:00+01:00",
       "venue": "Kino Bežigrad, Ljubljana",
       "city": "Ljubljana",
       "category": "lutke",
       "age_min": 3,
       "is_free": false,
-      "price_text": "8,10 € (samostojna vstopnica)",
+      "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-zmeda-za-dva-medveda/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20270109_0000_68178b5e2975",
       "status": "active",
       "first_seen": "2026-10-15T09:05:20+02:00",
@@ -12051,7 +12039,7 @@
     },
     "755": {
       "title": "Lutkovna predstava: Korenčkov palček",
-      "start_time": "2027-01-16T00:00:00+01:00",
+      "start_time": "2027-01-16T11:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -12059,9 +12047,7 @@
       "is_free": false,
       "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-korenckov-palcek/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20270116_0000_0e92ff13debb",
       "status": "active",
       "first_seen": "2026-10-29T08:07:15+01:00",
@@ -12070,7 +12056,7 @@
     },
     "756": {
       "title": "Gledališka predstava: Srakica in sova",
-      "start_time": "2027-01-23T00:00:00+01:00",
+      "start_time": "2027-01-23T11:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -12078,9 +12064,7 @@
       "is_free": false,
       "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-srakica-in-sova/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20270123_0000_5219ab6aa138",
       "status": "active",
       "first_seen": "2026-10-29T08:07:15+01:00",
@@ -12089,7 +12073,7 @@
     },
     "757": {
       "title": "Lutkovna predstava: Rdeča kapica",
-      "start_time": "2027-01-24T00:00:00+01:00",
+      "start_time": "2027-01-24T11:00:00+01:00",
       "venue": "Kino Bežigrad",
       "city": "Ljubljana",
       "category": "lutke",
@@ -12097,9 +12081,7 @@
       "is_free": false,
       "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-rdeca-kapica-2/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20270124_0000_6fc7728a9ed9",
       "status": "active",
       "first_seen": "2026-10-29T08:07:15+01:00",
@@ -12278,17 +12260,15 @@
     },
     "769": {
       "title": "Gledališka predstava: Ježeva hišica",
-      "start_time": "2027-01-30T00:00:00+01:00",
+      "start_time": "2027-01-30T11:00:00+01:00",
       "venue": "Kino Bežigrad, Ljubljana",
       "city": "Ljubljana",
       "category": "lutke",
       "age_min": 3,
-      "is_free": null,
-      "price_text": "",
+      "is_free": false,
+      "price_text": "8,10 EUR (samostojna vstopnica, tudi del abonmaja)",
       "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-jezeva-hisica/",
-      "flags": [
-        "time_unknown"
-      ],
+      "flags": [],
       "event_id": "event_20270130_0000_524ad970fa52",
       "status": "active",
       "first_seen": "2026-11-05T08:07:42+01:00"
@@ -12352,6 +12332,714 @@
       "event_id": "event_20261213_1100_17ccae99a974",
       "status": "active",
       "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "774": {
+      "title": "Ustvarjalnice z Galerijo C.C.U.: DEŽELA PINGVINOV",
+      "start_time": "2026-11-05T17:00:00+01:00",
+      "venue": "Center kulture Španski borci, Zaloška 61",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstop prost",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-dezela-pingvinov-6430",
+      "flags": [],
+      "city": "Ljubljana",
+      "event_id": "event_20261105_1700_1c32f8ee0319",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "775": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-07T11:00:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6455",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261107_1100_6f23ff665e5b",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "776": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-07T17:00:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6456",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261107_1700_90ecaaad0df0",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "777": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-08T11:00:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6457",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261108_1100_cea70cb94a57",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "778": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-08T17:00:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6458",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261108_1700_ff993da9f753",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "779": {
+      "title": "Ustvarjalnice z Galerijo C.C.U.: PRAVLJIČNI MOZAIKI",
+      "start_time": "2026-11-10T17:00:00+01:00",
+      "venue": "Center kulture Španski borci, Zaloška 61",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstop prost",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-pravljicni-mozaiki-6491",
+      "flags": [],
+      "city": "Ljubljana",
+      "event_id": "event_20261110_1700_c9f2a7b3ae33",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "780": {
+      "title": "Gospod Gnilc in plešoči medved",
+      "start_time": "2026-11-10T17:00:00+01:00",
+      "venue": "Veliki oder Lutkovnega gledališča Ljubljana, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 8,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gospod-gnilc-in-plesoci-medved-6461",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261110_1700_9cb2b0f117f8",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "781": {
+      "title": "Emil in detektivi",
+      "start_time": "2026-11-14T17:00:00+01:00",
+      "venue": "Veliki oder Lutkovnega gledališča Ljubljana, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 6,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6462",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261114_1700_20bdb2578454",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "782": {
+      "title": "Emil in detektivi",
+      "start_time": "2026-11-17T17:00:00+01:00",
+      "venue": "Veliki oder Lutkovnega gledališča Ljubljana, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 6,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6463",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261117_1700_38b0f228a3cb",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "783": {
+      "title": "Učiteljica (5+)",
+      "start_time": "2026-11-19T17:00:00+01:00",
+      "venue": "Lutkovno gledališče Ljubljana, mali oder, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-5011",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261119_1700_abd220f8ee08",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "784": {
+      "title": "Emil in detektivi",
+      "start_time": "2026-11-21T11:00:00+01:00",
+      "venue": "Veliki oder Lutkovnega gledališča Ljubljana, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 6,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6464",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261121_1100_f61233d3cf26",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "785": {
+      "title": "Učiteljica (5+)",
+      "start_time": "2026-11-22T11:00:00+01:00",
+      "venue": "Lutkovno gledališče Ljubljana, mali oder, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-6471",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261122_1100_1112f5a3b8ea",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "786": {
+      "title": "Učiteljica (5+)",
+      "start_time": "2026-11-22T17:00:00+01:00",
+      "venue": "Lutkovno gledališče Ljubljana, mali oder, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "8 EUR",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-6470",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261122_1700_3a55af5ddbc8",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "787": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-26T17:00:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6459",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261126_1700_a5ff3463c481",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "788": {
+      "title": "Ostržek (5+)",
+      "start_time": "2026-11-28T11:15:00+01:00",
+      "venue": "Šentjakobski oder LGL, Krekov trg 2",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": false,
+      "price_text": "Razprodano",
+      "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6460",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261128_1115_44060f357596",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "789": {
+      "title": "Skozi tisočere zgodbe (3+)",
+      "start_time": "2026-11-18T17:00:00+01:00",
+      "venue": "Knjigarna LGL, Krekov trg 2",
+      "category": "pravljice",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://napovednik.com/prireditve/kulturna-prireditev/skozi-tisocere-zgodbe-3-6452",
+      "flags": [],
+      "city": "Ljubljana",
+      "event_id": "event_20261118_1700_9f7c3452c0b2",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "790": {
+      "title": "Bralna urica s Tačkami – Adela Premate, Tačke pomagačke",
+      "start_time": "2026-11-05T17:00:00+01:00",
+      "venue": "Knjižnica Šiška – 1. nadstropje",
+      "category": "pravljice",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/bralna-urica-s-tackami-tacke-pomagacke-adela-premate-2/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261105_1700_d06755befe5c",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "791": {
+      "title": "Pogum – moja notranja moč",
+      "start_time": "2026-11-25T17:30:00+01:00",
+      "venue": "Knjižnica Ig",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/pogum-moja-notranja-moc/",
+      "flags": [],
+      "city": "Ljubljana",
+      "event_id": "event_20261125_1730_24e750d38906",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "792": {
+      "title": "Projekcija filma: Wolfwalkers",
+      "start_time": "2026-11-30T17:00:00+01:00",
+      "venue": "Lisztov inštitut, Barvarska steza 8",
+      "category": "kino",
+      "age_min": 8,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/projekcija-filma-za-poletje-skupaj/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261130_1700_cf6706a402b3",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "793": {
+      "title": "Moji prvi koraki v raziskovanje",
+      "start_time": "2026-11-18T17:00:00+01:00",
+      "venue": "Knjižnica Prežihov Voranc",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/moji-prvi-koraki-v-raziskovanje-6/",
+      "flags": [],
+      "city": "Ljubljana",
+      "event_id": "event_20261118_1700_e9aefec19ea9",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "794": {
+      "title": "Beremo s tačkami",
+      "start_time": "2026-11-18T17:00:00+01:00",
+      "venue": "Knjižnica Prežihov Voranc",
+      "category": "pravljice",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/beremo-s-tackami-62/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261118_1700_2f0d2f4e4f67",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "795": {
+      "title": "Roboti – Dmitry Ainutdinov, Mali TehnoVed",
+      "start_time": "2026-11-19T17:00:00+01:00",
+      "venue": "Knjižnica Šiška – 1. nadstropje",
+      "category": "delavnica",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/roboti-dmitry-ainutdinov-mali-tehnoved-2/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261119_1700_76cbe5381f21",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "796": {
+      "title": "Rišemo mange! – Ted Stefančič",
+      "start_time": "2026-11-26T16:00:00+01:00",
+      "venue": "Knjižnica Rog",
+      "category": "delavnica",
+      "age_min": 8,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/risemo-mange-ted-stefancic/2026-11-26/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261126_1600_cba4d74079e6",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "797": {
+      "title": "Rišemo mange! – Ted Stefančič",
+      "start_time": "2026-11-27T16:00:00+01:00",
+      "venue": "Knjižnica Rog",
+      "category": "delavnica",
+      "age_min": 8,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/risemo-mange-ted-stefancic/2026-11-27/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261127_1600_f844bba105e4",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "798": {
+      "title": "ZOO Ljubljana pod okriljem noči",
+      "start_time": "2026-11-13T18:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "category": "zoo",
+      "age_min": 6,
+      "is_free": false,
+      "price_text": "10,00 EUR + vstopnina po veljavnem ceniku, rezervacija obvezna",
+      "url": "https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261113_1800_f1afa83ed1e0",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "799": {
+      "title": "ZOO Ljubljana pod okriljem noči",
+      "start_time": "2026-11-27T18:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "category": "zoo",
+      "age_min": 6,
+      "is_free": false,
+      "price_text": "10,00 EUR + vstopnina po veljavnem ceniku, rezervacija obvezna",
+      "url": "https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/",
+      "flags": [
+        "age_stretch"
+      ],
+      "city": "Ljubljana",
+      "event_id": "event_20261127_1800_c624499703ee",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "800": {
+      "title": "Skrivnostni vitez: družinska delavnica (4+)",
+      "start_time": "2026-11-21T16:00:00+01:00",
+      "venue": "Mestni muzej Ljubljana, Gosposka ulica 15",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 4,
+      "is_free": false,
+      "price_text": "22 € na družino, prijave obvezne",
+      "url": "https://mgml.si/sl/mestni-muzej/dogodki/2553/2026-11-21/16-00/skrivnostni-vitez-druzinska-delavnica-4/",
+      "flags": [],
+      "event_id": "event_20261121_1600_c16e003cb3fe",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "801": {
+      "title": "Začetek prešernosti s prižigom lučk",
+      "start_time": "2026-11-27T17:00:00+01:00",
+      "venue": "Prešernov trg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/zacetek-presernosti",
+      "flags": [],
+      "event_id": "event_20261127_1700_78771e2f8ab6",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "802": {
+      "title": "Praznični mimohodi Ledene kraljice",
+      "start_time": "2026-12-06T17:00:00+01:00",
+      "venue": "Mestni trg, Prešernov trg, Kongresni trg, Novi trg, Breg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/ledena-kraljica",
+      "flags": [],
+      "event_id": "event_20261206_1700_213ebc03c24a",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "803": {
+      "title": "Praznični mimohodi Ledene kraljice",
+      "start_time": "2026-12-13T17:00:00+01:00",
+      "venue": "Mestni trg, Prešernov trg, Kongresni trg, Novi trg, Breg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/ledena-kraljica",
+      "flags": [],
+      "event_id": "event_20261213_1700_b02f393b13b5",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "804": {
+      "title": "Praznični mimohodi Ledene kraljice",
+      "start_time": "2026-12-20T17:00:00+01:00",
+      "venue": "Mestni trg, Prešernov trg, Kongresni trg, Novi trg, Breg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/ledena-kraljica",
+      "flags": [],
+      "event_id": "event_20261220_1700_76b2da1ed502",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "805": {
+      "title": "Koča dedka Mraza v parku Zvezda",
+      "start_time": "2026-12-20T10:00:00+01:00",
+      "venue": "Park Zvezda, Kongresni trg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/koca-dedka-mraza",
+      "flags": [],
+      "event_id": "event_20261220_1000_5fa4274ad14e",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "806": {
+      "title": "Koča dedka Mraza v parku Zvezda",
+      "start_time": "2026-12-26T10:00:00+01:00",
+      "venue": "Park Zvezda, Kongresni trg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/koca-dedka-mraza",
+      "flags": [],
+      "event_id": "event_20261226_1000_75dc076d9b60",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "807": {
+      "title": "Sprevod Dedka Mraza",
+      "start_time": "2026-12-26T17:00:00+01:00",
+      "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+      "flags": [],
+      "event_id": "event_20261226_1700_bcd7eb0c4465",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "808": {
+      "title": "Ana Mraz s prijatelji: snežno igrišče in ulično gledališče",
+      "start_time": "2026-12-27T10:00:00+01:00",
+      "venue": "Krekov trg pred Lutkovnim gledališčem",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/ana-mraz-s-prijatelji",
+      "flags": [],
+      "event_id": "event_20261227_1000_af97eb02f16f",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "809": {
+      "title": "Silvestrovanje za otroke",
+      "start_time": "2026-12-31T16:00:00+01:00",
+      "venue": "Kongresni trg",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/silvestrovanje-za-otroke",
+      "flags": [],
+      "event_id": "event_20261231_1600_8bd81f6380bd",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "810": {
+      "title": "Rogove praznične delavnice: Nakit iz žice in perlic",
+      "start_time": "2026-12-04T17:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261204_1700_5b84505abc11",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "811": {
+      "title": "Rogove praznične delavnice: Peka prazničnih piškotov",
+      "start_time": "2026-12-05T10:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261205_1000_c677fd8abaa1",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "812": {
+      "title": "Rogove praznične delavnice: Praznični okraski iz slanega testa",
+      "start_time": "2026-12-11T17:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261211_1700_0a7cac4b7e1e",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "813": {
+      "title": "Rogove praznične delavnice: Žigosanje in teksturiranje obeskov",
+      "start_time": "2026-12-12T10:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261212_1000_6642adf38625",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "814": {
+      "title": "Rogove praznične delavnice: Volnene cvetlice",
+      "start_time": "2026-12-18T17:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261218_1700_e258e7a73987",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "815": {
+      "title": "Rogove praznične delavnice: Praznični churrosi",
+      "start_time": "2026-12-19T10:00:00+01:00",
+      "venue": "Center Rog, Trubarjeva cesta 72",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Prost vstop, drop-in",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/rogove-praznicne-delavnice",
+      "flags": [],
+      "event_id": "event_20261219_1000_6641c2ed6ac8",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "816": {
+      "title": "Škratolovski dogodek: Zlati čoln - vodeno pesniško doživetje za vso družno",
+      "start_time": "2026-11-07T10:30:00+01:00",
+      "venue": "Trg osvoboditve Sežana, Trg osvoboditve",
+      "city": "Sežana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "7€/beležka",
+      "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-zlati-coln-vodeno-pesnisko-dozivetje-za-vso-druzno-6437",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261107_1030_96f49b4a69eb",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "817": {
+      "title": "Škratolovski dogodek: Krasni dan na Škratjem Krasu",
+      "start_time": "2026-11-07T11:00:00+01:00",
+      "venue": "Štanjel, parkirišče pri baru Zoro",
+      "city": "Štanjel",
+      "category": "festival",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "7€/beležka",
+      "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-krasni-dan-na-skratjem-krasu-6436",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261107_1100_ff23380d185f",
+      "status": "active",
+      "first_seen": "2026-11-05T13:05:33+01:00"
     }
   },
   "user_rules": {
@@ -12720,9 +13408,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-11-05T08:07:42+01:00",
-      "total_active_events": 117,
-      "latest_run": "20261105T070742Z_f4fb8800"
+      "last_run": "2026-11-05T13:05:33+01:00",
+      "total_active_events": 161,
+      "latest_run": "20261105T120533Z_da7f25e5"
     }
   },
   "hidden_events": {
