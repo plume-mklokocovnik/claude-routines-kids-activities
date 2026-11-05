@@ -31,7 +31,7 @@ Retrying these wastes a request and returns nothing. Use the replacement instead
 | `https://tekaskeprireditve.si/koledar-tekaskih-prireditev/` | Alive (200), but returns only stale cached content from March–April 2016, with no 2026 data reachable via fetch | **Certain.** Confirmed on the 2026-09-21 sweep. Fetching it wastes a request and returns nothing usable | `https://tekaski-koledar.si/` |
 | `cuki.si` and `www.cuki.si` | NXDOMAIN, no DNS record. Two curl attempts plus a direct lookup on 2026-09-22 | **Certain.** A domain with no DNS record cannot answer until someone re-registers it | The Čuki rows in [`artists.md`](artists.md), and `napovednik.com/glasba/narodnozabavna` |
 | `https://www.muri-maca.com/` | NXDOMAIN, no DNS record. Checked 2026-09-24 while trying to confirm a Neca Falk "Maček Muri" lead | **Certain.** Was the project's own site | `drama.si` (SNG Drama) or the `eventim.si` listing, both unconfirmed as of 2026-09-24 — see `artists.md` |
-| `ljubljanainfo.com` event pages | HTTP 403 with the Cloudflare challenge page *Trenutek...*, to curl and to headless Chromium on 2026-11-05 | **Certain while the challenge is on.** Getting past it would mean evading bot protection | The vsi-eventi event page that mirrors it, see the vsi-eventi recipe |
+| `ljubljanainfo.com` (whole domain, including `/dogodki/`) | HTTP 403 with the Cloudflare challenge page *Trenutek...*. Event pages to curl and to headless Chromium, and `/dogodki/` to `fetch.py verify`, all on 2026-11-05 | **Certain while the challenge is on.** Getting past it would mean evading bot protection | The vsi-eventi event page that mirrors it, see the vsi-eventi recipe |
 
 ### Wrong guesses, not dead sites
 

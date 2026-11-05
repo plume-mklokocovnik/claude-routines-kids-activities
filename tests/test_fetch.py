@@ -1,3 +1,4 @@
+import contextlib
 import email.message
 import html
 import io
@@ -234,6 +235,20 @@ class FetchTests(unittest.TestCase):
         fetcher = fetch.Fetcher(get)
         self.assertEqual((len(fetch.vsieventi(fetcher, self.context())), len(posts)), (180, 5))
         self.assertIn("cap of 5 pages", fetcher.notes[0])
+
+    def test_pull_command_without_names_reads_every_source(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            staged = Path(directory) / "input.json"
+            staged.write_text(json.dumps(batch()))
+            with patch("fetch.pull", return_value={}) as pulled, patch("fetch.state.load", return_value=database()):
+                for words, names in ((["pull"], list(fetch.SOURCES)), (["pull", "zoo", "vsieventi"], ["zoo", "vsieventi"])):
+                    with patch("sys.argv", ["fetch.py", str(staged), *words]):
+                        fetch.main()
+                    self.assertEqual(pulled.call_args.args[2], names)
+                with patch("sys.argv", ["fetch.py", str(staged), "pull", "nope"]), \
+                        contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                    fetch.main()
+                self.assertEqual(pulled.call_count, 2)
 
     def test_record_stamps_the_current_time(self):
         with tempfile.TemporaryDirectory() as directory:

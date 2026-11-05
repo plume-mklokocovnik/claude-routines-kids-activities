@@ -167,6 +167,21 @@ class RunTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "slovenia.json.*fetch.py record"):
                 run.collect(Namespace(input=staged))
 
+    def test_collect_names_the_research_file_behind_a_bad_candidate(self):
+        cancelled = {**candidate(), "cancelled": True}
+        cheaper = {**candidate(), "price_text": "5 €"}
+        for files, message in (({"venues.json": [cancelled]}, r"venues\.json: .*\['cancelled'\]. A cancellation goes in flags"),
+                               ({"a.json": [candidate()], "b.json": [cheaper]}, r"a\.json and b\.json disagree")):
+            with self.subTest(message=message), tempfile.TemporaryDirectory() as directory, \
+                    contextlib.redirect_stdout(io.StringIO()):
+                root = Path(directory)
+                staged = root / "input.json"
+                state.atomic_write(staged, state.json_text(batch()))
+                for name, candidates in files.items():
+                    state.atomic_write(root / "research" / name, json.dumps({"candidates": candidates}))
+                with self.assertRaisesRegex(ValueError, message):
+                    run.collect(Namespace(input=staged))
+
     def test_distinct_shows_sharing_a_listing_are_kept(self):
         db, payload = database(), batch()
         db["events"]["1"].update(venue="Kinodvor, Dvorana", title="Kinobalon: Pokec")

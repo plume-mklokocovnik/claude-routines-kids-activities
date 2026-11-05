@@ -128,7 +128,7 @@ support, one session works the same groups in sequence with the same files.
 
    | Research file | Passes | Fetch files |
    |---|---|---|
-   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `cankarjevdom`, `zoo`, `vsieventi`, Ljubljana rows of `napovednik`. Also the rest of the ZOO check |
+   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `zoo`, every `vsieventi` row, the `cankarjevdom` rows that are not concerts, and the Ljubljana rows of `napovednik` that are not musical. Also the rest of the ZOO check |
    | `ljubljana-venues` | `ljubljana` | None. Kinodvor, LGL, SiTi, MGML, Ljubljanski grad, Citypark and the December check |
    | `slovenia` | `slovenia` | `napovednik` rows with `pass_hint: slovenia` |
    | `concerts-generic` | `concerts_generic` | `napovednik` `Music` rows, the musical `For-children` rows and the concert rows of `cankarjevdom` |

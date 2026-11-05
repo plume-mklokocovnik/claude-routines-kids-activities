@@ -515,7 +515,8 @@ def main():
     parser.add_argument("--db", type=Path, default=state.DB_PATH)
     commands = parser.add_subparsers(dest="command", required=True)
     pulling = commands.add_parser("pull", help="read structured sources into .work/<run_id>/fetch/")
-    pulling.add_argument("sources", nargs="*", choices=list(SOURCES), default=[])
+    # No `choices` here: argparse on Python 3.11 to 3.13 rejects an empty `*` list against them.
+    pulling.add_argument("sources", nargs="*", metavar="source", help=f"default: all of {', '.join(SOURCES)}")
     checking = commands.add_parser("verify", help="fetch event pages and record them as sources")
     checking.add_argument("--pass", dest="pass_name", required=True, choices=run.PASSES)
     checking.add_argument("--chars", type=int, default=1500, help="page text to print, default 1500")
@@ -525,6 +526,9 @@ def main():
     noting.add_argument("--failed", metavar="REASON", help="record a failed read with this reason")
     noting.add_argument("urls", nargs="+")
     args = parser.parse_args()
+    unknown = [name for name in getattr(args, "sources", []) if name not in SOURCES]
+    if unknown:
+        parser.error(f"unknown source {', '.join(unknown)}. Choose from {', '.join(SOURCES)}")
     try:
         batch = json.loads(args.input.read_text(encoding="utf-8"))
         state.timestamp(batch["started_at"])

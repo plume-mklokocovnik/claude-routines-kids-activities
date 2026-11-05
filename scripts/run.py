@@ -331,6 +331,24 @@ def combine(results):
     return {"status": status, **({"reason": reason} if reason else {})}
 
 
+def claim(name, candidate, owners):
+    """Name the research file behind a bad or conflicting candidate. apply only names the event."""
+    if not isinstance(candidate, dict):
+        return
+    unknown = set(candidate) - SOURCE_FIELDS - {"event_id"}
+    if unknown:
+        raise ValueError(f"{name}: candidate {candidate.get('title', '')!r} has protected or unknown fields "
+                         f"{sorted(unknown)}. A cancellation goes in flags")
+    try:
+        identity = candidate.get("event_id") or fingerprint(candidate)
+    except (KeyError, AttributeError, TypeError, ValueError):
+        return  # validate_batch reports the missing or malformed field
+    earlier, first = owners.setdefault(identity, (name, candidate))
+    if first != candidate:
+        raise ValueError(f"{earlier} and {name} disagree about {candidate['title']!r} at {candidate['start_time']}. "
+                         "Keep one version in one research file")
+
+
 def collect(args):
     """Rebuild the staged lists from researcher files and fetch records, keeping the run identity."""
     path = Path(args.input)
@@ -345,12 +363,15 @@ def collect(args):
             if source not in merged["sources"]:
                 merged["sources"].append(source)
     now = datetime.now(state.TZ)
+    owners = {}
     for item in research:
         part = json.loads(item.read_text(encoding="utf-8"))
         try:
             reject_future_checks({"sources": part.get("sources", [])}, now)
         except ValueError as error:
             raise ValueError(f"{item.name}: {error}. Use fetch.py record instead of typing a time") from error
+        for candidate in part.get("candidates", []):
+            claim(item.name, candidate, owners)
         for field in COLLECTED:
             for entry in part.get(field, []):
                 if entry not in merged[field]:

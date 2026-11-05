@@ -32,7 +32,9 @@ minimum sources from [routine.md](../../routine.md). You return evidence, never 
    `notes` names a coverage gap. Copy each note into `runtime_notes`.
    A row with `cancelled: true` may announce a cancellation. Open the page. When it
    confirms one for a stored event, resubmit that `event_id` with the source's title
-   and the `cancelled` flag added. Never drop or hide it yourself.
+   and `cancelled` added to `flags`, never as a field of its own. Never drop or hide it yourself.
+   A row from your fetch files is yours to settle as a candidate, a filtered entry or a lead,
+   also when another group reads its venue. A row nobody settles is a missed event.
 2. Read the rest of your minimum sources. Prefer
    `python3 scripts/fetch.py <input.json> verify --pass <pass> <url> ...` over WebFetch.
    It is cheaper, prints compact text and records each fetch with its real time.
@@ -65,4 +67,5 @@ minimum sources from [routine.md](../../routine.md). You return evidence, never 
 
 `sources` stays empty in practice, since `fetch.py` records every read. Use `ok` only when the
 whole minimum set was read, `partial` when part of it was, and give a reason for
-anything else. Reply with at most eight lines: counts, pass status and blockers.
+anything else. After writing, run `ls -l` on the file and reply only once it exists.
+Reply with at most eight lines: counts, pass status and blockers.
