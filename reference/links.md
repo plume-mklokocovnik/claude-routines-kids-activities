@@ -180,6 +180,7 @@ source. When it returns a time, drop `time_unknown` and correct a stored row thr
 | ZOO conservation events page | `https://www.zoo.si/ponudba/naravovarstvene-prireditve-in-dogodivscine` | ok, undated format description only |
 | ZOO shop product API | `https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50` | ok, checked 2026-10-20. JSON, filter on `product_cat` 19 (`zoo-dozivetja`). Dated paid programmes carry `Termini:` |
 | ZOO shop programmes | `https://trgovina.zoo.si/kategorija/zoo-dozivetja/` | ok, same products as the API, rendered |
+| ZOO booking slots | `https://trgovina.zoo.si/wp-json/wc-bookings/v1/products/slots?product_ids=3807,48785&min_date=<from>&max_date=<to>` | ok, tested 2026-11-05 with plain curl, no cookies. JSON with `date`, `available`, `booked`. 3807 is Dedek Mraz, 48785 is the night tour. Recipe in [`sources.md`](sources.md#zoo-ljubljana) |
 | ZOO Halloween product page | `https://trgovina.zoo.si/artikel/noc-carovnic/` | seasonal-404, still 404 on 2026-10-20. Consistent with the `zoo.si/ponudba/noc-carovnic` seasonal 404 below. Check the shop API first, the product shows up there when it goes live |
 | ZOO activities API | `https://www.zoo.si/api/activities/sl` | avoid, returns the app error shell outside the page. Read `/aktivnosti` instead |
 | Museums of Slovenia | `https://sms-muzeji.si/` | ok, Poletna muzejska noč host |
@@ -306,8 +307,14 @@ in [`artists.md`](artists.md). This is the calendar side of the same sweep.
 | → klasična | `https://napovednik.com/glasba/klasicna` | Choirs, the RTV ones included | ok |
 | → etno, glasbe sveta | `https://napovednik.com/glasba/etno-glasbe-sveta` | Folk and world-music family programmes | ok |
 | → mešana, več zvrsti | `https://napovednik.com/glasba/mesana-vec-zvrsti` | Mixed-bill town celebrations | ok |
-| Mojekarte | `https://www.mojekarte.si/` | Ticketed dates, searchable by performer | ok |
-| Eventim SI | `https://www.eventim.si/artist/<slug>/` | Per-artist tour pages, e.g. `/artist/adi-smolar/` | ⚠️ unverified. Behind Akamai, refused both curl and a fetch on 2026-09-22. Browser only. Do not blacklist it on that basis |
+| Mojekarte | `https://www.mojekarte.si/` | Ticketed dates, searchable by performer | ok. The search path `/sl/iskanje/?q=` returns 404 to curl (2026-11-05). Not resolved in the browser |
+| Eventim SI | `https://www.eventim.si/artist/<slug>/` | Per-artist tour pages, e.g. `/artist/adi-smolar/` | Browser only, checked 2026-11-05. curl fails with HTTP/2 error 92 and no response. The browser reads the artist page, which lists every date, and each `/event/...` page shows date, venue, promoter and price. Record such a page with `fetch.py record`. Do not blacklist it |
+| Visit Ljubljana December | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani` | Server-rendered list of the December programme with dates, times and places. Prižig lučk, Čarobni gozd, Miklavžev sprevod, Koča dedka Mraza, Silvestrovanje za otroke | ok with plain curl, checked 2026-11-05 |
+| Visit Ljubljana event list | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani` | The *Prost vstop* and *Za družine* filter form (`free`, `cat=5`) is GET but the list stays empty to curl and in the browser, no request fired on 2026-11-05 | unresolved, use the December page above |
+| Portorož & Piran events feed | `POST https://www.portoroz.si/wp/wp-admin/admin-ajax.php` with `action=load_events&post_type=events&ppp=30&paged=1&load_default=1&select_month=2026/12/01` | Returns JSON, `data` holds the event cards as HTML with dates, venue and entry. Month values are `YYYY/MM/01` | ok with plain curl, no cookies, tested 2026-11-05 |
+| Visit Kranj Prešerni december | `https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/` | Dated December programme for Glavni trg Kranj. Čuki 31 Dec 22:00 | ok with plain curl, checked 2026-11-05 |
+| Fantazima, Zimska pravljica, Noč parkeljnov | `https://visitkoper.si/prireditve/fantazima-2026/`, `https://www.bled.si/sl/prireditve/2026101615293461/zimska-pravljica-2026-27/`, `https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-petek-otroski-program-mordrijani-in-ines-erbus` | Winter fixtures. Koper 5 Dec to 10 Jan, Bled 27 Nov to 10 Jan, Goričane 20 and 21 Nov | ok with plain curl, checked 2026-11-05 |
+| lgl.si, novomesto21.si, kavbojska-dezela.si | `https://www.lgl.si/spored-predstav` and the sites in the row | Read in the browser on 2026-11-05. A curl retry that spoofed a desktop browser was not run, so their curl status is unchanged. Treat them as browser-readable |
 | RTV choirs | `https://www.rtvslo.si/opz-in-mpz/` | Otroški and Mladinski pevski zbor RTV Slovenija. `zbori.rtvslo.si` redirects here | ok |
 | Ribič Pepe | `https://ribicpepe.si/` | Live appearances of the RTV character | ok |
 | Alenka Kolman | `https://www.alenkakolman.si/` | Own dates | ok |

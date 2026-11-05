@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261105T124031Z_9ae03557",
+    "started_at": "2026-11-05T13:40:31+01:00",
+    "base_sha256": "9ae035576e44276a4a4fc2cb305fd85c542da0c92808fa30758cbf9fc485b6df",
+    "candidates": [
+      {
+        "title": "Koncert Adija Smolarja v Majšperku",
+        "start_time": "2026-11-27T19:30:00+01:00",
+        "venue": "Kulturno poslovni center Majšperk",
+        "city": "Majšperk",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena na strani občine ni navedena, vstopnice prek Eventim",
+        "url": "https://www.majsperk.si/objava/1405355",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ]
+      },
+      {
+        "title": "Koncert Adija Smolarja v Logatcu",
+        "start_time": "2026-11-28T19:30:00+01:00",
+        "venue": "Narodni dom Logatec",
+        "city": "Logatec",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 20,90 € (parter), 23,90 € (VIP), vključno z 1 € nadomestila",
+        "url": "https://www.eventim.si/event/adi-smolar-logatec-narodni-dom-logatec-22292188/",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      },
+      {
+        "title": "Koncert Adija Smolarja v Mokronogu",
+        "start_time": "2026-12-11T19:30:00+01:00",
+        "venue": "Kulturni dom Mokronog",
+        "city": "Mokronog",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 17,58 € po Eventimovi akciji 5 + 1 gratis",
+        "url": "https://www.eventim.si/en/artist/adi-smolar/adi-smolar-mokronog-4247605/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ]
+      },
+      {
+        "title": "Čuki na silvestrovo, Prešerni december",
+        "start_time": "2026-12-31T22:00:00+01:00",
+        "venue": "Glavni trg",
+        "city": "Kranj",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena (mestna prireditev)",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      },
+      {
+        "title": "Prihod Dedka Mraza, Prešerni december",
+        "start_time": "2026-12-30T17:00:00+01:00",
+        "venue": "Glavni trg",
+        "city": "Kranj",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena (mestna prireditev)",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      },
+      {
+        "title": "Ta veseli dan kulture v Cukrarni",
+        "start_time": "2026-12-03T10:00:00+01:00",
+        "venue": "Cukrarna",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačen ogled razstav 10.00 do 19.00, vodeni ogled ob 17.00 po prijavi",
+        "url": "https://cukrarna.art/sl/program/novice/116/ta-veseli-dan-kulture-v-cukrarni/",
+        "flags": []
+      },
+      {
+        "title": "Zimska pravljica 2026/27 na Bledu",
+        "start_time": "2026-11-27T00:00:00+01:00",
+        "venue": "Jezerska promenada in Zdraviliški park",
+        "city": "Bled",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena. Praznični program 27. 11. 2026 do 10. 1. 2027, vključno z otroškimi predstavami in animacijami",
+        "url": "https://www.bled.si/sl/prireditve/2026101615293461/zimska-pravljica-2026-27/",
+        "flags": [
+          "outside_ljubljana",
+          "travel",
+          "time_unknown"
+        ]
+      },
+      {
+        "title": "13. Noč parkeljnov v Goričanah, otroški program",
+        "start_time": "2026-11-20T18:00:00+01:00",
+        "venue": "Prireditveni prostor Goričane",
+        "city": "Medvode",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Otroški program ob 18. uri vstop prost. Večerni koncert od 5 €",
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-petek-otroski-program-mordrijani-in-ines-erbus",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.eventim.si/event/adi-smolar-logatec-narodni-dom-logatec-22292188/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:05+01:00"
+      },
+      {
+        "url": "https://www.eventim.si/en/artist/adi-smolar/adi-smolar-mokronog-4247605/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:06+01:00"
+      },
+      {
+        "url": "https://srecanja.tomos-idrija.si/seznam.php",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:47:36+01:00"
+      },
+      {
+        "url": "https://ptujinfo.com/dogodek/adi-smolar-v-majsperku/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T13:41:34+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.majsperk.si/objava/22315721",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:41:34+01:00"
+      },
+      {
+        "url": "https://ptujinfo.com/dogodek/adi-smolar-v-majsperku",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T13:41:40+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.ptujinfo.com/dogodek/adi-smolar-v-majsperku/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T13:41:40+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://ptujinfo.com/dogodek/adi-smolar-v-majsperku/454359",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:41:54+01:00"
+      },
+      {
+        "url": "https://www.majsperk.si/objava/1405355",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:41:54+01:00"
+      },
+      {
+        "url": "https://www.eventim.si/event/adi-smolar-logatec-narodni-dom-logatec-22292188/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T13:42:42+01:00",
+        "reason": "No answer: The read operation timed out. curl: HTTP 0"
+      },
+      {
+        "url": "https://www.kinosiska.si/dogodek/neca-falk-od-dalec/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:15+01:00"
+      },
+      {
+        "url": "https://ribicpepe.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:15+01:00"
+      },
+      {
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:31+01:00"
+      },
+      {
+        "url": "https://www.rtvslo.si/opz-in-mpz/aktualno",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:43:31+01:00"
+      },
+      {
+        "url": "https://cukrarna.art/sl/program/novice/116/ta-veseli-dan-kulture-v-cukrarni/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:12+01:00"
+      },
+      {
+        "url": "https://www.nms.si/si/dogodki/arhiv/2026/10/12146-Ta-veseli-dan-kulture",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:12+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/ta-veseli-dan-kulture-na-ljubljanskem-gradu-4352",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:13+01:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:44:35+01:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:44:38+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:47:40+01:00"
+      },
+      {
+        "url": "https://www.bled.si/sl/prireditve/2026101615293461/zimska-pravljica-2026-27/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:11+01:00"
+      },
+      {
+        "url": "https://www.medvode.si/objava/1410479",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:11+01:00"
+      },
+      {
+        "url": "https://visitkoper.si/prireditve/fantazima-2026/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:11+01:00"
+      },
+      {
+        "url": "https://visitmedvode.si/dogodki-prireditve/noc-parkeljnov",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:27+01:00"
+      },
+      {
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-petek-otroski-program-mordrijani-in-ines-erbus",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:48:27+01:00"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "partial",
+        "reason": "Browser research session: ZOO shop slots endpoint tested and the Visit Ljubljana December page read. Other minimum sources not read."
+      },
+      "slovenia": {
+        "status": "partial",
+        "reason": "Browser research session: Fantazima, Zimska pravljica Bled and Noč parkeljnov read. Other regional fixtures not read."
+      },
+      "concerts_generic": {
+        "status": "skipped",
+        "reason": "Browser research session, not a full sweep"
+      },
+      "concerts_watchlist": {
+        "status": "partial",
+        "reason": "Browser research session: all nine artists checked on Facebook, Adi Smolar, Čuki, Ribič Pepe, Neca Falk and OPZ RTV followed up on google.si. Instagram not opened, Alenka Kolman and Romana Krajnčan not followed up beyond Facebook."
+      },
+      "free_entry": {
+        "status": "partial",
+        "reason": "Browser research session: Ta veseli dan kulture 2026 read for Cukrarna and Narodni muzej only. Other museums not read."
+      },
+      "avto_moto": {
+        "status": "partial",
+        "reason": "Browser research session: Tomos and veteran car queries run on google.si, Tomos list page is JavaScript rendered and gave no dates."
+      }
+    },
+    "filtered": [
+      {
+        "title": "Neca Falk: Od daleč, Kino Šiška",
+        "url": "https://www.kinosiska.si/dogodek/neca-falk-od-dalec/",
+        "reason": "Stale lead. The page is the May 2014 album release, not a 2026 concert."
+      },
+      {
+        "title": "Adi Smolar, Loški pub, Škofja Loka, 7. 11. 2026 21:00",
+        "url": "https://www.facebook.com/AdiSmolar/events",
+        "reason": "Pub evening show, no non-social confirming page opened."
+      }
+    ],
+    "leads": [
+      {
+        "title": "Adi Smolar v veliki dvorani Publike, Ljubljana, 5. 12. 2026 19:00",
+        "url": "https://www.facebook.com/AdiSmolar/",
+        "reason": "Seen on Publika Bar Klub posts with Entrio tickets. Opened no non-social page with date and venue."
+      },
+      {
+        "title": "Fehtarji, otroški koncert, Ljubljana, 12. 2. 2027 18:00",
+        "url": "https://www.facebook.com/events/search/?q=otro%C5%A1ki%20koncert%20Ljubljana",
+        "reason": "Beyond the horizon ending 2027-02-05. Sold out per Facebook search. Needs a ticket seller page after the horizon moves."
+      },
+      {
+        "title": "Fehtarji, otroški koncert, Celje, 13. 2. 2027 16:00",
+        "url": "https://www.facebook.com/events/search/?q=otro%C5%A1ki%20koncert%20Ljubljana",
+        "reason": "Beyond the horizon. Celjski sejem venue per Facebook. No non-social page opened."
+      },
+      {
+        "title": "Lev in miška, predstava za otroke, Kranj, 24. 11. 2026 17:00",
+        "url": "https://www.facebook.com/events/search/?q=predstava%20za%20otroke%20Ljubljana",
+        "reason": "Seen only in Facebook event search. Venue Gregorčičeva ulica 1, Kranj. Needs a theatre or Kranj calendar page."
+      },
+      {
+        "title": "Božični mjuzikl Magnifico Superstar, Dvorana Stožice",
+        "url": "https://www.eventim.si/event/bozicni-mjuzikl-magnifico-superstar-dvorana-stozice-21779046/",
+        "reason": "Found on google.si. Date and family fit not read because Eventim was not opened for it."
+      },
+      {
+        "title": "Dejan Dogaja, Slovo od starega leta za otroke, Laško",
+        "url": "https://www.lasko.si/objava/",
+        "reason": "Google result without a readable year. The stored pattern was 2024-12-28. Check lasko.si in December."
+      },
+      {
+        "title": "Otroški pevski zbor RTV, Dobrodelni Miklavžev koncert 2026",
+        "url": "https://www.rtvslo.si/opz-in-mpz/aktualno",
+        "reason": "TV broadcast event, 33rd edition aired 2025-12-03. No 2026 date published yet."
+      },
+      {
+        "title": "Noč parkeljnov v Goričanah, sobotni mimohod 21. 11. 2026",
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-sobota",
+        "reason": "Saturday programme not opened. Friday children's programme is saved."
+      },
+      {
+        "title": "Morje zimskih doživetij 2026: Otroški program, Portorož in Piran, 27. 11. 2026 do 3. 1. 2027",
+        "url": "https://www.portoroz.si/sl/dogodki/",
+        "reason": "Listed as free entry in the load_events response. Detail page with dates and venues not opened."
+      },
+      {
+        "title": "Zimski srednjeveški spektakel, Celjski grad",
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/zimski-srednjeveski-spektakel-na-celjskem-gradu",
+        "reason": "Found in google.si results. Page not opened and times for 13 and 14 Dec still missing."
+      }
+    ],
+    "runtime_notes": [
+      "Browser research session: Facebook pages checked for Čuki, Neca Falk, Ribič Pepe, Vila Eksena, Dejan Krajnc and Adi Smolar. Only Adi Smolar had upcoming Facebook events. The other pages had no events later than 2026 or had stale feeds, so social media is not a source of upcoming dates for them.",
+      "Eventim SI: curl fails with HTTP/2 error 92 or no response. Pages and the artist listing read fine in the browser. The artist page eventim.si/artist/adi-smolar lists every date. Browser only.",
+      "ZOO shop: https://trgovina.zoo.si/wp-json/wc-bookings/v1/products/slots?product_ids=<id>&min_date=<date>&max_date=<date> returns JSON slots with plain curl and no cookies. Product ids 3807 (Dedek Mraz) and 48785 (night tour). It confirmed 4 Dedek Mraz slots on 12 and 13 Dec and night tours on 13 and 27 Nov, all already stored.",
+      "portoroz.si: calendar loads by POST to /wp/wp-admin/admin-ajax.php with action=load_events. It works with plain curl and returns JSON with an HTML data field.",
+      "Visit Ljubljana: the December page and its event list read with curl, but the filtered events list at /prireditve/prireditve-v-ljubljani showed no events in the browser and fired no requests. Unresolved.",
+      "lgl.si spored-predstav, novomesto21.si and kavbojska-dezela.si loaded in the browser. A curl retry with a desktop browser User-Agent was denied by the session classifier as bot-check circumvention and was not run, so their curl status is unchanged.",
+      "Tomos list srecanja.tomos-idrija.si/seznam.php is JavaScript rendered and shows only a loading message to curl.",
+      "Google result domains worth reading: dogodki-slovenija.si, visitkoper.si, bled.si, topevent.si, visitkranj.com, ptujinfo.com, majsperk.si.",
+      "Instagram not opened. Posters not read. visitcelje.eu image PDF not opened."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Koncert Adija Smolarja v Majšperku",
+        "start_time": "2026-11-27T19:30:00+01:00",
+        "venue": "Kulturno poslovni center Majšperk",
+        "city": "Majšperk",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena na strani občine ni navedena, vstopnice prek Eventim",
+        "url": "https://www.majsperk.si/objava/1405355",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ],
+        "event_id": "event_20261127_1930_1f333af1fbad",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Koncert Adija Smolarja v Logatcu",
+        "start_time": "2026-11-28T19:30:00+01:00",
+        "venue": "Narodni dom Logatec",
+        "city": "Logatec",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 20,90 € (parter), 23,90 € (VIP), vključno z 1 € nadomestila",
+        "url": "https://www.eventim.si/event/adi-smolar-logatec-narodni-dom-logatec-22292188/",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261128_1930_b78b36bc94a1",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Koncert Adija Smolarja v Mokronogu",
+        "start_time": "2026-12-11T19:30:00+01:00",
+        "venue": "Kulturni dom Mokronog",
+        "city": "Mokronog",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 17,58 € po Eventimovi akciji 5 + 1 gratis",
+        "url": "https://www.eventim.si/en/artist/adi-smolar/adi-smolar-mokronog-4247605/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ],
+        "event_id": "event_20261211_1930_887ef401f4b1",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Čuki na silvestrovo, Prešerni december",
+        "start_time": "2026-12-31T22:00:00+01:00",
+        "venue": "Glavni trg",
+        "city": "Kranj",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena (mestna prireditev)",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261231_2200_6577cfed2743",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Prihod Dedka Mraza, Prešerni december",
+        "start_time": "2026-12-30T17:00:00+01:00",
+        "venue": "Glavni trg",
+        "city": "Kranj",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena (mestna prireditev)",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261230_1700_5748a92770e3",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Ta veseli dan kulture v Cukrarni",
+        "start_time": "2026-12-03T10:00:00+01:00",
+        "venue": "Cukrarna",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Brezplačen ogled razstav 10.00 do 19.00, vodeni ogled ob 17.00 po prijavi",
+        "url": "https://cukrarna.art/sl/program/novice/116/ta-veseli-dan-kulture-v-cukrarni/",
+        "flags": [],
+        "event_id": "event_20261203_1000_d97151cb95c1",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "Zimska pravljica 2026/27 na Bledu",
+        "start_time": "2026-11-27T00:00:00+01:00",
+        "venue": "Jezerska promenada in Zdraviliški park",
+        "city": "Bled",
+        "category": "festival",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena. Praznični program 27. 11. 2026 do 10. 1. 2027, vključno z otroškimi predstavami in animacijami",
+        "url": "https://www.bled.si/sl/prireditve/2026101615293461/zimska-pravljica-2026-27/",
+        "flags": [
+          "outside_ljubljana",
+          "travel",
+          "time_unknown"
+        ],
+        "event_id": "event_20261127_0000_c31c05504e81",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      },
+      {
+        "title": "13. Noč parkeljnov v Goričanah, otroški program",
+        "start_time": "2026-11-20T18:00:00+01:00",
+        "venue": "Prireditveni prostor Goričane",
+        "city": "Medvode",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Otroški program ob 18. uri vstop prost. Večerni koncert od 5 €",
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-petek-otroski-program-mordrijani-in-ines-erbus",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261120_1800_54c22675db65",
+        "status": "active",
+        "first_seen": "2026-11-05T13:40:31+01:00"
+      }
+    ],
+    "updated": [],
+    "expired": [],
+    "hidden": [],
+    "filtered": [
+      {
+        "title": "Neca Falk: Od daleč, Kino Šiška",
+        "url": "https://www.kinosiska.si/dogodek/neca-falk-od-dalec/",
+        "reason": "Stale lead. The page is the May 2014 album release, not a 2026 concert."
+      },
+      {
+        "title": "Adi Smolar, Loški pub, Škofja Loka, 7. 11. 2026 21:00",
+        "url": "https://www.facebook.com/AdiSmolar/events",
+        "reason": "Pub evening show, no non-social confirming page opened."
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "51c814fe9bb524f1ecf870ea4348f7b101724df8adda6c47299b71dd213940b9"
+}

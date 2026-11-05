@@ -13040,6 +13040,144 @@
       "event_id": "event_20261107_1100_ff23380d185f",
       "status": "active",
       "first_seen": "2026-11-05T13:05:33+01:00"
+    },
+    "818": {
+      "title": "Koncert Adija Smolarja v Majšperku",
+      "start_time": "2026-11-27T19:30:00+01:00",
+      "venue": "Kulturno poslovni center Majšperk",
+      "city": "Majšperk",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena na strani občine ni navedena, vstopnice prek Eventim",
+      "url": "https://www.majsperk.si/objava/1405355",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261127_1930_1f333af1fbad",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "819": {
+      "title": "Koncert Adija Smolarja v Logatcu",
+      "start_time": "2026-11-28T19:30:00+01:00",
+      "venue": "Narodni dom Logatec",
+      "city": "Logatec",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "Od 20,90 € (parter), 23,90 € (VIP), vključno z 1 € nadomestila",
+      "url": "https://www.eventim.si/event/adi-smolar-logatec-narodni-dom-logatec-22292188/",
+      "flags": [
+        "outside_ljubljana"
+      ],
+      "event_id": "event_20261128_1930_b78b36bc94a1",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "820": {
+      "title": "Koncert Adija Smolarja v Mokronogu",
+      "start_time": "2026-12-11T19:30:00+01:00",
+      "venue": "Kulturni dom Mokronog",
+      "city": "Mokronog",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "Od 17,58 € po Eventimovi akciji 5 + 1 gratis",
+      "url": "https://www.eventim.si/en/artist/adi-smolar/adi-smolar-mokronog-4247605/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261211_1930_887ef401f4b1",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "821": {
+      "title": "Čuki na silvestrovo, Prešerni december",
+      "start_time": "2026-12-31T22:00:00+01:00",
+      "venue": "Glavni trg",
+      "city": "Kranj",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena (mestna prireditev)",
+      "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+      "flags": [
+        "outside_ljubljana"
+      ],
+      "event_id": "event_20261231_2200_6577cfed2743",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "822": {
+      "title": "Prihod Dedka Mraza, Prešerni december",
+      "start_time": "2026-12-30T17:00:00+01:00",
+      "venue": "Glavni trg",
+      "city": "Kranj",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena (mestna prireditev)",
+      "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+      "flags": [
+        "outside_ljubljana"
+      ],
+      "event_id": "event_20261230_1700_5748a92770e3",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "823": {
+      "title": "Ta veseli dan kulture v Cukrarni",
+      "start_time": "2026-12-03T10:00:00+01:00",
+      "venue": "Cukrarna",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačen ogled razstav 10.00 do 19.00, vodeni ogled ob 17.00 po prijavi",
+      "url": "https://cukrarna.art/sl/program/novice/116/ta-veseli-dan-kulture-v-cukrarni/",
+      "flags": [],
+      "event_id": "event_20261203_1000_d97151cb95c1",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "824": {
+      "title": "Zimska pravljica 2026/27 na Bledu",
+      "start_time": "2026-11-27T00:00:00+01:00",
+      "venue": "Jezerska promenada in Zdraviliški park",
+      "city": "Bled",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena. Praznični program 27. 11. 2026 do 10. 1. 2027, vključno z otroškimi predstavami in animacijami",
+      "url": "https://www.bled.si/sl/prireditve/2026101615293461/zimska-pravljica-2026-27/",
+      "flags": [
+        "outside_ljubljana",
+        "travel",
+        "time_unknown"
+      ],
+      "event_id": "event_20261127_0000_c31c05504e81",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
+    },
+    "825": {
+      "title": "13. Noč parkeljnov v Goričanah, otroški program",
+      "start_time": "2026-11-20T18:00:00+01:00",
+      "venue": "Prireditveni prostor Goričane",
+      "city": "Medvode",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Otroški program ob 18. uri vstop prost. Večerni koncert od 5 €",
+      "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-petek-otroski-program-mordrijani-in-ines-erbus",
+      "flags": [
+        "outside_ljubljana"
+      ],
+      "event_id": "event_20261120_1800_54c22675db65",
+      "status": "active",
+      "first_seen": "2026-11-05T13:40:31+01:00"
     }
   },
   "user_rules": {
@@ -13421,9 +13559,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-11-05T13:05:33+01:00",
-      "total_active_events": 148,
-      "latest_run": "20261105T120533Z_da7f25e5"
+      "last_run": "2026-11-05T13:40:31+01:00",
+      "total_active_events": 156,
+      "latest_run": "20261105T124031Z_9ae03557"
     }
   },
   "hidden_events": {

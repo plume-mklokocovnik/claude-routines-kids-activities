@@ -117,6 +117,14 @@ dated events in four places, so check all four and record each URL in `sources`.
    products in category `zoo-dozivetja` (id 19) and the dated ones carry a `Termini:` line in
    `content.rendered`. Seasonal products such as `artikel/noc-carovnic/` appear a week or two
    before the event and 404 the rest of the year. Everything here is paid on top of the ticket.
+   **Booking slots, tested 2026-11-05 with plain curl and no cookies.** The booking calendar
+   on a product page is WooCommerce Bookings. This endpoint returns every bookable slot as JSON:
+   `curl -s -A "Mozilla/5.0" 'https://trgovina.zoo.si/wp-json/wc-bookings/v1/products/slots?product_ids=3807,48785&min_date=2026-11-05&max_date=2027-11-05'`.
+   Each record has `date` (local time, `2026-12-12T10:00`), `duration`, `available`, `booked` and
+   `product_id`. Product 3807 is *Srečanje z Dedkom Mrazom* and 48785 is *Nočno vodenje*. Other ids
+   come from `wp-json/wp/v2/product?slug=<slug>`. Price is in `wp-json/wc/store/v1/products/<id>`
+   (`prices.price` in cents). On 2026-11-05 it returned 4 Dedek Mraz slots (12 and 13 Dec, 10:00 and
+   11:00) and 2 night tours (13 and 27 Nov, 18:00). Use it to confirm dates and start times.
    Save a single-date public tour such as *Nočno vodenje*, skip *Srečaj NAJ žival*, birthday
    parties, *Oskrbnik za en dan* and the holiday camps.
 4. **Press and portals.** One search per run for `ZOO Ljubljana <month> <year>` and the

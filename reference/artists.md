@@ -22,7 +22,7 @@ below.
 | 6 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
 | 7 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
 | 8 | **Dejan Dogaja** (Dogaja Band) | `https://dejandogaja.si/`, booking only, no event list | `facebook.com/dejan.krajnc` | `instagram.com/dejan_krajnc` | Dejan Krajnc, ex-frontman of Poskočni muzikanti. A party band with a children's animation programme. Plays pust, summer town festivals and New Year's farewells for children. Also plays adult functions that do not qualify. Booking `info@dejandogaja.si` |
-| 9 | **Vila Eksena** | `https://vila-eksena.si/`, booking brochure, no event list | `facebook.com/VilaEksena` (from a search result, not opened) | none found | Singing fairy with superhero characters, songs and dancing, billed for children of all ages. Booked by libraries, municipalities and festivals. Booking `info@vila-eksena.si` |
+| 9 | **Vila Eksena** | `https://vila-eksena.si/`, booking brochure, no event list | `facebook.com/VilaEksena` (opened 2026-11-05, 5,6 tis. followers, events tab lists only past events, last in 2024) | none found | Singing fairy with superhero characters, songs and dancing, billed for children of all ages. Booked by libraries, municipalities and festivals. Booking `info@vila-eksena.si` |
 
 ## Dejan Dogaja and Vila Eksena: where their appearances turn up
 
@@ -53,6 +53,29 @@ are evidence of where their appearances turn up, free and paid, not dates to reu
   only when it names a children's or family programme.
 * **Both are 3B names.** The geography carve-out in [discovery.md](discovery.md) §2 applies. Set
   `city`, `outside_ljubljana` and `travel` so the reader sees the cost of the trip.
+
+## Browser research session, 2026-11-05
+
+A logged-in browser read of the Facebook pages. Facebook addresses opened and confirmed on this date:
+`facebook.com/AdiSmolar`, `facebook.com/singerNecaFalk`, `facebook.com/ribicPepe`,
+`facebook.com/VilaEksena`, `facebook.com/profile.php?id=100044442189383` (Čuki, 76 tis. followers) and
+`facebook.com/dejan.krajnc`. `facebook.com/romana.najlepse.pesmi.za.otroke` opens but shows no events and no
+posts. Alenka Kolman has no Facebook page that a search surfaced, still unconfirmed.
+
+| Artist | What the page shows | Posting lead time and how often to look |
+|---|---|---|
+| Adi Smolar | Four upcoming events on the Events tab. Majšperk 27 Nov, Logatec 28 Nov, Mokronog 11 Dec, plus a pub evening | Dates appear 5 to 8 weeks ahead. The Eventim artist page `eventim.si/artist/adi-smolar/` lists every ticketed date (browser only). Check weekly |
+| Čuki | Events tab holds only 2018 to 2020 events. Dates reach the web through organisers | Organiser calendars, for example Visit Kranj. Check December town programmes from late October |
+| Dejan Dogaja (page Dejan Krajnc) | Events tab lists 2026 festivals, all past by now. Nothing upcoming | Organisers only. Pust, summer festivals and New Year farewells |
+| Ribič Pepe | Page stale, last post 2023. Events tab ends 2022 | Organisers only. `ribicpepe.si` still serves 2017 to 2018 content |
+| Neca Falk | Page last posted May 2025, no upcoming events. The Kino Šiška *Od daleč* page is the 2014 album, not a 2026 concert, so that lead is closed | Nothing to check until she announces a tour |
+| Vila Eksena | Events tab ends 2024, latest post is a birthday visit | Organisers only |
+| Romana Krajnčan | Nothing visible without a login for events | Organisers only. Visit Kranj lists her at the December Miklavž procession |
+
+Organiser domains that confirmed or listed one of these artists, checked 2026-11-05: `majsperk.si`
+(Adi Smolar, KPC Majšperk), `ptujinfo.com` (Adi Smolar Majšperk, event page `ptujinfo.com/dogodek/`),
+`visitkranj.com` (Čuki, 31 Dec 22:00, Glavni trg Kranj, program page under Prešerni december) and
+`eventim.si` (Adi Smolar, Logatec and Mokronog, readable in a browser only).
 
 ## Do not retry
 
