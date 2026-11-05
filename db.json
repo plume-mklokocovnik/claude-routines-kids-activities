@@ -3177,7 +3177,7 @@
       "url": "https://www.cd-cc.si/kultura/glasba/igor-stravinski-mavra-maurice-ravel-otrok-in-uroki-lenfant-et-les-sortileges",
       "flags": [],
       "event_id": "event_20261029_1800_9d3f4e188147",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -3359,7 +3359,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261031_0000_0ae0d30f9185",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4551,7 +4551,7 @@
         "travel"
       ],
       "event_id": "event_20261031_1500_01b3bfb4c209",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4571,7 +4571,7 @@
         "travel"
       ],
       "event_id": "event_20261031_0900_6a075ed2ff8d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4613,7 +4613,7 @@
         "not_toddler_appropriate"
       ],
       "event_id": "event_20261031_1000_caa5f253ec99",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4649,7 +4649,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261101_0000_f648ad99fe75",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "interested",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4706,7 +4706,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261101_0000_bcc420fd79c0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "interested",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4763,7 +4763,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261101_0000_949cf60ae99f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4820,7 +4820,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261101_0000_2da64a2c7761",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -4918,7 +4918,7 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261101_0800_1992c07f7157",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -5139,7 +5139,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261030_1100_557eda30f17f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5295,7 +5295,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261029_1500_ded712a30158",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5482,7 +5482,7 @@
       "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
       "flags": [],
       "event_id": "event_20261030_1500_939c7e262cd5",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5960,7 +5960,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261029_1000_6b1df216884e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-20T13:21:26+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5977,7 +5977,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261030_1500_83863ec95b6d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-20T13:21:26+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5994,7 +5994,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261031_1600_543553f34afd",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-20T13:21:26+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6011,7 +6011,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261101_1615_8afc27f33c65",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-20T13:21:26+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6289,7 +6289,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261029_1100_41da3c9c3937",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6340,7 +6340,7 @@
       "url": "https://www.mklj.si/dogodek/ustvarjalnica-carovniskih-klobukov-kud-galerija-c-c-u/",
       "flags": [],
       "event_id": "event_20261029_1700_fdd7cedc3a5e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -6495,7 +6495,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261103_1800_4d01a5f80a18",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11184,7 +11184,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261102_1700_2cda60fb52ec",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11203,7 +11203,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261104_1700_de72c1aaef6b",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11220,7 +11220,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261104_1700_051908a7adcd",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11681,7 +11681,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261030_0900_4ca7ec59bc65",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11734,7 +11734,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261029_1200_eae4228c1ed9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11751,7 +11751,7 @@
       "url": "https://www.mklj.si/dogodek/delavnice-z-veroniko-szillich-pticki/",
       "flags": [],
       "event_id": "event_20261104_1700_cdd5ec585441",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11855,7 +11855,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/lutkovna-predstava-super-carovnica-mici-6416",
       "flags": [],
       "event_id": "event_20261031_1030_25c0324cda70",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11874,7 +11874,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261029_1730_a9e115326e21",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11925,7 +11925,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261031_1130_cca3f59290b2",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -12044,7 +12044,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261101_1130_ed1aa467767d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -12105,6 +12105,253 @@
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
+    },
+    "758": {
+      "title": "Kuharska delavnica: Hruškova marmelada z vaniljo",
+      "start_time": "2026-11-16T15:00:00+01:00",
+      "venue": "Paviljon Jureta Robežnika, Pot rdečega križa 76",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/kuharska-delavnica-hruskova-marmelada-z-vaniljo-6ae9a93f5e0f1",
+      "flags": [],
+      "event_id": "event_20261116_1500_e7b35d8b09fd",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "759": {
+      "title": "Branje za otroke: Otroci kralja Lira in Cú Chulainn",
+      "start_time": "2026-11-26T17:00:00+01:00",
+      "venue": "Knjižnica Jožeta Mazovca (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/branje-za-otroke-otroci-kralja-lira-in-cu-chulainn/",
+      "flags": [],
+      "event_id": "event_20261126_1700_e11845ea015d",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "760": {
+      "title": "Recept za srečo: pravljično-glasbeno druženje",
+      "start_time": "2026-12-02T18:30:00+01:00",
+      "venue": "Knjižnica Vodice (MKL)",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/recept-za-sreco-pravljicno-glasbeno-druzenje/",
+      "flags": [],
+      "event_id": "event_20261202_1830_943024a9a5c7",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "761": {
+      "title": "Pustna ustvarjalnica – KUD Galerija C.C.U.",
+      "start_time": "2027-02-04T17:00:00+01:00",
+      "venue": "Knjižnica Polje (MKL)",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačno",
+      "url": "https://www.mklj.si/dogodek/pustna-ustvarjalnica-kud-galerija-c-c-u/",
+      "flags": [],
+      "event_id": "event_20270204_1700_fa58895a0202",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "762": {
+      "title": "Prvič v kino: Pokec",
+      "start_time": "2026-11-07T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/film/pokec/",
+      "flags": [],
+      "event_id": "event_20261107_1000_408942fdee41",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "763": {
+      "title": "Prvič v kino: Pokec",
+      "start_time": "2026-11-28T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/film/pokec/",
+      "flags": [],
+      "event_id": "event_20261128_1000_1db8c6567e38",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "764": {
+      "title": "Kinobalon: Kako je Mambo postal velikan",
+      "start_time": "2026-11-07T11:30:00+01:00",
+      "venue": "Kinodvor, Mala dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 5,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/film/kako-je-mambo-postal-velikan/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261107_1130_b8dc24b173fb",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "765": {
+      "title": "Kinobalon: Wildwood: Skrivnost prepovedanega gozda",
+      "start_time": "2026-11-07T15:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 12,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/film/wildwood-skrivnost-prepovedanega-gozda/",
+      "flags": [
+        "age_stretch",
+        "not_toddler_appropriate"
+      ],
+      "event_id": "event_20261107_1500_93668a830d88",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "766": {
+      "title": "Prvič v kino: Svatba strašil (obisk Dedka Mraza)",
+      "start_time": "2026-12-12T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "Vstopnice v prodaji od 16. novembra",
+      "url": "https://www.kinodvor.org/film/svatba-strasil/",
+      "flags": [],
+      "event_id": "event_20261212_1000_9bb0af7c8e24",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "767": {
+      "title": "Prvič v kino: Svatba strašil (obisk Dedka Mraza)",
+      "start_time": "2026-12-19T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "Vstopnice v prodaji od 16. novembra",
+      "url": "https://www.kinodvor.org/film/svatba-strasil/",
+      "flags": [],
+      "event_id": "event_20261219_1000_b02264514b5e",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "768": {
+      "title": "Kinobalon: Svatba strašil (obisk Dedka Mraza)",
+      "start_time": "2026-12-20T14:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "Vstopnice v prodaji od 16. novembra",
+      "url": "https://www.kinodvor.org/film/svatba-strasil/",
+      "flags": [],
+      "event_id": "event_20261220_1400_01a6ad329938",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "769": {
+      "title": "Gledališka predstava: Ježeva hišica",
+      "start_time": "2027-01-30T00:00:00+01:00",
+      "venue": "Kino Bežigrad, Ljubljana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-jezeva-hisica/",
+      "flags": [
+        "time_unknown"
+      ],
+      "event_id": "event_20270130_0000_524ad970fa52",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "770": {
+      "title": "Srečanje z Dedkom Mrazom v ZOO Ljubljana",
+      "start_time": "2026-12-12T10:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "city": "Ljubljana",
+      "category": "zoo",
+      "age_min": 0,
+      "is_free": false,
+      "price_text": "Program 16 €, za otroke od 2 do 15 let še vstopnina po ceniku. Odrasli spremljevalci plačajo le vstopnino",
+      "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+      "flags": [],
+      "event_id": "event_20261212_1000_d088367bc893",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "771": {
+      "title": "Srečanje z Dedkom Mrazom v ZOO Ljubljana",
+      "start_time": "2026-12-12T11:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "city": "Ljubljana",
+      "category": "zoo",
+      "age_min": 0,
+      "is_free": false,
+      "price_text": "Program 16 €, za otroke od 2 do 15 let še vstopnina po ceniku. Odrasli spremljevalci plačajo le vstopnino",
+      "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+      "flags": [],
+      "event_id": "event_20261212_1100_e2db9bb3e9a9",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "772": {
+      "title": "Srečanje z Dedkom Mrazom v ZOO Ljubljana",
+      "start_time": "2026-12-13T10:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "city": "Ljubljana",
+      "category": "zoo",
+      "age_min": 0,
+      "is_free": false,
+      "price_text": "Program 16 €, za otroke od 2 do 15 let še vstopnina po ceniku. Odrasli spremljevalci plačajo le vstopnino",
+      "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+      "flags": [],
+      "event_id": "event_20261213_1000_90c4f3dca445",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
+    },
+    "773": {
+      "title": "Srečanje z Dedkom Mrazom v ZOO Ljubljana",
+      "start_time": "2026-12-13T11:00:00+01:00",
+      "venue": "ZOO Ljubljana, Večna pot 70",
+      "city": "Ljubljana",
+      "category": "zoo",
+      "age_min": 0,
+      "is_free": false,
+      "price_text": "Program 16 €, za otroke od 2 do 15 let še vstopnina po ceniku. Odrasli spremljevalci plačajo le vstopnino",
+      "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+      "flags": [],
+      "event_id": "event_20261213_1100_17ccae99a974",
+      "status": "active",
+      "first_seen": "2026-11-05T08:07:42+01:00"
     }
   },
   "user_rules": {
@@ -12410,9 +12657,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-10-29T08:26:43+01:00",
-      "total_active_events": 164,
-      "latest_run": "20261029T072643Z_0987800f"
+      "last_run": "2026-11-05T08:07:42+01:00",
+      "total_active_events": 150,
+      "latest_run": "20261105T070742Z_f4fb8800"
     }
   },
   "hidden_events": {
