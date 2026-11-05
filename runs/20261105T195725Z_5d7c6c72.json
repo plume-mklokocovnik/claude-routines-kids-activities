@@ -1,0 +1,4134 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261105T195725Z_5d7c6c72",
+    "started_at": "2026-11-05T20:57:25+01:00",
+    "base_sha256": "5d7c6c722bb25e73d413c0838a2c5e3f809d20e4582e064e54b021fe0e3bc0ec",
+    "candidates": [
+      {
+        "title": "Božična fantazija",
+        "start_time": "2026-12-20T15:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "17 - 30 EUR (14 - 26 EUR za mlajše od 25 in starejše od 65 let)",
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "flags": []
+      },
+      {
+        "title": "Božična fantazija",
+        "start_time": "2026-12-20T18:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "17 - 30 EUR (14 - 26 EUR za mlajše od 25 in starejše od 65 let)",
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "flags": []
+      },
+      {
+        "title": "Svet je kakor ringaraja",
+        "start_time": "2026-12-20T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/svet-je-kakor-ringaraja-0",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Veveriček posebne sorte",
+        "start_time": "2026-12-19T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 11. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/vevericek-posebne-sorte",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Perpetuum Jazzile - praznični koncert",
+        "start_time": "2026-12-27T17:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/perpetuum-jazzile-praznicni-koncert",
+        "flags": []
+      },
+      {
+        "title": "(N)orkester",
+        "start_time": "2027-01-31T18:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/norkester",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Koncert Prifarcev s prijatelji!",
+        "start_time": "2026-11-21T19:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 - 40 EUR",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/koncert-prifarcev-s-prijatelji",
+        "flags": []
+      },
+      {
+        "title": "Božični koncert pred Mestno hišo",
+        "start_time": "2026-12-24T17:00:00+01:00",
+        "venue": "Mestni trg",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop",
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/christmas-concert",
+        "flags": []
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-14T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": []
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-15T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": []
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-16T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": []
+      },
+      {
+        "title": "Drugo Martinovo pevsko srečanje okteta ZVEN na Črnučah",
+        "start_time": "2026-11-06T19:00:00+01:00",
+        "venue": "Kulturni dom Črnuče, Dunajska cesta 367",
+        "city": "Ljubljana Črnuče",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://napovednik.com/glasba/drugo/drugo-martinovo-pevsko-srecanje-okteta-zven-na-crnucah-6434",
+        "flags": []
+      },
+      {
+        "title": "Afriško sonce",
+        "start_time": "2026-11-06T10:30:00+01:00",
+        "venue": "SiTi Teater BTC",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://vsi-eventi.com/event/afrisko-sonce-2026-11-06-ljubljana",
+        "flags": []
+      },
+      {
+        "title": "Vstopi v svet superjunakov! Pridruži se nam na Cosmo zabavi v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-07T10:00:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://vsi-eventi.com/event/vstopi-v-svet-superjunakov-pridruzi-se-nam-na-cosmo-zabavi-v-supernovi-ljubljana-siska-2026-11-07-ljubljana",
+        "flags": []
+      },
+      {
+        "title": "Delavnica in risanka: MUC KAPUC",
+        "start_time": "2026-11-08T16:00:00+01:00",
+        "venue": "Kino Bežigrad",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Ob 16.00 brezplačna otroška delavnica izdelave mačjih ušes, ob 17.00 ogled risanke Muc Kapuc (vstopnica)",
+        "url": "https://www.kino-bezigrad.si/delavnica-in-risanka-muc-kapuc/",
+        "flags": []
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-12T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
+        "flags": []
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-19T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-19-ljubljana",
+        "flags": []
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-26T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-26-ljubljana",
+        "flags": []
+      },
+      {
+        "title": "DaDADADISKO: družinski rave I JAMirko in All Around the House",
+        "start_time": "2026-11-21T10:00:00+01:00",
+        "venue": "Katedrala, Kino Šiška",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Ples in delavnice, 10.00 do 13.00. Za eno osebo 13 €, družinska vstopnica za 3 ali 4 osebe 36 €",
+        "url": "https://www.kinosiska.si/dogodek/dadadisko-druzinski-rave/",
+        "flags": []
+      },
+      {
+        "title": "Tesla",
+        "start_time": "2026-11-12T19:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 9,
+        "is_free": false,
+        "price_text": "12 €, od 9. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Lisička sestrička",
+        "start_time": "2026-12-28T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/lisicka-sestricka",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Urška in povodni mož (celotna zgodba)",
+        "start_time": "2027-01-09T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba-0",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Urška in povodni mož (celotna zgodba)",
+        "start_time": "2027-01-10T18:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "UM & KUNA",
+        "start_time": "2027-01-16T15:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "UM & KUNA",
+        "start_time": "2027-01-16T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Shrek",
+        "start_time": "2027-01-18T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 €, muzikal v angleščini dijakov II. gimnazije Maribor, 2 h 35 min z odmorom",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "flags": []
+      },
+      {
+        "title": "Shrek",
+        "start_time": "2027-01-20T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 €, muzikal v angleščini dijakov II. gimnazije Maribor, 2 h 35 min z odmorom",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "flags": []
+      },
+      {
+        "title": "Male nočne zgodbe & Kuharica Micka",
+        "start_time": "2026-12-22T18:00:00+01:00",
+        "venue": "Cankarjev dom, Klub CD",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 6,
+        "is_free": false,
+        "price_text": "10 € za obe predstavi, otroci 6+ in odrasli",
+        "url": "https://www.cd-cc.si/kultura/gledalisce-in-ples/male-nocne-zgodbe-kuharica-micka",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Ustvarjalni delavnici izdelave prazničnih voščilnic iz odpadnih materialov",
+        "start_time": "2026-11-17T17:00:00+01:00",
+        "venue": "Info točka Misija 100, Pogačarjev trg 3",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Dve uri, vsebina enaka obema terminoma, prijava na dogodki.misija100@ljubljana.si, število mest omejeno",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "flags": []
+      },
+      {
+        "title": "Ustvarjalni delavnici izdelave prazničnih voščilnic iz odpadnih materialov",
+        "start_time": "2026-11-25T17:00:00+01:00",
+        "venue": "Info točka Misija 100, Pogačarjev trg 3",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Dve uri, vsebina enaka obema terminoma, prijava na dogodki.misija100@ljubljana.si, število mest omejeno",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "flags": []
+      },
+      {
+        "title": "Šahovska šola za osnovnošolce",
+        "start_time": "2026-11-10T16:30:00+01:00",
+        "venue": "Knjižnica Jožeta Mazovca (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Osnovnošolski otroci (6-15), vodi Niko Praznik",
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-31/",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Šahovska šola za osnovnošolce",
+        "start_time": "2026-11-24T16:30:00+01:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Osnovnošolski otroci (6-15), vodi Niko Praznik",
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-32/",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Moji prvi koraki v raziskovanje",
+        "start_time": "2026-11-11T17:00:00+01:00",
+        "venue": "Knjižnica Prežihov Voranc (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Izobraževanje za otroke 4., 5. in 6. razredov, prijava v knjižnici",
+        "url": "https://www.mklj.si/dogodek/moji-prvi-koraki-v-raziskovanje-5/",
+        "flags": [
+          "age_stretch"
+        ]
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-27T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": []
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-28T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": []
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-29T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": []
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-30T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": []
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Ješ, Jež? -recikliranje",
+        "start_time": "2027-01-09T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 2,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/jes-jez_1-1/",
+        "flags": []
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Kako objeti ježa",
+        "start_time": "2027-01-16T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 4,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/kako-objeti-jeza-2/",
+        "flags": []
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Muca Copatarica",
+        "start_time": "2027-01-23T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 2,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/muca-copatarica-2/",
+        "flags": []
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Čuk na palici",
+        "start_time": "2027-01-30T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 3,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/cuk-na-palici_2_1/",
+        "flags": []
+      },
+      {
+        "title": "Kinobalon: Miška gre na goro",
+        "start_time": "2026-11-08T11:30:00+01:00",
+        "venue": "Kinodvor, Mala dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": []
+      },
+      {
+        "title": "Ana Plamenita, jesenski festival ognjenih ambientov",
+        "start_time": "2026-11-13T18:00:00+01:00",
+        "venue": "Zvezna ulica, Zelena jama",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstop prost. 18:00-21:00",
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/ana-plamenita",
+        "flags": []
+      },
+      {
+        "event_id": "mestnimuzej_20261114_1500",
+        "title": "[ODPOVEDANO] Delavnica izdelave čarobnih medenih hišic",
+        "start_time": "2026-11-14T15:00:00+01:00",
+        "venue": "Mestni muzej Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena; trženo kot delavnica za odrasle, stran navaja primernost za družine",
+        "url": "https://mgml.si/sl/mestni-muzej/dogodki/2557/2026-11-14/15-00/odpovedano-delavnica-izdelave-carobnih-medenih-hisic/",
+        "flags": [
+          "age_stretch",
+          "cancelled"
+        ]
+      },
+      {
+        "title": "Celjski mali maraton – otroški in družinski tek (1.600 m)",
+        "start_time": "2026-11-08T11:05:00+01:00",
+        "venue": "Kajak kanu center Špica",
+        "city": "Celje",
+        "category": "tek",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena za to progo ni objavljena. Prijava in prevzem številk na prizorišču od 8.30.",
+        "url": "https://fatburn.si/celjski-mali-maraton/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ]
+      },
+      {
+        "event_id": "strunjan_20261110_1100",
+        "title": "Praznik kakijev v Strunjanu",
+        "start_time": "2026-11-13T09:00:00+01:00",
+        "venue": "Strunjanske soline (TD Solinar Strunjan)",
+        "city": "Strunjan (Piran)",
+        "category": "festival",
+        "age_min": 0,
+        "is_free": null,
+        "price_text": "23. izvedba, 13.–15. 11. 2026. Program (sejem, delavnice, tekmovanje za največji kaki) bo objavljen naknadno.",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cd-cc.si/feeds/kulturnik",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:21+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/vevericek-posebne-sorte",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:22+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/katalena-enci-benci-katalenci-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:22+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/nevesti-bride",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:22+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:23+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/lisicka-sestricka",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:24+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/svet-je-kakor-ringaraja-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:24+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:24+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:24+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/17",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:25+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:25+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:25+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/norkester",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:25+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/skejtanje-ni-za-punce",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:26+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstave-in-delavnice/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:03+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gibalno-lutkovna-predstava-jaz-pocepnem-ti-poskocis/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:05+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:05+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-pedenjped/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:05+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovni-muzikal-peter-klepec/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:05+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.08.2026&post_id=75613&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:07+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.07.2026&post_id=75493&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:07+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.09.2026&post_id=75149&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:07+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.14.2026&post_id=75595&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:07+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-z-igorjem-po-svetu/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:08+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledalisko-lutkovna-predstava-tinko-polovinko/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:08+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:08+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/koncert-repki-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:09+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.28.2026&post_id=75640&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:09+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.21.2026&post_id=75611&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:09+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.15.2026&post_id=75607&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:09+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=11.29.2026&post_id=75609&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:10+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-potuje-po-svetu-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:10+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-grdi-racek/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:10+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/koncert-z-obiskom-bozicka-bozicni-repki/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:11+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-skratek-prijateljcek/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:11+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=12.05.2026&post_id=75619&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:12+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=12.06.2026&post_id=72602&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:12+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=12.20.2026&post_id=75683&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:12+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=12.27.2026&post_id=75621&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:12+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-zmeda-za-dva-medveda/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:13+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-korenckov-palcek/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:13+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-srakica-in-sova/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:13+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-rdeca-kapica-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:14+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=01.16.2027&post_id=75591&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:14+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=01.09.2027&post_id=75624&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:14+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=01.23.2027&post_id=75626&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:14+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=01.24.2027&post_id=72605&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:15+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-jezeva-hisica/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:15+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-skoraj-najboljsi-cirkus/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:15+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-car-zivali/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:16+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/wp-admin/admin-ajax.php?action=event-filter&date=01.30.2027&post_id=75629&all_tickets=",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:16+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-kakceve-dogodivscine/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:16+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/lutkovni-kabaret-cuk-na-palici/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:17+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-z-igorjem-po-svetu-anglija/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:17+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-bobrova-krivnost/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:18+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledalisko-plesna-predstava-moj-narobe-svet/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:18+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledalisko-igrana-predstava-tinko-celinko/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:18+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-ognjeni-zmaj-in-gasilec-fran/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:19+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-11-05&end_date=2027-02-05",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:24+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=2",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:27+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=3",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:31+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=4",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:36+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=5",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:41+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=6",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:45+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=7",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:49+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=8",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:53+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=9",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:56+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/wp-json/tribe/events/v1/events/?per_page=50&start_date=2026-11-05+00%3A00%3A00&end_date=2027-02-05+23%3A59%3A59&status=publish&page=10",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:00+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:10+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/leta-6a0eb2d753908",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:12+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/morje-6ad984e8b1460",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:12+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/brezplacna-delavnica-temeljnih-postopkov-ozivljanja-6ad5bd5a0f513",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:12+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ex-6a9648644a6fb",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:12+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:13+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/clovek-v-morju-6aa139ab5ec05",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:13+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/trojanke-6ad984ecf10f6",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:13+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-izdelave-trajnostnega-adventnega-vencka-6ae9ce69c161c",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:13+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dravlje-pojejo-6ae9cdb9a4682",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:14+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/romanticne-duse-6ab1f7e52bfd1",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:14+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/nora-6ad984e102746",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:14+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/izdelovanje-praznicnih-aranzmajev-6aec7326e13f7",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:14+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/prima-facie-6ab1f7e6aa8c5",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:15+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/saloma-6a9648633d7ae",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:15+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/smrtno-resno-6ab1f7e425d5d",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:15+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-kako-do-zanesljivih-informacij-in-spostljivega-dialoga-6ad8b05396289",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:16+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/pokojnik-6ad984ea546fe",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:16+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/kuharska-delavnica-hruskova-marmelada-z-vaniljo-6ae9a93f5e0f1",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:16+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/predstavitev-publikacije-ples-rusalk-6aec601168397",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:16+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ples-rusalk-6aec721d02d82",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:17+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/zacetna-delavnica-kvackanja-6ad70ade6d6ec",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:17+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-peke-in-krasenja-medenjakov-6aa1180dc570c",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:17+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/praznujemo-10-obletnico-dca-zalog-6aeacd7b7fbdc",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:17+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dravlje-supermesto-prihaja-v-tvojo-sosesko-6aeb3ba81c49b",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:18+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-za-starse-family-lab-6ad8abb26bc8c",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:18+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/mednarodni-orgelski-cikel-ljubljana-polje-2026-zadnji-koncert-6ab2790aae1a1",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:19+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/naj-se-predpraznicni-cas-zacne-na-draveljskem-bazarju-6ae1f3e3a79b3",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:19+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/odprtje-ceste-sadinja-vas-podlipoglav-6aeb4911e9957",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:19+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/anze-sekelj-oklepi-6adefc4e5f17e",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:58:19+01:00"
+      },
+      {
+        "url": "https://napovednik.com/assets/i18n/sl.json",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:01+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/search?genreName=For-children",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:02+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/search?genreName=Events",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:03+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/search?genreName=Music",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:04+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6455",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:05+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6475",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:05+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6437",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:06+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6436",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:06+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6455",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:07+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6456",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:07+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:08+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6037",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:09+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-zlati-coln-vodeno-pesnisko-dozivetje-za-vso-druzno-6437",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:09+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-krasni-dan-na-skratjem-krasu-6436",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:09+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6458",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:10+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6457",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:10+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/sola-zmajeslovja-vrhovna-carovnica-razprodano-6037",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:11+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6456",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:11+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6461",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:12+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6491",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:13+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6458",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:13+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6462",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:14+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gospod-gnilc-in-plesoci-medved-6461",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:14+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6457",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:15+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5388",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:15+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6465",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:15+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6462",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:16+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6463",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:17+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-pravljicni-mozaiki-6491",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:17+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-skrivnosti-lesa-5388",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:18+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5011",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:18+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/tunel-6465",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:18+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6464",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:19+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6463",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:19+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5979",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:20+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/emil-in-detektivi-6464",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:21+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-5011",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:21+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6471",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:21+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6470",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:22+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-5979",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:22+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6038",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:22+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-6471",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:23+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6459",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:23+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6486",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:24+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/uciteljica-5-6470",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:24+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6460",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:25+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6459",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:26+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/kako-je-mravljica-postala-huda-6486",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:26+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5655",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:27+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6487",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:27+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/friderik-grajska-podgana-6038",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:27+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5387",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:28+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6460",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:28+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/5656",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:28+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/kako-je-mravljica-postala-huda-6487",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:28+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/minimao-igralnica-5655",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:28+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6270",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:29+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6450",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:29+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-moj-stol-5387",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:29+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6398",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:30+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-obicajni-osumljenci-6398",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:32+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/minimao-igralnica-5656",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:32+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6401",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:32+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6396",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:32+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/jesenski-knjizni-bazar-v-prekmurju-ustvarjalna-delavnica-6450",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:32+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6387",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:33+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/filmska-projekcija-modri-pelikan-6270",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:33+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6389",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:34+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-vdovec-6401",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:34+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-nevarni-ovinki-6396",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:34+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6394",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:34+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6399",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:34+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-federalist-6387",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:35+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6385",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:35+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-ljubosumnost-po-italijansko-6389",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:36+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-posasti-6399",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:36+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-mimi-kovinar-6394",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:36+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6402",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:36+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6452",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:37+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-clovek-s-petimi-baloni-6385",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:37+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6388",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:37+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6397",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:38+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-federalist-6388",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:38+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-vdovec-6402",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:38+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6391",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:39+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6393",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:39+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/skozi-tisocere-zgodbe-3-6452",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:40+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6400",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:40+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-nevarni-ovinki-6397",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:41+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-ljudska-romanca-6391",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:41+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6395",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:41+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6390",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:42+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-locitev-po-italijansko-6393",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:42+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-posasti-6400",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:42+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6386",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:42+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6392",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:43+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-ljubosumnost-po-italijansko-6390",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:44+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-clovek-s-petimi-baloni-6386",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:44+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-mimi-kovinar-6395",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:45+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/film/37-liffe-retro-commedia-allitaliana-ljudska-romanca-6392",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:45+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6484",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:45+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6046",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:45+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6434",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:47+01:00"
+      },
+      {
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/ko-pogledamo-stran-sokrivi-v-tisini-6484",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:47+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6423",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:47+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-liamere-6046",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:48+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6453",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:49+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6490",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:50+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/klasicna/glasbena-ulica-6453",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:51+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/drugo/drugo-martinovo-pevsko-srecanje-okteta-zven-na-crnucah-6434",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:51+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6045",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:51+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/mesana-vec-zvrsti/martinovo-pevsko-srecanje-2026-v-organizaciji-okteta-zven-6423",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:51+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6171",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:52+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6044",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:52+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-fagner-wesley-quintet-6045",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:53+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6043",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:54+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/pop-in-rock/yammatovo-6-fueled-by-cockta-suede-6171",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:55+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-lusitanian-ghosts-6044",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:55+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6042",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:55+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6136",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:55+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/klasicna/koncertni-atelje-dss-urska-roser-trobenta-luca-ferrini-klavir-6490",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:56+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6041",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:56+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-aka-neomi-6043",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:57+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-matter-6136",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:57+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6040",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:58+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6039",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:58+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-peter-lovsin-in-skalarji-6042",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:58+01:00"
+      },
+      {
+        "url": "https://api.napovednik.com/api/website/v1/events/6137",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:59+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-prismojeni-profesorji-bluesa-6040",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:59+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-maja-keuc-odpovedano-6041",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T20:59:59+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-cafe-mezclado-6039",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:00+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/jazz-blues/jazz-club-ljubljanski-grad-slavko-ivancic-6137",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:01+01:00"
+      },
+      {
+        "url": "https://svamz.com/js/dogodki-data.js",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:27+01:00"
+      },
+      {
+        "url": "https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/dogodki?pageSize=300&key=AIzaSyAm1Dnl1lt0nZ0Rb7ikeVDXaRN1lTACS38",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:28+01:00"
+      },
+      {
+        "url": "https://svamz.com/event.html?id=2026-11-28-alfa-rally",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:28+01:00"
+      },
+      {
+        "url": "https://svamz.com/event.html?id=2026-12-26-srecanje-starodobnih-vozil-na-stefanovo-valburga-i",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:29+01:00"
+      },
+      {
+        "url": "https://svamz.com/event.html?id=2026-11-28-alfa-rally",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:19+01:00"
+      },
+      {
+        "url": "https://svamz.com/event.html?id=2026-12-26-srecanje-starodobnih-vozil-na-stefanovo-valburga-i",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:19+01:00"
+      },
+      {
+        "url": "https://www.zveza-svs.si/obvestila/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:20+01:00"
+      },
+      {
+        "url": "http://www.motoclub-mak.si/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:22+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/glasba/novoletni-koncert-orkestra-slovenske-filharmonije-0",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:35+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:35+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/perpetuum-jazzile-praznicni-koncert",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:35+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/koncert-prifarcev-s-prijatelji",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:35+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:36+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/svet-je-kakor-ringaraja-0",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:36+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/vevericek-posebne-sorte",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:36+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/norkester",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:36+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/drugo/drugo-martinovo-pevsko-srecanje-okteta-zven-na-crnucah-6454",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:04+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/christmas-concert",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:42+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/klasicna",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:44+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:44+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:45+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/sansoni-kantavtorstvo",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:46+01:00"
+      },
+      {
+        "url": "https://www.rtvslo.si/opz-in-mpz/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:03+01:00"
+      },
+      {
+        "url": "https://www.alenkakolman.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:03+01:00"
+      },
+      {
+        "url": "https://www.romanakr.com/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:04+01:00"
+      },
+      {
+        "url": "https://www.rtvslo.si/orkestra-in-zbora/koncertni-koledar",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:04+01:00"
+      },
+      {
+        "url": "https://www.visitmaribor.si/en/what-to-do/events-and-shows/calendar-of-events/43464-",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:04+01:00"
+      },
+      {
+        "url": "https://dejandogaja.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:06+01:00"
+      },
+      {
+        "url": "https://vila-eksena.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:06+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/sansoni-kantavtorstvo",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:08+01:00"
+      },
+      {
+        "url": "https://www.odiseja.si/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:02:14+01:00",
+        "reason": "HTTP 403"
+      },
+      {
+        "url": "https://kranjska-gora.si/en/events/childrens-party-with-romana-kranjcan-and-the-arrival-of-santa-claus",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:17+01:00"
+      },
+      {
+        "url": "https://glasbenadezela.si/nastopi/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:17+01:00"
+      },
+      {
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:18+01:00"
+      },
+      {
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:28+01:00"
+      },
+      {
+        "url": "https://kranjska-gora.si/en/events/magical-kranjska-gora",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:34+01:00"
+      },
+      {
+        "url": "https://www.zgodovinska-mesta.si/prireditve/preserni-december/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:34+01:00"
+      },
+      {
+        "url": "https://www.eventim.si/event/alenka-kolman-jelencek-rudolf-in-prihod-miklavza-odiseja-22353657/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:03:04+01:00",
+        "reason": "No answer: Remote end closed connection without response. curl: HTTP 0"
+      },
+      {
+        "url": "https://kranjska-gora.si/en/events/magical-kranjska-gora",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:09+01:00"
+      },
+      {
+        "url": "https://www.ptujinfo.com/dogodki/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:03:13+01:00",
+        "reason": "HTTP 403"
+      },
+      {
+        "url": "https://www.ljubljanainfo.com/dogodki/",
+        "pass": "concerts_watchlist",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:03:13+01:00",
+        "reason": "HTTP 403"
+      },
+      {
+        "url": "https://dogodki.turizem-novagorica-vipavskadolina.si/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:14+01:00"
+      },
+      {
+        "url": "https://www.lasko.info/dogodki/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:15+01:00"
+      },
+      {
+        "url": "https://pir.sik.si/napovednik/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:16+01:00"
+      },
+      {
+        "url": "https://sms-muzeji.si/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:21+01:00"
+      },
+      {
+        "url": "https://mgml.si/sl/dogodki/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:21+01:00"
+      },
+      {
+        "url": "https://www.etno-muzej.si/sl/dogodki",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:26+01:00"
+      },
+      {
+        "url": "https://www.etno-muzej.si/sl/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:32+01:00"
+      },
+      {
+        "url": "https://www.ng-slo.si/si/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:32+01:00"
+      },
+      {
+        "url": "https://www.nms.si/sl/",
+        "pass": "free_entry",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:01:33+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://mao.si/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:33+01:00"
+      },
+      {
+        "url": "https://www.narodni-muzej.si",
+        "pass": "free_entry",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:01:37+01:00",
+        "reason": "No answer: Tunnel connection failed: 502 Bad Gateway. curl: HTTP 0"
+      },
+      {
+        "url": "https://www.ng-slo.si/si/dogodki",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:39+01:00"
+      },
+      {
+        "url": "https://www.nms.si",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:40+01:00"
+      },
+      {
+        "url": "https://mgml.si/sl/programi/programi-druzine/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:48+01:00"
+      },
+      {
+        "url": "https://www.gov.si/zbirke/projekti-in-programi/ta-veseli-dan-kulture/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:48+01:00"
+      },
+      {
+        "url": "https://www.zoo.si/novice",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:41+01:00"
+      },
+      {
+        "url": "https://www.zoo.si/aktivnosti",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:41+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:39+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/ana-mraz-s-prijatelji",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:40+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:40+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:42+01:00"
+      },
+      {
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:48+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:50+01:00"
+      },
+      {
+        "url": "https://www.lgl.si/spored-predstav?page=2",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:52+01:00"
+      },
+      {
+        "url": "https://www.lgl.si/spored-predstav",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:52+01:00"
+      },
+      {
+        "url": "https://www.lgl.si/spored-predstav?page=3",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:53+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/predstava/jez-jez-recikliranje/",
+        "pass": "ljubljana",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:01:59+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.ljubljanskigrad.si/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:00+01:00"
+      },
+      {
+        "url": "https://mgml.si/sl/dogodki/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:00+01:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/artikel/srecanje-z-dedkom-mrazom/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:07+01:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/artikel/nocno-vodenje-v-zoo-ljubljana/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:07+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/jes-jez_1-1/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:10+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/kako-objeti-jeza-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:10+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/muca-copatarica-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:15+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/cuk-na-palici_2_1/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:15+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/kako-objeti-jeza-2/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:16+01:00"
+      },
+      {
+        "url": "https://mgml.si/sl/dogodki/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:23+01:00"
+      },
+      {
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:24+01:00"
+      },
+      {
+        "url": "https://www.citypark.si/si/otroci/gledaliske-predstave-za-otroke/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:33+01:00"
+      },
+      {
+        "url": "https://mgml.si/sl/mestni-muzej/dogodki/2557/2026-11-14/15-00/odpovedano-delavnica-izdelave-carobnih-medenih-hisic/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:33+01:00"
+      },
+      {
+        "url": "https://www.citypark.si/si/otroci/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:35+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/vevericek-posebne-sorte",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:52+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/ana-plamenita",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:52+01:00"
+      },
+      {
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/oktober-2026/jesenski-kulturni-mozaik-od-festivalov-do-ulicne-umetnosti-razstav-in-glasbe",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:53+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:58+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/svet-je-kakor-ringaraja-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:59+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/lisicka-sestricka",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:00+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:01+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:02+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:03+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:05+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/norkester",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:06+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/srcek-2026",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:13+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/glasba/od-opere-do-muzikala",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:14+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/gledalisce-in-ples/male-nocne-zgodbe-kuharica-micka",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:15+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:16+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/v-globino",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:18+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/nune-v-akciji-bozicni-grand-show",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:19+01:00"
+      },
+      {
+        "url": "https://www.cd-cc.si/kultura/gledalisce-in-ples/male-nocne-zgodbe-kuharica-micka",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:26+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/zadeni-tarco-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:34+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/vstopi-v-svet-superjunakov-pridruzi-se-nam-na-cosmo-zabavi-v-supernovi-ljubljana-siska-2026-11-07-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:34+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:34+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/delavnica-in-risanka-muc-kapuc-2026-11-08-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:34+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/vrzi-zogo-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:35+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/dadadisko-druzinski-rave-2026-11-21-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:35+01:00"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/delavnice/",
+        "pass": "ljubljana",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:03:45+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.kino-bezigrad.si/delavnica-in-risanka-muc-kapuc/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:54+01:00"
+      },
+      {
+        "url": "https://www.kinosiska.si/dogodek/dadadisko-druzinski-rave/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:03:59+01:00"
+      },
+      {
+        "url": "https://www.eventim.si/event/dadadisko-kino-siska",
+        "pass": "ljubljana",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:04:30+01:00",
+        "reason": "No answer: Remote end closed connection without response. curl: HTTP 0"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/okraski-za-novoletno-jelko-ruzica-babic/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:04:52+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/moji-prvi-koraki-v-raziskovanje-5/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:04:53+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-32/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:04:53+01:00"
+      },
+      {
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-31/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:04:53+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-19-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:05:41+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-26-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:05:41+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/event/afrisko-sonce-2026-11-06-ljubljana",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:09:32+01:00"
+      },
+      {
+        "url": "https://www.sititeater.si/za-najmlajse/",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:09:34+01:00"
+      },
+      {
+        "url": "https://www.zgodovinska-mesta.si/prireditve/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:28+01:00"
+      },
+      {
+        "url": "https://www.postojnska-jama.eu/en/tickets/living-nativity-scenes/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:30+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-zlati-coln-vodeno-pesnisko-dozivetje-za-vso-druzno-6437",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:32+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/kako-je-mravljica-postala-huda-6486",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:41+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:41+01:00"
+      },
+      {
+        "url": "https://napovednik.com/za-otroke/prireditve-za-otroke/skratolovski-dogodek-krasni-dan-na-skratjem-krasu-6436",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:41+01:00"
+      },
+      {
+        "url": "https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:46+01:00"
+      },
+      {
+        "url": "https://www.zgodovinska-mesta.si/prireditve/veliko-konjisko-martinovanje/",
+        "pass": "slovenia",
+        "status": "failed",
+        "checked_at": "2026-11-05T21:01:47+01:00",
+        "reason": "HTTP 404"
+      },
+      {
+        "url": "https://www.portoroz.si/si/dozivi/dogodki/8772-20-praznik-kakijev",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:51+01:00"
+      },
+      {
+        "url": "https://fatburn.si/celjski-mali-maraton/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:01:51+01:00"
+      },
+      {
+        "url": "https://www.portoroz.si/si/dozivi/dogodki/8772-20-praznik-kakijev",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:02:17+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/?city=2698&categories%5B0%5D=5&start_date=2026-11-05&end_date=2027-02-05",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:32+01:00"
+      },
+      {
+        "url": "https://vsi-eventi.com/livewire/update?hideDetails=false&page=1",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:33+01:00"
+      },
+      {
+        "url": "https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T21:00:31+01:00"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "ok",
+        "reason": "Venues part only: Kinodvor, LGL pages 1-3, SiTi, MGML, Grad, Citypark, December check all read"
+      },
+      "slovenia": {
+        "status": "partial",
+        "reason": "Pass query templates and the portoroz.si Nov feed were not fully worked; minimum sources read."
+      },
+      "concerts_generic": {
+        "status": "partial",
+        "reason": "Month-anchored re-runs of the top four queries were done for December only (plus 3 anchored free-entry queries); no free child-specific concert surfaced by search."
+      },
+      "concerts_watchlist": {
+        "status": "partial",
+        "reason": "Ran 1 to 2 dated queries per artist per month (about 44 of roughly 66), not the full two-template set, and no vstop prost query for November or January. Search tool returned mostly noise. Facebook, Instagram and browser-only Eventim pages not readable."
+      },
+      "free_entry": {
+        "status": "partial",
+        "reason": "Pass 4 search queries not run; Ta veseli dan kulture 2026 programme not yet published; narodni-muzej.si root not readable (nms.si read instead)."
+      },
+      "avto_moto": {
+        "status": "partial",
+        "reason": "SVAMZ, Moto klub MAK and Zveza SVS read; only 6 of the Pass 5 queries run (starodobnikov Nov/Dec/Jan, Cars and Coffee Ljubljana, Tomos srečanje, Božičkova razstava lead), none returned a dated event"
+      }
+    },
+    "filtered": [
+      {
+        "title": "Jazz Club Ljubljanski grad (Liamere, Fagner Wesley Quintet, Lusitanian Ghosts, Aka Neomi, Skalarji, Matter, Prismojeni profesorji bluesa, Café Mezclado, Slavko Ivančić)",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Licensed-premises jazz club evenings at 20:00, 11-20 EUR, not billed for children"
+      },
+      {
+        "title": "Jazz Club Ljubljanski grad: Maja Keuc ODPOVEDANO",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Cancelled, not stored, nightlife"
+      },
+      {
+        "title": "Novoletni koncert Orkestra Slovenske filharmonije, 1. 1. 2027 18:00",
+        "url": "https://www.cd-cc.si/kultura/glasba/novoletni-koncert-orkestra-slovenske-filharmonije-0",
+        "reason": "Classical subscription-style concert, 24-39 EUR, no children framing"
+      },
+      {
+        "title": "Yammatovo 6 - Suede, Zagreb",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Zagreb rock concert, sold out, outside Pass 2 value"
+      },
+      {
+        "title": "Gozd raja / Kako je mravljica postala huda, SNG Nova Gorica",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "reason": "Standalone single performances in Nova Gorica, fail Pass 2 destination test"
+      },
+      {
+        "title": "UM & KUNA, 16. 1. 2027 15:00 and 17:00",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "reason": "Freestyle rap improv show for ages 5-10 at Cankarjev dom, theatre-type; left to the Ljubljana pass"
+      },
+      {
+        "title": "Koncertni atelje DSS, Glasbena ulica, Forum nove glasbe, Kromatika, other adult CD concerts",
+        "url": "https://www.cd-cc.si/kultura/glasba/mozart",
+        "reason": "Adult classical/contemporary programme, no family framing"
+      },
+      {
+        "title": "Ples rusalk / Predstavitev publikacije Ples Rusalk",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ples-rusalk-6aec721d02d82",
+        "reason": "Predstavitev krajevne publikacije v Zadvoru, otroci vrtca nastopijo le v kulturnem programu. Ni otroški dogodek, drugi vnos iste prireditve je dvojnik"
+      },
+      {
+        "title": "PRAZNUJEMO 10. OBLETNICO DCA ZALOG",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/praznujemo-10-obletnico-dca-zalog-6aeacd",
+        "reason": "Dopoldanska obletnica dnevnega centra aktivnosti za starejše, nihče ne bi pripeljal otroka"
+      },
+      {
+        "title": "Delavnica izdelave trajnostnega adventnega venčka",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-izdelave-trajnostnega-adventnega-vencka-6ae9ce69c161c",
+        "reason": "Delavnica trajnostne floristike za odrasle, otroci niso omenjeni"
+      },
+      {
+        "title": "Izdelovanje prazničnih aranžmajev",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/izdelovanje-praznicnih-aranzmajev-6aec7326e13f7",
+        "reason": "Brezplačna delavnica v centru Zalog, občinstvo ni navedeno in je verjetno starejših"
+      },
+      {
+        "title": "Delavnica za starše - Family lab",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-za-starse-family-lab-6ad8abb26",
+        "reason": "Svetovanje za starše, otrok ne spremlja"
+      },
+      {
+        "title": "Dravlje, SUPERMESTO prihaja v tvojo sosesko!",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dravlje-supermesto-prihaja-v-tvojo-sosesko-6aeb3ba81c49b",
+        "reason": "Urbanistična razstava, ni otroški dogodek"
+      },
+      {
+        "title": "Okraski za novoletno jelko - Ružica Babič",
+        "url": "https://www.mklj.si/dogodek/okraski-za-novoletno-jelko-ruzica-babic/",
+        "reason": "Knjižnica Šiška označuje občinstvo Odrasli"
+      },
+      {
+        "title": "MOL gledališke predstave (Morje, Ex, Leta, Trojanke, Nora, Pokojnik, Saloma, Romantične duše, Prima Facie, Smrtno resno), koncerti in potopisna predavanja",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100",
+        "reason": "Odrasla drama, koncerti in predavanja"
+      },
+      {
+        "title": "37. Liffe, Retro: Commedia all'italiana (napovednik, Slovenska kinoteka)",
+        "url": "https://napovednik.com/",
+        "reason": "Retrospektiva za odrasle"
+      },
+      {
+        "title": "Filmska projekcija: Modri pelikan (AGRFT, 6. 11. 18:00)",
+        "url": "https://napovednik.com/",
+        "reason": "Študijska filmska projekcija na AGRFT, otroška publika ni navedena"
+      },
+      {
+        "title": "Cankarjev dom, Filmi pač: Nevesti, 17, Skejtanje ni za punce",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/nevesti-bride",
+        "reason": "Mladinske drame o odraščanju, starostna meja ni navedena, niso otroški filmi"
+      },
+      {
+        "title": "Cankarjev dom, Od opere do muzikala (10. 11. 9:30)",
+        "url": "https://www.cd-cc.si/kultura/glasba/od-opere-do-muzikala",
+        "reason": "Matineja Glasbene mladine za šolske skupine"
+      },
+      {
+        "title": "Cankarjev dom, Srček 2026",
+        "url": "https://www.cd-cc.si/kultura/srcek-2026",
+        "reason": "Strokovni kongres pediatrične kardiologije"
+      },
+      {
+        "title": "Cankarjev dom, V globino (30. 1. 17:00)",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/v-globino",
+        "reason": "Plesna predstava društva Be Funky o odraščanju, ciljna starost ni navedena"
+      },
+      {
+        "title": "Cankarjev dom, Nune v akciji! Božični Grand SHOW",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/nune-v-akciji-bozicni-grand-show",
+        "reason": "Glasbena komedija za odrasle"
+      },
+      {
+        "title": "Cankarjev dom, ostalih ~90 vrstic (koncerti, literarni večeri, konference)",
+        "url": "https://www.cd-cc.si/feeds/kulturnik",
+        "reason": "Odrasli program"
+      },
+      {
+        "title": "MKL, ostali dogodki (potopisi, jezikovne kavarne, Go, tarok, Tečaj romunščine, Naredi si sam venčki in vrečka, Božično-novoletna dekoracija)",
+        "url": "https://www.mklj.si/dogodki/",
+        "reason": "Odrasli ali tečaji"
+      },
+      {
+        "title": "MKL Igrive poteze, Matjaž Mohar (11. 11. in 25. 11. 16:00)",
+        "url": "https://www.mklj.si/dogodek/igrive-poteze-matjaz-mohar-14/",
+        "reason": "Družabne igre brez navedene otroške publike"
+      },
+      {
+        "title": "Seansa Bulgakov (LGL, Tunel, 15+)",
+        "url": "https://www.lgl.si/spored-predstav",
+        "reason": "Adult show, 15+"
+      },
+      {
+        "title": "Gozd raja, SNG Nova Gorica, 7. 11. 2026 10:30",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "reason": "Single 40-minute puppet show outside Ljubljana, not worth the trip on its own (regions.md)."
+      },
+      {
+        "title": "Kako je mravljica postala huda, SNG Nova Gorica, 28. 11. 2026 10:30 and 16:00",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/kako-je-mravljica-postala-huda-6486",
+        "reason": "Single musical per slot outside Ljubljana, not a destination event."
+      },
+      {
+        "title": "Jesenski knjižni bazar v Prekmurju, 6. 11. 2026",
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/jesenski-knjizni-bazar-v-prekmurju-ustvarjalna-delavnica-6450",
+        "reason": "Adult-oriented book bazaar and Hungarian-Slovenian cultural event, Prosenjakovci."
+      },
+      {
+        "title": "Ko pogledamo stran: sokrivi v tišini?, Nova Gorica",
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/ko-pogledamo-stran-sokrivi-v-tisini-6484",
+        "reason": "Adult talk on domestic violence."
+      }
+    ],
+    "leads": [
+      {
+        "title": "Alfa Rally (SVAMZ, 2026-11-28)",
+        "url": "https://svamz.com/event.html?id=2026-11-28-alfa-rally",
+        "reason": "SVAMZ lists date and contact info@alfa-klub.com only, no place, time or description; detail page is a JS shell"
+      },
+      {
+        "title": "Srečanje starodobnih vozil na Štefanovo, Valburga in okolica Šmarne gore in Zbilja (2026-12-26)",
+        "url": "https://svamz.com/event.html?id=2026-12-26-srecanje-starodobnih-vozil-na-stefanovo-valburga-i",
+        "reason": "SVAMZ place field empty, title names only an area, no exact venue or time; contact cmoc96@gmail.com"
+      },
+      {
+        "title": "Moto club MAK Vodice, prodajni sejem rezervnih delov, vsako prvo nedeljo (8:00-12:00, Polje pri Vodicah)",
+        "url": "http://www.motoclub-mak.si/",
+        "reason": "Homepage states the recurring rule but no dated December/January edition; would be 2026-12-06 and 2027-01-03, unconfirmed per date"
+      },
+      {
+        "title": "Božičkova razstava okrašenih vozil / Božični zbor starodobnih vozil Škofja Loka",
+        "url": "https://avtokampi.si/novice/starodobna-vozila-skofja-loka",
+        "reason": "Search found only an undated older announcement (16 Dec), page not fetched, no 2026 date confirmed"
+      },
+      {
+        "title": "Mladi virtuozi 9. in 11. koncert, Križanke, 7. 1. 2027 and 21. 1. 2027",
+        "url": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/24502-jusuke-savai-kana-furukava-zala-vidic-anze-rupnik-34-mv",
+        "reason": "Free entry still unconfirmed, classical, not billed for children"
+      },
+      {
+        "title": "Fehtarji otroški koncert Ljubljana 12. 2. 2027 17:00",
+        "url": "https://topevent.si/en/performer/fehtarji",
+        "reason": "After horizon ending 2027-02-05; Hypebot also lists Otroški koncert Media Center 12. 2. 2027"
+      },
+      {
+        "title": "Perpetuum Jazzile praznični koncert: further dates behind Več terminov",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/perpetuum-jazzile-praznicni-koncert",
+        "reason": "Page shows only 27. 12. 17:00 in static HTML; more dates are loaded by script, check in browser. Same for Svet je kakor ringaraja, Veveriček, Prifarci 22. 11."
+      },
+      {
+        "title": "Božični koncerti Festivala Ljubljana 23. 11. - 17. 12. 2026, Križanke",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "reason": "Individual dates and prices not read; classical Christmas series"
+      },
+      {
+        "title": "Novi trg and Kongresni trg free December concerts 2026",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "reason": "Lineup usually published mid-November (n1info Veseli december); not yet available"
+      },
+      {
+        "title": "Hommage to Pavel Mihelčič, 8. 11. 2026 19:30 Križanke (free, seated ticket needed)",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/hommage-to-pavel-mihelcic",
+        "reason": "From search snippet only, not family-billed"
+      },
+      {
+        "title": "Stored event kranj_20261205_1700 (Romana Krajnčan, Miklavžev sprevod Kranj) may be a 2025 carry-over",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "reason": "Visit Kranj 2026 programme lists only 5. 12. ob 17.00 Sprejem sv. Miklavža with no performer. Romana is named only in the 2025 programme. The stored url zgodovinska-mesta.si still shows the 2025 programme. Coordinator should review; not cancelled, nothing resubmitted."
+      },
+      {
+        "title": "Dejan Dogaja played the Kranj Miklavž procession on 5 Dec 2024",
+        "url": "https://www.visitkranj.com/izbrani-dogodki/preserni-december/program/",
+        "reason": "Archive of the 2024 programme only. 2026 programme names no performer for 5 Dec. Precedent, not evidence."
+      },
+      {
+        "title": "Dejan Dogaja Band, Laško Gremo v hribe 2026",
+        "url": "https://www.nc-planica.si/en/events/lasko-gremo-v-hribe-2026/",
+        "reason": "Search snippet only, no date read, summer festival pattern. Not opened."
+      },
+      {
+        "title": "Visit Maribor Adi Smolar evening, event 43464",
+        "url": "https://www.visitmaribor.si/en/what-to-do/events-and-shows/calendar-of-events/43464-",
+        "reason": "Verify returned the Maribor home page, no event content or date. Unconfirmed."
+      },
+      {
+        "title": "RTV Otroški pevski zbor, Anka Jazbec and Ansambel Janeza Dovča concert broadcast 1. 11. 2026",
+        "url": "https://www.rtvslo.si/opz-in-mpz/",
+        "reason": "Past broadcast on the RTV page, before the run window. Dobrodelni Miklavžev koncert 2026 date not yet announced (33rd was 3 Dec 2025)."
+      },
+      {
+        "title": "Ta veseli dan kulture, 3. 12. 2026 (free entry, each institution its own event)",
+        "url": "https://www.gov.si/zbirke/projekti-in-programi/ta-veseli-dan-kulture/",
+        "reason": "2026 programme not published yet. The gov.si page still shows the earlier edition text and a search found only 2024 and 2025 lists. Check again next run for the ZVKDS list, then save Ljubljana venues first."
+      },
+      {
+        "title": "Prosti vstop vsako prvo nedeljo v mesecu, SEM (6. 12. 2026, 3. 1. 2027)",
+        "url": "https://www.etno-muzej.si/sl/",
+        "reason": "SEM home page states free entry every first Sunday of the month, but no dated first-Sunday programme or children's workshop is listed. Recurring ordinary policy, not a dated event."
+      },
+      {
+        "title": "First-Sunday free entry Narodna galerija, Narodni muzej, MAO, MGML (6. 12. 2026, 3. 1. 2027)",
+        "url": "https://www.nms.si",
+        "reason": "No first-Sunday free-entry notice or dated programme found on NG, NMS, MAO or MGML pages read. MAO Nedelja v MAO on 8. 11. is not a first Sunday. Recheck in early December."
+      },
+      {
+        "title": "December v Ljubljani na vsi-eventi: Rogove praznične delavnice 4. in 19. 12., Miklavžev sprevod 5. 12., Nastopi pevskih zborčkov 14. in 16. 12., Ledena kraljica 20. 12., Sprevodi Dedka Mraza 26. in 30. 12., Ana Mraz s prijatelji 27. in 29. 12.",
+        "url": "https://vsi-eventi.com/?city=2698&categories%5B0%5D=5&start_date=2026-11-05&end_date=2027-02-05",
+        "reason": "Vsi imajo samo datum, brez ure in prizorišča. Čakajo na decembrsko preverjanje drugega raziskovalca na viru mestne občine ali Visit Ljubljana"
+      },
+      {
+        "title": "Friderik, grajska podgana, Ljubljanski grad, 18. in 26. november",
+        "url": "https://the-slovenia.com/prihajajoci-dogodki-na-ljubljanskem-gradu/",
+        "reason": "Najdba iskalnika brez navedenega leta, preveri jo raziskovalec za Ljubljanski grad"
+      },
+      {
+        "title": "Citypark gledališka predstava 1. 1. 2027 18:00 (stored)",
+        "url": "https://www.citypark.si/si/otroci/gledaliske-predstave-za-otroke/",
+        "reason": "Stored from the first-Friday rule only. The page lists only 6 Nov (Škartova disco zabava). 1 Jan is a holiday, confirm before relying on it."
+      },
+      {
+        "title": "Čarobni gozd 3.-23. 12., 17:00-19:00, daily workshops, theatre Fri-Sun",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/",
+        "reason": "Stored as one event on 3 Dec (opening, 17:00). Page gives 17:00-19:00, stored fixture note says 16:30. Per-day theatre titles not published."
+      },
+      {
+        "title": "Zmajev karneval 2027 (Carnival Saturday 6 Feb 2027)",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani",
+        "reason": "Outside horizon (ends 5 Feb). Not due, recheck next run."
+      },
+      {
+        "title": "Martinovanje Ptuj 11-14.11.2026, Veliko konjiško martinovanje 7.11., Martinovo Semič 13-15.11.",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/",
+        "reason": "Listed on Zgodovinska mesta, no children's programme confirmed. Detail page not read."
+      },
+      {
+        "title": "Zimski srednjeveški dan na Celjskem gradu 13.-14.12.2026",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/",
+        "reason": "Listing shows 2025 times in the blurb. Confirm 2026 times at visitcelje.eu."
+      },
+      {
+        "title": "Festival Perkmandlc Idrija, December 2026; Žive jaslice Žiganja vas 22.-23.12.",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/",
+        "reason": "Listed, children's programme and times not read."
+      }
+    ],
+    "runtime_notes": [
+      "Zveza SVS news (checked 2026-11-05) has only a Glasilo 64 notice and an August rally report, no forward events.",
+      "SVAMZ detail pages are JS shells, Firestore data has no place, time or description for the two future events.",
+      "Pass 5 queries not run: Tomos klub, mopedistov, youngtimer, oldtimer rally, Ljubljana-anchored moto queries, site:facebook.com Tomos, and Feb 2027 variants.",
+      "Napovednik Music rows are almost all Jazz Club Ljubljanski grad nightlife; the sub-categories narodnozabavna and sansoni-kantavtorstvo have no events, klasicna has 2 adult events.",
+      "Cankarjev dom pages list extra dates under Več terminov in script only; only dates visible in static HTML were saved.",
+      "verify of napovednik URL ...-6454 (guessed) returned the Ostrzek page, not used.",
+      "Searches: all 11 Pass 3A queries run undated; month-anchored top-four only for December; vstop prost / brezplačen koncert run for Nov, Dec, Jan. Search returns were mostly stale.",
+      "Nastopi pevskih zborčkov 14.-16. 12. 17:00-19:00 from the December in Ljubljana programme page; start taken as window start 17:00.",
+      "concerts_watchlist: search tool is US-region and returned noise, mostly other artists. No new watchlist appearance found beyond stored events.",
+      "Alenka Kolman: glasbenadezela.si/nastopi confirms 6 Dec 2026 11:00 Odiseja (Jelenček Rudolf and Miklavž), matching stored event_20261206_1100_f544ac7b3546, no change. The 23 Oct BTC City Novo mesto show is past. alenkakolman.si has no dated programme. Instagram highlights not readable; eventim.si Kolman page and odiseja.si failed in verify.",
+      "Adi Smolar stored dates (Majšperk 27 Nov, Logatec 28 Nov, Mokronog 11 Dec, Publika 5 Dec) not re-opened this pass, no source change seen. A search snippet suggested an RTV article that Smolar will retire from the stage in autumn, undated, unread.",
+      "Čuki: Visit Kranj 2026 programme confirms 31. 12. ob 22.00 Čuki, Glavni trg, matches stored event_20261231_2200_6577cfed2743. Napovednik narodnozabavna and sansoni-kantavtorstvo list no watchlist artist.",
+      "RTV koncertni koledar lists no Otroški pevski zbor date in the horizon (orchestra and big band only). Neca Falk, Ribič Pepe, Vila Eksena, Dejan Dogaja: no appearance found. Kranjska Gora Magical programme 2026 names none of the nine artists.",
+      "Organiser calendars read: lasko.info, dogodki.turizem-novagorica-vipavskadolina.si, pir.sik.si/napovednik, Visit Kranj, kranjska-gora.si. No Dogaja or Vila Eksena entry. ptujinfo.com/dogodki and ljubljanainfo.com/dogodki failed in verify, odiseja.si failed.",
+      "Skipped dated queries: second template for several artist-months and the vstop prost variants for November and January for Dogaja and Vila Eksena.",
+      "Coordinator: the vsi-eventi row Afriško sonce (6 Nov 10:30, SiTi Teater BTC) was left out of every research file. Added from the verified vsi-eventi event page, and the SiTi Za najmlajše calendar read this run lists the same show and time.",
+      "Pass 4 search queries (9 undated, month-anchored and Ljubljana reruns) were skipped; only one search on Ta veseli dan kulture ran.",
+      "narodni-muzej.si returned not ok; nms.si root read instead.",
+      "Last run's input had no free_entry leads or notes.",
+      "sms-muzeji.si news shows no free-entry campaign for the horizon; the 5-11 Oct 2026 Z igro do dediščine family week is already past.",
+      "ZOO Ljubljana, rezultat preverjanja: zoo.si/novice nima nobene datirane napovedi dogodka (najnovejše objave 2. 11. 2026 Sladka novost, 5. 10. 2026 Otroci iz Armenije). zoo.si/aktivnosti prikazuje samo hranjenje. Trgovina trgovina.zoo.si ima nočno vodenje 13. in 27. 11. ob 18.00 in Srečanje z Dedkom Mrazom 12. in 13. 12. ob 10.00 in 11.00, vse že shranjeno. Iskanje za ZOO Ljubljana november 2026 ni dalo nobenega dogodka. Nič novega za shraniti.",
+      "Poizvedbe preverjene brez novih zadetkov: dogodki za otroke ta vikend, brezplačne prireditve, ure pravljic MKL, lutkovna predstava za malčke, delavnice za otroke, dan odprtih vrat, brezplačno preizkusi šport, plesna predstava, otroški tek, kolopark poganjalčki, kino na prostem, ZOO prireditev vikend, prireditve za družine prost vstop. Preskočena: Kinobalon Kinodvor spored (pokrije raziskovalec ljubljana-venues).",
+      "Rezultati iskanja so bili ponavadi stari ali brez datuma, noben ni postal vir.",
+      "Kino Bežigrad: 10 vrstic, vseh 10 že shranjenih, spremembe so samo v zapisu velikih črk naslova in imena prizorišča, zato niso ponovno oddane. Kino Bežigrad spletna stran navaja še druge predstave, ki jih je uporabnik skril.",
+      "vsi-eventi: Supernova četrtki 12., 19. in 26. 11. so oddani kot en dogodek na datum pod naslovom prve igre, ker vsi-eventi isti dan navaja tri naslove igre za isto kampanjo. Četrtek 5. 11. ob 16:30 je že pretekel. Supernova nima lastne strani z datumom v tem brskanju.",
+      "Cankarjev dom: koncertne vrstice (Tesla, Svet je kakor ringaraja, UM & KUNA, (N)orkester, Božična fantazija, Veveriček) lahko podvaja raziskovalec concerts-generic. Naslovi, začetki in url so enaki cd-cc.si strani, zato naj se zlijejo. UM & KUNA 16. 1. ob 17:00, Shrek 20. 1. in Božična fantazija 20. 12. ob 18:00 so dodani s strani prireditve, ne iz fetch vrstic. Lisička sestrička 13. 3. je izven obzorja.",
+      "Napovednik: vse vrstice Ljubljane s stored so že shranjene, razlike le v zapisu prizorišča in zastavic. Ponovno oddano ni nič.",
+      "MKL: 307 vrstic je skril uporabnik, od preostalih 162 je ostalo pet otroških kandidatov. ZOO fetch vrstice (zoo.json) so plačljivi programi brez datuma: Srečaj naj žival, rojstni dnevi, Oskrbnik za en dan, počitnice se po pravilih ne shranjujejo.",
+      "December check: Prižig lučk (27 Nov), Čarobni gozd (3 Dec), Miklavžev sprevod (5 Dec), Ledene kraljice (6/13/20 Dec), Koča dedka Mraza (20 Dec, first date of 20-23 Dec range), Ana Mraz (27 Dec, range 27-29), Silvestrovanje za otroke (31 Dec) already stored. Added Sprevod Dedka Mraza 27-30 Dec (one per evening, source lists 26-30 Dec 17:00-19:00). Visit Ljubljana lists Miklavžev sprevod at 16:30-18:00, stored 17:00 (vsi-eventi and annual say 17:00 start, left as is).",
+      "Annual fixtures: Ana Plamenita is 13 Nov 2026 at Zvezna ulica, Zelena jama (not Gradaščica), added. Slovenski knjižni sejem and Noč parkeljnov Goričane already stored. Ta veseli dan kulture and first-Sunday free entry belong to free_entry. Prešerni december Kranj rows are not Ljubljana.",
+      "LGL pages 1-3 reached 28 Nov, page 3 empty, all kids rows already stored. SiTi January shows 9-30 Jan were missing, added at 11:00 from each detail page. Kinodvor Kinobalon: only Miška gre na goro 8 Nov 11:30 was missing. MGML 14 Nov honey-house workshop now marked ODPOVEDANO, resubmitted as cancelled. Ljubljanski grad homepage shows only Friderik 21 Nov as a children's event, already stored.",
+      "Praznik kakijev start 09:00 on 13.11. comes from the portoroz.si event page. The Zgodovinska mesta page gives dates only and says the programme follows.",
+      "Napovednik rows 6437 and 6436 (Škratolovski 7. 11.) and Žive jaslice 25.-30. 12. match stored events and are unchanged, so not resubmitted.",
+      "Regions fixtures in horizon read: Praznik kakijev, Celjski mali maraton (fatburn.si via verify), Žive jaslice (postojnska-jama.eu). Prešernov smenj 02-08 is after the horizon. Regional web search queries not run, only listed sources read.",
+      "Zgodovinska mesta detail page for Veliko konjiško martinovanje returned no content."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Božična fantazija",
+        "start_time": "2026-12-20T15:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "17 - 30 EUR (14 - 26 EUR za mlajše od 25 in starejše od 65 let)",
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "flags": [],
+        "event_id": "event_20261220_1500_4cac96271154",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Božična fantazija",
+        "start_time": "2026-12-20T18:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "17 - 30 EUR (14 - 26 EUR za mlajše od 25 in starejše od 65 let)",
+        "url": "https://www.cd-cc.si/kultura/glasba/bozicna-fantazija",
+        "flags": [],
+        "event_id": "event_20261220_1800_630e7b17c9d6",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Svet je kakor ringaraja",
+        "start_time": "2026-12-20T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/svet-je-kakor-ringaraja-0",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261220_1700_1b36c647e781",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Veveriček posebne sorte",
+        "start_time": "2026-12-19T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 11. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/vevericek-posebne-sorte",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261219_1700_f6c28889c8d1",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Perpetuum Jazzile - praznični koncert",
+        "start_time": "2026-12-27T17:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/perpetuum-jazzile-praznicni-koncert",
+        "flags": [],
+        "event_id": "event_20261227_1700_ee9c055ea5ad",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "(N)orkester",
+        "start_time": "2027-01-31T18:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/norkester",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20270131_1800_ab62aa9673a9",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Koncert Prifarcev s prijatelji!",
+        "start_time": "2026-11-21T19:00:00+01:00",
+        "venue": "Cankarjev dom, Gallusova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 - 40 EUR",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/koncert-prifarcev-s-prijatelji",
+        "flags": [],
+        "event_id": "event_20261121_1900_7e94a01cd931",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Božični koncert pred Mestno hišo",
+        "start_time": "2026-12-24T17:00:00+01:00",
+        "venue": "Mestni trg",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop",
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/christmas-concert",
+        "flags": [],
+        "event_id": "event_20261224_1700_bf12fccc099d",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-14T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": [],
+        "event_id": "event_20261214_1700_767e6a948da0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-15T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": [],
+        "event_id": "event_20261215_1700_d7896883d9b5",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Nastopi pevskih zborčkov",
+        "start_time": "2026-12-16T17:00:00+01:00",
+        "venue": "Mestna hiša (Magistrat), Mestni trg 1",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Prost vstop (festival December v Ljubljani); 14.-16. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/december-v-ljubljani",
+        "flags": [],
+        "event_id": "event_20261216_1700_bde708f056ef",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Drugo Martinovo pevsko srečanje okteta ZVEN na Črnučah",
+        "start_time": "2026-11-06T19:00:00+01:00",
+        "venue": "Kulturni dom Črnuče, Dunajska cesta 367",
+        "city": "Ljubljana Črnuče",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://napovednik.com/glasba/drugo/drugo-martinovo-pevsko-srecanje-okteta-zven-na-crnucah-6434",
+        "flags": [],
+        "event_id": "event_20261106_1900_2c322bd3f2f0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Afriško sonce",
+        "start_time": "2026-11-06T10:30:00+01:00",
+        "venue": "SiTi Teater BTC",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://vsi-eventi.com/event/afrisko-sonce-2026-11-06-ljubljana",
+        "flags": [],
+        "event_id": "event_20261106_1030_97c32c0f5df8",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Vstopi v svet superjunakov! Pridruži se nam na Cosmo zabavi v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-07T10:00:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://vsi-eventi.com/event/vstopi-v-svet-superjunakov-pridruzi-se-nam-na-cosmo-zabavi-v-supernovi-ljubljana-siska-2026-11-07-ljubljana",
+        "flags": [],
+        "event_id": "event_20261107_1000_6faccaeba05c",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Delavnica in risanka: MUC KAPUC",
+        "start_time": "2026-11-08T16:00:00+01:00",
+        "venue": "Kino Bežigrad",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Ob 16.00 brezplačna otroška delavnica izdelave mačjih ušes, ob 17.00 ogled risanke Muc Kapuc (vstopnica)",
+        "url": "https://www.kino-bezigrad.si/delavnica-in-risanka-muc-kapuc/",
+        "flags": [],
+        "event_id": "event_20261108_1600_4ed4ce3e06c0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-12T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
+        "flags": [],
+        "event_id": "event_20261112_1630_24aaffc97fc0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-19T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-19-ljubljana",
+        "flags": [],
+        "event_id": "event_20261119_1630_09f9857fe1a0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Spusti plošček in odkrij svoje presenečenje! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+        "start_time": "2026-11-26T16:30:00+01:00",
+        "venue": "Supernova Ljubljana Šiška",
+        "city": "Ljubljana",
+        "category": "pop_up",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Vsak četrtek ob 16:30 od 15. 10. do 26. 11. 2026, nagradne igre. Isti dan so na vsi-eventi navedene še igre Zadeni tarčo in Vrzi žogo",
+        "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-26-ljubljana",
+        "flags": [],
+        "event_id": "event_20261126_1630_e4fe01c1fe48",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "DaDADADISKO: družinski rave I JAMirko in All Around the House",
+        "start_time": "2026-11-21T10:00:00+01:00",
+        "venue": "Katedrala, Kino Šiška",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Ples in delavnice, 10.00 do 13.00. Za eno osebo 13 €, družinska vstopnica za 3 ali 4 osebe 36 €",
+        "url": "https://www.kinosiska.si/dogodek/dadadisko-druzinski-rave/",
+        "flags": [],
+        "event_id": "event_20261121_1000_a0526b80d4d3",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Tesla",
+        "start_time": "2026-11-12T19:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 9,
+        "is_free": false,
+        "price_text": "12 €, od 9. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261112_1900_b586472f3631",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Lisička sestrička",
+        "start_time": "2026-12-28T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 45 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/lisicka-sestricka",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261228_1700_a7b4a22c9197",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Urška in povodni mož (celotna zgodba)",
+        "start_time": "2027-01-09T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba-0",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20270109_1700_f69edafef5b0",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Urška in povodni mož (celotna zgodba)",
+        "start_time": "2027-01-10T18:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 11,
+        "is_free": false,
+        "price_text": "12 €, od 11. do 15. leta",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/urska-in-povodni-moz-celotna-zgodba",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20270110_1800_f51c31228850",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "UM & KUNA",
+        "start_time": "2027-01-16T15:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20270116_1500_6f2ace27936e",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "UM & KUNA",
+        "start_time": "2027-01-16T17:00:00+01:00",
+        "venue": "Cankarjev dom, Štihova dvorana",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": 5,
+        "is_free": false,
+        "price_text": "12 €, od 5. do 10. leta, 60 minut",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20270116_1700_19e97ed27c98",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Shrek",
+        "start_time": "2027-01-18T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 €, muzikal v angleščini dijakov II. gimnazije Maribor, 2 h 35 min z odmorom",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "flags": [],
+        "event_id": "event_20270118_1700_dab74dd6cec1",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Shrek",
+        "start_time": "2027-01-20T17:00:00+01:00",
+        "venue": "Cankarjev dom, Linhartova dvorana",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "20 €, muzikal v angleščini dijakov II. gimnazije Maribor, 2 h 35 min z odmorom",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/shrek",
+        "flags": [],
+        "event_id": "event_20270120_1700_f2dbbb547ffd",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Male nočne zgodbe & Kuharica Micka",
+        "start_time": "2026-12-22T18:00:00+01:00",
+        "venue": "Cankarjev dom, Klub CD",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 6,
+        "is_free": false,
+        "price_text": "10 € za obe predstavi, otroci 6+ in odrasli",
+        "url": "https://www.cd-cc.si/kultura/gledalisce-in-ples/male-nocne-zgodbe-kuharica-micka",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261222_1800_9e706ff75bd9",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Ustvarjalni delavnici izdelave prazničnih voščilnic iz odpadnih materialov",
+        "start_time": "2026-11-17T17:00:00+01:00",
+        "venue": "Info točka Misija 100, Pogačarjev trg 3",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Dve uri, vsebina enaka obema terminoma, prijava na dogodki.misija100@ljubljana.si, število mest omejeno",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "flags": [],
+        "event_id": "event_20261117_1700_1bfd1327702e",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Ustvarjalni delavnici izdelave prazničnih voščilnic iz odpadnih materialov",
+        "start_time": "2026-11-25T17:00:00+01:00",
+        "venue": "Info točka Misija 100, Pogačarjev trg 3",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Dve uri, vsebina enaka obema terminoma, prijava na dogodki.misija100@ljubljana.si, število mest omejeno",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
+        "flags": [],
+        "event_id": "event_20261125_1700_5c8b3fb0bcaa",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Šahovska šola za osnovnošolce",
+        "start_time": "2026-11-10T16:30:00+01:00",
+        "venue": "Knjižnica Jožeta Mazovca (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Osnovnošolski otroci (6-15), vodi Niko Praznik",
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-31/",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261110_1630_060da31721d4",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Šahovska šola za osnovnošolce",
+        "start_time": "2026-11-24T16:30:00+01:00",
+        "venue": "Knjižnica Fužine (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Osnovnošolski otroci (6-15), vodi Niko Praznik",
+        "url": "https://www.mklj.si/dogodek/sahovska-sola-za-osnovnosolce-32/",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261124_1630_48bab9c328ec",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Moji prvi koraki v raziskovanje",
+        "start_time": "2026-11-11T17:00:00+01:00",
+        "venue": "Knjižnica Prežihov Voranc (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 6,
+        "is_free": null,
+        "price_text": "Izobraževanje za otroke 4., 5. in 6. razredov, prijava v knjižnici",
+        "url": "https://www.mklj.si/dogodek/moji-prvi-koraki-v-raziskovanje-5/",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261111_1700_f4c5f3993aeb",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-27T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": [],
+        "event_id": "event_20261227_1700_2f792165c29e",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-28T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": [],
+        "event_id": "event_20261228_1700_6ebaeb88c919",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-29T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": [],
+        "event_id": "event_20261229_1700_d20127903c4b",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Sprevod Dedka Mraza",
+        "start_time": "2026-12-30T17:00:00+01:00",
+        "venue": "Breg, Mestni trg, Prešernov trg, Kongresni trg, Novi trg",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstopnine ni. Sprevod 26. do 30. 12., 17:00-19:00",
+        "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/sprevodi-dedka-mraza",
+        "flags": [],
+        "event_id": "event_20261230_1700_636c28fc0ce3",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Ješ, Jež? -recikliranje",
+        "start_time": "2027-01-09T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 2,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/jes-jez_1-1/",
+        "flags": [],
+        "event_id": "event_20270109_1100_96ccef906d17",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Kako objeti ježa",
+        "start_time": "2027-01-16T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 4,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/kako-objeti-jeza-2/",
+        "flags": [],
+        "event_id": "event_20270116_1100_789c26b69aba",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Muca Copatarica",
+        "start_time": "2027-01-23T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 2,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/muca-copatarica-2/",
+        "flags": [],
+        "event_id": "event_20270123_1100_da30b63e45e4",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "SiTi Teater sobotni dopoldnevi: Čuk na palici",
+        "start_time": "2027-01-30T11:00:00+01:00",
+        "venue": "SiTi Teater BTC, Ameriška ulica 3",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 3,
+        "is_free": false,
+        "price_text": "Vstopnina (cena ni navedena na strani)",
+        "url": "https://www.sititeater.si/sobotni-dopoldnevi/cuk-na-palici_2_1/",
+        "flags": [],
+        "event_id": "event_20270130_1100_ebe2534d9999",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Ana Plamenita, jesenski festival ognjenih ambientov",
+        "start_time": "2026-11-13T18:00:00+01:00",
+        "venue": "Zvezna ulica, Zelena jama",
+        "city": "Ljubljana",
+        "category": "festival",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstop prost. 18:00-21:00",
+        "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/ana-plamenita",
+        "flags": [],
+        "event_id": "event_20261113_1800_96cdbdb76485",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      },
+      {
+        "title": "Celjski mali maraton – otroški in družinski tek (1.600 m)",
+        "start_time": "2026-11-08T11:05:00+01:00",
+        "venue": "Kajak kanu center Špica",
+        "city": "Celje",
+        "category": "tek",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena za to progo ni objavljena. Prijava in prevzem številk na prizorišču od 8.30.",
+        "url": "https://fatburn.si/celjski-mali-maraton/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ],
+        "event_id": "event_20261108_1105_4dd59271ebd7",
+        "status": "active",
+        "first_seen": "2026-11-05T20:57:25+01:00"
+      }
+    ],
+    "updated": [
+      {
+        "event_id": "mestnimuzej_20261114_1500",
+        "title": "[ODPOVEDANO] Delavnica izdelave čarobnih medenih hišic",
+        "start_time": "2026-11-14T15:00:00+01:00",
+        "venue": "Mestni muzej Ljubljana",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "Cena ni navedena; trženo kot delavnica za odrasle, stran navaja primernost za družine",
+        "url": "https://mgml.si/sl/mestni-muzej/dogodki/2557/2026-11-14/15-00/odpovedano-delavnica-izdelave-carobnih-medenih-hisic/",
+        "flags": [
+          "age_stretch",
+          "cancelled"
+        ],
+        "status": "active",
+        "first_seen": "2026-09-22T08:47:12Z",
+        "decision": "maybe",
+        "decided_at": "2026-10-02T12:25:01Z",
+        "before": {
+          "event_id": "mestnimuzej_20261114_1500",
+          "title": "Delavnica izdelave čarobnih medenih hišic",
+          "start_time": "2026-11-14T15:00:00+01:00",
+          "venue": "Mestni muzej Ljubljana",
+          "city": "Ljubljana",
+          "category": "delavnica",
+          "age_min": null,
+          "is_free": null,
+          "price_text": "Cena ni navedena; trženo kot delavnica za odrasle, stran navaja primernost za družine",
+          "url": "https://mgml.si/sl/dogodki/",
+          "flags": [
+            "age_stretch"
+          ],
+          "status": "active",
+          "first_seen": "2026-09-22T08:47:12Z",
+          "decision": "maybe",
+          "decided_at": "2026-10-02T12:25:01Z"
+        }
+      },
+      {
+        "event_id": "strunjan_20261110_1100",
+        "title": "Praznik kakijev v Strunjanu",
+        "start_time": "2026-11-13T09:00:00+01:00",
+        "venue": "Strunjanske soline (TD Solinar Strunjan)",
+        "city": "Strunjan (Piran)",
+        "category": "festival",
+        "age_min": 0,
+        "is_free": null,
+        "price_text": "23. izvedba, 13.–15. 11. 2026. Program (sejem, delavnice, tekmovanje za največji kaki) bo objavljen naknadno.",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/",
+        "flags": [
+          "outside_ljubljana",
+          "travel"
+        ],
+        "status": "active",
+        "first_seen": "2026-09-24T07:22:48Z",
+        "decision": "maybe",
+        "decided_at": "2026-10-02T12:25:01Z",
+        "before": {
+          "event_id": "strunjan_20261110_1100",
+          "title": "Praznik kakijev v Strunjanu",
+          "start_time": "2026-11-13T00:00:00+01:00",
+          "venue": "Strunjanske soline (TD Solinar Strunjan)",
+          "city": "Strunjan (Piran)",
+          "category": "festival",
+          "age_min": 0,
+          "is_free": null,
+          "price_text": "23. izvedba, 13.–15. 11. 2026. Program (sejem, delavnice, tekmovanje za največji kaki) bo objavljen naknadno.",
+          "url": "https://www.zgodovinska-mesta.si/prireditve/praznik-kakijev-v-strunjanu/",
+          "flags": [
+            "outside_ljubljana",
+            "travel",
+            "time_unknown"
+          ],
+          "status": "active",
+          "first_seen": "2026-09-24T07:22:48Z",
+          "decision": "maybe",
+          "decided_at": "2026-10-02T12:25:01Z"
+        }
+      }
+    ],
+    "expired": [
+      {
+        "title": "MINT: Kako je bilo, ko še ni bilo avtomobilov – Gregor Ilaš, Založba Aristej",
+        "start_time": "2026-11-05T17:00:00+01:00",
+        "venue": "Knjižnica Savsko naselje (MKL)",
+        "city": "Ljubljana",
+        "category": "delavnica",
+        "age_min": 10,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/mint-kako-je-bilo-ko-se-ni-bilo-avtomobilov-gregor-ilas-zalozba-aristej/",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261105_1700_3fde6dec60de",
+        "status": "expired",
+        "first_seen": "2026-10-22T09:05:28+02:00",
+        "decision": "rejected",
+        "decided_at": "2026-10-22T23:10:36Z"
+      },
+      {
+        "title": "Ostržek",
+        "start_time": "2026-11-05T18:00:00+01:00",
+        "venue": "LGL, Šentjakobski oder",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": 5,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.lgl.si/spored-predstav",
+        "flags": [
+          "age_stretch"
+        ],
+        "event_id": "event_20261105_1800_30e1013e2222",
+        "status": "expired",
+        "first_seen": "2026-10-22T09:05:28+02:00",
+        "decision": "rejected",
+        "decided_at": "2026-10-22T23:10:36Z"
+      },
+      {
+        "title": "Ustvarjalnice z Galerijo C.C.U.: DEŽELA PINGVINOV",
+        "start_time": "2026-11-05T17:00:00+01:00",
+        "venue": "Center kulture Španski borci, Zaloška 61",
+        "category": "delavnica",
+        "age_min": null,
+        "is_free": true,
+        "price_text": "Vstop prost",
+        "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-dezela-pingvinov-6430",
+        "flags": [],
+        "city": "Ljubljana",
+        "event_id": "event_20261105_1700_1c32f8ee0319",
+        "status": "expired",
+        "first_seen": "2026-11-05T13:05:33+01:00"
+      },
+      {
+        "title": "Bralna urica s Tačkami – Adela Premate, Tačke pomagačke",
+        "start_time": "2026-11-05T17:00:00+01:00",
+        "venue": "Knjižnica Šiška – 1. nadstropje",
+        "category": "pravljice",
+        "age_min": 7,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.mklj.si/dogodek/bralna-urica-s-tackami-tacke-pomagacke-adela-premate-2/",
+        "flags": [
+          "age_stretch"
+        ],
+        "city": "Ljubljana",
+        "event_id": "event_20261105_1700_d06755befe5c",
+        "status": "expired",
+        "first_seen": "2026-11-05T13:05:33+01:00"
+      }
+    ],
+    "hidden": [
+      {
+        "title": "Kinobalon: Miška gre na goro",
+        "start_time": "2026-11-08T11:30:00+01:00",
+        "venue": "Kinodvor, Mala dvorana",
+        "city": "Ljubljana",
+        "category": "kino",
+        "age_min": null,
+        "is_free": null,
+        "price_text": "",
+        "url": "https://www.kinodvor.org/kinobalon/",
+        "flags": [],
+        "event_id": "event_20261108_1130_54889877a9fc",
+        "reason": "exclude_keywords: Kinobalon: Miška gre na goro"
+      }
+    ],
+    "filtered": [
+      {
+        "title": "Jazz Club Ljubljanski grad (Liamere, Fagner Wesley Quintet, Lusitanian Ghosts, Aka Neomi, Skalarji, Matter, Prismojeni profesorji bluesa, Café Mezclado, Slavko Ivančić)",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Licensed-premises jazz club evenings at 20:00, 11-20 EUR, not billed for children"
+      },
+      {
+        "title": "Jazz Club Ljubljanski grad: Maja Keuc ODPOVEDANO",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Cancelled, not stored, nightlife"
+      },
+      {
+        "title": "Novoletni koncert Orkestra Slovenske filharmonije, 1. 1. 2027 18:00",
+        "url": "https://www.cd-cc.si/kultura/glasba/novoletni-koncert-orkestra-slovenske-filharmonije-0",
+        "reason": "Classical subscription-style concert, 24-39 EUR, no children framing"
+      },
+      {
+        "title": "Yammatovo 6 - Suede, Zagreb",
+        "url": "https://napovednik.com/glasba/narodnozabavna",
+        "reason": "Zagreb rock concert, sold out, outside Pass 2 value"
+      },
+      {
+        "title": "Gozd raja / Kako je mravljica postala huda, SNG Nova Gorica",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "reason": "Standalone single performances in Nova Gorica, fail Pass 2 destination test"
+      },
+      {
+        "title": "UM & KUNA, 16. 1. 2027 15:00 and 17:00",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/um-kuna-0",
+        "reason": "Freestyle rap improv show for ages 5-10 at Cankarjev dom, theatre-type; left to the Ljubljana pass"
+      },
+      {
+        "title": "Koncertni atelje DSS, Glasbena ulica, Forum nove glasbe, Kromatika, other adult CD concerts",
+        "url": "https://www.cd-cc.si/kultura/glasba/mozart",
+        "reason": "Adult classical/contemporary programme, no family framing"
+      },
+      {
+        "title": "Ples rusalk / Predstavitev publikacije Ples Rusalk",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ples-rusalk-6aec721d02d82",
+        "reason": "Predstavitev krajevne publikacije v Zadvoru, otroci vrtca nastopijo le v kulturnem programu. Ni otroški dogodek, drugi vnos iste prireditve je dvojnik"
+      },
+      {
+        "title": "PRAZNUJEMO 10. OBLETNICO DCA ZALOG",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/praznujemo-10-obletnico-dca-zalog-6aeacd",
+        "reason": "Dopoldanska obletnica dnevnega centra aktivnosti za starejše, nihče ne bi pripeljal otroka"
+      },
+      {
+        "title": "Delavnica izdelave trajnostnega adventnega venčka",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-izdelave-trajnostnega-adventnega-vencka-6ae9ce69c161c",
+        "reason": "Delavnica trajnostne floristike za odrasle, otroci niso omenjeni"
+      },
+      {
+        "title": "Izdelovanje prazničnih aranžmajev",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/izdelovanje-praznicnih-aranzmajev-6aec7326e13f7",
+        "reason": "Brezplačna delavnica v centru Zalog, občinstvo ni navedeno in je verjetno starejših"
+      },
+      {
+        "title": "Delavnica za starše - Family lab",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/delavnica-za-starse-family-lab-6ad8abb26",
+        "reason": "Svetovanje za starše, otrok ne spremlja"
+      },
+      {
+        "title": "Dravlje, SUPERMESTO prihaja v tvojo sosesko!",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dravlje-supermesto-prihaja-v-tvojo-sosesko-6aeb3ba81c49b",
+        "reason": "Urbanistična razstava, ni otroški dogodek"
+      },
+      {
+        "title": "Okraski za novoletno jelko - Ružica Babič",
+        "url": "https://www.mklj.si/dogodek/okraski-za-novoletno-jelko-ruzica-babic/",
+        "reason": "Knjižnica Šiška označuje občinstvo Odrasli"
+      },
+      {
+        "title": "MOL gledališke predstave (Morje, Ex, Leta, Trojanke, Nora, Pokojnik, Saloma, Romantične duše, Prima Facie, Smrtno resno), koncerti in potopisna predavanja",
+        "url": "https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100",
+        "reason": "Odrasla drama, koncerti in predavanja"
+      },
+      {
+        "title": "37. Liffe, Retro: Commedia all'italiana (napovednik, Slovenska kinoteka)",
+        "url": "https://napovednik.com/",
+        "reason": "Retrospektiva za odrasle"
+      },
+      {
+        "title": "Filmska projekcija: Modri pelikan (AGRFT, 6. 11. 18:00)",
+        "url": "https://napovednik.com/",
+        "reason": "Študijska filmska projekcija na AGRFT, otroška publika ni navedena"
+      },
+      {
+        "title": "Cankarjev dom, Filmi pač: Nevesti, 17, Skejtanje ni za punce",
+        "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/nevesti-bride",
+        "reason": "Mladinske drame o odraščanju, starostna meja ni navedena, niso otroški filmi"
+      },
+      {
+        "title": "Cankarjev dom, Od opere do muzikala (10. 11. 9:30)",
+        "url": "https://www.cd-cc.si/kultura/glasba/od-opere-do-muzikala",
+        "reason": "Matineja Glasbene mladine za šolske skupine"
+      },
+      {
+        "title": "Cankarjev dom, Srček 2026",
+        "url": "https://www.cd-cc.si/kultura/srcek-2026",
+        "reason": "Strokovni kongres pediatrične kardiologije"
+      },
+      {
+        "title": "Cankarjev dom, V globino (30. 1. 17:00)",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/v-globino",
+        "reason": "Plesna predstava društva Be Funky o odraščanju, ciljna starost ni navedena"
+      },
+      {
+        "title": "Cankarjev dom, Nune v akciji! Božični Grand SHOW",
+        "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/nune-v-akciji-bozicni-grand-show",
+        "reason": "Glasbena komedija za odrasle"
+      },
+      {
+        "title": "Cankarjev dom, ostalih ~90 vrstic (koncerti, literarni večeri, konference)",
+        "url": "https://www.cd-cc.si/feeds/kulturnik",
+        "reason": "Odrasli program"
+      },
+      {
+        "title": "MKL, ostali dogodki (potopisi, jezikovne kavarne, Go, tarok, Tečaj romunščine, Naredi si sam venčki in vrečka, Božično-novoletna dekoracija)",
+        "url": "https://www.mklj.si/dogodki/",
+        "reason": "Odrasli ali tečaji"
+      },
+      {
+        "title": "MKL Igrive poteze, Matjaž Mohar (11. 11. in 25. 11. 16:00)",
+        "url": "https://www.mklj.si/dogodek/igrive-poteze-matjaz-mohar-14/",
+        "reason": "Družabne igre brez navedene otroške publike"
+      },
+      {
+        "title": "Seansa Bulgakov (LGL, Tunel, 15+)",
+        "url": "https://www.lgl.si/spored-predstav",
+        "reason": "Adult show, 15+"
+      },
+      {
+        "title": "Gozd raja, SNG Nova Gorica, 7. 11. 2026 10:30",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/gozd-raja-6475",
+        "reason": "Single 40-minute puppet show outside Ljubljana, not worth the trip on its own (regions.md)."
+      },
+      {
+        "title": "Kako je mravljica postala huda, SNG Nova Gorica, 28. 11. 2026 10:30 and 16:00",
+        "url": "https://napovednik.com/za-otroke/predstave-za-otroke/kako-je-mravljica-postala-huda-6486",
+        "reason": "Single musical per slot outside Ljubljana, not a destination event."
+      },
+      {
+        "title": "Jesenski knjižni bazar v Prekmurju, 6. 11. 2026",
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/jesenski-knjizni-bazar-v-prekmurju-ustvarjalna-delavnica-6450",
+        "reason": "Adult-oriented book bazaar and Hungarian-Slovenian cultural event, Prosenjakovci."
+      },
+      {
+        "title": "Ko pogledamo stran: sokrivi v tišini?, Nova Gorica",
+        "url": "https://napovednik.com/prireditve/kulturna-prireditev/ko-pogledamo-stran-sokrivi-v-tisini-6484",
+        "reason": "Adult talk on domestic violence."
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "315a70a1748f6d33b4e9809d33e15b126990a344e40b001ac7f717d8045f3a10"
+}
