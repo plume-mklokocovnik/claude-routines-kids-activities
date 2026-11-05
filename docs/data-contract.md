@@ -115,7 +115,9 @@ hidden when the stored record is hidden, and no new row is written.
 
 Parallel research leaves files beside the staged input. `fetch/<source>.json` is
 written by [fetch.py](../scripts/fetch.py) and holds `sources` records plus rows for
-a researcher to judge. `research/<group>.json` is written by one researcher and holds
+a researcher to judge. `verify` and `record` add `fetch/verify-*.json` and
+`fetch/record-*.json`, so every check time comes from the clock at the moment of the
+read. `research/<group>.json` is written by one researcher and holds
 `passes`, `candidates`, `sources`, `filtered`, `leads` and `runtime_notes`. `run.py
 collect` replaces the input's lists with the union of these files and combines the
 pass reports. Equal reports keep their status, mixed ones become `partial`, and a

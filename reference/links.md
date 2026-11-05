@@ -73,7 +73,7 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | Visit Ljubljana | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/` | Filters: Prost vstop + Za družine + date + Izven Ljubljane | ok |
 | MOL calendar | `https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100` | **Every run, via curl.** Municipal calendar. See the recipe below | ok, checked 2026-09-25 |
 | MOL workshop pavilion (lead, unresolved) | `https://www.ljubljana.si/sl/moja-ljubljana/prireditve/ustvarjalne-delavnice-za-otroke/` | Daily free-workshop programme at the Kongresni trg pavilion (weekday 17–18h / weekend 10–12h per search snippets) | 404, confirmed dead on both the 2026-09-22 and 2026-09-24 sweeps despite 5+ URL/search variants each time. `kgbl.si/prizorisce/kongresni-trg/paviljon/` describes an unrelated spring student-concert series, not this. Try MOL's "Oddelek za kulturo" news feed directly next run instead of guessing more slugs |
-| Kulturnik | `https://dogodki.kulturnik.si/?what=otroci` | Culture tagged otroci, `&where=` filters venue | ok |
+| Kulturnik | `https://dogodki.kulturnik.si/?what=otroci` | Culture tagged otroci, `&where=` filters venue. Mirrors Kinodvor, Cankarjev dom and mojekarte feeds, and lists from June onward, so a 1500-character read shows only past events | low, checked 2026-11-05. Read the sources it mirrors instead |
 | MojaObčina LJ | `https://www.mojaobcina.si/ljubljana/dogodki/` | Zoo and neighbourhood pickup | ok |
 | Kam z mulcem | `https://kamzmulcem.si/` | Editorial round-ups, lead generation only | low |
 | Otroško veselje | `https://otroskoveselje.si/dogaja-se-ljubljana/` | Thin metadata, no date filter | low |
@@ -138,6 +138,7 @@ tags), `cat`, `nrOfItems` (20 / 50 / 100).
 | Kinodvor outdoor summer | `https://www.kinodvor.org/kinodvorovo-poletje-s-filmi-na-prostem/` | ok |
 | Mala ulica | `https://www.malaulica.si/sl/aktivnosti` | ok |
 | Cankarjev dom | `https://www.cd-cc.si/` | ok |
+| Cankarjev dom feed | `https://www.cd-cc.si/feeds/kulturnik` | ok, checked 2026-11-05. XML, one item per performance with title, link, category, hall (`ical_location`) and start (`ical_dtstart`), 190 items. Read through `fetch.py pull cankarjevdom`, which also reads the *Za mlade in šole* pages and their age band. Guessed Slovenian slugs 404, the feed's `link` is the working address |
 | SiTi Teater Saturdays | `https://www.sititeater.si/sobotni-dopoldnevi/` | ok |
 | Plesni Teater Ljubljana | `http://ptl.si/` | ok |
 | Katja Dance Company | `https://www.katjadancecompany.com/` | ok |

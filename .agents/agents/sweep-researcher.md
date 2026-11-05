@@ -29,15 +29,24 @@ minimum sources from [routine.md](../../routine.md). You return evidence, never 
    limited to the run window, and rows the user hid were dropped. A row with `stored`
    matches a known event. Resubmit it with that `event_id` only when a source field
    changed, for example a real start time replacing `time_unknown`.
+   A row with `cancelled: true` may announce a cancellation. Open the page. When it
+   confirms one for a stored event, resubmit that `event_id` with the source's title
+   and the `cancelled` flag added. Never drop or hide it yourself.
 2. Read the rest of your minimum sources. Prefer
    `python3 scripts/fetch.py <input.json> verify --pass <pass> <url> ...` over WebFetch.
    It is cheaper, prints compact text and records each fetch with its real time.
-   Use WebFetch only for a page that verify cannot read, then run the pass queries with WebSearch.
-3. For a page read with WebFetch, add a source record whose `checked_at` comes from
-   `date -Iseconds` right after the fetch. A search result is never a source. Open the page.
-4. A candidate `url` must be a fetched page: a `verified: true` row, a verify result or
-   your own WebFetch record. Run verify on a `verified: false` row before saving it.
-5. Classify with the discovery policy, not keywords. Fill only the candidate fields from
+   Add `--chars 8000` for a long listing, since the default prints 1500 characters.
+   Use WebFetch only for a page that verify cannot read.
+3. Run every query your pass lists, with each month in the horizon where the template
+   has one. Name any query you skipped in `runtime_notes` and mark the pass `partial`.
+4. Right after reading a page with WebFetch, stamp it with
+   `python3 scripts/fetch.py <input.json> record --pass <pass> <url>`, or `--failed "<reason>"`
+   when it failed. Never type a `checked_at` yourself. A search result is never a source.
+5. A candidate `url` must be a fetched page: a `verified: true` row, a verify result or
+   a recorded WebFetch. Run verify on a `verified: false` row before saving it.
+6. A programme on several dates follows the multi-date rule in the discovery policy.
+   Never pick "representative" dates.
+7. Classify with the discovery policy, not keywords. Fill only the candidate fields from
    the [data contract](../../docs/data-contract.md). Never set `decision` or `status`.
 
 ## Result file
@@ -53,6 +62,6 @@ minimum sources from [routine.md](../../routine.md). You return evidence, never 
 }
 ```
 
-`sources` holds only fetches that `fetch.py` did not record. Use `ok` only when the
+`sources` stays empty in practice, since `fetch.py` records every read. Use `ok` only when the
 whole minimum set was read, `partial` when part of it was, and give a reason for
 anything else. Reply with at most eight lines: counts, pass status and blockers.

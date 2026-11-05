@@ -2,27 +2,34 @@
 """Read structured event sources for a staged run and record each request with its real time.
 
     python3 scripts/fetch.py <input.json> pull [source ...]
-    python3 scripts/fetch.py <input.json> verify --pass <pass> <url> [url ...]
+    python3 scripts/fetch.py <input.json> verify --pass <pass> [--chars N] <url> [url ...]
+    python3 scripts/fetch.py <input.json> record --pass <pass> [--failed <reason>] <url> [url ...]
 
 `pull` reads the listed sources, or all of them, and writes one file per source to
 `.work/<run_id>/fetch/`. `verify` fetches event pages and prints their title and text.
+`record` stamps a page read some other way, such as WebFetch, with the current time,
+so nobody writes a check time by hand. Run it right after reading the page.
 Every file carries `sources` records in the staged-input shape, which
 `run.py collect` copies into the input. Rows are leads for the researcher to judge.
 Nothing here decides scope. Rows outside the run window or hidden by the user are
 dropped, and a row that matches a stored event names it in `stored`. A row with
-`verified: false` needs `verify` on its URL before it can become a candidate.
+`verified: false` needs `verify` on its URL before it can become a candidate. A row
+whose title or text announces a cancellation carries `cancelled: true`.
 """
 
 import argparse
 import html
 import json
 import re
+import shutil
+import subprocess
 import sys
 import threading
 import time
 import unicodedata
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ElementTree
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
@@ -51,7 +58,19 @@ def http(url, data=None, timeout=40):
     except urllib.error.HTTPError as error:
         return error.code, "", f"HTTP {error.code}"
     except (urllib.error.URLError, TimeoutError, OSError) as error:
-        return 0, "", f"No answer: {getattr(error, 'reason', error)}"
+        reason = f"No answer: {getattr(error, 'reason', error)}"
+    # Some hosts fail Python's TLS or connection handling and still answer curl.
+    if not shutil.which("curl"):
+        return 0, "", reason
+    command = ["curl", "-sL", "--max-time", str(timeout), "-A", USER_AGENT, "-H", "Accept-Language: sl,en;q=0.5",
+               "-w", "\n%{http_code}", *(["--data", data] if data is not None else []), url]
+    try:
+        result = subprocess.run(command, capture_output=True, timeout=timeout + 10)
+    except subprocess.TimeoutExpired:
+        return 0, "", reason
+    text, _, code = result.stdout.decode("utf-8", "replace").rpartition("\n")
+    status = int(code) if code.isdigit() else 0
+    return status, text if status == 200 else "", "" if status == 200 else f"{reason}. curl: HTTP {status}"
 
 
 class Fetcher:
@@ -297,8 +316,36 @@ def zoo(f, ctx):
             for item in products if 19 in item.get("product_cat", [])]
 
 
+def cankarjevdom(f, ctx):
+    """The feed Cankarjev dom publishes for Kulturnik. One item per performance, with hall and start."""
+    body = f.fetch("https://www.cd-cc.si/feeds/kulturnik", "ljubljana")
+    try:
+        items = ElementTree.fromstring(body).findall("item") if body else []
+    except ElementTree.ParseError:
+        items = []
+    picked = []
+    for item in items:
+        when = re.match(r"(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})", item.findtext("ical_dtstart") or "")
+        if not when:
+            continue
+        year, month, day, hour, minute = when.groups()
+        start, flags = local(year, month, day, None if (hour, minute) == ("00", "00") else hour, minute)
+        if ctx.in_window(start, flags):
+            picked.append((item, start, flags))
+    # Only the youth programme gets its page read up front. Other rows are judged first.
+    youth = [item.findtext("category") == "Za mlade in šole" for item, *_ in picked]
+    bodies = f.many([lambda item=item, wanted=wanted: f.fetch(item.findtext("link"), "ljubljana") if wanted else None
+                     for (item, *_), wanted in zip(picked, youth)])
+    return [row(item.findtext("title") or "", start, flags,
+                ", ".join(part for part in ("Cankarjev dom", item.findtext("ical_location")) if part),
+                item.findtext("link") or "", body is not None, city="Ljubljana", tags=[item.findtext("category")],
+                notes=page(body, TEXT_LIMIT)["text"] if body else None)
+            for (item, start, flags), body in zip(picked, bodies)]
+
+
 SOURCES = {"mol": mol, "mkl": mkl, "napovednik": napovednik, "kinobezigrad": kinobezigrad,
-           "svamz": svamz, "zoo": zoo}
+           "cankarjevdom": cankarjevdom, "svamz": svamz, "zoo": zoo}
+CANCELLED = re.compile(r"(?i)\bodpovedan[oa]?\b|\bodpade\b|\bprestavljen[oa]?\b")
 
 
 class Context:
@@ -334,6 +381,8 @@ class Context:
                 continue
             if twin:
                 item["stored"] = twin["event_id"]
+            if CANCELLED.search(f"{item['title']} {item.get('notes', '')}"):
+                item["cancelled"] = True
             kept.append(item)
         return kept, dropped
 
@@ -360,12 +409,24 @@ def pull(batch, db, names, folder, get=http):
     return summary
 
 
-def verify(pass_name, urls, folder, get=http):
+def verify(pass_name, urls, folder, get=http, chars=1500):
     fetcher = Fetcher(get)
     bodies = fetcher.many([lambda url=url: fetcher.fetch(url, pass_name) for url in urls])
-    pages = [{"url": url, "ok": body is not None, **(page(body) if body else {})} for url, body in zip(urls, bodies)]
+    pages = [{"url": url, "ok": body is not None, **(page(body, chars) if body else {})}
+             for url, body in zip(urls, bodies)]
     write(folder / f"verify-{pass_name}-{time.time_ns()}.json", {"source": "verify"}, fetcher.sources, pages)
     return pages
+
+
+def record(pass_name, urls, folder, failed=None):
+    now = datetime.now(state.TZ).replace(microsecond=0).isoformat()
+    sources = [{"url": url, "pass": pass_name, "status": "failed" if failed else "ok", "checked_at": now,
+                **({"reason": failed} if failed else {})} for url in urls]
+    for source in sources:
+        if not state.valid_url(source["url"]):
+            raise ValueError(f"Not a URL: {source['url']}")
+    write(folder / f"record-{pass_name}-{time.time_ns()}.json", {"source": "record"}, sources, [])
+    return sources
 
 
 def main():
@@ -377,7 +438,12 @@ def main():
     pulling.add_argument("sources", nargs="*", choices=list(SOURCES), default=[])
     checking = commands.add_parser("verify", help="fetch event pages and record them as sources")
     checking.add_argument("--pass", dest="pass_name", required=True, choices=run.PASSES)
+    checking.add_argument("--chars", type=int, default=1500, help="page text to print, default 1500")
     checking.add_argument("urls", nargs="+")
+    noting = commands.add_parser("record", help="stamp pages read another way, such as WebFetch")
+    noting.add_argument("--pass", dest="pass_name", required=True, choices=run.PASSES)
+    noting.add_argument("--failed", metavar="REASON", help="record a failed read with this reason")
+    noting.add_argument("urls", nargs="+")
     args = parser.parse_args()
     try:
         batch = json.loads(args.input.read_text(encoding="utf-8"))
@@ -386,8 +452,11 @@ def main():
         if args.command == "pull":
             names = args.sources or list(SOURCES)
             print(json.dumps(pull(batch, state.load(args.db), names, folder), ensure_ascii=False, indent=1))
+        elif args.command == "record":
+            for item in record(args.pass_name, args.urls, folder, args.failed):
+                print(json.dumps(item, ensure_ascii=False))
         else:
-            for item in verify(args.pass_name, args.urls, folder):
+            for item in verify(args.pass_name, args.urls, folder, chars=args.chars):
                 print(json.dumps(item, ensure_ascii=False))
     except (OSError, ValueError, KeyError) as error:
         parser.exit(1, f"Error: {error}\n")

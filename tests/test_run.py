@@ -142,6 +142,31 @@ class RunTests(unittest.TestCase):
         self.assertEqual(len(merged["events"]), 1)
         self.assertEqual(results["hidden"][0]["reason"], "duplicate of hidden sample_20261010_1000")
 
+    def test_reordered_and_abbreviated_venue_is_a_duplicate(self):
+        db, payload = database(), batch()
+        db["events"]["1"].update(venue="LGL, Veliki oder, Krekov trg 2", title="Emil in detektivi")
+        item = candidate(venue="Veliki oder Lutkovnega gledališča Ljubljana", title="Emil in detektivi (7+)",
+                         url="https://example.org/other")
+        item.pop("event_id")
+        payload["candidates"] = [item]
+        payload["sources"].append({**payload["sources"][0], "url": "https://example.org/other"})
+        merged, results = run.merge(db, payload)
+        self.assertEqual(len(merged["events"]), 1)
+        self.assertEqual(len(results["filtered"]), 1)
+        self.assertFalse(run.close_venues("Knjižnica Šiška", "Knjižnica Bežigrad"))
+        self.assertFalse(run.close_venues("Kongresni trg", "Prešernov trg"))
+
+    def test_collect_rejects_a_typed_check_time_from_the_future(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            staged = root / "input.json"
+            state.atomic_write(staged, state.json_text(batch()))
+            state.atomic_write(root / "research" / "slovenia.json", json.dumps({"sources": [
+                {"url": "https://example.org/x", "pass": "slovenia", "status": "ok",
+                 "checked_at": "2999-01-01T10:00:00+01:00"}]}))
+            with self.assertRaisesRegex(ValueError, "slovenia.json.*fetch.py record"):
+                run.collect(Namespace(input=staged))
+
     def test_distinct_shows_sharing_a_listing_are_kept(self):
         db, payload = database(), batch()
         db["events"]["1"].update(venue="Kinodvor, Dvorana", title="Kinobalon: Pokec")

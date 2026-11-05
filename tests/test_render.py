@@ -55,6 +55,7 @@ class HelperTests(unittest.TestCase):
                      flags=["age_stretch", "outside_ljubljana", "custom_flag"])
         self.assertEqual(render.notes_text(item), "razprodano, prijava, starost?, custom_flag")
         self.assertEqual(render.notes_text(event()), "")
+        self.assertEqual(render.notes_text(event(flags=["cancelled"])), "ODPOVEDANO")
 
     def test_place_names_the_town_only_when_it_is_not_ljubljana(self):
         self.assertIn("[Museum]", render.place_text(event(venue="Museum", city="Ljubljana")))

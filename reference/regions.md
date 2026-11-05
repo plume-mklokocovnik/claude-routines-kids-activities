@@ -38,7 +38,7 @@ Record `city` on every Pass 2 event and set the `outside_ljubljana` flag.
 | **Kino Otok – Podmornica** | Mid June. 2026: 06-10 to 06-14 | Izola | ★ Podmornica is the children's strand, ages 3–18, films plus **free** creative workshops and themed walks. Runs over the weekend |
 | **Altroke Sladka Istra** | Early September. 2026: 09-05, 09:00–18:00 | Koper, Hlavatyjev park | ★ **Free.** Dedicated children's corner: craft workshops, sensory lab, cookie decorating, face painting, street circus, wooden games |
 | **Dan Kobilarne Lipica** | September, from 09:30 | Lipica | ★ Free-entry open day. Mares and foals released to pasture, farrier demos, horse workshops, estate tours |
-| **Praznik kakijev** | Mid November. **2026 confirmed: 11-10 to 11-12** (the 11-14/11-16 date seen in some listings was actually 2025's) | Strunjan | 22nd edition. Salt-pan tours, persimmon workshops, largest-persimmon contest, local market. Confirmed 2026-09-24 via `zgodovinska-mesta.si` (index + dedicated event page, independently agreeing). ⚠️ The "Kaki ekspres" train was not confirmed |
+| **Praznik kakijev** | Mid November. **2026: 11-13 to 11-15**, 23rd edition. `zgodovinska-mesta.si` and `portoroz.si` agreed on 2026-11-05. The 11-10 to 11-12 dates recorded here on 2026-09-24 were wrong | Strunjan | Salt-pan tours, persimmon workshops, largest-persimmon contest, local market. ⚠️ The "Kaki ekspres" train was not confirmed |
 | **Žive jaslice** | 12-25 to 12-30, several times daily from 13:30 | Postojnska jama | 35th edition. 90 minutes, 5 km underground route, 18 scenes, 100+ actors. Ticketed. ⚠️ Long and cold, dress for a cave |
 
 ## Verified: Gorenjska
@@ -246,8 +246,8 @@ varies a lot by town, noted per row. Add the queries under each town to the Pass
 | Kino Otok | `https://kinootok.org/program/` |
 | Center za kulturo Izola | `https://center-izola.si/dogodki/` |
 | Kobilarna Lipica | `https://www.lipica.org/` — ⚠️ its own per-event pages returned what looked like stale 2023 content to WebFetch on 2026-09-22, but re-checked 2026-09-24: the real symptom is a JS bot-challenge (same as `fatburn.si` below), and `curl -A "<desktop UA>"` returns live, current content. Still use `https://www.tekaskipozdrav.si/` for *Tekaški pozdrav jeseni na Krasu* since that's the venue's own dedicated site, but don't write off other `lipica.org` event pages as stale without trying curl+UA first |
-| Fatburn (Celjski mali maraton) | `https://fatburn.si/celjski-mali-maraton/` — ⚠️ WebFetch always hits a "please wait, verifying…" bot-challenge here (and on `/blog/...`, `/product/...` sub-paths). `curl -A "<desktop browser User-Agent>"` bypasses it and returns full current content. Not dead, don't blacklist |
-| Visit Celje | `https://www.visitcelje.eu/` — same bot-challenge as fatburn.si, curl+UA works. Its "Tek očkov" product page (`/sl/izdelek/tek-ockov-2026/`) 404s even past the challenge — slug moved or not yet published, not a dead site |
+| Fatburn (Celjski mali maraton) | `https://fatburn.si/celjski-mali-maraton/`. ⚠️ WebFetch always hits a "please wait, verifying…" bot-challenge here (and on `/blog/...`, `/product/...` sub-paths). `curl -A "<desktop browser User-Agent>"` bypasses it and returns full current content. Not dead, don't blacklist. Read it with `fetch.py verify`, which sends that User-Agent, never WebFetch. 200 with full content on 2026-11-05 |
+| Visit Celje | `https://www.visitcelje.eu/`. Same bot-challenge as fatburn.si, curl+UA works. Use `fetch.py verify`, 200 on 2026-11-05. Its "Tek očkov" product page (`/sl/izdelek/tek-ockov-2026/`) 404s even past the challenge. The slug moved or is not yet published, the site is not dead |
 | Postojnska jama | `https://www.postojnska-jama.eu/sl/` |
 | Visit Kras | `https://www.visitkras.info/` |
 | Narodni dom Maribor, Art kamp | `https://nd-mb.si/` |

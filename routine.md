@@ -50,9 +50,9 @@ when its whole minimum set was read, and `partial` when part of it was. Recipes 
 
 | Pass | Minimum sources, read every run |
 |---|---|
-| `ljubljana` | MOL calendar (`nrOfItems=100`), MKL events API, Napovednik API `For-children`, Kinodvor Kinobalon, Kino Bežigrad index with start times, LGL schedule pages 1 to 3, SiTi Teater, MGML events, Ljubljanski grad, Cankarjev dom, Kulturnik `?what=otroci`, Citypark, the ZOO check |
+| `ljubljana` | MOL calendar (`nrOfItems=100`), MKL events API, Napovednik API `For-children`, Kinodvor Kinobalon, Kino Bežigrad index with start times, LGL schedule pages 1 to 3, SiTi Teater, MGML events, Ljubljanski grad, the Cankarjev dom feed, Citypark, the ZOO check |
 | `slovenia` | Napovednik API rows outside Ljubljana (`For-children`, `Events`), Zgodovinska mesta, and the regional source for every [regions.md](reference/regions.md) fixture inside the horizon |
-| `concerts_generic` | Napovednik API `Music`, the musical rows of `For-children`, Cankarjev dom family programme, then the Pass 3A queries |
+| `concerts_generic` | Napovednik API `Music`, the musical rows of `For-children` and of the Cankarjev dom feed, then the Pass 3A queries |
 | `concerts_watchlist` | The dated query set for every artist and every month in the horizon, then each artist's confirm-at page from [artists.md](reference/artists.md) |
 | `free_entry` | `sms-muzeji.si`, the first-Sunday pages of Narodna galerija, Narodni muzej, SEM and MAO, MGML, and every Pass 4 named check due in the horizon |
 | `avto_moto` | SVAMZ Firestore calendar, Moto klub MAK, Zveza SVS news, then the Pass 5 queries |
@@ -128,10 +128,10 @@ support, one session works the same groups in sequence with the same files.
 
    | Research file | Passes | Fetch files |
    |---|---|---|
-   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `zoo`, Ljubljana rows of `napovednik`. Also the rest of the ZOO check |
-   | `ljubljana-venues` | `ljubljana` | None. Kinodvor, LGL, SiTi, MGML, Ljubljanski grad, Cankarjev dom, Kulturnik, Citypark and the December check |
+   | `ljubljana-listings` | `ljubljana` | `mol`, `mkl`, `kinobezigrad`, `cankarjevdom`, `zoo`, Ljubljana rows of `napovednik`. Also the rest of the ZOO check |
+   | `ljubljana-venues` | `ljubljana` | None. Kinodvor, LGL, SiTi, MGML, Ljubljanski grad, Citypark and the December check |
    | `slovenia` | `slovenia` | `napovednik` rows with `pass_hint: slovenia` |
-   | `concerts-generic` | `concerts_generic` | `napovednik` `Music` rows and the musical `For-children` rows |
+   | `concerts-generic` | `concerts_generic` | `napovednik` `Music` rows, the musical `For-children` rows and the concert rows of `cankarjevdom` |
    | `concerts-watchlist` | `concerts_watchlist` | None |
    | `free-entry` | `free_entry` | None |
    | `avto-moto` | `avto_moto` | `svamz` |
@@ -214,26 +214,15 @@ of cancellation. Do not delete or expire a future event just because it was abse
    and leaves the branch for a human. When `main` moved during the sweep without
    touching `db.json`, `diff.md` or `runs/`, it replays the sweep on top first.
 3. Use `chore: Routine sweep <YYYY-MM-DD>` when committing a sweep. No ticket key.
-   Commit and push directly to `main`. Never open a pull request for a sweep and
-   never leave a sweep's work sitting only on a side branch. If the session's own
-   operating environment assigns a different branch and its own rules forbid
-   pushing elsewhere without explicit permission, that is a session-level
-   constraint this file cannot waive by itself: push the sweep there as a fallback,
-   but state plainly in the report and in `diff.md`'s runtime_notes that `main` was
-   not reached and why, rather than treating the branch push as equivalent to
-   publishing. This is the kind of runtime/repo-instruction conflict AGENTS.md
-   already says to report rather than silently resolve either way.
-4. A rejected push to `main` first means the remote has moved. Fetch `main`; if
-   the sweep's commit still applies cleanly on top (a fast-forward), push again.
-   If `main` now carries newer preference/database changes, do not rebase or merge
-   the generated database edits as text. Start from the latest `main` in a clean
-   checkout, re-run the staged merge against it, and push the result. Never
-   force-push, and never substitute a pull request for a push that was simply
-   rejected on a stale ref.
+   Push the sweep to the session's own `claude/*` branch and never to `main`. The
+   auto-merge workflow lands it on `main` within a minute, so the branch push is
+   the whole publication step. Never open a pull request, never force-push, and do
+   not add a runtime note about the branch.
+4. When the auto-merge workflow refuses because `main` changed `db.json`, `diff.md`
+   or `runs/` during the sweep, do not merge the database as text. The next run
+   starts from the newer `main` and covers the same window again.
 5. Report run ID, new/updated/expired counts, incomplete passes, validation outcome
-   and publication status (the commit now on `main`, or exactly what blocked it).
-   A local success is not a successful remote publication. Report blocked
-   publication without claiming that the run shipped.
+   and the `claude/*` branch the sweep was pushed to.
 
 Use scheduler-level serialization for publishing. The script lock covers only
 processes sharing one checkout. Checksum protection covers changes to that local

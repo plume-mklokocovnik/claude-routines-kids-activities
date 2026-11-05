@@ -70,6 +70,16 @@ Set `flags` on the event rather than dropping it:
 * `travel` — more than roughly 45 minutes from the city centre.
 * `not_toddler_appropriate`: billed for children, but plainly not for the 0-4 band because it is loud, frightening or physically demanding. Save it flagged. Time of day alone never triggers this flag.
 * `time_unknown`: the date is confirmed but the source publishes no start time. Store local midnight with the correct offset and this flag. The calendar shows `?`, not a fictional midnight. Never invent a plausible time. Some venues keep the time inside a booking widget the sweep cannot read.
+* `cancelled`: the source now says *odpovedano*, *odpade* or *prestavljeno* for a stored event. Resubmit it through its `event_id` with the source's title and this flag. The reader sees ODPOVEDANO. Never hide, delete or expire it for being cancelled. A postponement with a new date is a new occurrence.
+
+### Programmes on several dates
+
+* **Different content or a fixed slot per date** (parades on set evenings, a workshop
+  series with a new theme each time, repeat performances): one event per date and start
+  time inside the window. Save every date the source lists, never a sample of them.
+* **The same thing open every day** (a cabin open daily, a market, an installation): one
+  event on its first date inside the window. Put the whole range and the daily hours in
+  `price_text`, the same way as a free-entry week in Pass 4.
 
 
 ---

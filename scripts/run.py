@@ -48,6 +48,26 @@ def similar_titles(a, b):
     return bool(left and right) and len(left & right) / max(len(left), len(right)) >= 0.6
 
 
+PLACE_WORDS = {"ljubljana", "ulica", "cesta", "trg", "pri", "in", "na", "v"}
+
+
+def venue_tokens(venue):
+    """Distinctive venue words, plus the acronym of every run of words, so LGL matches its full name."""
+    raw = [word for word in words(re.sub(r"\([^)]*\)", " ", venue)).split() if not word.isdigit()]
+    tokens = {word for word in raw if word not in PLACE_WORDS and len(word) >= 3}
+    acronyms = {"".join(word[0] for word in raw[start:end])
+                for start in range(len(raw)) for end in range(start + 2, min(start + 5, len(raw)) + 1)}
+    return tokens, acronyms
+
+
+def close_venues(a, b):
+    (left, left_short), (right, right_short) = venue_tokens(a), venue_tokens(b)
+    if not left or not right:
+        return False
+    shared = len(left & right) + len(left & right_short) + len(right & left_short)
+    return shared / min(len(left), len(right)) > 0.5
+
+
 def same_slot(a, b):
     start_a, start_b = state.timestamp(a["start_time"]), state.timestamp(b["start_time"])
     if start_a == start_b:
@@ -69,7 +89,8 @@ def duplicate_of(item, events):
             parts[:len(other_parts)] == other_parts or other_parts[:len(parts)] == parts)
         contained = f" {title} " in f" {other_title} " or f" {other_title} " in f" {title} "
         close_venue = (word_prefix(parts[0], other_parts[0]) or word_prefix(other_parts[0], parts[0])
-                       or parts[0] in other_parts or other_parts[0] in parts)
+                       or parts[0] in other_parts or other_parts[0] in parts
+                       or close_venues(item["venue"], other["venue"]))
         if same_listing or (contained and close_venue):
             return key
     return None
@@ -323,8 +344,13 @@ def collect(args):
         for source in json.loads(fetched.read_text(encoding="utf-8")).get("sources", []):
             if source not in merged["sources"]:
                 merged["sources"].append(source)
+    now = datetime.now(state.TZ)
     for item in research:
         part = json.loads(item.read_text(encoding="utf-8"))
+        try:
+            reject_future_checks({"sources": part.get("sources", [])}, now)
+        except ValueError as error:
+            raise ValueError(f"{item.name}: {error}. Use fetch.py record instead of typing a time") from error
         for field in COLLECTED:
             for entry in part.get(field, []):
                 if entry not in merged[field]:

@@ -1,8 +1,10 @@
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import fetch
@@ -83,6 +85,47 @@ class FetchTests(unittest.TestCase):
                   '(Odpre se v novem oknu) <p>Za otroke od 6. leta.</p><script>x()</script>')
         self.assertEqual(fetch.page(markup)["text"], "Kuharska delavnica Za otroke od 6. leta.")
         self.assertEqual(fetch.slug("Ustvarjalnice z Galerijo C.C.U.: DEŽELA"), "ustvarjalnice-z-galerijo-ccu-dezela")
+
+    def test_cankarjev_dom_feed_reads_only_youth_pages_up_front(self):
+        feed = ("<response>"
+                "<item><title>Svet je kakor ringaraja</title><link>https://www.cd-cc.si/a</link>"
+                "<category>Za mlade in šole</category><ical_location>Linhartova dvorana</ical_location>"
+                "<ical_dtstart>2026-10-20T17:00:00+02:00</ical_dtstart></item>"
+                "<item><title>Simfonični večer</title><link>https://www.cd-cc.si/b</link><category>Glasba</category>"
+                "<ical_location>Gallusova dvorana</ical_location><ical_dtstart>2026-10-21T19:30:00+02:00</ical_dtstart></item>"
+                "<item><title>Lani</title><link>https://www.cd-cc.si/c</link><category>Glasba</category>"
+                "<ical_dtstart>2025-10-21T19:30:00+02:00</ical_dtstart></item></response>")
+        fetcher = fetch.Fetcher(stub({"https://www.cd-cc.si/feeds/kulturnik": feed,
+                                      "https://www.cd-cc.si/a": "<h1>Ringaraja</h1> Od 5. do 10. leta"}))
+        rows = fetch.cankarjevdom(fetcher, self.context())
+        self.assertEqual([(item["title"], item["venue"], item["start_time"], item["verified"]) for item in rows], [
+            ("Svet je kakor ringaraja", "Cankarjev dom, Linhartova dvorana", "2026-10-20T17:00:00+02:00", True),
+            ("Simfonični večer", "Cankarjev dom, Gallusova dvorana", "2026-10-21T19:30:00+02:00", False)])
+        self.assertEqual(rows[0]["notes"], "Ringaraja Od 5. do 10. leta")
+        self.assertEqual(len(fetcher.sources), 2)
+
+    def test_cancelled_rows_are_marked_and_keep_their_stored_twin(self):
+        rows = [fetch.row("[ODPOVEDANO] Family workshop", "2026-10-10T10:00:00+02:00", [], "Museum",
+                          "https://example.org/event", False)]
+        kept, _ = self.context().annotate(rows)
+        self.assertEqual((kept[0]["stored"], kept[0]["cancelled"]), ("sample_20261010_1000", True))
+
+    def test_http_falls_back_to_curl_when_python_gets_no_answer(self):
+        failure = fetch.urllib.error.URLError("certificate verify failed")
+        answer = subprocess.CompletedProcess([], 0, stdout="<h1>SiTi</h1>\n200".encode())
+        with patch("fetch.urllib.request.urlopen", side_effect=failure), \
+                patch("fetch.shutil.which", return_value="/usr/bin/curl"), \
+                patch("fetch.subprocess.run", return_value=answer) as curl:
+            self.assertEqual(fetch.http("https://www.sititeater.si/"), (200, "<h1>SiTi</h1>", ""))
+        self.assertIn("https://www.sititeater.si/", curl.call_args.args[0])
+
+    def test_record_stamps_the_current_time(self):
+        with tempfile.TemporaryDirectory() as directory:
+            sources = fetch.record("slovenia", ["https://example.org/a"], Path(directory), failed="HTTP 403")
+            self.assertEqual((sources[0]["status"], sources[0]["reason"]), ("failed", "HTTP 403"))
+            self.assertGreater(state.timestamp(sources[0]["checked_at"]), state.timestamp(batch()["started_at"]))
+            with self.assertRaises(ValueError):
+                fetch.record("slovenia", ["not a url"], Path(directory))
 
     def test_pull_and_verify_write_files_with_source_records(self):
         with tempfile.TemporaryDirectory() as directory:

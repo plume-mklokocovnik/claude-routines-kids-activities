@@ -18,6 +18,7 @@ MONTHS = ["januar", "februar", "marec", "april", "maj", "junij",
           "julij", "avgust", "september", "oktober", "november", "december"]
 
 FLAG_LABELS = {
+    "cancelled": "ODPOVEDANO",
     "age_stretch": "starost?",
     "travel": "daljša pot",
     "not_toddler_appropriate": "ni za malčke",
