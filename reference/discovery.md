@@ -86,15 +86,25 @@ engine only when neither file covers what you need. The queries below are the mi
 Applies to every pass, not just Pass 3. These are local events organised by Slovenian
 institutions for a Slovenian audience, and the English-language web barely knows they exist.
 
+* **Search with the built-in WebSearch tool.** Scripted DuckDuckGo and Google searches
+  do not work, see [`links.md`](links.md#search). A hit is a lead. Open the page before saving.
 * **Query in Slovenian. Always.** Never translate a query into English, and never run an English
   query as a fallback when a Slovenian one comes back thin. `kids events Ljubljana` returns
   tourist copy and listicles. `dogodki za otroke Ljubljana ta vikend` returns dated listings. An
   English query for a Slovenian local event is close to a wasted request.
 * **Use Slovenian month and time words** in dated queries: `oktober`, `november`, `ta vikend`,
   `ta konec tedna`, `prireditve`. Not `October`, not `this weekend`.
-* **Anchor the locale when results drift international.** Add `site:.si`, or a town name, to a
-  query that comes back with foreign results. The search tool is US-region and will happily
-  return an American event for a Slovenian-looking query.
+* **Every query names a place, because the search tool has no locale setting.** It is
+  US-region and will happily return an American event for a Slovenian-looking query.
+  * Pass 1 and Ljubljana concerts end with `Ljubljana`, the regional passes with
+    `Slovenija` or the town, and avto-moto and free entry with `Slovenija`, then once
+    with `Ljubljana` for the top queries.
+  * A query built around a unique Slovenian name, such as `Kinodvor`, `Festival Bobri` or
+    a venue, already carries its place. Add the year instead, so last year's page loses.
+  * When results still come back foreign, rerun once with `site:.si` added. For an artist
+    who shares a name with someone abroad or at home, add `Slovenija` and a children's word
+    (`otroški`, `za otroke`).
+  * The templates below already carry their anchor. Keep it when filling in the month.
 * **Prefer the Slovenian version of a bilingual site.** `/sl/` over `/en/`, `.si` over `.com`
   where both exist. The Slovenian page carries the full programme. The English page is usually a
   reduced tourist subset, and sometimes a stale copy that was never updated.
@@ -114,7 +124,7 @@ dogodki za otroke Ljubljana ta vikend
 brezplačne prireditve za otroke Ljubljana
 ure pravljic Ljubljana MKL
 lutkovna predstava Ljubljana za malčke
-Kinobalon Kinodvor spored
+Kinobalon Kinodvor spored <mesec> <leto>
 delavnice za otroke Ljubljana
 dan odprtih vrat brezplačna vadba otroci Ljubljana
 brezplačno preizkusi šport otroci Ljubljana
@@ -161,12 +171,19 @@ ticket seller.
 brezplačen koncert za otroke Ljubljana
 otroški koncert Ljubljana
 glasbena predstava za otroke Ljubljana
-koncert za najmlajše prost vstop
+koncert za najmlajše prost vstop Ljubljana
 otroške pesmi koncert Slovenija brezplačno
-družinski koncert prost vstop
-pravljični koncert za otroke
+družinski koncert prost vstop Ljubljana
+pravljični koncert za otroke Ljubljana
 glasbena urica za malčke Ljubljana
+brezplačen koncert Ljubljana <mesec> <leto>
+koncert vstop prost Ljubljana <mesec> <leto>
+koncert na prostem Ljubljana brezplačno
 ```
+
+The last three find free concerts in Ljubljana that are not billed for children, such
+as a town-square stage, a library concert or a December programme. Keep them under the
+target-audience rule in §1. Save what a family could attend and filter licensed-premises nightlife.
 
 Run each of those undated, then re-run the top four with a month anchor appended for every month
 in the horizon (`<mesec> <leto>`). Undated queries skew hard
@@ -188,8 +205,8 @@ Run a **dated** query per artist per month across the horizon rather than one un
 artist. Slovenian month names, because the listings are Slovenian:
 
 ```
-<ime> koncert <mesec> <leto>
-<ime> nastop <mesec> <leto>
+<ime> koncert <mesec> <leto> Slovenija
+<ime> nastop <mesec> <leto> Slovenija
 ```
 
 Then open the pages below, but only for the names a query actually put on the board, to pin down
@@ -216,7 +233,7 @@ Free is a label on the event, not a condition for saving it.
 **Dejan Dogaja and Vila Eksena.** Both are hired by municipalities, libraries and festivals, so
 their appearances are listed by the organiser and never on their own sites. The free ones are
 municipal stages and library summer programmes, the paid ones are ticketed festivals and
-children's carnivals. Query each name every month with `<ime> vstop prost <mesec> <leto>` as
+children's carnivals. Query each name every month with `<ime> vstop prost <mesec> <leto> Slovenija` as
 well as the two templates above, so the free stages are not buried under ticket sellers, then
 confirm on the organiser's own page. An entry that is free only for small children (the *Poli
 žur* pattern, under 4 free and capped at three children) is a paid event, so keep `is_free`
@@ -258,19 +275,19 @@ similar are typically outside Ljubljana, so apply Pass 2's geography rules: set 
 `outside_ljubljana`, and `travel` when the visit is worth more than roughly 45 minutes.
 
 ```
-brezplačen vstop muzej
-brezplačen vstop galerija
-ogledate brezplačno
-brez vstopnine muzej
-zastonj vstop muzej
-teden brezplačnega vstopa muzeji
-dan odprtih vrat muzej brezplačno
-rojstna hiša brezplačen vstop
-spominska hiša brezplačen vstop
+brezplačen vstop muzej Slovenija
+brezplačen vstop galerija Slovenija
+ogledate brezplačno muzej Slovenija
+brez vstopnine muzej Slovenija
+zastonj vstop muzej Slovenija
+teden brezplačnega vstopa muzeji Slovenija
+dan odprtih vrat muzej brezplačno Slovenija
+rojstna hiša brezplačen vstop Slovenija
+spominska hiša brezplačen vstop Slovenija
 ```
 
 Run each undated first, then re-run the top three with a month anchor for every month in the
-horizon, the same pattern as 3A. A one-day promotion tied to a fixed nationwide date (*Ta veseli
+horizon, the same pattern as 3A, and once more with `Ljubljana` in place of `Slovenija`. A one-day promotion tied to a fixed nationwide date (*Ta veseli
 dan kulture*, 12-03) is already a fixture in [`annual.md`](annual.md) and does not need a query
 once its window opens. Only search for it to confirm the current year's programme. A multi-day
 or venue-specific promotion, the Narodna galerija week among them, is what this pass exists to
@@ -301,8 +318,8 @@ horizon, because each one turns dozens of museums free at once. The fixture rows
 * **Free means free for the family.** Teden družin and the museum night open admission to
   everyone, so `is_free: true`. An institution that discounts or only offers a free guided hour
   is not free entry, so keep the exact wording in `price_text`.
-* **Queries.** `Za družine brezplačno <leto>`, `Teden družin <leto> brezplačen vstop muzej`,
-  `Mednarodni dan muzejev <leto> brezplačen vstop`, `Poletna muzejska noč <leto> program`.
+* **Queries.** `Za družine brezplačno <leto>`, `Teden družin <leto> brezplačen vstop muzej Slovenija`,
+  `Mednarodni dan muzejev <leto> brezplačen vstop Slovenija`, `Poletna muzejska noč <leto> program`.
   Add the city or region for a Ljubljana or regional sweep. Ljubljana's MGML locations
   (Mestni muzej, Arheopark Emona, Plečnikova hiša) join both campaigns every year.
 
@@ -324,13 +341,25 @@ Save the event, record whatever price text the source publishes (it is usually t
 rally fee, not a spectator charge), and let the reader judge.
 
 ```
-srečanje starodobnikov <mesec> <leto>
+srečanje starodobnikov <mesec> <leto> Slovenija
 starodobna vozila srečanje Slovenija
 motoristično srečanje starodobniki Slovenija
-Tomos srečanje mopedi
+Tomos srečanje mopedi Slovenija
+Tomos srečanje <leto> Slovenija
+srečanje Tomosov <mesec> <leto> Slovenija
+Tomos klub srečanje Slovenija
+srečanje mopedistov <leto> Slovenija
 youngtimer srečanje Slovenija
 oldtimer rally Slovenija <mesec> <leto>
+srečanje starodobnikov Ljubljana <mesec> <leto>
+avto moto srečanje Ljubljana <leto>
+moto srečanje Ljubljana <mesec> <leto>
+Cars and Coffee Ljubljana <leto>
 ```
+
+Tomos and moped clubs announce mostly on Facebook. Also run `site:facebook.com Tomos srečanje <leto> Slovenija`
+for leads, then confirm each date on a non-social page under the 3B confirmation rule.
+*Cars and Coffee* is the event's own name, so it stays in English.
 
 Read the SVAMZ full-year calendar before searching, it is the single best-structured source and it
 already spans the whole year: `https://svamz.com/koledar-dogodkov/`. Fetch recipe in

@@ -15,7 +15,7 @@ skews older than the target band, it is marked ⚠️ below.
 
 | Source | URL | What it gives | Notes |
 |---|---|---|---|
-| Napovednik.com | `https://napovednik.com/za-otroke` | The single best structured feed. Sub-paths: `/za-otroke/prireditve-za-otroke`, `/za-otroke/predstave-za-otroke`, `/za-otroke/sport-za-otroke`, `/za-otroke/aktivnosti-za-otroke`, `/za-otroke/pocitnisko-varstvo` | Also `/prireditve/plesna-prireditev` and `/prireditve/sportna-prireditev` for the new dance/sport categories. Slug pattern `/<kategorija>/<slug>-<id>` |
+| Napovednik.com | `https://napovednik.com/za-otroke` | The single best structured feed. Sub-paths: `/za-otroke/prireditve-za-otroke`, `/za-otroke/predstave-za-otroke`, `/za-otroke/sport-za-otroke`, `/za-otroke/aktivnosti-za-otroke`, `/za-otroke/pocitnisko-varstvo` | Read the JSON API, not the HTML ([recipe](links.md#napovednik-fetch-recipe)). Also `/prireditve/plesna-prireditev` and `/prireditve/sportna-prireditev` for the new dance/sport categories. Slug pattern `/<kategorija>/<slug>-<id>` |
 | Visit Ljubljana | `https://www.visitljubljana.com/sl/obiskovalci/prireditve/` | Official city calendar. Filters: **Prost vstop**, **Za družine**, **Šport in rekreacija**, **Prireditve na prostem**, plus **Ljubljana / Izven Ljubljane** and a from–to date range | The "Prost vstop" + "Za družine" combination is the highest-yield query on the whole list |
 | MOL event calendar | `https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100` | Municipal calendar. KoloPark races, festival športa, Veseli december, district events, markets, fire-station open days | **Sweep every run with `curl`, never the default 20-item view. Do not use the `cat=124` Otroci filter, it returns zero.** Recipe in [`links.md`](links.md) |
 | Kulturnik | `https://dogodki.kulturnik.si/?what=otroci` | Cultural events tagged `otroci`, queryable by venue via `&where=` | |
@@ -55,9 +55,10 @@ skews older than the target band, it is marked ⚠️ below.
    deletes the entire venue. It should not: tickets are sold per show, 8,10 € at the last check.
    [discovery.md](discovery.md) §1 rule 1 now carries the single-ticket carve-out for exactly this. Take the
    dated shows, leave the `ABONMA 2026/2027` enrollment page.
-2. **No start times anywhere the sweep can read them.** The index gives `V kinu od: DD.MM.YYYY`
-   and the detail page adds age, price and duration, but the time sits inside the booking widget
-   behind *Nakup* and `#tickets`. Set the `time_unknown` flag rather than guessing a matinee hour.
+2. **Start times only come from the booking widget.** The index gives `V kinu od: DD.MM.YYYY`
+   and the detail page adds age, price and duration. The time loads from a read-only AJAX call,
+   recipe in [`links.md`](links.md#kino-bežigrad-start-times-fetch-recipe). Use `time_unknown`
+   only when that call returns no `data-hour`. Never guess a matinee hour.
 3. **The children's menu is mostly out of scope.** `/otroski-abonma/`, `/pocitnisko-varstvo/`,
    `/gledaliska-sola/` and `/otroska-praznovanja/` are a subscription, holiday care, a course and
    private birthday parties. Rules 1 and 3 exclude all four. `/predstave-in-delavnice/` is the one
@@ -294,8 +295,9 @@ Corrections that came out of that research and matter here:
 ## Search queries
 
 Every query on this page is Slovenian, and that is a rule rather than a habit. [discovery.md](discovery.md) §2
-*Language and locale* has the full version: query in Slovenian, use Slovenian month names, anchor
-with `site:.si` when results drift international, prefer `/sl/` over `/en/` on bilingual sites,
+*Language and locale* has the full version: query in Slovenian, use Slovenian month names, name a
+place in every query (`Ljubljana`, `Slovenija` or a town) because the search tool has no locale
+setting, add `site:.si` when results still drift international, prefer `/sl/` over `/en/` on bilingual sites,
 and save titles in the language they were published in. Do not add English variants to these
 lists.
 
@@ -306,7 +308,7 @@ dogodki za otroke Ljubljana ta vikend
 brezplačne prireditve za otroke Ljubljana
 ure pravljic Ljubljana MKL
 lutkovna predstava Ljubljana za malčke
-Kinobalon Kinodvor spored
+Kinobalon Kinodvor spored <mesec> <leto>
 delavnice za otroke Ljubljana
 dan odprtih vrat brezplačna vadba otroci Ljubljana
 brezplačno preizkusi šport otroci Ljubljana
@@ -345,10 +347,10 @@ družinski festival Slovenija brezplačno
 brezplačen koncert za otroke Ljubljana
 otroški koncert Ljubljana
 glasbena predstava za otroke Ljubljana
-koncert za najmlajše prost vstop
+koncert za najmlajše prost vstop Ljubljana
 otroške pesmi koncert Slovenija brezplačno
-družinski koncert prost vstop
-pravljični koncert za otroke
+družinski koncert prost vstop Ljubljana
+pravljični koncert za otroke Ljubljana
 glasbena urica za malčke Ljubljana
 ```
 
@@ -356,34 +358,34 @@ glasbena urica za malčke Ljubljana
 between a tour date and a Wikipedia page:
 
 ```
-Čuki koncert <mesec> 2026
-Otroški pevski zbor RTV Slovenija koncert <mesec> 2026
-Romana Krajnčan koncert za otroke <mesec> 2026
-Neca Falk koncert <mesec> 2026
-Alenka Kolman otroški koncert <mesec> 2026         # returns Alenka Godec, add "otroški"
-Adi Smolar koncert <mesec> 2026
-Ribič Pepe nastop za otroke <mesec> 2026
+Čuki koncert <mesec> <leto> Slovenija
+Otroški pevski zbor RTV Slovenija koncert <mesec> <leto>
+Romana Krajnčan koncert za otroke <mesec> <leto> Slovenija
+Neca Falk koncert <mesec> <leto> Slovenija
+Alenka Kolman otroški koncert <mesec> <leto> Slovenija   # returns Alenka Godec, add "otroški"
+Adi Smolar koncert <mesec> <leto> Slovenija
+Ribič Pepe nastop za otroke <mesec> <leto> Slovenija
 
-site:facebook.com <ime> koncert
-site:instagram.com <ime> koncert
-site:.si <ime> koncert <mesec> 2026                # locale anchor, the tool is US-region
+site:facebook.com <ime> koncert Slovenija
+site:instagram.com <ime> koncert Slovenija
+site:.si <ime> koncert <mesec> <leto>                # when results still drift international
 ```
 
 ### Seasonal, run in the matching month
 
 ```
-Festival Bobri program            # Jan–Apr
-Igraj se z mano festival program  # May
-Poletna muzejska noč program      # June
-Ana Desetnica program             # late June
-Čarobni dan Arboretum             # late Aug
-Ljubljanski festival športa Tivoli  # early Sep
-Otroški bazar program             # Sep
-Pikin festival program            # Sep
-Dan slovenskega športa brezplačne aktivnosti  # 23 Sep
-Lumpi tek prijave                 # Oct
-Noč čarovnic ZOO Ljubljana        # Oct
-Veseli december Ljubljana dedek mraz program  # Dec
+Festival Bobri <leto> program            # Jan–Apr
+Igraj se z mano Ljubljana <leto> program # May
+Poletna muzejska noč <leto> program      # June
+Ana Desetnica <leto> program             # late June
+Čarobni dan Arboretum <leto>             # late Aug
+Ljubljanski festival športa Tivoli <leto>  # early Sep
+Otroški bazar Ljubljana <leto> program   # Sep
+Pikin festival Velenje <leto> program    # Sep
+Dan slovenskega športa <leto> brezplačne aktivnosti  # 23 Sep
+Lumpi tek <leto> prijave                 # Oct
+Noč čarovnic ZOO Ljubljana <leto>        # Oct
+Veseli december Ljubljana <leto> dedek mraz program  # Dec
 ```
 
 ---
@@ -391,7 +393,8 @@ Veseli december Ljubljana dedek mraz program  # Dec
 ## Scraping notes
 
 * **Napovednik.com** is the only source with a clean, consistent, category-scoped URL structure.
-  Start every sweep there.
+  Start every sweep there, through its JSON API ([recipe](links.md#napovednik-fetch-recipe)).
+  The HTML is an Angular shell that hides most of the listing.
 * **MKL** exposes filter-bar query params, so filter server-side on `ciljna_skupina` instead of
   pulling the full calendar.
 * **Visit Ljubljana** has the single most useful filter combination in the whole registry:

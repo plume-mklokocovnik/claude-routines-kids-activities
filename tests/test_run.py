@@ -115,6 +115,83 @@ class RunTests(unittest.TestCase):
         self.assertIn("Adults 8 EUR, children free", report.build(record))
         self.assertIn(results["new"][0]["event_id"], report.build(record))
 
+    def test_reworded_duplicate_is_filtered_instead_of_added(self):
+        db, payload = database(), batch()
+        db["events"]["1"].update(venue="Kino Bežigrad", title="Pika Nogavička (z obiskom Miklavža)")
+        for changes in ({"venue": "Kino Bežigrad, Ljubljana", "title": "Predstava z obiskom Miklavža: Pika Nogavička"},
+                        {"venue": "Kino Bežigrad (Linhartova)", "title": "Gledališče: Pika Nogavička (z obiskom Miklavža)",
+                         "url": "https://example.org/other", "start_time": "2026-10-10T00:00:00+02:00",
+                         "flags": ["time_unknown"]}):
+            item = candidate(**changes)
+            item.pop("event_id")
+            payload["candidates"].append(item)
+        payload["sources"].append({**payload["sources"][0], "url": "https://example.org/other"})
+        merged, results = run.merge(db, payload)
+        self.assertEqual(len(merged["events"]), 1)
+        self.assertEqual([item["reason"] for item in results["filtered"]],
+                         ["Likely duplicate of sample_20261010_1000. Pass that event_id to refresh it"] * 2)
+
+    def test_duplicate_of_hidden_event_stays_hidden(self):
+        db, payload = database(), batch()
+        db["events"]["1"].update(venue="SiTi Teater BTC, Ameriška ulica 3", status="hidden",
+                                 title="SiTi Teater sobotni dopoldnevi: Peter Klepec")
+        item = candidate(venue="SiTi Teater, Ljubljana", title="Peter Klepec")
+        item.pop("event_id")
+        payload["candidates"] = [item]
+        merged, results = run.merge(db, payload)
+        self.assertEqual(len(merged["events"]), 1)
+        self.assertEqual(results["hidden"][0]["reason"], "duplicate of hidden sample_20261010_1000")
+
+    def test_distinct_shows_sharing_a_listing_are_kept(self):
+        db, payload = database(), batch()
+        db["events"]["1"].update(venue="Kinodvor, Dvorana", title="Kinobalon: Pokec")
+        second = candidate(venue="Kinodvor, Mala dvorana", title="Kinobalon: Mambo")
+        later = candidate(venue="Kinodvor, Dvorana", start_time="2026-10-10T17:00:00+02:00")
+        for item in (second, later):
+            item.pop("event_id")
+        payload["candidates"] = [second, later]
+        merged, results = run.merge(db, payload)
+        self.assertEqual(len(results["new"]), 2)
+        self.assertEqual(len(merged["events"]), 3)
+
+    def test_future_source_check_is_rejected_on_apply(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            path, staged = root / "db.json", root / "input.json"
+            state.save(path, database())
+            payload = batch()
+            payload["base_sha256"] = state.digest(path)
+            payload["sources"][0]["checked_at"] = "2999-01-01T09:30:00+01:00"
+            state.atomic_write(staged, state.json_text(payload))
+            with self.assertRaisesRegex(ValueError, "later than now"):
+                run.apply(Namespace(db=path, input=staged, dry_run=True))
+
+    def test_collect_rebuilds_input_from_research_and_fetch_files(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            staged = root / "input.json"
+            payload = batch()
+            payload["sources"] = []
+            state.atomic_write(staged, state.json_text(payload))
+            source = {"url": "https://example.org/event", "pass": "ljubljana", "status": "ok",
+                      "checked_at": "2026-09-28T12:01:00+02:00"}
+            state.atomic_write(root / "fetch" / "mol.json", json.dumps({"sources": [source], "rows": []}))
+            state.atomic_write(root / "research" / "ljubljana-a.json", json.dumps({
+                "passes": {"ljubljana": {"status": "ok"}}, "candidates": [candidate()], "leads": [],
+                "runtime_notes": ["note"]}))
+            state.atomic_write(root / "research" / "ljubljana-b.json", json.dumps({
+                "passes": {"ljubljana": {"status": "partial", "reason": "LGL answered 503."}},
+                "sources": [source], "runtime_notes": ["note"]}))
+            args = Namespace(input=staged)
+            run.collect(args)
+            run.collect(args)
+            collected = json.loads(staged.read_text())
+            self.assertEqual(collected["run_id"], payload["run_id"])
+            self.assertEqual((len(collected["sources"]), len(collected["candidates"]), collected["runtime_notes"]),
+                             (1, 1, ["note"]))
+            self.assertEqual(collected["passes"]["ljubljana"], {"status": "partial", "reason": "LGL answered 503."})
+            self.assertEqual(collected["passes"]["slovenia"]["status"], "skipped")
+
     def test_stale_source_evidence_is_rejected(self):
         payload = batch()
         payload["sources"][0]["checked_at"] = "2026-09-27T12:00:00+02:00"

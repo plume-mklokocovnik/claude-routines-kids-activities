@@ -1,0 +1,396 @@
+#!/usr/bin/env python3
+"""Read structured event sources for a staged run and record each request with its real time.
+
+    python3 scripts/fetch.py <input.json> pull [source ...]
+    python3 scripts/fetch.py <input.json> verify --pass <pass> <url> [url ...]
+
+`pull` reads the listed sources, or all of them, and writes one file per source to
+`.work/<run_id>/fetch/`. `verify` fetches event pages and prints their title and text.
+Every file carries `sources` records in the staged-input shape, which
+`run.py collect` copies into the input. Rows are leads for the researcher to judge.
+Nothing here decides scope. Rows outside the run window or hidden by the user are
+dropped, and a row that matches a stored event names it in `stored`. A row with
+`verified: false` needs `verify` on its URL before it can become a candidate.
+"""
+
+import argparse
+import html
+import json
+import re
+import sys
+import threading
+import time
+import unicodedata
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import run
+import state
+
+USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+WORKERS = 4
+TEXT_LIMIT = 400
+
+
+def http(url, data=None, timeout=40):
+    """Return (status, body, reason). Status 0 means the request never got an answer."""
+    body = data.encode() if data is not None else None
+    headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/json,*/*",
+               "Accept-Language": "sl,en;q=0.5"}
+    if body is not None:
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+    request = urllib.request.Request(url, data=body, headers=headers)
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.status, response.read().decode("utf-8", "replace"), ""
+    except urllib.error.HTTPError as error:
+        return error.code, "", f"HTTP {error.code}"
+    except (urllib.error.URLError, TimeoutError, OSError) as error:
+        return 0, "", f"No answer: {getattr(error, 'reason', error)}"
+
+
+class Fetcher:
+    def __init__(self, get=http):
+        self.get = get
+        self.sources = []
+        self.lock = threading.Lock()
+
+    def fetch(self, url, pass_name, data=None, record=None):
+        status, body, reason = self.get(url, data)
+        if status == 200 and not body.strip():
+            status, reason = 0, "Empty response"
+        entry = {"url": record or url, "pass": pass_name, "status": "ok" if status == 200 else "failed",
+                 "checked_at": datetime.now(state.TZ).replace(microsecond=0).isoformat()}
+        if status != 200:
+            entry["reason"] = reason or f"HTTP {status}"
+        with self.lock:
+            self.sources.append(entry)
+        return body if status == 200 else None
+
+    def json(self, url, pass_name):
+        body = self.fetch(url, pass_name)
+        try:
+            return json.loads(body) if body else None
+        except ValueError:
+            return None
+
+    def many(self, jobs):
+        with ThreadPoolExecutor(WORKERS) as pool:
+            return list(pool.map(lambda job: job(), jobs))
+
+
+def plain(markup, limit=TEXT_LIMIT):
+    text = re.sub(r"(?is)<(script|style|noscript|svg)\b.*?</\1>", " ", markup or "")
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text))).strip()
+    return text[:limit].rstrip() + ("…" if len(text) > limit else "")
+
+
+def page(markup, limit=1500):
+    """Title, canonical URL and the text from the first heading on, without navigation."""
+    title = re.search(r'(?is)<meta[^>]+property="og:title"[^>]+content="([^"]*)"', markup) or \
+        re.search(r"(?is)<title[^>]*>(.*?)</title>", markup)
+    canonical = re.search(r'(?is)<meta[^>]+property="og:url"[^>]+content="([^"]+)"', markup)
+    body = re.sub(r"(?is)<(nav|header|footer)\b.*?</\1>", " ", markup)
+    heading = re.search(r"(?i)<h1\b", body)
+    text = plain(body[heading.start():] if heading else body, limit + 300)
+    text = re.sub(r"Deli na:?(\s*Deli na [^()]{1,40}\(Odpre se v novem oknu\))*\s*", "", text)
+    return {"title": plain(title.group(1), 200) if title else "",
+            "canonical": html.unescape(canonical.group(1)) if canonical else "",
+            "text": text[:limit].rstrip() + ("…" if len(text) > limit else "")}
+
+
+def slug(text):
+    text = unicodedata.normalize("NFKD", re.sub(r"[.'’]", "", text.casefold()))
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
+def local(year, month, day, hour=None, minute=0):
+    value = datetime(int(year), int(month), int(day), int(hour or 0), int(minute), tzinfo=state.TZ)
+    return value.isoformat(), [] if hour is not None else ["time_unknown"]
+
+
+def row(title, start, flags, venue, url, verified, **extra):
+    item = {"title": html.unescape(title).strip(), "start_time": start, "flags": flags,
+            "venue": html.unescape(venue or "").strip(), "url": url, "verified": verified}
+    item.update({key: value for key, value in extra.items() if value not in (None, "", [])})
+    return item
+
+
+# Sources. Each takes (fetcher, context) and returns rows.
+
+def mol(f, ctx):
+    listing = "https://www.ljubljana.si/sl/aktualno/dogodki?nrOfItems=100"
+    markup = f.fetch(listing, "ljubljana") or ""
+    cards = []
+    for card in markup.split('class="list-type--card--item"')[1:]:
+        link = re.search(r'<h3[^>]*>\s*<a href="(/sl/aktualno/dogodki/[^"]+)">(.*?)</a>', card, re.S)
+        when = re.search(r'date-from">\s*(\d{1,2})\.\s*(\d{1,2})\.\s*(\d{4})(?:\s+(\d{1,2}):(\d{2}))?', card)
+        if not link or not when:
+            continue
+        venue = re.search(r'item-iteration-list--item">\s*<p class="text-normal">(.*?)</p>', card, re.S)
+        tags = [plain(tag, 60) for tag in re.findall(r'list-tags-item"><span>(.*?)</span>', card)]
+        day, month, year, hour, minute = when.groups()
+        cards.append((f"https://www.ljubljana.si{link.group(1)}", plain(link.group(2), 200),
+                      local(year, month, day, hour, minute or 0), plain(venue.group(1), 200) if venue else "", tags))
+    cards = [card for card in cards if ctx.in_window(card[2][0], card[2][1])]
+    details = f.many([lambda url=card[0]: f.fetch(url, "ljubljana") for card in cards])
+    return [row(title, start, flags, venue, url, body is not None, city="Ljubljana", tags=tags,
+                notes=page(body, TEXT_LIMIT)["text"] if body else None)
+            for (url, title, (start, flags), venue, tags), body in zip(cards, details)]
+
+
+def mkl(f, ctx):
+    url = ("https://www.mklj.si/wp-json/tribe/events/v1/events?per_page=50"
+           f"&start_date={ctx.clock:%Y-%m-%d}&end_date={ctx.horizon:%Y-%m-%d}")
+    rows = []
+    for _ in range(30):
+        data = f.json(url, "ljubljana")
+        if not data:
+            break
+        for event in data.get("events", []):
+            when = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):\d{2}", event.get("start_date", ""))
+            if not when:
+                continue
+            year, month, day, hour, minute = when.groups()
+            start, flags = local(year, month, day, None if event.get("all_day") else hour, minute)
+            venue = event.get("venue") or {}
+            rows.append(row(event.get("title", ""), start, flags, venue.get("venue", "") if isinstance(venue, dict) else "",
+                            event.get("url", ""), False, city="Ljubljana",
+                            tags=[item.get("name") for item in event.get("categories", [])],
+                            price_text=event.get("cost"), notes=plain(event.get("description"))))
+        url = data.get("next_rest_url")
+        if not url:
+            break
+    return rows
+
+
+NAPOVEDNIK_API = "https://api.napovednik.com/api/website/v1"
+
+
+def napovednik(f, ctx):
+    labels = f.json("https://napovednik.com/assets/i18n/sl.json", "ljubljana") or {}
+    names = labels.get("CodeList", {})
+    events = []
+    for genre, pass_name in (("For-children", "ljubljana"), ("Events", "ljubljana"), ("Music", "concerts_generic")):
+        data = f.json(f"{NAPOVEDNIK_API}/search?genreName={genre}", pass_name) or {}
+        events += [(item, pass_name) for item in data.get("events", [])]
+    seen, unique = set(), []
+    for item, pass_name in events:
+        if item.get("idDataEvent") not in seen:
+            seen.add(item.get("idDataEvent"))
+            unique.append((item, pass_name))
+
+    def one(item, pass_name):
+        town = (item.get("location") or {}).get("postalName") or ""
+        if pass_name == "ljubljana" and town and not town.startswith("Ljubljana"):
+            pass_name = "slovenia"
+        detail = f.json(f"{NAPOVEDNIK_API}/events/{item['idDataEvent']}", pass_name) or {}
+        genre = item.get("genre") or {}
+        path = "/".join(slug(names.get(group, {}).get(key, key))
+                        for group, key in (("Genre", genre.get("genreTranslationName", "")),
+                                           ("Sub-genre", genre.get("subGenreTranslationName", ""))))
+        human = f"https://napovednik.com/{path}/{slug(item.get('name', ''))}-{item['idDataEvent']}"
+        body = f.fetch(human, pass_name)
+        canonical = page(body)["canonical"] if body else ""
+        if body and canonical and canonical != human:
+            human = canonical if f.fetch(canonical, pass_name) else human
+        return item, detail, human, body is not None, pass_name
+
+    rows = []
+    for item, detail, human, verified, pass_name in f.many(
+            [lambda item=item, pass_name=pass_name: one(item, pass_name) for item, pass_name in unique]):
+        when = re.match(r"(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})", detail.get("eventStart") or item.get("startDateTime", ""))
+        if not when:
+            continue
+        location = detail.get("location") or item.get("location") or {}
+        venue = ", ".join(part for part in (location.get("name"), location.get("address")) if part)
+        genre = item.get("genre") or {}
+        rows.append(row(item.get("name", ""), *local(*when.groups()), venue, human, verified,
+                        city=location.get("postalName"), pass_hint=pass_name,
+                        tags=[genre.get("genreTranslationName"), genre.get("subGenreTranslationName")],
+                        price_text=detail.get("ticketPrice"), organiser=item.get("organizationName"),
+                        notes=plain(detail.get("descriptionSl"))))
+    return rows
+
+
+def kinobezigrad(f, ctx):
+    base = "https://www.kino-bezigrad.si"
+    markup = f.fetch(f"{base}/predstave-in-delavnice/", "ljubljana") or ""
+    shows = {}
+    for post, url, title in re.findall(
+            r'id="post-(\d+)".*?<div class="movie_title"><a href="([^"]+/predstava/[^"]+)">(.*?)</a>', markup, re.S):
+        shows.setdefault(url, (post, plain(title, 200)))
+
+    def one(url, post, title):
+        body = f.fetch(url, "ljubljana")
+        if not body:
+            return []
+        dates = json.loads(re.search(r"movieScreeningDates\s*=\s*(\[[^\]]*\])", body).group(1)) \
+            if "movieScreeningDates" in body else []
+        age = re.search(r'event_restriction">\s*(\d+)\s*\+', body)
+        price = re.search(r"[^.<>]*\d+,\d{2}\s*€[^.<>]*", body)
+        found = []
+        for date in dates:
+            year, month, day = date.split("-")
+            start, _ = local(year, month, day)
+            if not ctx.in_window(start, ["time_unknown"]):
+                continue
+            ajax = f"{base}/wp-admin/admin-ajax.php"
+            fields = f"action=event-filter&date={month}.{day}.{year}&post_id={post}&all_tickets="
+            hours = re.findall(r'data-hour="(\d{1,2}):(\d{2})"', f.fetch(ajax, "ljubljana", fields, f"{ajax}?{fields}") or "")
+            for hour, minute in sorted(set(hours)) or [(None, 0)]:
+                found.append(row(title, *local(year, month, day, hour, minute), "Kino Bežigrad", url, True,
+                                 city="Ljubljana", age_min=int(age.group(1)) if age else None,
+                                 price_text=plain(price.group(0), 160) if price else None))
+        return found
+
+    return [item for found in f.many([lambda url=url, post=post, title=title: one(url, post, title)
+                                      for url, (post, title) in shows.items()]) for item in found]
+
+
+def svamz(f, ctx):
+    script = f.fetch("https://svamz.com/js/dogodki-data.js", "avto_moto") or ""
+    base = re.search(r'BASE\s*=\s*"([^"]+)"', script)
+    key = re.search(r'KEY\s*=\s*"([^"]+)"', script)
+    base = base.group(1) if base else "https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/"
+    key = key.group(1) if key else "AIzaSyAm1Dnl1lt0nZ0Rb7ikeVDXaRN1lTACS38"
+    documents, token = [], ""
+    for _ in range(20):
+        data = f.json(f"{base}dogodki?pageSize=300&key={key}" + (f"&pageToken={token}" if token else ""), "avto_moto")
+        if not data:
+            break
+        documents += data.get("documents", [])
+        token = data.get("nextPageToken")
+        if not token:
+            break
+
+    def value(fields, name):
+        return next(iter((fields.get(name) or {}).values()), "")
+
+    picked = []
+    for document in documents:
+        fields = document.get("fields", {})
+        when = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", value(fields, "start"))
+        if when:
+            start, flags = local(*when.groups())
+            if ctx.in_window(start, flags):
+                picked.append((document["name"].rsplit("/", 1)[-1], fields, start, flags))
+    detail = [f"https://svamz.com/event.html?id={identifier}" for identifier, *_ in picked]
+    fetched = f.many([lambda url=url: f.fetch(url, "avto_moto") for url in detail])
+    return [row(value(fields, "title"), start, flags, value(fields, "place"), url, body is not None,
+                end=value(fields, "end"), contact=value(fields, "contact"), notes=plain(value(fields, "description")))
+            for (identifier, fields, start, flags), url, body in zip(picked, detail, fetched)]
+
+
+def zoo(f, ctx):
+    products = f.json("https://trgovina.zoo.si/wp-json/wp/v2/product?per_page=50", "ljubljana") or []
+    return [{"title": html.unescape(item["title"]["rendered"]), "url": item["link"], "verified": False,
+             "modified": item.get("modified"), "venue": "ZOO Ljubljana, Večna pot 70",
+             "notes": plain(item["content"]["rendered"], 600)}
+            for item in products if 19 in item.get("product_cat", [])]
+
+
+SOURCES = {"mol": mol, "mkl": mkl, "napovednik": napovednik, "kinobezigrad": kinobezigrad,
+           "svamz": svamz, "zoo": zoo}
+
+
+class Context:
+    def __init__(self, batch, db):
+        self.clock = state.timestamp(batch["started_at"])
+        self.horizon = state.add_months(self.clock)
+        self.db = db
+        self.by_day = {}
+        for key, event in db["events"].items():
+            self.by_day.setdefault(state.timestamp(event["start_time"]).date(), {})[key] = event
+
+    def in_window(self, start, flags):
+        item = {"start_time": start, "flags": flags}
+        return not state.expired(item, self.clock) and state.timestamp(start) <= self.horizon
+
+    def annotate(self, rows):
+        kept, dropped = [], {"outside_window": 0, "hidden": 0}
+        for item in rows:
+            if "start_time" not in item:
+                kept.append(item)
+                continue
+            if not self.in_window(item["start_time"], item["flags"]):
+                dropped["outside_window"] += 1
+                continue
+            probe = {"category": "", **item}
+            same_day = self.by_day.get(state.timestamp(item["start_time"]).date(), {})
+            twin_key = next((key for key, event in same_day.items()
+                             if run.fingerprint(event) == run.fingerprint(probe)), None) or run.duplicate_of(probe, same_day)
+            twin = same_day.get(twin_key)
+            if state.hidden_reason(self.db, probe) or (twin and (twin.get("status") == "hidden"
+                                                                 or state.hidden_reason(self.db, twin))):
+                dropped["hidden"] += 1
+                continue
+            if twin:
+                item["stored"] = twin["event_id"]
+            kept.append(item)
+        return kept, dropped
+
+
+def write(path, header, sources, rows):
+    lines = ",\n".join(json.dumps(item, ensure_ascii=False, separators=(",", ":")) for item in rows)
+    found = ",\n".join(json.dumps(item, ensure_ascii=False, separators=(",", ":")) for item in sources)
+    head = json.dumps(header, ensure_ascii=False, separators=(",", ":"))[:-1]
+    state.atomic_write(path, f'{head},"sources":[\n{found}\n],"rows":[\n{lines}\n]}}\n')
+
+
+def pull(batch, db, names, folder, get=http):
+    ctx = Context(batch, db)
+    summary = {}
+    for name in names:
+        fetcher = Fetcher(get)
+        started = time.monotonic()
+        rows, dropped = ctx.annotate(SOURCES[name](fetcher, ctx))
+        write(folder / f"{name}.json", {"source": name, "dropped": dropped}, fetcher.sources, rows)
+        failed = sum(source["status"] != "ok" for source in fetcher.sources)
+        summary[name] = {"rows": len(rows), "stored": sum("stored" in item for item in rows),
+                         "requests": len(fetcher.sources), "failed": failed, **dropped,
+                         "seconds": round(time.monotonic() - started)}
+    return summary
+
+
+def verify(pass_name, urls, folder, get=http):
+    fetcher = Fetcher(get)
+    bodies = fetcher.many([lambda url=url: fetcher.fetch(url, pass_name) for url in urls])
+    pages = [{"url": url, "ok": body is not None, **(page(body) if body else {})} for url, body in zip(urls, bodies)]
+    write(folder / f"verify-{pass_name}-{time.time_ns()}.json", {"source": "verify"}, fetcher.sources, pages)
+    return pages
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("input", type=Path)
+    parser.add_argument("--db", type=Path, default=state.DB_PATH)
+    commands = parser.add_subparsers(dest="command", required=True)
+    pulling = commands.add_parser("pull", help="read structured sources into .work/<run_id>/fetch/")
+    pulling.add_argument("sources", nargs="*", choices=list(SOURCES), default=[])
+    checking = commands.add_parser("verify", help="fetch event pages and record them as sources")
+    checking.add_argument("--pass", dest="pass_name", required=True, choices=run.PASSES)
+    checking.add_argument("urls", nargs="+")
+    args = parser.parse_args()
+    try:
+        batch = json.loads(args.input.read_text(encoding="utf-8"))
+        state.timestamp(batch["started_at"])
+        folder = args.input.parent / "fetch"
+        if args.command == "pull":
+            names = args.sources or list(SOURCES)
+            print(json.dumps(pull(batch, state.load(args.db), names, folder), ensure_ascii=False, indent=1))
+        else:
+            for item in verify(args.pass_name, args.urls, folder):
+                print(json.dumps(item, ensure_ascii=False))
+    except (OSError, ValueError, KeyError) as error:
+        parser.exit(1, f"Error: {error}\n")
+
+
+if __name__ == "__main__":
+    main()

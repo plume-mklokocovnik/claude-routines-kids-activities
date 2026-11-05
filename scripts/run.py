@@ -27,6 +27,54 @@ def event_id(event):
     return f"event_{state.timestamp(event['start_time']):%Y%m%d_%H%M}_{suffix}"
 
 
+def words(text):
+    return " ".join(re.sub(r"\W+", " ", text.casefold()).split())
+
+
+def venue_parts(venue):
+    return [part for part in (words(re.sub(r"\([^)]*\)", " ", piece)) for piece in venue.split(",")) if part]
+
+
+def word_prefix(longer, shorter):
+    return f"{longer} ".startswith(f"{shorter} ")
+
+
+def stems(text):
+    return {word[:5] for word in words(text).split() if len(word) >= 4}
+
+
+def similar_titles(a, b):
+    left, right = stems(a), stems(b)
+    return bool(left and right) and len(left & right) / max(len(left), len(right)) >= 0.6
+
+
+def same_slot(a, b):
+    start_a, start_b = state.timestamp(a["start_time"]), state.timestamp(b["start_time"])
+    if start_a == start_b:
+        return True
+    unknown = "time_unknown" in a.get("flags", []) or "time_unknown" in b.get("flags", [])
+    return unknown and start_a.date() == start_b.date()
+
+
+def duplicate_of(item, events):
+    """Find a stored record that is the same occurrence under a reworded title or venue."""
+    parts = venue_parts(item["venue"])
+    title = words(item["title"])
+    for key, other in events.items():
+        other_parts, other_title = venue_parts(other["venue"]), words(other["title"])
+        if not parts or not other_parts or not same_slot(item, other):
+            continue
+        # Halls of one venue share a listing URL, so a URL match needs the whole venue to agree.
+        same_listing = item["url"] == other["url"] and similar_titles(title, other_title) and (
+            parts[:len(other_parts)] == other_parts or other_parts[:len(parts)] == parts)
+        contained = f" {title} " in f" {other_title} " or f" {other_title} " in f" {title} "
+        close_venue = (word_prefix(parts[0], other_parts[0]) or word_prefix(other_parts[0], parts[0])
+                       or parts[0] in other_parts or other_parts[0] in parts)
+        if same_listing or (contained and close_venue):
+            return key
+    return None
+
+
 def validate_batch(batch):
     if not isinstance(batch, dict) or batch.get("schema_version") != 1:
         raise ValueError("Run input requires schema_version: 1")
@@ -138,6 +186,15 @@ def merge(db, batch):
                 by_identity.pop(old_identity)
             by_identity[fingerprint(previous)] = existing_key
         else:
+            twin_key = duplicate_of(item, events)
+            if twin_key is not None:
+                twin = events[twin_key]
+                if twin.get("status") == "hidden" or state.hidden_reason(updated, twin):
+                    results["hidden"].append({**item, "reason": f"duplicate of hidden {twin['event_id']}"})
+                else:
+                    results["filtered"].append({**item, "reason": f"Likely duplicate of {twin['event_id']}. "
+                                                "Pass that event_id to refresh it"})
+                continue
             item.update(status="active", first_seen=batch["started_at"])
             key = state.next_key(events)
             events[key] = item
@@ -196,10 +253,18 @@ def render_outputs(db_path, db=None):
     return outputs
 
 
+def reject_future_checks(batch, now):
+    for source in batch["sources"]:
+        if source.get("checked_at") and state.timestamp(source["checked_at"]) > now:
+            raise ValueError(f"Source checked_at is later than now: {source['url']}. "
+                             "Record the time the page was actually fetched")
+
+
 def apply(args):
     import report
     batch = json.loads(Path(args.input).read_text(encoding="utf-8"))
     validate_batch(batch)
+    reject_future_checks(batch, datetime.now(state.TZ))
     root = Path(args.db).resolve().parent
     log_path = root / "runs" / f"{batch['run_id']}.json"
     with state.locked(args.db):
@@ -233,6 +298,50 @@ def apply(args):
         state.atomic_write(root / "diff.md", diff_md)
 
 
+COLLECTED = ("candidates", "sources", "filtered", "leads", "runtime_notes")
+
+
+def combine(results):
+    kinds = {result.get("status") for result in results}
+    status = kinds.pop() if len(kinds) == 1 else "partial"
+    reason = " ".join(result["reason"].strip() for result in results if result.get("reason"))
+    if status != "ok" and not reason:
+        reason = "A researcher reported this pass incomplete without a reason"
+    return {"status": status, **({"reason": reason} if reason else {})}
+
+
+def collect(args):
+    """Rebuild the staged lists from researcher files and fetch records, keeping the run identity."""
+    path = Path(args.input)
+    batch = json.loads(path.read_text(encoding="utf-8"))
+    research = sorted((path.parent / "research").glob("*.json"))
+    if not research:
+        raise ValueError(f"No research files in {path.parent / 'research'}")
+    merged = {field: [] for field in COLLECTED}
+    reports = {}
+    for fetched in sorted((path.parent / "fetch").glob("*.json")):
+        for source in json.loads(fetched.read_text(encoding="utf-8")).get("sources", []):
+            if source not in merged["sources"]:
+                merged["sources"].append(source)
+    for item in research:
+        part = json.loads(item.read_text(encoding="utf-8"))
+        for field in COLLECTED:
+            for entry in part.get(field, []):
+                if entry not in merged[field]:
+                    merged[field].append(entry)
+        for name, result in part.get("passes", {}).items():
+            if name not in PASSES:
+                raise ValueError(f"Unknown pass {name!r} in {item.name}")
+            reports.setdefault(name, []).append(result)
+    passes = {name: combine(reports[name]) if name in reports
+              else {"status": "skipped", "reason": "No researcher reported this pass"} for name in PASSES}
+    batch.update(merged, passes=passes)
+    state.atomic_write(path, state.json_text(batch))
+    print(json.dumps({"files": len(research), **{field: len(merged[field]) for field in COLLECTED},
+                      "passes": {name: result["status"] for name, result in passes.items()}}, ensure_ascii=False))
+    validate_batch(batch)
+
+
 def check(args):
     outputs = render_outputs(args.db)
     stale = [str(path) for path, content in outputs.items()
@@ -259,6 +368,9 @@ def main():
     finish.add_argument("input", type=Path)
     finish.add_argument("--dry-run", action="store_true")
     finish.set_defaults(func=apply)
+    gather = commands.add_parser("collect", help="rebuild a staged input from research/ and fetch/ files")
+    gather.add_argument("input", type=Path)
+    gather.set_defaults(func=collect)
     commands.add_parser("check", help="validate state and check generated output").set_defaults(func=check)
     commands.add_parser("render", help="regenerate the sweep report from committed state").set_defaults(func=render_all)
     commands.add_parser("validate", help="validate only the database").set_defaults(func=lambda args: state.load(args.db))

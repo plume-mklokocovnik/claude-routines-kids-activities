@@ -50,6 +50,14 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 
 ---
 
+## Search
+
+| Source | URL | Use | Status |
+|---|---|---|---|
+| Built-in WebSearch | none | The only search the routine uses. US-region with no locale setting, so keep queries Slovenian and add a town or `site:.si` | ok |
+| DuckDuckGo HTML | `https://html.duckduckgo.com/html/` | Do not use. Scripted queries get a captcha (HTTP 202), checked 2026-11-05 | avoid |
+| Google Custom Search JSON API | `https://www.googleapis.com/customsearch/v1` | Do not use. Closed to new customers, shuts down 2027-01-01 | avoid |
+
 ## Aggregators
 
 | Source | URL | Use | Status |
@@ -69,6 +77,25 @@ These 404s were bad path guesses on healthy sites. The site is fine. Use the cor
 | MojaObčina LJ | `https://www.mojaobcina.si/ljubljana/dogodki/` | Zoo and neighbourhood pickup | ok |
 | Kam z mulcem | `https://kamzmulcem.si/` | Editorial round-ups, lead generation only | low |
 | Otroško veselje | `https://otroskoveselje.si/dogaja-se-ljubljana/` | Thin metadata, no date filter | low |
+
+### Napovednik, fetch recipe
+
+The site is an Angular app. Read its public JSON API with plain curl instead of the HTML,
+checked 2026-11-05:
+
+```bash
+curl -s --max-time 30 -A "Mozilla/5.0" 'https://api.napovednik.com/api/website/v1/search?genreName=For-children'
+curl -s --max-time 30 -A "Mozilla/5.0" 'https://api.napovednik.com/api/website/v1/events/<idDataEvent>'
+```
+
+The search returns every upcoming event of one genre in `events`, each with `idDataEvent`, `name`,
+`startDateTime`, `location.postalName` and `location.address`. On 2026-11-05 `For-children` held
+28 events, 23 in Ljubljana plus Nova Gorica, Sežana and Štanjel. Other useful genres are `Music`
+for Pass 3A and `Events`. Paging and region parameters are ignored, and `subGenreName` only
+narrows the list. The detail call adds the venue name, `eventStart`, `eventEnd`, `ticketPrice`,
+the organiser and the Slovenian description. Use the human page as the candidate `url`. Its address is
+`https://napovednik.com/za-otroke/<podkategorija>/<slug>-<idDataEvent>`, linked from the HTML
+of `napovednik.com/za-otroke` and answering 200 to curl.
 
 ### MOL calendar, fetch recipe
 
@@ -101,7 +128,7 @@ tags), `cat`, `nrOfItems` (20 / 50 / 100).
 | LGL schedule | `https://www.lgl.si/spored-predstav` | ok, but flaky: returned 503 on most attempts this sweep, loaded twice. When down, use `https://lgl.mojekarte.si/en/all.html` (ticketed schedule, JS-paginated) as a fallback |
 | LGL kids shows | `https://www.lgl.si/predstave-za-otroke` | low, 503 on every attempt this sweep (4 tries) |
 | Kino Bežigrad shows | `https://www.kino-bezigrad.si/predstave-in-delavnice/` | ok, checked 2026-09-22 and 2026-09-24. Dated index, 35+ puppet and theatre shows running Sep 2026 to Apr 2027. **No start times on this page**. ⚠️ Despite being marked "ok" since 2026-09-21, this venue had **zero** events in `db.json` through two runs — first swept for real on 2026-09-24, adding 16 in-window shows (14 `lutke`, 2 `koncert`). Future runs: confirm it keeps appearing in `db.json`, don't let it silently drop out again |
-| Kino Bežigrad detail | `https://www.kino-bezigrad.si/predstava/<slug>/` | ok. Carries `Starostna omejitev` (age), price and duration. Still no start time, which lives only in the booking widget behind *Nakup* / `#tickets` |
+| Kino Bežigrad detail | `https://www.kino-bezigrad.si/predstava/<slug>/` | ok. Carries `Starostna omejitev` (age), price and duration. The start time comes from the booking widget, see the recipe below |
 | LGL puppet museum | `https://www.lgl.si/lutkovni-muzej/muzejski-dogodki` | low, 503 on every attempt this sweep (2 tries) |
 | MKL events | `https://www.mklj.si/dogodki/` | ok |
 | MKL events API | `https://www.mklj.si/wp-json/tribe/events/v1/events?per_page=50&start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>` | ok, checked 2026-10-22. Full horizon in one paged JSON (482 events), the HTML list shows only the first page. Event pages 503/time out under 16 parallel requests, use 4 |
@@ -117,6 +144,22 @@ tags), `cat`, `nrOfItems` (20 / 50 / 100).
 
 **MKL filter params:** `tribe_filterbar_dogodki_ciljna_skupina[]`, `_prizorisce[]`, `_vrsta[]`, `_serija[]`.
 Event permalinks: `/dogodek/<slug>/<YYYY-MM-DD>/`.
+
+### Kino Bežigrad start times, fetch recipe
+
+The detail page holds `<input id="post_id" value="...">` and `var movieScreeningDates = ["YYYY-MM-DD"]`.
+The booking widget loads the times from the public WordPress AJAX endpoint. Send the date as
+`MM.DD.YYYY`, checked 2026-11-05 (Ježeva hišica, post 75629, 30 Jan 2027 at 11:00):
+
+```bash
+curl -s --max-time 30 -A "Mozilla/5.0" -X POST 'https://www.kino-bezigrad.si/wp-admin/admin-ajax.php' \
+  --data 'action=event-filter&date=01.30.2027&post_id=75629&all_tickets='
+```
+
+Each start time is a `data-hour="HH:MM"` attribute. This is read-only. Never call the reserve or
+order actions. Record the detail page as the candidate `url` and this request as a second
+source. When it returns a time, drop `time_unknown` and correct a stored row through its existing
+`event_id`.
 
 ## Ljubljana venues: museums, galleries, zoo
 
@@ -168,8 +211,7 @@ Nationwide, not a Ljubljana category, so the parsed calendar and the fixture lis
 
 | Source | URL | Use | Status |
 |---|---|---|---|
-| SVAMZ full-year calendar | `https://svamz.com/koledar-dogodkov/` | The single best source. One plain-text list of nearly every veteran car and motorbike meeting in the country, already covering the whole year | ok, checked 2026-09-28 |
-| SVAMZ calendar, 2026-10-29 update | `https://svamz.com/koledar-dogodkov/` | The page is now a JS shell ("Nalagam koledar"), plain curl no longer returns events. Render with a headless browser, click the month buttons (`nov`, `dec`), detail at `svamz.com/event.html?id=<date>-<slug>`. Detail pages give date and contact only, often no venue | checked 2026-10-29 |
+| SVAMZ calendar | `https://svamz.com/koledar-dogodkov/` | The single best source, nearly every veteran car and motorbike meeting in the country for the whole year. The page is a JS shell since October 2026, so read the Firestore data behind it, see the recipe below. Detail page `svamz.com/event.html?id=<document id>` | ok, checked 2026-11-05 |
 | Zveza SVS news | `https://www.zveza-svs.si/obvestila/` | A second, older association's blog. Reports *after* an event with attendance numbers rather than announcing it ahead, so read it for confirmation and colour, not as a forward calendar | ok, checked 2026-09-28 |
 | Oldtimer Club Postojna | `https://oldtimer-postojna.si/` | Runs the Postojna international meeting, late June | ok |
 | Auto Motor Show Slovenija | `https://www.automotorshow.si/` | The country's biggest ticketed motor show, moved from Ljubljana to the Celjski sejem for 2026 (16-17 May). Paid, free entry only for children up to 7 | ok, priced attraction rather than a free one |
@@ -183,17 +225,21 @@ Nationwide, not a Ljubljana category, so the parsed calendar and the fixture lis
 
 ### SVAMZ calendar, fetch recipe
 
-Plain `curl` returns the whole page, no bot-block, no JS needed.
+Plain curl on the page now returns an empty shell ("Nalagam koledar"). Do not report that as a
+blocked source, and no headless browser is needed. The calendar script `svamz.com/js/dogodki-data.js`
+reads a public Firestore collection with the site's own web key. Read it the same way, checked
+2026-11-05 (41 events):
 
 ```bash
-curl -sL --max-time 30 -A "Mozilla/5.0" 'https://svamz.com/koledar-dogodkov/'
+curl -s --max-time 30 'https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/dogodki?pageSize=300&key=AIzaSyAm1Dnl1lt0nZ0Rb7ikeVDXaRN1lTACS38'
 ```
 
-The page is a single long WordPress post: a month heading (`JANUAR`, `MAREC`, and so on, some
-months are skipped entirely when nothing is on) followed by one line per event, each carrying a
-date, a name, a place and a contact email or phone number in parentheses. There is no per-event
-detail page and no structured markup. Strip tags and read it as plain text, there is nothing to
-select more precisely than that.
+Each document carries `fields.title`, `start` and `end` (`YYYY-MM-DD`), `place`, `description`,
+`contact` and `url`, each wrapped as `{"stringValue": ...}`. Follow `nextPageToken` when present.
+If the key or project changes, read the new values from `dogodki-data.js`. The document ID
+(`2026-12-26-srecanje-...`) gives the detail page `https://svamz.com/event.html?id=<id>`. Record
+the Firestore URL as a source. Fetch the detail page too and use it as the candidate `url`. `place`
+is often empty. Without a venue the meeting stays a lead.
 
 **What it never states:** a start time, or a price for a non-participating visitor. The household
 attends these as a visitor rather than as a participant bringing a vehicle, and checks the price at

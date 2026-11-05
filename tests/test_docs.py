@@ -31,9 +31,20 @@ class DocumentationTests(unittest.TestCase):
                 self.assertRegex(header, r"\ndescription: .+")
 
     def test_claude_skills_point_at_agents_skills(self):
-        link = ROOT / ".claude" / "skills"
-        self.assertTrue(link.is_symlink())
-        self.assertEqual(link.resolve(), (ROOT / ".agents" / "skills").resolve())
+        for folder in ("skills", "agents"):
+            link = ROOT / ".claude" / folder
+            with self.subTest(folder=folder):
+                self.assertTrue(link.is_symlink())
+                self.assertEqual(link.resolve(), (ROOT / ".agents" / folder).resolve())
+
+    def test_subagents_have_name_model_and_no_nested_agents(self):
+        for path in (ROOT / ".agents" / "agents").glob("*.md"):
+            header = path.read_text(encoding="utf-8").split("---", 2)[1]
+            with self.subTest(path=path.name):
+                self.assertIn(f"name: {path.stem}\n", header)
+                self.assertRegex(header, r"\ndescription: .+")
+                self.assertRegex(header, r"\nmodel: \w+")
+                self.assertNotRegex(header, r"tools:.*\bAgent\b")
 
 
 if __name__ == "__main__":

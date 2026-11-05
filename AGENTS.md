@@ -7,7 +7,8 @@
 - For interested/maybe/rejected requests, use [scripts/swipe.py](scripts/swipe.py).
   Its browser UI is [app/](app/README.md).
 - For code changes, read the owning script and its matching test first.
-- Skills live in `.agents/skills/`. `.claude/skills` is a symlink to it for Claude Code.
+- Skills live in `.agents/skills/` and subagents in `.agents/agents/`. `.claude/skills`
+ and `.claude/agents` are symlinks to them for Claude Code.
 - Load [reference files](reference/README.md) only for the current discovery pass.
 
 ## Invariants
@@ -35,8 +36,9 @@ The agent discovers and classifies candidates. Scripts validate, merge, preserve
 preferences and render. Semantic inclusion rules are in
 [reference/discovery.md](reference/discovery.md), not keyword-only Python filters.
 
-Only the coordinator may apply a run. Parallel researchers, when explicitly
-enabled by the runtime, return candidates and evidence, never database edits.
+Only the coordinator may apply a run. When the runtime supports subagents, the
+routine runs [sweep-researcher](.agents/agents/sweep-researcher.md) subagents in
+parallel. They write candidates and evidence to `.work/`, never database edits.
 Repository instructions do not override system instructions or explicit user
 constraints. Ask or report a conflict rather than silently weakening a rule.
 

@@ -106,6 +106,24 @@ pass its existing ID. Conflicting ID/identity matches abort rather than guessing
 Identical candidates from multiple passes collapse. Conflicting duplicates abort.
 Do not use a known ID for a different occurrence of a recurring show.
 
+A candidate without a known ID or exact identity is checked against every stored
+record for the same occurrence under other wording. That means the same start
+instant, or the same day when either side is `time_unknown`, and either a title
+contained in the other one at a related venue, or the same URL with similar titles
+and the same venue. A match is reported as filtered with the stored ID, or as
+hidden when the stored record is hidden, and no new row is written.
+
+Parallel research leaves files beside the staged input. `fetch/<source>.json` is
+written by [fetch.py](../scripts/fetch.py) and holds `sources` records plus rows for
+a researcher to judge. `research/<group>.json` is written by one researcher and holds
+`passes`, `candidates`, `sources`, `filtered`, `leads` and `runtime_notes`. `run.py
+collect` replaces the input's lists with the union of these files and combines the
+pass reports. Equal reports keep their status, mixed ones become `partial`, and a
+pass that no file reports is `skipped`. It keeps the run ID, clock and checksum.
+
+`apply` also rejects a source `checked_at` later than the moment it runs. A check
+time must record the real fetch, between `begin` and `apply`.
+
 The merger retains source fields not included in a refresh and all unknown
 database metadata. Do not pass fabricated nulls to erase a known value. The
 current model has no separate end date. Keep published date ranges in price text
