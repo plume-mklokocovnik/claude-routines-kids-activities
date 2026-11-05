@@ -13268,6 +13268,53 @@
       "event_id": "event_20261112_1730_6b182f5b1f7d",
       "status": "active",
       "first_seen": "2026-11-05T13:57:30+01:00"
+    },
+    "832": {
+      "title": "Alenka Kolman: Jelenček Rudolf in prihod Miklavža",
+      "start_time": "2026-12-06T11:00:00+01:00",
+      "venue": "Odiseja, Moskovska ulica 11",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "13,90 € vključno z 1 € nadomestila",
+      "url": "https://www.eventim.si/event/alenka-kolman-jelencek-rudolf-in-prihod-miklavza-odiseja-22353657/",
+      "flags": [],
+      "event_id": "event_20261206_1100_f544ac7b3546",
+      "status": "active",
+      "first_seen": "2026-11-05T14:23:25+01:00"
+    },
+    "833": {
+      "title": "Adi Smolar: koncert v živo v Publiki",
+      "start_time": "2026-12-05T19:00:00+01:00",
+      "venue": "Publika Bar Klub",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "Od 12,90 € (prvi val) do 19,90 €",
+      "url": "https://www.entrio.si/event/adi-smolar-koncert-v-zivo-35707",
+      "flags": [],
+      "event_id": "event_20261205_1900_d37970cd6e64",
+      "status": "active",
+      "first_seen": "2026-11-05T14:23:25+01:00"
+    },
+    "834": {
+      "title": "13. Noč parkeljnov v Goričanah, mimohod parkeljnov",
+      "start_time": "2026-11-21T17:00:00+01:00",
+      "venue": "Prireditveni prostor Goričane",
+      "city": "Medvode",
+      "category": "festival",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "Od 15 €. Otroci do 10 let imajo brezplačen vstop. Mimohod ob 18. uri",
+      "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-sobota",
+      "flags": [
+        "outside_ljubljana"
+      ],
+      "event_id": "event_20261121_1700_f0e9fb257d99",
+      "status": "active",
+      "first_seen": "2026-11-05T14:23:25+01:00"
     }
   },
   "user_rules": {
@@ -13649,9 +13696,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-11-05T13:57:30+01:00",
-      "total_active_events": 162,
-      "latest_run": "20261105T125730Z_51c814fe"
+      "last_run": "2026-11-05T14:23:25+01:00",
+      "total_active_events": 165,
+      "latest_run": "20261105T132325Z_a2a7ed66"
     }
   },
   "hidden_events": {

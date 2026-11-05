@@ -18,7 +18,7 @@ below.
 | 2 | **Otroški pevski zbor RTV Slovenija** | `https://www.rtvslo.si/opz-in-mpz/` | none found | none found | Children's choir, conductor Anka Jazbec. Concerts via RTV and Cankarjev dom |
 | 3 | **Romana Krajnčan** | `https://www.romanakr.com/` | `facebook.com/romana.najlepse.pesmi.za.otroke`, `facebook.com/romana.krajncan` | none found | The reference name in Slovenian children's song. Musicals and sung fairy tales |
 | 4 | **Neca Falk** | none found. ⛔ `muri-maca.com` (the "Maček Muri in Muca Maca" project's own site) is dead, NXDOMAIN — see below | `facebook.com/singerNecaFalk` | none found | Chanson and children's classics. Occasional album-promo concerts |
-| 5 | **Alenka Kolman** | `https://www.alenkakolman.si/` | not confirmed | not confirmed | 80+ recorded children's songs, also organises children's events |
+| 5 | **Alenka Kolman** | `https://www.alenkakolman.si/` | not confirmed | `instagram.com/alenka_kolman` (opens without login, checked 2026-11-05) | 80+ recorded children's songs, also organises children's events |
 | 6 | **Adi Smolar** | none found | `facebook.com/AdiSmolar` | `instagram.com/adi_smolar_uradna_stran` | Singer-songwriter. Mostly adult venues, some family matinees. Booking `info@studio-gong.si` |
 | 7 | **Ribič Pepe** | `https://ribicpepe.si/` | `facebook.com/ribicPepe` | none found | Igor Ribič's TV character, RTV SLO 1 Saturdays. Live shows all year, heaviest in December |
 | 8 | **Dejan Dogaja** (Dogaja Band) | `https://dejandogaja.si/`, booking only, no event list | `facebook.com/dejan.krajnc` | `instagram.com/dejan_krajnc` | Dejan Krajnc, ex-frontman of Poskočni muzikanti. A party band with a children's animation programme. Plays pust, summer town festivals and New Year's farewells for children. Also plays adult functions that do not qualify. Booking `info@dejandogaja.si` |
@@ -71,6 +71,10 @@ posts. Alenka Kolman has no Facebook page that a search surfaced, still unconfir
 | Neca Falk | Page last posted May 2025, no upcoming events. The Kino Šiška *Od daleč* page is the 2014 album, not a 2026 concert, so that lead is closed | Nothing to check until she announces a tour |
 | Vila Eksena | Events tab ends 2024, latest post is a birthday visit | Organisers only |
 | Romana Krajnčan | Nothing visible without a login for events | Organisers only. Visit Kranj lists her at the December Miklavž procession |
+
+Alenka Kolman is the exception. Her public Instagram opens without login and her Ljubljana shows sell through
+`odiseja.si` and the Eventim page `eventim.si/artist/alenka-kolman/` (browser only), for example *Jelenček Rudolf in
+prihod Miklavža* on 6 Dec 2026 at Odiseja. Her Super krila show was at Odiseja on 3 Oct 2026.
 
 Organiser domains that confirmed or listed one of these artists, checked 2026-11-05: `majsperk.si`
 (Adi Smolar, KPC Majšperk), `ptujinfo.com` (Adi Smolar Majšperk, event page `ptujinfo.com/dogodek/`),

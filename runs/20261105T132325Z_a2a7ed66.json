@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261105T132325Z_a2a7ed66",
+    "started_at": "2026-11-05T14:23:25+01:00",
+    "base_sha256": "a2a7ed663bee95ad5f7c821d1c8189fd32a25c7eed4d722f26acec615dcde112",
+    "candidates": [
+      {
+        "title": "Alenka Kolman: Jelenček Rudolf in prihod Miklavža",
+        "start_time": "2026-12-06T11:00:00+01:00",
+        "venue": "Odiseja, Moskovska ulica 11",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "13,90 € vključno z 1 € nadomestila",
+        "url": "https://www.eventim.si/event/alenka-kolman-jelencek-rudolf-in-prihod-miklavza-odiseja-22353657/",
+        "flags": []
+      },
+      {
+        "title": "Adi Smolar: koncert v živo v Publiki",
+        "start_time": "2026-12-05T19:00:00+01:00",
+        "venue": "Publika Bar Klub",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 12,90 € (prvi val) do 19,90 €",
+        "url": "https://www.entrio.si/event/adi-smolar-koncert-v-zivo-35707",
+        "flags": []
+      },
+      {
+        "title": "13. Noč parkeljnov v Goričanah, mimohod parkeljnov",
+        "start_time": "2026-11-21T17:00:00+01:00",
+        "venue": "Prireditveni prostor Goričane",
+        "city": "Medvode",
+        "category": "festival",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 15 €. Otroci do 10 let imajo brezplačen vstop. Mimohod ob 18. uri",
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-sobota",
+        "flags": [
+          "outside_ljubljana"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.eventim.si/en/artist/magnifico/",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:24:03+01:00"
+      },
+      {
+        "url": "https://www.entrio.si/event/adi-smolar-koncert-v-zivo-35707",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:24:02+01:00"
+      },
+      {
+        "url": "https://www.eventim.si/event/alenka-kolman-jelencek-rudolf-in-prihod-miklavza-odiseja-22353657/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:24:48+01:00"
+      },
+      {
+        "url": "https://www.mkk.si/asset/hzay3PH7W29ZCqPKs",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:24:20+01:00"
+      },
+      {
+        "url": "https://www.odiseja.si/sl/event/alenka-kolman-super-krila/",
+        "pass": "concerts_watchlist",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:24:39+01:00"
+      },
+      {
+        "url": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/24502-jusuke-savai-kana-furukava-zala-vidic-anze-rupnik-34-mv",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:30+01:00"
+      },
+      {
+        "url": "https://www.mkk.si/asset/nt4W9rQbaxeAK6siF",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:30+01:00"
+      },
+      {
+        "url": "https://vwoks.si/index.php?option=com_dpcalendar&view=event&id=104&calid=9&Itemid=110&lang=sl",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:30+01:00"
+      },
+      {
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-sobota",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:30+01:00"
+      },
+      {
+        "url": "https://topevent.si/en/performer/fehtarji",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:30+01:00"
+      },
+      {
+        "url": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/24502-jusuke-savai-kana-furukava-zala-vidic-anze-rupnik-34-mv",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:23:54+01:00"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "skipped",
+        "reason": "Browser research session, not a full sweep"
+      },
+      "slovenia": {
+        "status": "partial",
+        "reason": "Browser research session: Gemini report follow-up, Goričane and Kranj pages only."
+      },
+      "concerts_generic": {
+        "status": "partial",
+        "reason": "Browser research session: Gemini report follow-up, Magnifico Superstar page only."
+      },
+      "concerts_watchlist": {
+        "status": "partial",
+        "reason": "Browser research session: Adi Smolar Publika and Alenka Kolman Odiseja checked after an external report."
+      },
+      "free_entry": {
+        "status": "skipped",
+        "reason": "Browser research session, not a full sweep"
+      },
+      "avto_moto": {
+        "status": "skipped",
+        "reason": "Browser research session, not a full sweep"
+      }
+    },
+    "filtered": [
+      {
+        "title": "Lev in miška, Knjižnica Globus Kranj, 24. 11. 2026 17:00",
+        "url": "https://www.mkk.si/asset/hzay3PH7W29ZCqPKs",
+        "reason": "Confirmed and free, ages 3+, but a standalone single performance in Kranj and already booked out (150 of 150)."
+      },
+      {
+        "title": "Božični mjuzikl Magnifico Superstar, Stožice, 25. 12. 2026 20:00",
+        "url": "https://www.eventim.si/en/artist/magnifico/",
+        "reason": "Confirmed on Eventim from 44 €, but billed as a disco musical with no family or children's wording. Kept as a lead."
+      }
+    ],
+    "leads": [
+      {
+        "title": "Mladi virtuozi, 11. koncert, Viteška dvorana Križanke, 21. 1. 2027 19:00",
+        "url": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/24502-jusuke-savai-kana-furukava-zala-vidic-anze-rupnik-34-mv",
+        "reason": "Date and venue confirmed. The page text I read shows no price, so the free entry claim is unconfirmed. Classical concert, not billed for children."
+      },
+      {
+        "title": "7. Božičkova razstava okrašenih vozil, VW Oldtimer Klub, 12. 12. 2026",
+        "url": "https://vwoks.si/index.php?option=com_dpcalendar&view=event&id=93&calid=9&Itemid=110&lang=sl",
+        "reason": "Still no venue. The event id 104 in the external report is an Austrian event."
+      },
+      {
+        "title": "Fehtarji otroški koncert Ljubljana 12. 2. 2027 17:00 and Celje 13. 2. 2027 15:00",
+        "url": "https://topevent.si/en/performer/fehtarji",
+        "reason": "After the horizon ending 2027-02-05. TopEvent shows 17:00 and 15:00. Ljubljana is sold out, Celje from 6 €."
+      },
+      {
+        "title": "Alenka Kolman, December highlight and Kje smo highlight",
+        "url": "https://www.instagram.com/alenka_kolman/",
+        "reason": "Public Instagram profile shows highlights named DECEMBER and KJE SMO. Contents not read. Look for organiser calendars."
+      }
+    ],
+    "runtime_notes": [
+      "An external research report was treated as leads and each claim was reopened. Wrong claims found: Saturday parkeljni start time (page shows 17:00 with the parade at 18:00, not 09:00), Fehtarji times (17:00 and 15:00, not 09:00 and 07:00), the VW Oldtimer event id (104 is an Austrian event), and the Adi Smolar Publika date (Entrio shows Saturday 5 Dec 19:00, not 4 Dec 22:00).",
+      "mkk.si event pages are JavaScript rendered and show Loading for several seconds. The page loads in the browser after a short wait.",
+      "Eventim artist page for Alenka Kolman lists Jelenček Rudolf in prihod Miklavža on 6 Dec at Odiseja. Browser only.",
+      "Instagram alenka_kolman opens without login and shows the profile header and highlights, but no post text."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Alenka Kolman: Jelenček Rudolf in prihod Miklavža",
+        "start_time": "2026-12-06T11:00:00+01:00",
+        "venue": "Odiseja, Moskovska ulica 11",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "13,90 € vključno z 1 € nadomestila",
+        "url": "https://www.eventim.si/event/alenka-kolman-jelencek-rudolf-in-prihod-miklavza-odiseja-22353657/",
+        "flags": [],
+        "event_id": "event_20261206_1100_f544ac7b3546",
+        "status": "active",
+        "first_seen": "2026-11-05T14:23:25+01:00"
+      },
+      {
+        "title": "Adi Smolar: koncert v živo v Publiki",
+        "start_time": "2026-12-05T19:00:00+01:00",
+        "venue": "Publika Bar Klub",
+        "city": "Ljubljana",
+        "category": "koncert",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 12,90 € (prvi val) do 19,90 €",
+        "url": "https://www.entrio.si/event/adi-smolar-koncert-v-zivo-35707",
+        "flags": [],
+        "event_id": "event_20261205_1900_d37970cd6e64",
+        "status": "active",
+        "first_seen": "2026-11-05T14:23:25+01:00"
+      },
+      {
+        "title": "13. Noč parkeljnov v Goričanah, mimohod parkeljnov",
+        "start_time": "2026-11-21T17:00:00+01:00",
+        "venue": "Prireditveni prostor Goričane",
+        "city": "Medvode",
+        "category": "festival",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Od 15 €. Otroci do 10 let imajo brezplačen vstop. Mimohod ob 18. uri",
+        "url": "https://topevent.si/dogodek/13-noc-parkeljnov-v-goricanah-sobota",
+        "flags": [
+          "outside_ljubljana"
+        ],
+        "event_id": "event_20261121_1700_f0e9fb257d99",
+        "status": "active",
+        "first_seen": "2026-11-05T14:23:25+01:00"
+      }
+    ],
+    "updated": [],
+    "expired": [],
+    "hidden": [],
+    "filtered": [
+      {
+        "title": "Lev in miška, Knjižnica Globus Kranj, 24. 11. 2026 17:00",
+        "url": "https://www.mkk.si/asset/hzay3PH7W29ZCqPKs",
+        "reason": "Confirmed and free, ages 3+, but a standalone single performance in Kranj and already booked out (150 of 150)."
+      },
+      {
+        "title": "Božični mjuzikl Magnifico Superstar, Stožice, 25. 12. 2026 20:00",
+        "url": "https://www.eventim.si/en/artist/magnifico/",
+        "reason": "Confirmed on Eventim from 44 €, but billed as a disco musical with no family or children's wording. Kept as a lead."
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "5d7c6c722bb25e73d413c0838a2c5e3f809d20e4582e064e54b021fe0e3bc0ec"
+}
