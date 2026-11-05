@@ -443,13 +443,13 @@
     "56": {
       "event_id": "krekovtrg_20261205_1700",
       "title": "Miklavžev sprevod",
-      "start_time": "2026-12-05T17:00:00+01:00",
+      "start_time": "2026-12-05T16:30:00+01:00",
       "venue": "Krekov trg → Prešernov trg",
       "city": "Ljubljana",
       "category": "festival",
       "age_min": 0,
       "is_free": true,
-      "price_text": "Brezplačno",
+      "price_text": "Vstopnine ni. Od 16.30 do 18.00: Ljubljanski grad, Krekov trg, Ciril-Metodov trg, Stritarjeva, Prešernov trg.",
       "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/miklavzev-sprevod/",
       "flags": [],
       "status": "active",
@@ -14199,6 +14199,115 @@
       "first_seen": "2026-11-05T20:57:25+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
+    },
+    "878": {
+      "title": "Ta veseli dan kulture 2026: Ljubljanski grad, brezplačen obisk",
+      "start_time": "2026-12-03T09:00:00+01:00",
+      "venue": "Ljubljanski grad",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačno od 9.00 do 18.00: stalni razstavi Grajsko orožje in Slovenska zgodovina, Lutkovni muzej, Razgledni stolp, Virtualni grad (4D-film) in projekcija Ko ilustracije oživijo v Kazematah. Vodeni ogledi s prijavo. Enotna znižana cena povratne vozovnice za tirno vzpenjačo.",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/ta-veseli-dan-kulture-na-ljubljanskem-gradu-2/",
+      "flags": [],
+      "event_id": "event_20261203_0900_55d6d781c6f3",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "879": {
+      "title": "Iskanje zmajevega zaklada (Ta veseli dan kulture na Ljubljanskem gradu)",
+      "start_time": "2026-12-03T14:00:00+01:00",
+      "venue": "Ljubljanski grad, zbirno mesto: most pred glavnim vhodom",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 5,
+      "is_free": true,
+      "price_text": "Brezplačno. Vodeni ogled za otroke od 5. leta, od 14.00 do 15.00. Obvezna prijava prek spletnega obrazca, število mest je omejeno.",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/ta-veseli-dan-kulture-na-ljubljanskem-gradu-2/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261203_1400_324267797772",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "880": {
+      "title": "Potep med pravljicami (Ta veseli dan kulture na Ljubljanskem gradu)",
+      "start_time": "2026-12-03T16:00:00+01:00",
+      "venue": "Ljubljanski grad, zbirno mesto: most pred glavnim vhodom",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 5,
+      "is_free": true,
+      "price_text": "Brezplačno. Pravljično vodstvo in ogled prostorske projekcije slovenskih ilustracij za otroke od 5. leta, od 16.00 do 17.00. Obvezna prijava prek spletnega obrazca, število mest je omejeno.",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/ta-veseli-dan-kulture-na-ljubljanskem-gradu-2/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261203_1600_50bb4848d842",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "881": {
+      "title": "MALI KORAKI | Avantgarda: igrivi sprehod po umetnosti za najmlajše",
+      "start_time": "2026-12-03T16:00:00+01:00",
+      "venue": "MG+ Moderna galerija",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena. Od 16.00 do 17.00, ob Kosovelovi poeziji. Obvezne prijave na izobrazevanje@mg-lj.si, število mest je omejeno. Za otroke do 4. leta je obvezna prisotnost staršev.",
+      "url": "https://www.mg-lj.si/si/izobrazevanje/4349/mali-koraki-avantgarda/",
+      "flags": [],
+      "event_id": "event_20261203_1600_5d8970a44a93",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "882": {
+      "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
+      "start_time": "2026-12-04T17:00:00+01:00",
+      "venue": "Paviljon, Kongresni trg / Park Zvezda",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni. Ustvarjalne delavnice vsak dan od 3. do 23. 12. 2026, od 17.00 do 19.00. Ob petkih, sobotah in nedeljah tudi pravljične gledališke predstave.",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/",
+      "flags": [],
+      "event_id": "event_20261204_1700_fe73549419b6",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "883": {
+      "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
+      "start_time": "2026-12-05T17:00:00+01:00",
+      "venue": "Paviljon, Kongresni trg / Park Zvezda",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni. Ustvarjalne delavnice vsak dan od 3. do 23. 12. 2026, od 17.00 do 19.00. Ob petkih, sobotah in nedeljah tudi pravljične gledališke predstave.",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/",
+      "flags": [],
+      "event_id": "event_20261205_1700_135085cdc1eb",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
+    },
+    "884": {
+      "title": "Čarobni gozd: ustvarjalne delavnice in pravljična predstava",
+      "start_time": "2026-12-06T17:00:00+01:00",
+      "venue": "Paviljon, Kongresni trg / Park Zvezda",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstopnine ni. Ustvarjalne delavnice vsak dan od 3. do 23. 12. 2026, od 17.00 do 19.00. Ob petkih, sobotah in nedeljah tudi pravljične gledališke predstave.",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/carobni-gozd/",
+      "flags": [],
+      "event_id": "event_20261206_1700_fee817532371",
+      "status": "active",
+      "first_seen": "2026-11-05T22:06:44+01:00"
     }
   },
   "user_rules": {
@@ -14580,9 +14689,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-11-05T20:57:25+01:00",
-      "total_active_events": 204,
-      "latest_run": "20261105T195725Z_5d7c6c72"
+      "last_run": "2026-11-05T22:06:44+01:00",
+      "total_active_events": 211,
+      "latest_run": "20261105T210644Z_57ef55a2"
     }
   },
   "hidden_events": {
