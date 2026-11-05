@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "input": {
+    "schema_version": 1,
+    "run_id": "20261105T125730Z_51c814fe",
+    "started_at": "2026-11-05T13:57:30+01:00",
+    "base_sha256": "51c814fe9bb524f1ecf870ea4348f7b101724df8adda6c47299b71dd213940b9",
+    "candidates": [
+      {
+        "title": "Hrestač ob soju sveč, glasbeno-baletna pravljica",
+        "start_time": "2026-12-20T11:00:00+01:00",
+        "venue": "Antonov dom",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Razprodano ob pregledu 2026-11-05. Druga ura stane 16 €",
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "flags": []
+      },
+      {
+        "title": "Hrestač ob soju sveč, glasbeno-baletna pravljica",
+        "start_time": "2026-12-20T12:30:00+01:00",
+        "venue": "Antonov dom",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "16 €",
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "flags": []
+      },
+      {
+        "title": "Elzino kraljestvo, igrana predstava za otroke",
+        "start_time": "2026-11-22T11:00:00+01:00",
+        "venue": "Ljudski dom Šentvid",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "7,50 €. Vstopnico potrebujejo otroci in starši",
+        "url": "https://www.mojekarte.si/si/elzino-kraljestvo/vstopnice-1236866.html",
+        "flags": []
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi: Začimbe in zeli za okusne jedi",
+        "start_time": "2027-01-16T11:00:00+01:00",
+        "venue": "Grajsko gledališče, Ljubljanski grad",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "5 €",
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zacimbe-in-zeli-za-okusne-jedi/vstopnice-1235438.html",
+        "flags": []
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi: Zdravilni sadež",
+        "start_time": "2027-01-30T11:00:00+01:00",
+        "venue": "Grajsko gledališče, Ljubljanski grad",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "5 €",
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zdravilni-sadez/vstopnice-1235440.html",
+        "flags": []
+      },
+      {
+        "title": "Rdeča nit: Ključ, ki odpira, pripovedovanje pravljic",
+        "start_time": "2026-11-12T17:30:00+01:00",
+        "venue": "Slovenski etnografski muzej",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": true,
+        "price_text": "Vstop prost",
+        "url": "https://www.etno-muzej.si/sl/dogodki/rdeca-nit-kljuc-ki-odpira",
+        "flags": []
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://avtonostalgija.si/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:21+01:00"
+      },
+      {
+        "url": "https://zmks.com/novi-koledar-moto-dogodkov-za-leto-2026/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:22+01:00"
+      },
+      {
+        "url": "https://vwoks.si/index.php",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:22+01:00"
+      },
+      {
+        "url": "https://cars.coffee/slovenia",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:22+01:00"
+      },
+      {
+        "url": "https://www.zveza-svs.si/dogodki/",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:22+01:00"
+      },
+      {
+        "url": "https://vwoks.si/index.php",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:27+01:00"
+      },
+      {
+        "url": "https://cars.coffee/slovenia",
+        "pass": "avto_moto",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:59:28+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/skupina/1238017/ostrzek.html",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:58:26+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/zanr/50/otroci-druzina.html",
+        "pass": "concerts_generic",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:00:02+01:00"
+      },
+      {
+        "url": "https://www.etno-muzej.si/sl/dogodki/rdeca-nit-kljuc-ki-odpira",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:59+01:00"
+      },
+      {
+        "url": "https://www.vandraj.si/to-so-dnevi-ko-lahko-muzeje-in-galerije-obiscete-brezplacno/",
+        "pass": "free_entry",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:02:00+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/elzino-kraljestvo/vstopnice-1236866.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:26+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:26+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/delavnica-unicef-ovih-punck-iz-cunj/vstopnice-1238076.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:27+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/zima-potrebuje-pomoc/vstopnice-1238077.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:27+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zacimbe-in-zeli-za-okusne-jedi/vstopnice-1235438.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:27+01:00"
+      },
+      {
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zdravilni-sadez/vstopnice-1235440.html",
+        "pass": "ljubljana",
+        "status": "ok",
+        "checked_at": "2026-11-05T14:01:27+01:00"
+      },
+      {
+        "url": "https://www.zgodovinska-mesta.si/prireditve/zimski-srednjeveski-dan/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:58:50+01:00"
+      },
+      {
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/do-priziga-luck-pravljicnega-celja-2026-se-mesec-dni/",
+        "pass": "slovenia",
+        "status": "ok",
+        "checked_at": "2026-11-05T13:58:51+01:00"
+      },
+      {
+        "url": "https://www.visitcelje.eu/sl/izdelek/zimski-srednjeveski-dan-na-celjskem-gradu-2/",
+        "pass": "slovenia",
+        "status": "failed",
+        "checked_at": "2026-11-05T13:58:57+01:00",
+        "reason": "HTTP 404"
+      }
+    ],
+    "passes": {
+      "ljubljana": {
+        "status": "partial",
+        "reason": "Browser research session: mojekarte Otroci in Družina list read across all 5 pages. Other minimum sources not read."
+      },
+      "slovenia": {
+        "status": "partial",
+        "reason": "Browser research session: Celje winter programme checked only."
+      },
+      "concerts_generic": {
+        "status": "partial",
+        "reason": "Browser research session: free and children's concert queries run on google.si, Eventim and mojekarte search tested. Napovednik and Cankarjev dom not read."
+      },
+      "concerts_watchlist": {
+        "status": "skipped",
+        "reason": "Browser research session, not a full sweep"
+      },
+      "free_entry": {
+        "status": "partial",
+        "reason": "Browser research session: museum free-entry queries run for every month in the horizon, Etnografski muzej read. Named checks not settled."
+      },
+      "avto_moto": {
+        "status": "partial",
+        "reason": "Browser research session: moped, veteran car and Cars and Coffee queries run on google.si and the VW Oldtimer Klub calendar read. Off-season, only one in-horizon lead."
+      }
+    },
+    "filtered": [
+      {
+        "title": "4. Maksimilijanov dan v Celju, 10. in 12. oktober 2026",
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/4-maksimilijanov-dan-v-celju/",
+        "reason": "Already past on the run clock."
+      },
+      {
+        "title": "Zimski srednjeveški spektakel na Celjskem gradu, press release and PDF",
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/zimski-srednjeveski-spektakel-na-celjskem-gradu",
+        "reason": "Dated 2025-12-11, so it describes the 2025 edition."
+      }
+    ],
+    "leads": [
+      {
+        "title": "Zima potrebuje pomoč, Ljubljanski grad, 15. 12. 2026 17:00, 7 €",
+        "url": "https://www.mojekarte.si/si/zima-potrebuje-pomoc/vstopnice-1238077.html",
+        "reason": "Date, venue and price confirmed. The format and audience are not described on the page, so no category can be set."
+      },
+      {
+        "title": "Delavnica UNICEF-ovih punčk iz cunj, Zmajev brlog, 7. 12. 2026 17:30, 30 €",
+        "url": "https://www.mojekarte.si/si/delavnica-unicef-ovih-punck-iz-cunj/vstopnice-1238076.html",
+        "reason": "Audience and age not stated. Could be an adult workshop."
+      },
+      {
+        "title": "Rdeča nit, Etnografski muzej, 17. 12. 2026 and 21. 1. 2027",
+        "url": "https://www.etno-muzej.si/sl/dogodki/rdeca-nit-kljuc-ki-odpira",
+        "reason": "Dates listed on the series page. Start times appear only on the page for each date, which is not published yet. The 12 Nov time is 17:30."
+      },
+      {
+        "title": "Zimski srednjeveški dan, Celjski grad, 13. in 14. 12. 2026",
+        "url": "https://www.zgodovinska-mesta.si/prireditve/zimski-srednjeveski-dan/",
+        "reason": "The page shows the 2026 date range but the times in its text are the 2025 times (16:00 to 20:00 and 10:00 to 14:00). The shop page for 2026 returned 404. Confirm times on visitcelje.eu."
+      },
+      {
+        "title": "7. Božičkova razstava okrašenih vozil, VW Oldtimer Klub Slovenija, 12. 12. 2026 17:00 do 22:00",
+        "url": "https://vwoks.si/index.php?option=com_dpcalendar&view=event&id=93&calid=9&Itemid=110&lang=sl",
+        "reason": "The event page gives date and time but no venue."
+      },
+      {
+        "title": "Mladi virtuozi, 11. koncert, Ljubljana, 21. 1. 2027",
+        "url": "https://dogodki-slovenija.si/dogodek/mladi-virtuozi-11-koncert/",
+        "reason": "Seen in google.si results. Page not opened, family fit and price unknown."
+      },
+      {
+        "title": "Hrestač ob soju sveč, Kranj 29. 11. 2026, Novo mesto 5. 12. 2026, Maribor, Celje, Ptuj",
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "reason": "Single touring performances outside Ljubljana, below the worth-the-trip bar. Ljubljana dates are saved."
+      },
+      {
+        "title": "Fehtarji, otroški koncert, Ljubljana 12. 2. 2027 in Celje 13. 2. 2027",
+        "url": "https://topevent.si/en/event/fehtarji-otroski-koncert-ljubljana",
+        "reason": "Beyond the horizon ending 2027-02-05. TopEvent page lists the Ljubljana date, so it can be saved once the horizon reaches it."
+      }
+    ],
+    "runtime_notes": [
+      "Browser research session, second pass.",
+      "mojekarte.si search works with plain curl at /si/iskanje.html?searchword=<term> and returns performer or event group pages at /si/skupina/<id>/<slug>.html with every date, venue and price. The earlier /sl/iskanje path returned 404.",
+      "mojekarte.si genre page https://www.mojekarte.si/si/zanr/50/otroci-druzina.html lists 75 children and family events with date, venue and price, readable with plain curl. Pages 2 to 5 are at /si/zanr/50/otroci-druzina/<page>-1-1-1.html. Each event has a /si/<slug>/vstopnice-<id>.html page with venue, price and organiser. This is the best new calendar from this session. The ?page= parameter is ignored.",
+      "Eventim search at eventim.si/en/search/?affiliate=EVE&searchterm=<term> works in the browser and lists artist events, but curl still fails. It returned no results for 'otroški koncert'.",
+      "Visit Ljubljana publishes a two-week event PDF at /assets/export/visitljubljana-prireditve-dva-tedna.pdf and a today PDF at /assets/export/visitljubljana-prireditve-danes.pdf. Plain curl works and pdftotext gives dated lines with venue and 'Vstop prost' markers.",
+      "Kino Šiška: the archive page shows only a 2026-09-19 event and the home page only MENT Ljubljana 2027 on 17 Feb. No Neca Falk event exists. Kino Šiška has no kids programme in the horizon on the pages read.",
+      "visitcelje.eu image PDF for Maksimilijanov dan: the 2026 edition was 10 and 12 October 2026, so it is past. The winter PDF found is the 2025 edition.",
+      "Tomos and veteran car season is over. The in-horizon items are club meetings. cars.coffee/slovenia is a demo page with no dates. zveza-svs.si/dogodki and zmks.com showed no dates for November to February.",
+      "Google result domains that kept showing up with readable calendars: dogodki-slovenija.si, vwoks.si, etno-muzej.si, mojekarte.si, topevent.si.",
+      "Queries not run: Tomos srečanje November and December 2026 as separate month queries, and Ta veseli dan kulture per museum beyond Cukrarna and Narodni muzej in the first pass."
+    ]
+  },
+  "results": {
+    "new": [
+      {
+        "title": "Hrestač ob soju sveč, glasbeno-baletna pravljica",
+        "start_time": "2026-12-20T11:00:00+01:00",
+        "venue": "Antonov dom",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "Razprodano ob pregledu 2026-11-05. Druga ura stane 16 €",
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "flags": [],
+        "event_id": "event_20261220_1100_ee3422d240fa",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      },
+      {
+        "title": "Hrestač ob soju sveč, glasbeno-baletna pravljica",
+        "start_time": "2026-12-20T12:30:00+01:00",
+        "venue": "Antonov dom",
+        "city": "Ljubljana",
+        "category": "ples",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "16 €",
+        "url": "https://www.mojekarte.si/si/skupina/1236373/hrestac-ob-soju-svec-glasbeno-baletna-pravljica.html",
+        "flags": [],
+        "event_id": "event_20261220_1230_0013ba9ed8b7",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      },
+      {
+        "title": "Elzino kraljestvo, igrana predstava za otroke",
+        "start_time": "2026-11-22T11:00:00+01:00",
+        "venue": "Ljudski dom Šentvid",
+        "city": "Ljubljana",
+        "category": "lutke",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "7,50 €. Vstopnico potrebujejo otroci in starši",
+        "url": "https://www.mojekarte.si/si/elzino-kraljestvo/vstopnice-1236866.html",
+        "flags": [],
+        "event_id": "event_20261122_1100_bc708016ca5b",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi: Začimbe in zeli za okusne jedi",
+        "start_time": "2027-01-16T11:00:00+01:00",
+        "venue": "Grajsko gledališče, Ljubljanski grad",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "5 €",
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zacimbe-in-zeli-za-okusne-jedi/vstopnice-1235438.html",
+        "flags": [],
+        "event_id": "event_20270116_1100_0293255f8451",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      },
+      {
+        "title": "Friderikovi pravljični dopoldnevi: Zdravilni sadež",
+        "start_time": "2027-01-30T11:00:00+01:00",
+        "venue": "Grajsko gledališče, Ljubljanski grad",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": null,
+        "is_free": false,
+        "price_text": "5 €",
+        "url": "https://www.mojekarte.si/si/friderikovi-pravljicni-dopoldnevi-zdravilni-sadez/vstopnice-1235440.html",
+        "flags": [],
+        "event_id": "event_20270130_1100_8ddb286a4c21",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      },
+      {
+        "title": "Rdeča nit: Ključ, ki odpira, pripovedovanje pravljic",
+        "start_time": "2026-11-12T17:30:00+01:00",
+        "venue": "Slovenski etnografski muzej",
+        "city": "Ljubljana",
+        "category": "pravljice",
+        "age_min": 4,
+        "is_free": true,
+        "price_text": "Vstop prost",
+        "url": "https://www.etno-muzej.si/sl/dogodki/rdeca-nit-kljuc-ki-odpira",
+        "flags": [],
+        "event_id": "event_20261112_1730_6b182f5b1f7d",
+        "status": "active",
+        "first_seen": "2026-11-05T13:57:30+01:00"
+      }
+    ],
+    "updated": [],
+    "expired": [],
+    "hidden": [],
+    "filtered": [
+      {
+        "title": "4. Maksimilijanov dan v Celju, 10. in 12. oktober 2026",
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/4-maksimilijanov-dan-v-celju/",
+        "reason": "Already past on the run clock."
+      },
+      {
+        "title": "Zimski srednjeveški spektakel na Celjskem gradu, press release and PDF",
+        "url": "https://www.visitcelje.eu/sl/mediji-pr/zimski-srednjeveski-spektakel-na-celjskem-gradu",
+        "reason": "Dated 2025-12-11, so it describes the 2025 edition."
+      }
+    ],
+    "deferred": [],
+    "unchanged": []
+  },
+  "after_sha256": "a2a7ed663bee95ad5f7c821d1c8189fd32a25c7eed4d722f26acec615dcde112"
+}
