@@ -227,16 +227,17 @@ Nationwide, not a Ljubljana category, so the parsed calendar and the fixture lis
 
 Plain curl on the page now returns an empty shell ("Nalagam koledar"). Do not report that as a
 blocked source, and no headless browser is needed. The calendar script `svamz.com/js/dogodki-data.js`
-reads a public Firestore collection with the site's own web key. Read it the same way, checked
-2026-11-05 (41 events):
+reads a public Firestore collection with the site's own web key. `fetch.py pull svamz` reads
+`BASE` and `KEY` from that script on every run and then the collection, checked 2026-11-05
+(41 events). Never copy the key into this repository. By hand:
 
 ```bash
-curl -s --max-time 30 'https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/dogodki?pageSize=300&key=AIzaSyAm1Dnl1lt0nZ0Rb7ikeVDXaRN1lTACS38'
+KEY=$(curl -s https://svamz.com/js/dogodki-data.js | sed -n 's/.*KEY = "\([^"]*\)".*/\1/p')
+curl -s --max-time 30 "https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/dogodki?pageSize=300&key=$KEY"
 ```
 
 Each document carries `fields.title`, `start` and `end` (`YYYY-MM-DD`), `place`, `description`,
-`contact` and `url`, each wrapped as `{"stringValue": ...}`. Follow `nextPageToken` when present.
-If the key or project changes, read the new values from `dogodki-data.js`. The document ID
+`contact` and `url`, each wrapped as `{"stringValue": ...}`. Follow `nextPageToken` when present. The document ID
 (`2026-12-26-srecanje-...`) gives the detail page `https://svamz.com/event.html?id=<id>`. Record
 the Firestore URL as a source. Fetch the detail page too and use it as the candidate `url`. `place`
 is often empty. Without a venue the meeting stays a lead.

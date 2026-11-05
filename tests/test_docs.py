@@ -21,6 +21,14 @@ class DocumentationTests(unittest.TestCase):
                 with self.subTest(file=str(path.relative_to(ROOT)), target=target):
                     self.assertTrue((path.parent / unquote(parsed.path)).exists())
 
+    def test_no_api_keys_are_committed(self):
+        for folder in ("scripts", "reference", "docs", "app", "tests", ".agents"):
+            for path in (ROOT / folder).rglob("*"):
+                if path.is_file() and path.suffix in {".py", ".md", ".js", ".json", ".yml", ".html"}:
+                    with self.subTest(path=str(path.relative_to(ROOT))):
+                        self.assertNotRegex(path.read_text(encoding="utf-8", errors="ignore"),
+                                            "AIza" + r"[0-9A-Za-z_-]{30,}")
+
     def test_skills_have_discoverable_frontmatter(self):
         for path in (ROOT / ".agents" / "skills").rglob("SKILL.md"):
             content = path.read_text(encoding="utf-8")

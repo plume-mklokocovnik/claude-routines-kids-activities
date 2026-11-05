@@ -258,8 +258,9 @@ def svamz(f, ctx):
     script = f.fetch("https://svamz.com/js/dogodki-data.js", "avto_moto") or ""
     base = re.search(r'BASE\s*=\s*"([^"]+)"', script)
     key = re.search(r'KEY\s*=\s*"([^"]+)"', script)
-    base = base.group(1) if base else "https://firestore.googleapis.com/v1/projects/svamz-database/databases/(default)/documents/"
-    key = key.group(1) if key else "AIzaSyAm1Dnl1lt0nZ0Rb7ikeVDXaRN1lTACS38"
+    if not base or not key:
+        return []
+    base, key = base.group(1), key.group(1)
     documents, token = [], ""
     for _ in range(20):
         data = f.json(f"{base}dogodki?pageSize=300&key={key}" + (f"&pageToken={token}" if token else ""), "avto_moto")
