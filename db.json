@@ -14688,7 +14688,11 @@
         "event_20261122_1100_1112f5a3b8ea",
         "event_20261122_1700_3a55af5ddbc8",
         "event_20261126_1700_a5ff3463c481",
-        "event_20261128_1115_44060f357596"
+        "event_20261128_1115_44060f357596",
+        "event_20261105_1700_1c32f8ee0319",
+        "event_20261105_1700_3fde6dec60de",
+        "event_20261105_1700_d06755befe5c",
+        "event_20261105_1800_30e1013e2222"
       ],
       "exclude_venues": [],
       "exclude_keywords": [
@@ -19088,6 +19092,54 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/ostrzek-5-6460",
       "reason": "duplicate of event_20261128_1115_98827b81a6aa",
       "hidden_at": "2026-11-05T12:26:56Z"
+    },
+    "366": {
+      "match": "event_20261105_1700_1c32f8ee0319",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261105_1700_1c32f8ee0319",
+      "title": "Ustvarjalnice z Galerijo C.C.U.: DEŽELA PINGVINOV",
+      "venue": "Center kulture Španski borci, Zaloška 61",
+      "start_time": "2026-11-05T17:00:00+01:00",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-dezela-pingvinov-6430",
+      "reason": "expired",
+      "hidden_at": "2026-11-06T07:46:43Z"
+    },
+    "367": {
+      "match": "event_20261105_1700_3fde6dec60de",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261105_1700_3fde6dec60de",
+      "title": "MINT: Kako je bilo, ko še ni bilo avtomobilov – Gregor Ilaš, Založba Aristej",
+      "venue": "Knjižnica Savsko naselje (MKL)",
+      "start_time": "2026-11-05T17:00:00+01:00",
+      "url": "https://www.mklj.si/dogodek/mint-kako-je-bilo-ko-se-ni-bilo-avtomobilov-gregor-ilas-zalozba-aristej/",
+      "reason": "expired",
+      "hidden_at": "2026-11-06T07:46:43Z"
+    },
+    "368": {
+      "match": "event_20261105_1700_d06755befe5c",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261105_1700_d06755befe5c",
+      "title": "Bralna urica s Tačkami – Adela Premate, Tačke pomagačke",
+      "venue": "Knjižnica Šiška – 1. nadstropje",
+      "start_time": "2026-11-05T17:00:00+01:00",
+      "url": "https://www.mklj.si/dogodek/bralna-urica-s-tackami-tacke-pomagacke-adela-premate-2/",
+      "reason": "expired",
+      "hidden_at": "2026-11-06T07:46:43Z"
+    },
+    "369": {
+      "match": "event_20261105_1800_30e1013e2222",
+      "scope": "event",
+      "rule_field": "exclude_event_ids",
+      "event_id": "event_20261105_1800_30e1013e2222",
+      "title": "Ostržek",
+      "venue": "LGL, Šentjakobski oder",
+      "start_time": "2026-11-05T18:00:00+01:00",
+      "url": "https://www.lgl.si/spored-predstav",
+      "reason": "expired",
+      "hidden_at": "2026-11-06T07:46:43Z"
     }
   },
   "decision_log": {
