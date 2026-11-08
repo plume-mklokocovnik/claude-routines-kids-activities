@@ -648,8 +648,8 @@
       ],
       "status": "active",
       "first_seen": "2026-09-22T08:47:12Z",
-      "decision": "maybe",
-      "decided_at": "2026-10-02T12:25:01Z"
+      "decision": "rejected",
+      "decided_at": "2026-11-08T08:03:44Z"
     },
     "70": {
       "event_id": "mestnimuzej_20261121_1600",
@@ -24742,6 +24742,14 @@
       "before_at": "2026-10-02T12:25:01Z",
       "after": "rejected",
       "at": "2026-11-08T07:56:14Z"
+    },
+    "701": {
+      "event_id": "mestnimuzej_20261114_1500",
+      "action": "set",
+      "before": "maybe",
+      "before_at": "2026-10-02T12:25:01Z",
+      "after": "rejected",
+      "at": "2026-11-08T08:03:44Z"
     }
   }
 }
