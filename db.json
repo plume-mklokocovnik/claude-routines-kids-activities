@@ -275,7 +275,7 @@
       "price_text": "",
       "url": "https://mgml.si/sl/dogodki/",
       "flags": [],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-21T14:35:28Z",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -646,7 +646,7 @@
         "age_stretch",
         "cancelled"
       ],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-22T08:47:12Z",
       "decision": "rejected",
       "decided_at": "2026-11-08T08:03:44Z"
@@ -1023,7 +1023,7 @@
         "outside_ljubljana",
         "travel"
       ],
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-09-24T07:22:48Z",
       "decision": "rejected",
       "decided_at": "2026-11-08T07:56:14Z"
@@ -1653,7 +1653,7 @@
       "category": "festival",
       "age_min": null,
       "is_free": false,
-      "price_text": "35. izvedba. 25.–30. 12. 2026, predstave večkrat dnevno od 13.30 naprej, 90 minut, 5 km podzemna pot, 18 prizorov. Vstopnina ni objavljena na tej strani.",
+      "price_text": "35. izvedba. 25.–30. 12. 2026, predstave večkrat dnevno od 13.30 naprej, 90 minut, 5 km podzemna pot, 18 prizorov. Odrasli 45 €, študenti 16–25 let 36 €, otroci 6–15 let 27 €, otroci do 5 let 5,50 €.",
       "url": "https://www.postojnska-jama.eu/en/tickets/living-nativity-scenes/",
       "flags": [
         "outside_ljubljana",
@@ -3086,7 +3086,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-skrivnosti-lesa-5388",
       "flags": [],
       "event_id": "event_20261115_1100_f144cc796338",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-08T09:06:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-11T11:21:33Z"
@@ -5323,7 +5323,7 @@
       "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-potovanje-skozi-cas/",
       "flags": [],
       "event_id": "event_20261115_0000_ab38f7a28a6b",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:05:20+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5504,7 +5504,7 @@
       "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
       "flags": [],
       "event_id": "event_20261113_1500_d5f10acb9888",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5521,7 +5521,7 @@
       "url": "https://www.citypark.si/si/events/dozivljajska-jesen-za-otroke-v-cityparku/2026-10-06/2026-11-28",
       "flags": [],
       "event_id": "event_20261114_1100_64d846f442fe",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00",
       "decision": "maybe",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -5623,7 +5623,7 @@
         "time_unknown"
       ],
       "event_id": "event_20261117_0000_235a1503762f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-15T09:39:54+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11358,7 +11358,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261114_1100_08539c11ef54",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11377,7 +11377,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261114_1700_940e28f0256e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11394,7 +11394,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261115_1100_12365345c7b6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11411,7 +11411,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261115_1700_e79d0db1ecb4",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11430,7 +11430,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261116_1700_80fe6a6335c0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11449,7 +11449,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261117_1700_06362cb849bb",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11466,7 +11466,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261118_1700_bf91c9567abe",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-22T09:05:28+02:00",
       "decision": "rejected",
       "decided_at": "2026-10-22T23:10:36Z"
@@ -11775,7 +11775,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261112_1700_4f681740848f",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11930,7 +11930,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261114_1000_578acaa695b6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11947,7 +11947,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261114_1600_5dfe1d714ad4",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -11964,7 +11964,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261115_1415_ad92211ceb02",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-10-29T08:07:15+01:00",
       "decision": "rejected",
       "decided_at": "2026-10-29T07:35:35Z"
@@ -12100,7 +12100,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/kuharska-delavnica-hruskova-marmelada-z-vaniljo-6ae9a93f5e0f1",
       "flags": [],
       "event_id": "event_20261116_1500_e7b35d8b09fd",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T08:07:42+01:00",
       "decision": "maybe",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -12630,7 +12630,7 @@
       "flags": [],
       "city": "Ljubljana",
       "event_id": "event_20261118_1700_9f7c3452c0b2",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T13:05:33+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -12700,7 +12700,7 @@
       "flags": [],
       "city": "Ljubljana",
       "event_id": "event_20261118_1700_e9aefec19ea9",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T13:05:33+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -12719,7 +12719,7 @@
       ],
       "city": "Ljubljana",
       "event_id": "event_20261118_1700_2f0d2f4e4f67",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T13:05:33+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -12795,7 +12795,7 @@
       ],
       "city": "Ljubljana",
       "event_id": "event_20261113_1800_f1afa83ed1e0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T13:05:33+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -13382,7 +13382,7 @@
       "url": "https://www.etno-muzej.si/sl/dogodki/rdeca-nit-kljuc-ki-odpira",
       "flags": [],
       "event_id": "event_20261112_1730_6b182f5b1f7d",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T13:57:30+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -13713,7 +13713,7 @@
       "url": "https://vsi-eventi.com/event/spusti-ploscek-in-odkrij-svoje-presenecenje-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-12-ljubljana",
       "flags": [],
       "event_id": "event_20261112_1630_24aaffc97fc0",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T20:57:25+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -13783,7 +13783,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261112_1900_b586472f3631",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T20:57:25+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -13948,7 +13948,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ustvarjalni-delavnici-izdelave-praznicnih-voscilnic-iz-odpadnih-materialov-6ae9e4e121f1c",
       "flags": [],
       "event_id": "event_20261117_1700_1bfd1327702e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T20:57:25+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -14175,7 +14175,7 @@
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/ana-plamenita",
       "flags": [],
       "event_id": "event_20261113_1800_96cdbdb76485",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-05T20:57:25+01:00",
       "decision": "rejected",
       "decided_at": "2026-11-05T20:44:16Z"
@@ -14382,7 +14382,7 @@
       "url": "https://www.mklj.si/dogodek/knjizne-kazalke/",
       "flags": [],
       "event_id": "event_20261114_1000_e69708569b4e",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "889": {
@@ -14562,7 +14562,7 @@
       "url": "https://www.ljubljana.si/sl/aktualno/dogodki/ples-rusalk-6aec721d02d82",
       "flags": [],
       "event_id": "event_20261112_1700_121a927186fc",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "901": {
@@ -14577,7 +14577,7 @@
       "url": "https://napovednik.com/za-otroke/predstave-za-otroke/zmaj-iskrica-lutkovna-predstava-6524",
       "flags": [],
       "event_id": "event_20261114_1130_dc11fde10d96",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "902": {
@@ -14592,7 +14592,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-praznicni-vencki-6526",
       "flags": [],
       "event_id": "event_20261117_1700_c43c4f3650e6",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "903": {
@@ -14607,7 +14607,7 @@
       "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalna-delavnica-za-otroke-mladino-in-druzine-4080",
       "flags": [],
       "event_id": "event_20261113_1700_aa9e068d8636",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "904": {
@@ -14637,7 +14637,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261114_1030_43c8c1c78593",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "906": {
@@ -14652,7 +14652,7 @@
       "url": "https://www.kinodvor.org/kinobalon/",
       "flags": [],
       "event_id": "event_20261115_1130_35534d61f21b",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "907": {
@@ -14717,17 +14717,15 @@
     },
     "911": {
       "title": "Cirkuška zabava",
-      "start_time": "2027-02-06T00:00:00+01:00",
+      "start_time": "2027-02-06T11:00:00+01:00",
       "venue": "SiTi Teater BTC",
       "city": "Ljubljana",
       "category": "lutke",
       "age_min": 3,
       "is_free": null,
       "price_text": "",
-      "url": "https://www.sititeater.si/sobotni-dopoldnevi/",
-      "flags": [
-        "time_unknown"
-      ],
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/cirkuska-zabava_1/",
+      "flags": [],
       "event_id": "event_20270206_0000_1c4dd190498b",
       "status": "active",
       "first_seen": "2026-11-12T08:07:59+01:00"
@@ -14746,7 +14744,7 @@
         "age_stretch"
       ],
       "event_id": "event_20261113_1000_e032e1f056cb",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "913": {
@@ -14761,7 +14759,7 @@
       "url": "https://www.lgl.si/spored-predstav",
       "flags": [],
       "event_id": "event_20261118_1700_925bdb3bef56",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
     },
     "914": {
@@ -14918,8 +14916,992 @@
         "outside_ljubljana"
       ],
       "event_id": "event_20261113_0000_b2677553fbed",
-      "status": "active",
+      "status": "expired",
       "first_seen": "2026-11-12T08:07:59+01:00"
+    },
+    "924": {
+      "title": "32. Gala koncert Radia Ognjišče: Mir in dobro",
+      "start_time": "2026-11-29T15:00:00+01:00",
+      "venue": "Cankarjev dom, Gallusova dvorana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "15,00 | 17,00 | 20,00 | 25,00 | 30,00 EUR",
+      "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/32-gala-koncert-radia-ognjisce-mir-in-dobro",
+      "flags": [],
+      "event_id": "event_20261129_1500_e9efc342cfc4",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "925": {
+      "title": "32. Gala koncert Radia Ognjišče: Mir in dobro",
+      "start_time": "2026-11-29T19:00:00+01:00",
+      "venue": "Cankarjev dom, Gallusova dvorana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "15,00 | 17,00 | 20,00 | 25,00 | 30,00 EUR",
+      "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/32-gala-koncert-radia-ognjisce-mir-in-dobro",
+      "flags": [],
+      "event_id": "event_20261129_1900_1ad0d285ee26",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "926": {
+      "title": "32. Gala koncert Radia Ognjišče: Mir in dobro",
+      "start_time": "2027-01-31T16:00:00+01:00",
+      "venue": "Cankarjev dom, Gallusova dvorana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "15,00 | 17,00 | 20,00 | 25,00 | 30,00 EUR",
+      "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/32-gala-koncert-radia-ognjisce-mir-in-dobro",
+      "flags": [],
+      "event_id": "event_20270131_1600_28433c4f4086",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "927": {
+      "title": "32. Gala koncert Radia Ognjišče: Mir in dobro",
+      "start_time": "2027-01-31T19:00:00+01:00",
+      "venue": "Cankarjev dom, Gallusova dvorana",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "15,00 | 17,00 | 20,00 | 25,00 | 30,00 EUR",
+      "url": "https://www.cd-cc.si/kultura/prireditev-drugega-organizatorja/32-gala-koncert-radia-ognjisce-mir-in-dobro",
+      "flags": [],
+      "event_id": "event_20270131_1900_78b433483df2",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "928": {
+      "title": "Romana Krajnčan: Kako je Mravljica postala Huda (Praznično Krško)",
+      "start_time": "2026-12-15T00:00:00+01:00",
+      "venue": "Kulturni dom Krško",
+      "city": "Krško",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena na strani prazničnega programa",
+      "url": "https://www.visitkrsko.com/dogodki/praznicno-krsko-2026/",
+      "flags": [
+        "outside_ljubljana",
+        "travel",
+        "time_unknown"
+      ],
+      "event_id": "event_20261215_0000_d9a5de8731b7",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "929": {
+      "title": "Silvestrovanje za otroke in odštevanje z Alenko Kolman (Krško)",
+      "start_time": "2026-12-27T10:00:00+01:00",
+      "venue": "Trg Matije Gubca",
+      "city": "Krško",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Cena ni navedena, javna prireditev ob podpori GEN energije, 10:00 do 12:00",
+      "url": "https://www.visitkrsko.com/dogodki/praznicno-krsko-2026/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261227_1000_e13807a21b26",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "930": {
+      "title": "Brezplačen ogled stalne zbirke – vsaka prva nedelja v mesecu",
+      "venue": "Narodna galerija, Puharjeva 9",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": 0,
+      "is_free": true,
+      "price_text": "Vsako prvo nedeljo v mesecu je ogled stalne zbirke brezplačen (ne velja za občasne razstave). Sicer: stalna zbirka 10 €/6 €/20 € (družinska), kombinirana vstopnica 14 €/8 €/28 €.",
+      "url": "https://www.ng-slo.si/si/obiscite-nas/odpiralni-cas-in-vstopnina",
+      "flags": [
+        "time_unknown"
+      ],
+      "start_time": "2027-02-07T00:00:00+01:00",
+      "event_id": "event_20270207_0000_aa848b9d6954",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "931": {
+      "title": "Brezplačen obisk muzeja – vsaka prva nedelja v mesecu",
+      "venue": "Narodni muzej Slovenije – Muzejska ulica 1 in Metelkova 20",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": 0,
+      "is_free": true,
+      "price_text": "Brezplačen obisk muzeja vsako prvo nedeljo v mesecu (z izjemo velikih občasnih razstav). Sicer: odrasli 10 €, upokojenci/dijaki/študentje 6 €, družine 20 €.",
+      "url": "https://www.nms.si/si/nacrtujte-obisk/cenik",
+      "flags": [
+        "time_unknown"
+      ],
+      "start_time": "2027-02-07T00:00:00+01:00",
+      "event_id": "event_20270207_0000_bec89a7a8217",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "932": {
+      "title": "Prost vstop – vsaka prva nedelja v mesecu",
+      "venue": "Slovenski etnografski muzej, Metelkova ulica 2",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": 0,
+      "is_free": true,
+      "price_text": "Prost vstop vsako prvo nedeljo v mesecu. Sicer: odrasli 8 €, učenci/dijaki/študentje/upokojenci 5 €, družinska vstopnica 16 €.",
+      "url": "https://www.etno-muzej.si/sl/delovni-cas-in-cenik",
+      "flags": [
+        "time_unknown"
+      ],
+      "start_time": "2027-02-07T00:00:00+01:00",
+      "event_id": "event_20270207_0000_7256293cd1d7",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "933": {
+      "title": "Brezplačen vstop – vsaka prva nedelja v mesecu",
+      "venue": "Muzej za arhitekturo in oblikovanje (MAO), Grad Fužine, Rusjanov trg 7",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": 0,
+      "is_free": true,
+      "price_text": "Brezplačno vsaka prva nedelja v mesecu (poleg Mednarodnega muzejskega dne in Poletne muzejske noči; tudi predšolski otroci imajo sicer vedno prost vstop). Sicer: redna vstopnina 7 €, znižana 3,50 €, družinska 12,50 €.",
+      "url": "https://mao.si/informacije-za-obiskovalce/",
+      "flags": [
+        "time_unknown"
+      ],
+      "start_time": "2027-02-07T00:00:00+01:00",
+      "event_id": "event_20270207_0000_220dd861b3f4",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "934": {
+      "title": "Ta veseli dan kulture 2026: Mestni muzej Ljubljana, brezplačna vodstva",
+      "start_time": "2026-12-03T10:30:00+01:00",
+      "venue": "Mestni muzej Ljubljana",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačna vodstva po razstavah 3. 12. 2026 ob 10:30, 11:00, 11:30, 12:00, 16:00, 16:30 in 17:00; za vodstvo po Delcih časa obvezna prijava na prijava@mgml.si ali 01 24 12 506",
+      "url": "https://mgml.si/sl/mestni-muzej/dogodki/2565/2026-12-03/10-30/ta-veseli-dan-kulture-vodstvo-po-razstavi-delci-casa-sodobne-arheoloske-raziskave/",
+      "flags": [],
+      "event_id": "event_20261203_1030_fd30ae5fcfa4",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "935": {
+      "title": "Ta veseli dan kulture s klasiki madžarske fotografije",
+      "start_time": "2026-12-03T16:30:00+01:00",
+      "venue": "Galerija Jakopič",
+      "city": "Ljubljana",
+      "category": "festival",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačno vodstvo s kuratorko, 16:30–18:00; prijava priporočena na prijava@mgml.si",
+      "url": "https://mgml.si/sl/galerija-jakopic/dogodki/2559/2026-12-03/16-30/ta-veseli-dan-kulture-s-klasiki-madzarske-fotografije/",
+      "flags": [],
+      "event_id": "event_20261203_1630_08bbb9fcbdc7",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "936": {
+      "title": "Družinska delavnica Čarobni fotogram",
+      "start_time": "2027-02-13T16:00:00+01:00",
+      "venue": "Galerija Jakopič",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 4,
+      "is_free": false,
+      "price_text": "18 € / družino, za otroke 4 do 9 let, obvezne prijave do petka do 14:00 (prijava@mgml.si ali 01 24 12 506)",
+      "url": "https://mgml.si/sl/galerija-jakopic/dogodki/2581/2027-02-13/16-00/druzinska-delavnica-carobni-fotogram/",
+      "flags": [],
+      "event_id": "event_20270213_1600_848bf28bbadb",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "937": {
+      "title": "GLEDALIŠKA PREDSTAVA: PIKA NOGAVIČKA IN ČASOVNI STROJ Z OBISKOM DEDKA MRAZA",
+      "start_time": "2026-12-27T17:00:00+01:00",
+      "venue": "Kino Bežigrad",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kino-bezigrad.si/predstava/gledaliska-predstava-pika-nogavicka-in-casovni-stroj-z-obiskom-dedka-mraza/",
+      "flags": [],
+      "event_id": "event_20261227_1700_be0f50a85524",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "938": {
+      "title": "NOV MUZIKAL ROMANE KRAJNČAN: KAKO JE MRAVLJICA POSTALA HUDA",
+      "start_time": "2027-01-29T17:30:00+01:00",
+      "venue": "Kino Bežigrad",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kino-bezigrad.si/predstava/nov-muzikal-romane-krajncan-kako-je-mravljica-postala-huda/",
+      "flags": [],
+      "event_id": "event_20270129_1730_c51c3886fc9c",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "939": {
+      "title": "LUTKOVNA PREDSTAVA: CAR ŽIVALI",
+      "start_time": "2027-02-13T11:00:00+01:00",
+      "venue": "Kino Bežigrad",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 3,
+      "is_free": null,
+      "price_text": "Predstava je del abonmaja, ampak so vstopnice na voljo tudi samostojno po ceni 8,10 €",
+      "url": "https://www.kino-bezigrad.si/predstava/lutkovna-predstava-car-zivali/",
+      "flags": [],
+      "event_id": "event_20270213_1100_9bb55ea8561f",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "940": {
+      "title": "DAN ODPRTIH VRAT - Za vse, ki še verjamete v čar pisanih voščilnic",
+      "start_time": "2026-11-21T11:00:00+01:00",
+      "venue": "Sedež ČS Rudnik, Pot k ribniku 20 (sejna soba v pritličju)",
+      "city": "Ljubljana",
+      "category": "odprta_vrata",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dan-odprtih-vrat-za-vse-ki-se-verjamete-v-car-pisanih-voscilnic-6afb111d72fc9",
+      "flags": [],
+      "event_id": "event_20261121_1100_918e9301aa5f",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "941": {
+      "title": "Izdelovanje prazničnih aranžmajev",
+      "start_time": "2026-11-19T16:00:00+01:00",
+      "venue": "Sejna soba, Center Zalog, Zaloška cesta 267",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Brezplačna ustvarjalna delavnica",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/izdelovanje-praznicnih-aranzmajev-6aec7326e13f7",
+      "flags": [],
+      "event_id": "event_20261119_1600_06d0ae14a308",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "942": {
+      "title": "DRAVLJE POJEJO",
+      "start_time": "2026-11-20T18:00:00+01:00",
+      "venue": "Dom krajanov Dravlje, Draveljska 44",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/dravlje-pojejo-6ae9cdb9a4682",
+      "flags": [],
+      "event_id": "event_20261120_1800_1231dcb27db7",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "943": {
+      "title": "Tacenski večer - Premierni celovečerni letni koncert mešanega pevskega zbora KUD Tacen pod taktirko Denisa Robnika",
+      "start_time": "2026-11-22T18:00:00+01:00",
+      "venue": "Dom gasilcev in krajanov Tacen, Pločanska ulica 8",
+      "city": "Ljubljana",
+      "category": "koncert",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.ljubljana.si/sl/aktualno/dogodki/tacenski-vecer-premierni-celovecerni-letni-koncert-mesanega-pevskega-zbora-kud-tacen-pod-taktirko-denisa-robnika-6afd6f5a9687a",
+      "flags": [],
+      "event_id": "event_20261122_1800_47732a22c7dc",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "944": {
+      "title": "Zadeni tarčo in osvoji nagrado! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+      "start_time": "2026-11-19T16:30:00+01:00",
+      "venue": "Supernova Ljubljana Šiška",
+      "city": "Ljubljana",
+      "category": "pop_up",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://vsi-eventi.com/event/zadeni-tarco-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-19-ljubljana",
+      "flags": [],
+      "event_id": "event_20261119_1630_91c883f84c1c",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "945": {
+      "title": "Vrzi žogo in osvoji nagrado! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+      "start_time": "2026-11-19T16:30:00+01:00",
+      "venue": "Supernova Ljubljana Šiška",
+      "city": "Ljubljana",
+      "category": "pop_up",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://vsi-eventi.com/event/vrzi-zogo-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-19-ljubljana",
+      "flags": [],
+      "event_id": "event_20261119_1630_d0101f1bda61",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "946": {
+      "title": "Zadeni tarčo in osvoji nagrado! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+      "start_time": "2026-11-26T16:30:00+01:00",
+      "venue": "Supernova Ljubljana Šiška",
+      "city": "Ljubljana",
+      "category": "pop_up",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://vsi-eventi.com/event/zadeni-tarco-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-26-ljubljana",
+      "flags": [],
+      "event_id": "event_20261126_1630_210ce2353a39",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "947": {
+      "title": "Vrzi žogo in osvoji nagrado! 7 četrtkov, 7 nagradnih iger in več kot 5.000 € nagrad v Supernovi Ljubljana Šiška!",
+      "start_time": "2026-11-26T16:30:00+01:00",
+      "venue": "Supernova Ljubljana Šiška",
+      "city": "Ljubljana",
+      "category": "pop_up",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://vsi-eventi.com/event/vrzi-zogo-in-osvoji-nagrado-7-cetrtkov-7-nagradnih-iger-in-vec-kot-5000-eur-nagrad-v-supernovi-ljubljana-siska-2026-11-26-ljubljana",
+      "flags": [],
+      "event_id": "event_20261126_1630_287f2c64e117",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "948": {
+      "title": "DadaDisko: družinski RAVE",
+      "start_time": "2026-11-21T10:00:00+01:00",
+      "venue": "Katedrala, Kino Šiška",
+      "city": "Ljubljana",
+      "category": "ples",
+      "age_min": null,
+      "is_free": false,
+      "price_text": "Vstopnice v prodaji (eventim.si)",
+      "url": "https://vsi-eventi.com/event/dadadisko-druzinski-rave-2026-11-21-ljubljana",
+      "flags": [],
+      "event_id": "event_20261121_1000_219abd2d056a",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "949": {
+      "title": "Muzikal delavnica za otroke",
+      "start_time": "2026-11-22T10:00:00+01:00",
+      "venue": "Plesna šola BastArts Academy",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://vsi-eventi.com/event/muzikal-delavnica-za-otroke-2026-11-22-ljubljana",
+      "flags": [],
+      "event_id": "event_20261122_1000_a508524866d9",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "950": {
+      "title": "Otroški abonma z Matejo in Simonom: Dogodivščine Mačka Murija",
+      "start_time": "2026-11-21T11:00:00+01:00",
+      "venue": "Knjigarna Konzorcij, Slovenska 29",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/otroski-abonma-z-matejo-in-simonom-dogodivscine-macka-murija-6571",
+      "flags": [],
+      "event_id": "event_20261121_1100_e7cc132e8f9a",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "951": {
+      "title": "Ustvarjalnice z Galerijo C.C.U.: PISANE VOŠČILNICE",
+      "start_time": "2026-11-24T17:00:00+01:00",
+      "venue": "Center kulture Španski borci, Zaloška 61",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": true,
+      "price_text": "Vstop prost, prijave na galerija.ccu@gmail.com",
+      "url": "https://napovednik.com/za-otroke/aktivnosti-za-otroke/ustvarjalnice-z-galerijo-ccu-pisane-voscilnice-6570",
+      "flags": [],
+      "event_id": "event_20261124_1700_b43d9395e944",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "952": {
+      "title": "Bratovščina Sinjega galeba",
+      "start_time": "2027-02-08T18:00:00+01:00",
+      "venue": "Cankarjev dom, Štihova dvorana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 10,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/bratovscina-sinjega-galeba",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20270208_1800_6df60c2dd9c4",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "953": {
+      "title": "Kralj Matjaž",
+      "start_time": "2027-02-14T15:00:00+01:00",
+      "venue": "Cankarjev dom, Štihova dvorana",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 5,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/kralj-matjaz-2",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20270214_1500_429c2212222c",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "954": {
+      "title": "Potovanje z literarnimi junaki – Zala Ravnjak in Janja Jazbec",
+      "start_time": "2026-11-19T17:00:00+01:00",
+      "venue": "Knjižnica Bežigrad, podpritličje",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/potovanje-z-literarnimi-junaki-janja-jazbec-in-zala-ravnjak/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261119_1700_7781ee3f1843",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "955": {
+      "title": "Delavnice z Veroniko Szillich: Vezene voščilnice",
+      "start_time": "2026-12-02T17:00:00+01:00",
+      "venue": "Knjižnica Jarše",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 6,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/delavnice-z-veroniko-szillich-vezene-voscilnice/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261202_1700_821e5ed71008",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "956": {
+      "title": "Bralna urica s Tačkami – Adela Premate, Tačke pomagačke",
+      "start_time": "2026-12-03T17:00:00+01:00",
+      "venue": "Knjižnica Šiška – 1. nadstropje",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/bralna-urica-s-tackami-adela-premate-tacke-pomagacke/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261203_1700_8b79b3505891",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "957": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Branka Vodenik in Nina Hribar",
+      "start_time": "2026-12-07T18:00:00+01:00",
+      "venue": "Knjižnica Jurij Vega",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-branka-vodenik-in-nina-hribar-3/",
+      "flags": [],
+      "event_id": "event_20261207_1800_03d6b6e21b6b",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "958": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Tina Kušar",
+      "start_time": "2026-12-09T17:00:00+01:00",
+      "venue": "Knjižnica Črnuče",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-tina-kusar-2/",
+      "flags": [],
+      "event_id": "event_20261209_1700_4672e40c902b",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "959": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Nataša Kamnikar",
+      "start_time": "2026-12-10T17:00:00+01:00",
+      "venue": "Knjižnica dr. France Škerl",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-natasa-kamnikar-2/",
+      "flags": [],
+      "event_id": "event_20261210_1700_27468414fbf7",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "960": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Flores Oven",
+      "start_time": "2026-12-15T17:00:00+01:00",
+      "venue": "Knjižnica Savsko naselje",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-flores-oven-3/",
+      "flags": [],
+      "event_id": "event_20261215_1700_34269d62cc85",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "961": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Petra Kozjan",
+      "start_time": "2026-12-16T17:00:00+01:00",
+      "venue": "Knjižnica Bežigrad",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-petra-kozjan-3/",
+      "flags": [],
+      "event_id": "event_20261216_1700_b35dc84dae53",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "962": {
+      "title": "Družinska novoletna ustvarjalna čajanka – Špela Setničar",
+      "start_time": "2026-12-17T17:00:00+01:00",
+      "venue": "Knjižnica Glinškova ploščad",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/druzinska-novoletna-ustvarjalna-cajanka-spela-setnicar/",
+      "flags": [],
+      "event_id": "event_20261217_1700_970e941a5733",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "963": {
+      "title": "Naredi si sam: Vrečka iz blaga",
+      "start_time": "2026-12-08T17:00:00+01:00",
+      "venue": "Knjižnica Polje",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": 12,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/naredi-si-sam-vrecka-iz-blaga-2/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261208_1700_049975269802",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "964": {
+      "title": "Otroški knjižni klub: Pravljična urica za otroke, ki ne obiskujejo vrtca – Bruna Korent",
+      "start_time": "2026-12-09T09:30:00+01:00",
+      "venue": "Knjižnica Šiška – 1. nadstropje",
+      "city": "Ljubljana",
+      "category": "pravljice",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/otroski-knjizni-klub-pravljicna-urica-za-otroke-ki-ne-obiskujejo-vrtca-bruna-korent-2/",
+      "flags": [],
+      "event_id": "event_20261209_0930_812dad3451da",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "965": {
+      "title": "Broške",
+      "start_time": "2026-12-12T10:00:00+01:00",
+      "venue": "Knjižnica Rog",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.mklj.si/dogodek/broske-2/",
+      "flags": [],
+      "event_id": "event_20261212_1000_febc566c1f07",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "966": {
+      "title": "Kinobalon: Kako je Mambo postal velikan",
+      "start_time": "2026-11-21T15:15:00+01:00",
+      "venue": "Kinodvor, Mala dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261121_1515_105b41146da5",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "967": {
+      "title": "Kinobalon: Kako je Mambo postal velikan",
+      "start_time": "2026-11-22T11:30:00+01:00",
+      "venue": "Kinodvor, Mala dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261122_1130_2ccdc45c920d",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "968": {
+      "title": "Kinobalon: Wildwood: Skrivnost prepovedanega gozda",
+      "start_time": "2026-11-28T15:30:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261128_1530_6e9edf6694da",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "969": {
+      "title": "Kinobalon: Bučko",
+      "start_time": "2026-11-29T15:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261129_1500_ead44f8b2f80",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "970": {
+      "title": "Slon: Odprtje družinskega programa (Animateka)",
+      "start_time": "2026-11-30T17:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 10,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/druzinski-program-slon-na-23-animateki/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261130_1700_aebe18fdfd79",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "971": {
+      "title": "Slonov tekmovalni program I (Prvič v kino, Animateka)",
+      "start_time": "2026-12-05T10:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "Slonov maraton 12 € (člani Kluba Kinobalon 9 €), možen tudi nakup vstopnic za posamezne predstave",
+      "url": "https://www.kinodvor.org/druzinski-program-slon-na-23-animateki/",
+      "flags": [],
+      "event_id": "event_20261205_1000_31333e91eb3e",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "972": {
+      "title": "Slonov tekmovalni program II (Animateka)",
+      "start_time": "2026-12-05T11:30:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 7,
+      "is_free": null,
+      "price_text": "Slonov maraton 12 € (člani Kluba Kinobalon 9 €), možen tudi nakup vstopnic za posamezne predstave",
+      "url": "https://www.kinodvor.org/druzinski-program-slon-na-23-animateki/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261205_1130_918ae1837672",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "973": {
+      "title": "Slonov tekmovalni program III (Animateka)",
+      "start_time": "2026-12-05T13:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 11,
+      "is_free": null,
+      "price_text": "Slonov maraton 12 € (člani Kluba Kinobalon 9 €), možen tudi nakup vstopnic za posamezne predstave",
+      "url": "https://www.kinodvor.org/druzinski-program-slon-na-23-animateki/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261205_1300_b85f7cb4fdb8",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "974": {
+      "title": "Kinobalon: Olivija in nevidni potres (Animateka)",
+      "start_time": "2026-12-05T15:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": 10,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/druzinski-program-slon-na-23-animateki/",
+      "flags": [
+        "age_stretch"
+      ],
+      "event_id": "event_20261205_1500_404e8ff4da9d",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "975": {
+      "title": "Kinobalon: Železni fant (Animateka, Zajtrk pri Kinodvoru)",
+      "start_time": "2026-12-06T11:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261206_1100_98b39edfa407",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "976": {
+      "title": "Kinobalon: Počitnice v džungli (Animateka)",
+      "start_time": "2026-12-06T15:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261206_1500_9f6ced5982ca",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "977": {
+      "title": "Kinobalon: Najboljši iz Slona 2026 (Animateka)",
+      "start_time": "2026-12-06T17:00:00+01:00",
+      "venue": "Kinodvor, Dvorana",
+      "city": "Ljubljana",
+      "category": "kino",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.kinodvor.org/kinobalon/",
+      "flags": [],
+      "event_id": "event_20261206_1700_3bc46f3fa497",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "978": {
+      "title": "S tolkali okoli sveta",
+      "start_time": "2027-02-13T11:00:00+01:00",
+      "venue": "SiTi Teater BTC",
+      "city": "Ljubljana",
+      "category": "lutke",
+      "age_min": 4,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.sititeater.si/sobotni-dopoldnevi/s-tolkali-okoli-sveta/",
+      "flags": [],
+      "event_id": "event_20270213_1100_7b62c7f0e22d",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "979": {
+      "title": "Zima potrebuje pomoč: pravljično vodstvo z delavnico in obiskom dedka Mraza",
+      "start_time": "2026-12-15T17:00:00+01:00",
+      "venue": "Ljubljanski grad, zbirno mesto: most pred glavnim vhodom",
+      "city": "Ljubljana",
+      "category": "delavnica",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
+      "flags": [],
+      "event_id": "event_20261215_1700_151996a54c4a",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "980": {
+      "title": "Družinski praznični dan v Radovljici",
+      "start_time": "2026-12-19T11:00:00+01:00",
+      "venue": "Linhartov trg in Radovljiška graščina, Radovljica",
+      "city": "Radovljica",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "ARTish sejem 11.00–18.00 (graščina), pravljični konji 11.00–14.00, Čupakabra cirkuške delavnice 16.00–18.00, svetlobna predstava 18.30 (Linhartov trg), koncert 19.30. Za posamezne delavnice je lahko potrebna prijava ali vstopnica.",
+      "url": "https://www.zgodovinska-mesta.si/prireditve/december-v-radovljici/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261219_1100_3475f47f3884",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "981": {
+      "title": "Žive jaslice Žiganja vas",
+      "start_time": "2026-12-18T18:00:00+01:00",
+      "venue": "Pod vaško lipo ob cerkvi sv. Urha, Žiganja vas pri Tržiču",
+      "city": "Tržič",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Na prostem. Vaški sejem, božična zgodba domačih igralcev, prihod dobrega moža z obdarovanjem otrok. Podroben razpored bo objavljen bližje datumu. Cena ni objavljena.",
+      "url": "https://www.zgodovinska-mesta.si/prireditve/zive-jaslice/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261218_1800_75237f3df161",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "982": {
+      "title": "Žive jaslice Žiganja vas",
+      "start_time": "2026-12-19T18:00:00+01:00",
+      "venue": "Pod vaško lipo ob cerkvi sv. Urha, Žiganja vas pri Tržiču",
+      "city": "Tržič",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Na prostem. Vaški sejem, božična zgodba domačih igralcev, prihod dobrega moža z obdarovanjem otrok. Podroben razpored bo objavljen bližje datumu. Cena ni objavljena.",
+      "url": "https://www.zgodovinska-mesta.si/prireditve/zive-jaslice/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20261219_1800_fd9e4703d8dc",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "983": {
+      "title": "Prešernov smenj Kranj",
+      "start_time": "2027-02-08T00:00:00+01:00",
+      "venue": "Trgi in ulice starega mestnega jedra, Kranj",
+      "city": "Kranj",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "8. februar 2027. Kostumirani sejem v duhu 19. stoletja, recitali, folklorne skupine, lajnarji, sejem obrti. Program za otroke in jahanje ponijev v prejšnjih letih. Program 2027 in ura začetka še nista objavljena. Brezplačen avtobus.",
+      "url": "https://www.visitkranj.com/izbrani-dogodki/presernov-smenj-kranj/",
+      "flags": [
+        "outside_ljubljana",
+        "travel",
+        "time_unknown"
+      ],
+      "event_id": "event_20270208_0000_225f442ab16c",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "984": {
+      "title": "Kurentovanje Ptuj: povorka otrok iz vrtcev",
+      "start_time": "2027-02-05T10:00:00+01:00",
+      "venue": "Trasa povorke, Ptuj",
+      "city": "Ptuj",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Petek 5. 2. 2027. Otroška pustna povorka vrtcev po ulicah Ptuja. Vstop v Karnevalsko dvorano le za sodelujoče otroke in osebje vrtcev. Ogled povorke na ulici.",
+      "url": "https://kurentovanje.net/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20270205_1000_87a62c23402a",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
+    },
+    "985": {
+      "title": "Kurentovanje Ptuj: otroško pustno rajanje",
+      "start_time": "2027-02-06T15:00:00+01:00",
+      "venue": "Mestni trg, Ptuj",
+      "city": "Ptuj",
+      "category": "festival",
+      "age_min": null,
+      "is_free": null,
+      "price_text": "Sobota 6. 2. 2027. Največje otroško pustno rajanje v maskah na prostem. Cena ni objavljena.",
+      "url": "https://kurentovanje.net/",
+      "flags": [
+        "outside_ljubljana",
+        "travel"
+      ],
+      "event_id": "event_20270206_1500_7e522968b59d",
+      "status": "active",
+      "first_seen": "2026-11-19T08:07:14+01:00"
     }
   },
   "user_rules": {
@@ -15335,9 +16317,9 @@
   },
   "system_state": {
     "1": {
-      "last_run": "2026-11-12T08:07:59+01:00",
-      "total_active_events": 220,
-      "latest_run": "20261112T070759Z_a3a54cc7"
+      "last_run": "2026-11-19T08:07:14+01:00",
+      "total_active_events": 243,
+      "latest_run": "20261119T070714Z_a5cfc81d"
     }
   },
   "hidden_events": {
